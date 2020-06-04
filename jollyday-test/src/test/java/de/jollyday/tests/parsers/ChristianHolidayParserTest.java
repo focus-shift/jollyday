@@ -17,7 +17,6 @@ package de.jollyday.tests.parsers;
 
 import de.jollyday.Holiday;
 import de.jollyday.config.*;
-import de.jollyday.parser.AbstractHolidayParser;
 import de.jollyday.parser.impl.ChristianHolidayParser;
 import de.jollyday.parser.impl.RelativeToEasterSundayParser;
 import de.jollyday.util.CalendarUtil;
@@ -31,7 +30,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class ChristianHolidayParserTest {
 
-	private AbstractHolidayParser hp = new ChristianHolidayParser();
+	private ChristianHolidayParser hp = new ChristianHolidayParser();
 	private CalendarUtil calendarUtil = new CalendarUtil();
 
 	@Test
