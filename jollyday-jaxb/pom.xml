@@ -64,7 +64,7 @@
                                 <argument>-d</argument>
                                 <argument>${project.build.directory}/generated-sources/jaxb</argument>
                                 <argument>-target</argument>
-                                <argument>2.1</argument>
+                                <argument>3.0</argument>
                                 <argument>-p</argument>
                                 <argument>de.jollyday.config</argument>
                                 <argument>${project.build.directory}/dependency/Holiday.xsd</argument>
