@@ -1,10 +1,13 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
     <groupId>de.jollyday</groupId>
     <artifactId>jollyday</artifactId>
-    <name>Jollyday</name>
     <version>0.6.0-SNAPSHOT</version>
     <packaging>pom</packaging>
+
+    <name>Jollyday</name>
     <description>
         This API determines the holidays for a given year, country/name and eventually state/region. The holiday data is
         stored in XML files (one for each country) and will be read from the classpath. You can provide your own holiday
@@ -16,13 +19,12 @@
         Besides those there will be more special calendars like currently existing NYSE calendar (New York Stock
         Exchange).
     </description>
-    <url>http://sourceforge.net/projects/jollyday</url>
+    <url>https://github.com/focus-shift/jollyday</url>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.scm.id>sourceforge.net</project.scm.id>
         <maven.site.skip>true</maven.site.skip>
         <maven.site.deploy.skip>true</maven.site.deploy.skip>
-        <argLine /> <!-- this hack is required because of the JDK 9 build profile - JaCoCo vs. Surefire: @{argLine} -->
+        <argLine/> <!-- this hack is required because of the JDK 9 build profile - JaCoCo vs. Surefire: @{argLine} -->
     </properties>
 
     <modules>
@@ -86,14 +88,13 @@
         </developer>
     </developers>
     <issueManagement>
-        <system>Sourceforge</system>
-        <url>http://sourceforge.net/tracker/?group_id=299729&amp;atid=1264280</url>
+        <system>GitHub</system>
+        <url>https://github.com/focus-shift/jollyday/issues</url>
     </issueManagement>
-    <inceptionYear>18.01.2010</inceptionYear>
     <scm>
-        <connection>scm:git:git://github.com/svendiedrichsen/jollyday.git</connection>
-        <developerConnection>scm:git:git@github.com:svendiedrichsen/jollyday.git</developerConnection>
-        <url>https://github.com/svendiedrichsen/jollyday.git</url>
+        <connection>scm:git:git://github.com/focus-shift/jollyday.git</connection>
+        <developerConnection>scm:git:git@github.com:focus-shift/jollyday.git</developerConnection>
+        <url>https://github.com/focus-shift/jollyday.git</url>
         <tag>HEAD</tag>
     </scm>
     <build>
@@ -323,13 +324,15 @@
                         <artifactId>maven-surefire-plugin</artifactId>
                         <configuration>
                             <argLine>@{argLine}
-							         --add-opens de.jollyday/de.jollyday.config=java.xml.bind
-                                     --add-opens de.jollyday/de.jollyday.configuration=ALL-UNNAMED
-                                     --add-opens de.jollyday/de.jollyday.datasource.impl=ALL-UNNAMED
-                                     --add-opens de.jollyday/de.jollyday.util=ALL-UNNAMED
-                                     --add-opens de.jollyday/holidays=ALL-UNNAMED</argLine>
+                                --add-opens de.jollyday/de.jollyday.config=java.xml.bind
+                                --add-opens de.jollyday/de.jollyday.configuration=ALL-UNNAMED
+                                --add-opens de.jollyday/de.jollyday.datasource.impl=ALL-UNNAMED
+                                --add-opens de.jollyday/de.jollyday.util=ALL-UNNAMED
+                                --add-opens de.jollyday/holidays=ALL-UNNAMED
+                            </argLine>
                             <additionalClasspathElements>
-                                <additionalClasspathElement>${project.basedir}/src/main/resources</additionalClasspathElement>
+                                <additionalClasspathElement>${project.basedir}/src/main/resources
+                                </additionalClasspathElement>
                             </additionalClasspathElements>
                         </configuration>
                     </plugin>
@@ -475,10 +478,5 @@
             <id>ossrh</id>
             <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
-        <site>
-            <id>sourceforge.net</id>
-            <url>scp://diedrichsen,jollyday@shell.sourceforge.net/home/project-web/jollyday/htdocs</url>
-            <name>Sourceforge Site</name>
-        </site>
     </distributionManagement>
 </project>
