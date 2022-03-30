@@ -12,14 +12,14 @@ import java.util.function.Function;
  */
 public class FixedToLocalDate implements Function<Fixed, LocalDate> {
 
-    private int year;
+  private int year;
 
-    public FixedToLocalDate(int year) {
-        this.year = year;
-    }
+  public FixedToLocalDate(int year) {
+    this.year = year;
+  }
 
-    @Override
-    public LocalDate apply(Fixed fixed) {
-        return fixed.day().atYear(year);
-    }
+  @Override
+  public LocalDate apply(Fixed fixed) {
+    return fixed.day().atYear(year);
+  }
 }

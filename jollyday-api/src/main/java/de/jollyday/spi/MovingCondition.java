@@ -23,7 +23,9 @@ import java.time.DayOfWeek;
  * @since 10.03.20
  */
 public interface MovingCondition {
-    DayOfWeek substitute();
-    With with();
-    DayOfWeek weekday();
+  DayOfWeek substitute();
+
+  With with();
+
+  DayOfWeek weekday();
 }

@@ -25,6 +25,7 @@ import java.time.chrono.Chronology;
  * @since 03.11.19
  */
 public interface RelativeToEasterSunday extends Described, Limited {
-    Chronology chronology();
-    Days days();
+  Chronology chronology();
+
+  Days days();
 }

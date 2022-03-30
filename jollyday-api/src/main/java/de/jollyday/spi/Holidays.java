@@ -9,18 +9,28 @@ import java.util.stream.Stream;
  */
 public interface Holidays {
 
-    Stream<Fixed> fixed();
-    Stream<RelativeToFixed> relativeToFixed();
-    Stream<RelativeToWeekdayInMonth> relativeToWeekdayInMonth();
-    Stream<FixedWeekdayInMonth> fixedWeekdays();
-    Stream<ChristianHoliday> christianHolidays();
-    Stream<IslamicHoliday> islamicHolidays();
-    Stream<FixedWeekdayBetweenFixed> fixedWeekdayBetweenFixed();
-    Stream<FixedWeekdayRelativeToFixed> fixedWeekdayRelativeToFixed();
-    Stream<HinduHoliday> hinduHolidays();
-    // TODO: ? is this used anywhere?
-    // Stream<HebrewHoliday> hebrewHolidays();
-    Stream<EthiopianOrthodoxHoliday> ethiopianOrthodoxHolidays();
-    Stream<RelativeToEasterSunday> relativeToEasterSunday();
+  Stream<Fixed> fixed();
+
+  Stream<RelativeToFixed> relativeToFixed();
+
+  Stream<RelativeToWeekdayInMonth> relativeToWeekdayInMonth();
+
+  Stream<FixedWeekdayInMonth> fixedWeekdays();
+
+  Stream<ChristianHoliday> christianHolidays();
+
+  Stream<IslamicHoliday> islamicHolidays();
+
+  Stream<FixedWeekdayBetweenFixed> fixedWeekdayBetweenFixed();
+
+  Stream<FixedWeekdayRelativeToFixed> fixedWeekdayRelativeToFixed();
+
+  Stream<HinduHoliday> hinduHolidays();
+
+  // TODO: ? is this used anywhere?
+  // Stream<HebrewHoliday> hebrewHolidays();
+  Stream<EthiopianOrthodoxHoliday> ethiopianOrthodoxHolidays();
+
+  Stream<RelativeToEasterSunday> relativeToEasterSunday();
 
 }

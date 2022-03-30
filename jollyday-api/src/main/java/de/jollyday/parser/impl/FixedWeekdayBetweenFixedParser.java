@@ -1,12 +1,12 @@
 /**
  * Copyright 2010-2019 Sven Diedrichsen
- *
+ * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- *
+ * <p>
  * http://www.apache.org/licenses/LICENSE-2.0
- *
+ * <p>
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an
  * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
@@ -33,24 +33,24 @@ import java.util.stream.Stream;
  */
 public class FixedWeekdayBetweenFixedParser implements Function<Integer, Stream<Holiday>> {
 
-	private Stream<FixedWeekdayBetweenFixed> fixedWeekdayBetweenFixed;
+  private Stream<FixedWeekdayBetweenFixed> fixedWeekdayBetweenFixed;
 
-	public FixedWeekdayBetweenFixedParser(Stream<FixedWeekdayBetweenFixed> fixedWeekdayBetweenFixed) {
-		this.fixedWeekdayBetweenFixed = fixedWeekdayBetweenFixed;
-	}
+  public FixedWeekdayBetweenFixedParser(Stream<FixedWeekdayBetweenFixed> fixedWeekdayBetweenFixed) {
+    this.fixedWeekdayBetweenFixed = fixedWeekdayBetweenFixed;
+  }
 
-	@Override
-	public Stream<Holiday> apply(Integer year) {
-		return fixedWeekdayBetweenFixed
-				.filter(new ValidLimitation(year))
-				.map(fwm -> new DescribedDateHolder(fwm,
-								new FindWeekDayBetween(
-										new FixedToLocalDate(year).apply(fwm.from()),
-										new FixedToLocalDate(year).apply(fwm.to())
-								).apply(fwm)
-							)
-				)
-				.map(holder -> new CreateHoliday(holder.getDate()).apply(holder.getDescribed()));
-	}
+  @Override
+  public Stream<Holiday> apply(Integer year) {
+    return fixedWeekdayBetweenFixed
+      .filter(new ValidLimitation(year))
+      .map(fwm -> new DescribedDateHolder(fwm,
+          new FindWeekDayBetween(
+            new FixedToLocalDate(year).apply(fwm.from()),
+            new FixedToLocalDate(year).apply(fwm.to())
+          ).apply(fwm)
+        )
+      )
+      .map(holder -> new CreateHoliday(holder.getDate()).apply(holder.getDescribed()));
+  }
 
 }

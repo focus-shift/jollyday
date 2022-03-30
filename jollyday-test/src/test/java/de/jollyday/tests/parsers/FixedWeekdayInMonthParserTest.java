@@ -1,12 +1,12 @@
 /**
  * Copyright 2011 Sven Diedrichsen
- *
+ * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- *
+ * <p>
  * http://www.apache.org/licenses/LICENSE-2.0
- *
+ * <p>
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an
  * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
@@ -29,29 +29,28 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * @author svdi1de
- *
  */
 public class FixedWeekdayInMonthParserTest {
 
-	private FixedWeekdayInMonthParser parser = new FixedWeekdayInMonthParser();
+  private FixedWeekdayInMonthParser parser = new FixedWeekdayInMonthParser();
 
-	@Test
-	public void testEmpty() {
-		Set<Holiday> holidays = new HashSet<>();
-		Holidays config = new Holidays();
-		parser.parse(2010, holidays, config);
-		assertTrue(holidays.isEmpty(), "Expected to be empty.");
-	}
+  @Test
+  public void testEmpty() {
+    Set<Holiday> holidays = new HashSet<>();
+    Holidays config = new Holidays();
+    parser.parse(2010, holidays, config);
+    assertTrue(holidays.isEmpty(), "Expected to be empty.");
+  }
 
-	@Test
-	public void testInvalid() {
-		Set<Holiday> holidays = new HashSet<>();
-		Holidays config = new Holidays();
-		FixedWeekdayInMonth e = new FixedWeekdayInMonth();
-		e.setValidFrom(2011);
-		config.getFixedWeekday().add(e);
-		parser.parse(2010, holidays, config);
-		assertEquals(0, holidays.size(), "Expected to be empty.");
-	}
+  @Test
+  public void testInvalid() {
+    Set<Holiday> holidays = new HashSet<>();
+    Holidays config = new Holidays();
+    FixedWeekdayInMonth e = new FixedWeekdayInMonth();
+    e.setValidFrom(2011);
+    config.getFixedWeekday().add(e);
+    parser.parse(2010, holidays, config);
+    assertEquals(0, holidays.size(), "Expected to be empty.");
+  }
 
 }

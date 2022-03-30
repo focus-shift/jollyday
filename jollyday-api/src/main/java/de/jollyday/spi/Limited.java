@@ -8,7 +8,9 @@ import java.time.Year;
  * @since 10.03.20
  */
 public interface Limited {
-    Year validFrom();
-    Year validTo();
-    YearCycle cycle();
+  Year validFrom();
+
+  Year validTo();
+
+  YearCycle cycle();
 }

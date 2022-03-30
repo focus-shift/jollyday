@@ -17,21 +17,21 @@ import static java.time.temporal.TemporalAdjusters.previousOrSame;
  */
 public class MoveDateRelative implements Function<Movable, LocalDate> {
 
-    private LocalDate date;
+  private LocalDate date;
 
-    public MoveDateRelative(LocalDate date) {
-        this.date = date;
-    }
+  public MoveDateRelative(LocalDate date) {
+    this.date = date;
+  }
 
-    @Override
-    public LocalDate apply(Movable movable) {
-        return movable.conditions().stream()
-                .filter(new ValidMovingCondition(date))
-                .map(mc -> date.with(mc.with() == With.NEXT
-                        ? nextOrSame(mc.weekday())
-                        : previousOrSame(mc.weekday())))
-                .findFirst()
-                .orElse(date);
-    }
+  @Override
+  public LocalDate apply(Movable movable) {
+    return movable.conditions().stream()
+      .filter(new ValidMovingCondition(date))
+      .map(mc -> date.with(mc.with() == With.NEXT
+        ? nextOrSame(mc.weekday())
+        : previousOrSame(mc.weekday())))
+      .findFirst()
+      .orElse(date);
+  }
 
 }

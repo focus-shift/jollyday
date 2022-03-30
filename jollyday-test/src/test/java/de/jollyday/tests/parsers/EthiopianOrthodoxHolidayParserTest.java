@@ -1,12 +1,12 @@
 /**
  * Copyright 2011 Sven Diedrichsen
- *
+ * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- *
+ * <p>
  * http://www.apache.org/licenses/LICENSE-2.0
- *
+ * <p>
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an
  * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
@@ -32,46 +32,45 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * @author Sven
- *
  */
 public class EthiopianOrthodoxHolidayParserTest {
 
-	private EthiopianOrthodoxHolidayParser parser = new EthiopianOrthodoxHolidayParser();
-	private CalendarUtil calendarUtil = new CalendarUtil();
+  private EthiopianOrthodoxHolidayParser parser = new EthiopianOrthodoxHolidayParser();
+  private CalendarUtil calendarUtil = new CalendarUtil();
 
-	@Test
-	public void testEmpty() {
-		Set<Holiday> holidays = new HashSet<>();
-		Holidays config = new Holidays();
-		parser.parse(2010, holidays, config);
-		assertTrue(holidays.isEmpty(), "Expected to be empty.");
-	}
+  @Test
+  public void testEmpty() {
+    Set<Holiday> holidays = new HashSet<>();
+    Holidays config = new Holidays();
+    parser.parse(2010, holidays, config);
+    assertTrue(holidays.isEmpty(), "Expected to be empty.");
+  }
 
-	@Test
-	public void testAllHolidays() {
-		Set<Holiday> holidays = new HashSet<>();
-		Holidays config = new Holidays();
-		config.getEthiopianOrthodoxHoliday().add(createHoliday(EthiopianOrthodoxHolidayType.ENKUTATASH));
-		config.getEthiopianOrthodoxHoliday().add(createHoliday(EthiopianOrthodoxHolidayType.MESKEL));
-		config.getEthiopianOrthodoxHoliday().add(createHoliday(EthiopianOrthodoxHolidayType.TIMKAT));
-		parser.parse(2010, holidays, config);
-		assertEquals(3, holidays.size(), "Wrong number of holidays.");
-		assertContains(calendarUtil.create(2010, 1, 18), holidays);
-		assertContains(calendarUtil.create(2010, 9, 11), holidays);
-		assertContains(calendarUtil.create(2010, 9, 27), holidays);
-	}
+  @Test
+  public void testAllHolidays() {
+    Set<Holiday> holidays = new HashSet<>();
+    Holidays config = new Holidays();
+    config.getEthiopianOrthodoxHoliday().add(createHoliday(EthiopianOrthodoxHolidayType.ENKUTATASH));
+    config.getEthiopianOrthodoxHoliday().add(createHoliday(EthiopianOrthodoxHolidayType.MESKEL));
+    config.getEthiopianOrthodoxHoliday().add(createHoliday(EthiopianOrthodoxHolidayType.TIMKAT));
+    parser.parse(2010, holidays, config);
+    assertEquals(3, holidays.size(), "Wrong number of holidays.");
+    assertContains(calendarUtil.create(2010, 1, 18), holidays);
+    assertContains(calendarUtil.create(2010, 9, 11), holidays);
+    assertContains(calendarUtil.create(2010, 9, 27), holidays);
+  }
 
-	private void assertContains(LocalDate date, Set<Holiday> holidays) {
-		assertTrue(calendarUtil.contains(holidays, date), "Missing holiday " + date);
-	}
+  private void assertContains(LocalDate date, Set<Holiday> holidays) {
+    assertTrue(calendarUtil.contains(holidays, date), "Missing holiday " + date);
+  }
 
-	/**
-	 * @return an EthiopianOrthodoxHoliday instance
-	 */
-	private EthiopianOrthodoxHoliday createHoliday(EthiopianOrthodoxHolidayType type) {
-		EthiopianOrthodoxHoliday h = new EthiopianOrthodoxHoliday();
-		h.setType(type);
-		return h;
-	}
+  /**
+   * @return an EthiopianOrthodoxHoliday instance
+   */
+  private EthiopianOrthodoxHoliday createHoliday(EthiopianOrthodoxHolidayType type) {
+    EthiopianOrthodoxHoliday h = new EthiopianOrthodoxHoliday();
+    h.setType(type);
+    return h;
+  }
 
 }

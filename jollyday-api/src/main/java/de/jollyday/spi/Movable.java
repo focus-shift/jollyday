@@ -23,5 +23,5 @@ import java.util.List;
  * @since 10.03.20
  */
 public interface Movable {
-    List<MovingCondition> conditions();
+  List<MovingCondition> conditions();
 }

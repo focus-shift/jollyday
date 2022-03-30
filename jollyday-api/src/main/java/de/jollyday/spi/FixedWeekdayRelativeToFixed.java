@@ -23,8 +23,11 @@ import java.time.DayOfWeek;
  * @since 03.11.19
  */
 public interface FixedWeekdayRelativeToFixed extends Described, Limited {
-    Fixed day();
-    Occurrance which();
-    DayOfWeek weekday();
-    Relation when();
+  Fixed day();
+
+  Occurrance which();
+
+  DayOfWeek weekday();
+
+  Relation when();
 }
