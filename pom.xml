@@ -13,10 +13,10 @@
         stored in XML files (one for each country) and will be read from the classpath. You can provide your own holiday
         calendar XML file or use any of the provided ones.
 
-        Currently there are 63 countries supported like the following: United States, most european countries, Russia,
+        Currently, there are 63 countries supported like the following: United States, most european countries, Russia,
         India, Australia.
 
-        Besides those there will be more special calendars like currently existing NYSE calendar (New York Stock
+        Besides, those there will be more special calendars like currently existing NYSE calendar (New York Stock
         Exchange).
     </description>
     <url>https://github.com/focus-shift/jollyday</url>
