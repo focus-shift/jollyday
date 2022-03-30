@@ -169,7 +169,7 @@
                 <plugin>
                     <groupId>com.github.davidmoten</groupId>
                     <artifactId>jax-maven-plugin</artifactId>
-                    <version>0.1.5</version>
+                    <version>0.2</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
