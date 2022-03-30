@@ -30,7 +30,6 @@
         <module>jollyday-api</module>
         <module>jollyday-holidays</module>
         <module>jollyday-jaxb</module>
-        <module>jollyday-xstream</module>
         <!--<module>jollyday-test</module> temporarily disabled-->
     </modules>
 
