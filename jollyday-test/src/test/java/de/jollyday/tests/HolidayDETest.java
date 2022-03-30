@@ -15,7 +15,11 @@
  */
 package de.jollyday.tests;
 
-import de.jollyday.*;
+import de.jollyday.Holiday;
+import de.jollyday.HolidayCalendar;
+import de.jollyday.HolidayManager;
+import de.jollyday.ManagerParameter;
+import de.jollyday.ManagerParameters;
 import de.jollyday.tests.base.AbstractCountryTestBase;
 import de.jollyday.util.CalendarUtil;
 import org.junit.jupiter.api.Test;
@@ -26,9 +30,12 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Set;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotSame;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.fail;
 
-public class HolidayDETest extends AbstractCountryTestBase {
+class HolidayDETest extends AbstractCountryTestBase {
 
     private static final int YEAR = 2010;
     private static final String ISO_CODE = "de";
@@ -36,12 +43,12 @@ public class HolidayDETest extends AbstractCountryTestBase {
     private CalendarUtil calendarUtil = new CalendarUtil();
 
     @Test
-    public void testManagerDEStructure() {
+    void testManagerDEStructure() {
         validateCalendarData(ISO_CODE, YEAR);
     }
 
     @Test
-    public void testManagerDEInterval() {
+    void testManagerDEInterval() {
         try {
             HolidayManager instance = HolidayManager.getInstance(HolidayCalendar.GERMANY);
             Set<Holiday> holidays = instance.getHolidays(calendarUtil.create(2010, 10, 1), calendarUtil
@@ -59,7 +66,7 @@ public class HolidayDETest extends AbstractCountryTestBase {
     }
 
     @Test
-    public void testManagerSameInstance() {
+    void testManagerSameInstance() {
         Locale defaultLocale = Locale.getDefault();
         Locale.setDefault(Locale.GERMANY);
         try {
@@ -74,7 +81,7 @@ public class HolidayDETest extends AbstractCountryTestBase {
     }
 
     @Test
-    public void testManagerDifferentInstance() {
+    void testManagerDifferentInstance() {
         Locale defaultLocale = Locale.getDefault();
         Locale.setDefault(Locale.US);
         try {
@@ -89,7 +96,7 @@ public class HolidayDETest extends AbstractCountryTestBase {
     }
 
     @Test
-    public void testSystemLocaleInfluence() {
+    void testSystemLocaleInfluence() {
         Set<Holiday> french = getUsingSystemLocale(Locale.FRANCE);
         Set<Holiday> german = getUsingSystemLocale(Locale.GERMANY);
         assertEquals(german, french, "Holidays differ.");

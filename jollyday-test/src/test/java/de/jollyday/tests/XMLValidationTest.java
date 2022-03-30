@@ -16,38 +16,38 @@ import java.nio.file.Paths;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class XMLValidationTest {
+class XMLValidationTest {
 
     private File schemaFile;
     private Validator validator;
 
     @BeforeEach
-    public void setUp() throws Exception {
+    void setUp() throws Exception {
         schemaFile = new File("src/main/xsd/Holiday.xsd");
         validator = Validator.forLanguage(Languages.W3C_XML_SCHEMA_NS_URI);
         validator.setSchemaSource(new StreamSource(schemaFile));
     }
 
     @Test
-    public void testSchemaIsValid() throws Exception {
-        assertTrue(schemaFile.exists(), "Schema file "+schemaFile+" does not exist.");
+    void testSchemaIsValid() throws Exception {
+        assertTrue(schemaFile.exists(), "Schema file " + schemaFile + " does not exist.");
         final ValidationResult validationResult = validator.validateSchema();
-        assertTrue(validationResult.isValid(), "Schema '"+ schemaFile +"' is not valid: "+validationResult.getProblems());
+        assertTrue(validationResult.isValid(), "Schema '" + schemaFile + "' is not valid: " + validationResult.getProblems());
     }
 
     @Test
-    public void testHolidayFilesAreValid()throws Exception {
+    void testHolidayFilesAreValid() throws Exception {
         final Path holidaysFolder = Paths.get("src/main/resources/holidays/");
         Files.list(holidaysFolder).forEach(this::validateHolidayFile);
     }
 
-    private void validateHolidayFile(Path path){
+    private void validateHolidayFile(Path path) {
 
         try {
             final ValidationResult validationResult = validator.validateInstance(new StreamSource(new FileInputStream(path.toFile())));
-            assertTrue(validationResult.isValid(), "Validation of holiday file '"+path+" failed: "+validationResult.getProblems());
+            assertTrue(validationResult.isValid(), "Validation of holiday file '" + path + " failed: " + validationResult.getProblems());
         } catch (FileNotFoundException e) {
-            throw new IllegalStateException("Cannot validate holiday file "+path);
+            throw new IllegalStateException("Cannot validate holiday file " + path);
         }
     }
 }

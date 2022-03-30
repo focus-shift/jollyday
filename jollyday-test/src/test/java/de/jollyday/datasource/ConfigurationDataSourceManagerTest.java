@@ -7,33 +7,35 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Properties;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class ConfigurationDataSourceManagerTest {
+class ConfigurationDataSourceManagerTest {
 
     ConfigurationDataSourceManager configurationDataSourceManager = new ConfigurationDataSourceManager();
     Properties properties = new Properties();
     ManagerParameter managerParameter = ManagerParameters.create((String) null, properties);
 
     @Test
-    public void testGetConfigurationDataSourceMissingConfig() {
+    void testGetConfigurationDataSourceMissingConfig() {
         assertThrows(IllegalStateException.class, () -> configurationDataSourceManager.getConfigurationDataSource(managerParameter));
     }
 
     @Test
-    public void testGetConfigurationDataSourceMissingClass() {
+    void testGetConfigurationDataSourceMissingClass() {
         managerParameter.setProperty(ManagerParameter.CONFIGURATION_DATASOURCE_IMPL_CLASS, "ThisIsNoClass");
         assertThrows(IllegalStateException.class, () -> configurationDataSourceManager.getConfigurationDataSource(managerParameter));
     }
 
     @Test
-    public void testGetConfigurationDataSourceMissingConstructor() {
+    void testGetConfigurationDataSourceMissingConstructor() {
         managerParameter.setProperty(ManagerParameter.CONFIGURATION_DATASOURCE_IMPL_CLASS, "java.util.Calendar");
         assertThrows(IllegalStateException.class, () -> configurationDataSourceManager.getConfigurationDataSource(managerParameter));
     }
 
     @Test
-    public void testGetConfigurationDataSourceXmlFileDataSource() {
+    void testGetConfigurationDataSourceXmlFileDataSource() {
         managerParameter.setProperty(ManagerParameter.CONFIGURATION_DATASOURCE_IMPL_CLASS, XmlFileDataSource.class.getName());
         ConfigurationDataSource datasource = configurationDataSourceManager.getConfigurationDataSource(managerParameter);
         assertNotNull(datasource, "Missing datasource.");

@@ -1,12 +1,12 @@
 /**
  * Copyright 2010 Sven Diedrichsen
- *
+ * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- *
+ * <p>
  * http://www.apache.org/licenses/LICENSE-2.0
- *
+ * <p>
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an
  * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
@@ -21,24 +21,24 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Locale;
 
-public class HolidayFRTest extends AbstractCountryTestBase {
+class HolidayFRTest extends AbstractCountryTestBase {
 
-	private static final String ISO_CODE = "fr";
-	private static final int YEAR = 2010;
+    private static final String ISO_CODE = "fr";
+    private static final int YEAR = 2010;
 
-	@Test
-	public void testManagerFRStructure() throws Exception {
-		validateCalendarData(ISO_CODE, YEAR);
-	}
+    @Test
+    void testManagerFRStructure() throws Exception {
+        validateCalendarData(ISO_CODE, YEAR);
+    }
 
-	@Test
-	public void testManagerSameInstanceFR() {
-		validateManagerSameInstance(Locale.FRANCE, HolidayCalendar.FRANCE);
-	}
+    @Test
+    void testManagerSameInstanceFR() {
+        validateManagerSameInstance(Locale.FRANCE, HolidayCalendar.FRANCE);
+    }
 
-	@Test
-	public void testManagerDifferentInstanceFR() {
-		validateManagerDifferentInstance(HolidayCalendar.FRANCE);
-	}
+    @Test
+    void testManagerDifferentInstanceFR() {
+        validateManagerDifferentInstance(HolidayCalendar.FRANCE);
+    }
 
 }
