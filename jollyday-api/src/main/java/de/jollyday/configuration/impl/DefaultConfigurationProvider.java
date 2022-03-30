@@ -34,45 +34,44 @@ import java.util.logging.Logger;
  */
 public class DefaultConfigurationProvider implements ConfigurationProvider {
 
-    private static final Logger LOG = Logger
-            .getLogger(DefaultConfigurationProvider.class.getName());
+  private static final Logger LOG = Logger.getLogger(DefaultConfigurationProvider.class.getName());
 
-    /**
-     * The name of the configuration file.
-     */
-    private static final String CONFIG_FILE = "jollyday.properties";
-    /**
-     * The utility to load resources.
-     */
-    private final ResourceUtil resourceUtil = new ResourceUtil();
+  /**
+   * The name of the configuration file.
+   */
+  private static final String CONFIG_FILE = "jollyday.properties";
+  /**
+   * The utility to load resources.
+   */
+  private final ResourceUtil resourceUtil = new ResourceUtil();
 
-    /*
-     * (non-Javadoc)
-     *
-     * @see
-     * de.jollyday.configuration.ConfigurationProvider#addConfiguration(java
-     * .util.Properties)
-     */
-    @Override
-    public Properties getProperties() {
-        Properties properties = new Properties();
-        try {
-            URL config = resourceUtil.getResource(CONFIG_FILE);
-            if (config == null) {
-                throw new IllegalStateException("Properties file " + CONFIG_FILE + " not found on classpath.");
-            }
-            try(InputStream stream = config.openStream()){
-                if (stream != null) {
-                    properties.load(stream);
-                } else {
-                    LOG.log(Level.WARNING, "Could not load default properties file '{0}' from classpath.", new Object[]{CONFIG_FILE});
-                }
-            }
-            return properties;
-        } catch (IOException e) {
-            throw new IllegalStateException(
-                    "Could not load default properties from classpath.", e);
+  /*
+   * (non-Javadoc)
+   *
+   * @see
+   * de.jollyday.configuration.ConfigurationProvider#addConfiguration(java
+   * .util.Properties)
+   */
+  @Override
+  public Properties getProperties() {
+    Properties properties = new Properties();
+    try {
+      URL config = resourceUtil.getResource(CONFIG_FILE);
+      if (config == null) {
+        throw new IllegalStateException("Properties file " + CONFIG_FILE + " not found on classpath.");
+      }
+      try (InputStream stream = config.openStream()) {
+        if (stream != null) {
+          properties.load(stream);
+        } else {
+          LOG.log(Level.WARNING, "Could not load default properties file '{0}' from classpath.", new Object[]{CONFIG_FILE});
         }
+      }
+      return properties;
+    } catch (IOException e) {
+      throw new IllegalStateException(
+        "Could not load default properties from classpath.", e);
     }
+  }
 
 }

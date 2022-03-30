@@ -23,7 +23,9 @@ import java.time.DayOfWeek;
  * @since 03.11.19
  */
 public interface FixedWeekdayBetweenFixed extends Described, Limited {
-    Fixed from();
-    Fixed to();
-    DayOfWeek weekday();
+  Fixed from();
+
+  Fixed to();
+
+  DayOfWeek weekday();
 }

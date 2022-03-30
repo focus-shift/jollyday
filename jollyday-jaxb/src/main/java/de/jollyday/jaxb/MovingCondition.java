@@ -11,24 +11,24 @@ import java.time.DayOfWeek;
  */
 public class MovingCondition implements de.jollyday.spi.MovingCondition {
 
-    private de.jollyday.config.MovingCondition jaxbMovingCondition;
+  private de.jollyday.config.MovingCondition jaxbMovingCondition;
 
-    public MovingCondition(de.jollyday.config.MovingCondition jaxbMovingCondition) {
-        this.jaxbMovingCondition = jaxbMovingCondition;
-    }
+  public MovingCondition(de.jollyday.config.MovingCondition jaxbMovingCondition) {
+    this.jaxbMovingCondition = jaxbMovingCondition;
+  }
 
-    @Override
-    public DayOfWeek substitute() {
-        return DayOfWeek.valueOf(jaxbMovingCondition.getSubstitute().name());
-    }
+  @Override
+  public DayOfWeek substitute() {
+    return DayOfWeek.valueOf(jaxbMovingCondition.getSubstitute().name());
+  }
 
-    @Override
-    public With with() {
-        return With.valueOf(jaxbMovingCondition.getWith().name());
-    }
+  @Override
+  public With with() {
+    return With.valueOf(jaxbMovingCondition.getWith().name());
+  }
 
-    @Override
-    public DayOfWeek weekday() {
-        return DayOfWeek.valueOf(jaxbMovingCondition.getWeekday().name());
-    }
+  @Override
+  public DayOfWeek weekday() {
+    return DayOfWeek.valueOf(jaxbMovingCondition.getWeekday().name());
+  }
 }

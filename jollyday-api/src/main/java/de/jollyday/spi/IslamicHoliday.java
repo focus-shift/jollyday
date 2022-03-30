@@ -21,5 +21,5 @@ package de.jollyday.spi;
  * @since 10.03.20
  */
 public interface IslamicHoliday extends Described, Limited {
-    IslamicHolidayType type();
+  IslamicHolidayType type();
 }

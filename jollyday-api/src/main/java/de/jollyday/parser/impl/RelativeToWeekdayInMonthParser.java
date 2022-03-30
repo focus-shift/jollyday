@@ -1,12 +1,12 @@
 /**
  * Copyright 2010 Sven Diedrichsen
- *
+ * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- *
+ * <p>
  * http://www.apache.org/licenses/LICENSE-2.0
- *
+ * <p>
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an
  * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
@@ -23,10 +23,7 @@ import de.jollyday.spi.Relation;
 import de.jollyday.spi.RelativeToWeekdayInMonth;
 
 import java.time.LocalDate;
-import java.util.Collection;
-import java.util.Set;
 import java.util.function.Function;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
@@ -39,24 +36,24 @@ import java.util.stream.Stream;
  */
 public class RelativeToWeekdayInMonthParser implements Function<Integer, Stream<Holiday>> {
 
-	private Stream<RelativeToWeekdayInMonth> relativeToWeekdayInMonths;
+  private Stream<RelativeToWeekdayInMonth> relativeToWeekdayInMonths;
 
-	public RelativeToWeekdayInMonthParser(Stream<RelativeToWeekdayInMonth> relativeToWeekdayInMonths) {
-		this.relativeToWeekdayInMonths = relativeToWeekdayInMonths;
-	}
+  public RelativeToWeekdayInMonthParser(Stream<RelativeToWeekdayInMonth> relativeToWeekdayInMonths) {
+    this.relativeToWeekdayInMonths = relativeToWeekdayInMonths;
+  }
 
-	@Override
-	public Stream<Holiday> apply(Integer year) {
-		return relativeToWeekdayInMonths
-				.filter(new ValidLimitation(year))
-				.map(rwm -> {
-					LocalDate date = new FindWeekDayInMonth(year).apply(rwm.weekdayInMonth()).plusDays(1);
-					int direction = (rwm.when() == Relation.BEFORE ? -1 : 1);
-					while (date.getDayOfWeek() != rwm.weekday()) {
-						date = date.plusDays(direction);
-					}
-					return new CreateHoliday(date).apply(rwm);
-				});
-	}
+  @Override
+  public Stream<Holiday> apply(Integer year) {
+    return relativeToWeekdayInMonths
+      .filter(new ValidLimitation(year))
+      .map(rwm -> {
+        LocalDate date = new FindWeekDayInMonth(year).apply(rwm.weekdayInMonth()).plusDays(1);
+        int direction = (rwm.when() == Relation.BEFORE ? -1 : 1);
+        while (date.getDayOfWeek() != rwm.weekday()) {
+          date = date.plusDays(direction);
+        }
+        return new CreateHoliday(date).apply(rwm);
+      });
+  }
 
 }

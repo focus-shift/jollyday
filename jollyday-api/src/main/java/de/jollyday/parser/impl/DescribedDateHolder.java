@@ -11,20 +11,20 @@ import java.time.LocalDate;
  */
 class DescribedDateHolder {
 
-	private LocalDate date;
-	private Described described;
+  private LocalDate date;
+  private Described described;
 
-	public DescribedDateHolder(Described described, LocalDate date) {
-		this.date = date;
-		this.described = described;
-	}
+  public DescribedDateHolder(Described described, LocalDate date) {
+    this.date = date;
+    this.described = described;
+  }
 
-	public LocalDate getDate() {
-		return date;
-	}
+  public LocalDate getDate() {
+    return date;
+  }
 
-	public Described getDescribed() {
-		return described;
-	}
+  public Described getDescribed() {
+    return described;
+  }
 
 }

@@ -6,9 +6,9 @@ import java.util.function.Function;
 
 public class CalendarToLocalDate implements Function<Calendar, LocalDate> {
 
-    @Override
-    public LocalDate apply(Calendar calendar) {
-        return LocalDate.of(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH) + 1, calendar.get(Calendar.DAY_OF_MONTH));
-    }
+  @Override
+  public LocalDate apply(Calendar calendar) {
+    return LocalDate.of(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH) + 1, calendar.get(Calendar.DAY_OF_MONTH));
+  }
 
 }

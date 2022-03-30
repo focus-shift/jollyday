@@ -11,30 +11,30 @@ import java.util.stream.Stream;
  */
 public class Configuration implements de.jollyday.spi.Configuration {
 
-    private de.jollyday.config.Configuration xmlConfiguration;
+  private de.jollyday.config.Configuration xmlConfiguration;
 
-    public Configuration(de.jollyday.config.Configuration xmlConfiguration) {
-        this.xmlConfiguration = xmlConfiguration;
-    }
+  public Configuration(de.jollyday.config.Configuration xmlConfiguration) {
+    this.xmlConfiguration = xmlConfiguration;
+  }
 
-    @Override
-    public Holidays holidays() {
-        return null;
-    }
+  @Override
+  public Holidays holidays() {
+    return null;
+  }
 
-    @Override
-    public Stream<de.jollyday.spi.Configuration> subConfigurations() {
-        return xmlConfiguration.getSubConfigurations().stream().map(Configuration::new);
-    }
+  @Override
+  public Stream<de.jollyday.spi.Configuration> subConfigurations() {
+    return xmlConfiguration.getSubConfigurations().stream().map(Configuration::new);
+  }
 
-    @Override
-    public String hierarchy() {
-        return xmlConfiguration.getHierarchy();
-    }
+  @Override
+  public String hierarchy() {
+    return xmlConfiguration.getHierarchy();
+  }
 
-    @Override
-    public String description() {
-        return xmlConfiguration.getDescription();
-    }
+  @Override
+  public String description() {
+    return xmlConfiguration.getDescription();
+  }
 
 }

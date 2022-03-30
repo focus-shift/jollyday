@@ -13,15 +13,15 @@ import java.util.function.Predicate;
  */
 public class ValidMovingCondition implements Predicate<MovingCondition> {
 
-    private final LocalDate date;
+  private final LocalDate date;
 
-    public ValidMovingCondition(final LocalDate date) {
-        this.date = date;
-    }
+  public ValidMovingCondition(final LocalDate date) {
+    this.date = date;
+  }
 
-    @Override
-    public boolean test(MovingCondition movingCondition) {
-        return Objects.equals(date.getDayOfWeek(), movingCondition.substitute());
-    }
+  @Override
+  public boolean test(MovingCondition movingCondition) {
+    return Objects.equals(date.getDayOfWeek(), movingCondition.substitute());
+  }
 
 }

@@ -22,9 +22,12 @@ import java.util.stream.Stream;
  */
 public interface Configuration {
 
-    Holidays holidays();
-    Stream<Configuration> subConfigurations();
-    String hierarchy();
-    String description();
+  Holidays holidays();
+
+  Stream<Configuration> subConfigurations();
+
+  String hierarchy();
+
+  String description();
 
 }

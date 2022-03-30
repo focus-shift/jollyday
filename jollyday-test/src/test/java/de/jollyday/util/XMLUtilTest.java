@@ -1,12 +1,12 @@
 /**
  * Copyright 2012 Sven Diedrichsen
- *
+ * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- *
+ * <p>
  * http://www.apache.org/licenses/LICENSE-2.0
- *
+ * <p>
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an
  * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
@@ -37,37 +37,37 @@ import static org.mockito.Mockito.*;
 @ExtendWith(MockitoExtension.class)
 public class XMLUtilTest {
 
-	@Mock
-	XMLUtil.JAXBContextCreator contextCreator;
-	@Mock
-	InputStream inputStream;
+  @Mock
+  XMLUtil.JAXBContextCreator contextCreator;
+  @Mock
+  InputStream inputStream;
 
-	@InjectMocks
-	XMLUtil xmlUtil = new XMLUtil();
+  @InjectMocks
+  XMLUtil xmlUtil = new XMLUtil();
 
-	@Test
-	public void testUnmarshallConfigurationNullCheck() {
-		assertThrows(IllegalArgumentException.class, () -> xmlUtil.unmarshallConfiguration(null));
-	}
+  @Test
+  public void testUnmarshallConfigurationNullCheck() {
+    assertThrows(IllegalArgumentException.class, () -> xmlUtil.unmarshallConfiguration(null));
+  }
 
-	@Test
-	public void testUnmarshallConfigurationException() throws IOException, JAXBException {
-		when(contextCreator.create(eq(XMLUtil.PACKAGE), any(ClassLoader.class))).thenThrow(new JAXBException(""))
-				.thenThrow(new JAXBException(""));
-		assertThrows(IllegalStateException.class, () -> xmlUtil.unmarshallConfiguration(inputStream));
-		verify(inputStream, never()).close();
-	}
+  @Test
+  public void testUnmarshallConfigurationException() throws IOException, JAXBException {
+    when(contextCreator.create(eq(XMLUtil.PACKAGE), any(ClassLoader.class))).thenThrow(new JAXBException(""))
+      .thenThrow(new JAXBException(""));
+    assertThrows(IllegalStateException.class, () -> xmlUtil.unmarshallConfiguration(inputStream));
+    verify(inputStream, never()).close();
+  }
 
-	@Test
-	public void testUnmarshallConfiguration() throws IOException, JAXBException {
-		JAXBContext ctx = mock(JAXBContext.class);
-		Unmarshaller unmarshaller = mock(Unmarshaller.class);
-		@SuppressWarnings("unchecked")
-		JAXBElement<Configuration> element = mock(JAXBElement.class);
-		when(contextCreator.create(eq(XMLUtil.PACKAGE), any(ClassLoader.class))).thenReturn(null).thenReturn(ctx);
-		when(ctx.createUnmarshaller()).thenReturn(unmarshaller);
-		when(unmarshaller.unmarshal(inputStream)).thenReturn(element);
-		xmlUtil.unmarshallConfiguration(inputStream);
-		verify(element).getValue();
-	}
+  @Test
+  public void testUnmarshallConfiguration() throws IOException, JAXBException {
+    JAXBContext ctx = mock(JAXBContext.class);
+    Unmarshaller unmarshaller = mock(Unmarshaller.class);
+    @SuppressWarnings("unchecked")
+    JAXBElement<Configuration> element = mock(JAXBElement.class);
+    when(contextCreator.create(eq(XMLUtil.PACKAGE), any(ClassLoader.class))).thenReturn(null).thenReturn(ctx);
+    when(ctx.createUnmarshaller()).thenReturn(unmarshaller);
+    when(unmarshaller.unmarshal(inputStream)).thenReturn(element);
+    xmlUtil.unmarshallConfiguration(inputStream);
+    verify(element).getValue();
+  }
 }

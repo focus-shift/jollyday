@@ -1,12 +1,12 @@
 /**
  * Copyright 2010 Sven Diedrichsen
- *
+ * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- *
+ * <p>
  * http://www.apache.org/licenses/LICENSE-2.0
- *
+ * <p>
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an
  * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
@@ -33,17 +33,17 @@ import java.util.stream.Stream;
  */
 public class FixedParser implements Function<Integer, Stream<Holiday>> {
 
-	private Stream<Fixed> fixed;
+  private Stream<Fixed> fixed;
 
-	public FixedParser(Stream<Fixed> fixed) {
-		this.fixed = fixed;
-	}
+  public FixedParser(Stream<Fixed> fixed) {
+    this.fixed = fixed;
+  }
 
-	@Override
-	public Stream<Holiday> apply(final Integer year) {
-		return fixed.filter(new ValidLimitation(year))
-				.map(fixed -> new DescribedDateHolder(fixed, new MoveDateRelative(new FixedToLocalDate(year).apply(fixed)).apply(fixed)))
-				.map(describedDateHolder -> new CreateHoliday(describedDateHolder.getDate()).apply(describedDateHolder.getDescribed()));
-	}
+  @Override
+  public Stream<Holiday> apply(final Integer year) {
+    return fixed.filter(new ValidLimitation(year))
+      .map(fixed -> new DescribedDateHolder(fixed, new MoveDateRelative(new FixedToLocalDate(year).apply(fixed)).apply(fixed)))
+      .map(describedDateHolder -> new CreateHoliday(describedDateHolder.getDate()).apply(describedDateHolder.getDescribed()));
+  }
 
 }

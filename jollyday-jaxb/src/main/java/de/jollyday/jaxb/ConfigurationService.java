@@ -12,16 +12,16 @@ import java.net.URL;
  */
 public class ConfigurationService implements de.jollyday.spi.ConfigurationService {
 
-    private XMLUtil xmlUtil = new XMLUtil();
+  private XMLUtil xmlUtil = new XMLUtil();
 
-    @Override
-    public de.jollyday.spi.Configuration getConfiguration(ManagerParameter parameter) {
-        URL resourceUrl = parameter.createResourceUrl();
-        try(InputStream inputStream = resourceUrl.openStream()) {
-            return new Configuration(xmlUtil.unmarshallConfiguration(inputStream));
-        } catch (Exception e) {
-            throw new IllegalStateException("Cannot instantiate configuration from URL '"+resourceUrl+"'.", e);
-        }
+  @Override
+  public de.jollyday.spi.Configuration getConfiguration(ManagerParameter parameter) {
+    URL resourceUrl = parameter.createResourceUrl();
+    try (InputStream inputStream = resourceUrl.openStream()) {
+      return new Configuration(xmlUtil.unmarshallConfiguration(inputStream));
+    } catch (Exception e) {
+      throw new IllegalStateException("Cannot instantiate configuration from URL '" + resourceUrl + "'.", e);
     }
+  }
 
 }
