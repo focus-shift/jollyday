@@ -37,5 +37,4 @@ jobs:
       - name: Build
         run: >
           ./mvnw $MAVEN_CLI_OPTS
-          dependency:go-offline
           clean package
