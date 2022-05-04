@@ -1,5 +1,6 @@
 package de.jollyday.jaxb;
 
+import de.jollyday.spi.Configuration;
 import de.jollyday.spi.Holidays;
 
 import java.util.stream.Stream;
@@ -9,11 +10,11 @@ import java.util.stream.Stream;
  * @version $
  * @since 15.03.20
  */
-public class Configuration implements de.jollyday.spi.Configuration {
+public class JaxbConfiguration implements Configuration {
 
-  private final de.jollyday.config.Configuration xmlConfiguration;
+  private final de.jollyday.jaxb.mapping.Configuration xmlConfiguration;
 
-  public Configuration(de.jollyday.config.Configuration xmlConfiguration) {
+  public JaxbConfiguration(de.jollyday.jaxb.mapping.Configuration xmlConfiguration) {
     this.xmlConfiguration = xmlConfiguration;
   }
 
@@ -23,8 +24,8 @@ public class Configuration implements de.jollyday.spi.Configuration {
   }
 
   @Override
-  public Stream<de.jollyday.spi.Configuration> subConfigurations() {
-    return xmlConfiguration.getSubConfigurations().stream().map(Configuration::new);
+  public Stream<Configuration> subConfigurations() {
+    return xmlConfiguration.getSubConfigurations().stream().map(JaxbConfiguration::new);
   }
 
   @Override

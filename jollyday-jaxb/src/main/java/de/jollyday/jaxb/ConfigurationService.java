@@ -19,7 +19,7 @@ public class ConfigurationService implements ConfigurationDataSource {
   public de.jollyday.spi.Configuration getConfiguration(ManagerParameter parameter) {
     final URL resourceUrl = parameter.createResourceUrl();
     try (final InputStream inputStream = resourceUrl.openStream()) {
-      return new Configuration(xmlUtil.unmarshallConfiguration(inputStream));
+      return new JaxbConfiguration(xmlUtil.unmarshallConfiguration(inputStream));
     } catch (Exception e) {
       throw new IllegalStateException("Cannot instantiate configuration from URL '" + resourceUrl + "'.", e);
     }
