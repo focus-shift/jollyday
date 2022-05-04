@@ -23,8 +23,12 @@ import de.jollyday.spi.IslamicHoliday;
 
 import java.time.LocalDate;
 import java.time.chrono.HijrahChronology;
+import java.util.List;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
+import static java.util.stream.Collectors.toList;
 
 /**
  * This parser calculates gregorian dates for the different islamic holidays.
@@ -32,17 +36,17 @@ import java.util.stream.Stream;
  * @author Sven Diedrichsen
  * @version $Id: $
  */
-public class IslamicHolidayParser implements Function<Integer, Stream<Holiday>> {
+public class IslamicHolidayParser implements Function<Integer, List<Holiday>> {
 
-  private final Stream<IslamicHoliday> islamicHolidayStream;
+  private final List<IslamicHoliday> islamicHolidayStream;
 
-  public IslamicHolidayParser(Stream<IslamicHoliday> islamicHolidayStream) {
+  public IslamicHolidayParser(List<IslamicHoliday> islamicHolidayStream) {
     this.islamicHolidayStream = islamicHolidayStream;
   }
 
   @Override
-  public Stream<Holiday> apply(Integer year) {
-    return islamicHolidayStream
+  public List<Holiday> apply(Integer year) {
+    return islamicHolidayStream.stream()
       .filter(new ValidLimitation(year))
       .flatMap(ih -> {
         Stream<LocalDate> islamicHolidays;
@@ -96,6 +100,7 @@ public class IslamicHolidayParser implements Function<Integer, Stream<Holiday>> 
             throw new IllegalArgumentException("Unknown islamic holiday " + ih.type());
         }
         return islamicHolidays.map(date -> new CreateHoliday(date).apply(ih));
-      });
+      })
+      .collect(toList());
   }
 }

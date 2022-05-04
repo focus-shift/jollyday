@@ -21,8 +21,10 @@ import de.jollyday.parser.functions.CreateHoliday;
 import de.jollyday.parser.predicates.ValidLimitation;
 import de.jollyday.spi.RelativeToEasterSunday;
 
+import java.util.List;
 import java.util.function.Function;
-import java.util.stream.Stream;
+
+import static java.util.stream.Collectors.toList;
 
 /**
  * This parser creates holidays relative to easter sunday.
@@ -30,19 +32,20 @@ import java.util.stream.Stream;
  * @author Sven Diedrichsen
  * @version $Id: $
  */
-public class RelativeToEasterSundayParser implements Function<Integer, Stream<Holiday>> {
+public class RelativeToEasterSundayParser implements Function<Integer, List<Holiday>> {
 
-  private final Stream<RelativeToEasterSunday> relativeToEasterSundays;
+  private final List<RelativeToEasterSunday> relativeToEasterSundays;
 
-  public RelativeToEasterSundayParser(Stream<RelativeToEasterSunday> relativeToEasterSundays) {
+  public RelativeToEasterSundayParser(List<RelativeToEasterSunday> relativeToEasterSundays) {
     this.relativeToEasterSundays = relativeToEasterSundays;
   }
 
   @Override
-  public Stream<Holiday> apply(Integer year) {
-    return relativeToEasterSundays
+  public List<Holiday> apply(Integer year) {
+    return relativeToEasterSundays.stream()
       .filter(new ValidLimitation(year))
       .map(res -> new DescribedDateHolder(res, new CalculateEasterSunday(year).apply(res.chronology()).plus(res.days())))
-      .map(holder -> new CreateHoliday(holder.getDate()).apply(holder.getDescribed()));
+      .map(holder -> new CreateHoliday(holder.getDate()).apply(holder.getDescribed()))
+      .collect(toList());
   }
 }

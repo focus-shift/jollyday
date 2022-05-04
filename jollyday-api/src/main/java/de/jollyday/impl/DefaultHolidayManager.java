@@ -18,13 +18,13 @@ package de.jollyday.impl;
 import de.jollyday.CalendarHierarchy;
 import de.jollyday.Holiday;
 import de.jollyday.HolidayManager;
-import de.jollyday.parser.HolidayParser;
 import de.jollyday.spi.Configuration;
 import de.jollyday.spi.Holidays;
 import de.jollyday.util.ClassLoadingUtil;
 
-import java.beans.Introspector;
-import java.beans.PropertyDescriptor;
+import java.lang.reflect.Method;
+import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
 import java.time.LocalDate;
 import java.util.Collection;
 import java.util.Collections;
@@ -34,6 +34,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
+import java.util.function.Function;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -53,7 +54,7 @@ public class DefaultHolidayManager extends HolidayManager {
   /**
    * Parser cache by XML class name.
    */
-  private final Map<String, HolidayParser> parserCache = new HashMap<>();
+  private final Map<String, Function<Integer, List<Holiday>>> parserCache = new HashMap<>();
   /**
    * Configuration parsed on initialization.
    */
@@ -151,9 +152,9 @@ public class DefaultHolidayManager extends HolidayManager {
    * @param config   the holiday configuration
    */
   private void parseHolidays(int year, Set<Holiday> holidays, final Holidays config) {
-    final Collection<HolidayParser> parsers = getParsers(config);
-    for (HolidayParser p : parsers) {
-      holidays.addAll(p.parse(year, config));
+    final Collection<Function<Integer, List<Holiday>>> parsers = getParsers(config);
+    for (Function<Integer, List<Holiday>> p : parsers) {
+      holidays.addAll(p.apply(year));
     }
   }
 
@@ -164,19 +165,17 @@ public class DefaultHolidayManager extends HolidayManager {
    * @param config the holiday configuration
    * @return A list of parsers to for this configuration.
    */
-  private Collection<HolidayParser> getParsers(final Holidays config) {
-    final Collection<HolidayParser> parsers = new HashSet<>();
+  private Collection<Function<Integer, List<Holiday>>> getParsers(final Holidays config) {
+    final Collection<Function<Integer, List<Holiday>>> parsers = new HashSet<>();
     try {
-      final PropertyDescriptor[] propertiesDescs = Introspector.getBeanInfo(config.getClass()).getPropertyDescriptors();
-      for (PropertyDescriptor propertyDescriptor : propertiesDescs) {
-        if (List.class.isAssignableFrom(propertyDescriptor.getPropertyType())) {
-          final List<?> l = (List<?>) propertyDescriptor.getReadMethod().invoke(config);
-          if (!l.isEmpty()) {
-            final String className = l.get(0).getClass().getName();
-            final HolidayParser holidayParser = instantiateParser(className);
-            if (holidayParser != null) {
-              parsers.add(holidayParser);
-            }
+      final Method[] declaredMethods = config.getClass().getDeclaredMethods();
+      for (Method declaredMethod : declaredMethods) {
+        final Type actualTypeArgument = ((ParameterizedType) declaredMethod.getGenericReturnType()).getActualTypeArguments()[0];
+        final List<?> holidays = (List<?>) declaredMethod.invoke(config);
+        if (!holidays.isEmpty()) {
+          final Function<Integer, List<Holiday>> holidayParser = instantiateParser(actualTypeArgument.getTypeName(), holidays);
+          if (holidayParser != null) {
+            parsers.add(holidayParser);
           }
         }
       }
@@ -186,14 +185,14 @@ public class DefaultHolidayManager extends HolidayManager {
     return parsers;
   }
 
-  private HolidayParser instantiateParser(String className) throws ClassNotFoundException, InstantiationException, IllegalAccessException, java.lang.reflect.InvocationTargetException, NoSuchMethodException {
-    HolidayParser holidayParser = parserCache.get(className);
+  private Function<Integer, List<Holiday>> instantiateParser(String className, List<?> holidays) throws ClassNotFoundException, InstantiationException, IllegalAccessException, java.lang.reflect.InvocationTargetException, NoSuchMethodException {
+    Function<Integer, List<Holiday>> holidayParser = parserCache.get(className);
     if (holidayParser == null) {
       final String propName = PARSER_IMPL_PREFIX + className;
       final String parserClassName = getManagerParameter().getProperty(propName);
       if (parserClassName != null) {
-        Class<?> parserClass = classLoadingUtil.loadClass(parserClassName);
-        holidayParser = (HolidayParser) parserClass.getDeclaredConstructor().newInstance();
+        final Class<?> parserClass = classLoadingUtil.loadClass(parserClassName);
+        holidayParser = (Function<Integer, List<Holiday>>) parserClass.getConstructor(List.class).newInstance(holidays);
         parserCache.put(className, holidayParser);
       }
     }
@@ -295,7 +294,7 @@ public class DefaultHolidayManager extends HolidayManager {
     final CalendarHierarchy hierarchy = new CalendarHierarchy(h, c.hierarchy());
     hierarchy.setFallbackDescription(c.description());
     c.subConfigurations().forEach(sub -> {
-      final CalendarHierarchy subHierarchy = createConfigurationHierarchy(sub, hierarchy);
+        final CalendarHierarchy subHierarchy = createConfigurationHierarchy(sub, hierarchy);
         hierarchy.getChildren().put(subHierarchy.getId(), subHierarchy);
       }
     );

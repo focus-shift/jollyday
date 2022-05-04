@@ -23,8 +23,12 @@ import de.jollyday.spi.EthiopianOrthodoxHoliday;
 import org.threeten.extra.chrono.CopticChronology;
 
 import java.time.LocalDate;
+import java.util.List;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
+import static java.util.stream.Collectors.toList;
 
 /**
  * Calculates the ethiopian orthodox holidays.
@@ -32,17 +36,17 @@ import java.util.stream.Stream;
  * @author Sven Diedrichsen
  * @version $Id: $
  */
-public class EthiopianOrthodoxHolidayParser implements Function<Integer, Stream<Holiday>> {
+public class EthiopianOrthodoxHolidayParser implements Function<Integer, List<Holiday>> {
 
-  private final Stream<EthiopianOrthodoxHoliday> ethiopianOrthodoxHolidayStream;
+  private final List<EthiopianOrthodoxHoliday> ethiopianOrthodoxHolidayStream;
 
-  public EthiopianOrthodoxHolidayParser(Stream<EthiopianOrthodoxHoliday> ethiopianOrthodoxHolidayStream) {
+  public EthiopianOrthodoxHolidayParser(List<EthiopianOrthodoxHoliday> ethiopianOrthodoxHolidayStream) {
     this.ethiopianOrthodoxHolidayStream = ethiopianOrthodoxHolidayStream;
   }
 
   @Override
-  public Stream<Holiday> apply(Integer year) {
-    return ethiopianOrthodoxHolidayStream
+  public List<Holiday> apply(Integer year) {
+    return ethiopianOrthodoxHolidayStream.stream()
       .filter(new ValidLimitation(year))
       .flatMap(eoh -> {
         final Stream<LocalDate> ethiopianHolidays;
@@ -60,6 +64,7 @@ public class EthiopianOrthodoxHolidayParser implements Function<Integer, Stream<
             throw new IllegalArgumentException("Unknown ethiopian orthodox holiday type " + eoh.type());
         }
         return ethiopianHolidays.map(date -> new CreateHoliday(date).apply(eoh));
-      });
+      })
+      .collect(toList());
   }
 }

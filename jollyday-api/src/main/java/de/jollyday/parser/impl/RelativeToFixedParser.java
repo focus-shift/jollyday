@@ -24,8 +24,10 @@ import de.jollyday.spi.RelativeToFixed;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;
+import java.util.List;
 import java.util.function.Function;
-import java.util.stream.Stream;
+
+import static java.util.stream.Collectors.toList;
 
 /**
  * The Class RelativeToFixedParser.
@@ -33,17 +35,17 @@ import java.util.stream.Stream;
  * @author tboven
  * @version $Id: $
  */
-public class RelativeToFixedParser implements Function<Integer, Stream<Holiday>> {
+public class RelativeToFixedParser implements Function<Integer, List<Holiday>> {
 
-  private final Stream<RelativeToFixed> relativeToFixed;
+  private final List<RelativeToFixed> relativeToFixed;
 
-  public RelativeToFixedParser(Stream<RelativeToFixed> relativeToFixed) {
+  public RelativeToFixedParser(List<RelativeToFixed> relativeToFixed) {
     this.relativeToFixed = relativeToFixed;
   }
 
   @Override
-  public Stream<Holiday> apply(Integer year) {
-    return relativeToFixed
+  public List<Holiday> apply(Integer year) {
+    return relativeToFixed.stream()
       .filter(new ValidLimitation(year))
       .map(rf -> {
         LocalDate fixed = new FixedToLocalDate(year).apply(rf.date());
@@ -61,6 +63,7 @@ public class RelativeToFixedParser implements Function<Integer, Stream<Holiday>>
           fixed = fixed.plus(rf.when() == Relation.BEFORE ? rf.days().negated() : rf.days());
         }
         return new CreateHoliday(fixed).apply(rf);
-      });
+      })
+      .collect(toList());
   }
 }

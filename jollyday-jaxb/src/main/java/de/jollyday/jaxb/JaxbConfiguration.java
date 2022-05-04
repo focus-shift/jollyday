@@ -20,7 +20,7 @@ public class JaxbConfiguration implements Configuration {
 
   @Override
   public Holidays holidays() {
-    return null;
+    return new JaxbHolidays(xmlConfiguration.getHolidays());
   }
 
   @Override

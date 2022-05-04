@@ -23,8 +23,10 @@ import de.jollyday.spi.Relation;
 import de.jollyday.spi.RelativeToWeekdayInMonth;
 
 import java.time.LocalDate;
+import java.util.List;
 import java.util.function.Function;
-import java.util.stream.Stream;
+
+import static java.util.stream.Collectors.toList;
 
 /**
  * <p>
@@ -34,17 +36,17 @@ import java.util.stream.Stream;
  * @author Sven
  * @version $Id: $
  */
-public class RelativeToWeekdayInMonthParser implements Function<Integer, Stream<Holiday>> {
+public class RelativeToWeekdayInMonthParser implements Function<Integer, List<Holiday>> {
 
-  private final Stream<RelativeToWeekdayInMonth> relativeToWeekdayInMonths;
+  private final List<RelativeToWeekdayInMonth> relativeToWeekdayInMonths;
 
-  public RelativeToWeekdayInMonthParser(Stream<RelativeToWeekdayInMonth> relativeToWeekdayInMonths) {
+  public RelativeToWeekdayInMonthParser(List<RelativeToWeekdayInMonth> relativeToWeekdayInMonths) {
     this.relativeToWeekdayInMonths = relativeToWeekdayInMonths;
   }
 
   @Override
-  public Stream<Holiday> apply(Integer year) {
-    return relativeToWeekdayInMonths
+  public List<Holiday> apply(Integer year) {
+    return relativeToWeekdayInMonths.stream()
       .filter(new ValidLimitation(year))
       .map(rwm -> {
         LocalDate date = new FindWeekDayInMonth(year).apply(rwm.weekdayInMonth()).plusDays(1);
@@ -53,6 +55,7 @@ public class RelativeToWeekdayInMonthParser implements Function<Integer, Stream<
           date = date.plusDays(direction);
         }
         return new CreateHoliday(date).apply(rwm);
-      });
+      })
+      .collect(toList());
   }
 }

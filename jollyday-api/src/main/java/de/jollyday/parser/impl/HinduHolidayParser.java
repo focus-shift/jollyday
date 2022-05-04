@@ -18,8 +18,8 @@ package de.jollyday.parser.impl;
 import de.jollyday.Holiday;
 import de.jollyday.spi.HinduHoliday;
 
+import java.util.List;
 import java.util.function.Function;
-import java.util.stream.Stream;
 
 /**
  * <p>HinduHolidayParser class.</p>
@@ -27,17 +27,17 @@ import java.util.stream.Stream;
  * @author Sven
  * @version $Id: $
  */
-public class HinduHolidayParser implements Function<Integer, Stream<Holiday>> {
+public class HinduHolidayParser implements Function<Integer, List<Holiday>> {
 
-  private final Stream<HinduHoliday> hinduHolidayStream;
+  private final List<HinduHoliday> hinduHolidays;
 
-  public HinduHolidayParser(Stream<HinduHoliday> hinduHolidayStream) {
-    this.hinduHolidayStream = hinduHolidayStream;
+  public HinduHolidayParser(List<HinduHoliday> hinduHolidays) {
+    this.hinduHolidays = hinduHolidays;
   }
 
   @Override
-  public Stream<Holiday> apply(Integer year) {
-    return Stream.empty();
+  public List<Holiday> apply(Integer year) {
+    return List.of();
 		/* TODO: Implement
 		return hinduHolidayStream
 				.filter(new ValidLimitation(year))

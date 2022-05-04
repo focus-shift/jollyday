@@ -22,8 +22,10 @@ import de.jollyday.parser.functions.FixedToLocalDate;
 import de.jollyday.parser.predicates.ValidLimitation;
 import de.jollyday.spi.FixedWeekdayRelativeToFixed;
 
+import java.util.List;
 import java.util.function.Function;
-import java.util.stream.Stream;
+
+import static java.util.stream.Collectors.toList;
 
 /**
  * Parses fixed weekday relative to fixed date.
@@ -31,20 +33,21 @@ import java.util.stream.Stream;
  * @author Sven Diedrichsen
  * @version $Id: $
  */
-public class FixedWeekdayRelativeToFixedParser implements Function<Integer, Stream<Holiday>> {
+public class FixedWeekdayRelativeToFixedParser implements Function<Integer, List<Holiday>> {
 
-  private final Stream<FixedWeekdayRelativeToFixed> fixedWeekdayRelativeToFixed;
+  private final List<FixedWeekdayRelativeToFixed> fixedWeekdayRelativeToFixed;
 
-  public FixedWeekdayRelativeToFixedParser(Stream<FixedWeekdayRelativeToFixed> fixedWeekdayRelativeToFixed) {
+  public FixedWeekdayRelativeToFixedParser(List<FixedWeekdayRelativeToFixed> fixedWeekdayRelativeToFixed) {
     this.fixedWeekdayRelativeToFixed = fixedWeekdayRelativeToFixed;
   }
 
   @Override
-  public Stream<Holiday> apply(Integer year) {
-    return fixedWeekdayRelativeToFixed
+  public List<Holiday> apply(Integer year) {
+    return fixedWeekdayRelativeToFixed.stream()
       .filter(new ValidLimitation(year))
       .map(fwrf -> new DescribedDateHolder(fwrf, new FindWeekDayRelativeToDate(new FixedToLocalDate(year).apply(fwrf.day())).apply(fwrf)))
-      .map(holder -> new CreateHoliday(holder.getDate()).apply(holder.getDescribed()));
+      .map(holder -> new CreateHoliday(holder.getDate()).apply(holder.getDescribed()))
+      .collect(toList());
   }
 }
 

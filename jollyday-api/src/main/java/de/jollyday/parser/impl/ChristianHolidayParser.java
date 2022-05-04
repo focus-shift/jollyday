@@ -23,8 +23,10 @@ import de.jollyday.parser.predicates.ValidLimitation;
 import de.jollyday.spi.ChristianHoliday;
 
 import java.time.LocalDate;
+import java.util.List;
 import java.util.function.Function;
-import java.util.stream.Stream;
+
+import static java.util.stream.Collectors.toList;
 
 /**
  * This parser creates christian holidays for the given year relative to easter
@@ -33,17 +35,17 @@ import java.util.stream.Stream;
  * @author Sven Diedrichsen
  * @version $Id: $
  */
-public class ChristianHolidayParser implements Function<Integer, Stream<Holiday>> {
+public class ChristianHolidayParser implements Function<Integer, List<Holiday>> {
 
-  private final Stream<ChristianHoliday> christianHolidays;
+  private final List<ChristianHoliday> christianHolidays;
 
-  public ChristianHolidayParser(Stream<ChristianHoliday> christianHolidays) {
+  public ChristianHolidayParser(List<ChristianHoliday> christianHolidays) {
     this.christianHolidays = christianHolidays;
   }
 
   @Override
-  public Stream<Holiday> apply(Integer year) {
-    return christianHolidays
+  public List<Holiday> apply(Integer year) {
+    return christianHolidays.stream()
       .filter(new ValidLimitation(year))
       .map(ch -> {
         LocalDate easterSunday = new CalculateEasterSunday(year).apply(ch.chronology());
@@ -101,6 +103,7 @@ public class ChristianHolidayParser implements Function<Integer, Stream<Holiday>
         }
         easterSunday = new MoveDateRelative(easterSunday).apply(ch);
         return new CreateHoliday(easterSunday).apply(ch);
-      });
+      })
+      .collect(toList());
   }
 }

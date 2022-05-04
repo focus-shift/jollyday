@@ -1,21 +1,25 @@
 package de.jollyday.jaxb;
 
 import de.jollyday.HolidayType;
+import de.jollyday.spi.Fixed;
+import de.jollyday.spi.MovingCondition;
 import de.jollyday.spi.YearCycle;
 
 import java.time.MonthDay;
 import java.time.Year;
 import java.util.List;
-import java.util.stream.Collectors;
+
+import static java.util.stream.Collectors.toList;
 
 /**
  * @author sdiedrichsen
  * @version $
  * @since 15.03.20
  */
-public class JaxbFixed implements de.jollyday.spi.Fixed {
+public class JaxbFixed implements Fixed {
 
   private final XMLUtil xmlUtil = new XMLUtil();
+
   private final de.jollyday.jaxb.mapping.Fixed fixed;
 
   public JaxbFixed(de.jollyday.jaxb.mapping.Fixed fixed) {
@@ -41,12 +45,12 @@ public class JaxbFixed implements de.jollyday.spi.Fixed {
 
   @Override
   public Year validFrom() {
-    return Year.of(fixed.getValidFrom());
+    return fixed.getValidFrom() == null ? null : Year.of(fixed.getValidFrom());
   }
 
   @Override
   public Year validTo() {
-    return Year.of(fixed.getValidTo());
+    return fixed.getValidTo () == null ? null : Year.of(fixed.getValidTo());
   }
 
   @Override
@@ -57,7 +61,9 @@ public class JaxbFixed implements de.jollyday.spi.Fixed {
   }
 
   @Override
-  public List<de.jollyday.spi.MovingCondition> conditions() {
-    return fixed.getMovingCondition().stream().map(JaxbMovingCondition::new).collect(Collectors.toList());
+  public List<MovingCondition> conditions() {
+    return fixed.getMovingCondition().stream()
+      .map(JaxbMovingCondition::new)
+      .collect(toList());
   }
 }

@@ -168,7 +168,6 @@ public abstract class HolidayManager {
     }
   }
 
-
   /**
    * Reads the managers implementation class from the properties config file.
    *

@@ -22,8 +22,12 @@ import de.jollyday.parser.functions.FixedToLocalDate;
 import de.jollyday.parser.predicates.ValidLimitation;
 import de.jollyday.spi.FixedWeekdayBetweenFixed;
 
+import java.util.List;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
+import static java.util.stream.Collectors.toList;
 
 /**
  * Parses the configuration for fixed weekdays between two fixed dates.
@@ -31,17 +35,17 @@ import java.util.stream.Stream;
  * @author Sven Diedrichsen
  * @version $Id: $
  */
-public class FixedWeekdayBetweenFixedParser implements Function<Integer, Stream<Holiday>> {
+public class FixedWeekdayBetweenFixedParser implements Function<Integer, List<Holiday>> {
 
-  private final Stream<FixedWeekdayBetweenFixed> fixedWeekdayBetweenFixed;
+  private final List<FixedWeekdayBetweenFixed> fixedWeekdayBetweenFixed;
 
-  public FixedWeekdayBetweenFixedParser(Stream<FixedWeekdayBetweenFixed> fixedWeekdayBetweenFixed) {
+  public FixedWeekdayBetweenFixedParser(List<FixedWeekdayBetweenFixed> fixedWeekdayBetweenFixed) {
     this.fixedWeekdayBetweenFixed = fixedWeekdayBetweenFixed;
   }
 
   @Override
-  public Stream<Holiday> apply(Integer year) {
-    return fixedWeekdayBetweenFixed
+  public List<Holiday> apply(Integer year) {
+    return fixedWeekdayBetweenFixed.stream()
       .filter(new ValidLimitation(year))
       .map(fwm -> new DescribedDateHolder(fwm,
           new FindWeekDayBetween(
@@ -50,6 +54,7 @@ public class FixedWeekdayBetweenFixedParser implements Function<Integer, Stream<
           ).apply(fwm)
         )
       )
-      .map(holder -> new CreateHoliday(holder.getDate()).apply(holder.getDescribed()));
+      .map(holder -> new CreateHoliday(holder.getDate()).apply(holder.getDescribed()))
+      .collect(toList());
   }
 }
