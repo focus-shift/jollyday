@@ -112,9 +112,8 @@ public final class Holiday implements Comparable<Holiday> {
       return true;
     }
     if (obj instanceof Holiday) {
-      Holiday other = (Holiday) obj;
-      return other.date.equals(this.date) && other.propertiesKey.equals(this.propertiesKey)
-        && type.equals(other.type);
+      final Holiday other = (Holiday) obj;
+      return other.date.equals(this.date) && other.propertiesKey.equals(this.propertiesKey) && type.equals(other.type);
     }
     return false;
   }

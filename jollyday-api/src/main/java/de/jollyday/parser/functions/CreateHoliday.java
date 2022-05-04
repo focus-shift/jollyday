@@ -13,7 +13,7 @@ import java.util.function.Function;
  */
 public class CreateHoliday implements Function<Described, Holiday> {
 
-  private LocalDate localDate;
+  private final LocalDate localDate;
 
   public CreateHoliday(LocalDate localDate) {
     this.localDate = localDate;
@@ -23,5 +23,4 @@ public class CreateHoliday implements Function<Described, Holiday> {
   public Holiday apply(Described described) {
     return new Holiday(localDate, described.descriptionPropertiesKey(), described.officiality());
   }
-
 }

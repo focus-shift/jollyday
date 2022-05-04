@@ -17,7 +17,7 @@ import static java.time.temporal.TemporalAdjusters.previousOrSame;
  */
 public class MoveDateRelative implements Function<Movable, LocalDate> {
 
-  private LocalDate date;
+  private final LocalDate date;
 
   public MoveDateRelative(LocalDate date) {
     this.date = date;
@@ -33,5 +33,4 @@ public class MoveDateRelative implements Function<Movable, LocalDate> {
       .findFirst()
       .orElse(date);
   }
-
 }

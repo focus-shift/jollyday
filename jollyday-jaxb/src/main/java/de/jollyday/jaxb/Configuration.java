@@ -11,7 +11,7 @@ import java.util.stream.Stream;
  */
 public class Configuration implements de.jollyday.spi.Configuration {
 
-  private de.jollyday.config.Configuration xmlConfiguration;
+  private final de.jollyday.config.Configuration xmlConfiguration;
 
   public Configuration(de.jollyday.config.Configuration xmlConfiguration) {
     this.xmlConfiguration = xmlConfiguration;

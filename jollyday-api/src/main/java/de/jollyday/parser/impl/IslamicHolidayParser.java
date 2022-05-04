@@ -34,7 +34,7 @@ import java.util.stream.Stream;
  */
 public class IslamicHolidayParser implements Function<Integer, Stream<Holiday>> {
 
-  private Stream<IslamicHoliday> islamicHolidayStream;
+  private final Stream<IslamicHoliday> islamicHolidayStream;
 
   public IslamicHolidayParser(Stream<IslamicHoliday> islamicHolidayStream) {
     this.islamicHolidayStream = islamicHolidayStream;
@@ -98,5 +98,4 @@ public class IslamicHolidayParser implements Function<Integer, Stream<Holiday>> 
         return islamicHolidays.map(date -> new CreateHoliday(date).apply(ih));
       });
   }
-
 }

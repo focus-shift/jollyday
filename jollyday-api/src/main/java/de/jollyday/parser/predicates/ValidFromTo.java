@@ -21,7 +21,5 @@ public class ValidFromTo implements Predicate<Limited> {
   public boolean test(Limited limited) {
     return (limited.validFrom() == null || limited.validFrom().getValue() <= year)
       && (limited.validTo() == null || limited.validTo().getValue() >= year);
-
   }
-
 }

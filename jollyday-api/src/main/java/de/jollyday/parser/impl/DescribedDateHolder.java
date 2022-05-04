@@ -11,8 +11,8 @@ import java.time.LocalDate;
  */
 class DescribedDateHolder {
 
-  private LocalDate date;
-  private Described described;
+  private final LocalDate date;
+  private final Described described;
 
   public DescribedDateHolder(Described described, LocalDate date) {
     this.date = date;
@@ -26,5 +26,4 @@ class DescribedDateHolder {
   public Described getDescribed() {
     return described;
   }
-
 }

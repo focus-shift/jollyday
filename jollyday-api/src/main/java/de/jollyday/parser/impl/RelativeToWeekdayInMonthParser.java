@@ -36,7 +36,7 @@ import java.util.stream.Stream;
  */
 public class RelativeToWeekdayInMonthParser implements Function<Integer, Stream<Holiday>> {
 
-  private Stream<RelativeToWeekdayInMonth> relativeToWeekdayInMonths;
+  private final Stream<RelativeToWeekdayInMonth> relativeToWeekdayInMonths;
 
   public RelativeToWeekdayInMonthParser(Stream<RelativeToWeekdayInMonth> relativeToWeekdayInMonths) {
     this.relativeToWeekdayInMonths = relativeToWeekdayInMonths;
@@ -55,5 +55,4 @@ public class RelativeToWeekdayInMonthParser implements Function<Integer, Stream<
         return new CreateHoliday(date).apply(rwm);
       });
   }
-
 }

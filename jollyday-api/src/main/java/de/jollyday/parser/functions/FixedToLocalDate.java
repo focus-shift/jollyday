@@ -12,7 +12,7 @@ import java.util.function.Function;
  */
 public class FixedToLocalDate implements Function<Fixed, LocalDate> {
 
-  private int year;
+  private final int year;
 
   public FixedToLocalDate(int year) {
     this.year = year;

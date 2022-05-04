@@ -14,7 +14,7 @@ import java.util.function.Function;
  */
 public class CalculateEasterSunday implements Function<Chronology, LocalDate> {
 
-  private Integer year;
+  private final Integer year;
 
   public CalculateEasterSunday(Integer year) {
     this.year = year;
@@ -32,5 +32,4 @@ public class CalculateEasterSunday implements Function<Chronology, LocalDate> {
       return new CalculateJulianEasterSunday().apply(year);
     }
   }
-
 }

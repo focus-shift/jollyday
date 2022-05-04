@@ -17,7 +17,7 @@ import static java.time.temporal.TemporalAdjusters.lastInMonth;
  */
 public class FindWeekDayInMonth implements Function<FixedWeekdayInMonth, LocalDate> {
 
-  private int year;
+  private final int year;
 
   public FindWeekDayInMonth(int year) {
     this.year = year;

@@ -22,7 +22,7 @@ import static java.time.temporal.TemporalAdjusters.previousOrSame;
  */
 public class FindWeekDayRelativeToDate implements Function<FixedWeekdayRelativeToFixed, LocalDate> {
 
-  private LocalDate date;
+  private final LocalDate date;
 
   public FindWeekDayRelativeToDate(LocalDate date) {
     this.date = date;
@@ -31,7 +31,7 @@ public class FindWeekDayRelativeToDate implements Function<FixedWeekdayRelativeT
   @Override
   public LocalDate apply(FixedWeekdayRelativeToFixed fixedWeekdayRelativeToFixed) {
     LocalDate result = moveDateToFirstOccurrenceOfWeekday(fixedWeekdayRelativeToFixed, date);
-    int days = determineNumberOfDays(fixedWeekdayRelativeToFixed);
+    final int days = determineNumberOfDays(fixedWeekdayRelativeToFixed);
     result = fixedWeekdayRelativeToFixed.when() == Relation.AFTER ? result.plusDays(days) : result.minusDays(days);
     return result;
   }
@@ -105,13 +105,12 @@ public class FindWeekDayRelativeToDate implements Function<FixedWeekdayRelativeT
    * @return the closest day-of-week adjuster, not null
    */
   private static TemporalAdjuster closest(DayOfWeek dayOfWeek) {
-    return (temporal) -> {
-      Temporal previous = temporal.with(previousOrSame(dayOfWeek));
-      Temporal next = temporal.with(nextOrSame(dayOfWeek));
-      int previousDays = Days.between(temporal, previous).abs().getAmount();
-      int nextDays = Days.between(temporal, next).abs().getAmount();
+    return temporal -> {
+      final Temporal previous = temporal.with(previousOrSame(dayOfWeek));
+      final Temporal next = temporal.with(nextOrSame(dayOfWeek));
+      final int previousDays = Days.between(temporal, previous).abs().getAmount();
+      final int nextDays = Days.between(temporal, next).abs().getAmount();
       return (previousDays <= nextDays ? previous : next);
     };
   }
-
 }

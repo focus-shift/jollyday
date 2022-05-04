@@ -62,7 +62,7 @@ public abstract class HolidayManager {
   /**
    * Utility for calendar operations
    */
-  protected CalendarUtil calendarUtil = new CalendarUtil();
+  protected final CalendarUtil calendarUtil = new CalendarUtil();
   /**
    * The datasource to get the holiday data from.
    */
@@ -110,8 +110,7 @@ public abstract class HolidayManager {
    * @deprecated Use {@link #getInstance(ManagerParameter)} instead.
    */
   @Deprecated
-  public static HolidayManager getInstance(final HolidayCalendar c,
-                                           Properties properties) {
+  public static HolidayManager getInstance(final HolidayCalendar c, Properties properties) {
     return getInstance(ManagerParameters.create(c, properties));
   }
 
@@ -132,8 +131,7 @@ public abstract class HolidayManager {
    * @deprecated Use {@link #getInstance(ManagerParameter)} instead.
    */
   @Deprecated
-  public static HolidayManager getInstance(final String calendar,
-                                           Properties properties) {
+  public static HolidayManager getInstance(final String calendar, Properties properties) {
     return getInstance(ManagerParameters.create(calendar, properties));
   }
 
@@ -162,8 +160,7 @@ public abstract class HolidayManager {
     }
     CONFIGURATION_MANAGER_PROVIDER.mergeConfigurationProperties(parameter);
     final String managerImplClassName = readManagerImplClassName(parameter);
-    HolidayManagerValueHandler holidayManagerValueHandler = new HolidayManagerValueHandler(
-      parameter, managerImplClassName);
+    final HolidayManagerValueHandler holidayManagerValueHandler = new HolidayManagerValueHandler(parameter, managerImplClassName);
     if (isManagerCachingEnabled()) {
       return HOLIDAY_MANAGER_CACHE.get(holidayManagerValueHandler);
     } else {
@@ -179,11 +176,9 @@ public abstract class HolidayManager {
    * @return the manager implementation class name
    */
   private static String readManagerImplClassName(ManagerParameter parameter) {
-    String className = parameter.getManagerImplClassName();
+    final String className = parameter.getManagerImplClassName();
     if (className == null) {
-      throw new IllegalStateException("Missing configuration '"
-        + ManagerParameter.MANAGER_IMPL_CLASS_PREFIX
-        + "'. Cannot create manager.");
+      throw new IllegalStateException("Missing configuration '" + ManagerParameter.MANAGER_IMPL_CLASS_PREFIX + "'. Cannot create manager.");
     }
     return className;
   }
@@ -291,8 +286,7 @@ public abstract class HolidayManager {
    *
    * @param configurationDataSource the {@link ConfigurationDataSource} to use.
    */
-  public void setConfigurationDataSource(
-    ConfigurationDataSource configurationDataSource) {
+  public void setConfigurationDataSource(ConfigurationDataSource configurationDataSource) {
     this.configurationDataSource = configurationDataSource;
   }
 

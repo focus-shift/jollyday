@@ -42,8 +42,8 @@ public class XMLUtil {
 
   private static final Logger LOG = Logger.getLogger(XMLUtil.class.getName());
 
-  private JAXBContextCreator contextCreator = new JAXBContextCreator();
-  private ClassLoadingUtil classLoadingUtil = new ClassLoadingUtil();
+  private final JAXBContextCreator contextCreator = new JAXBContextCreator();
+  private final ClassLoadingUtil classLoadingUtil = new ClassLoadingUtil();
 
   /**
    * Unmarshalls the configuration from the stream. Uses <code>JAXB</code> for
@@ -113,10 +113,9 @@ public class XMLUtil {
     }
   }
 
-  public class JAXBContextCreator {
+  public static class JAXBContextCreator {
     public JAXBContext create(String packageName, ClassLoader classLoader) throws JAXBException {
       return JAXBContext.newInstance(packageName, classLoader);
     }
   }
-
 }

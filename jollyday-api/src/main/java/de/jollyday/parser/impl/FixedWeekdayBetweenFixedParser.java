@@ -33,7 +33,7 @@ import java.util.stream.Stream;
  */
 public class FixedWeekdayBetweenFixedParser implements Function<Integer, Stream<Holiday>> {
 
-  private Stream<FixedWeekdayBetweenFixed> fixedWeekdayBetweenFixed;
+  private final Stream<FixedWeekdayBetweenFixed> fixedWeekdayBetweenFixed;
 
   public FixedWeekdayBetweenFixedParser(Stream<FixedWeekdayBetweenFixed> fixedWeekdayBetweenFixed) {
     this.fixedWeekdayBetweenFixed = fixedWeekdayBetweenFixed;
@@ -52,5 +52,4 @@ public class FixedWeekdayBetweenFixedParser implements Function<Integer, Stream<
       )
       .map(holder -> new CreateHoliday(holder.getDate()).apply(holder.getDescribed()));
   }
-
 }

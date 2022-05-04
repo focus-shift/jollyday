@@ -35,7 +35,7 @@ import java.util.stream.Stream;
  */
 public class RelativeToFixedParser implements Function<Integer, Stream<Holiday>> {
 
-  private Stream<RelativeToFixed> relativeToFixed;
+  private final Stream<RelativeToFixed> relativeToFixed;
 
   public RelativeToFixedParser(Stream<RelativeToFixed> relativeToFixed) {
     this.relativeToFixed = relativeToFixed;
@@ -63,5 +63,4 @@ public class RelativeToFixedParser implements Function<Integer, Stream<Holiday>>
         return new CreateHoliday(fixed).apply(rf);
       });
   }
-
 }

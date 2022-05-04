@@ -16,11 +16,12 @@
 package de.jollyday.impl;
 
 import de.jollyday.Holiday;
-import de.jollyday.HolidayType;
 
 import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
+
+import static de.jollyday.HolidayType.OFFICIAL_HOLIDAY;
 
 /**
  * <p>
@@ -45,18 +46,16 @@ public class JapaneseHolidayManager extends DefaultHolidayManager {
    */
   @Override
   public Set<Holiday> getHolidays(int year, final String... args) {
-    Set<Holiday> holidays = super.getHolidays(year, args);
-    Set<Holiday> additionalHolidays = new HashSet<>();
-    for (Holiday d : holidays) {
-      LocalDate twoDaysLater = d.getDate().plusDays(2);
+    final Set<Holiday> holidays = super.getHolidays(year, args);
+    final Set<Holiday> additionalHolidays = new HashSet<>();
+    for (Holiday holiday : holidays) {
+      final LocalDate twoDaysLater = holiday.getDate().plusDays(2);
       if (calendarUtil.contains(holidays, twoDaysLater)) {
-        LocalDate bridgingDate = twoDaysLater.minusDays(1);
-        additionalHolidays.add(new Holiday(bridgingDate, BRIDGING_HOLIDAY_PROPERTIES_KEY,
-          HolidayType.OFFICIAL_HOLIDAY));
+        final LocalDate bridgingDate = twoDaysLater.minusDays(1);
+        additionalHolidays.add(new Holiday(bridgingDate, BRIDGING_HOLIDAY_PROPERTIES_KEY, OFFICIAL_HOLIDAY));
       }
     }
     holidays.addAll(additionalHolidays);
     return holidays;
   }
-
 }

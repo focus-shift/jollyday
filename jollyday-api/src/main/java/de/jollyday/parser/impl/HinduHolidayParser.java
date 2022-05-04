@@ -29,7 +29,7 @@ import java.util.stream.Stream;
  */
 public class HinduHolidayParser implements Function<Integer, Stream<Holiday>> {
 
-  private Stream<HinduHoliday> hinduHolidayStream;
+  private final Stream<HinduHoliday> hinduHolidayStream;
 
   public HinduHolidayParser(Stream<HinduHoliday> hinduHolidayStream) {
     this.hinduHolidayStream = hinduHolidayStream;

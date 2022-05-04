@@ -34,5 +34,4 @@ public class CalculateGregorianEasterSunday implements Function<Integer, LocalDa
     day = (x % 31) + 1;
     return LocalDate.of(year, (month == 3 ? MARCH : APRIL), day);
   }
-
 }

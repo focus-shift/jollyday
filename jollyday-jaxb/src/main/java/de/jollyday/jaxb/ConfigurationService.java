@@ -12,7 +12,7 @@ import java.net.URL;
  */
 public class ConfigurationService implements de.jollyday.spi.ConfigurationService {
 
-  private XMLUtil xmlUtil = new XMLUtil();
+  private final XMLUtil xmlUtil = new XMLUtil();
 
   @Override
   public de.jollyday.spi.Configuration getConfiguration(ManagerParameter parameter) {
@@ -23,5 +23,4 @@ public class ConfigurationService implements de.jollyday.spi.ConfigurationServic
       throw new IllegalStateException("Cannot instantiate configuration from URL '" + resourceUrl + "'.", e);
     }
   }
-
 }

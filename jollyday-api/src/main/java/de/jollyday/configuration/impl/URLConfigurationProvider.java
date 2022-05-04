@@ -40,10 +40,10 @@ public class URLConfigurationProvider implements ConfigurationProvider {
    */
   @Override
   public Properties getProperties() {
-    Properties properties = new Properties();
-    String configURLs = System.getProperty(CONFIG_URLS_PROPERTY);
+    final Properties properties = new Properties();
+    final String configURLs = System.getProperty(CONFIG_URLS_PROPERTY);
     if (configURLs != null) {
-      String[] strConfigURLs = configURLs.split(",");
+      final String[] strConfigURLs = configURLs.split(",");
       for (String strURL : strConfigURLs) {
         readPropertiesFromURL(properties, strURL);
       }
@@ -52,16 +52,17 @@ public class URLConfigurationProvider implements ConfigurationProvider {
   }
 
   private void readPropertiesFromURL(Properties properties, String strURL) {
-    if (strURL == null || "".equals(strURL))
+    if (strURL == null || "".equals(strURL)) {
       return;
+    }
+
     InputStream inputStream = null;
     try {
-      URL configURL = new URL(strURL.trim());
+      final URL configURL = new URL(strURL.trim());
       inputStream = configURL.openStream();
       properties.load(inputStream);
     } catch (Exception e) {
-      LOG.log(Level.WARNING, "Cannot read configuration from '" + strURL
-        + "'.", e);
+      LOG.log(Level.WARNING, "Cannot read configuration from '" + strURL + "'.", e);
     } finally {
       closeStreamFromURL(strURL, inputStream);
     }
@@ -72,10 +73,8 @@ public class URLConfigurationProvider implements ConfigurationProvider {
       try {
         inputStream.close();
       } catch (Exception e) {
-        LOG.warning("Cannot close stream for configuration URL "
-          + strURL + ".");
+        LOG.warning("Cannot close stream for configuration URL " + strURL + ".");
       }
     }
   }
-
 }

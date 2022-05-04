@@ -11,7 +11,7 @@ import java.time.DayOfWeek;
  */
 public class MovingCondition implements de.jollyday.spi.MovingCondition {
 
-  private de.jollyday.config.MovingCondition jaxbMovingCondition;
+  private final de.jollyday.config.MovingCondition jaxbMovingCondition;
 
   public MovingCondition(de.jollyday.config.MovingCondition jaxbMovingCondition) {
     this.jaxbMovingCondition = jaxbMovingCondition;

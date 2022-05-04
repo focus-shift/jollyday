@@ -32,7 +32,7 @@ import java.util.stream.Stream;
  */
 public class FixedWeekdayInMonthParser implements Function<Integer, Stream<Holiday>> {
 
-  private Stream<FixedWeekdayInMonth> fixedWeekdayInMonths;
+  private final Stream<FixedWeekdayInMonth> fixedWeekdayInMonths;
 
   public FixedWeekdayInMonthParser(Stream<FixedWeekdayInMonth> fixedWeekdayInMonths) {
     this.fixedWeekdayInMonths = fixedWeekdayInMonths;
@@ -45,5 +45,4 @@ public class FixedWeekdayInMonthParser implements Function<Integer, Stream<Holid
       .map(fwm -> new DescribedDateHolder(fwm, new FindWeekDayInMonth(year).apply(fwm)))
       .map(holder -> new CreateHoliday(holder.getDate()).apply(holder.getDescribed()));
   }
-
 }

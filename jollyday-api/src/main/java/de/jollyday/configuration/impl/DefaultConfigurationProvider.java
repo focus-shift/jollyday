@@ -54,9 +54,9 @@ public class DefaultConfigurationProvider implements ConfigurationProvider {
    */
   @Override
   public Properties getProperties() {
-    Properties properties = new Properties();
+    final Properties properties = new Properties();
     try {
-      URL config = resourceUtil.getResource(CONFIG_FILE);
+      final URL config = resourceUtil.getResource(CONFIG_FILE);
       if (config == null) {
         throw new IllegalStateException("Properties file " + CONFIG_FILE + " not found on classpath.");
       }
@@ -64,7 +64,7 @@ public class DefaultConfigurationProvider implements ConfigurationProvider {
         if (stream != null) {
           properties.load(stream);
         } else {
-          LOG.log(Level.WARNING, "Could not load default properties file '{0}' from classpath.", new Object[]{CONFIG_FILE});
+          LOG.log(Level.WARNING, "Could not load default properties file '" + CONFIG_FILE + "' from classpath.");
         }
       }
       return properties;
@@ -73,5 +73,4 @@ public class DefaultConfigurationProvider implements ConfigurationProvider {
         "Could not load default properties from classpath.", e);
     }
   }
-
 }

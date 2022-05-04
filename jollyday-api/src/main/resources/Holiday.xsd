@@ -31,7 +31,6 @@
     </restriction>
   </simpleType>
 
-
   <complexType name="RelativeToFixed">
     <complexContent>
       <extension base="tns:Holiday">

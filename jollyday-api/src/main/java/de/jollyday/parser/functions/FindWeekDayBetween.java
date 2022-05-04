@@ -4,10 +4,12 @@ import de.jollyday.spi.FixedWeekdayBetweenFixed;
 
 import java.time.LocalDate;
 import java.util.Iterator;
-import java.util.Spliterator;
-import java.util.Spliterators;
 import java.util.function.Function;
 import java.util.stream.StreamSupport;
+
+import static java.util.Spliterator.IMMUTABLE;
+import static java.util.Spliterator.ORDERED;
+import static java.util.Spliterators.spliteratorUnknownSize;
 
 /**
  * @author sdiedrichsen
@@ -27,7 +29,8 @@ public class FindWeekDayBetween implements Function<FixedWeekdayBetweenFixed, Lo
   @Override
   public LocalDate apply(FixedWeekdayBetweenFixed fwm) {
     LocalDate current = from;
-    final Iterator<LocalDate> iterator = new Iterator<LocalDate>() {
+
+    final Iterator<LocalDate> iterator = new Iterator<>() {
       @Override
       public boolean hasNext() {
         return !current.isAfter(to);
@@ -38,9 +41,9 @@ public class FindWeekDayBetween implements Function<FixedWeekdayBetweenFixed, Lo
         return current.plusDays(1);
       }
     };
-    return StreamSupport.stream(Spliterators.spliteratorUnknownSize(iterator, Spliterator.ORDERED | Spliterator.IMMUTABLE), false)
+
+    return StreamSupport.stream(spliteratorUnknownSize(iterator, ORDERED | IMMUTABLE), false)
       .filter(date -> date.getDayOfWeek() == fwm.weekday())
       .findFirst().orElse(null);
   }
-
 }

@@ -23,10 +23,7 @@ public final class ManagerParameters {
    * @return parameters
    */
   public static ManagerParameter create(Locale lc) {
-    String calendarPart =
-      "".equals(lc.getCountry())
-        ? lc.getLanguage()
-        : lc.getCountry();
+    final String calendarPart = "".equals(lc.getCountry()) ? lc.getLanguage() : lc.getCountry();
     return create(calendarPart, null);
   }
 

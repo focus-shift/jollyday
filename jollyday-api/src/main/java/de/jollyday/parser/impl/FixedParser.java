@@ -33,7 +33,7 @@ import java.util.stream.Stream;
  */
 public class FixedParser implements Function<Integer, Stream<Holiday>> {
 
-  private Stream<Fixed> fixed;
+  private final Stream<Fixed> fixed;
 
   public FixedParser(Stream<Fixed> fixed) {
     this.fixed = fixed;

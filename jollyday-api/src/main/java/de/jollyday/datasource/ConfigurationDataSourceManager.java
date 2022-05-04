@@ -30,14 +30,13 @@ public class ConfigurationDataSourceManager {
 
   public ConfigurationDataSource getConfigurationDataSource(ManagerParameter parameter) {
     validateConfiguration(parameter);
-    String dataSourceClassName = parameter.getProperty(ManagerParameter.CONFIGURATION_DATASOURCE_IMPL_CLASS);
+    final String dataSourceClassName = parameter.getProperty(ManagerParameter.CONFIGURATION_DATASOURCE_IMPL_CLASS);
     return instantiateDataSource(dataSourceClassName);
   }
 
-  private ConfigurationDataSource instantiateDataSource(
-    String dataSourceClassName) {
+  private ConfigurationDataSource instantiateDataSource(String dataSourceClassName) {
     try {
-      Class<?> dataSourceClass = classLoadingUtil.loadClass(dataSourceClassName);
+      final Class<?> dataSourceClass = classLoadingUtil.loadClass(dataSourceClassName);
       return ConfigurationDataSource.class.cast(dataSourceClass.getDeclaredConstructor().newInstance());
     } catch (Exception e) {
       throw new IllegalStateException("Cannot instantiate datasource instance of " + dataSourceClassName, e);
@@ -49,5 +48,4 @@ public class ConfigurationDataSourceManager {
       throw new IllegalStateException("Missing holiday configuration datasource implementation class under config key " + ManagerParameter.CONFIGURATION_DATASOURCE_IMPL_CLASS);
     }
   }
-
 }

@@ -10,7 +10,7 @@ import java.util.function.Predicate;
  */
 public class ValidLimitation implements Predicate<Limited> {
 
-  private int year;
+  private final int year;
 
   public ValidLimitation(final int year) {
     this.year = year;

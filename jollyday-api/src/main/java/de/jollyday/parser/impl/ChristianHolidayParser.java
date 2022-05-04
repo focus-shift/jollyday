@@ -35,7 +35,7 @@ import java.util.stream.Stream;
  */
 public class ChristianHolidayParser implements Function<Integer, Stream<Holiday>> {
 
-  private Stream<ChristianHoliday> christianHolidays;
+  private final Stream<ChristianHoliday> christianHolidays;
 
   public ChristianHolidayParser(Stream<ChristianHoliday> christianHolidays) {
     this.christianHolidays = christianHolidays;
@@ -97,12 +97,10 @@ public class ChristianHolidayParser implements Function<Integer, Stream<Holiday>
             easterSunday = easterSunday.plusDays(68);
             break;
           default:
-            throw new IllegalArgumentException(
-              "Unknown christian holiday type " + ch.type());
+            throw new IllegalArgumentException("Unknown christian holiday type " + ch.type());
         }
         easterSunday = new MoveDateRelative(easterSunday).apply(ch);
         return new CreateHoliday(easterSunday).apply(ch);
       });
   }
-
 }

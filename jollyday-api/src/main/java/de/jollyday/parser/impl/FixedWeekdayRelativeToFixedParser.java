@@ -46,6 +46,5 @@ public class FixedWeekdayRelativeToFixedParser implements Function<Integer, Stre
       .map(fwrf -> new DescribedDateHolder(fwrf, new FindWeekDayRelativeToDate(new FixedToLocalDate(year).apply(fwrf.day())).apply(fwrf)))
       .map(holder -> new CreateHoliday(holder.getDate()).apply(holder.getDescribed()));
   }
-
 }
 

@@ -34,7 +34,7 @@ import java.util.stream.Stream;
  */
 public class EthiopianOrthodoxHolidayParser implements Function<Integer, Stream<Holiday>> {
 
-  private Stream<EthiopianOrthodoxHoliday> ethiopianOrthodoxHolidayStream;
+  private final Stream<EthiopianOrthodoxHoliday> ethiopianOrthodoxHolidayStream;
 
   public EthiopianOrthodoxHolidayParser(Stream<EthiopianOrthodoxHoliday> ethiopianOrthodoxHolidayStream) {
     this.ethiopianOrthodoxHolidayStream = ethiopianOrthodoxHolidayStream;
@@ -62,5 +62,4 @@ public class EthiopianOrthodoxHolidayParser implements Function<Integer, Stream<
         return ethiopianHolidays.map(date -> new CreateHoliday(date).apply(eoh));
       });
   }
-
 }

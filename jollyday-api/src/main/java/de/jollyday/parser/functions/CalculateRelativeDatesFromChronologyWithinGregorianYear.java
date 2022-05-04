@@ -34,25 +34,23 @@ public class CalculateRelativeDatesFromChronologyWithinGregorianYear implements 
   public Stream<LocalDate> apply(final Integer gregorianYear) {
     final int absoluteShift = Math.abs(relativeShift);
 
-    LocalDate firstGregorianDate = LocalDate.of(gregorianYear, JANUARY, 1);
-    LocalDate lastGregorianDate = LocalDate.of(gregorianYear, DECEMBER, 31);
+    final LocalDate firstGregorianDate = LocalDate.of(gregorianYear, JANUARY, 1);
+    final LocalDate lastGregorianDate = LocalDate.of(gregorianYear, DECEMBER, 31);
 
-    ChronoLocalDate firstTargetDate = targetChrono.date(firstGregorianDate.minusDays(absoluteShift));
-    ChronoLocalDate lastTargetDate = targetChrono.date(lastGregorianDate.plusDays(absoluteShift));
+    final ChronoLocalDate firstTargetDate = targetChrono.date(firstGregorianDate.minusDays(absoluteShift));
+    final ChronoLocalDate lastTargetDate = targetChrono.date(lastGregorianDate.plusDays(absoluteShift));
 
     int targetYear = firstTargetDate.get(ChronoField.YEAR);
     final int lastYear = lastTargetDate.get(ChronoField.YEAR);
 
     Stream.Builder<LocalDate> builder = Stream.builder();
     while (targetYear <= lastYear) {
-      ChronoLocalDate d = targetChrono.date(targetYear, targetMonth, targetDay).plus(relativeShift,
-        ChronoUnit.DAYS);
-      if (!firstGregorianDate.isAfter(d) && !lastGregorianDate.isBefore(d)) {
-        builder.accept(LocalDate.from(d));
+      final ChronoLocalDate date = targetChrono.date(targetYear, targetMonth, targetDay).plus(relativeShift, ChronoUnit.DAYS);
+      if (!firstGregorianDate.isAfter(date) && !lastGregorianDate.isBefore(date)) {
+        builder.accept(LocalDate.from(date));
       }
       targetYear++;
     }
     return builder.build();
   }
-
 }

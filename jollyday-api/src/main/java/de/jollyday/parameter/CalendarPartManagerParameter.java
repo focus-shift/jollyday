@@ -22,8 +22,7 @@ public class CalendarPartManagerParameter extends BaseManagerParameter {
 
   private final String calendarPart;
 
-  public CalendarPartManagerParameter(String calendarPart,
-                                      Properties properties) {
+  public CalendarPartManagerParameter(String calendarPart,Properties properties) {
     super(properties);
     this.calendarPart = calendarPart;
   }
@@ -40,14 +39,13 @@ public class CalendarPartManagerParameter extends BaseManagerParameter {
 
   @Override
   public URL createResourceUrl() {
-    String configurationFileName = getConfigurationFileName(calendarPart);
+    final String configurationFileName = getConfigurationFileName(calendarPart);
     return resourceUtil.getResource(configurationFileName);
   }
 
   @Override
   public String getManagerImplClassName() {
-    String className = getProperty(MANAGER_IMPL_CLASS_PREFIX + "."
-      + calendarPart);
+    String className = getProperty(MANAGER_IMPL_CLASS_PREFIX + "." + calendarPart);
     if (className == null) {
       className = super.getManagerImplClassName();
     }

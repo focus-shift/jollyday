@@ -29,7 +29,6 @@ public class UrlManagerParameter extends BaseManagerParameter {
 
   @Override
   public String toString() {
-    return getClass().getSimpleName() + " - "
-      + this.calendarFileUrl.toString();
+    return getClass().getSimpleName() + " - " + this.calendarFileUrl.toString();
   }
 }

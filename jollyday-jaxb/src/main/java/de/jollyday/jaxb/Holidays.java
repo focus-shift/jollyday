@@ -20,7 +20,7 @@ import java.util.stream.Stream;
  */
 public class Holidays implements de.jollyday.spi.Holidays {
 
-  private de.jollyday.config.Holidays jaxbHolidays;
+  private final de.jollyday.config.Holidays jaxbHolidays;
 
   public Holidays(de.jollyday.config.Holidays jaxbHolidays) {
     this.jaxbHolidays = jaxbHolidays;

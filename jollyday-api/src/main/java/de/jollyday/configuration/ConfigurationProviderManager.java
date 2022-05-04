@@ -32,9 +32,9 @@ public class ConfigurationProviderManager {
 
   private static final Logger LOG = Logger.getLogger(ConfigurationProviderManager.class.getName());
 
-  private ConfigurationProvider defaultConfigurationProvider = new DefaultConfigurationProvider();
-  private ConfigurationProvider urlConfigurationProvider = new URLConfigurationProvider();
-  private ClassLoadingUtil classLoadingUtil = new ClassLoadingUtil();
+  private final ConfigurationProvider defaultConfigurationProvider = new DefaultConfigurationProvider();
+  private final ConfigurationProvider urlConfigurationProvider = new URLConfigurationProvider();
+  private final ClassLoadingUtil classLoadingUtil = new ClassLoadingUtil();
 
   /**
    * Reads the jollyday configuration from the
@@ -55,23 +55,20 @@ public class ConfigurationProviderManager {
   }
 
   private void addCustomConfigurationProviderProperties(ManagerParameter parameter) {
-    String providersStrList = System.getProperty(ConfigurationProvider.CONFIG_PROVIDERS_PROPERTY);
+    final String providersStrList = System.getProperty(ConfigurationProvider.CONFIG_PROVIDERS_PROPERTY);
     if (providersStrList != null) {
-      String[] providersClassNames = providersStrList.split(",");
+      final String[] providersClassNames = providersStrList.split(",");
       for (String providerClassName : providersClassNames) {
         if (providerClassName == null || "".equals(providerClassName))
           continue;
         try {
-          Class<?> providerClass = Class.forName(providerClassName.trim(), true,
-            classLoadingUtil.getClassloader());
-          ConfigurationProvider configurationProvider = ConfigurationProvider.class.cast(providerClass.getDeclaredConstructor().newInstance());
+          final Class<?> providerClass = Class.forName(providerClassName.trim(), true, classLoadingUtil.getClassloader());
+          final ConfigurationProvider configurationProvider = ConfigurationProvider.class.cast(providerClass.getDeclaredConstructor().newInstance());
           parameter.mergeProperties(configurationProvider.getProperties());
         } catch (Exception e) {
-          LOG.warning("Cannot load configuration from provider class '" + providerClassName + "'. "
-            + e.getClass().getSimpleName() + " (" + e.getMessage() + ").");
+          LOG.warning("Cannot load configuration from provider class '" + providerClassName + "'. " + e.getClass().getSimpleName() + " (" + e.getMessage() + ").");
         }
       }
     }
   }
-
 }

@@ -23,5 +23,4 @@ public class ValidMovingCondition implements Predicate<MovingCondition> {
   public boolean test(MovingCondition movingCondition) {
     return Objects.equals(date.getDayOfWeek(), movingCondition.substitute());
   }
-
 }

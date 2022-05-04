@@ -38,8 +38,8 @@ public class HolidayManagerValueHandler implements Cache.ValueHandler<HolidayMan
 
   @Override
   public HolidayManager createValue() {
-    HolidayManager manager = instantiateManagerImpl(managerImplClassName);
-    ConfigurationDataSource configurationDataSource = configurationDataSourceManager.getConfigurationDataSource(parameter);
+    final HolidayManager manager = instantiateManagerImpl(managerImplClassName);
+    final ConfigurationDataSource configurationDataSource = configurationDataSourceManager.getConfigurationDataSource(parameter);
     manager.setConfigurationDataSource(configurationDataSource);
     manager.init(parameter);
     return manager;
@@ -53,8 +53,8 @@ public class HolidayManagerValueHandler implements Cache.ValueHandler<HolidayMan
    */
   private HolidayManager instantiateManagerImpl(String managerImplClassName) {
     try {
-      Class<?> managerImplClass = classLoadingUtil.loadClass(managerImplClassName);
-      Object managerImplObject = managerImplClass.getDeclaredConstructor().newInstance();
+      final Class<?> managerImplClass = classLoadingUtil.loadClass(managerImplClassName);
+      final Object managerImplObject = managerImplClass.getDeclaredConstructor().newInstance();
       return HolidayManager.class.cast(managerImplObject);
     } catch (Exception e) {
       throw new IllegalStateException("Cannot create manager class " + managerImplClassName, e);

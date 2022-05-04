@@ -32,7 +32,7 @@ import java.util.stream.Stream;
  */
 public class RelativeToEasterSundayParser implements Function<Integer, Stream<Holiday>> {
 
-  private Stream<RelativeToEasterSunday> relativeToEasterSundays;
+  private final Stream<RelativeToEasterSunday> relativeToEasterSundays;
 
   public RelativeToEasterSundayParser(Stream<RelativeToEasterSunday> relativeToEasterSundays) {
     this.relativeToEasterSundays = relativeToEasterSundays;
@@ -45,5 +45,4 @@ public class RelativeToEasterSundayParser implements Function<Integer, Stream<Ho
       .map(res -> new DescribedDateHolder(res, new CalculateEasterSunday(year).apply(res.chronology()).plus(res.days())))
       .map(holder -> new CreateHoliday(holder.getDate()).apply(holder.getDescribed()));
   }
-
 }

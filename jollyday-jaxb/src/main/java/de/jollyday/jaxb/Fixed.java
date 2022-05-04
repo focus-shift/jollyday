@@ -15,9 +15,8 @@ import java.util.stream.Collectors;
  */
 public class Fixed implements de.jollyday.spi.Fixed {
 
-  private XMLUtil xmlUtil = new XMLUtil();
-
-  private de.jollyday.config.Fixed jaxbFixed;
+  private final XMLUtil xmlUtil = new XMLUtil();
+  private final de.jollyday.config.Fixed jaxbFixed;
 
   public Fixed(de.jollyday.config.Fixed jaxbFixed) {
     this.jaxbFixed = jaxbFixed;
