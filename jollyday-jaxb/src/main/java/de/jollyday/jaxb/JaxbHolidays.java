@@ -18,17 +18,17 @@ import java.util.stream.Stream;
  * @version $
  * @since 15.03.20
  */
-public class Holidays implements de.jollyday.spi.Holidays {
+public class JaxbHolidays implements de.jollyday.spi.Holidays {
 
   private final de.jollyday.jaxb.mapping.Holidays jaxbHolidays;
 
-  public Holidays(de.jollyday.jaxb.mapping.Holidays jaxbHolidays) {
+  public JaxbHolidays(de.jollyday.jaxb.mapping.Holidays jaxbHolidays) {
     this.jaxbHolidays = jaxbHolidays;
   }
 
   @Override
   public Stream<de.jollyday.spi.Fixed> fixed() {
-    return jaxbHolidays.getFixed().stream().map(Fixed::new);
+    return jaxbHolidays.getFixed().stream().map(JaxbFixed::new);
   }
 
   @Override

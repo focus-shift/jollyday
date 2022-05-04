@@ -11,7 +11,7 @@ import java.net.URL;
  * @version $
  * @since 15.03.20
  */
-public class ConfigurationService implements ConfigurationDataSource {
+public class JaxbConfigurationService implements ConfigurationDataSource {
 
   private final XMLUtil xmlUtil = new XMLUtil();
 

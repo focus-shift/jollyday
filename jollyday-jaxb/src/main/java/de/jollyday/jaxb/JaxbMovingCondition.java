@@ -9,11 +9,11 @@ import java.time.DayOfWeek;
  * @version $
  * @since 15.03.20
  */
-public class MovingCondition implements de.jollyday.spi.MovingCondition {
+public class JaxbMovingCondition implements de.jollyday.spi.MovingCondition {
 
   private final de.jollyday.jaxb.mapping.MovingCondition jaxbMovingCondition;
 
-  public MovingCondition(de.jollyday.jaxb.mapping.MovingCondition jaxbMovingCondition) {
+  public JaxbMovingCondition(de.jollyday.jaxb.mapping.MovingCondition jaxbMovingCondition) {
     this.jaxbMovingCondition = jaxbMovingCondition;
   }
 

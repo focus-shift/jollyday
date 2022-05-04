@@ -13,12 +13,12 @@ import java.util.stream.Collectors;
  * @version $
  * @since 15.03.20
  */
-public class Fixed implements de.jollyday.spi.Fixed {
+public class JaxbFixed implements de.jollyday.spi.Fixed {
 
   private final XMLUtil xmlUtil = new XMLUtil();
   private final de.jollyday.jaxb.mapping.Fixed jaxbFixed;
 
-  public Fixed(de.jollyday.jaxb.mapping.Fixed jaxbFixed) {
+  public JaxbFixed(de.jollyday.jaxb.mapping.Fixed jaxbFixed) {
     this.jaxbFixed = jaxbFixed;
   }
 
@@ -58,6 +58,6 @@ public class Fixed implements de.jollyday.spi.Fixed {
 
   @Override
   public List<de.jollyday.spi.MovingCondition> conditions() {
-    return jaxbFixed.getMovingCondition().stream().map(MovingCondition::new).collect(Collectors.toList());
+    return jaxbFixed.getMovingCondition().stream().map(JaxbMovingCondition::new).collect(Collectors.toList());
   }
 }
