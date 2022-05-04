@@ -19,10 +19,10 @@
 package de.jollyday.jaxb;
 
 import de.jollyday.HolidayType;
-import de.jollyday.config.Configuration;
-import de.jollyday.config.Month;
-import de.jollyday.config.ObjectFactory;
-import de.jollyday.config.Weekday;
+import de.jollyday.jaxb.mapping.Configuration;
+import de.jollyday.jaxb.mapping.Month;
+import de.jollyday.jaxb.mapping.ObjectFactory;
+import de.jollyday.jaxb.mapping.Weekday;
 import de.jollyday.util.ClassLoadingUtil;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBElement;
@@ -38,7 +38,7 @@ public class XMLUtil {
   /**
    * the package name to search for the generated java classes.
    */
-  public static final String PACKAGE = "de.jollyday.config";
+  public static final String PACKAGE = "de.jollyday.jaxb.mapping";
 
   private static final Logger LOG = Logger.getLogger(XMLUtil.class.getName());
 
@@ -102,7 +102,7 @@ public class XMLUtil {
    * @param type the type of holiday in the config
    * @return the type of holiday
    */
-  public HolidayType getType(de.jollyday.config.HolidayType type) {
+  public HolidayType getType(de.jollyday.jaxb.mapping.HolidayType type) {
     switch (type) {
       case OFFICIAL_HOLIDAY:
         return HolidayType.OFFICIAL_HOLIDAY;

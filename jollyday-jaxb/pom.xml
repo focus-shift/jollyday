@@ -53,6 +53,7 @@
           </execution>
         </executions>
       </plugin>
+
       <plugin>
         <groupId>com.github.davidmoten</groupId>
         <artifactId>jax-maven-plugin</artifactId>
@@ -79,7 +80,7 @@
                 <argument>-target</argument>
                 <argument>3.0</argument>
                 <argument>-p</argument>
-                <argument>de.jollyday.config</argument>
+                <argument>de.jollyday.jaxb.mapping</argument>
                 <argument>${project.build.directory}/dependency/Holiday.xsd</argument>
               </arguments>
             </configuration>
