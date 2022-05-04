@@ -29,6 +29,7 @@ public interface Holidays {
 
   // TODO: ? is this used anywhere?
   // Stream<HebrewHoliday> hebrewHolidays();
+
   Stream<EthiopianOrthodoxHoliday> ethiopianOrthodoxHolidays();
 
   Stream<RelativeToEasterSunday> relativeToEasterSunday();

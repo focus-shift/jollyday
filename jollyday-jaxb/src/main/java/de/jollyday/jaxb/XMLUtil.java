@@ -67,9 +67,9 @@ public class XMLUtil {
       if (ctx == null) {
         ctx = contextCreator.create(XMLUtil.PACKAGE, ObjectFactory.class.getClassLoader());
       }
-      Unmarshaller um = ctx.createUnmarshaller();
+      final Unmarshaller um = ctx.createUnmarshaller();
       @SuppressWarnings("unchecked")
-      JAXBElement<Configuration> el = (JAXBElement<Configuration>) um.unmarshal(stream);
+      final JAXBElement<Configuration> el = (JAXBElement<Configuration>) um.unmarshal(stream);
       return el.getValue();
     } catch (JAXBException ue) {
       throw new IllegalStateException("Cannot parse holidays XML file.", ue);
