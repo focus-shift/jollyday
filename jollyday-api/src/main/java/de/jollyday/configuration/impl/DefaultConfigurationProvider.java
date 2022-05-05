@@ -69,8 +69,7 @@ public class DefaultConfigurationProvider implements ConfigurationProvider {
       }
       return properties;
     } catch (IOException e) {
-      throw new IllegalStateException(
-        "Could not load default properties from classpath.", e);
+      throw new IllegalStateException("Could not load default properties from classpath.", e);
     }
   }
 }

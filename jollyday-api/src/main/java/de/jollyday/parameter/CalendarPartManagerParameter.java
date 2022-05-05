@@ -22,7 +22,7 @@ public class CalendarPartManagerParameter extends BaseManagerParameter {
 
   private final String calendarPart;
 
-  public CalendarPartManagerParameter(String calendarPart,Properties properties) {
+  public CalendarPartManagerParameter(String calendarPart, Properties properties) {
     super(properties);
     this.calendarPart = calendarPart;
   }
