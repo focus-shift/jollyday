@@ -36,7 +36,7 @@
                       month="MAY" descriptionPropertiesKey="BANK_HOLIDAY"/>
     <tns:FixedWeekday which="LAST" weekday="MONDAY"
                       month="MAY" descriptionPropertiesKey="BANK_HOLIDAY"/>
-    <tns:ChristianHoliday type="EASTER"/>
-    <tns:ChristianHoliday type="GOOD_FRIDAY"/>
+    <tns:ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
+    <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
   </tns:Holidays>
 </tns:Configuration>

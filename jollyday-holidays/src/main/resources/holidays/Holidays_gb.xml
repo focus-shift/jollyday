@@ -5,25 +5,18 @@
   <tns:Holidays>
     <tns:Fixed month="DECEMBER" day="26"
                descriptionPropertiesKey="BOXING_DAY">
-      <tns:MovingCondition substitute="SATURDAY" with="NEXT"
-                           weekday="MONDAY"/>
-      <tns:MovingCondition substitute="SUNDAY" with="NEXT"
-                           weekday="TUESDAY"/>
-      <tns:MovingCondition substitute="MONDAY" with="NEXT"
-                           weekday="TUESDAY"/>
+      <tns:MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+      <tns:MovingCondition substitute="MONDAY" with="NEXT" weekday="TUESDAY"/>
     </tns:Fixed>
     <tns:Fixed month="DECEMBER" day="25"
                descriptionPropertiesKey="CHRISTMAS">
-      <tns:MovingCondition substitute="SATURDAY" with="NEXT"
-                           weekday="MONDAY"/>
-      <tns:MovingCondition substitute="SUNDAY" with="NEXT"
-                           weekday="MONDAY"/>
+      <tns:MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </tns:Fixed>
 
     <!-- The 2020 bank holiday was moved from the 4th to the 8th of May -->
-    <tns:Fixed month="MAY" day="8"
-               validFrom="2020" validTo="2020"
-               descriptionPropertiesKey="BANK_HOLIDAY"/>
+    <tns:Fixed month="MAY" day="8" validFrom="2020" validTo="2020" descriptionPropertiesKey="BANK_HOLIDAY"/>
 
     <tns:FixedWeekday which="FIRST" weekday="MONDAY" validFrom="1900" validTo="2019"
                       month="MAY" descriptionPropertiesKey="BANK_HOLIDAY"/>
@@ -31,115 +24,88 @@
                       month="MAY" descriptionPropertiesKey="BANK_HOLIDAY"/>
     <tns:FixedWeekday which="LAST" weekday="MONDAY"
                       month="MAY" descriptionPropertiesKey="BANK_HOLIDAY"/>
-    <tns:ChristianHoliday type="EASTER"/>
-    <tns:ChristianHoliday type="GOOD_FRIDAY"/>
+    <tns:ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
+    <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
   </tns:Holidays>
   <tns:SubConfigurations hierarchy="al"
                          description="Alderney">
     <tns:Holidays>
-      <tns:Fixed month="JANUARY" day="1"
-                 descriptionPropertiesKey="NEW_YEAR"/>
-      <tns:ChristianHoliday type="EASTER_MONDAY"/>
+      <tns:Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+      <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="en"
-                         description="England">
+  <tns:SubConfigurations hierarchy="en" description="England">
     <tns:Holidays>
-      <tns:Fixed month="JANUARY" day="1"
-                 descriptionPropertiesKey="NEW_YEAR">
-        <tns:MovingCondition substitute="SATURDAY" with="NEXT"
-                             weekday="MONDAY"/>
-        <tns:MovingCondition substitute="SUNDAY" with="NEXT"
-                             weekday="MONDAY"/>
+      <tns:Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
+        <tns:MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+        <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </tns:Fixed>
       <tns:FixedWeekday which="LAST" weekday="MONDAY"
                         month="AUGUST" descriptionPropertiesKey="BANK_HOLIDAY"/>
-      <tns:ChristianHoliday type="EASTER_MONDAY"/>
+      <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="gu"
-                         description="Guernsey">
+  <tns:SubConfigurations hierarchy="gu" description="Guernsey">
     <tns:Holidays>
       <tns:Fixed month="JANUARY" day="1"
                  descriptionPropertiesKey="NEW_YEAR"/>
       <tns:Fixed month="MAY" day="9" descriptionPropertiesKey="LIBERATION"/>
-      <tns:ChristianHoliday type="EASTER_MONDAY"/>
+      <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="im"
-                         description="Isle of Man">
+  <tns:SubConfigurations hierarchy="im" description="Isle of Man">
     <tns:Holidays>
-      <tns:Fixed month="JANUARY" day="1"
-                 descriptionPropertiesKey="NEW_YEAR"/>
+      <tns:Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
       <tns:Fixed month="JULY" day="5" descriptionPropertiesKey="TYNWALD"/>
-      <tns:FixedWeekday which="SECOND" weekday="FRIDAY"
-                        month="JUNE" descriptionPropertiesKey="TOURIST_TROPHY"/>
-      <tns:ChristianHoliday type="EASTER_MONDAY"/>
+      <tns:FixedWeekday which="SECOND" weekday="FRIDAY" month="JUNE" descriptionPropertiesKey="TOURIST_TROPHY"/>
+      <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="je"
-                         description="Jersey">
+  <tns:SubConfigurations hierarchy="je" description="Jersey">
     <tns:Holidays>
-      <tns:Fixed month="JANUARY" day="1"
-                 descriptionPropertiesKey="NEW_YEAR"/>
+      <tns:Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
       <tns:Fixed month="MAY" day="9" descriptionPropertiesKey="LIBERATION"/>
-      <tns:ChristianHoliday type="EASTER_MONDAY"/>
+      <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="ni"
-                         description="Northern Ireland">
+  <tns:SubConfigurations hierarchy="ni" description="Northern Ireland">
     <tns:Holidays>
-      <tns:Fixed month="JANUARY" day="1"
-                 descriptionPropertiesKey="NEW_YEAR"/>
+      <tns:Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
       <tns:Fixed month="MARCH" day="17" descriptionPropertiesKey="ST_PATRICK">
-        <tns:MovingCondition substitute="SATURDAY" with="NEXT"
-                             weekday="MONDAY"/>
-        <tns:MovingCondition substitute="SUNDAY" with="NEXT"
-                             weekday="MONDAY"/>
+        <tns:MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+        <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </tns:Fixed>
       <tns:Fixed month="JULY" day="12" descriptionPropertiesKey="BATTLE_BOYNE">
-        <tns:MovingCondition substitute="SATURDAY" with="NEXT"
-                             weekday="MONDAY"/>
-        <tns:MovingCondition substitute="SUNDAY" with="NEXT"
-                             weekday="MONDAY"/>
+        <tns:MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+        <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </tns:Fixed>
-      <tns:ChristianHoliday type="EASTER_MONDAY"/>
+      <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="sc"
-                         description="Scotland">
+  <tns:SubConfigurations hierarchy="sc" description="Scotland">
     <tns:Holidays>
       <tns:Fixed month="JANUARY" day="1"
                  descriptionPropertiesKey="NEW_YEAR">
-        <tns:MovingCondition substitute="SATURDAY" with="NEXT"
-                             weekday="TUESDAY"/>
-        <tns:MovingCondition substitute="SUNDAY" with="NEXT"
-                             weekday="TUESDAY"/>
+        <tns:MovingCondition substitute="SATURDAY" with="NEXT" weekday="TUESDAY"/>
+        <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
       </tns:Fixed>
       <tns:Fixed month="JANUARY" day="2"
                  descriptionPropertiesKey="NEW_YEAR">
-        <tns:MovingCondition substitute="SATURDAY" with="NEXT"
-                             weekday="MONDAY"/>
-        <tns:MovingCondition substitute="SUNDAY" with="NEXT"
-                             weekday="MONDAY"/>
+        <tns:MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+        <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </tns:Fixed>
       <tns:FixedWeekday which="FIRST" weekday="MONDAY"
                         month="AUGUST" descriptionPropertiesKey="BANK_HOLIDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="wa"
-                         description="Wales">
+  <tns:SubConfigurations hierarchy="wa" description="Wales">
     <tns:Holidays>
-      <tns:Fixed month="JANUARY" day="1"
-                 descriptionPropertiesKey="NEW_YEAR">
-        <tns:MovingCondition substitute="SATURDAY" with="NEXT"
-                             weekday="MONDAY"/>
-        <tns:MovingCondition substitute="SUNDAY" with="NEXT"
-                             weekday="MONDAY"/>
+      <tns:Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
+        <tns:MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+        <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </tns:Fixed>
-      <tns:FixedWeekday which="FIRST" weekday="MONDAY"
-                        month="AUGUST" descriptionPropertiesKey="BANK_HOLIDAY"/>
-      <tns:ChristianHoliday type="EASTER_MONDAY"/>
+      <tns:FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="BANK_HOLIDAY"/>
+      <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
 </tns:Configuration>

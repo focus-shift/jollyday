@@ -12,10 +12,10 @@
     <tns:Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CHRISTMAS_EVE"/>
     <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
     <tns:Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
-    <tns:ChristianHoliday type="EASTER"/>
-    <tns:ChristianHoliday type="EASTER_MONDAY"/>
-    <tns:ChristianHoliday type="ASCENSION_DAY"/>
-    <tns:ChristianHoliday type="WHIT_MONDAY"/>
+    <tns:ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
+    <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+    <tns:ChristianHoliday type="ASCENSION_DAY" descriptionPropertiesKey="christian.ASCENSION_DAY"/>
+    <tns:ChristianHoliday type="WHIT_MONDAY" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
   </tns:Holidays>
   <tns:SubConfigurations hierarchy="clu" description="City of Luxembourg">
     <tns:Holidays>

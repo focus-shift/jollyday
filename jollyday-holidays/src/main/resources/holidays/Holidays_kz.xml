@@ -12,6 +12,6 @@
     <tns:Fixed month="JULY" day="6" descriptionPropertiesKey="REPUBLIC_DAY"/>
     <tns:Fixed month="AUGUST" day="30" descriptionPropertiesKey="CONSTITUTION_DAY"/>
     <tns:Fixed month="DECEMBER" day="16" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
-    <tns:IslamicHoliday type="ID_UL_ADHA"/>
+    <tns:IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
   </tns:Holidays>
 </tns:Configuration>

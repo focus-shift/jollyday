@@ -11,31 +11,31 @@
     <tns:Holidays>
       <tns:Fixed month="APRIL" day="14"/>
       <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <tns:ChristianHoliday type="GOOD_FRIDAY"/>
-      <tns:IslamicHoliday type="ASCHURA"/>
-      <tns:IslamicHoliday type="MAWLID_AN_NABI"/>
-      <tns:IslamicHoliday type="ID_AL_FITR"/>
-      <tns:IslamicHoliday type="ID_UL_ADHA"/>
+      <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+      <tns:IslamicHoliday type="ASCHURA" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <tns:IslamicHoliday type="MAWLID_AN_NABI" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <tns:IslamicHoliday type="ID_AL_FITR" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+      <tns:IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="ar" description="Arunachal Pradesh">
     <tns:Holidays>
       <tns:Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
       <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <tns:ChristianHoliday type="EASTER"/>
-      <tns:ChristianHoliday type="GOOD_FRIDAY"/>
-      <tns:IslamicHoliday type="ID_AL_FITR"/>
-      <tns:IslamicHoliday type="ID_UL_ADHA"/>
+      <tns:ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
+      <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+      <tns:IslamicHoliday type="ID_AL_FITR" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+      <tns:IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="as" description="Assam">
     <tns:Holidays>
       <tns:Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
       <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <tns:ChristianHoliday type="EASTER"/>
-      <tns:ChristianHoliday type="GOOD_FRIDAY"/>
-      <tns:IslamicHoliday type="ID_AL_FITR"/>
-      <tns:IslamicHoliday type="ID_UL_ADHA"/>
+      <tns:ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
+      <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+      <tns:IslamicHoliday type="ID_AL_FITR" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+      <tns:IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="br" description="Bihar">
@@ -43,20 +43,20 @@
       <tns:Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
       <tns:Fixed month="APRIL" day="14"/>
       <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <tns:ChristianHoliday type="EASTER"/>
-      <tns:ChristianHoliday type="GOOD_FRIDAY"/>
-      <tns:IslamicHoliday type="ASCHURA"/>
-      <tns:IslamicHoliday type="ID_AL_FITR"/>
-      <tns:IslamicHoliday type="ID_UL_ADHA"/>
+      <tns:ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
+      <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+      <tns:IslamicHoliday type="ASCHURA" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <tns:IslamicHoliday type="ID_AL_FITR" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+      <tns:IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="ct" description="Chhattisgarh">
     <tns:Holidays>
       <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <tns:IslamicHoliday type="ASCHURA"/>
-      <tns:IslamicHoliday type="MAWLID_AN_NABI"/>
-      <tns:IslamicHoliday type="ID_AL_FITR"/>
-      <tns:IslamicHoliday type="ID_UL_ADHA"/>
+      <tns:IslamicHoliday type="ASCHURA" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <tns:IslamicHoliday type="MAWLID_AN_NABI" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <tns:IslamicHoliday type="ID_AL_FITR" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+      <tns:IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="ga" description="Goa">
@@ -64,46 +64,46 @@
       <tns:Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
       <tns:Fixed month="DECEMBER" day="3"/>
       <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <tns:ChristianHoliday type="EASTER"/>
-      <tns:ChristianHoliday type="GOOD_FRIDAY"/>
+      <tns:ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
+      <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="gj" description="Gujarat">
     <tns:Holidays>
       <tns:Fixed month="APRIL" day="14"/>
       <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <tns:IslamicHoliday type="ID_AL_FITR"/>
-      <tns:IslamicHoliday type="ID_UL_ADHA"/>
+      <tns:IslamicHoliday type="ID_AL_FITR" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+      <tns:IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="hr" description="Haryana">
     <tns:Holidays>
       <tns:Fixed month="APRIL" day="14"/>
       <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <tns:IslamicHoliday type="ID_AL_FITR"/>
+      <tns:IslamicHoliday type="ID_AL_FITR" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="hp" description="Himachal Pradesh">
     <tns:Holidays>
       <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <tns:IslamicHoliday type="ID_AL_FITR"/>
-      <tns:IslamicHoliday type="ASCHURA"/>
+      <tns:IslamicHoliday type="ID_AL_FITR" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+      <tns:IslamicHoliday type="ASCHURA" descriptionPropertiesKey="islamic.ASCHURA"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="jk" description="Jammu and Kashmir">
     <tns:Holidays>
       <tns:Fixed month="APRIL" day="14"/>
       <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <tns:IslamicHoliday type="ASCHURA"/>
-      <tns:IslamicHoliday type="ID_AL_FITR"/>
-      <tns:IslamicHoliday type="ID_UL_ADHA"/>
+      <tns:IslamicHoliday type="ASCHURA" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <tns:IslamicHoliday type="ID_AL_FITR" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+      <tns:IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="jh" description="Jharkhand">
     <tns:Holidays>
-      <tns:ChristianHoliday type="EASTER"/>
-      <tns:ChristianHoliday type="GOOD_FRIDAY"/>
-      <tns:IslamicHoliday type="ID_UL_ADHA"/>
+      <tns:ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
+      <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+      <tns:IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="ka" description="Karnataka">
@@ -113,12 +113,12 @@
       <tns:Fixed month="NOVEMBER" day="1"/>
       <tns:Fixed month="NOVEMBER" day="5"/>
       <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <tns:ChristianHoliday type="EASTER"/>
-      <tns:ChristianHoliday type="GOOD_FRIDAY"/>
-      <tns:IslamicHoliday type="ASCHURA"/>
-      <tns:IslamicHoliday type="MAWLID_AN_NABI"/>
-      <tns:IslamicHoliday type="ID_AL_FITR"/>
-      <tns:IslamicHoliday type="ID_UL_ADHA"/>
+      <tns:ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
+      <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+      <tns:IslamicHoliday type="ASCHURA" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <tns:IslamicHoliday type="MAWLID_AN_NABI" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <tns:IslamicHoliday type="ID_AL_FITR" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+      <tns:IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="kl" description="Kerala">
@@ -126,19 +126,19 @@
       <tns:Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
       <tns:Fixed month="APRIL" day="14"/>
       <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <tns:ChristianHoliday type="EASTER"/>
-      <tns:ChristianHoliday type="GOOD_FRIDAY"/>
-      <tns:IslamicHoliday type="ID_AL_FITR"/>
-      <tns:IslamicHoliday type="ID_UL_ADHA"/>
+      <tns:ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
+      <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+      <tns:IslamicHoliday type="ID_AL_FITR" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+      <tns:IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="mp" description="Madhya Pradesh">
     <tns:Holidays>
       <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <tns:IslamicHoliday type="ASCHURA"/>
-      <tns:IslamicHoliday type="MAWLID_AN_NABI"/>
-      <tns:IslamicHoliday type="ID_AL_FITR"/>
-      <tns:IslamicHoliday type="ID_UL_ADHA"/>
+      <tns:IslamicHoliday type="ASCHURA" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <tns:IslamicHoliday type="MAWLID_AN_NABI" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <tns:IslamicHoliday type="ID_AL_FITR" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+      <tns:IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="mh" description="Maharashtra">
@@ -147,10 +147,10 @@
       <tns:Fixed month="APRIL" day="14"/>
       <tns:Fixed month="FEBRUARY" day="19"/>
       <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <tns:IslamicHoliday type="ASCHURA"/>
-      <tns:IslamicHoliday type="MAWLID_AN_NABI"/>
-      <tns:IslamicHoliday type="ID_AL_FITR"/>
-      <tns:IslamicHoliday type="ID_UL_ADHA"/>
+      <tns:IslamicHoliday type="ASCHURA" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <tns:IslamicHoliday type="MAWLID_AN_NABI" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <tns:IslamicHoliday type="ID_AL_FITR" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+      <tns:IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="mn" description="Manipur">
@@ -158,63 +158,63 @@
       <tns:Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
       <tns:Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
       <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <tns:ChristianHoliday type="EASTER"/>
-      <tns:ChristianHoliday type="GOOD_FRIDAY"/>
-      <tns:IslamicHoliday type="ID_AL_FITR"/>
-      <tns:IslamicHoliday type="ID_UL_ADHA"/>
+      <tns:ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
+      <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+      <tns:IslamicHoliday type="ID_AL_FITR" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+      <tns:IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="ml" description="Meghalaya">
     <tns:Holidays>
       <tns:Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
       <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <tns:ChristianHoliday type="EASTER"/>
-      <tns:ChristianHoliday type="GOOD_FRIDAY"/>
-      <tns:IslamicHoliday type="ID_AL_FITR"/>
-      <tns:IslamicHoliday type="ID_UL_ADHA"/>
+      <tns:ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
+      <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+      <tns:IslamicHoliday type="ID_AL_FITR" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+      <tns:IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="mz" description="Mizoram">
     <tns:Holidays>
       <tns:Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
       <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <tns:ChristianHoliday type="EASTER"/>
-      <tns:ChristianHoliday type="GOOD_FRIDAY"/>
-      <tns:IslamicHoliday type="MAWLID_AN_NABI"/>
-      <tns:IslamicHoliday type="ID_AL_FITR"/>
+      <tns:ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
+      <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+      <tns:IslamicHoliday type="MAWLID_AN_NABI" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <tns:IslamicHoliday type="ID_AL_FITR" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="nl" description="Nagaland">
     <tns:Holidays>
       <tns:Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
       <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <tns:ChristianHoliday type="EASTER"/>
-      <tns:ChristianHoliday type="GOOD_FRIDAY"/>
-      <tns:IslamicHoliday type="ID_AL_FITR"/>
-      <tns:IslamicHoliday type="ID_UL_ADHA"/>
+      <tns:ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
+      <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+      <tns:IslamicHoliday type="ID_AL_FITR" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+      <tns:IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="or" description="Orissa">
     <tns:Holidays>
       <tns:Fixed month="APRIL" day="14"/>
       <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <tns:IslamicHoliday type="ASCHURA"/>
-      <tns:IslamicHoliday type="ID_AL_FITR"/>
-      <tns:IslamicHoliday type="ID_UL_ADHA"/>
+      <tns:IslamicHoliday type="ASCHURA" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <tns:IslamicHoliday type="ID_AL_FITR" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+      <tns:IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="pb" description="Punjab">
     <tns:Holidays>
       <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <tns:IslamicHoliday type="ID_AL_FITR"/>
+      <tns:IslamicHoliday type="ID_AL_FITR" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="rj" description="Rajasthan">
     <tns:Holidays>
       <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <tns:IslamicHoliday type="ASCHURA"/>
-      <tns:IslamicHoliday type="ID_AL_FITR"/>
-      <tns:IslamicHoliday type="ID_UL_ADHA"/>
+      <tns:IslamicHoliday type="ASCHURA" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <tns:IslamicHoliday type="ID_AL_FITR" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+      <tns:IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="sk" description="Sikkim">
@@ -222,9 +222,9 @@
       <tns:Fixed month="MAY" day="16"/>
       <tns:Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
       <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <tns:ChristianHoliday type="EASTER"/>
-      <tns:ChristianHoliday type="GOOD_FRIDAY"/>
-      <tns:IslamicHoliday type="ID_AL_FITR"/>
+      <tns:ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
+      <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+      <tns:IslamicHoliday type="ID_AL_FITR" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="tn" description="Tamil Nadu">
@@ -233,12 +233,12 @@
       <tns:Fixed month="APRIL" day="14"/>
       <tns:Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
       <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <tns:ChristianHoliday type="EASTER"/>
-      <tns:ChristianHoliday type="GOOD_FRIDAY"/>
-      <tns:IslamicHoliday type="ASCHURA"/>
-      <tns:IslamicHoliday type="MAWLID_AN_NABI"/>
-      <tns:IslamicHoliday type="ID_AL_FITR"/>
-      <tns:IslamicHoliday type="ID_UL_ADHA"/>
+      <tns:ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
+      <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+      <tns:IslamicHoliday type="ASCHURA" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <tns:IslamicHoliday type="MAWLID_AN_NABI" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <tns:IslamicHoliday type="ID_AL_FITR" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+      <tns:IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="tr" description="Tripura">
@@ -246,8 +246,8 @@
       <tns:Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
       <tns:Fixed month="JANUARY" day="23"/>
       <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <tns:IslamicHoliday type="ID_AL_FITR"/>
-      <tns:IslamicHoliday type="ID_UL_ADHA"/>
+      <tns:IslamicHoliday type="ID_AL_FITR" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+      <tns:IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="up" description="Uttar Pradesh">
@@ -255,23 +255,23 @@
       <tns:Fixed month="APRIL" day="14"/>
       <tns:Fixed month="MARCH" day="15"/>
       <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <tns:ChristianHoliday type="EASTER"/>
-      <tns:ChristianHoliday type="GOOD_FRIDAY"/>
-      <tns:IslamicHoliday type="ASCHURA"/>
-      <tns:IslamicHoliday type="MAWLID_AN_NABI"/>
-      <tns:IslamicHoliday type="ID_UL_ADHA"/>
+      <tns:ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
+      <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+      <tns:IslamicHoliday type="ASCHURA" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <tns:IslamicHoliday type="MAWLID_AN_NABI" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <tns:IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="ul" description="Uttarakhand">
     <tns:Holidays>
       <tns:Fixed month="APRIL" day="14"/>
       <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <tns:ChristianHoliday type="EASTER"/>
-      <tns:ChristianHoliday type="GOOD_FRIDAY"/>
-      <tns:IslamicHoliday type="ASCHURA"/>
-      <tns:IslamicHoliday type="MAWLID_AN_NABI"/>
-      <tns:IslamicHoliday type="ID_AL_FITR"/>
-      <tns:IslamicHoliday type="ID_UL_ADHA"/>
+      <tns:ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
+      <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+      <tns:IslamicHoliday type="ASCHURA" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <tns:IslamicHoliday type="MAWLID_AN_NABI" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <tns:IslamicHoliday type="ID_AL_FITR" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+      <tns:IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="wb" description="West Bengal">
@@ -279,69 +279,69 @@
       <tns:Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
       <tns:Fixed month="JANUARY" day="23"/>
       <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <tns:ChristianHoliday type="EASTER"/>
-      <tns:ChristianHoliday type="GOOD_FRIDAY"/>
-      <tns:IslamicHoliday type="ASCHURA"/>
-      <tns:IslamicHoliday type="ID_AL_FITR"/>
-      <tns:IslamicHoliday type="ID_UL_ADHA"/>
+      <tns:ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
+      <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+      <tns:IslamicHoliday type="ASCHURA" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <tns:IslamicHoliday type="ID_AL_FITR" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+      <tns:IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="an" description="Andaman and Nicobar Islands">
     <tns:Holidays>
       <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <tns:ChristianHoliday type="EASTER"/>
-      <tns:ChristianHoliday type="GOOD_FRIDAY"/>
-      <tns:IslamicHoliday type="ASCHURA"/>
-      <tns:IslamicHoliday type="MAWLID_AN_NABI"/>
-      <tns:IslamicHoliday type="ID_AL_FITR"/>
-      <tns:IslamicHoliday type="ID_UL_ADHA"/>
+      <tns:ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
+      <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+      <tns:IslamicHoliday type="ASCHURA" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <tns:IslamicHoliday type="MAWLID_AN_NABI" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <tns:IslamicHoliday type="ID_AL_FITR" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+      <tns:IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="ch" description="Chandigarh">
     <tns:Holidays>
       <tns:Fixed month="APRIL" day="14"/>
       <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <tns:ChristianHoliday type="EASTER"/>
-      <tns:ChristianHoliday type="GOOD_FRIDAY"/>
-      <tns:IslamicHoliday type="ASCHURA"/>
-      <tns:IslamicHoliday type="ID_AL_FITR"/>
-      <tns:IslamicHoliday type="ID_UL_ADHA"/>
+      <tns:ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
+      <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+      <tns:IslamicHoliday type="ASCHURA" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <tns:IslamicHoliday type="ID_AL_FITR" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+      <tns:IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="dn" description="Dadra and Nagar Haveli">
     <tns:Holidays>
       <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <tns:ChristianHoliday type="EASTER"/>
-      <tns:ChristianHoliday type="GOOD_FRIDAY"/>
-      <tns:IslamicHoliday type="ID_AL_FITR"/>
-      <tns:IslamicHoliday type="ID_UL_ADHA"/>
+      <tns:ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
+      <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+      <tns:IslamicHoliday type="ID_AL_FITR" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+      <tns:IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="dd" description="Daman and Diu">
     <tns:Holidays>
       <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <tns:ChristianHoliday type="EASTER"/>
-      <tns:ChristianHoliday type="GOOD_FRIDAY"/>
-      <tns:IslamicHoliday type="ID_AL_FITR"/>
-      <tns:IslamicHoliday type="ID_UL_ADHA"/>
+      <tns:ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
+      <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+      <tns:IslamicHoliday type="ID_AL_FITR" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+      <tns:IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="ld" description="Lakshadweep">
     <tns:Holidays>
       <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <tns:ChristianHoliday type="EASTER"/>
-      <tns:ChristianHoliday type="GOOD_FRIDAY"/>
-      <tns:IslamicHoliday type="ID_UL_ADHA"/>
+      <tns:ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
+      <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+      <tns:IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="dl" description="Delhi">
     <tns:Holidays>
       <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <tns:ChristianHoliday type="EASTER"/>
-      <tns:ChristianHoliday type="GOOD_FRIDAY"/>
-      <tns:IslamicHoliday type="ASCHURA"/>
-      <tns:IslamicHoliday type="ID_AL_FITR"/>
-      <tns:IslamicHoliday type="ID_UL_ADHA"/>
+      <tns:ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
+      <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+      <tns:IslamicHoliday type="ASCHURA" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <tns:IslamicHoliday type="ID_AL_FITR" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+      <tns:IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="py" description="Puducherry">
@@ -350,12 +350,12 @@
       <tns:Fixed month="APRIL" day="14"/>
       <tns:Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
       <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <tns:ChristianHoliday type="EASTER"/>
-      <tns:ChristianHoliday type="GOOD_FRIDAY"/>
-      <tns:IslamicHoliday type="ASCHURA"/>
-      <tns:IslamicHoliday type="MAWLID_AN_NABI"/>
-      <tns:IslamicHoliday type="ID_AL_FITR"/>
-      <tns:IslamicHoliday type="ID_UL_ADHA"/>
+      <tns:ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
+      <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+      <tns:IslamicHoliday type="ASCHURA" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <tns:IslamicHoliday type="MAWLID_AN_NABI" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <tns:IslamicHoliday type="ID_AL_FITR" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+      <tns:IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
     </tns:Holidays>
   </tns:SubConfigurations>
 </tns:Configuration>

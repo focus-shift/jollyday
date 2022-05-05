@@ -14,8 +14,8 @@
     <tns:Fixed month="DECEMBER" day="6" descriptionPropertiesKey="FOUND_QUITO"/>
     <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
     <tns:Fixed month="DECEMBER" day="31" descriptionPropertiesKey="NEW_YEARS_EVE"/>
-    <tns:ChristianHoliday type="EASTER"/>
-    <tns:ChristianHoliday type="MAUNDY_THURSDAY"/>
-    <tns:ChristianHoliday type="GOOD_FRIDAY"/>
+    <tns:ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
+    <tns:ChristianHoliday type="MAUNDY_THURSDAY" descriptionPropertiesKey="christian.MAUNDY_THURSDAY"/>
+    <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
   </tns:Holidays>
 </tns:Configuration>

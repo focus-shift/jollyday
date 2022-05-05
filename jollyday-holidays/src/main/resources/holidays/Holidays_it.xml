@@ -13,12 +13,12 @@
     <tns:Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
     <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
     <tns:Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
-    <tns:ChristianHoliday type="EASTER"/>
-    <tns:ChristianHoliday type="EASTER_MONDAY"/>
+    <tns:ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
+    <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
   </tns:Holidays>
   <tns:SubConfigurations hierarchy="bz" description="Südtirol">
     <tns:Holidays>
-      <tns:ChristianHoliday type="WHIT_MONDAY"/>
+      <tns:ChristianHoliday type="WHIT_MONDAY" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
 </tns:Configuration>

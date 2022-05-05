@@ -8,20 +8,13 @@
     <tns:Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
     <tns:Fixed month="MAY" day="6" descriptionPropertiesKey="ST_GEORGE"/>
     <tns:Fixed month="MAY" day="24" descriptionPropertiesKey="EDU_CULTURE"/>
-    <tns:Fixed month="SEPTEMBER" day="6"
-               descriptionPropertiesKey="UNIFICATION"/>
-    <tns:Fixed month="SEPTEMBER" day="22"
-               descriptionPropertiesKey="INDEPENDENCE_DAY"/>
-    <tns:Fixed month="DECEMBER" day="24"
-               descriptionPropertiesKey="CHRISTMAS_EVE"/>
-    <tns:Fixed month="DECEMBER" day="25"
-               descriptionPropertiesKey="CHRISTMAS"/>
-    <tns:Fixed month="DECEMBER" day="31"
-               descriptionPropertiesKey="NEW_YEARS_EVE"/>
-    <tns:ChristianHoliday type="EASTER" chronology="JULIAN"/>
-    <tns:ChristianHoliday type="GOOD_FRIDAY"
-                          chronology="JULIAN"/>
-    <tns:ChristianHoliday type="EASTER_MONDAY"
-                          chronology="JULIAN"/>
+    <tns:Fixed month="SEPTEMBER" day="6" descriptionPropertiesKey="UNIFICATION"/>
+    <tns:Fixed month="SEPTEMBER" day="22" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <tns:Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CHRISTMAS_EVE"/>
+    <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+    <tns:Fixed month="DECEMBER" day="31" descriptionPropertiesKey="NEW_YEARS_EVE"/>
+    <tns:ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER" chronology="JULIAN"/>
+    <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY" chronology="JULIAN"/>
+    <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY" chronology="JULIAN"/>
   </tns:Holidays>
 </tns:Configuration>

@@ -17,10 +17,10 @@
     <tns:Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
     <tns:Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CHRISTMAS_EVE"/>
     <tns:Fixed month="DECEMBER" day="31" descriptionPropertiesKey="NEW_YEARS_EVE"/>
-    <tns:ChristianHoliday type="EASTER"/>
-    <tns:ChristianHoliday type="SHROVE_MONDAY"/>
-    <tns:ChristianHoliday type="CARNIVAL"/>
-    <tns:ChristianHoliday type="MAUNDY_THURSDAY"/>
-    <tns:ChristianHoliday type="GOOD_FRIDAY"/>
+    <tns:ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
+    <tns:ChristianHoliday type="SHROVE_MONDAY" descriptionPropertiesKey="christian.SHROVE_MONDAY"/>
+    <tns:ChristianHoliday type="CARNIVAL" descriptionPropertiesKey="christian.CARNIVAL"/>
+    <tns:ChristianHoliday type="MAUNDY_THURSDAY" descriptionPropertiesKey="christian.MAUNDY_THURSDAY"/>
+    <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
   </tns:Holidays>
 </tns:Configuration>

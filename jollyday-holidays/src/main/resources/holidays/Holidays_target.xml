@@ -11,7 +11,7 @@
     <tns:Fixed validFrom="1999" month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
     <tns:Fixed validFrom="2001" validTo="2001" month="DECEMBER" day="31" descriptionPropertiesKey="NEW_YEARS_EVE"/>
     <tns:Fixed validFrom="1999" validTo="1999" month="DECEMBER" day="31" descriptionPropertiesKey="NEW_YEARS_EVE"/>
-    <tns:ChristianHoliday validFrom="2000" type="GOOD_FRIDAY"/>
-    <tns:ChristianHoliday validFrom="2000" type="EASTER_MONDAY"/>
+    <tns:ChristianHoliday validFrom="2000" type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+    <tns:ChristianHoliday validFrom="2000" type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
   </tns:Holidays>
 </tns:Configuration>

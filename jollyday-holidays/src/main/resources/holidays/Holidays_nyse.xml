@@ -44,6 +44,6 @@
                       month="SEPTEMBER" descriptionPropertiesKey="LABOUR_DAY"/>
     <tns:FixedWeekday which="FOURTH" weekday="THURSDAY"
                       month="NOVEMBER" descriptionPropertiesKey="THANKSGIVING"/>
-    <tns:ChristianHoliday type="GOOD_FRIDAY"/>
+    <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
   </tns:Holidays>
 </tns:Configuration>

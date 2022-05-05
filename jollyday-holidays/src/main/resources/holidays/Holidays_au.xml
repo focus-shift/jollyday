@@ -36,10 +36,10 @@
       <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
       <tns:MovingCondition substitute="MONDAY" with="NEXT" weekday="TUESDAY"/>
     </tns:Fixed>
-    <tns:ChristianHoliday type="EASTER"/>
-    <tns:ChristianHoliday type="GOOD_FRIDAY"/>
-    <tns:ChristianHoliday type="EASTER_SATURDAY"/>
-    <tns:ChristianHoliday type="EASTER_MONDAY"/>
+    <tns:ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
+    <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+    <tns:ChristianHoliday type="EASTER_SATURDAY" descriptionPropertiesKey="christian.EASTER_SATURDAY"/>
+    <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
   </tns:Holidays>
   <tns:SubConfigurations hierarchy="act" description="Australian Capital Territory">
     <tns:Holidays>
@@ -170,8 +170,7 @@
         <tns:MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
         <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </tns:Fixed>
-      <tns:Fixed month="DECEMBER" day="26" validFrom="2008" validTo="2019"
-                 descriptionPropertiesKey="PROCLAMATION">
+      <tns:Fixed month="DECEMBER" day="26" validFrom="2008" validTo="2019" descriptionPropertiesKey="PROCLAMATION">
         <tns:MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
         <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </tns:Fixed>
@@ -202,7 +201,7 @@
       </tns:Fixed>
       <tns:FixedWeekday which="SECOND" weekday="MONDAY" month="MARCH" descriptionPropertiesKey="EIGHT"/>
       <tns:FixedWeekday which="SECOND" weekday="MONDAY" month="JUNE" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
-      <tns:ChristianHoliday type="EASTER_TUESDAY"/>
+      <tns:ChristianHoliday type="EASTER_TUESDAY" descriptionPropertiesKey="christian.EASTER_TUESDAY"/>
     </tns:Holidays>
     <tns:SubConfigurations hierarchy="ho" description="Hobart Area">
       <tns:Holidays>
@@ -211,8 +210,7 @@
     </tns:SubConfigurations>
     <tns:SubConfigurations hierarchy="nh" description="Non-Hobart Area">
       <tns:Holidays>
-        <tns:FixedWeekday which="FIRST" weekday="MONDAY" month="NOVEMBER"
-                          descriptionPropertiesKey="RECREATION"/>
+        <tns:FixedWeekday which="FIRST" weekday="MONDAY" month="NOVEMBER" descriptionPropertiesKey="RECREATION"/>
       </tns:Holidays>
     </tns:SubConfigurations>
   </tns:SubConfigurations>
@@ -232,8 +230,7 @@
       </tns:Fixed>
       <tns:FixedWeekday which="SECOND" weekday="MONDAY" month="MARCH" descriptionPropertiesKey="LABOUR_DAY"/>
       <tns:FixedWeekday which="SECOND" weekday="MONDAY" month="JUNE" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
-      <tns:FixedWeekday which="FIRST" weekday="TUESDAY" month="NOVEMBER"
-                        descriptionPropertiesKey="MELBOURNE_CUP"/>
+      <tns:FixedWeekday which="FIRST" weekday="TUESDAY" month="NOVEMBER" descriptionPropertiesKey="MELBOURNE_CUP"/>
       <tns:FixedWeekday which="LAST" weekday="FRIDAY" month="SEPTEMBER" validFrom="2020"
                         descriptionPropertiesKey="AFL"/>
     </tns:Holidays>
@@ -265,8 +262,7 @@
                         descriptionPropertiesKey="FOUNDATION"/>
       <tns:FixedWeekday which="FIRST" weekday="MONDAY" month="JUNE" validFrom="2020"
                         descriptionPropertiesKey="WESTERN_AUSTRALIA"/>
-      <tns:FixedWeekday which="LAST" weekday="MONDAY" month="SEPTEMBER"
-                        descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
+      <tns:FixedWeekday which="LAST" weekday="MONDAY" month="SEPTEMBER" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
 </tns:Configuration>

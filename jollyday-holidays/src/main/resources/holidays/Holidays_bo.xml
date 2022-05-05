@@ -9,8 +9,8 @@
     <tns:Fixed month="AUGUST" day="6" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
     <tns:Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
     <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-    <tns:ChristianHoliday type="EASTER"/>
-    <tns:ChristianHoliday type="GOOD_FRIDAY"/>
-    <tns:ChristianHoliday type="CORPUS_CHRISTI"/>
+    <tns:ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
+    <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+    <tns:ChristianHoliday type="CORPUS_CHRISTI" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
   </tns:Holidays>
 </tns:Configuration>

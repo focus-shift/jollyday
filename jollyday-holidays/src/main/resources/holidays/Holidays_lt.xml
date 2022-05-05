@@ -14,7 +14,7 @@
     <tns:Fixed month="NOVEMBER" day="2" descriptionPropertiesKey="ALL_SOULS" validFrom="2020"/>
     <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS_EVE"/>
     <tns:Fixed month="DECEMBER" day="26" descriptionPropertiesKey="CHRISTMAS"/>
-    <tns:ChristianHoliday type="EASTER"/>
-    <tns:ChristianHoliday type="EASTER_MONDAY"/>
+    <tns:ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
+    <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
   </tns:Holidays>
 </tns:Configuration>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tns:Configuration hierarchy="nz" description="New Zealand"
                    xmlns:tns="http://www.example.org/Holiday" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                   xsi:schemaLocation="http://www.example.org/Holiday ../../../xsd/Holiday.xsd">
+                   xsi:schemaLocation="http://www.example.org/Holiday /Holiday.xsd">
   <tns:Holidays>
     <tns:Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
       <tns:MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
@@ -33,8 +33,8 @@
     <tns:FixedWeekday which="FIRST" weekday="MONDAY" month="JUNE" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
     <tns:FixedWeekday which="FOURTH" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="LABOUR_DAY"/>
 
-    <tns:ChristianHoliday type="GOOD_FRIDAY"/>
-    <tns:ChristianHoliday type="EASTER_MONDAY"/>
+    <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+    <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
   </tns:Holidays>
   <tns:SubConfigurations hierarchy="auk" description="Auckland">
     <tns:Holidays>
@@ -47,17 +47,14 @@
   <tns:SubConfigurations hierarchy="tki" description="Taranaki">
     <tns:Holidays>
       <!-- 31 March, but moves to 2nd Monday in March to avoid Easter. -->
-      <tns:FixedWeekday which="SECOND" weekday="MONDAY" month="MARCH"
-                        descriptionPropertiesKey="TARANAKI_ANNIVERSARY"/>
+      <tns:FixedWeekday which="SECOND" weekday="MONDAY" month="MARCH" descriptionPropertiesKey="TARANAKI_ANNIVERSARY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="hkb" description="Hawke's Bay">
     <tns:Holidays>
       <!-- 1 November, but moves to Friday before Labour Day. -->
-      <tns:RelativeToWeekdayInMonth weekday="FRIDAY" when="BEFORE"
-                                    descriptionPropertiesKey="HAWKES_BAY_ANNIVERSARY">
-        <tns:FixedWeekday which="FOURTH" weekday="MONDAY" month="OCTOBER"
-                          descriptionPropertiesKey="LABOUR_DAY"/>
+      <tns:RelativeToWeekdayInMonth weekday="FRIDAY" when="BEFORE" descriptionPropertiesKey="HAWKES_BAY_ANNIVERSARY">
+        <tns:FixedWeekday which="FOURTH" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="LABOUR_DAY"/>
       </tns:RelativeToWeekdayInMonth>
     </tns:Holidays>
   </tns:SubConfigurations>
@@ -72,10 +69,8 @@
   <tns:SubConfigurations hierarchy="mbh" description="Marlborough">
     <tns:Holidays>
       <!-- 1 November, but observed 1st Monday after Labour Day. -->
-      <tns:RelativeToWeekdayInMonth weekday="MONDAY" when="AFTER"
-                                    descriptionPropertiesKey="MARLBOROUGH_ANNIVERSARY">
-        <tns:FixedWeekday which="FOURTH" weekday="MONDAY" month="OCTOBER"
-                          descriptionPropertiesKey="LABOUR_DAY"/>
+      <tns:RelativeToWeekdayInMonth weekday="MONDAY" when="AFTER" descriptionPropertiesKey="MARLBOROUGH_ANNIVERSARY">
+        <tns:FixedWeekday which="FOURTH" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="LABOUR_DAY"/>
       </tns:RelativeToWeekdayInMonth>
     </tns:Holidays>
   </tns:SubConfigurations>
@@ -127,8 +122,7 @@
   <tns:SubConfigurations hierarchy="stl" description="Southland">
     <tns:Holidays>
       <!-- In December 2011 the three southern Mayors decided Southland Anniversary Day will be celebrated on Easter Tuesday. -->
-      <tns:ChristianHoliday validFrom="2012" type="EASTER_TUESDAY"
-                            descriptionPropertiesKey="SOUTHLAND_ANNIVERSARY"/>
+      <tns:ChristianHoliday validFrom="2012" type="EASTER_TUESDAY" descriptionPropertiesKey="SOUTHLAND_ANNIVERSARY"/>
       <tns:FixedWeekdayRelativeToFixed validTo="2011" which="FIRST" weekday="MONDAY" when="CLOSEST"
                                        descriptionPropertiesKey="SOUTHLAND_ANNIVERSARY">
         <tns:day month="JANUARY" day="17"/>

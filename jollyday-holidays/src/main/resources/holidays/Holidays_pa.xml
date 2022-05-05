@@ -11,9 +11,9 @@
     <tns:Fixed month="NOVEMBER" day="28" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
     <tns:Fixed month="DECEMBER" day="8" descriptionPropertiesKey="MOTHERS_DAY"/>
     <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-    <tns:ChristianHoliday type="EASTER"/>
-    <tns:ChristianHoliday type="CLEAN_MONDAY"/>
-    <tns:ChristianHoliday type="CARNIVAL"/>
-    <tns:ChristianHoliday type="GOOD_FRIDAY"/>
+    <tns:ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
+    <tns:ChristianHoliday type="CLEAN_MONDAY" descriptionPropertiesKey="christian.CLEAN_MONDAY"/>
+    <tns:ChristianHoliday type="CARNIVAL" descriptionPropertiesKey="christian.CARNIVAL"/>
+    <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
   </tns:Holidays>
 </tns:Configuration>

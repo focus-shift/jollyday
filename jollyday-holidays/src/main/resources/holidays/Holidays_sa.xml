@@ -3,13 +3,13 @@
 >
   <tns:Holidays>
     <tns:Fixed month="SEPTEMBER" day="23" descriptionPropertiesKey="NATIONAL_DAY"/>
-    <tns:IslamicHoliday type="RAMADAN_END"/>
-    <tns:IslamicHoliday type="ID_AL_FITR"/>
-    <tns:IslamicHoliday type="ID_AL_FITR_2"/>
-    <tns:IslamicHoliday type="ID_AL_FITR_3"/>
-    <tns:IslamicHoliday type="ARAFAAT"/>
-    <tns:IslamicHoliday type="ID_UL_ADHA"/>
-    <tns:IslamicHoliday type="ID_UL_ADHA_2"/>
-    <tns:IslamicHoliday type="ID_UL_ADHA_3"/>
+    <tns:IslamicHoliday type="RAMADAN_END" descriptionPropertiesKey="islamic.RAMADAN_END"/>
+    <tns:IslamicHoliday type="ID_AL_FITR" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+    <tns:IslamicHoliday type="ID_AL_FITR_2" descriptionPropertiesKey="islamic.ID_AL_FITR_2"/>
+    <tns:IslamicHoliday type="ID_AL_FITR_3" descriptionPropertiesKey="islamic.ID_AL_FITR_3"/>
+    <tns:IslamicHoliday type="ARAFAAT_3" descriptionPropertiesKey="islamic.ARAFAAT"/>
+    <tns:IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
+    <tns:IslamicHoliday type="ID_UL_ADHA_2" descriptionPropertiesKey="islamic.ID_UL_ADHA_2"/>
+    <tns:IslamicHoliday type="ID_UL_ADHA_3" descriptionPropertiesKey="islamic.ID_UL_ADHA_3"/>
   </tns:Holidays>
 </tns:Configuration>

@@ -13,10 +13,10 @@
     <tns:Fixed month="DECEMBER" day="1" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
     <tns:Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
     <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-    <tns:ChristianHoliday type="EASTER"/>
-    <tns:ChristianHoliday type="CARNIVAL"/>
-    <tns:ChristianHoliday type="GOOD_FRIDAY"/>
-    <tns:ChristianHoliday type="CORPUS_CHRISTI"/>
+    <tns:ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
+    <tns:ChristianHoliday type="CARNIVAL" descriptionPropertiesKey="christian.CARNIVAL"/>
+    <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+    <tns:ChristianHoliday type="CORPUS_CHRISTI" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
   </tns:Holidays>
   <tns:SubConfigurations hierarchy="ABT" description="Abrantes">
     <tns:Holidays>
@@ -25,7 +25,7 @@
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="AGD" description="Águeda">
     <tns:Holidays>
-      <tns:ChristianHoliday type="PENTECOST_MONDAY" localizedType="OFFICIAL_HOLIDAY"/>
+      <tns:ChristianHoliday type="PENTECOST_MONDAY" descriptionPropertiesKey="christian.PENTECOST_MONDAY" localizedType="OFFICIAL_HOLIDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="AGB" description="Aguiar da Beira">
@@ -213,7 +213,7 @@
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="AVS" description="Avis">
     <tns:Holidays>
-      <tns:ChristianHoliday type="EASTER_MONDAY"/>
+      <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="AZB" description="Azambuja">
@@ -268,7 +268,7 @@
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="BRB" description="Borba">
     <tns:Holidays>
-      <tns:ChristianHoliday type="EASTER_MONDAY"/>
+      <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="BTC" description="Boticas">
@@ -318,12 +318,12 @@
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="CMN" description="Caminha">
     <tns:Holidays>
-      <tns:ChristianHoliday type="EASTER_MONDAY"/>
+      <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="CMR" description="Campo Maior">
     <tns:Holidays>
-      <tns:ChristianHoliday type="EASTER_MONDAY"/>
+      <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="CNT" description="Cantanhede">
@@ -338,10 +338,10 @@
   </tns:SubConfigurations>
   <!--
       <tns:SubConfigurations hierarchy="CRS" description="Carregal do Sal">
-            <tns:Holidays>
-              <tns:Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
+        <tns:Holidays>
+            <tns:Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
           </tns:Holidays>
-        </tns:SubConfigurations>
+      </tns:SubConfigurations>
    -->
   <tns:SubConfigurations hierarchy="CTX" description="Cartaxo">
     <tns:Holidays>
@@ -355,10 +355,10 @@
   </tns:SubConfigurations>
   <!--
       <tns:SubConfigurations hierarchy="CPR" description="Castanheira de Pera">
-            <tns:Holidays>
-              <tns:Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
+        <tns:Holidays>
+            <tns:Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
           </tns:Holidays>
-        </tns:SubConfigurations>
+      </tns:SubConfigurations>
    -->
   <tns:SubConfigurations hierarchy="CTB" description="Castelo Branco">
     <tns:Holidays>
@@ -372,7 +372,7 @@
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="CVD" description="Castelo de Vide">
     <tns:Holidays>
-      <tns:ChristianHoliday type="EASTER_MONDAY"/>
+      <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="CDR" description="Castro Daire">
@@ -428,7 +428,7 @@
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="CNS" description="Constância">
     <tns:Holidays>
-      <tns:ChristianHoliday type="EASTER_MONDAY"/>
+      <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="CCH" description="Coruche">
@@ -437,11 +437,11 @@
     </tns:Holidays>
   </tns:SubConfigurations>
   <!--
-        <tns:SubConfigurations hierarchy="CRV" description="Corvo">
-            <tns:Holidays>
-              <tns:Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
+      <tns:SubConfigurations hierarchy="CRV" description="Corvo">
+        <tns:Holidays>
+            <tns:Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
           </tns:Holidays>
-        </tns:SubConfigurations>
+      </tns:SubConfigurations>
    -->
   <tns:SubConfigurations hierarchy="CVL" description="Covilhã">
     <tns:Holidays>
@@ -450,12 +450,12 @@
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="CRT" description="Crato">
     <tns:Holidays>
-      <tns:ChristianHoliday type="EASTER_MONDAY"/>
+      <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="CBA" description="Cuba">
     <tns:Holidays>
-      <tns:ChristianHoliday type="EASTER_MONDAY"/>
+      <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="ELV" description="Elvas">
@@ -540,7 +540,7 @@
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="FEC" description="Freixo de Espada à Cinta">
     <tns:Holidays>
-      <tns:ChristianHoliday type="EASTER_MONDAY"/>
+      <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="FTR" description="Fronteira">
@@ -610,7 +610,7 @@
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="ILH" description="Ílhavo">
     <tns:Holidays>
-      <tns:ChristianHoliday type="EASTER_MONDAY"/>
+      <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="LAG" description="Lagoa (Açores)">
@@ -675,14 +675,14 @@
   </tns:SubConfigurations>
   <!--
       <tns:SubConfigurations hierarchy="LOU" description="Lousada">
-            <tns:Holidays>
-              <tns:Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
+        <tns:Holidays>
+            <tns:Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
           </tns:Holidays>
-        </tns:SubConfigurations>
+      </tns:SubConfigurations>
    -->
   <tns:SubConfigurations hierarchy="MAC" description="Mação">
     <tns:Holidays>
-      <tns:ChristianHoliday type="EASTER_MONDAY"/>
+      <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="MCD" description="Macedo de Cavaleiros">
@@ -802,7 +802,7 @@
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="MNC" description="Monção">
     <tns:Holidays>
-      <tns:ChristianHoliday type="EASTER_MONDAY"/>
+      <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="MCQ" description="Monchique">
@@ -842,7 +842,7 @@
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="MOR" description="Mora">
     <tns:Holidays>
-      <tns:ChristianHoliday type="EASTER_MONDAY"/>
+      <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="MRT" description="Mortágua">
@@ -882,15 +882,15 @@
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="NIS" description="Nisa">
     <tns:Holidays>
-      <tns:ChristianHoliday type="EASTER_MONDAY"/>
+      <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <!--
       <tns:SubConfigurations hierarchy="NRD" description="Nordeste">
-            <tns:Holidays>
-              <tns:Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
+        <tns:Holidays>
+            <tns:Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
           </tns:Holidays>
-        </tns:SubConfigurations>
+      </tns:SubConfigurations>
    -->
   <tns:SubConfigurations hierarchy="OBD" description="Óbidos">
     <tns:Holidays>
@@ -919,10 +919,10 @@
   </tns:SubConfigurations>
   <!--
       <tns:SubConfigurations hierarchy="OLH" description="Olhão da Restauração">
-            <tns:Holidays>
-              <tns:Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
+        <tns:Holidays>
+            <tns:Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
           </tns:Holidays>
-        </tns:SubConfigurations>
+      </tns:SubConfigurations>
    -->
   <tns:SubConfigurations hierarchy="OAZ" description="Oliveira de Azeméis">
     <tns:Holidays>
@@ -986,10 +986,10 @@
   </tns:SubConfigurations>
   <!--
       <tns:SubConfigurations hierarchy="PGR" description="Pedrógão Grande">
-            <tns:Holidays>
-              <tns:Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
+        <tns:Holidays>
+            <tns:Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
           </tns:Holidays>
-        </tns:SubConfigurations>
+      </tns:SubConfigurations>
    -->
   <tns:SubConfigurations hierarchy="PCV" description="Penacova">
     <tns:Holidays>
@@ -1003,14 +1003,14 @@
   </tns:SubConfigurations>
   <!--
       <tns:SubConfigurations hierarchy="PCT" description="Penalva do Castelo">
-            <tns:Holidays>
-              <tns:Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
+        <tns:Holidays>
+            <tns:Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
           </tns:Holidays>
-        </tns:SubConfigurations>
+      </tns:SubConfigurations>
    -->
   <tns:SubConfigurations hierarchy="PNC" description="Penamacor">
     <tns:Holidays>
-      <tns:ChristianHoliday type="EASTER_MONDAY"/>
+      <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="PND" description="Penedono">
@@ -1065,7 +1065,7 @@
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="PSR" description="Ponte de Sor">
     <tns:Holidays>
-      <tns:ChristianHoliday type="EASTER_MONDAY"/>
+      <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="PTG" description="Portalegre">
@@ -1075,7 +1075,7 @@
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="PRL" description="Portel">
     <tns:Holidays>
-      <tns:ChristianHoliday type="EASTER_MONDAY"/>
+      <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="PTM" description="Portimão">
@@ -1130,7 +1130,7 @@
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="RDD" description="Redondo">
     <tns:Holidays>
-      <tns:ChristianHoliday type="EASTER_MONDAY"/>
+      <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="RMZ" description="Reguengos de Monsaraz">
@@ -1240,10 +1240,10 @@
   </tns:SubConfigurations>
   <!--
       <tns:SubConfigurations hierarchy="SJP" description="São João da Pesqueira">
-            <tns:Holidays>
-              <tns:Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
+        <tns:Holidays>
+            <tns:Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
           </tns:Holidays>
-        </tns:SubConfigurations>
+      </tns:SubConfigurations>
    -->
   <tns:SubConfigurations hierarchy="SPS" description="São Pedro do Sul">
     <tns:Holidays>
@@ -1287,10 +1287,10 @@
   </tns:SubConfigurations>
   <!--
       <tns:SubConfigurations hierarchy="SRP" description="Serpa">
-            <tns:Holidays>
-              <tns:Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
+        <tns:Holidays>
+            <tns:Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
           </tns:Holidays>
-        </tns:SubConfigurations>
+      </tns:SubConfigurations>
    -->
   <tns:SubConfigurations hierarchy="SRT" description="Sertã">
     <tns:Holidays>
@@ -1339,7 +1339,7 @@
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="SSL" description="Sousel">
     <tns:Holidays>
-      <tns:ChristianHoliday type="EASTER_MONDAY"/>
+      <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="TBU" description="Tábua">
@@ -1404,7 +1404,7 @@
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="VGS" description="Vagos">
     <tns:Holidays>
-      <tns:ChristianHoliday type="PENTECOST_MONDAY" localizedType="OFFICIAL_HOLIDAY"/>
+      <tns:ChristianHoliday type="PENTECOST_MONDAY" descriptionPropertiesKey="christian.PENTECOST_MONDAY" localizedType="OFFICIAL_HOLIDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="VAC" description="Vale de Cambra">
@@ -1459,10 +1459,10 @@
   </tns:SubConfigurations>
   <!--
       <tns:SubConfigurations hierarchy="VLR" description="Vila de Rei">
-            <tns:Holidays>
-              <tns:Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
+        <tns:Holidays>
+            <tns:Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
           </tns:Holidays>
-        </tns:SubConfigurations>
+      </tns:SubConfigurations>
    -->
   <tns:SubConfigurations hierarchy="VBP" description="Vila do Bispo">
     <tns:Holidays>

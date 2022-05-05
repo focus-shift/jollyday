@@ -9,14 +9,14 @@
     <tns:Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
     <tns:Fixed month="MAY" day="5" descriptionPropertiesKey="VICTORY"/>
     <tns:Fixed month="MAY" day="28" descriptionPropertiesKey="NATIONAL_DAY"/>
-    <tns:ChristianHoliday type="EASTER" chronology="JULIAN"/>
-    <tns:ChristianHoliday type="GOOD_FRIDAY" chronology="JULIAN"/>
-    <tns:IslamicHoliday type="RAMADAN"/>
-    <tns:IslamicHoliday type="MAWLID_AN_NABI"/>
-    <tns:IslamicHoliday type="ID_AL_FITR"/>
-    <tns:IslamicHoliday type="ID_UL_ADHA"/>
-    <tns:EthiopianOrthodoxHoliday type="TIMKAT"/>
-    <tns:EthiopianOrthodoxHoliday type="ENKUTATASH"/>
-    <tns:EthiopianOrthodoxHoliday type="MESKEL"/>
+    <tns:ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER" chronology="JULIAN"/>
+    <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY" chronology="JULIAN"/>
+    <tns:IslamicHoliday type="RAMADAN" descriptionPropertiesKey="islamic.RAMADAN"/>
+    <tns:IslamicHoliday type="MAWLID_AN_NABI" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+    <tns:IslamicHoliday type="ID_AL_FITR" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+    <tns:IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
+    <tns:EthiopianOrthodoxHoliday type="TIMKAT" descriptionPropertiesKey="ethiopian.orthodox.TIMKAT"/>
+    <tns:EthiopianOrthodoxHoliday type="ENKUTATASH" descriptionPropertiesKey="ethiopian.orthodox.ENKUTATASH"/>
+    <tns:EthiopianOrthodoxHoliday type="MESKEL" descriptionPropertiesKey="ethiopian.orthodox.MESKEL"/>
   </tns:Holidays>
 </tns:Configuration>

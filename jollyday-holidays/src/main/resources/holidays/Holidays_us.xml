@@ -111,7 +111,7 @@
                         descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <tns:FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934"
                         descriptionPropertiesKey="COLUMBUS_DAY"/>
-      <tns:ChristianHoliday type="GOOD_FRIDAY"/>
+      <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="de" description="Delaware">
@@ -122,7 +122,7 @@
                         descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
       <tns:FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968"
                         descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <tns:ChristianHoliday type="GOOD_FRIDAY"/>
+      <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="fl" description="Florida">
@@ -162,7 +162,7 @@
       <tns:FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968"
                         descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <tns:FixedWeekday which="THIRD" weekday="FRIDAY" month="AUGUST" descriptionPropertiesKey="STATEHOOD"/>
-      <tns:ChristianHoliday type="GOOD_FRIDAY"/>
+      <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="id" description="Idaho">
@@ -206,8 +206,8 @@
       </tns:RelativeToWeekdayInMonth>
       <tns:FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
                         descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
-      <tns:ChristianHoliday type="GOOD_FRIDAY"/>
-      <tns:ChristianHoliday type="EASTER_MONDAY"/>
+      <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+      <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="ia" description="Iowa">
@@ -230,15 +230,15 @@
       <tns:Fixed month="DECEMBER" day="31" descriptionPropertiesKey="NEW_YEARS_EVE"/>
       <tns:FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
                         descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
-      <tns:ChristianHoliday type="GOOD_FRIDAY"/>
+      <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="la" description="Louisiana">
     <tns:Holidays>
       <tns:FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
                         descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
-      <tns:ChristianHoliday type="GOOD_FRIDAY"/>
-      <tns:ChristianHoliday type="MARDI_GRAS"/>
+      <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+      <tns:ChristianHoliday type="MARDI_GRAS" descriptionPropertiesKey="christian.MARDI_GRAS"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="me" description="Maine">
@@ -306,7 +306,7 @@
                         descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
       <tns:FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968"
                         descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <tns:ChristianHoliday type="EASTER_MONDAY"/>
+      <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="mn" description="Minnesota">
@@ -407,7 +407,7 @@
                         descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <tns:FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934"
                         descriptionPropertiesKey="COLUMBUS_DAY"/>
-      <tns:ChristianHoliday type="GOOD_FRIDAY"/>
+      <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="nm" description="New Mexico">
@@ -432,12 +432,11 @@
                         descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <tns:FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934"
                         descriptionPropertiesKey="COLUMBUS_DAY"/>
-      <tns:ChristianHoliday type="EASTER_MONDAY"/>
+      <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     </tns:Holidays>
     <tns:SubConfigurations hierarchy="nyc" description="New York City">
       <tns:Holidays>
-        <tns:FixedWeekday which="FIRST" weekday="THURSDAY" month="JUNE"
-                          descriptionPropertiesKey="BROOKLY_QUEENS"/>
+        <tns:FixedWeekday which="FIRST" weekday="THURSDAY" month="JUNE" descriptionPropertiesKey="BROOKLY_QUEENS"/>
       </tns:Holidays>
     </tns:SubConfigurations>
   </tns:SubConfigurations>
@@ -447,7 +446,7 @@
       <tns:FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
                         descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
       <tns:FixedWeekday which="FOURTH" weekday="MONDAY" month="APRIL" descriptionPropertiesKey="CONFEDERATE"/>
-      <tns:ChristianHoliday type="GOOD_FRIDAY"/>
+      <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
     </tns:Holidays>
     <tns:SubConfigurations hierarchy="ce" description="Charlotte">
       <tns:Holidays>
@@ -468,8 +467,8 @@
                         descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
       <tns:FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968"
                         descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <tns:ChristianHoliday type="GOOD_FRIDAY"/>
-      <tns:ChristianHoliday type="EASTER_MONDAY"/>
+      <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+      <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="oh" description="Ohio">
@@ -559,7 +558,7 @@
       <tns:FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968"
                         descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <tns:FixedWeekday which="FOURTH" weekday="MONDAY" month="APRIL" descriptionPropertiesKey="CONFEDERATE"/>
-      <tns:ChristianHoliday type="GOOD_FRIDAY"/>
+      <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="tx" description="Texas">
@@ -662,8 +661,7 @@
                         descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
       <tns:FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968"
                         descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <tns:FixedWeekday which="SECOND" weekday="TUESDAY" month="SEPTEMBER"
-                        descriptionPropertiesKey="ELECTION_DAY"/>
+      <tns:FixedWeekday which="SECOND" weekday="TUESDAY" month="SEPTEMBER" descriptionPropertiesKey="ELECTION_DAY"/>
       <tns:FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934"
                         descriptionPropertiesKey="COLUMBUS_DAY"/>
     </tns:Holidays>

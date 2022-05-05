@@ -18,9 +18,9 @@
     <tns:Fixed month="DECEMBER" day="6" descriptionPropertiesKey="ST_NICHOLAS"/>
     <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
     <tns:Fixed month="DECEMBER" day="26" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
-    <tns:ChristianHoliday type="EASTER"/>
-    <tns:ChristianHoliday type="EASTER_MONDAY"/>
-    <tns:ChristianHoliday type="CARNIVAL" localizedType="UNOFFICIAL_HOLIDAY"/>
-    <tns:ChristianHoliday type="PENTECOST"/>
+    <tns:ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
+    <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+    <tns:ChristianHoliday type="CARNIVAL" descriptionPropertiesKey="christian.CARNIVAL" localizedType="UNOFFICIAL_HOLIDAY"/>
+    <tns:ChristianHoliday type="PENTECOST" descriptionPropertiesKey="christian.PENTECOST"/>
   </tns:Holidays>
 </tns:Configuration>

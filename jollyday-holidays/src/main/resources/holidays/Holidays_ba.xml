@@ -19,9 +19,9 @@
     <tns:Fixed month="NOVEMBER" day="2" descriptionPropertiesKey="ALL_SOULS"/>
     <tns:Fixed month="NOVEMBER" day="8" descriptionPropertiesKey="ST_DEMETRIUS"/>
     <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-    <tns:IslamicHoliday type="ID_AL_FITR"/>
-    <tns:IslamicHoliday type="ID_UL_ADHA"/>
-    <tns:IslamicHoliday type="MAWLID_AN_NABI"/>
+    <tns:IslamicHoliday type="ID_AL_FITR" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+    <tns:IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
+    <tns:IslamicHoliday type="MAWLID_AN_NABI" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
   </tns:Holidays>
   <tns:SubConfigurations hierarchy="rs" description="Republika Srpska">
     <tns:Holidays>

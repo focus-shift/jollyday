@@ -11,8 +11,7 @@
     <tns:Fixed month="MAY" day="4" validFrom="2007" descriptionPropertiesKey="GREENERY_DAY"/>
     <tns:Fixed month="MAY" day="5" validFrom="1948" descriptionPropertiesKey="CHILDRENS_DAY"/>
     <tns:Fixed month="JULY" day="20" validFrom="1996" validTo="2002" descriptionPropertiesKey="NAVY_DAY"/>
-    <tns:Fixed month="SEPTEMBER" day="15" validFrom="1966" validTo="2002"
-               descriptionPropertiesKey="RESPECT_AGED_DAY"/>
+    <tns:Fixed month="SEPTEMBER" day="15" validFrom="1966" validTo="2002" descriptionPropertiesKey="RESPECT_AGED_DAY"/>
     <tns:Fixed month="OCTOBER" day="10" validFrom="1966" validTo="1999" descriptionPropertiesKey="HEALTH_SPORTS"/>
     <tns:Fixed month="NOVEMBER" day="3" validFrom="1948" descriptionPropertiesKey="CULTURE_DAY">
       <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
@@ -26,8 +25,7 @@
     <tns:Fixed month="AUGUST" day="11" validFrom="2016" descriptionPropertiesKey="MOUNTAIN_DAY"/>
     <tns:FixedWeekday which="SECOND" weekday="MONDAY" month="JANUARY" validFrom="2000"
                       descriptionPropertiesKey="COMING_OF_AGE"/>
-    <tns:FixedWeekday which="THIRD" weekday="MONDAY" month="JULY" validFrom="2003"
-                      descriptionPropertiesKey="NAVY_DAY"/>
+    <tns:FixedWeekday which="THIRD" weekday="MONDAY" month="JULY" validFrom="2003" descriptionPropertiesKey="NAVY_DAY"/>
     <tns:FixedWeekday which="THIRD" weekday="MONDAY" month="SEPTEMBER" validFrom="2003"
                       descriptionPropertiesKey="RESPECT_AGED_DAY"/>
     <tns:FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="2000"

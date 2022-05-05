@@ -10,13 +10,13 @@
     <tns:Fixed month="OCTOBER" day="1" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
     <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
     <tns:Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY"/>
-    <tns:ChristianHoliday type="EASTER"/>
-    <tns:ChristianHoliday type="GOOD_FRIDAY"/>
-    <tns:ChristianHoliday type="EASTER_MONDAY"/>
-    <tns:IslamicHoliday type="RAMADAN"/>
-    <tns:IslamicHoliday type="MAWLID_AN_NABI"/>
-    <tns:IslamicHoliday type="ID_AL_FITR"/>
-    <tns:IslamicHoliday type="ID_UL_ADHA"/>
+    <tns:ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
+    <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+    <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+    <tns:IslamicHoliday type="RAMADAN" descriptionPropertiesKey="islamic.RAMADAN"/>
+    <tns:IslamicHoliday type="MAWLID_AN_NABI" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+    <tns:IslamicHoliday type="ID_AL_FITR" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+    <tns:IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
   </tns:Holidays>
   <tns:SubConfigurations hierarchy="lag" description="Lagos">
     <tns:Holidays>

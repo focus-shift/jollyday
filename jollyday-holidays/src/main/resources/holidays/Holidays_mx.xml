@@ -21,8 +21,7 @@
       <tns:MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
       <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </tns:Fixed>
-    <tns:Fixed month="DECEMBER" day="1" validFrom="1934" every="6_YEARS"
-               descriptionPropertiesKey="GOVERNMENT_CHANGE">
+    <tns:Fixed month="DECEMBER" day="1" validFrom="1934" every="6_YEARS" descriptionPropertiesKey="GOVERNMENT_CHANGE">
       <tns:MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
       <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </tns:Fixed>

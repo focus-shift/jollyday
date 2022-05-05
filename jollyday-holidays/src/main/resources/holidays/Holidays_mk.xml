@@ -16,6 +16,6 @@
     <tns:ChristianHoliday type="EASTER" chronology="JULIAN"/>
     <tns:ChristianHoliday type="GOOD_FRIDAY" chronology="JULIAN"/>
     <tns:ChristianHoliday type="EASTER_MONDAY" chronology="JULIAN"/>
-    <tns:IslamicHoliday type="ID_AL_FITR"/>
+    <tns:IslamicHoliday type="ID_AL_FITR" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
   </tns:Holidays>
 </tns:Configuration>

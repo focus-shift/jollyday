@@ -9,7 +9,8 @@
     <tns:Fixed month="JULY" day="15" descriptionPropertiesKey="TURKEY_DEMOCRATIC_UNITY_DAY"/>
     <tns:Fixed month="AUGUST" day="30" descriptionPropertiesKey="TURKEY_VICTORY_DAY"/>
     <tns:Fixed month="OCTOBER" day="29" descriptionPropertiesKey="TURKEY_REPUBLIC_DAY"/>
-    <tns:IslamicHoliday type="ID_AL_FITR"/> <!-- Ramazan / Şeker bayramı -->
-    <tns:IslamicHoliday type="ID_UL_ADHA"/> <!-- Kurban bayramı -->
+    <tns:IslamicHoliday type="ID_AL_FITR"
+                        descriptionPropertiesKey="islamic.ID_AL_FITR"/> <!-- Ramazan / Şeker bayramı -->
+    <tns:IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/> <!-- Kurban bayramı -->
   </tns:Holidays>
 </tns:Configuration>
