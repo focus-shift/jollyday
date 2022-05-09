@@ -50,7 +50,7 @@ public class JaxbFixed implements Fixed {
 
   @Override
   public Year validTo() {
-    return fixed.getValidTo () == null ? null : Year.of(fixed.getValidTo());
+    return fixed.getValidTo() == null ? null : Year.of(fixed.getValidTo());
   }
 
   @Override
