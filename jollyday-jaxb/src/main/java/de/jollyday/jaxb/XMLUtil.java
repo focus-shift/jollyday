@@ -1,21 +1,3 @@
-/**
- * Copyright 2010 Sven Diedrichsen
- * <p>
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * <p>
- * http://www.apache.org/licenses/LICENSE-2.0
- * <p>
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
- * express or implied. See the License for the specific language
- * governing permissions and limitations under the License.
- *
- * @author sven
- * @version $Id: $
- */
 package de.jollyday.jaxb;
 
 import de.jollyday.HolidayType;
@@ -68,8 +50,7 @@ public class XMLUtil {
         ctx = contextCreator.create(XMLUtil.PACKAGE, ObjectFactory.class.getClassLoader());
       }
       final Unmarshaller um = ctx.createUnmarshaller();
-      @SuppressWarnings("unchecked")
-      final JAXBElement<Configuration> el = (JAXBElement<Configuration>) um.unmarshal(stream);
+      @SuppressWarnings("unchecked") final JAXBElement<Configuration> el = (JAXBElement<Configuration>) um.unmarshal(stream);
       return el.getValue();
     } catch (JAXBException ue) {
       throw new IllegalStateException("Cannot parse holidays XML file.", ue);
