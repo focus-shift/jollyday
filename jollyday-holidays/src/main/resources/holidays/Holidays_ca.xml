@@ -16,7 +16,7 @@
       <tns:RelativeToFixed descriptionPropertiesKey="VICTORIA_DAY">
         <tns:Weekday>MONDAY</tns:Weekday>
         <tns:When>BEFORE</tns:When>
-        <tns:Date month="MAY" day="24"/>
+        <tns:Date month="MAY" day="25"/>
       </tns:RelativeToFixed>
       <tns:FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" descriptionPropertiesKey="FAMILY_DAY"/>
       <tns:FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="THANKSGIVING"/>
@@ -28,7 +28,7 @@
       <tns:RelativeToFixed descriptionPropertiesKey="VICTORIA_DAY">
         <tns:Weekday>MONDAY</tns:Weekday>
         <tns:When>BEFORE</tns:When>
-        <tns:Date month="MAY" day="24"/>
+        <tns:Date month="MAY" day="25"/>
       </tns:RelativeToFixed>
       <tns:FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="THANKSGIVING"/>
     </tns:Holidays>
@@ -39,7 +39,7 @@
       <tns:RelativeToFixed descriptionPropertiesKey="VICTORIA_DAY">
         <tns:Weekday>MONDAY</tns:Weekday>
         <tns:When>BEFORE</tns:When>
-        <tns:Date month="MAY" day="24"/>
+        <tns:Date month="MAY" day="25"/>
       </tns:RelativeToFixed>
       <tns:FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="THANKSGIVING"/>
       <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
@@ -62,7 +62,7 @@
       <tns:RelativeToFixed descriptionPropertiesKey="VICTORIA_DAY">
         <tns:Weekday>MONDAY</tns:Weekday>
         <tns:When>BEFORE</tns:When>
-        <tns:Date month="MAY" day="24"/>
+        <tns:Date month="MAY" day="25"/>
       </tns:RelativeToFixed>
       <tns:FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="THANKSGIVING"/>
       <tns:FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" descriptionPropertiesKey="FAMILY_DAY"/>
@@ -74,7 +74,7 @@
       <tns:RelativeToFixed descriptionPropertiesKey="VICTORIA_DAY">
         <tns:Weekday>MONDAY</tns:Weekday>
         <tns:When>BEFORE</tns:When>
-        <tns:Date month="MAY" day="24"/>
+        <tns:Date month="MAY" day="25"/>
       </tns:RelativeToFixed>
       <tns:FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="THANKSGIVING"/>
       <tns:FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="CIVIC"/>
@@ -86,7 +86,7 @@
       <tns:RelativeToFixed descriptionPropertiesKey="VICTORIA_DAY">
         <tns:Weekday>MONDAY</tns:Weekday>
         <tns:When>BEFORE</tns:When>
-        <tns:Date month="MAY" day="24"/>
+        <tns:Date month="MAY" day="25"/>
       </tns:RelativeToFixed>
       <tns:FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="THANKSGIVING"/>
       <tns:FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="CIVIC"/>
@@ -98,7 +98,7 @@
       <tns:RelativeToFixed descriptionPropertiesKey="VICTORIA_DAY">
         <tns:Weekday>MONDAY</tns:Weekday>
         <tns:When>BEFORE</tns:When>
-        <tns:Date month="MAY" day="24"/>
+        <tns:Date month="MAY" day="25"/>
       </tns:RelativeToFixed>
       <tns:FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="CIVIC"/>
       <tns:FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="THANKSGIVING"/>
@@ -115,7 +115,7 @@
       <tns:RelativeToFixed descriptionPropertiesKey="VICTORIA_DAY">
         <tns:Weekday>MONDAY</tns:Weekday>
         <tns:When>BEFORE</tns:When>
-        <tns:Date month="MAY" day="24"/>
+        <tns:Date month="MAY" day="25"/>
       </tns:RelativeToFixed>
       <tns:FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" descriptionPropertiesKey="FAMILY_DAY"/>
       <tns:FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="THANKSGIVING"/>
@@ -128,7 +128,7 @@
       <tns:RelativeToFixed descriptionPropertiesKey="VICTORIA_DAY">
         <tns:Weekday>MONDAY</tns:Weekday>
         <tns:When>BEFORE</tns:When>
-        <tns:Date month="MAY" day="24"/>
+        <tns:Date month="MAY" day="25"/>
       </tns:RelativeToFixed>
       <tns:FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="HERITAGE"/>
       <tns:FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" descriptionPropertiesKey="FAMILY_DAY"/>
