@@ -7,7 +7,7 @@ import java.util.Properties;
  */
 public class TestProvider implements ConfigurationProvider {
 
-  private Properties properties = new Properties();
+  private final Properties properties = new Properties();
 
   public TestProvider() {
     properties.setProperty("key", "value");
