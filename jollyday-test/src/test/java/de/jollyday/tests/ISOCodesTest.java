@@ -1,6 +1,6 @@
-package de.jollyday.tests;
+package de.focus_shift.tests;
 
-import de.jollyday.util.ResourceUtil;
+import de.focus_shift.util.ResourceUtil;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

@@ -1,9 +1,9 @@
-package de.jollyday.tests.parsers;
+package de.focus_shift.tests.parsers;
 
 import java.io.Serializable;
 import java.util.Comparator;
 
-import de.jollyday.Holiday;
+import de.focus_shift.Holiday;
 
 /**
  * Compares two {@link Holiday} instances upon their dates.

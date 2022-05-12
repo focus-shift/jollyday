@@ -1,10 +1,10 @@
-package de.jollyday.tests;
+package de.focus_shift.tests;
 
-import de.jollyday.Holiday;
-import de.jollyday.HolidayCalendar;
-import de.jollyday.HolidayManager;
-import de.jollyday.ManagerParameters;
-import de.jollyday.tests.base.AbstractCountryTestBase;
+import de.focus_shift.Holiday;
+import de.focus_shift.HolidayCalendar;
+import de.focus_shift.HolidayManager;
+import de.focus_shift.ManagerParameters;
+import de.focus_shift.tests.base.AbstractCountryTestBase;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

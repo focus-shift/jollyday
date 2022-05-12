@@ -1,7 +1,7 @@
-package de.jollyday.tests;
+package de.focus_shift.tests;
 
-import de.jollyday.*;
-import de.jollyday.util.CalendarUtil;
+import de.focus_shift.*;
+import de.focus_shift.util.CalendarUtil;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -76,7 +76,7 @@ public class HolidayTest {
 
   @BeforeEach
   public void init() {
-    System.setProperty("de.jollyday.config.urls",
+    System.setProperty("de.focus_shift.config.urls",
       "file:./src/test/resources/test.app.properties");
     defaultLocale = Locale.getDefault();
     Locale.setDefault(Locale.GERMAN);
@@ -85,7 +85,7 @@ public class HolidayTest {
   @AfterEach
   public void destroy() {
     Locale.setDefault(defaultLocale);
-    System.clearProperty("de.jollyday.config.urls");
+    System.clearProperty("de.focus_shift.config.urls");
   }
 
   @Test

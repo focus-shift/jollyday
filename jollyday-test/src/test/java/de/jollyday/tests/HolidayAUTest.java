@@ -1,9 +1,9 @@
-package de.jollyday.tests;
+package de.focus_shift.tests;
 
-import de.jollyday.CalendarHierarchy;
-import de.jollyday.HolidayManager;
-import de.jollyday.ManagerParameters;
-import de.jollyday.tests.base.AbstractCountryTestBase;
+import de.focus_shift.CalendarHierarchy;
+import de.focus_shift.HolidayManager;
+import de.focus_shift.ManagerParameters;
+import de.focus_shift.tests.base.AbstractCountryTestBase;
 import org.junit.jupiter.api.Test;
 
 public class HolidayAUTest extends AbstractCountryTestBase {

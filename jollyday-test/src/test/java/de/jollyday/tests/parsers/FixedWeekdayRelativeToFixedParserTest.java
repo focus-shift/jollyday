@@ -1,9 +1,9 @@
-package de.jollyday.tests.parsers;
+package de.focus_shift.tests.parsers;
 
-import de.jollyday.Holiday;
-import de.jollyday.config.*;
-import de.jollyday.parser.impl.FixedWeekdayRelativeToFixedParser;
-import de.jollyday.util.CalendarUtil;
+import de.focus_shift.Holiday;
+import de.focus_shift.config.*;
+import de.focus_shift.parser.impl.FixedWeekdayRelativeToFixedParser;
+import de.focus_shift.util.CalendarUtil;
 import org.junit.jupiter.api.Test;
 
 import java.time.DayOfWeek;

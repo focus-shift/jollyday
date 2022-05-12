@@ -1,11 +1,11 @@
-package de.jollyday.tests.parsers;
+package de.focus_shift.tests.parsers;
 
-import de.jollyday.Holiday;
-import de.jollyday.config.EthiopianOrthodoxHoliday;
-import de.jollyday.config.EthiopianOrthodoxHolidayType;
-import de.jollyday.config.Holidays;
-import de.jollyday.parser.impl.EthiopianOrthodoxHolidayParser;
-import de.jollyday.util.CalendarUtil;
+import de.focus_shift.Holiday;
+import de.focus_shift.config.EthiopianOrthodoxHoliday;
+import de.focus_shift.config.EthiopianOrthodoxHolidayType;
+import de.focus_shift.config.Holidays;
+import de.focus_shift.parser.impl.EthiopianOrthodoxHolidayParser;
+import de.focus_shift.util.CalendarUtil;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;

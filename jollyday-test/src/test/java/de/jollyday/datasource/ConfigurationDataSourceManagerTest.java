@@ -1,8 +1,8 @@
-package de.jollyday.datasource;
+package de.focus_shift.datasource;
 
-import de.jollyday.ManagerParameter;
-import de.jollyday.ManagerParameters;
-import de.jollyday.datasource.impl.XmlFileDataSource;
+import de.focus_shift.ManagerParameter;
+import de.focus_shift.ManagerParameters;
+import de.focus_shift.datasource.impl.XmlFileDataSource;
 import org.junit.jupiter.api.Test;
 
 import java.util.Properties;
