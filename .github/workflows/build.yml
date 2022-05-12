@@ -37,13 +37,14 @@ jobs:
       - name: Build
         run: >
           ./mvnw $MAVEN_CLI_OPTS
+          -Pcoverage
           clean package
       - name: Analyse with SonarCloud
         if: ${{ github.event_name != 'pull_request' || (github.event.pull_request.head.repo.full_name == github.repository && github.actor != 'dependabot[bot]') }}
         run: >
           ./mvnw $MAVEN_CLI_OPTS
-          verify
-          org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
+          -Pcoverage
+          sonar:sonar
           -Dsonar.host.url=https://sonarcloud.io
           -Dsonar.organization=focus-shift
           -Dsonar.projectKey=focus-shift_jollyday
