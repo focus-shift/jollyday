@@ -15,12 +15,14 @@
     <tns:ChristianHoliday type="ASCENSION_DAY" descriptionPropertiesKey="christian.ASCENSION_DAY"/>
     <tns:ChristianHoliday type="WHIT_MONDAY" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
   </tns:Holidays>
+
   <tns:SubConfigurations hierarchy="be" description="Berlin">
     <tns:Holidays>
       <tns:Fixed month="MARCH" day="8" descriptionPropertiesKey="INTERNATIONAL_WOMAN" validFrom="2019"/>
       <tns:Fixed month="MAY" day="8" descriptionPropertiesKey="LIBERATION" validFrom="2020" validTo="2020"/>
     </tns:Holidays>
   </tns:SubConfigurations>
+
   <tns:SubConfigurations hierarchy="bb" description="Brandenburg">
     <tns:Holidays>
       <tns:Fixed month="OCTOBER" day="31" descriptionPropertiesKey="REFORMATION_DAY"/>
@@ -28,6 +30,7 @@
       <tns:ChristianHoliday type="WHIT_SUNDAY" descriptionPropertiesKey="christian.WHIT_SUNDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
+
   <tns:SubConfigurations hierarchy="bw" description="Baden-Württemberg">
     <tns:Holidays>
       <tns:Fixed month="JANUARY" day="6" descriptionPropertiesKey="EPIPHANY"/>
@@ -35,6 +38,7 @@
       <tns:ChristianHoliday type="CORPUS_CHRISTI" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
     </tns:Holidays>
   </tns:SubConfigurations>
+
   <tns:SubConfigurations hierarchy="by" description="Bavaria">
     <tns:Holidays>
       <tns:Fixed month="JANUARY" day="6" descriptionPropertiesKey="EPIPHANY"/>
@@ -103,6 +107,7 @@
       <tns:ChristianHoliday type="CORPUS_CHRISTI" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
     </tns:Holidays>
   </tns:SubConfigurations>
+
   <tns:SubConfigurations hierarchy="sn" description="Saxony">
     <tns:Holidays>
       <tns:Fixed month="OCTOBER" day="31" descriptionPropertiesKey="REFORMATION_DAY"/>
@@ -113,33 +118,39 @@
       </tns:RelativeToFixed>
     </tns:Holidays>
   </tns:SubConfigurations>
+
   <tns:SubConfigurations hierarchy="st" description="Saxony-Anhalt">
     <tns:Holidays>
       <tns:Fixed month="OCTOBER" day="31" descriptionPropertiesKey="REFORMATION_DAY"/>
       <tns:Fixed month="JANUARY" day="6" descriptionPropertiesKey="EPIPHANY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
+
   <tns:SubConfigurations hierarchy="th" description="Thuringia">
     <tns:Holidays>
       <tns:Fixed month="SEPTEMBER" day="20" descriptionPropertiesKey="CHILDRENS_DAY" validFrom="2019"/>
       <tns:Fixed month="OCTOBER" day="31" descriptionPropertiesKey="REFORMATION_DAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
+
   <tns:SubConfigurations hierarchy="sh" description="Schleswig-Holstein">
     <tns:Holidays>
       <tns:Fixed month="OCTOBER" day="31" descriptionPropertiesKey="REFORMATION_DAY" validFrom="2018"/>
     </tns:Holidays>
   </tns:SubConfigurations>
+
   <tns:SubConfigurations hierarchy="hh" description="Hamburg">
     <tns:Holidays>
       <tns:Fixed month="OCTOBER" day="31" descriptionPropertiesKey="REFORMATION_DAY" validFrom="2018"/>
     </tns:Holidays>
   </tns:SubConfigurations>
+
   <tns:SubConfigurations hierarchy="hb" description="Bremen">
     <tns:Holidays>
       <tns:Fixed month="OCTOBER" day="31" descriptionPropertiesKey="REFORMATION_DAY" validFrom="2018"/>
     </tns:Holidays>
   </tns:SubConfigurations>
+
   <tns:SubConfigurations hierarchy="ni" description="Lower-Saxony">
     <tns:Holidays>
       <tns:Fixed month="OCTOBER" day="31" descriptionPropertiesKey="REFORMATION_DAY" validFrom="2018"/>
