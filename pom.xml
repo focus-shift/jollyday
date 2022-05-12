@@ -24,16 +24,16 @@
     <maven.site.skip>true</maven.site.skip>
     <maven.site.deploy.skip>true</maven.site.deploy.skip>
 
-    <!-- Sonar -->
-    <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
-    <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
-    <sonar.jacoco.reportPath>${project.basedir}/../target/jacoco.exec</sonar.jacoco.reportPath>
-    <sonar.language>java</sonar.language>
+    <!--suppress UnresolvedMavenProperty - for IDEA -->
+    <sonar.coverage.jacoco.xmlReportPaths>
+      ${maven.multiModuleProjectDirectory}/tests/target/site/jacoco-aggregate/jacoco.xml
+    </sonar.coverage.jacoco.xmlReportPaths>
   </properties>
 
   <modules>
     <module>jollyday-core</module>
     <module>jollyday-jaxb</module>
+    <module>jollyday-report</module>
     <!--<module>jollyday-test</module> temporarily disabled-->
   </modules>
 
@@ -205,12 +205,18 @@
           <artifactId>jacoco-maven-plugin</artifactId>
           <version>0.8.8</version>
           <configuration>
-            <destFile>${sonar.jacoco.reportPath}</destFile>
-            <append>true</append>
             <excludes>
               <exclude>de.focus_shift.config.*</exclude>
             </excludes>
           </configuration>
+          <executions>
+            <execution>
+              <id>prepare-agent</id>
+              <goals>
+                <goal>prepare-agent</goal>
+              </goals>
+            </execution>
+          </executions>
         </plugin>
         <plugin>
           <groupId>org.eclipse.transformer</groupId>
@@ -343,27 +349,6 @@
       <id>coverage</id>
       <build>
         <plugins>
-
-          <!-- Coverage -->
-          <plugin>
-            <groupId>org.jacoco</groupId>
-            <artifactId>jacoco-maven-plugin</artifactId>
-            <executions>
-              <execution>
-                <id>prepare-agent</id>
-                <goals>
-                  <goal>prepare-agent</goal>
-                </goals>
-              </execution>
-              <execution>
-                <id>report</id>
-                <phase>test</phase>
-                <goals>
-                  <goal>report</goal>
-                </goals>
-              </execution>
-            </executions>
-          </plugin>
 
           <!-- sonar -->
           <plugin>
