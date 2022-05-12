@@ -72,25 +72,30 @@
   <tns:SubConfigurations hierarchy="he" description="Hessen">
     <tns:Holidays>
       <tns:ChristianHoliday type="CORPUS_CHRISTI" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
+      <tns:ChristianHoliday type="WHIT_SUNDAY" descriptionPropertiesKey="christian.WHIT_SUNDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
+
   <tns:SubConfigurations hierarchy="mv" description="Mecklenburg-Vorpommern">
     <tns:Holidays>
       <tns:Fixed month="OCTOBER" day="31" descriptionPropertiesKey="REFORMATION_DAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
+
   <tns:SubConfigurations hierarchy="nw" description="North Rhine-Westphalia">
     <tns:Holidays>
       <tns:Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
       <tns:ChristianHoliday type="CORPUS_CHRISTI" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
     </tns:Holidays>
   </tns:SubConfigurations>
+
   <tns:SubConfigurations hierarchy="rp" description="Rhineland-Palatinate">
     <tns:Holidays>
       <tns:Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
       <tns:ChristianHoliday type="CORPUS_CHRISTI" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
     </tns:Holidays>
   </tns:SubConfigurations>
+
   <tns:SubConfigurations hierarchy="sl" description="Saarland">
     <tns:Holidays>
       <tns:Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
