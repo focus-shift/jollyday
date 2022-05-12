@@ -26,8 +26,7 @@
   </properties>
 
   <modules>
-    <module>jollyday-api</module>
-    <module>jollyday-holidays</module>
+    <module>jollyday-core</module>
     <module>jollyday-jaxb</module>
     <!--<module>jollyday-test</module> temporarily disabled-->
   </modules>
