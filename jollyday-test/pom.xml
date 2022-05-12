@@ -16,7 +16,7 @@
   <dependencies>
     <dependency>
       <groupId>de.focus-shift</groupId>
-      <artifactId>jollyday-api</artifactId>
+      <artifactId>jollyday-core</artifactId>
       <version>${project.version}</version>
     </dependency>
   </dependencies>
