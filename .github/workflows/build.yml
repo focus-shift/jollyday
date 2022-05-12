@@ -44,6 +44,7 @@ jobs:
         run: >
           ./mvnw $MAVEN_CLI_OPTS
           -Pcoverage
+          verify
           sonar:sonar
           -Dsonar.host.url=https://sonarcloud.io
           -Dsonar.organization=focus-shift
