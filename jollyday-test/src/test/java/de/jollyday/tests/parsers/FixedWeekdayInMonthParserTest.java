@@ -1,12 +1,12 @@
-package de.jollyday.tests.parsers;
+package de.focus_shift.tests.parsers;
 
 import java.util.HashSet;
 import java.util.Set;
 
-import de.jollyday.Holiday;
-import de.jollyday.config.FixedWeekdayInMonth;
-import de.jollyday.config.Holidays;
-import de.jollyday.parser.impl.FixedWeekdayInMonthParser;
+import de.focus_shift.Holiday;
+import de.focus_shift.config.FixedWeekdayInMonth;
+import de.focus_shift.config.Holidays;
+import de.focus_shift.parser.impl.FixedWeekdayInMonthParser;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

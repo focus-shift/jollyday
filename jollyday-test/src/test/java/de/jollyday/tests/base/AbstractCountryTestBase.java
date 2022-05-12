@@ -1,10 +1,10 @@
-package de.jollyday.tests.base;
+package de.focus_shift.tests.base;
 
-import de.jollyday.CalendarHierarchy;
-import de.jollyday.Holiday;
-import de.jollyday.HolidayCalendar;
-import de.jollyday.HolidayManager;
-import de.jollyday.util.CalendarUtil;
+import de.focus_shift.CalendarHierarchy;
+import de.focus_shift.Holiday;
+import de.focus_shift.HolidayCalendar;
+import de.focus_shift.HolidayManager;
+import de.focus_shift.util.CalendarUtil;
 
 import java.util.ArrayList;
 import java.util.List;

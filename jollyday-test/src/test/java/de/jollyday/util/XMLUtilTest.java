@@ -1,6 +1,6 @@
-package de.jollyday.util;
+package de.focus_shift.util;
 
-import de.jollyday.config.Configuration;
+import de.focus_shift.config.Configuration;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

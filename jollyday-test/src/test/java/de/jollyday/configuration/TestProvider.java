@@ -1,4 +1,4 @@
-package de.jollyday.configuration;
+package de.focus_shift.configuration;
 
 import java.util.Properties;
 

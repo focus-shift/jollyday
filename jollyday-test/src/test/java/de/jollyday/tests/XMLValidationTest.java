@@ -1,4 +1,4 @@
-package de.jollyday.tests;
+package de.focus_shift.tests;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

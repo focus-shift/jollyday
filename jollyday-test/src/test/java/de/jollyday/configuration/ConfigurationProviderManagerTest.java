@@ -1,7 +1,7 @@
-package de.jollyday.configuration;
+package de.focus_shift.configuration;
 
-import de.jollyday.ManagerParameter;
-import de.jollyday.ManagerParameters;
+import de.focus_shift.ManagerParameter;
+import de.focus_shift.ManagerParameters;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

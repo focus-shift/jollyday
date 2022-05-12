@@ -1,6 +1,6 @@
-package de.jollyday.tests;
+package de.focus_shift.tests;
 
-import de.jollyday.tests.base.AbstractCountryTestBase;
+import de.focus_shift.tests.base.AbstractCountryTestBase;
 import org.junit.jupiter.api.Test;
 
 /**

@@ -1,7 +1,7 @@
-package de.jollyday.datasource.impl;
+package de.focus_shift.datasource.impl;
 
-import de.jollyday.ManagerParameter;
-import de.jollyday.util.XMLUtil;
+import de.focus_shift.ManagerParameter;
+import de.focus_shift.util.XMLUtil;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

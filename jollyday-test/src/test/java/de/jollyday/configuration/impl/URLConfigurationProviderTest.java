@@ -1,8 +1,8 @@
-package de.jollyday.configuration.impl;
+package de.focus_shift.configuration.impl;
 
 import java.util.Properties;
 
-import de.jollyday.configuration.ConfigurationProvider;
+import de.focus_shift.configuration.ConfigurationProvider;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
@@ -42,7 +42,7 @@ public class URLConfigurationProviderTest {
     System.setProperty(ConfigurationProvider.CONFIG_URLS_PROPERTY, "file:./src/test/resources/url.load.properties");
     Properties props = urlConfigurationProvider.getProperties();
     assertFalse(props.isEmpty());
-    assertEquals("de.jollyday.impl.DefaultHolidayManager", props.getProperty("manager.impl.test"), "Wrong new property.");
+    assertEquals("de.focus_shift.impl.DefaultHolidayManager", props.getProperty("manager.impl.test"), "Wrong new property.");
     assertEquals("ManagerOverloaded", props.getProperty("manager.impl"), "Wrong overloaded property.");
   }
 

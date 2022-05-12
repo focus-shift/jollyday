@@ -1,8 +1,8 @@
-package de.jollyday.parameter;
+package de.focus_shift.parameter;
 
-import de.jollyday.HolidayManager;
-import de.jollyday.ManagerParameter;
-import de.jollyday.ManagerParameters;
+import de.focus_shift.HolidayManager;
+import de.focus_shift.ManagerParameter;
+import de.focus_shift.ManagerParameters;
 import org.junit.jupiter.api.Test;
 
 import java.util.Calendar;

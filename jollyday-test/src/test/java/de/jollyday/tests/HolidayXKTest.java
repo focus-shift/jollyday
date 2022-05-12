@@ -1,8 +1,8 @@
-package de.jollyday.tests;
+package de.focus_shift.tests;
 
-import de.jollyday.*;
-import de.jollyday.tests.base.AbstractCountryTestBase;
-import de.jollyday.util.CalendarUtil;
+import de.focus_shift.*;
+import de.focus_shift.tests.base.AbstractCountryTestBase;
+import de.focus_shift.util.CalendarUtil;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;

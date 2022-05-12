@@ -6,7 +6,7 @@
   <description>JAXB based implementation</description>
 
   <parent>
-    <groupId>de.jollyday</groupId>
+    <groupId>de.focus-shift</groupId>
     <artifactId>jollyday</artifactId>
     <version>0.6.0-SNAPSHOT</version>
     <relativePath>../pom.xml</relativePath>
@@ -14,7 +14,7 @@
 
   <dependencies>
     <dependency>
-      <groupId>de.jollyday</groupId>
+      <groupId>de.focus-shift</groupId>
       <artifactId>jollyday-api</artifactId>
       <version>${project.version}</version>
     </dependency>
@@ -80,7 +80,7 @@
                 <argument>-target</argument>
                 <argument>3.0</argument>
                 <argument>-p</argument>
-                <argument>de.jollyday.jaxb.mapping</argument>
+                <argument>de.focus_shift.jaxb.mapping</argument>
                 <argument>${project.build.directory}/dependency/Holiday.xsd</argument>
               </arguments>
             </configuration>

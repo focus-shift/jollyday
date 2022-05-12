@@ -1,4 +1,4 @@
-package de.jollyday;
+package de.focus_shift;
 
 import org.junit.jupiter.api.Test;
 
