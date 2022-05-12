@@ -70,7 +70,8 @@
       </tns:Holidays>
     </tns:SubConfigurations>
   </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="he" description="Hesse">
+
+  <tns:SubConfigurations hierarchy="he" description="Hessen">
     <tns:Holidays>
       <tns:ChristianHoliday type="CORPUS_CHRISTI" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
     </tns:Holidays>
