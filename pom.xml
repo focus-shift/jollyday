@@ -160,11 +160,6 @@
           <version>3.4.0</version>
         </plugin>
         <plugin>
-          <groupId>biz.aQute.bnd</groupId>
-          <artifactId>bnd-maven-plugin</artifactId>
-          <version>6.2.0</version>
-        </plugin>
-        <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-jar-plugin</artifactId>
           <version>3.2.2</version>
@@ -192,26 +187,6 @@
     </pluginManagement>
     <plugins>
       <plugin>
-        <groupId>biz.aQute.bnd</groupId>
-        <artifactId>bnd-maven-plugin</artifactId>
-        <executions>
-          <execution>
-            <goals>
-              <goal>bnd-process</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-jar-plugin</artifactId>
-        <configuration>
-          <archive>
-            <manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
-          </archive>
-        </configuration>
-      </plugin>
-      <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-source-plugin</artifactId>
         <executions>
@@ -229,7 +204,6 @@
         <artifactId>maven-javadoc-plugin</artifactId>
         <configuration>
           <excludePackageNames>de.focus_shift.config</excludePackageNames>
-          <sourceFileExcludes>module-info.java</sourceFileExcludes>
         </configuration>
         <executions>
           <execution>
