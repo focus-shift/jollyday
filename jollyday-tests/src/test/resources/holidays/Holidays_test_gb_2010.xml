@@ -25,7 +25,6 @@
     <tns:Holidays>
       <tns:Fixed month="JANUARY" day="1"/>
       <tns:Fixed month="MAY" day="9"/>
-      <tns:Fixed month="APRIL" day="5"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="im" description="Isle of Man">
