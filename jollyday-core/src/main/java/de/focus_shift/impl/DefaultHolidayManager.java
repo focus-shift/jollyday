@@ -182,7 +182,8 @@ public class DefaultHolidayManager extends HolidayManager {
       if (parserClassName != null) {
         final Class<?> parserClass = classLoadingUtil.loadClass(parserClassName);
         holidayParser = (Function<Integer, List<Holiday>>) parserClass.getConstructor(List.class).newInstance(holidays);
-        parserCache.put(className, holidayParser);
+        // Parser can not be reused, because the constructor holds the old holidays TODO
+        // parserCache.put(className, holidayParser);
       }
     }
     return holidayParser;
