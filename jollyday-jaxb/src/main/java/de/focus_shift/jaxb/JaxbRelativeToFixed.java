@@ -30,17 +30,23 @@ public class JaxbRelativeToFixed implements RelativeToFixed {
 
   @Override
   public DayOfWeek weekday() {
-    return DayOfWeek.valueOf(relativeToFixed.getWeekday().name());
+    return relativeToFixed.getWeekday() == null
+      ? null
+      : DayOfWeek.valueOf(relativeToFixed.getWeekday().name());
   }
 
   @Override
   public Relation when() {
-    return Relation.valueOf(relativeToFixed.getWhen().name());
+    return relativeToFixed.getWhen() == null
+      ? null
+      : Relation.valueOf(relativeToFixed.getWhen().name());
   }
 
   @Override
   public Days days() {
-    return Days.of(relativeToFixed.getDays());
+    return relativeToFixed.getDays() == null
+      ? null
+      : Days.of(relativeToFixed.getDays());
   }
 
   @Override
