@@ -117,8 +117,13 @@
       <tns:Fixed month="MARCH" day="19"/>
       <tns:Fixed month="AUGUST" day="15"/>
       <tns:Fixed month="APRIL" day="1"/>
-      <tns:ChristianHoliday type="CORPUS_CHRISTI"/>
     </tns:Holidays>
+    <tns:SubConfigurations hierarchy="mad" description="Madrid city">
+      <tns:Holidays>
+        <tns:Fixed month="MAY" day="15" descriptionPropertiesKey="SAINT_ISIDORE"/>
+        <tns:Fixed month="NOVEMBER" day="9" descriptionPropertiesKey="ALMUDENA_DAY"/>
+      </tns:Holidays>
+    </tns:SubConfigurations>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="mu" description="Murcia">
     <tns:Holidays>

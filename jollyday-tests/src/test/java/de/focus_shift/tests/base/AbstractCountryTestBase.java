@@ -31,7 +31,7 @@ public abstract class AbstractCountryTestBase {
   protected void compareHierarchies(CalendarHierarchy expected, CalendarHierarchy found) {
     assertNotNull(found.getDescription(), "Null description");
     assertEquals(expected.getId(), found.getId(), "Wrong hierarchy id.");
-    assertEquals(expected.getChildren().size(), found.getChildren().size(), "Number of children wrong.");
+    assertEquals(expected.getChildren().size(), found.getChildren().size(), "Number of children of '" + expected.getDescription() + "' wrong.");
     for (String id : expected.getChildren().keySet()) {
       assertTrue(found.getChildren().containsKey(id), "Missing " + id + " within " + found.getId());
       compareHierarchies(expected.getChildren().get(id), found.getChildren().get(id));

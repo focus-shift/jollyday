@@ -12,5 +12,4 @@ class HolidayESTest extends AbstractCountryTestBase {
   void testManagerESStructure()  {
     validateCalendarData(ISO_CODE, YEAR);
   }
-
 }
