@@ -34,7 +34,6 @@
       <tns:Fixed month="JANUARY" day="1"/>
       <tns:Fixed month="JUNE" day="11"/>
       <tns:Fixed month="JULY" day="5"/>
-      <tns:Fixed month="APRIL" day="5"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="je" description="Jersey">
