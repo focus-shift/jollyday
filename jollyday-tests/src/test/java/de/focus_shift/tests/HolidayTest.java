@@ -34,6 +34,7 @@ import static java.time.Month.JANUARY;
 import static java.time.Month.JULY;
 import static java.time.Month.NOVEMBER;
 import static java.time.Month.SEPTEMBER;
+import static java.util.Locale.ENGLISH;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -242,10 +243,12 @@ class HolidayTest {
 
   @Test
   void testHolidayDescription() {
-    Holiday h = new Holiday(LocalDate.of(2011, 2, 2), "CHRISTMAS", OFFICIAL_HOLIDAY);
-    assertEquals("Christmas", h.getDescription(), "Wrong description");
-    assertEquals("Weihnachten", h.getDescription(Locale.GERMAN), "Wrong description");
-    assertEquals("Kerstmis", h.getDescription(new Locale("nl")), "Wrong description");
+    Locale.setDefault(ENGLISH);
+
+    final Holiday holiday = new Holiday(LocalDate.of(2011, 2, 2), "CHRISTMAS", OFFICIAL_HOLIDAY);
+    assertEquals("Christmas", holiday.getDescription(), "Wrong description");
+    assertEquals("Weihnachten", holiday.getDescription(Locale.GERMAN), "Wrong description");
+    assertEquals("Kerstmis", holiday.getDescription(new Locale("nl")), "Wrong description");
   }
 
   @Test
