@@ -57,12 +57,16 @@ public class JaxbRelativeToFixed implements RelativeToFixed {
 
   @Override
   public Year validFrom() {
-    return Year.of(relativeToFixed.getValidFrom());
+    return relativeToFixed.getValidFrom() == null
+      ? null
+      : Year.of(relativeToFixed.getValidFrom());
   }
 
   @Override
   public Year validTo() {
-    return Year.of(relativeToFixed.getValidTo());
+    return relativeToFixed.getValidTo() == null
+      ? null
+      : Year.of(relativeToFixed.getValidTo());
   }
 
   @Override

@@ -35,7 +35,9 @@ public class JaxbChristianHoliday implements ChristianHoliday {
 
   @Override
   public Chronology chronology() {
-    return christianHoliday.getChronology() == JULIAN ? JulianChronology.INSTANCE : IsoChronology.INSTANCE;
+    return christianHoliday.getChronology() == JULIAN
+      ? JulianChronology.INSTANCE
+      : IsoChronology.INSTANCE;
   }
 
   @Override
@@ -52,12 +54,16 @@ public class JaxbChristianHoliday implements ChristianHoliday {
 
   @Override
   public Year validFrom() {
-    return christianHoliday.getValidFrom() == null ? null : Year.of(christianHoliday.getValidFrom());
+    return christianHoliday.getValidFrom() == null
+      ? null
+      : Year.of(christianHoliday.getValidFrom());
   }
 
   @Override
   public Year validTo() {
-    return christianHoliday.getValidTo() == null ? null : Year.of(christianHoliday.getValidTo());
+    return christianHoliday.getValidTo() == null
+      ? null
+      : Year.of(christianHoliday.getValidTo());
   }
 
   @Override

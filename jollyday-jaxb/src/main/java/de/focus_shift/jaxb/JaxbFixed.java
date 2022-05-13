@@ -45,12 +45,16 @@ public class JaxbFixed implements Fixed {
 
   @Override
   public Year validFrom() {
-    return fixed.getValidFrom() == null ? null : Year.of(fixed.getValidFrom());
+    return fixed.getValidFrom() == null
+      ? null
+      : Year.of(fixed.getValidFrom());
   }
 
   @Override
   public Year validTo() {
-    return fixed.getValidTo() == null ? null : Year.of(fixed.getValidTo());
+    return fixed.getValidTo() == null
+      ? null
+      : Year.of(fixed.getValidTo());
   }
 
   @Override

@@ -57,12 +57,16 @@ public class JaxbFixedWeekdayRelativeToFixed implements FixedWeekdayRelativeToFi
 
   @Override
   public Year validFrom() {
-    return Year.of(fixedWeekdayRelativeToFixed.getValidFrom());
+    return fixedWeekdayRelativeToFixed.getValidFrom() == null
+      ? null
+      : Year.of(fixedWeekdayRelativeToFixed.getValidFrom());
   }
 
   @Override
   public Year validTo() {
-    return Year.of(fixedWeekdayRelativeToFixed.getValidTo());
+    return fixedWeekdayRelativeToFixed.getValidTo() == null
+      ? null
+      : Year.of(fixedWeekdayRelativeToFixed.getValidTo());
   }
 
   @Override

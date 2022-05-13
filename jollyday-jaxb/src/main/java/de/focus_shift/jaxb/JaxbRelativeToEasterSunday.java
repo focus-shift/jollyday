@@ -39,12 +39,16 @@ public class JaxbRelativeToEasterSunday implements RelativeToEasterSunday {
 
   @Override
   public Year validFrom() {
-    return Year.of(relativeToEasterSunday.getValidFrom());
+    return relativeToEasterSunday.getValidFrom() == null
+      ? null
+      : Year.of(relativeToEasterSunday.getValidFrom());
   }
 
   @Override
   public Year validTo() {
-    return Year.of(relativeToEasterSunday.getValidTo());
+    return relativeToEasterSunday.getValidTo() == null
+      ? null
+      : Year.of(relativeToEasterSunday.getValidTo());
   }
 
   @Override
