@@ -155,15 +155,16 @@ public class DefaultHolidayManager extends HolidayManager {
     final Collection<Function<Integer, List<Holiday>>> parsers = new HashSet<>();
     try {
       final Method[] declaredMethods = config.getClass().getDeclaredMethods();
-      LOG.warning(Arrays.toString(declaredMethods));
       for (Method declaredMethod : declaredMethods) {
-        LOG.warning(declaredMethod.getGenericReturnType().getTypeName());
-        final Type actualTypeArgument = ((ParameterizedType) declaredMethod.getGenericReturnType()).getActualTypeArguments()[0];
-        final List<?> holidays = (List<?>) declaredMethod.invoke(config);
-        if (!holidays.isEmpty()) {
-          final Function<Integer, List<Holiday>> holidayParser = instantiateParser(actualTypeArgument.getTypeName(), holidays);
-          if (holidayParser != null) {
-            parsers.add(holidayParser);
+        if (declaredMethod.getGenericReturnType() instanceof ParameterizedType) {
+          final ParameterizedType parameterizedType = (ParameterizedType) declaredMethod.getGenericReturnType();
+          final Type actualTypeArgument = parameterizedType.getActualTypeArguments()[0];
+          final List<?> holidays = (List<?>) declaredMethod.invoke(config);
+          if (!holidays.isEmpty()) {
+            final Function<Integer, List<Holiday>> holidayParser = instantiateParser(actualTypeArgument.getTypeName(), holidays);
+            if (holidayParser != null) {
+              parsers.add(holidayParser);
+            }
           }
         }
       }
