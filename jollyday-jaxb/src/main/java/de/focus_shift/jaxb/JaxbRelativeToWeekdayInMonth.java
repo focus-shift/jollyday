@@ -51,12 +51,16 @@ public class JaxbRelativeToWeekdayInMonth implements RelativeToWeekdayInMonth {
 
   @Override
   public Year validFrom() {
-    return Year.of(relativeToWeekdayInMonth.getValidFrom());
+    return relativeToWeekdayInMonth.getValidFrom() == null
+      ? null
+      : Year.of(relativeToWeekdayInMonth.getValidFrom());
   }
 
   @Override
   public Year validTo() {
-    return Year.of(relativeToWeekdayInMonth.getValidTo());
+    return relativeToWeekdayInMonth.getValidTo() == null
+      ? null
+      : Year.of(relativeToWeekdayInMonth.getValidTo());
   }
 
   @Override

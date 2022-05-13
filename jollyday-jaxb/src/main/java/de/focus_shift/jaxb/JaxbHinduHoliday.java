@@ -39,12 +39,16 @@ public class JaxbHinduHoliday implements HinduHoliday {
 
   @Override
   public Year validFrom() {
-    return Year.of(hinduHoliday.getValidFrom());
+    return hinduHoliday.getValidFrom() == null
+      ? null
+      : Year.of(hinduHoliday.getValidFrom());
   }
 
   @Override
   public Year validTo() {
-    return Year.of(hinduHoliday.getValidTo());
+    return hinduHoliday.getValidTo() == null
+      ? null
+      : Year.of(hinduHoliday.getValidTo());
   }
 
   @Override

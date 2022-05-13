@@ -54,5 +54,4 @@ public final class ManagerParameters {
       return calendar.trim().toLowerCase();
     }
   }
-
 }

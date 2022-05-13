@@ -50,12 +50,16 @@ public class JaxbFixedWeekdayBetweenFixed implements FixedWeekdayBetweenFixed {
 
   @Override
   public Year validFrom() {
-    return Year.of(fixedWeekdayBetweenFixed.getValidFrom());
+    return fixedWeekdayBetweenFixed.getValidFrom() == null
+      ? null
+      : Year.of(fixedWeekdayBetweenFixed.getValidFrom());
   }
 
   @Override
   public Year validTo() {
-    return Year.of(fixedWeekdayBetweenFixed.getValidTo());
+    return fixedWeekdayBetweenFixed.getValidTo() == null
+      ? null
+      : Year.of(fixedWeekdayBetweenFixed.getValidTo());
   }
 
   @Override

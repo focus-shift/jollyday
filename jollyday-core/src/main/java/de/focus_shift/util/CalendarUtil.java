@@ -2,14 +2,23 @@ package de.focus_shift.util;
 
 import de.focus_shift.Holiday;
 import de.focus_shift.HolidayType;
+import de.focus_shift.parser.functions.CalculateRelativeDatesFromChronologyWithinGregorianYear;
+import org.threeten.extra.chrono.CopticChronology;
 
 import java.time.LocalDate;
 import java.time.chrono.ChronoLocalDate;
 import java.time.chrono.Chronology;
+import java.time.chrono.HijrahChronology;
+import java.time.temporal.ChronoField;
+import java.time.temporal.ChronoUnit;
+import java.util.HashSet;
 import java.util.Set;
+import java.util.stream.Stream;
 
 import static java.time.DayOfWeek.SATURDAY;
 import static java.time.DayOfWeek.SUNDAY;
+import static java.time.Month.DECEMBER;
+import static java.time.Month.JANUARY;
 
 /**
  * Utility class for date operations.
@@ -75,12 +84,10 @@ public class CalendarUtil {
    * @param islamicDay    a int.
    * @return List of gregorian dates for the islamic month/day.
    */
-    /*
-    public Set<LocalDate> getIslamicHolidaysInGregorianYear(int gregorianYear, int islamicMonth, int islamicDay) {
-        return getDatesFromChronologyWithinGregorianYear(islamicMonth, islamicDay, gregorianYear,
-                HijrahChronology.INSTANCE);
-    }
-    */
+  public Stream<LocalDate> getIslamicHolidaysInGregorianYear(int gregorianYear, int islamicMonth, int islamicDay) {
+    return getDatesFromChronologyWithinGregorianYear(islamicMonth, islamicDay, gregorianYear, HijrahChronology.INSTANCE);
+  }
+
   /**
    * Returns a set of gregorian dates within a gregorian year which equal the
    * islamic month and day with a relative shift. Because the islamic year is
@@ -94,12 +101,11 @@ public class CalendarUtil {
    * @param relativeShift a int.
    * @return List of gregorian dates for the islamic month/day shifted by relative shift days.
    */
-    /*
-    public Set<LocalDate> getRelativeIslamicHolidaysInGregorianYear(int gregorianYear, int islamicMonth, int islamicDay, int relativeShift) {
-        return getRelativeDatesFromChronologyWithinGregorianYear(islamicMonth, islamicDay, gregorianYear,
-                HijrahChronology.INSTANCE, relativeShift);
-    }
-    */
+  public Set<LocalDate> getRelativeIslamicHolidaysInGregorianYear(int gregorianYear, int islamicMonth, int islamicDay, int relativeShift) {
+    return getRelativeDatesFromChronologyWithinGregorianYear(islamicMonth, islamicDay, gregorianYear,
+      HijrahChronology.INSTANCE, relativeShift);
+  }
+
   /**
    * Returns a set of gregorian dates within a gregorian year which equal the
    * ethiopian orthodox month and day. Because the ethiopian orthodox year
@@ -111,12 +117,11 @@ public class CalendarUtil {
    * @param eoDay         a int.
    * @return List of gregorian dates for the ethiopian orthodox month/day.
    */
-    /*
-    public Stream<LocalDate> getEthiopianOrthodoxHolidaysInGregorianYear(int gregorianYear, int eoMonth, int eoDay) {
+  public Stream<LocalDate> getEthiopianOrthodoxHolidaysInGregorianYear(int gregorianYear, int eoMonth, int eoDay) {
 
-        return getDatesFromChronologyWithinGregorianYear(eoMonth, eoDay, gregorianYear, CopticChronology.INSTANCE);
-    }
-    */
+    return getDatesFromChronologyWithinGregorianYear(eoMonth, eoDay, gregorianYear, CopticChronology.INSTANCE);
+  }
+
   /**
    * Searches for the occurrences of a month/day in one chronology within one
    * gregorian year.
@@ -127,12 +132,10 @@ public class CalendarUtil {
    * @param targetChrono
    * @return the list of gregorian dates.
    */
-    /*
-    private Stream<LocalDate> getDatesFromChronologyWithinGregorianYear(int targetMonth, int targetDay, int gregorianYear,
-                                                                        Chronology targetChrono) {
-        return new CalculateRelativeDatesFromChronologyWithinGregorianYear(targetMonth, targetDay, targetChrono, 0).apply(gregorianYear);
-    }
-    */
+  private Stream<LocalDate> getDatesFromChronologyWithinGregorianYear(int targetMonth, int targetDay, int gregorianYear, Chronology targetChrono) {
+    return new CalculateRelativeDatesFromChronologyWithinGregorianYear(targetMonth, targetDay, targetChrono, 0).apply(gregorianYear);
+  }
+
   /**
    * Searches for the occurrences of a month/day +- relative shift in one
    * chronology within one gregorian year.
@@ -144,31 +147,29 @@ public class CalendarUtil {
    * @param relativeShift
    * @return the list of gregorian dates.
    */
-    /*
-    private Set<LocalDate> getRelativeDatesFromChronologyWithinGregorianYear(int targetMonth, int targetDay,
-            int gregorianYear, Chronology targetChrono, int relativeShift) {
-        int absoluteShift = Math.abs(relativeShift);
-        Set<LocalDate> holidays = new HashSet<>();
-        LocalDate firstGregorianDate = LocalDate.of(gregorianYear, JANUARY, 1);
-        LocalDate lastGregorianDate = LocalDate.of(gregorianYear, DECEMBER, 31);
+  private Set<LocalDate> getRelativeDatesFromChronologyWithinGregorianYear(int targetMonth, int targetDay,
+                                                                           int gregorianYear, Chronology targetChrono, int relativeShift) {
+    int absoluteShift = Math.abs(relativeShift);
+    Set<LocalDate> holidays = new HashSet<>();
+    LocalDate firstGregorianDate = LocalDate.of(gregorianYear, JANUARY, 1);
+    LocalDate lastGregorianDate = LocalDate.of(gregorianYear, DECEMBER, 31);
 
-        ChronoLocalDate firstTargetDate = targetChrono.date(firstGregorianDate.minusDays(absoluteShift));
-        ChronoLocalDate lastTargetDate = targetChrono.date(lastGregorianDate.plusDays(absoluteShift));
+    ChronoLocalDate firstTargetDate = targetChrono.date(firstGregorianDate.minusDays(absoluteShift));
+    ChronoLocalDate lastTargetDate = targetChrono.date(lastGregorianDate.plusDays(absoluteShift));
 
-        int targetYear = firstTargetDate.get(ChronoField.YEAR);
-        final int lastYear = lastTargetDate.get(ChronoField.YEAR);
+    int targetYear = firstTargetDate.get(ChronoField.YEAR);
+    final int lastYear = lastTargetDate.get(ChronoField.YEAR);
 
-        while (targetYear <= lastYear) {
-            ChronoLocalDate d = targetChrono.date(targetYear, targetMonth, targetDay).plus(relativeShift,
-                    ChronoUnit.DAYS);
-            if (!firstGregorianDate.isAfter(d) && !lastGregorianDate.isBefore(d)) {
-                holidays.add(LocalDate.from(d));
-            }
-            targetYear++;
-        }
-        return holidays;
+    while (targetYear <= lastYear) {
+      ChronoLocalDate d = targetChrono.date(targetYear, targetMonth, targetDay).plus(relativeShift,
+        ChronoUnit.DAYS);
+      if (!firstGregorianDate.isAfter(d) && !lastGregorianDate.isBefore(d)) {
+        holidays.add(LocalDate.from(d));
+      }
+      targetYear++;
     }
-    */
+    return holidays;
+  }
 
   /**
    * Shows if the requested date is contained in the Set of holidays.

@@ -51,12 +51,16 @@ public class JaxbFixedWeekdayInMonth implements FixedWeekdayInMonth {
 
   @Override
   public Year validFrom() {
-    return Year.of(fixedWeekdayInMonth.getValidFrom());
+    return fixedWeekdayInMonth.getValidFrom() == null
+      ? null
+      : Year.of(fixedWeekdayInMonth.getValidFrom());
   }
 
   @Override
   public Year validTo() {
-    return Year.of(fixedWeekdayInMonth.getValidTo());
+    return fixedWeekdayInMonth.getValidTo() == null
+      ? null
+      : Year.of(fixedWeekdayInMonth.getValidTo());
   }
 
   @Override

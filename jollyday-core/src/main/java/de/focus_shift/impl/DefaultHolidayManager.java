@@ -11,6 +11,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.time.LocalDate;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
@@ -155,12 +156,15 @@ public class DefaultHolidayManager extends HolidayManager {
     try {
       final Method[] declaredMethods = config.getClass().getDeclaredMethods();
       for (Method declaredMethod : declaredMethods) {
-        final Type actualTypeArgument = ((ParameterizedType) declaredMethod.getGenericReturnType()).getActualTypeArguments()[0];
-        final List<?> holidays = (List<?>) declaredMethod.invoke(config);
-        if (!holidays.isEmpty()) {
-          final Function<Integer, List<Holiday>> holidayParser = instantiateParser(actualTypeArgument.getTypeName(), holidays);
-          if (holidayParser != null) {
-            parsers.add(holidayParser);
+        if (declaredMethod.getGenericReturnType() instanceof ParameterizedType) {
+          final ParameterizedType parameterizedType = (ParameterizedType) declaredMethod.getGenericReturnType();
+          final Type actualTypeArgument = parameterizedType.getActualTypeArguments()[0];
+          final List<?> holidays = (List<?>) declaredMethod.invoke(config);
+          if (!holidays.isEmpty()) {
+            final Function<Integer, List<Holiday>> holidayParser = instantiateParser(actualTypeArgument.getTypeName(), holidays);
+            if (holidayParser != null) {
+              parsers.add(holidayParser);
+            }
           }
         }
       }
@@ -178,7 +182,8 @@ public class DefaultHolidayManager extends HolidayManager {
       if (parserClassName != null) {
         final Class<?> parserClass = classLoadingUtil.loadClass(parserClassName);
         holidayParser = (Function<Integer, List<Holiday>>) parserClass.getConstructor(List.class).newInstance(holidays);
-        parserCache.put(className, holidayParser);
+        // Parser can not be reused, because the constructor holds the old holidays TODO
+        // parserCache.put(className, holidayParser);
       }
     }
     return holidayParser;

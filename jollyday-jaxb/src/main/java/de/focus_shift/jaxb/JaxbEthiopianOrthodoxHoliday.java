@@ -39,12 +39,16 @@ public class JaxbEthiopianOrthodoxHoliday implements EthiopianOrthodoxHoliday {
 
   @Override
   public Year validFrom() {
-    return Year.of(ethiopianOrthodoxHoliday.getValidFrom());
+    return ethiopianOrthodoxHoliday.getValidFrom() == null
+      ? null
+      : Year.of(ethiopianOrthodoxHoliday.getValidFrom());
   }
 
   @Override
   public Year validTo() {
-    return Year.of(ethiopianOrthodoxHoliday.getValidTo());
+    return ethiopianOrthodoxHoliday.getValidTo() == null
+      ? null
+      : Year.of(ethiopianOrthodoxHoliday.getValidTo());
   }
 
   @Override

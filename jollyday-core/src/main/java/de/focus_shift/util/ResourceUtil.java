@@ -135,11 +135,11 @@ public class ResourceUtil {
    * Returns the eventually cached ResourceBundle for the holiday
    * descriptions.
    *
-   * @param l Locale to retrieve the descriptions for.
+   * @param locale Locale to retrieve the descriptions for.
    * @return ResourceBundle containing the descriptions for the locale.
    */
-  private ResourceBundle getHolidayDescriptions(Locale l) {
-    return getResourceBundle(l, HOLIDAY_DESCRIPTION_CACHE, HOLIDAY_DESCRIPTIONS_FILE_PREFIX);
+  private ResourceBundle getHolidayDescriptions(Locale locale) {
+    return getResourceBundle(locale, HOLIDAY_DESCRIPTION_CACHE, HOLIDAY_DESCRIPTIONS_FILE_PREFIX);
   }
 
   /**
@@ -156,15 +156,15 @@ public class ResourceUtil {
   /**
    * Returns the eventually cached ResourceBundle for the descriptions.
    *
-   * @param l Locale to retrieve the descriptions for.
+   * @param locale Locale to retrieve the descriptions for.
    * @return ResourceBundle containing the descriptions for the locale.
    */
-  private ResourceBundle getResourceBundle(Locale l, Map<Locale, ResourceBundle> resourceCache, String filePrefix) {
-    if (!resourceCache.containsKey(l)) {
-      ResourceBundle bundle = ResourceBundle.getBundle(filePrefix, l, classLoadingUtil.getClassloader());
-      resourceCache.put(l, bundle);
+  private ResourceBundle getResourceBundle(Locale locale, Map<Locale, ResourceBundle> resourceCache, String filePrefix) {
+    if (!resourceCache.containsKey(locale)) {
+      ResourceBundle bundle = ResourceBundle.getBundle(filePrefix, locale, classLoadingUtil.getClassloader());
+      resourceCache.put(locale, bundle);
     }
-    return resourceCache.get(l);
+    return resourceCache.get(locale);
   }
 
   /**

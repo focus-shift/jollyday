@@ -79,6 +79,48 @@ public abstract class HolidayManager {
   }
 
   /**
+   * @param c the {@link HolidayCalendar} to use for creating a {@link HolidayManager} instance
+   * @return the eventually cached {@link HolidayManager}
+   * @deprecated Use {@link #getInstance(ManagerParameter)} instead.
+   */
+  @Deprecated
+  public static HolidayManager getInstance(final HolidayCalendar c) {
+    return getInstance(ManagerParameters.create(c, null));
+  }
+
+  /**
+   * @param c          the {@link HolidayCalendar} to use for creating a {@link HolidayManager} instance
+   * @param properties the configuration overriding {@link Properties}
+   * @return the eventually cached {@link HolidayManager}
+   * @deprecated Use {@link #getInstance(ManagerParameter)} instead.
+   */
+  @Deprecated
+  public static HolidayManager getInstance(final HolidayCalendar c, Properties properties) {
+    return getInstance(ManagerParameters.create(c, properties));
+  }
+
+  /**
+   * @param calendar the calendar to use for creating a {@link HolidayManager} instance
+   * @return the eventually cached {@link HolidayManager}
+   * @deprecated Use {@link #getInstance(ManagerParameter)} instead.
+   */
+  @Deprecated
+  public static HolidayManager getInstance(final String calendar) {
+    return getInstance(ManagerParameters.create(calendar, null));
+  }
+
+  /**
+   * @param calendar   the calendar to use for creating a {@link HolidayManager} instance
+   * @param properties the configuration overriding {@link Properties}
+   * @return the eventually cached {@link HolidayManager}
+   * @deprecated Use {@link #getInstance(ManagerParameter)} instead.
+   */
+  @Deprecated
+  public static HolidayManager getInstance(final String calendar, Properties properties) {
+    return getInstance(ManagerParameters.create(calendar, properties));
+  }
+
+  /**
    * Creates and returns a {@link HolidayManager} for the provided
    * {@link ManagerParameters}
    *
@@ -98,8 +140,7 @@ public abstract class HolidayManager {
    */
   private static HolidayManager createManager(final ManagerParameter parameter) {
     if (LOG.isLoggable(Level.FINER)) {
-      LOG.finer("Creating HolidayManager for calendar '" + parameter
-        + "'. Caching enabled: " + isManagerCachingEnabled());
+      LOG.finer("Creating HolidayManager for calendar '" + parameter + "'. Caching enabled: " + isManagerCachingEnabled());
     }
     CONFIGURATION_MANAGER_PROVIDER.mergeConfigurationProperties(parameter);
     final String managerImplClassName = readManagerImplClassName(parameter);
