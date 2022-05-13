@@ -12,7 +12,6 @@
   <tns:SubConfigurations hierarchy="al" description="Alderney">
     <tns:Holidays>
       <tns:Fixed month="JANUARY" day="1"/>
-      <tns:Fixed month="APRIL" day="5"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="en" description="England">
