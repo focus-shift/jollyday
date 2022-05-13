@@ -27,6 +27,7 @@
     <tns:ChristianHoliday type="EASTER_MONDAY" chronology="GREGORIAN"/>
     <tns:ChristianHoliday type="ASH_WEDNESDAY"/>
   </tns:Holidays>
+
   <tns:SubConfigurations hierarchy="level1">
     <tns:Holidays>
       <tns:Fixed month="JANUARY" day="2"/>
@@ -37,6 +38,7 @@
       </tns:Holidays>
     </tns:SubConfigurations>
   </tns:SubConfigurations>
+
   <tns:SubConfigurations hierarchy="level11">
     <tns:Holidays>
       <tns:IslamicHoliday type="ID_AL_FITR"/>

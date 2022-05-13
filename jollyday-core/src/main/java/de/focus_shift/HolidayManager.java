@@ -140,8 +140,7 @@ public abstract class HolidayManager {
    */
   private static HolidayManager createManager(final ManagerParameter parameter) {
     if (LOG.isLoggable(Level.FINER)) {
-      LOG.finer("Creating HolidayManager for calendar '" + parameter
-        + "'. Caching enabled: " + isManagerCachingEnabled());
+      LOG.finer("Creating HolidayManager for calendar '" + parameter + "'. Caching enabled: " + isManagerCachingEnabled());
     }
     CONFIGURATION_MANAGER_PROVIDER.mergeConfigurationProperties(parameter);
     final String managerImplClassName = readManagerImplClassName(parameter);

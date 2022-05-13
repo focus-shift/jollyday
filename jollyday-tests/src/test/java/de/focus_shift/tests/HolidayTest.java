@@ -4,7 +4,7 @@ import de.focus_shift.CalendarHierarchy;
 import de.focus_shift.Holiday;
 import de.focus_shift.HolidayCalendar;
 import de.focus_shift.HolidayManager;
-import de.focus_shift.HolidayType;
+import de.focus_shift.ManagerParameters;
 import de.focus_shift.util.CalendarUtil;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -15,6 +15,7 @@ import java.util.Calendar;
 import java.util.HashSet;
 import java.util.Locale;
 import java.util.Map;
+import java.util.Properties;
 import java.util.Set;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -23,6 +24,8 @@ import java.util.concurrent.atomic.AtomicLong;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import static de.focus_shift.HolidayType.OFFICIAL_HOLIDAY;
+import static de.focus_shift.HolidayType.UNOFFICIAL_HOLIDAY;
 import static java.time.Month.APRIL;
 import static java.time.Month.AUGUST;
 import static java.time.Month.DECEMBER;
@@ -43,15 +46,14 @@ import static org.junit.jupiter.api.Assertions.fail;
  */
 class HolidayTest {
 
-  private final static Logger LOG = Logger.getLogger(HolidayTest.class
-    .getName());
+  private final static Logger LOG = Logger.getLogger(HolidayTest.class.getName());
 
   private static final Set<LocalDate> test_days = new HashSet<>();
   private static final Set<LocalDate> test_days_l1 = new HashSet<>();
   private static final Set<LocalDate> test_days_l2 = new HashSet<>();
   private static final Set<LocalDate> test_days_l11 = new HashSet<>();
 
-  private static CalendarUtil calendarUtil = new CalendarUtil();
+  private final static CalendarUtil calendarUtil = new CalendarUtil();
 
   static {
     test_days
@@ -109,12 +111,12 @@ class HolidayTest {
   }
 
   @Test
-  void testMissingCountry()  {
+  void testMissingCountry() {
     assertThrows(IllegalStateException.class, () -> HolidayManager.getInstance("XXX"));
   }
 
   @Test
-  void testBaseStructure()  {
+  void testBaseStructure() {
     HolidayManager m = HolidayManager.getInstance("test");
     CalendarHierarchy h = m.getCalendarHierarchy();
     assertEquals("test", h.getId(), "Wrong id.");
@@ -130,18 +132,15 @@ class HolidayTest {
 
   @Test
   void testHierarchyDescriptionsDefined() {
-    for (HolidayCalendar c : HolidayCalendar.values()) {
-      HolidayManager m = HolidayManager.getInstance(c);
-      assertNotUndefined(c, m.getCalendarHierarchy());
+    for (HolidayCalendar holidayCalendar : HolidayCalendar.values()) {
+      final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(holidayCalendar));
+      assertNotUndefined(holidayCalendar, holidayManager.getCalendarHierarchy());
     }
   }
 
-  private void assertNotUndefined(HolidayCalendar calendar,
-                                  CalendarHierarchy c) {
-    assertFalse("undefined".equals(c.getDescription()),
-      "Calendar " + calendar + " Hierarchy " + c.getId() + " is lacking a description.");
-    for (Map.Entry<String, CalendarHierarchy> element : c.getChildren()
-      .entrySet()) {
+  private void assertNotUndefined(HolidayCalendar calendar, CalendarHierarchy c) {
+    assertFalse("undefined".equals(c.getDescription()), "Calendar " + calendar + " Hierarchy " + c.getId() + " is lacking a description.");
+    for (Map.Entry<String, CalendarHierarchy> element : c.getChildren().entrySet()) {
       assertNotUndefined(calendar, element.getValue());
     }
   }
@@ -173,7 +172,7 @@ class HolidayTest {
   }
 
   @Test
-  void testCalendarChronology()  {
+  void testCalendarChronology() {
     HolidayManager m = HolidayManager.getInstance("test");
     Calendar c = Calendar.getInstance();
     c.set(Calendar.YEAR, 2010);
@@ -185,7 +184,7 @@ class HolidayTest {
   }
 
   @Test
-  void testBaseDates()  {
+  void testBaseDates() {
     HolidayManager m = HolidayManager.getInstance("test");
     Set<Holiday> holidays = m.getHolidays(2010);
     assertNotNull(holidays);
@@ -193,26 +192,24 @@ class HolidayTest {
   }
 
   private void assertDates(Set<LocalDate> expected, Set<Holiday> holidays) {
-    assertEquals(expected.size(),
-      holidays.size(),
-      "Wrong number of dates.");
-    for (LocalDate d : expected) {
-      if (!calendarUtil.contains(holidays, d)) {
-        fail("Missing " + d + " in " + holidays);
+    for (LocalDate localDate : expected) {
+      if (!calendarUtil.contains(holidays, localDate)) {
+        fail("Missing " + localDate + " in " + holidays);
       }
     }
+    assertEquals(expected.size(), holidays.size(), "Wrong number of dates.");
   }
 
   @Test
-  void testLevel1()  {
-    HolidayManager m = HolidayManager.getInstance("test");
-    Set<Holiday> holidays = m.getHolidays(2010, "level1");
+  void testLevel1() {
+    final HolidayManager holidayManager = HolidayManager.getInstance("test");
+    final Set<Holiday> holidays = holidayManager.getHolidays(2010, "level1");
     assertNotNull(holidays);
     assertDates(test_days_l1, holidays);
   }
 
   @Test
-  void testLevel2()  {
+  void testLevel2() {
     HolidayManager m = HolidayManager.getInstance("test");
     Set<Holiday> holidays = m.getHolidays(2010, "level1", "level2");
     assertNotNull(holidays);
@@ -220,7 +217,7 @@ class HolidayTest {
   }
 
   @Test
-  void testLevel11()  {
+  void testLevel11() {
     HolidayManager m = HolidayManager.getInstance("test");
     Set<Holiday> holidays = m.getHolidays(2010, "level11");
     assertNotNull(holidays);
@@ -228,14 +225,13 @@ class HolidayTest {
   }
 
   @Test
-  void testFail()  {
+  void testFail() {
     assertThrows(IllegalArgumentException.class, () -> HolidayManager.getInstance("test_fail"));
   }
 
   @Test
-  void testAllAvailableManagers()  {
-    Set<String> supportedCalendarCodes = HolidayManager
-      .getSupportedCalendarCodes();
+  void testAllAvailableManagers() {
+    Set<String> supportedCalendarCodes = HolidayManager.getSupportedCalendarCodes();
     assertNotNull(supportedCalendarCodes);
     assertFalse(supportedCalendarCodes.isEmpty());
     for (String calendar : supportedCalendarCodes) {
@@ -246,36 +242,23 @@ class HolidayTest {
 
   @Test
   void testHolidayDescription() {
-    Holiday h = new Holiday(LocalDate.of(2011, 2, 2), "CHRISTMAS",
-      HolidayType.OFFICIAL_HOLIDAY);
-    assertEquals("Weihnachten",
-      h.getDescription(),
-      "Wrong description");
-    assertEquals("Christmas",
-      h.getDescription(Locale.ENGLISH),
-      "Wrong description");
-    assertEquals("Kerstmis",
-      h.getDescription(new Locale("nl")),
-      "Wrong description");
+    Holiday h = new Holiday(LocalDate.of(2011, 2, 2), "CHRISTMAS", OFFICIAL_HOLIDAY);
+    assertEquals("Christmas", h.getDescription(), "Wrong description");
+    assertEquals("Weihnachten", h.getDescription(Locale.GERMAN), "Wrong description");
+    assertEquals("Kerstmis", h.getDescription(new Locale("nl")), "Wrong description");
   }
 
   @Test
   void testHolidayEquals() {
-    Holiday h1 = new Holiday(LocalDate.of(2011, 2, 2), "CHRISTMAS",
-      HolidayType.OFFICIAL_HOLIDAY);
+    Holiday h1 = new Holiday(LocalDate.of(2011, 2, 2), "CHRISTMAS", OFFICIAL_HOLIDAY);
     assertTrue(h1.equals(h1), "Wrong equals implementation");
-    Holiday h2b = new Holiday(LocalDate.of(2011, 2, 2), "CHRISTMAS",
-      HolidayType.OFFICIAL_HOLIDAY);
+    Holiday h2b = new Holiday(LocalDate.of(2011, 2, 2), "CHRISTMAS", OFFICIAL_HOLIDAY);
     assertTrue(h1.equals(h2b), "Wrong equals implementation");
-    Holiday h2 = new Holiday(LocalDate.of(2011, 2, 1), "CHRISTMAS",
-      HolidayType.OFFICIAL_HOLIDAY);
+    Holiday h2 = new Holiday(LocalDate.of(2011, 2, 1), "CHRISTMAS", OFFICIAL_HOLIDAY);
     assertFalse(h1.equals(h2), "Wrong equals implementation");
-    Holiday h3 = new Holiday(LocalDate.of(2011, 2, 2), "NEW_YEAR",
-      HolidayType.OFFICIAL_HOLIDAY);
+    Holiday h3 = new Holiday(LocalDate.of(2011, 2, 2), "NEW_YEAR", OFFICIAL_HOLIDAY);
     assertFalse(h1.equals(h3), "Wrong equals implementation");
-    Holiday h4 = new Holiday(LocalDate.of(2011, 2, 2), "CHRISTMAS",
-      HolidayType.UNOFFICIAL_HOLIDAY);
+    Holiday h4 = new Holiday(LocalDate.of(2011, 2, 2), "CHRISTMAS", UNOFFICIAL_HOLIDAY);
     assertFalse(h1.equals(h4), "Wrong equals implementation");
   }
-
 }
