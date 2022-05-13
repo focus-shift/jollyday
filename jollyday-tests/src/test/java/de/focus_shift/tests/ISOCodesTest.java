@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.fail;
  */
 class ISOCodesTest {
 
-  private static final int NUMBER_OF_ISOCOUNTRIES = 247;
+  private static final int NUMBER_OF_ISOCOUNTRIES = 248;
 
   private Locale defaultLocale;
 
