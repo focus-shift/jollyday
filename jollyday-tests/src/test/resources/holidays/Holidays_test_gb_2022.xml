@@ -4,6 +4,7 @@
                    xsi:schemaLocation="http://www.example.org/Holiday /Holiday.xsd">
   <tns:Holidays>
     <tns:Fixed month="APRIL" day="15"/>
+    <tns:Fixed month="APRIL" day="17"/>
     <tns:Fixed month="MAY" day="2"/>
     <tns:Fixed month="JUNE" day="2"/>
     <tns:Fixed month="JUNE" day="3"/>
@@ -31,6 +32,7 @@
   <tns:SubConfigurations hierarchy="im" description="Isle of Man">
     <tns:Holidays>
       <tns:Fixed month="JANUARY" day="1"/>
+      <tns:Fixed month="JUNE" day="10"/>
       <tns:Fixed month="JULY" day="5"/>
     </tns:Holidays>
   </tns:SubConfigurations>
@@ -54,6 +56,7 @@
       <tns:Fixed month="JANUARY" day="3"/>
       <tns:Fixed month="JANUARY" day="4"/>
       <tns:Fixed month="AUGUST" day="1"/>
+      <tns:Fixed month="NOVEMBER" day="11"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="wa" description="Wales">
