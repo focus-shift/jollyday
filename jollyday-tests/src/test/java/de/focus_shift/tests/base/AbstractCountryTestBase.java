@@ -39,14 +39,14 @@ public abstract class AbstractCountryTestBase {
   }
 
   protected void compareData(HolidayManager expected, HolidayManager found, int year, boolean assertAllHolidaysChecked) {
-    CalendarHierarchy expectedHierarchy = expected.getCalendarHierarchy();
-    List<String> args = new ArrayList<>();
+    final CalendarHierarchy expectedHierarchy = expected.getCalendarHierarchy();
+    final List<String> args = new ArrayList<>();
     compareDates(expected, found, expectedHierarchy, args, year, assertAllHolidaysChecked);
   }
 
   private void compareDates(HolidayManager expected, HolidayManager found, CalendarHierarchy h, final List<String> args, int year, boolean assertAllHolidaysChecked) {
-    Set<Holiday> expectedHolidays = expected.getHolidays(year, args.toArray(new String[]{}));
-    Set<Holiday> foundHolidays = found.getHolidays(year, args.toArray(new String[]{}));
+    final Set<Holiday> expectedHolidays = expected.getHolidays(year, args.toArray(new String[]{}));
+    final Set<Holiday> foundHolidays = found.getHolidays(year, args.toArray(new String[]{}));
     for (Holiday expectedHoliday : expectedHolidays) {
       assertNotNull(expectedHoliday.getDescription(), "Description is null.");
       if (!calendarUtil.contains(foundHolidays, expectedHoliday.getDate())) {
@@ -71,11 +71,11 @@ public abstract class AbstractCountryTestBase {
   }
 
   protected void validateCalendarData(final String countryCode, int year, boolean assertAllHolidaysChecked) {
-    HolidayManager dataManager = HolidayManager.getInstance(countryCode);
-    HolidayManager testManager = HolidayManager.getInstance("test_" + countryCode + "_" + year);
+    final HolidayManager dataManager = HolidayManager.getInstance(countryCode);
+    final HolidayManager testManager = HolidayManager.getInstance("test_" + countryCode + "_" + year);
 
-    CalendarHierarchy dataHierarchy = dataManager.getCalendarHierarchy();
-    CalendarHierarchy testHierarchy = testManager.getCalendarHierarchy();
+    final CalendarHierarchy dataHierarchy = dataManager.getCalendarHierarchy();
+    final CalendarHierarchy testHierarchy = testManager.getCalendarHierarchy();
 
     compareHierarchies(testHierarchy, dataHierarchy);
     compareData(testManager, dataManager, year, assertAllHolidaysChecked);
@@ -89,11 +89,11 @@ public abstract class AbstractCountryTestBase {
    * @param countryCalendar
    */
   protected void validateManagerSameInstance(Locale countryLocale, HolidayCalendar countryCalendar) {
-    Locale defaultLocale = Locale.getDefault();
+    final Locale defaultLocale = Locale.getDefault();
     Locale.setDefault(countryLocale);
     try {
-      HolidayManager defaultManager = HolidayManager.getInstance();
-      HolidayManager countryManager = HolidayManager.getInstance(countryCalendar);
+      final HolidayManager defaultManager = HolidayManager.getInstance();
+      final HolidayManager countryManager = HolidayManager.getInstance(countryCalendar);
       assertEquals(defaultManager, countryManager, "Unexpected manager found");
     } catch (Exception e) {
       fail("Unexpected error occurred: " + e.getClass().getName() + " - " + e.getMessage());
@@ -103,15 +103,15 @@ public abstract class AbstractCountryTestBase {
   }
 
   protected void validateManagerDifferentInstance(HolidayCalendar countryCalendar) {
-    Locale defaultLocale = Locale.getDefault();
+    final Locale defaultLocale = Locale.getDefault();
     if (countryCalendar == HolidayCalendar.UNITED_STATES) {
       Locale.setDefault(Locale.FRANCE);
     } else {
       Locale.setDefault(Locale.US);
     }
     try {
-      HolidayManager defaultManager = HolidayManager.getInstance();
-      HolidayManager countryManager = HolidayManager.getInstance(countryCalendar);
+      final HolidayManager defaultManager = HolidayManager.getInstance();
+      final HolidayManager countryManager = HolidayManager.getInstance(countryCalendar);
       assertNotSame(defaultManager, countryManager, "Unexpected manager found");
     } catch (Exception e) {
       fail("Unexpected error occurred: " + e.getClass().getName() + " - " + e.getMessage());
@@ -119,5 +119,4 @@ public abstract class AbstractCountryTestBase {
       Locale.setDefault(defaultLocale);
     }
   }
-
 }

@@ -23,25 +23,30 @@ class HolidayUKTest extends AbstractCountryTestBase {
   }
 
   @Test
-  void testManagerUKChristmasMovingDaysWhenChristimasOnSunday() {
+  void testManagerUKStructure2022()  {
+    validateCalendarData(ISO_CODE, 2022);
+  }
+
+  @Test
+  void testManagerUKChristmasMovingDaysWhenChristmasOnSunday() {
     doChristmasContainmentTest(2011, 26, 27);
   }
 
   @Test
-  void testManagerUKChristmasMovingDaysWhenChristimasOnSaturday() {
+  void testManagerUKChristmasMovingDaysWhenChristmasOnSaturday() {
     doChristmasContainmentTest(2010, 27, 28);
   }
 
   @Test
-  void testManagerUKChristmasMovingDaysWhenChristimasOnFriday() {
+  void testManagerUKChristmasMovingDaysWhenChristmasOnFriday() {
     doChristmasContainmentTest(2009, 25, 28);
   }
 
   private void doChristmasContainmentTest(int year, int dayOfChristmas, int dayOfBoxingday) {
-    LocalDate christmas = LocalDate.of(year, 12, dayOfChristmas);
-    LocalDate boxingday = LocalDate.of(year, 12, dayOfBoxingday);
-    HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(HolidayCalendar.UNITED_KINGDOM));
-    Set<Holiday> holidays = holidayManager.getHolidays(year);
+    final LocalDate christmas = LocalDate.of(year, 12, dayOfChristmas);
+    final LocalDate boxingday = LocalDate.of(year, 12, dayOfBoxingday);
+    final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(HolidayCalendar.UNITED_KINGDOM));
+    final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertTrue(contains(christmas, holidays), "There should be christmas on " + christmas);
     assertTrue(contains(boxingday, holidays), "There should be boxing day on " + boxingday);
   }
@@ -54,5 +59,4 @@ class HolidayUKTest extends AbstractCountryTestBase {
     }
     return false;
   }
-
 }
