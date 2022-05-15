@@ -17,8 +17,8 @@
   <tns:SubConfigurations hierarchy="en" description="England">
     <tns:Holidays>
       <tns:Fixed month="JANUARY" day="1"/>
-      <tns:Fixed month="AUGUST" day="30"/>
       <tns:Fixed month="APRIL" day="5"/>
+      <tns:Fixed month="AUGUST" day="30"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="gu" description="Guernsey">
@@ -46,6 +46,7 @@
       <tns:Fixed month="MARCH" day="17"/>
       <tns:Fixed month="JULY" day="12"/>
       <tns:Fixed month="APRIL" day="5"/>
+      <tns:Fixed month="AUGUST" day="30"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="sc" description="Scotland">
@@ -58,8 +59,8 @@
   <tns:SubConfigurations hierarchy="wa" description="Wales">
     <tns:Holidays>
       <tns:Fixed month="JANUARY" day="1"/>
-      <tns:Fixed month="AUGUST" day="2"/>
       <tns:Fixed month="APRIL" day="5"/>
+      <tns:Fixed month="AUGUST" day="30"/>
     </tns:Holidays>
   </tns:SubConfigurations>
 </tns:Configuration>

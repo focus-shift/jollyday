@@ -80,6 +80,7 @@
         <tns:MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
         <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </tns:Fixed>
+      <tns:FixedWeekday which="LAST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="BANK_HOLIDAY"/>
       <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
@@ -105,7 +106,7 @@
         <tns:MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
         <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </tns:Fixed>
-      <tns:FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="BANK_HOLIDAY"/>
+      <tns:FixedWeekday which="LAST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="BANK_HOLIDAY"/>
       <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
