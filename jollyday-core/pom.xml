@@ -11,4 +11,11 @@
     <relativePath>../pom.xml</relativePath>
   </parent>
 
+  <dependencies>
+    <dependency>
+      <groupId>org.xmlunit</groupId>
+      <artifactId>xmlunit-core</artifactId>
+    </dependency>
+  </dependencies>
+
 </project>
