@@ -112,12 +112,12 @@ class HolidayTest {
 
   @Test
   void testMissingCountry() {
-    assertThrows(IllegalStateException.class, () -> HolidayManager.getInstance("XXX"));
+    assertThrows(IllegalStateException.class, () -> HolidayManager.getInstance(ManagerParameters.create("XXX")));
   }
 
   @Test
   void testBaseStructure() {
-    HolidayManager m = HolidayManager.getInstance("test");
+    HolidayManager m = HolidayManager.getInstance(ManagerParameters.create("test"));
     CalendarHierarchy h = m.getCalendarHierarchy();
     assertEquals("test", h.getId(), "Wrong id.");
     assertEquals(2, h.getChildren().size(), "Wrong number of children on first level.");
@@ -155,7 +155,7 @@ class HolidayTest {
       final LocalDate localDate = date;
       executorService.submit(() -> {
         long start = System.currentTimeMillis();
-        HolidayManager m = HolidayManager.getInstance("test");
+        HolidayManager m = HolidayManager.getInstance(ManagerParameters.create("test"));
         m.isHoliday(localDate);
         long duration = System.currentTimeMillis() - start;
         count.incrementAndGet();
@@ -170,7 +170,7 @@ class HolidayTest {
 
   @Test
   void testCalendarChronology() {
-    HolidayManager m = HolidayManager.getInstance("test");
+    HolidayManager m = HolidayManager.getInstance(ManagerParameters.create("test"));
     Calendar c = Calendar.getInstance();
     c.set(Calendar.YEAR, 2010);
     c.set(Calendar.MONTH, Calendar.FEBRUARY);
@@ -182,7 +182,7 @@ class HolidayTest {
 
   @Test
   void testBaseDates() {
-    HolidayManager m = HolidayManager.getInstance("test");
+    HolidayManager m = HolidayManager.getInstance(ManagerParameters.create("test"));
     Set<Holiday> holidays = m.getHolidays(2010);
     assertNotNull(holidays);
     assertDates(test_days, holidays);
@@ -199,7 +199,7 @@ class HolidayTest {
 
   @Test
   void testLevel1() {
-    final HolidayManager holidayManager = HolidayManager.getInstance("test");
+    final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create("test"));
     final Set<Holiday> holidays = holidayManager.getHolidays(2010, "level1");
     assertNotNull(holidays);
     assertDates(test_days_l1, holidays);
@@ -207,7 +207,7 @@ class HolidayTest {
 
   @Test
   void testLevel2() {
-    HolidayManager m = HolidayManager.getInstance("test");
+    HolidayManager m = HolidayManager.getInstance(ManagerParameters.create("test"));
     Set<Holiday> holidays = m.getHolidays(2010, "level1", "level2");
     assertNotNull(holidays);
     assertDates(test_days_l2, holidays);
@@ -215,7 +215,7 @@ class HolidayTest {
 
   @Test
   void testLevel11() {
-    HolidayManager m = HolidayManager.getInstance("test");
+    HolidayManager m = HolidayManager.getInstance(ManagerParameters.create("test"));
     Set<Holiday> holidays = m.getHolidays(2010, "level11");
     assertNotNull(holidays);
     assertDates(test_days_l11, holidays);
@@ -223,16 +223,16 @@ class HolidayTest {
 
   @Test
   void testFail() {
-    assertThrows(IllegalArgumentException.class, () -> HolidayManager.getInstance("test_fail"));
+    assertThrows(IllegalArgumentException.class, () -> HolidayManager.getInstance(ManagerParameters.create("test_fail")));
   }
 
   @Test
   void testAllAvailableManagers() {
-    Set<String> supportedCalendarCodes = HolidayManager.getSupportedCalendarCodes();
+    final Set<String> supportedCalendarCodes = HolidayManager.getSupportedCalendarCodes();
     assertNotNull(supportedCalendarCodes);
     assertFalse(supportedCalendarCodes.isEmpty());
     for (String calendar : supportedCalendarCodes) {
-      HolidayManager manager = HolidayManager.getInstance(calendar);
+      final HolidayManager manager = HolidayManager.getInstance(ManagerParameters.create(calendar));
       assertNotNull(manager, "Manager for calendar " + calendar + " is NULL.");
     }
   }

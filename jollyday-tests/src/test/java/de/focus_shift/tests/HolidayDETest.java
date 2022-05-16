@@ -10,7 +10,6 @@ import de.focus_shift.util.CalendarUtil;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
 import java.util.Set;
@@ -35,10 +34,11 @@ class HolidayDETest extends AbstractCountryTestBase {
   @Test
   void testManagerDEInterval() {
     try {
-      HolidayManager instance = HolidayManager.getInstance(HolidayCalendar.GERMANY);
-      Set<Holiday> holidays = instance.getHolidays(calendarUtil.create(2010, 10, 1), calendarUtil
-        .create(2011, 1, 31));
-      List<LocalDate> expected = Arrays.asList(calendarUtil.create(2010, 12, 25),
+      final HolidayManager instance = HolidayManager.getInstance(ManagerParameters.create(HolidayCalendar.GERMANY, null));
+      final LocalDate startDateInclusive = calendarUtil.create(2010, 10, 1);
+      final LocalDate endDateInclusive = calendarUtil.create(2011, 1, 31);
+      final Set<Holiday> holidays = instance.getHolidays(startDateInclusive, endDateInclusive);
+      final List<LocalDate> expected = List.of(calendarUtil.create(2010, 12, 25),
         calendarUtil.create(2010, 12, 26), calendarUtil.create(2010, 10, 3),
         calendarUtil.create(2011, 1, 1));
       assertEquals(expected.size(), holidays.size(), "Wrong number of holidays");
@@ -52,11 +52,11 @@ class HolidayDETest extends AbstractCountryTestBase {
 
   @Test
   void testManagerSameInstance() {
-    Locale defaultLocale = Locale.getDefault();
+    final Locale defaultLocale = Locale.getDefault();
     Locale.setDefault(Locale.GERMANY);
     try {
-      HolidayManager defaultManager = HolidayManager.getInstance();
-      HolidayManager germanManager = HolidayManager.getInstance(HolidayCalendar.GERMANY);
+      final HolidayManager defaultManager = HolidayManager.getInstance();
+      final HolidayManager germanManager = HolidayManager.getInstance(ManagerParameters.create(HolidayCalendar.GERMANY, null));
       assertEquals(defaultManager, germanManager, "Unexpected manager found");
     } catch (Exception e) {
       fail("Unexpected error occurred: " + e.getClass().getName() + " - " + e.getMessage());
@@ -67,11 +67,11 @@ class HolidayDETest extends AbstractCountryTestBase {
 
   @Test
   void testManagerDifferentInstance() {
-    Locale defaultLocale = Locale.getDefault();
+    final Locale defaultLocale = Locale.getDefault();
     Locale.setDefault(Locale.US);
     try {
-      HolidayManager defaultManager = HolidayManager.getInstance();
-      HolidayManager germanManager = HolidayManager.getInstance(HolidayCalendar.GERMANY);
+      final HolidayManager defaultManager = HolidayManager.getInstance();
+      final HolidayManager germanManager = HolidayManager.getInstance(ManagerParameters.create(HolidayCalendar.GERMANY, null));
       assertNotSame(defaultManager, germanManager, "Unexpected manager found");
     } catch (Exception e) {
       fail("Unexpected error occurred: " + e.getClass().getName() + " - " + e.getMessage());

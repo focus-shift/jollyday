@@ -4,6 +4,7 @@ import de.focus_shift.CalendarHierarchy;
 import de.focus_shift.Holiday;
 import de.focus_shift.HolidayCalendar;
 import de.focus_shift.HolidayManager;
+import de.focus_shift.ManagerParameters;
 import de.focus_shift.util.CalendarUtil;
 
 import java.util.ArrayList;
@@ -71,8 +72,8 @@ public abstract class AbstractCountryTestBase {
   }
 
   protected void validateCalendarData(final String countryCode, int year, boolean assertAllHolidaysChecked) {
-    final HolidayManager dataManager = HolidayManager.getInstance(countryCode);
-    final HolidayManager testManager = HolidayManager.getInstance("test_" + countryCode + "_" + year);
+    final HolidayManager dataManager = HolidayManager.getInstance(ManagerParameters.create(countryCode));
+    final HolidayManager testManager = HolidayManager.getInstance(ManagerParameters.create("test_" + countryCode + "_" + year));
 
     final CalendarHierarchy dataHierarchy = dataManager.getCalendarHierarchy();
     final CalendarHierarchy testHierarchy = testManager.getCalendarHierarchy();
@@ -93,7 +94,7 @@ public abstract class AbstractCountryTestBase {
     Locale.setDefault(countryLocale);
     try {
       final HolidayManager defaultManager = HolidayManager.getInstance();
-      final HolidayManager countryManager = HolidayManager.getInstance(countryCalendar);
+      final HolidayManager countryManager = HolidayManager.getInstance(ManagerParameters.create(countryCalendar, null));
       assertEquals(defaultManager, countryManager, "Unexpected manager found");
     } catch (Exception e) {
       fail("Unexpected error occurred: " + e.getClass().getName() + " - " + e.getMessage());
@@ -111,7 +112,7 @@ public abstract class AbstractCountryTestBase {
     }
     try {
       final HolidayManager defaultManager = HolidayManager.getInstance();
-      final HolidayManager countryManager = HolidayManager.getInstance(countryCalendar);
+      final HolidayManager countryManager = HolidayManager.getInstance(ManagerParameters.create(countryCalendar, null));
       assertNotSame(defaultManager, countryManager, "Unexpected manager found");
     } catch (Exception e) {
       fail("Unexpected error occurred: " + e.getClass().getName() + " - " + e.getMessage());
