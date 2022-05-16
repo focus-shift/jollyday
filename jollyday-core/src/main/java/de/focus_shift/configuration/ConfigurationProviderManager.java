@@ -4,8 +4,9 @@ import de.focus_shift.ManagerParameter;
 import de.focus_shift.configuration.impl.DefaultConfigurationProvider;
 import de.focus_shift.configuration.impl.URLConfigurationProvider;
 import de.focus_shift.util.ClassLoadingUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import java.util.logging.Logger;
 
 /**
  * Manages the configuration provider implementations and thus delivering the
@@ -15,7 +16,7 @@ import java.util.logging.Logger;
  */
 public class ConfigurationProviderManager {
 
-  private static final Logger LOG = Logger.getLogger(ConfigurationProviderManager.class.getName());
+  private static final Logger LOG = LoggerFactory.getLogger(ConfigurationProviderManager.class);
 
   private final ConfigurationProvider defaultConfigurationProvider = new DefaultConfigurationProvider();
   private final ConfigurationProvider urlConfigurationProvider = new URLConfigurationProvider();
@@ -51,7 +52,7 @@ public class ConfigurationProviderManager {
           final ConfigurationProvider configurationProvider = ConfigurationProvider.class.cast(providerClass.getDeclaredConstructor().newInstance());
           parameter.mergeProperties(configurationProvider.getProperties());
         } catch (Exception e) {
-          LOG.warning("Cannot load configuration from provider class '" + providerClassName + "'. " + e.getClass().getSimpleName() + " (" + e.getMessage() + ").");
+          LOG.warn("Cannot load configuration from provider class '{}'. {} ({}).", providerClassName, e.getClass().getSimpleName(), e.getMessage());
         }
       }
     }

@@ -1,12 +1,12 @@
 package de.focus_shift.configuration.impl;
 
 import de.focus_shift.configuration.ConfigurationProvider;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.InputStream;
 import java.net.URL;
 import java.util.Properties;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * An {@link ConfigurationProvider} implementation which reads a list of URLs
@@ -17,7 +17,8 @@ import java.util.logging.Logger;
  */
 public class URLConfigurationProvider implements ConfigurationProvider {
 
-  private static final Logger LOG = Logger.getLogger(URLConfigurationProvider.class.getName());
+  private static final Logger LOG = LoggerFactory.getLogger(URLConfigurationProvider.class);
+
 
   /**
    * Returns the properties by reading from the URLs provided by the system
@@ -47,7 +48,7 @@ public class URLConfigurationProvider implements ConfigurationProvider {
       inputStream = configURL.openStream();
       properties.load(inputStream);
     } catch (Exception e) {
-      LOG.log(Level.WARNING, "Cannot read configuration from '" + strURL + "'.", e);
+      LOG.warn("Cannot read configuration from '{}'.", strURL, e);
     } finally {
       closeStreamFromURL(strURL, inputStream);
     }
@@ -58,7 +59,7 @@ public class URLConfigurationProvider implements ConfigurationProvider {
       try {
         inputStream.close();
       } catch (Exception e) {
-        LOG.warning("Cannot close stream for configuration URL " + strURL + ".");
+        LOG.warn("Cannot close stream for configuration URL {}.", strURL);
       }
     }
   }

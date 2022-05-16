@@ -6,6 +6,8 @@ import de.focus_shift.HolidayManager;
 import de.focus_shift.spi.Configuration;
 import de.focus_shift.spi.Holidays;
 import de.focus_shift.util.ClassLoadingUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.ParameterizedType;
@@ -20,8 +22,6 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
 import java.util.function.Function;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * Manager implementation for reading data from the configuration datasource.
@@ -31,7 +31,8 @@ import java.util.logging.Logger;
  */
 public class DefaultHolidayManager extends HolidayManager {
 
-  private static final Logger LOG = Logger.getLogger(DefaultHolidayManager.class.getName());
+  private static final Logger LOG = LoggerFactory.getLogger(DefaultHolidayManager.class);
+
   /**
    * The configuration prefix for parser implementations.
    */
@@ -96,8 +97,8 @@ public class DefaultHolidayManager extends HolidayManager {
    * @param args          the arguments to descend down the configuration tree
    */
   private void getHolidays(int year, final Configuration configuration, Set<Holiday> holidaySet, final String... args) {
-    if (LOG.isLoggable(Level.FINER)) {
-      LOG.finer("Adding holidays for " + configuration.description());
+    if (LOG.isDebugEnabled()) {
+      LOG.debug("Adding holidays for {}", configuration.description());
     }
     parseHolidays(year, holidaySet, configuration.holidays());
     if (args != null && args.length > 0) {
@@ -209,12 +210,12 @@ public class DefaultHolidayManager extends HolidayManager {
    * @param level         an int.
    */
   protected static void logHierarchy(final Configuration configuration, int level) {
-    if (LOG.isLoggable(Level.FINER)) {
+    if (LOG.isDebugEnabled()) {
       final StringBuilder space = new StringBuilder();
       for (int i = 0; i < level; i++) {
         space.append("-");
       }
-      LOG.finer(space + " " + configuration.description() + "(" + configuration.hierarchy() + ").");
+      LOG.debug("{} {} ({}).", space, configuration.description(), configuration.hierarchy());
       configuration.subConfigurations()
         .forEach(
           config -> logHierarchy(config, level + 1)

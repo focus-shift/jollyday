@@ -7,14 +7,14 @@ import de.focus_shift.parser.functions.CalendarToLocalDate;
 import de.focus_shift.util.Cache;
 import de.focus_shift.util.Cache.ValueHandler;
 import de.focus_shift.util.CalendarUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.time.LocalDate;
 import java.util.Calendar;
 import java.util.HashSet;
 import java.util.Properties;
 import java.util.Set;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * Abstract base class for all holiday manager implementations. Upon call of
@@ -26,7 +26,8 @@ import java.util.logging.Logger;
  */
 public abstract class HolidayManager {
 
-  private static final Logger LOG = Logger.getLogger(HolidayManager.class.getName());
+  private static final Logger LOG = LoggerFactory.getLogger(HolidayManager.class);
+
   /**
    * Signifies if caching of manager instances is enabled. If not every call
    * to getInstance will return a newly instantiated and initialized manager.
@@ -139,9 +140,7 @@ public abstract class HolidayManager {
    * @return created or cached holiday manager
    */
   private static HolidayManager createManager(final ManagerParameter parameter) {
-    if (LOG.isLoggable(Level.FINER)) {
-      LOG.finer("Creating HolidayManager for calendar '" + parameter + "'. Caching enabled: " + isManagerCachingEnabled());
-    }
+    LOG.debug("Creating HolidayManager for calendar '{}'. Caching enabled: {}", parameter, isManagerCachingEnabled());
     CONFIGURATION_MANAGER_PROVIDER.mergeConfigurationProperties(parameter);
     final String managerImplClassName = readManagerImplClassName(parameter);
     final HolidayManagerValueHandler holidayManagerValueHandler = new HolidayManagerValueHandler(parameter, managerImplClassName);

@@ -1,6 +1,8 @@
 package de.focus_shift.util;
 
-import java.util.logging.Logger;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * <p>
@@ -12,7 +14,7 @@ import java.util.logging.Logger;
  */
 public class ClassLoadingUtil {
 
-  private static final Logger LOG = Logger.getLogger(ClassLoadingUtil.class.getName());
+  private static final Logger LOG = LoggerFactory.getLogger(ClassLoadingUtil.class);
 
   /**
    * Loads the class by class name with the current threads context
@@ -27,8 +29,7 @@ public class ClassLoadingUtil {
     try {
       return Class.forName(className, true, getClassloader());
     } catch (Exception e) {
-      LOG.warning("Could not load class with current threads context classloader. Using default. Reason: "
-        + e.getClass().getSimpleName() + ": " + e.getMessage());
+      LOG.warn("Could not load class with current threads context classloader. Using default. Reason: {}: {}", e.getClass().getSimpleName(), e.getMessage());
       return Class.forName(className);
     }
   }

@@ -10,10 +10,11 @@ import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBElement;
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.Unmarshaller;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.InputStream;
 import java.time.DayOfWeek;
-import java.util.logging.Logger;
 
 public class XMLUtil {
 
@@ -22,7 +23,7 @@ public class XMLUtil {
    */
   public static final String PACKAGE = "de.focus_shift.jaxb.mapping";
 
-  private static final Logger LOG = Logger.getLogger(XMLUtil.class.getName());
+  private static final Logger LOG = LoggerFactory.getLogger(XMLUtil.class);
 
   private final JAXBContextCreator contextCreator = new JAXBContextCreator();
   private final ClassLoadingUtil classLoadingUtil = new ClassLoadingUtil();
@@ -43,7 +44,7 @@ public class XMLUtil {
       try {
         ctx = contextCreator.create(XMLUtil.PACKAGE, classLoadingUtil.getClassloader());
       } catch (JAXBException e) {
-        LOG.warning("Could not create JAXB context using the current threads context classloader. Falling back to ObjectFactory class classloader.");
+        LOG.warn("Could not create JAXB context using the current threads context classloader. Falling back to ObjectFactory class classloader.");
         ctx = null;
       }
       if (ctx == null) {
