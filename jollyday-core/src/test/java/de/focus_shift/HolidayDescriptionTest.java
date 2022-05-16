@@ -1,4 +1,4 @@
-package de.focus_shift.configuration;
+package de.focus_shift;
 
 import org.junit.jupiter.api.Test;
 
@@ -11,8 +11,7 @@ import java.util.ResourceBundle;
 import java.util.Set;
 
 import static java.util.Locale.ROOT;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.assertj.core.api.Assertions.assertThat;
 
 class HolidayDescriptionTest {
 
@@ -20,7 +19,7 @@ class HolidayDescriptionTest {
   void testHolidayDescriptionsCompleteness() throws IOException {
 
     final File folder = new File("src/main/resources/descriptions/");
-    assertTrue(folder.isDirectory());
+    assertThat(folder).isDirectory();
 
     final String baseName = "descriptions.holiday_descriptions";
     final Set<String> props = getLocalisedResourceBundleKeys();
@@ -35,16 +34,16 @@ class HolidayDescriptionTest {
       }
     }
 
-    assertTrue(missingProps.isEmpty(), "Root bundle is lacking properties: " + missingProps);
+    assertThat(missingProps).isEmpty();
   }
 
   protected Set<String> getLocalisedResourceBundleKeys() throws IOException {
     final File folder = new File("src/main/resources/descriptions");
-    assertTrue(folder.isDirectory());
+    assertThat(folder).isDirectory();
+
     // Collect all localised descriptions
     final File[] descriptions = folder.listFiles((dir, name) -> name.startsWith("holiday_descriptions_") && name.endsWith(".properties"));
-    assertNotNull(descriptions);
-    assertTrue(descriptions.length > 0);
+    assertThat(descriptions).isNotEmpty();
 
     final Set<String> propertiesNames = new HashSet<>();
     for (final File descriptionFile : descriptions) {
