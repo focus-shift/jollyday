@@ -32,8 +32,8 @@ class HolidayTest {
 
   @Test
   void testCompareToEqual() {
-    Holiday firstDayOfYear = new Holiday(LocalDate.of(2015, 1, 1), null, HolidayType.OFFICIAL_HOLIDAY);
-    Holiday newYear = new Holiday(LocalDate.of(2015, 1, 1), null, HolidayType.OFFICIAL_HOLIDAY);
+    final Holiday firstDayOfYear = new Holiday(LocalDate.of(2015, 1, 1), null, HolidayType.OFFICIAL_HOLIDAY);
+    final Holiday newYear = new Holiday(LocalDate.of(2015, 1, 1), null, HolidayType.OFFICIAL_HOLIDAY);
     int actual = firstDayOfYear.compareTo(newYear);
     assertTrue(actual == 0, "Wrong holiday comparator for equal.");
   }

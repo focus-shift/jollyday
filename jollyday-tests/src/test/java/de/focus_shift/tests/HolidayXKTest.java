@@ -3,6 +3,7 @@ package de.focus_shift.tests;
 import de.focus_shift.Holiday;
 import de.focus_shift.HolidayCalendar;
 import de.focus_shift.HolidayManager;
+import de.focus_shift.ManagerParameters;
 import de.focus_shift.tests.base.AbstractCountryTestBase;
 import de.focus_shift.util.CalendarUtil;
 import org.junit.jupiter.api.Test;
@@ -41,7 +42,7 @@ class HolidayXKTest extends AbstractCountryTestBase {
 
   @Test
   void testManagerXKInterval() {
-    HolidayManager instance = HolidayManager.getInstance(HolidayCalendar.KOSOVO);
+    HolidayManager instance = HolidayManager.getInstance(ManagerParameters.create(HolidayCalendar.KOSOVO, null));
     Set<Holiday> holidays = instance.getHolidays(calendarUtil.create(2010, 6, 1),
       calendarUtil.create(2011, 5, 31));
 
@@ -62,10 +63,8 @@ class HolidayXKTest extends AbstractCountryTestBase {
     );
 
     assertEquals(expected.size(), holidays.size(), "Wrong number of holidays");
-
-    holidays.stream().forEach(holiday -> assertTrue(expected.contains(holiday.getDate()), "Holiday " + holiday + " is not expected."));
-
-    expected.stream().forEach(d -> assertTrue(calendarUtil.contains(holidays, d), "Expected date " + d + " missing."));
+    holidays.forEach(holiday -> assertTrue(expected.contains(holiday.getDate()), "Holiday " + holiday + " is not expected."));
+    expected.forEach(d -> assertTrue(calendarUtil.contains(holidays, d), "Expected date " + d + " missing."));
   }
 
   @Test
@@ -74,7 +73,7 @@ class HolidayXKTest extends AbstractCountryTestBase {
     Locale.setDefault(Locale.US);
     try {
       HolidayManager defaultManager = HolidayManager.getInstance();
-      HolidayManager germanManager = HolidayManager.getInstance(HolidayCalendar.KOSOVO);
+      HolidayManager germanManager = HolidayManager.getInstance(ManagerParameters.create(HolidayCalendar.KOSOVO, null));
       assertNotSame(defaultManager, germanManager, "Unexpected manager found");
     } catch (Exception e) {
       fail("Unexpected error occurred: " + e.getClass().getName() + " - " + e.getMessage());

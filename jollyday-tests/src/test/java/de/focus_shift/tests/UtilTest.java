@@ -3,6 +3,7 @@ package de.focus_shift.tests;
 import de.focus_shift.Holiday;
 import de.focus_shift.HolidayCalendar;
 import de.focus_shift.HolidayManager;
+import de.focus_shift.ManagerParameters;
 import de.focus_shift.util.CalendarUtil;
 import org.junit.jupiter.api.Test;
 
@@ -100,7 +101,7 @@ class UtilTest {
   @Test
   void testUmlaut() {
     final LocalDate aDate = LocalDate.of(2010, JANUARY, 6);
-    final HolidayManager aMgr = HolidayManager.getInstance(HolidayCalendar.AUSTRIA);
+    final HolidayManager aMgr = HolidayManager.getInstance(ManagerParameters.create(HolidayCalendar.AUSTRIA, null));
     final Set<Holiday> hs = aMgr.getHolidays(aDate, aDate.plusDays(1));
     assertNotNull(hs);
     assertEquals(1, hs.size());
