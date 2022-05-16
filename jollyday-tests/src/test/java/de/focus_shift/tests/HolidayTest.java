@@ -9,20 +9,19 @@ import de.focus_shift.util.CalendarUtil;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.time.LocalDate;
 import java.util.Calendar;
 import java.util.HashSet;
 import java.util.Locale;
 import java.util.Map;
-import java.util.Properties;
 import java.util.Set;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicLong;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 import static de.focus_shift.HolidayType.OFFICIAL_HOLIDAY;
 import static de.focus_shift.HolidayType.UNOFFICIAL_HOLIDAY;
@@ -47,7 +46,7 @@ import static org.junit.jupiter.api.Assertions.fail;
  */
 class HolidayTest {
 
-  private final static Logger LOG = Logger.getLogger(HolidayTest.class.getName());
+  private static final Logger LOG = LoggerFactory.getLogger(HolidayTest.class);
 
   private static final Set<LocalDate> test_days = new HashSet<>();
   private static final Set<LocalDate> test_days_l1 = new HashSet<>();
@@ -166,10 +165,7 @@ class HolidayTest {
     }
     executorService.shutdown();
     executorService.awaitTermination(5, TimeUnit.SECONDS);
-    LOG.log(Level.INFO,
-      "isHoliday took " + sumDuration.doubleValue()
-        / count.doubleValue() + " millis average tested with "
-        + count.longValue() + " calls.");
+    LOG.info("isHoliday took {} millis average tested with {} calls.", sumDuration.doubleValue() / count.doubleValue(), count.longValue());
   }
 
   @Test

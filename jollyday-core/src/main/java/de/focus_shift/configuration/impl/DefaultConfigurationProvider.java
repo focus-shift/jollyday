@@ -2,13 +2,13 @@ package de.focus_shift.configuration.impl;
 
 import de.focus_shift.configuration.ConfigurationProvider;
 import de.focus_shift.util.ResourceUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.util.Properties;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * Provider which adds jollydays default configuration file
@@ -19,7 +19,8 @@ import java.util.logging.Logger;
  */
 public class DefaultConfigurationProvider implements ConfigurationProvider {
 
-  private static final Logger LOG = Logger.getLogger(DefaultConfigurationProvider.class.getName());
+  private static final Logger LOG = LoggerFactory.getLogger(DefaultConfigurationProvider.class);
+
 
   /**
    * The name of the configuration file.
@@ -49,7 +50,7 @@ public class DefaultConfigurationProvider implements ConfigurationProvider {
         if (stream != null) {
           properties.load(stream);
         } else {
-          LOG.log(Level.WARNING, "Could not load default properties file '" + CONFIG_FILE + "' from classpath.");
+          LOG.warn("Could not load default properties file '{}' from classpath.", CONFIG_FILE);
         }
       }
       return properties;
