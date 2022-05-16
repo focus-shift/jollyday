@@ -7,7 +7,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Properties;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.assertj.core.api.Assertions.assertThat;
 
 class UrlManagerParameterTest {
 
@@ -23,17 +23,16 @@ class UrlManagerParameterTest {
 
   @Test
   void testCreateCacheKey() {
-    assertEquals("http://www.google.de", urlManagerParameter.createCacheKey(), "Unexpected cache key.");
+    assertThat(urlManagerParameter.createCacheKey()).isEqualTo("http://www.google.de");
   }
 
   @Test
   void testGetDisplayName() {
-    assertEquals("http://www.google.de", urlManagerParameter.getDisplayName(), "Unexpected display name.");
+    assertThat(urlManagerParameter.getDisplayName()).isEqualTo("http://www.google.de");
   }
 
   @Test
   void testCreateResourceUrl() {
-    assertEquals(url, urlManagerParameter.createResourceUrl(), "Unexpected url.");
+    assertThat(urlManagerParameter.createResourceUrl()).isEqualTo(url);
   }
-
 }
