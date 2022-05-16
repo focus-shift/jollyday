@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class ClassLoadingUtilTest {
 
-  ClassLoadingUtil classLoadingUtil = new ClassLoadingUtil();
+  private final ClassLoadingUtil classLoadingUtil = new ClassLoadingUtil();
 
   @Test
   void testGetClassloader() {

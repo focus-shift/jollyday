@@ -25,7 +25,7 @@ class HolidayDETest extends AbstractCountryTestBase {
   private static final int YEAR = 2010;
   private static final String ISO_CODE = "de";
 
-  private CalendarUtil calendarUtil = new CalendarUtil();
+  private final CalendarUtil calendarUtil = new CalendarUtil();
 
   @Test
   void testManagerDEStructure() {

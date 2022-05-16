@@ -22,7 +22,7 @@ class HolidayXKTest extends AbstractCountryTestBase {
 
   private static final String ISO_CODE = "xk";
 
-  private CalendarUtil calendarUtil = new CalendarUtil();
+  private final CalendarUtil calendarUtil = new CalendarUtil();
 
   @Test
   void testManagerXKStructure2021() {
