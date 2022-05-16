@@ -4,6 +4,7 @@ import de.focus_shift.CalendarHierarchy;
 import de.focus_shift.Holiday;
 import de.focus_shift.HolidayCalendar;
 import de.focus_shift.HolidayManager;
+import de.focus_shift.ManagerParameter;
 import de.focus_shift.ManagerParameters;
 import de.focus_shift.util.CalendarUtil;
 import org.junit.jupiter.api.AfterEach;
@@ -34,10 +35,11 @@ import static java.time.Month.JULY;
 import static java.time.Month.NOVEMBER;
 import static java.time.Month.SEPTEMBER;
 import static java.util.Locale.ENGLISH;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static java.util.Locale.GERMAN;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
 
@@ -56,52 +58,39 @@ class HolidayTest {
   private final static CalendarUtil calendarUtil = new CalendarUtil();
 
   static {
-    test_days
-      .add(LocalDate.of(2010, FEBRUARY, 17));
+    test_days.add(LocalDate.of(2010, FEBRUARY, 17));
     test_days.add(LocalDate.of(2010, AUGUST, 30));
     test_days.add(LocalDate.of(2010, APRIL, 2));
     test_days.add(LocalDate.of(2010, APRIL, 5));
-    test_days
-      .add(LocalDate.of(2010, NOVEMBER, 17));
-    test_days
-      .add(LocalDate.of(2010, NOVEMBER, 28));
+    test_days.add(LocalDate.of(2010, NOVEMBER, 17));
+    test_days.add(LocalDate.of(2010, NOVEMBER, 28));
     test_days.add(LocalDate.of(2010, JANUARY, 1));
     test_days.add(LocalDate.of(2010, JANUARY, 18));
-    test_days
-      .add(LocalDate.of(2010, NOVEMBER, 26));
+    test_days.add(LocalDate.of(2010, NOVEMBER, 26));
     test_days_l1.addAll(test_days);
     test_days_l1.add(LocalDate.of(2010, JANUARY, 2));
     test_days_l2.addAll(test_days_l1);
     test_days_l2.add(LocalDate.of(2010, JANUARY, 3));
 
     test_days_l11.addAll(test_days);
-    test_days_l11
-      .add(LocalDate.of(2010, JULY, 27));
+    test_days_l11.add(LocalDate.of(2010, JULY, 27));
     test_days_l11.add(LocalDate.of(2010, JULY, 9));
-    test_days_l11.add(LocalDate.of(2010, FEBRUARY,
-      26));
-    test_days_l11.add(LocalDate.of(2010, AUGUST,
-      11));
-    test_days_l11.add(LocalDate.of(2010,
-      SEPTEMBER, 6));
-    test_days_l11.add(LocalDate.of(2010,
-      SEPTEMBER, 10));
-    test_days_l11.add(LocalDate.of(2010, NOVEMBER,
-      17));
-    test_days_l11.add(LocalDate.of(2010, DECEMBER,
-      7));
-    test_days_l11.add(LocalDate.of(2010, DECEMBER,
-      16));
+    test_days_l11.add(LocalDate.of(2010, FEBRUARY, 26));
+    test_days_l11.add(LocalDate.of(2010, AUGUST, 11));
+    test_days_l11.add(LocalDate.of(2010, SEPTEMBER, 6));
+    test_days_l11.add(LocalDate.of(2010, SEPTEMBER, 10));
+    test_days_l11.add(LocalDate.of(2010, NOVEMBER, 17));
+    test_days_l11.add(LocalDate.of(2010, DECEMBER, 7));
+    test_days_l11.add(LocalDate.of(2010, DECEMBER, 16));
   }
 
   private Locale defaultLocale;
 
   @BeforeEach
   void init() {
-    System.setProperty(" de.focus_shift.jaxb.mapping.urls",
-      "file:./src/test/resources/test.app.properties");
+    System.setProperty(" de.focus_shift.jaxb.mapping.urls", "file:./src/test/resources/test.app.properties");
     defaultLocale = Locale.getDefault();
-    Locale.setDefault(Locale.GERMAN);
+    Locale.setDefault(GERMAN);
   }
 
   @AfterEach
@@ -112,20 +101,22 @@ class HolidayTest {
 
   @Test
   void testMissingCountry() {
-    assertThrows(IllegalStateException.class, () -> HolidayManager.getInstance(ManagerParameters.create("XXX")));
+    final ManagerParameter parameter = ManagerParameters.create("XXX");
+    assertThatThrownBy(() -> HolidayManager.getInstance(parameter))
+      .isInstanceOf(IllegalStateException.class);
   }
 
   @Test
   void testBaseStructure() {
-    HolidayManager m = HolidayManager.getInstance(ManagerParameters.create("test"));
-    CalendarHierarchy h = m.getCalendarHierarchy();
-    assertEquals("test", h.getId(), "Wrong id.");
-    assertEquals(2, h.getChildren().size(), "Wrong number of children on first level.");
-    for (CalendarHierarchy hi : h.getChildren().values()) {
+    final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create("test"));
+    final CalendarHierarchy calendarHierarchy = holidayManager.getCalendarHierarchy();
+    assertThat(calendarHierarchy.getId()).isEqualTo("test");
+    assertThat(calendarHierarchy.getChildren()).hasSize(2);
+    for (CalendarHierarchy hi : calendarHierarchy.getChildren().values()) {
       if (hi.getId().equalsIgnoreCase("level1")) {
-        assertEquals(1, hi.getChildren().size(), "Wrong number of children on second level of level 1.");
+        assertThat(hi.getChildren()).hasSize(1);
       } else if (hi.getId().equalsIgnoreCase("level11")) {
-        assertEquals(0, hi.getChildren().size(), "Wrong number of children on second level of level 11.");
+        assertThat(hi.getChildren()).isEmpty();
       }
     }
   }
@@ -139,7 +130,7 @@ class HolidayTest {
   }
 
   private void assertNotUndefined(HolidayCalendar calendar, CalendarHierarchy c) {
-    assertFalse("undefined".equals(c.getDescription()), "Calendar " + calendar + " Hierarchy " + c.getId() + " is lacking a description.");
+    assertThat(c.getDescription()).isNotEqualTo("undefined");
     for (Map.Entry<String, CalendarHierarchy> element : c.getChildren().entrySet()) {
       assertNotUndefined(calendar, element.getValue());
     }
@@ -170,20 +161,21 @@ class HolidayTest {
 
   @Test
   void testCalendarChronology() {
-    HolidayManager m = HolidayManager.getInstance(ManagerParameters.create("test"));
-    Calendar c = Calendar.getInstance();
-    c.set(Calendar.YEAR, 2010);
-    c.set(Calendar.MONTH, Calendar.FEBRUARY);
-    c.set(Calendar.DAY_OF_MONTH, 16);
-    assertFalse(m.isHoliday(c), "This date should NOT be a holiday.");
-    c.add(Calendar.DAY_OF_YEAR, 1);
-    assertTrue(m.isHoliday(c), "This date should be a holiday.");
+    final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create("test"));
+    final Calendar calendar = Calendar.getInstance();
+    calendar.set(Calendar.YEAR, 2010);
+    calendar.set(Calendar.MONTH, Calendar.FEBRUARY);
+    calendar.set(Calendar.DAY_OF_MONTH, 16);
+    assertFalse(holidayManager.isHoliday(calendar), "This date should NOT be a holiday.");
+
+    calendar.add(Calendar.DAY_OF_YEAR, 1);
+    assertTrue(holidayManager.isHoliday(calendar), "This date should be a holiday.");
   }
 
   @Test
   void testBaseDates() {
-    HolidayManager m = HolidayManager.getInstance(ManagerParameters.create("test"));
-    Set<Holiday> holidays = m.getHolidays(2010);
+    final HolidayManager m = HolidayManager.getInstance(ManagerParameters.create("test"));
+    final Set<Holiday> holidays = m.getHolidays(2010);
     assertNotNull(holidays);
     assertDates(test_days, holidays);
   }
@@ -194,7 +186,7 @@ class HolidayTest {
         fail("Missing " + localDate + " in " + holidays);
       }
     }
-    assertEquals(expected.size(), holidays.size(), "Wrong number of dates.");
+    assertThat(holidays).hasSameSizeAs(expected);
   }
 
   @Test
@@ -207,23 +199,25 @@ class HolidayTest {
 
   @Test
   void testLevel2() {
-    HolidayManager m = HolidayManager.getInstance(ManagerParameters.create("test"));
-    Set<Holiday> holidays = m.getHolidays(2010, "level1", "level2");
+    final HolidayManager m = HolidayManager.getInstance(ManagerParameters.create("test"));
+    final Set<Holiday> holidays = m.getHolidays(2010, "level1", "level2");
     assertNotNull(holidays);
     assertDates(test_days_l2, holidays);
   }
 
   @Test
   void testLevel11() {
-    HolidayManager m = HolidayManager.getInstance(ManagerParameters.create("test"));
-    Set<Holiday> holidays = m.getHolidays(2010, "level11");
+    final HolidayManager m = HolidayManager.getInstance(ManagerParameters.create("test"));
+    final Set<Holiday> holidays = m.getHolidays(2010, "level11");
     assertNotNull(holidays);
     assertDates(test_days_l11, holidays);
   }
 
   @Test
-  void testFail() {
-    assertThrows(IllegalArgumentException.class, () -> HolidayManager.getInstance(ManagerParameters.create("test_fail")));
+  void ensureThatExceptionIsThrownOnSubConfigurationWithSameId() {
+    final ManagerParameter parameter = ManagerParameters.create("test_fail");
+    assertThatThrownBy(() -> HolidayManager.getInstance(parameter))
+      .isInstanceOf(IllegalArgumentException.class);
   }
 
   @Test
@@ -242,22 +236,26 @@ class HolidayTest {
     Locale.setDefault(ENGLISH);
 
     final Holiday holiday = new Holiday(LocalDate.of(2011, 2, 2), "CHRISTMAS", OFFICIAL_HOLIDAY);
-    assertEquals("Christmas", holiday.getDescription(), "Wrong description");
-    assertEquals("Weihnachten", holiday.getDescription(Locale.GERMAN), "Wrong description");
-    assertEquals("Kerstmis", holiday.getDescription(new Locale("nl")), "Wrong description");
+    assertThat(holiday.getDescription()).isEqualTo("Christmas");
+    assertThat(holiday.getDescription(GERMAN)).isEqualTo("Weihnachten");
+    assertThat(holiday.getDescription(new Locale("nl"))).isEqualTo("Kerstmis");
   }
 
   @Test
   void testHolidayEquals() {
-    Holiday h1 = new Holiday(LocalDate.of(2011, 2, 2), "CHRISTMAS", OFFICIAL_HOLIDAY);
+    final Holiday h1 = new Holiday(LocalDate.of(2011, 2, 2), "CHRISTMAS", OFFICIAL_HOLIDAY);
     assertTrue(h1.equals(h1), "Wrong equals implementation");
-    Holiday h2b = new Holiday(LocalDate.of(2011, 2, 2), "CHRISTMAS", OFFICIAL_HOLIDAY);
+
+    final Holiday h2b = new Holiday(LocalDate.of(2011, 2, 2), "CHRISTMAS", OFFICIAL_HOLIDAY);
     assertTrue(h1.equals(h2b), "Wrong equals implementation");
-    Holiday h2 = new Holiday(LocalDate.of(2011, 2, 1), "CHRISTMAS", OFFICIAL_HOLIDAY);
+
+    final Holiday h2 = new Holiday(LocalDate.of(2011, 2, 1), "CHRISTMAS", OFFICIAL_HOLIDAY);
     assertFalse(h1.equals(h2), "Wrong equals implementation");
-    Holiday h3 = new Holiday(LocalDate.of(2011, 2, 2), "NEW_YEAR", OFFICIAL_HOLIDAY);
+
+    final Holiday h3 = new Holiday(LocalDate.of(2011, 2, 2), "NEW_YEAR", OFFICIAL_HOLIDAY);
     assertFalse(h1.equals(h3), "Wrong equals implementation");
-    Holiday h4 = new Holiday(LocalDate.of(2011, 2, 2), "CHRISTMAS", UNOFFICIAL_HOLIDAY);
+
+    final Holiday h4 = new Holiday(LocalDate.of(2011, 2, 2), "CHRISTMAS", UNOFFICIAL_HOLIDAY);
     assertFalse(h1.equals(h4), "Wrong equals implementation");
   }
 }
