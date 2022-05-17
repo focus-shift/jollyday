@@ -1,14 +1,14 @@
 package de.focus_shift.parser.impl;
 
 import de.focus_shift.Holiday;
+import de.focus_shift.parser.HolidayParser;
 import de.focus_shift.parser.functions.CreateHoliday;
 import de.focus_shift.parser.functions.FixedToLocalDate;
 import de.focus_shift.parser.functions.MoveDateRelative;
 import de.focus_shift.parser.predicates.ValidLimitation;
-import de.focus_shift.spi.Fixed;
+import de.focus_shift.spi.Holidays;
 
 import java.util.List;
-import java.util.function.Function;
 
 import static java.util.stream.Collectors.toList;
 
@@ -18,17 +18,11 @@ import static java.util.stream.Collectors.toList;
  * @author tboven
  * @version $Id: $
  */
-public class FixedParser implements Function<Integer, List<Holiday>> {
-
-  private final List<Fixed> fixed;
-
-  public FixedParser(List<Fixed> fixed) {
-    this.fixed = fixed;
-  }
+public class FixedParser implements HolidayParser {
 
   @Override
-  public List<Holiday> apply(final Integer year) {
-    return fixed.stream()
+  public List<Holiday> parse(Integer year, Holidays holidays) {
+    return holidays.fixed().stream()
       .filter(new ValidLimitation(year))
       .map(fixed -> new DescribedDateHolder(fixed, new MoveDateRelative(new FixedToLocalDate(year).apply(fixed)).apply(fixed)))
       .map(describedDateHolder -> new CreateHoliday(describedDateHolder.getDate()).apply(describedDateHolder.getDescribed()))

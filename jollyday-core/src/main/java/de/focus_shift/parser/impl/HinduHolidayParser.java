@@ -1,10 +1,10 @@
 package de.focus_shift.parser.impl;
 
 import de.focus_shift.Holiday;
-import de.focus_shift.spi.HinduHoliday;
+import de.focus_shift.parser.HolidayParser;
+import de.focus_shift.spi.Holidays;
 
 import java.util.List;
-import java.util.function.Function;
 
 /**
  * <p>HinduHolidayParser class.</p>
@@ -12,16 +12,10 @@ import java.util.function.Function;
  * @author Sven
  * @version $Id: $
  */
-public class HinduHolidayParser implements Function<Integer, List<Holiday>> {
-
-  private final List<HinduHoliday> hinduHolidays;
-
-  public HinduHolidayParser(List<HinduHoliday> hinduHolidays) {
-    this.hinduHolidays = hinduHolidays;
-  }
+public class HinduHolidayParser implements HolidayParser {
 
   @Override
-  public List<Holiday> apply(Integer year) {
+  public List<Holiday> parse(Integer year, Holidays holidays) {
     return List.of();
 		/* TODO: Implement
 		return hinduHolidayStream

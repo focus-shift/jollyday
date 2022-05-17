@@ -1,13 +1,13 @@
 package de.focus_shift.parser.impl;
 
 import de.focus_shift.Holiday;
+import de.focus_shift.parser.HolidayParser;
 import de.focus_shift.parser.functions.CalculateEasterSunday;
 import de.focus_shift.parser.functions.CreateHoliday;
 import de.focus_shift.parser.predicates.ValidLimitation;
-import de.focus_shift.spi.RelativeToEasterSunday;
+import de.focus_shift.spi.Holidays;
 
 import java.util.List;
-import java.util.function.Function;
 
 import static java.util.stream.Collectors.toList;
 
@@ -17,17 +17,11 @@ import static java.util.stream.Collectors.toList;
  * @author Sven Diedrichsen
  * @version $Id: $
  */
-public class RelativeToEasterSundayParser implements Function<Integer, List<Holiday>> {
-
-  private final List<RelativeToEasterSunday> relativeToEasterSundays;
-
-  public RelativeToEasterSundayParser(List<RelativeToEasterSunday> relativeToEasterSundays) {
-    this.relativeToEasterSundays = relativeToEasterSundays;
-  }
+public class RelativeToEasterSundayParser implements HolidayParser {
 
   @Override
-  public List<Holiday> apply(Integer year) {
-    return relativeToEasterSundays.stream()
+  public List<Holiday> parse(Integer year, Holidays holidays) {
+    return holidays.relativeToEasterSunday().stream()
       .filter(new ValidLimitation(year))
       .map(res -> new DescribedDateHolder(res, new CalculateEasterSunday(year).apply(res.chronology()).plus(res.days())))
       .map(holder -> new CreateHoliday(holder.getDate()).apply(holder.getDescribed()))

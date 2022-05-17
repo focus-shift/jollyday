@@ -3,6 +3,7 @@ package de.focus_shift.impl;
 import de.focus_shift.CalendarHierarchy;
 import de.focus_shift.Holiday;
 import de.focus_shift.HolidayManager;
+import de.focus_shift.parser.HolidayParser;
 import de.focus_shift.spi.Configuration;
 import de.focus_shift.spi.Holidays;
 import de.focus_shift.util.ClassLoadingUtil;
@@ -21,7 +22,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
-import java.util.function.Function;
 
 /**
  * Manager implementation for reading data from the configuration datasource.
@@ -40,7 +40,7 @@ public class DefaultHolidayManager extends HolidayManager {
   /**
    * Parser cache by XML class name.
    */
-  private final Map<String, Function<Integer, List<Holiday>>> parserCache = new HashMap<>();
+  private final Map<String, HolidayParser> parserCache = new HashMap<>();
   /**
    * Configuration parsed on initialization.
    */
@@ -138,9 +138,9 @@ public class DefaultHolidayManager extends HolidayManager {
    * @param config   the holiday configuration
    */
   private void parseHolidays(int year, Set<Holiday> holidays, final Holidays config) {
-    final Collection<Function<Integer, List<Holiday>>> parsers = getParsers(config);
-    for (Function<Integer, List<Holiday>> p : parsers) {
-      holidays.addAll(p.apply(year));
+    final Collection<HolidayParser> parsers = getParsers(config);
+    for (HolidayParser p : parsers) {
+      holidays.addAll(p.parse(year, config));
     }
   }
 
@@ -151,8 +151,8 @@ public class DefaultHolidayManager extends HolidayManager {
    * @param config the holiday configuration
    * @return A list of parsers to for this configuration.
    */
-  private Collection<Function<Integer, List<Holiday>>> getParsers(final Holidays config) {
-    final Collection<Function<Integer, List<Holiday>>> parsers = new HashSet<>();
+  private Collection<HolidayParser> getParsers(final Holidays config) {
+    final Collection<HolidayParser> parsers = new HashSet<>();
     try {
       final Method[] declaredMethods = config.getClass().getDeclaredMethods();
       for (Method declaredMethod : declaredMethods) {
@@ -161,7 +161,7 @@ public class DefaultHolidayManager extends HolidayManager {
           final Type actualTypeArgument = parameterizedType.getActualTypeArguments()[0];
           final List<?> holidays = (List<?>) declaredMethod.invoke(config);
           if (!holidays.isEmpty()) {
-            final Function<Integer, List<Holiday>> holidayParser = instantiateParser(actualTypeArgument.getTypeName(), holidays);
+            final HolidayParser holidayParser = instantiateParser(actualTypeArgument.getTypeName());
             if (holidayParser != null) {
               parsers.add(holidayParser);
             }
@@ -174,16 +174,15 @@ public class DefaultHolidayManager extends HolidayManager {
     return parsers;
   }
 
-  private Function<Integer, List<Holiday>> instantiateParser(String className, List<?> holidays) throws ClassNotFoundException, InstantiationException, IllegalAccessException, java.lang.reflect.InvocationTargetException, NoSuchMethodException {
-    Function<Integer, List<Holiday>> holidayParser = parserCache.get(className);
+  private HolidayParser instantiateParser(String className) throws ClassNotFoundException, InstantiationException, IllegalAccessException, java.lang.reflect.InvocationTargetException, NoSuchMethodException {
+    HolidayParser holidayParser = parserCache.get(className);
     if (holidayParser == null) {
       final String propName = PARSER_IMPL_PREFIX + className;
       final String parserClassName = getManagerParameter().getProperty(propName);
       if (parserClassName != null) {
         final Class<?> parserClass = classLoadingUtil.loadClass(parserClassName);
-        holidayParser = (Function<Integer, List<Holiday>>) parserClass.getConstructor(List.class).newInstance(holidays);
-        // Parser can not be reused, because the constructor holds the old holidays TODO
-        // parserCache.put(className, holidayParser);
+        holidayParser = (HolidayParser) parserClass.getConstructor().newInstance();
+        parserCache.put(className, holidayParser);
       }
     }
     return holidayParser;
@@ -212,9 +211,7 @@ public class DefaultHolidayManager extends HolidayManager {
   protected static void logHierarchy(final Configuration configuration, int level) {
     if (LOG.isDebugEnabled()) {
       final StringBuilder space = new StringBuilder();
-      for (int i = 0; i < level; i++) {
-        space.append("-");
-      }
+      space.append("-".repeat(level));
       LOG.debug("{} {} ({}).", space, configuration.description(), configuration.hierarchy());
       configuration.subConfigurations()
         .forEach(

@@ -1,15 +1,15 @@
 package de.focus_shift.parser.impl;
 
 import de.focus_shift.Holiday;
+import de.focus_shift.parser.HolidayParser;
 import de.focus_shift.parser.functions.CalculateEasterSunday;
 import de.focus_shift.parser.functions.CreateHoliday;
 import de.focus_shift.parser.functions.MoveDateRelative;
 import de.focus_shift.parser.predicates.ValidLimitation;
-import de.focus_shift.spi.ChristianHoliday;
+import de.focus_shift.spi.Holidays;
 
 import java.time.LocalDate;
 import java.util.List;
-import java.util.function.Function;
 
 import static java.util.stream.Collectors.toList;
 
@@ -20,17 +20,11 @@ import static java.util.stream.Collectors.toList;
  * @author Sven Diedrichsen
  * @version $Id: $
  */
-public class ChristianHolidayParser implements Function<Integer, List<Holiday>> {
-
-  private final List<ChristianHoliday> christianHolidays;
-
-  public ChristianHolidayParser(List<ChristianHoliday> christianHolidays) {
-    this.christianHolidays = christianHolidays;
-  }
+public class ChristianHolidayParser implements HolidayParser {
 
   @Override
-  public List<Holiday> apply(Integer year) {
-    return christianHolidays.stream()
+  public List<Holiday> parse(Integer year, Holidays holidays) {
+    return holidays.christianHolidays().stream()
       .filter(new ValidLimitation(year))
       .map(ch -> {
         LocalDate easterSunday = new CalculateEasterSunday(year).apply(ch.chronology());

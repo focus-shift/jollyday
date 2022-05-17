@@ -1,14 +1,14 @@
 package de.focus_shift.parser.impl;
 
 import de.focus_shift.Holiday;
+import de.focus_shift.parser.HolidayParser;
 import de.focus_shift.parser.functions.CreateHoliday;
 import de.focus_shift.parser.functions.FindWeekDayRelativeToDate;
 import de.focus_shift.parser.functions.FixedToLocalDate;
 import de.focus_shift.parser.predicates.ValidLimitation;
-import de.focus_shift.spi.FixedWeekdayRelativeToFixed;
+import de.focus_shift.spi.Holidays;
 
 import java.util.List;
-import java.util.function.Function;
 
 import static java.util.stream.Collectors.toList;
 
@@ -18,17 +18,11 @@ import static java.util.stream.Collectors.toList;
  * @author Sven Diedrichsen
  * @version $Id: $
  */
-public class FixedWeekdayRelativeToFixedParser implements Function<Integer, List<Holiday>> {
-
-  private final List<FixedWeekdayRelativeToFixed> fixedWeekdayRelativeToFixed;
-
-  public FixedWeekdayRelativeToFixedParser(List<FixedWeekdayRelativeToFixed> fixedWeekdayRelativeToFixed) {
-    this.fixedWeekdayRelativeToFixed = fixedWeekdayRelativeToFixed;
-  }
+public class FixedWeekdayRelativeToFixedParser implements HolidayParser {
 
   @Override
-  public List<Holiday> apply(Integer year) {
-    return fixedWeekdayRelativeToFixed.stream()
+  public List<Holiday> parse(Integer year, Holidays holidays) {
+    return holidays.fixedWeekdayRelativeToFixed().stream()
       .filter(new ValidLimitation(year))
       .map(fwrf -> new DescribedDateHolder(fwrf, new FindWeekDayRelativeToDate(new FixedToLocalDate(year).apply(fwrf.day())).apply(fwrf)))
       .map(holder -> new CreateHoliday(holder.getDate()).apply(holder.getDescribed()))

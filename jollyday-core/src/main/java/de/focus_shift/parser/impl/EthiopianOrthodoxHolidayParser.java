@@ -1,15 +1,15 @@
 package de.focus_shift.parser.impl;
 
 import de.focus_shift.Holiday;
+import de.focus_shift.parser.HolidayParser;
 import de.focus_shift.parser.functions.CalculateRelativeDatesFromChronologyWithinGregorianYear;
 import de.focus_shift.parser.functions.CreateHoliday;
 import de.focus_shift.parser.predicates.ValidLimitation;
-import de.focus_shift.spi.EthiopianOrthodoxHoliday;
+import de.focus_shift.spi.Holidays;
 import org.threeten.extra.chrono.CopticChronology;
 
 import java.time.LocalDate;
 import java.util.List;
-import java.util.function.Function;
 import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.toList;
@@ -20,17 +20,11 @@ import static java.util.stream.Collectors.toList;
  * @author Sven Diedrichsen
  * @version $Id: $
  */
-public class EthiopianOrthodoxHolidayParser implements Function<Integer, List<Holiday>> {
-
-  private final List<EthiopianOrthodoxHoliday> ethiopianOrthodoxHolidayStream;
-
-  public EthiopianOrthodoxHolidayParser(List<EthiopianOrthodoxHoliday> ethiopianOrthodoxHolidayStream) {
-    this.ethiopianOrthodoxHolidayStream = ethiopianOrthodoxHolidayStream;
-  }
+public class EthiopianOrthodoxHolidayParser implements HolidayParser {
 
   @Override
-  public List<Holiday> apply(Integer year) {
-    return ethiopianOrthodoxHolidayStream.stream()
+  public List<Holiday> parse(Integer year, Holidays holidays) {
+    return holidays.ethiopianOrthodoxHolidays().stream()
       .filter(new ValidLimitation(year))
       .flatMap(eoh -> {
         final Stream<LocalDate> ethiopianHolidays;
