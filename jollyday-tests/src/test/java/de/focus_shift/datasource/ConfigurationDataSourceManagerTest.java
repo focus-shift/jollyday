@@ -2,7 +2,7 @@ package de.focus_shift.datasource;
 
 import de.focus_shift.ManagerParameter;
 import de.focus_shift.ManagerParameters;
-import de.focus_shift.datasource.impl.XmlFileDataSource;
+import de.focus_shift.jaxb.JaxbConfigurationService;
 import org.junit.jupiter.api.Test;
 
 import java.util.Properties;
@@ -13,9 +13,9 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class ConfigurationDataSourceManagerTest {
 
-  ConfigurationDataSourceManager configurationDataSourceManager = new ConfigurationDataSourceManager();
-  Properties properties = new Properties();
-  ManagerParameter managerParameter = ManagerParameters.create((String) null, properties);
+  private final ConfigurationDataSourceManager configurationDataSourceManager = new ConfigurationDataSourceManager();
+  private final Properties properties = new Properties();
+  private final ManagerParameter managerParameter = ManagerParameters.create((String) null, properties);
 
   @Test
   void testGetConfigurationDataSourceMissingConfig() {
@@ -36,9 +36,9 @@ class ConfigurationDataSourceManagerTest {
 
   @Test
   void testGetConfigurationDataSourceXmlFileDataSource() {
-    managerParameter.setProperty(ManagerParameter.CONFIGURATION_DATASOURCE_IMPL_CLASS, XmlFileDataSource.class.getName());
+    managerParameter.setProperty(ManagerParameter.CONFIGURATION_DATASOURCE_IMPL_CLASS, JaxbConfigurationService.class.getName());
     ConfigurationDataSource datasource = configurationDataSourceManager.getConfigurationDataSource(managerParameter);
     assertNotNull(datasource, "Missing datasource.");
-    assertEquals(XmlFileDataSource.class, datasource.getClass(), "Unexpected class.");
+    assertEquals(JaxbConfigurationService.class, datasource.getClass(), "Unexpected class.");
   }
 }
