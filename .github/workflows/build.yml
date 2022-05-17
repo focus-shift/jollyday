@@ -25,15 +25,7 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: 11
-      - name: Cache pom dependencies
-        uses: actions/cache@v3
-        with:
-          path: |
-            ~/.m2/repository
-            node/
-          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-          restore-keys: |
-            ${{ runner.os }}-maven-
+          cache: 'maven'
       - name: Build
         run: >
           ./mvnw $MAVEN_CLI_OPTS
