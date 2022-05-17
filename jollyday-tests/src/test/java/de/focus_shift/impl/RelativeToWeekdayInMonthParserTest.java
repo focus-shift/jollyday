@@ -1,6 +1,7 @@
-package de.focus_shift.tests.parsers;
+package de.focus_shift.impl;
 
 import de.focus_shift.Holiday;
+import de.focus_shift.jaxb.JaxbHolidays;
 import de.focus_shift.jaxb.mapping.FixedWeekdayInMonth;
 import de.focus_shift.jaxb.mapping.Holidays;
 import de.focus_shift.jaxb.mapping.Month;
@@ -12,8 +13,7 @@ import de.focus_shift.parser.impl.RelativeToWeekdayInMonthParser;
 import de.focus_shift.util.CalendarUtil;
 import org.junit.jupiter.api.Test;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -23,69 +23,74 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  */
 class RelativeToWeekdayInMonthParserTest {
 
-  private RelativeToWeekdayInMonthParser rtwim = new RelativeToWeekdayInMonthParser();
-  private CalendarUtil calendarUtil = new CalendarUtil();
+  private final RelativeToWeekdayInMonthParser sut = new RelativeToWeekdayInMonthParser();
+  private final CalendarUtil calendarUtil = new CalendarUtil();
 
   @Test
   void testEmpty() {
-    Set<Holiday> result = new HashSet<>();
-    Holidays config = new Holidays();
-    rtwim.parse(2011, result, config);
-    assertTrue(result.isEmpty(), "Result is not empty.");
+    final Holidays config = new Holidays();
+    final List<Holiday> holidays = sut.parse(2011, new JaxbHolidays(config));
+    assertTrue(holidays.isEmpty(), "Result is not empty.");
   }
 
   @Test
   void testInvalid() {
-    Set<Holiday> result = new HashSet<>();
-    Holidays config = new Holidays();
-    RelativeToWeekdayInMonth rule = new RelativeToWeekdayInMonth();
+    final Holidays config = new Holidays();
+
+    final RelativeToWeekdayInMonth rule = new RelativeToWeekdayInMonth();
     rule.setWeekday(Weekday.TUESDAY);
     rule.setWhen(When.AFTER);
-    FixedWeekdayInMonth date = new FixedWeekdayInMonth();
+
+    final FixedWeekdayInMonth date = new FixedWeekdayInMonth();
     date.setWhich(Which.SECOND);
     date.setWeekday(Weekday.MONDAY);
     date.setMonth(Month.JULY);
     rule.setFixedWeekday(date);
     config.getRelativeToWeekdayInMonth().add(rule);
     rule.setValidFrom(2012);
-    rtwim.parse(2011, result, config);
-    assertTrue(result.isEmpty(), "Result is not empty.");
+
+    final List<Holiday> holidays = sut.parse(2011, new JaxbHolidays(config));
+    assertTrue(holidays.isEmpty(), "Result is not empty.");
   }
 
   @Test
   void testTueAfter2ndMondayJuly() {
-    Set<Holiday> result = new HashSet<>();
-    Holidays config = new Holidays();
-    RelativeToWeekdayInMonth rule = new RelativeToWeekdayInMonth();
+    final Holidays config = new Holidays();
+
+    final RelativeToWeekdayInMonth rule = new RelativeToWeekdayInMonth();
     rule.setWeekday(Weekday.TUESDAY);
     rule.setWhen(When.AFTER);
-    FixedWeekdayInMonth date = new FixedWeekdayInMonth();
+
+    final FixedWeekdayInMonth date = new FixedWeekdayInMonth();
     date.setWhich(Which.SECOND);
     date.setWeekday(Weekday.MONDAY);
     date.setMonth(Month.JULY);
     rule.setFixedWeekday(date);
     config.getRelativeToWeekdayInMonth().add(rule);
-    rtwim.parse(2011, result, config);
-    assertEquals(1, result.size(), "Wrong number of dates.");
-    assertEquals(calendarUtil.create(2011, 7, 12), result.iterator().next().getDate(), "Wrong date.");
+
+    final List<Holiday> holidays = sut.parse(2011, new JaxbHolidays(config));
+    assertEquals(1, holidays.size(), "Wrong number of dates.");
+    assertEquals(calendarUtil.create(2011, 7, 12), holidays.iterator().next().getDate(), "Wrong date.");
   }
 
   @Test
   void testMonAfter4thMondayOctober() {
-    Set<Holiday> result = new HashSet<>();
-    Holidays config = new Holidays();
-    RelativeToWeekdayInMonth rule = new RelativeToWeekdayInMonth();
+    final Holidays config = new Holidays();
+
+    final RelativeToWeekdayInMonth rule = new RelativeToWeekdayInMonth();
     rule.setWeekday(Weekday.MONDAY);
     rule.setWhen(When.AFTER);
-    FixedWeekdayInMonth date = new FixedWeekdayInMonth();
+
+    final FixedWeekdayInMonth date = new FixedWeekdayInMonth();
     date.setWhich(Which.FOURTH);
     date.setWeekday(Weekday.MONDAY);
     date.setMonth(Month.OCTOBER);
     rule.setFixedWeekday(date);
     config.getRelativeToWeekdayInMonth().add(rule);
-    rtwim.parse(2018, result, config);
-    assertEquals(1, result.size(), "Wrong number of dates.");
-    assertEquals(calendarUtil.create(2018, 10, 29), result.iterator().next().getDate(), "Wrong date.");
+
+    final List<Holiday> holidays = sut.parse(2018, new JaxbHolidays(config));
+    assertEquals(1, holidays.size(), "Wrong number of dates.");
+    assertEquals(calendarUtil.create(2018, 10, 29), holidays.iterator().next().getDate(), "Wrong date.");
   }
 
 }

@@ -1,13 +1,13 @@
-package de.focus_shift.tests.parsers;
+package de.focus_shift.impl;
 
 import de.focus_shift.Holiday;
+import de.focus_shift.jaxb.JaxbHolidays;
 import de.focus_shift.jaxb.mapping.FixedWeekdayInMonth;
 import de.focus_shift.jaxb.mapping.Holidays;
 import de.focus_shift.parser.impl.FixedWeekdayInMonthParser;
 import org.junit.jupiter.api.Test;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -17,25 +17,23 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  */
 class FixedWeekdayInMonthParserTest {
 
-  private FixedWeekdayInMonthParser parser = new FixedWeekdayInMonthParser();
+  private final FixedWeekdayInMonthParser sut = new FixedWeekdayInMonthParser();
 
   @Test
   void testEmpty() {
-    Set<Holiday> holidays = new HashSet<>();
-    Holidays config = new Holidays();
-    parser.parse(2010, holidays, config);
+    final Holidays config = new Holidays();
+    final List<Holiday> holidays = sut.parse(2010, new JaxbHolidays(config));
     assertTrue(holidays.isEmpty(), "Expected to be empty.");
   }
 
   @Test
   void testInvalid() {
-    Set<Holiday> holidays = new HashSet<>();
-    Holidays config = new Holidays();
-    FixedWeekdayInMonth e = new FixedWeekdayInMonth();
+    final Holidays config = new Holidays();
+    final FixedWeekdayInMonth e = new FixedWeekdayInMonth();
     e.setValidFrom(2011);
     config.getFixedWeekday().add(e);
-    parser.parse(2010, holidays, config);
+
+    final List<Holiday> holidays = sut.parse(2010, new JaxbHolidays(config));
     assertEquals(0, holidays.size(), "Expected to be empty.");
   }
-
 }
