@@ -25,7 +25,7 @@ public class XMLUtil {
 
   private static final Logger LOG = LoggerFactory.getLogger(XMLUtil.class);
 
-  private final JAXBContextCreator contextCreator = new JAXBContextCreator();
+  private JAXBContextCreator contextCreator = new JAXBContextCreator();
   private final ClassLoadingUtil classLoadingUtil = new ClassLoadingUtil();
 
   /**
@@ -51,7 +51,8 @@ public class XMLUtil {
         ctx = contextCreator.create(XMLUtil.PACKAGE, ObjectFactory.class.getClassLoader());
       }
       final Unmarshaller um = ctx.createUnmarshaller();
-      @SuppressWarnings("unchecked") final JAXBElement<Configuration> el = (JAXBElement<Configuration>) um.unmarshal(stream);
+      @SuppressWarnings("unchecked")
+      final JAXBElement<Configuration> el = (JAXBElement<Configuration>) um.unmarshal(stream);
       return el.getValue();
     } catch (JAXBException ue) {
       throw new IllegalStateException("Cannot parse holidays XML file.", ue);

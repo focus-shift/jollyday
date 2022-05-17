@@ -1,17 +1,17 @@
-package de.focus_shift.util;
+package util;
 
-import de.focus_shift.config.Configuration;
 import de.focus_shift.jaxb.XMLUtil;
+import de.focus_shift.spi.Configuration;
+import jakarta.xml.bind.JAXBContext;
+import jakarta.xml.bind.JAXBElement;
+import jakarta.xml.bind.JAXBException;
+import jakarta.xml.bind.Unmarshaller;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBElement;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Unmarshaller;
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -24,35 +24,34 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
-public class XMLUtilTest {
+class XMLUtilTest {
 
   @Mock
-  XMLUtil.JAXBContextCreator contextCreator;
+  private XMLUtil.JAXBContextCreator contextCreator;
   @Mock
-  InputStream inputStream;
+  private InputStream inputStream;
 
   @InjectMocks
-  XMLUtil xmlUtil = new XMLUtil();
+  private final XMLUtil xmlUtil = new XMLUtil();
 
   @Test
-  public void testUnmarshallConfigurationNullCheck() {
+  void testUnmarshallConfigurationNullCheck() {
     assertThrows(IllegalArgumentException.class, () -> xmlUtil.unmarshallConfiguration(null));
   }
 
   @Test
-  public void testUnmarshallConfigurationException() throws IOException, JAXBException {
-    when(contextCreator.create(eq(XMLUtil.PACKAGE), any(ClassLoader.class))).thenThrow(new JAXBException(""))
-      .thenThrow(new JAXBException(""));
+  void testUnmarshallConfigurationException() throws IOException, JAXBException {
+    when(contextCreator.create(eq(XMLUtil.PACKAGE), any(ClassLoader.class))).thenThrow(new JAXBException("")).thenThrow(new JAXBException(""));
     assertThrows(IllegalStateException.class, () -> xmlUtil.unmarshallConfiguration(inputStream));
     verify(inputStream, never()).close();
   }
 
   @Test
-  public void testUnmarshallConfiguration() throws IOException, JAXBException {
-    JAXBContext ctx = mock(JAXBContext.class);
-    Unmarshaller unmarshaller = mock(Unmarshaller.class);
+  void testUnmarshallConfiguration() throws JAXBException {
+    final JAXBContext ctx = mock(JAXBContext.class);
+    final Unmarshaller unmarshaller = mock(Unmarshaller.class);
     @SuppressWarnings("unchecked")
-    JAXBElement<Configuration> element = mock(JAXBElement.class);
+    final JAXBElement<Configuration> element = mock(JAXBElement.class);
     when(contextCreator.create(eq(XMLUtil.PACKAGE), any(ClassLoader.class))).thenReturn(null).thenReturn(ctx);
     when(ctx.createUnmarshaller()).thenReturn(unmarshaller);
     when(unmarshaller.unmarshal(inputStream)).thenReturn(element);
