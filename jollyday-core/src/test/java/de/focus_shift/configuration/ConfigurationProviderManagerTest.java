@@ -9,6 +9,9 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import java.util.Properties;
+
+import static de.focus_shift.configuration.ConfigurationProvider.CONFIG_PROVIDERS_PROPERTY;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.Mockito.verify;
@@ -17,38 +20,37 @@ import static org.mockito.Mockito.verify;
 class ConfigurationProviderManagerTest {
 
   @Mock
-  ConfigurationProvider defaultConfigurationProvider;
+  private ConfigurationProvider defaultConfigurationProvider;
   @Mock
-  ConfigurationProvider urlConfigurationProvider;
+  private ConfigurationProvider urlConfigurationProvider;
 
   @InjectMocks
-  ConfigurationProviderManager configurationProviderManager = new ConfigurationProviderManager();
+  private final ConfigurationProviderManager configurationProviderManager = new ConfigurationProviderManager();
 
-  ManagerParameter managerParameter = ManagerParameters.create((String) null);
+  private final ManagerParameter managerParameter = ManagerParameters.create((String) null);
 
   @AfterEach
   void teardown() {
-    System.clearProperty(ConfigurationProvider.CONFIG_PROVIDERS_PROPERTY);
+    System.clearProperty(CONFIG_PROVIDERS_PROPERTY);
   }
 
   @Test
   void testGetPropertiesWithEmptyProvidersList() {
-    System.setProperty(ConfigurationProvider.CONFIG_PROVIDERS_PROPERTY, "");
+    System.setProperty(CONFIG_PROVIDERS_PROPERTY, "");
     configurationProviderManager.mergeConfigurationProperties(managerParameter);
     assertResult(managerParameter);
   }
 
   @Test
   void testGetPropertiesWithWrongClass() {
-    System.setProperty(ConfigurationProvider.CONFIG_PROVIDERS_PROPERTY, "java.lang.String");
+    System.setProperty(CONFIG_PROVIDERS_PROPERTY, "java.lang.String");
     configurationProviderManager.mergeConfigurationProperties(managerParameter);
     assertResult(managerParameter);
   }
 
   @Test
   void testGetPropertiesWithCorrectClass() {
-    System.setProperty(ConfigurationProvider.CONFIG_PROVIDERS_PROPERTY, getClass().getPackage().getName()
-      + ".TestProvider");
+    System.setProperty(CONFIG_PROVIDERS_PROPERTY, "de.focus_shift.configuration.TestProvider");
     configurationProviderManager.mergeConfigurationProperties(managerParameter);
     assertResult(managerParameter);
     assertEquals("value", managerParameter.getProperty("key"), "Wrong value for property: key");
@@ -56,8 +58,7 @@ class ConfigurationProviderManagerTest {
 
   @Test
   void testGetPropertiesWithWrongAndCorrectClass() {
-    System.setProperty(ConfigurationProvider.CONFIG_PROVIDERS_PROPERTY, getClass().getPackage().getName()
-      + ".TestProvider,java.lang.String");
+    System.setProperty(CONFIG_PROVIDERS_PROPERTY, "de.focus_shift.configuration.TestProvider, java.lang.String");
     configurationProviderManager.mergeConfigurationProperties(managerParameter);
     assertResult(managerParameter);
     assertEquals("value", managerParameter.getProperty("key"), "Wrong value for property: key");

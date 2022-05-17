@@ -18,8 +18,8 @@ public class ConfigurationProviderManager {
 
   private static final Logger LOG = LoggerFactory.getLogger(ConfigurationProviderManager.class);
 
-  private final ConfigurationProvider defaultConfigurationProvider = new DefaultConfigurationProvider();
-  private final ConfigurationProvider urlConfigurationProvider = new URLConfigurationProvider();
+  private ConfigurationProvider defaultConfigurationProvider = new DefaultConfigurationProvider();
+  private ConfigurationProvider urlConfigurationProvider = new URLConfigurationProvider();
   private final ClassLoadingUtil classLoadingUtil = new ClassLoadingUtil();
 
   /**
