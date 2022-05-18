@@ -2,8 +2,8 @@ package de.focus_shift.caching;
 
 import de.focus_shift.HolidayManager;
 import de.focus_shift.ManagerParameter;
-import de.focus_shift.datasource.ConfigurationDataSource;
-import de.focus_shift.datasource.ConfigurationDataSourceManager;
+import de.focus_shift.datasource.ConfigurationServiceManager;
+import de.focus_shift.spi.ConfigurationService;
 import de.focus_shift.util.Cache;
 import de.focus_shift.util.ClassLoadingUtil;
 
@@ -19,7 +19,7 @@ public class HolidayManagerValueHandler implements Cache.ValueHandler<HolidayMan
    * Manager for providing configuration data sources which return the holiday
    * data.
    */
-  private final ConfigurationDataSourceManager configurationDataSourceManager = new ConfigurationDataSourceManager();
+  private final ConfigurationServiceManager configurationServiceManager = new ConfigurationServiceManager();
 
   /**
    * Utility to load classes.
@@ -39,8 +39,8 @@ public class HolidayManagerValueHandler implements Cache.ValueHandler<HolidayMan
   @Override
   public HolidayManager createValue() {
     final HolidayManager manager = instantiateManagerImpl(managerImplClassName);
-    final ConfigurationDataSource configurationDataSource = configurationDataSourceManager.getConfigurationDataSource(parameter);
-    manager.setConfigurationDataSource(configurationDataSource);
+    final ConfigurationService configurationService = configurationServiceManager.getConfigurationService(parameter);
+    manager.setConfigurationService(configurationService);
     manager.init(parameter);
     return manager;
   }

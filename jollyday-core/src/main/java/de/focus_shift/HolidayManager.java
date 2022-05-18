@@ -2,8 +2,8 @@ package de.focus_shift;
 
 import de.focus_shift.caching.HolidayManagerValueHandler;
 import de.focus_shift.configuration.ConfigurationProviderManager;
-import de.focus_shift.datasource.ConfigurationDataSource;
 import de.focus_shift.parser.functions.CalendarToLocalDate;
+import de.focus_shift.spi.ConfigurationService;
 import de.focus_shift.util.Cache;
 import de.focus_shift.util.Cache.ValueHandler;
 import de.focus_shift.util.CalendarUtil;
@@ -52,7 +52,7 @@ public abstract class HolidayManager {
   /**
    * The datasource to get the holiday data from.
    */
-  private ConfigurationDataSource configurationDataSource;
+  private ConfigurationService configurationService;
   /**
    * the manager parameter
    */
@@ -224,20 +224,20 @@ public abstract class HolidayManager {
   /**
    * Sets the configuration datasource with this holiday manager.
    *
-   * @param configurationDataSource the {@link ConfigurationDataSource} to use.
+   * @param configurationService the {@link ConfigurationService} to use.
    */
-  public void setConfigurationDataSource(ConfigurationDataSource configurationDataSource) {
-    this.configurationDataSource = configurationDataSource;
+  public void setConfigurationService(ConfigurationService configurationService) {
+    this.configurationService = configurationService;
   }
 
   /**
-   * Returns the {@link ConfigurationDataSource} to be used to retrieve
+   * Returns the {@link ConfigurationService} to be used to retrieve
    * holiday data.
    *
-   * @return the {@link ConfigurationDataSource} to use.
+   * @return the {@link ConfigurationService} to use.
    */
-  public ConfigurationDataSource getConfigurationDataSource() {
-    return configurationDataSource;
+  public ConfigurationService getConfigurationService() {
+    return configurationService;
   }
 
   public ManagerParameter getManagerParameter() {

@@ -1,7 +1,7 @@
 package de.focus_shift.jaxb;
 
 import de.focus_shift.ManagerParameter;
-import de.focus_shift.datasource.ConfigurationDataSource;
+import de.focus_shift.spi.ConfigurationService;
 
 import java.io.InputStream;
 import java.net.URL;
@@ -11,7 +11,7 @@ import java.net.URL;
  * @version $
  * @since 15.03.20
  */
-public class JaxbConfigurationService implements ConfigurationDataSource {
+public class JaxbConfigurationService implements ConfigurationService {
 
   private final XMLUtil xmlUtil = new XMLUtil();
 

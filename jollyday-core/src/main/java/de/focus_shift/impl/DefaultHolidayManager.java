@@ -197,7 +197,7 @@ public class DefaultHolidayManager extends HolidayManager {
    */
   @Override
   public void doInit() {
-    configuration = getConfigurationDataSource().getConfiguration(getManagerParameter());
+    configuration = getConfigurationService().getConfiguration(getManagerParameter());
     validateConfigurationHierarchy(configuration);
     logHierarchy(configuration, 0);
   }
