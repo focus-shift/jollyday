@@ -1,15 +1,15 @@
 package de.focus_shift.parser.impl;
 
 import de.focus_shift.Holiday;
+import de.focus_shift.parser.HolidayParser;
 import de.focus_shift.parser.functions.CalculateRelativeDatesFromChronologyWithinGregorianYear;
 import de.focus_shift.parser.functions.CreateHoliday;
 import de.focus_shift.parser.predicates.ValidLimitation;
-import de.focus_shift.spi.IslamicHoliday;
+import de.focus_shift.spi.Holidays;
 
 import java.time.LocalDate;
 import java.time.chrono.HijrahChronology;
 import java.util.List;
-import java.util.function.Function;
 import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.toList;
@@ -20,17 +20,11 @@ import static java.util.stream.Collectors.toList;
  * @author Sven Diedrichsen
  * @version $Id: $
  */
-public class IslamicHolidayParser implements Function<Integer, List<Holiday>> {
-
-  private final List<IslamicHoliday> islamicHolidayStream;
-
-  public IslamicHolidayParser(List<IslamicHoliday> islamicHolidayStream) {
-    this.islamicHolidayStream = islamicHolidayStream;
-  }
+public class IslamicHolidayParser implements HolidayParser {
 
   @Override
-  public List<Holiday> apply(Integer year) {
-    return islamicHolidayStream.stream()
+  public List<Holiday> parse(Integer year, Holidays holidays) {
+    return holidays.islamicHolidays().stream()
       .filter(new ValidLimitation(year))
       .flatMap(ih -> {
         Stream<LocalDate> islamicHolidays;
