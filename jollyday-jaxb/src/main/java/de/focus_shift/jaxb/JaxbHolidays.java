@@ -6,7 +6,6 @@ import de.focus_shift.spi.Fixed;
 import de.focus_shift.spi.FixedWeekdayBetweenFixed;
 import de.focus_shift.spi.FixedWeekdayInMonth;
 import de.focus_shift.spi.FixedWeekdayRelativeToFixed;
-import de.focus_shift.spi.HinduHoliday;
 import de.focus_shift.spi.IslamicHoliday;
 import de.focus_shift.spi.RelativeToEasterSunday;
 import de.focus_shift.spi.RelativeToFixed;
@@ -63,11 +62,6 @@ public class JaxbHolidays implements de.focus_shift.spi.Holidays {
   @Override
   public List<FixedWeekdayRelativeToFixed> fixedWeekdayRelativeToFixed() {
     return holidays.getFixedWeekdayRelativeToFixed().stream().map(JaxbFixedWeekdayRelativeToFixed::new).collect(toList());
-  }
-
-  @Override
-  public List<HinduHoliday> hinduHolidays() {
-    return holidays.getHinduHoliday().stream().map(JaxbHinduHoliday::new).collect(toList());
   }
 
   @Override
