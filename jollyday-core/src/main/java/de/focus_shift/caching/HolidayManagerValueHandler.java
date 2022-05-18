@@ -60,5 +60,4 @@ public class HolidayManagerValueHandler implements Cache.ValueHandler<HolidayMan
       throw new IllegalStateException("Cannot create manager class " + managerImplClassName, e);
     }
   }
-
 }

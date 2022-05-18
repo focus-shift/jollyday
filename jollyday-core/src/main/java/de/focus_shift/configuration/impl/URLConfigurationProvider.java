@@ -19,7 +19,6 @@ public class URLConfigurationProvider implements ConfigurationProvider {
 
   private static final Logger LOG = LoggerFactory.getLogger(URLConfigurationProvider.class);
 
-
   /**
    * Returns the properties by reading from the URLs provided by the system
    * property 'de.focus_shift.config.urls'.

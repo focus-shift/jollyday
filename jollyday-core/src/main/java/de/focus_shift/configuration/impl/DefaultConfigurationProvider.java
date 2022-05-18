@@ -21,7 +21,6 @@ public class DefaultConfigurationProvider implements ConfigurationProvider {
 
   private static final Logger LOG = LoggerFactory.getLogger(DefaultConfigurationProvider.class);
 
-
   /**
    * The name of the configuration file.
    */
