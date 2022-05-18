@@ -25,8 +25,6 @@ public interface Holidays {
 
   List<FixedWeekdayRelativeToFixed> fixedWeekdayRelativeToFixed();
 
-  List<HinduHoliday> hinduHolidays();
-
   // TODO: ? is this used anywhere?
   // Stream<HebrewHoliday> hebrewHolidays();
 
