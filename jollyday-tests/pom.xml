@@ -1,10 +1,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <artifactId>jollyday-tests</artifactId>
-  <name>tests</name>
 
-  <packaging>jar</packaging>
+  <artifactId>jollyday-tests</artifactId>
+  <name>Jollyday Tests</name>
 
   <parent>
     <groupId>de.focus-shift</groupId>
@@ -22,7 +21,7 @@
     <dependency>
       <groupId>de.focus-shift</groupId>
       <artifactId>jollyday-jaxb</artifactId>
-      <version>0.6.0-SNAPSHOT</version>
+      <version>${project.version}</version>
     </dependency>
 
     <!-- Test -->
