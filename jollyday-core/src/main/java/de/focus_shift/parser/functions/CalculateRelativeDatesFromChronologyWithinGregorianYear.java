@@ -5,7 +5,7 @@ import java.time.chrono.ChronoLocalDate;
 import java.time.chrono.Chronology;
 import java.time.temporal.ChronoField;
 import java.time.temporal.ChronoUnit;
-import java.util.function.Function;
+import java.util.function.IntFunction;
 import java.util.stream.Stream;
 
 import static java.time.Month.DECEMBER;
@@ -16,7 +16,7 @@ import static java.time.Month.JANUARY;
  * @version $
  * @since 15.03.20
  */
-public class CalculateRelativeDatesFromChronologyWithinGregorianYear implements Function<Integer, Stream<LocalDate>> {
+public class CalculateRelativeDatesFromChronologyWithinGregorianYear implements IntFunction<Stream<LocalDate>> {
 
   private final int targetMonth;
   private final int targetDay;
@@ -31,7 +31,7 @@ public class CalculateRelativeDatesFromChronologyWithinGregorianYear implements 
   }
 
   @Override
-  public Stream<LocalDate> apply(final Integer gregorianYear) {
+  public Stream<LocalDate> apply(final int gregorianYear) {
     final int absoluteShift = Math.abs(relativeShift);
 
     final LocalDate firstGregorianDate = LocalDate.of(gregorianYear, JANUARY, 1);
