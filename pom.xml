@@ -19,6 +19,14 @@
     Besides, those there will be more special calendars like currently existing NYSE calendar (New York Stock Exchange).
   </description>
   <url>https://github.com/focus-shift/jollyday</url>
+
+  <licenses>
+    <license>
+      <name>Apache License 2.0</name>
+      <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+    </license>
+  </licenses>
+
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
@@ -278,14 +286,6 @@
       </plugin>
     </plugins>
   </build>
-  <licenses>
-    <license>
-      <name>Apache 2</name>
-      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-      <distribution>repo</distribution>
-      <comments>A business-friendly OSS license</comments>
-    </license>
-  </licenses>
 
   <distributionManagement>
     <snapshotRepository>
