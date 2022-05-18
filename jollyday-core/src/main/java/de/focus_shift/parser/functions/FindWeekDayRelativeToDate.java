@@ -15,11 +15,6 @@ import static java.time.temporal.TemporalAdjusters.nextOrSame;
 import static java.time.temporal.TemporalAdjusters.previous;
 import static java.time.temporal.TemporalAdjusters.previousOrSame;
 
-/**
- * @author sdiedrichsen
- * @version $
- * @since 13.03.20
- */
 public class FindWeekDayRelativeToDate implements Function<FixedWeekdayRelativeToFixed, LocalDate> {
 
   private final LocalDate date;

@@ -11,11 +11,6 @@ import java.util.stream.Stream;
 import static java.time.Month.DECEMBER;
 import static java.time.Month.JANUARY;
 
-/**
- * @author sdiedrichsen
- * @version $
- * @since 15.03.20
- */
 public class CalculateRelativeDatesFromChronologyWithinGregorianYear implements IntFunction<Stream<LocalDate>> {
 
   private final int targetMonth;

@@ -9,11 +9,6 @@ import java.time.DayOfWeek;
 import java.time.Month;
 import java.time.Year;
 
-/**
- * @author sdiedrichsen
- * @version $
- * @since 15.03.20
- */
 public class JaxbFixedWeekdayInMonth implements FixedWeekdayInMonth {
 
   private final de.focus_shift.jaxb.mapping.FixedWeekdayInMonth fixedWeekdayInMonth;

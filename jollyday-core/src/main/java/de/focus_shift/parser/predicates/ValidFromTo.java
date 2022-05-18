@@ -4,11 +4,6 @@ import de.focus_shift.spi.Limited;
 
 import java.util.function.Predicate;
 
-/**
- * @author sdiedrichsen
- * @version $
- * @since 12.03.20
- */
 public class ValidFromTo implements Predicate<Limited> {
 
   private final int year;

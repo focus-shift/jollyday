@@ -7,11 +7,6 @@ import java.time.chrono.Chronology;
 import java.time.chrono.IsoChronology;
 import java.util.function.Function;
 
-/**
- * @author sdiedrichsen
- * @version $
- * @since 13.03.20
- */
 public class CalculateEasterSunday implements Function<Chronology, LocalDate> {
 
   private final int year;

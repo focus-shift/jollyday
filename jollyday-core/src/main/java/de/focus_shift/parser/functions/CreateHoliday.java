@@ -6,11 +6,6 @@ import de.focus_shift.spi.Described;
 import java.time.LocalDate;
 import java.util.function.Function;
 
-/**
- * @author sdiedrichsen
- * @version $
- * @since 12.03.20
- */
 public class CreateHoliday implements Function<Described, Holiday> {
 
   private final LocalDate localDate;

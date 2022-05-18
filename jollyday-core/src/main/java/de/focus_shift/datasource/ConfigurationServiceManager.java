@@ -9,8 +9,6 @@ import static de.focus_shift.ManagerParameter.CONFIGURATION_DATASOURCE_IMPL_CLAS
 /**
  * This manager is responsible for instantiating the configured configuration datasource
  * which is used to access the holiday data.
- *
- * @author sdiedrichsen
  */
 public class ConfigurationServiceManager {
 

@@ -12,11 +12,6 @@ import static java.util.Spliterator.IMMUTABLE;
 import static java.util.Spliterator.ORDERED;
 import static java.util.Spliterators.spliteratorUnknownSize;
 
-/**
- * @author sdiedrichsen
- * @version $
- * @since 12.03.20
- */
 public class FindWeekDayBetween implements Function<FixedWeekdayBetweenFixed, LocalDate>, Iterable<LocalDate> {
 
   private final LocalDate from;

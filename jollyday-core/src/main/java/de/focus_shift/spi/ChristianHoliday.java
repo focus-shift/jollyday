@@ -2,11 +2,6 @@ package de.focus_shift.spi;
 
 import java.time.chrono.Chronology;
 
-/**
- * @author sdiedrichsen
- * @version $
- * @since 10.03.20
- */
 public interface ChristianHoliday extends Limited, Described, Movable {
   ChristianHolidayType type();
 

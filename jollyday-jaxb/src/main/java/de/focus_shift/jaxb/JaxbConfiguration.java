@@ -5,11 +5,7 @@ import de.focus_shift.spi.Holidays;
 
 import java.util.stream.Stream;
 
-/**
- * @author sdiedrichsen
- * @version $
- * @since 15.03.20
- */
+
 public class JaxbConfiguration implements Configuration {
 
   private final de.focus_shift.jaxb.mapping.Configuration xmlConfiguration;

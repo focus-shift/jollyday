@@ -2,11 +2,6 @@ package de.focus_shift.spi;
 
 import java.util.List;
 
-/**
- * @author sdiedrichsen
- * @version $
- * @since 11.03.20
- */
 public interface Holidays {
 
   List<Fixed> fixed();

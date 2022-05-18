@@ -4,11 +4,7 @@ import de.focus_shift.spi.With;
 
 import java.time.DayOfWeek;
 
-/**
- * @author sdiedrichsen
- * @version $
- * @since 15.03.20
- */
+
 public class JaxbMovingCondition implements de.focus_shift.spi.MovingCondition {
 
   private final de.focus_shift.jaxb.mapping.MovingCondition movingCondition;

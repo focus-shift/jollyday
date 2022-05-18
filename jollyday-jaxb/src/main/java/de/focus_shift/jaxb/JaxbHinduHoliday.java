@@ -7,11 +7,6 @@ import de.focus_shift.spi.YearCycle;
 
 import java.time.Year;
 
-/**
- * @author sdiedrichsen
- * @version $
- * @since 15.03.20
- */
 public class JaxbHinduHoliday implements HinduHoliday {
 
   private final de.focus_shift.jaxb.mapping.HinduHoliday hinduHoliday;

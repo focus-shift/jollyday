@@ -10,11 +10,6 @@ import java.util.function.Function;
 import static java.time.temporal.TemporalAdjusters.dayOfWeekInMonth;
 import static java.time.temporal.TemporalAdjusters.lastInMonth;
 
-/**
- * @author sdiedrichsen
- * @version $
- * @since 12.03.20
- */
 public class FindWeekDayInMonth implements Function<FixedWeekdayInMonth, LocalDate> {
 
   private final int year;

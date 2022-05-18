@@ -5,11 +5,6 @@ import org.threeten.extra.chrono.JulianChronology;
 import java.time.LocalDate;
 import java.util.function.IntFunction;
 
-/**
- * @author sdiedrichsen
- * @version $
- * @since 15.03.20
- */
 public class CalculateJulianEasterSunday implements IntFunction<LocalDate> {
 
   @Override

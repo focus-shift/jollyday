@@ -4,11 +4,6 @@ import de.focus_shift.spi.Described;
 
 import java.time.LocalDate;
 
-/**
- * @author sdiedrichsen
- * @version $
- * @since 12.03.20
- */
 class DescribedDateHolder {
 
   private final LocalDate date;

@@ -6,11 +6,7 @@ import de.focus_shift.spi.ConfigurationService;
 import java.io.InputStream;
 import java.net.URL;
 
-/**
- * @author sdiedrichsen
- * @version $
- * @since 15.03.20
- */
+
 public class JaxbConfigurationService implements ConfigurationService {
 
   private final XMLUtil xmlUtil = new XMLUtil();

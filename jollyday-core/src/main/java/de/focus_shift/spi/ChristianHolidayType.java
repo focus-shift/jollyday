@@ -1,10 +1,5 @@
 package de.focus_shift.spi;
 
-/**
- * @author sdiedrichsen
- * @version $
- * @since 10.03.20
- */
 public enum ChristianHolidayType {
   GOOD_FRIDAY,
   EASTER_MONDAY,

@@ -10,11 +10,7 @@ import de.focus_shift.spi.YearCycle;
 import java.time.DayOfWeek;
 import java.time.Year;
 
-/**
- * @author sdiedrichsen
- * @version $
- * @since 15.03.20
- */
+
 public class JaxbFixedWeekdayRelativeToFixed implements FixedWeekdayRelativeToFixed {
 
   private final de.focus_shift.jaxb.mapping.FixedWeekdayRelativeToFixed fixedWeekdayRelativeToFixed;

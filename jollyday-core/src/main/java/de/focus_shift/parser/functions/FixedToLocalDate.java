@@ -5,11 +5,6 @@ import de.focus_shift.spi.Fixed;
 import java.time.LocalDate;
 import java.util.function.Function;
 
-/**
- * @author sdiedrichsen
- * @version $
- * @since 12.03.20
- */
 public class FixedToLocalDate implements Function<Fixed, LocalDate> {
 
   private final int year;

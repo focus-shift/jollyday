@@ -10,11 +10,6 @@ import org.threeten.extra.Days;
 import java.time.DayOfWeek;
 import java.time.Year;
 
-/**
- * @author sdiedrichsen
- * @version $
- * @since 15.03.20
- */
 public class JaxbRelativeToFixed implements RelativeToFixed {
 
   private final de.focus_shift.jaxb.mapping.RelativeToFixed relativeToFixed;

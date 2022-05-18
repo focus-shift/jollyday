@@ -12,11 +12,7 @@ import java.time.chrono.IsoChronology;
 
 import static de.focus_shift.jaxb.mapping.ChronologyType.JULIAN;
 
-/**
- * @author sdiedrichsen
- * @version $
- * @since 15.03.20
- */
+
 public class JaxbRelativeToEasterSunday implements RelativeToEasterSunday {
 
   private final de.focus_shift.jaxb.mapping.RelativeToEasterSunday relativeToEasterSunday;

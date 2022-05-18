@@ -11,11 +11,7 @@ import java.util.List;
 
 import static java.util.stream.Collectors.toList;
 
-/**
- * @author sdiedrichsen
- * @version $
- * @since 15.03.20
- */
+
 public class JaxbFixed implements Fixed {
 
   private final XMLUtil xmlUtil = new XMLUtil();

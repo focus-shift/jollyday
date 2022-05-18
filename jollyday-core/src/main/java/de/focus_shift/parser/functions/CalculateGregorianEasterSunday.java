@@ -6,11 +6,6 @@ import java.util.function.IntFunction;
 import static java.time.Month.APRIL;
 import static java.time.Month.MARCH;
 
-/**
- * @author sdiedrichsen
- * @version $
- * @since 15.03.20
- */
 public class CalculateGregorianEasterSunday implements IntFunction<LocalDate> {
 
   @Override

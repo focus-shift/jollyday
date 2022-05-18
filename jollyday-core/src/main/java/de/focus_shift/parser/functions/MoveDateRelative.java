@@ -10,11 +10,6 @@ import java.util.function.Function;
 import static java.time.temporal.TemporalAdjusters.nextOrSame;
 import static java.time.temporal.TemporalAdjusters.previousOrSame;
 
-/**
- * @author sdiedrichsen
- * @version $
- * @since 12.03.20
- */
 public class MoveDateRelative implements Function<Movable, LocalDate> {
 
   private final LocalDate date;

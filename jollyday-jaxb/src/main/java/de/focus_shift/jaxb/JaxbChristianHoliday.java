@@ -15,11 +15,7 @@ import java.util.List;
 import static de.focus_shift.jaxb.mapping.ChronologyType.JULIAN;
 import static java.util.stream.Collectors.toList;
 
-/**
- * @author sdiedrichsen
- * @version $
- * @since 15.03.20
- */
+
 public class JaxbChristianHoliday implements ChristianHoliday {
 
   private final de.focus_shift.jaxb.mapping.ChristianHoliday christianHoliday;
