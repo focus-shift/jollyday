@@ -40,53 +40,9 @@
 
   <developers>
     <developer>
-      <id>diedrichsen</id>
-      <email>sven.diedrichsen@gmail.com</email>
-      <name>Sven Diedrichsen</name>
-      <roles>
-        <role>Admin</role>
-        <role>Developer</role>
-      </roles>
-    </developer>
-    <developer>
-      <id>tboven</id>
-      <email>tim.boven@telenet.be</email>
-      <name>Tim Boven</name>
-      <roles>
-        <role>Developer</role>
-      </roles>
-    </developer>
-    <developer>
-      <id>stlum9495</id>
-      <email>stephen.lum@gmail.com</email>
-      <name>Stephen Lum</name>
-      <roles>
-        <role>Developer</role>
-      </roles>
-    </developer>
-    <developer>
-      <id>jppereira</id>
-      <email>jpereira@linkare.com</email>
-      <name>José Pereira</name>
-      <roles>
-        <role>Developer</role>
-      </roles>
-    </developer>
-    <developer>
-      <id>paulozenida</id>
-      <email>pzenida@linkare.com</email>
-      <name>Paulo Zenida</name>
-      <roles>
-        <role>Developer</role>
-      </roles>
-    </developer>
-    <developer>
-      <id>soujavamisterm</id>
-      <email>misterm@gmail.com</email>
-      <name>Michael Nascimento Santos</name>
-      <roles>
-        <role>Developer</role>
-      </roles>
+      <id>schneider</id>
+      <email>Tobias.Schneider@focus-shift.de</email>
+      <name>Tobias Schneider</name>
     </developer>
   </developers>
 
