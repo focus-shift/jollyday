@@ -1,7 +1,7 @@
 package de.focus_shift.parser.functions;
 
 import java.time.LocalDate;
-import java.util.function.Function;
+import java.util.function.IntFunction;
 
 import static java.time.Month.APRIL;
 import static java.time.Month.MARCH;
@@ -11,10 +11,10 @@ import static java.time.Month.MARCH;
  * @version $
  * @since 15.03.20
  */
-public class CalculateGregorianEasterSunday implements Function<Integer, LocalDate> {
+public class CalculateGregorianEasterSunday implements IntFunction<LocalDate> {
 
   @Override
-  public LocalDate apply(Integer year) {
+  public LocalDate apply(int year) {
     int a, b, c, d, e, f, g, h, i, j, k, l;
     int x, month, day;
     a = year % 19;

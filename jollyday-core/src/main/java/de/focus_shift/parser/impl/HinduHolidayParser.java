@@ -15,7 +15,7 @@ import java.util.List;
 public class HinduHolidayParser implements HolidayParser {
 
   @Override
-  public List<Holiday> parse(Integer year, Holidays holidays) {
+  public List<Holiday> parse(int year, Holidays holidays) {
     return List.of();
 		/* TODO: Implement
 		return hinduHolidayStream

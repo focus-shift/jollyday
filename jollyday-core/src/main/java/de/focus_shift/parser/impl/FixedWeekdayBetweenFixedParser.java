@@ -21,7 +21,7 @@ import static java.util.stream.Collectors.toList;
 public class FixedWeekdayBetweenFixedParser implements HolidayParser {
 
   @Override
-  public List<Holiday> parse(Integer year, Holidays holidays) {
+  public List<Holiday> parse(int year, Holidays holidays) {
     return holidays.fixedWeekdayBetweenFixed().stream()
       .filter(new ValidLimitation(year))
       .map(fwm -> new DescribedDateHolder(fwm,

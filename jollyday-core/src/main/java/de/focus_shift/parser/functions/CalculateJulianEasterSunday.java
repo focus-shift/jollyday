@@ -3,17 +3,17 @@ package de.focus_shift.parser.functions;
 import org.threeten.extra.chrono.JulianChronology;
 
 import java.time.LocalDate;
-import java.util.function.Function;
+import java.util.function.IntFunction;
 
 /**
  * @author sdiedrichsen
  * @version $
  * @since 15.03.20
  */
-public class CalculateJulianEasterSunday implements Function<Integer, LocalDate> {
+public class CalculateJulianEasterSunday implements IntFunction<LocalDate> {
 
   @Override
-  public LocalDate apply(Integer year) {
+  public LocalDate apply(int year) {
     int a, b, c, d, e;
     int x, month, day;
     a = year % 4;

@@ -14,5 +14,5 @@ public interface HolidayParser {
    * @param year   the year to parse the holiday for
    * @param config the {@link Holidays} config to use for parsing
    */
-  List<Holiday> parse(Integer year, Holidays config);
+  List<Holiday> parse(int year, Holidays config);
 }
