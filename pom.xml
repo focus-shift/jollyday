@@ -208,12 +208,6 @@
           <artifactId>sonar-maven-plugin</artifactId>
           <version>3.9.1.2184</version>
         </plugin>
-
-        <plugin>
-          <groupId>org.eclipse.transformer</groupId>
-          <artifactId>org.eclipse.transformer.maven</artifactId>
-          <version>0.2.0</version>
-        </plugin>
       </plugins>
     </pluginManagement>
 
@@ -255,23 +249,6 @@
                   <bannedImport>java.util.logging.**</bannedImport>
                 </RestrictImports>
               </rules>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-
-      <plugin>
-        <groupId>org.eclipse.transformer</groupId>
-        <artifactId>org.eclipse.transformer.maven</artifactId>
-        <executions>
-          <execution>
-            <id>jakarta-ee</id>
-            <goals>
-              <goal>run</goal>
-            </goals>
-            <phase>package</phase>
-            <configuration>
-              <classifier>jakarta</classifier>
             </configuration>
           </execution>
         </executions>
