@@ -12,7 +12,7 @@ class HolidayFRTest extends AbstractCountryTestBase {
   private static final int YEAR = 2010;
 
   @Test
-  void testManagerFRStructure()  {
+  void testManagerFRStructure() {
     validateCalendarData(ISO_CODE, YEAR);
   }
 

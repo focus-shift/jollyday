@@ -5,7 +5,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.io.IOException;
 import java.util.Collections;
 import java.util.Enumeration;
 import java.util.HashSet;
@@ -82,7 +81,6 @@ class ISOCodesTest {
 
   /**
    * Test iso codes compare en with de.
-   *
    */
   @Test
   void testISOCodesCompareENWithDE() {

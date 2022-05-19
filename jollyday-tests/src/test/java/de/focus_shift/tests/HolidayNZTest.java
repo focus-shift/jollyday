@@ -23,7 +23,7 @@ class HolidayNZTest extends AbstractCountryTestBase {
     .getInstance(ManagerParameters.create(HolidayCalendar.NEW_ZEALAND));
 
   @Test
-  void testManagerNZStructure()  {
+  void testManagerNZStructure() {
     validateCalendarData(ISO_CODE, YEAR);
   }
 

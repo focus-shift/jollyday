@@ -30,7 +30,7 @@ class HolidayUYTest extends AbstractCountryTestBase {
   }
 
   @Test
-  void testManagerUYStructure()  {
+  void testManagerUYStructure() {
     validateCalendarData("uy", 2016);
   }
 

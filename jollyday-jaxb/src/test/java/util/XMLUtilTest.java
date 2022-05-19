@@ -50,8 +50,7 @@ class XMLUtilTest {
   void testUnmarshallConfiguration() throws JAXBException {
     final JAXBContext ctx = mock(JAXBContext.class);
     final Unmarshaller unmarshaller = mock(Unmarshaller.class);
-    @SuppressWarnings("unchecked")
-    final JAXBElement<Configuration> element = mock(JAXBElement.class);
+    @SuppressWarnings("unchecked") final JAXBElement<Configuration> element = mock(JAXBElement.class);
     when(contextCreator.create(eq(XMLUtil.PACKAGE), any(ClassLoader.class))).thenReturn(null).thenReturn(ctx);
     when(ctx.createUnmarshaller()).thenReturn(unmarshaller);
     when(unmarshaller.unmarshal(inputStream)).thenReturn(element);

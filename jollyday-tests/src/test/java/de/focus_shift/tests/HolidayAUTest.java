@@ -11,22 +11,22 @@ class HolidayAUTest extends AbstractCountryTestBase {
   private static final String ISO_CODE = "au";
 
   @Test
-  void testManagerAUStructure2019BeforeUpdate()  {
+  void testManagerAUStructure2019BeforeUpdate() {
     validateCalendarData(ISO_CODE, 2019);
   }
 
   @Test
-  void testManagerAUStructure2020()  {
+  void testManagerAUStructure2020() {
     validateCalendarData(ISO_CODE, 2020, true);
   }
 
   @Test
-  void testManagerAUStructure2021()  {
+  void testManagerAUStructure2021() {
     validateCalendarData(ISO_CODE, 2021, true);
   }
 
   @Test
-  void testManagerAUStructure2022()  {
+  void testManagerAUStructure2022() {
     validateCalendarData(ISO_CODE, 2022, true);
   }
 

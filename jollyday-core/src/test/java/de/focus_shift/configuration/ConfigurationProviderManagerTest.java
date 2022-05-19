@@ -9,8 +9,6 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import java.util.Properties;
-
 import static de.focus_shift.configuration.ConfigurationProvider.CONFIG_PROVIDERS_PROPERTY;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;

@@ -18,12 +18,12 @@ class HolidayUKTest extends AbstractCountryTestBase {
   private static final String ISO_CODE = "gb";
 
   @Test
-  void testManagerUKStructure()  {
+  void testManagerUKStructure() {
     validateCalendarData(ISO_CODE, YEAR);
   }
 
   @Test
-  void testManagerUKStructure2022()  {
+  void testManagerUKStructure2022() {
     validateCalendarData(ISO_CODE, 2022);
   }
 

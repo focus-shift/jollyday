@@ -1,7 +1,6 @@
 package de.focus_shift.tests;
 
 import de.focus_shift.Holiday;
-import de.focus_shift.HolidayCalendar;
 import de.focus_shift.HolidayManager;
 import de.focus_shift.ManagerParameters;
 import de.focus_shift.tests.base.AbstractCountryTestBase;
@@ -21,14 +20,14 @@ class HolidayEGTest extends AbstractCountryTestBase {
   private final CalendarUtil calendarUtil = new CalendarUtil();
 
   @Test
-  void testNumberOfHolidays()  {
+  void testNumberOfHolidays() {
     final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(EGYPT));
     final Set<Holiday> holidays = holidayManager.getHolidays(YEAR);
     assertEquals(17, holidays.size());
   }
 
   @Test
-  void testEasterMonday2019()  {
+  void testEasterMonday2019() {
     final LocalDate expected = calendarUtil.create(YEAR, 4, 29);
     final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(EGYPT));
     final Set<Holiday> holidays = holidayManager.getHolidays(YEAR);
@@ -39,7 +38,7 @@ class HolidayEGTest extends AbstractCountryTestBase {
   }
 
   @Test
-  void testEidFitr2019()  {
+  void testEidFitr2019() {
     final LocalDate expected = calendarUtil.create(YEAR, 6, 4);
     final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(EGYPT));
     final Set<Holiday> holidays = holidayManager.getHolidays(YEAR);
@@ -50,7 +49,7 @@ class HolidayEGTest extends AbstractCountryTestBase {
   }
 
   @Test
-  void testArafaat2019()  {
+  void testArafaat2019() {
     final LocalDate expected = calendarUtil.create(YEAR, 8, 10);
     final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(EGYPT));
     final Set<Holiday> holidays = holidayManager.getHolidays(YEAR);

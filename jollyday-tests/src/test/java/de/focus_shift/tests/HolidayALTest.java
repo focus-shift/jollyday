@@ -9,7 +9,7 @@ class HolidayALTest extends AbstractCountryTestBase {
   private static final int YEAR = 2010;
 
   @Test
-  void testManagerALStructure()  {
+  void testManagerALStructure() {
     validateCalendarData(ISO_CODE, YEAR);
   }
 
