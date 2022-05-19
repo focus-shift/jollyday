@@ -1,0 +1,44 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    runs-on: ubuntu-20.04
+    env:
+      MAVEN_CLI_OPTS: "--batch-mode --no-transfer-progress --errors --fail-at-end --show-version"
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK 11
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: 11
+          cache: 'maven'
+          server-id: 'ossrh'
+          server-username: OSSRH_USERNAME
+          server-password: OSSRH_PASSWORD
+          gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
+          gpg-passphrase: GPG_PASSPHRASE
+      - name: Build with Maven
+        run: >
+          ./mvnw $MAVEN_CLI_OPTS
+          -Prelease
+          clean verify deploy
+        env:
+          OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
+          OSSRH_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
+          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+      - name: Extract release tag
+        id: vars
+        run: echo ::set-output name=version::${GITHUB_REF#refs/*/v}
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          name: Release Jollyday ${{ steps.vars.outputs.version }}
+          body_path: .chglog/${{ steps.vars.outputs.version }}.md
