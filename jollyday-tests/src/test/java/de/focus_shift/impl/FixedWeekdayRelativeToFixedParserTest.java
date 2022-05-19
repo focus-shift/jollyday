@@ -15,12 +15,8 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.assertj.core.api.Assertions.assertThat;
 
-/**
- * @author Sven
- */
 class FixedWeekdayRelativeToFixedParserTest {
 
   private final FixedWeekdayRelativeToFixedParser sut = new FixedWeekdayRelativeToFixedParser();
@@ -30,7 +26,7 @@ class FixedWeekdayRelativeToFixedParserTest {
   void testEmpty() {
     final Holidays config = new Holidays();
     final List<Holiday> holidays = sut.parse(2011, new JaxbHolidays(config));
-    assertTrue(holidays.isEmpty(), "Result is not empty.");
+    assertThat(holidays).isEmpty();
   }
 
   @Test
@@ -49,7 +45,7 @@ class FixedWeekdayRelativeToFixedParserTest {
     rule.setValidTo(2010);
 
     final List<Holiday> holidays = sut.parse(2011, new JaxbHolidays(config));
-    assertTrue(holidays.isEmpty(), "Result is not empty.");
+    assertThat(holidays).isEmpty();
   }
 
   @Test
@@ -68,8 +64,8 @@ class FixedWeekdayRelativeToFixedParserTest {
     config.getFixedWeekdayRelativeToFixed().add(rule);
 
     final List<Holiday> holidays = sut.parse(2011, new JaxbHolidays(config));
-    assertEquals(1, holidays.size(), "Wrong number of dates.");
-    assertEquals(calendarUtil.create(2011, 1, 24), holidays.iterator().next().getDate(), "Wrong date.");
+    assertThat(holidays).hasSize(1);
+    assertThat(holidays.iterator().next().getDate()).isEqualTo(calendarUtil.create(2011, 1, 24));
   }
 
   @Test
@@ -87,8 +83,8 @@ class FixedWeekdayRelativeToFixedParserTest {
     config.getFixedWeekdayRelativeToFixed().add(rule);
 
     final List<Holiday> holidays = sut.parse(2011, new JaxbHolidays(config));
-    assertEquals(1, holidays.size(), "Wrong number of dates.");
-    assertEquals(calendarUtil.create(2011, 1, 17), holidays.iterator().next().getDate(), "Wrong date.");
+    assertThat(holidays).hasSize(1);
+    assertThat(holidays.iterator().next().getDate()).isEqualTo(calendarUtil.create(2011, 1, 17));
   }
 
   @Test
@@ -107,8 +103,8 @@ class FixedWeekdayRelativeToFixedParserTest {
     config.getFixedWeekdayRelativeToFixed().add(rule);
 
     final List<Holiday> holidays = sut.parse(2011, new JaxbHolidays(config));
-    assertEquals(1, holidays.size(), "Wrong number of dates.");
-    assertEquals(calendarUtil.create(2011, 2, 14), holidays.iterator().next().getDate(), "Wrong date.");
+    assertThat(holidays).hasSize(1);
+    assertThat(holidays.iterator().next().getDate()).isEqualTo(calendarUtil.create(2011, 2, 14));
   }
 
   @Test
@@ -127,8 +123,8 @@ class FixedWeekdayRelativeToFixedParserTest {
     config.getFixedWeekdayRelativeToFixed().add(rule);
 
     final List<Holiday> holidays = sut.parse(2011, new JaxbHolidays(config));
-    assertEquals(1, holidays.size(), "Wrong number of dates.");
-    assertEquals(calendarUtil.create(2011, 4, 12), holidays.iterator().next().getDate(), "Wrong date.");
+    assertThat(holidays).hasSize(1);
+    assertThat(holidays.iterator().next().getDate()).isEqualTo(calendarUtil.create(2011, 4, 12));
   }
 
   @Test
@@ -147,8 +143,8 @@ class FixedWeekdayRelativeToFixedParserTest {
     config.getFixedWeekdayRelativeToFixed().add(rule);
 
     final List<Holiday> holidays = sut.parse(2019, new JaxbHolidays(config));
-    assertEquals(1, holidays.size(), "Wrong number of dates.");
-    assertEquals(calendarUtil.create(2019, 6, 11), holidays.iterator().next().getDate(), "Wrong date.");
+    assertThat(holidays).hasSize(1);
+    assertThat(holidays.iterator().next().getDate()).isEqualTo(calendarUtil.create(2019, 6, 11));
   }
 
   @Test
@@ -168,8 +164,8 @@ class FixedWeekdayRelativeToFixedParserTest {
     config.getFixedWeekdayRelativeToFixed().add(rule);
 
     final List<Holiday> holidays = sut.parse(2019, new JaxbHolidays(config));
-    assertEquals(1, holidays.size(), "Wrong number of dates.");
-    assertEquals(calendarUtil.create(2019, 6, 11), holidays.iterator().next().getDate(), "Wrong date.");
+    assertThat(holidays).hasSize(1);
+    assertThat(holidays.iterator().next().getDate()).isEqualTo(calendarUtil.create(2019, 6, 11));
   }
 
 /* TODO

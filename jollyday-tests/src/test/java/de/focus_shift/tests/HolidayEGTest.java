@@ -11,8 +11,7 @@ import java.time.LocalDate;
 import java.util.Set;
 
 import static de.focus_shift.HolidayCalendar.EGYPT;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.assertj.core.api.Assertions.assertThat;
 
 class HolidayEGTest extends AbstractCountryTestBase {
 
@@ -23,7 +22,7 @@ class HolidayEGTest extends AbstractCountryTestBase {
   void testNumberOfHolidays() {
     final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(EGYPT));
     final Set<Holiday> holidays = holidayManager.getHolidays(YEAR);
-    assertEquals(17, holidays.size());
+    assertThat(holidays).hasSize(17);
   }
 
   @Test
@@ -31,10 +30,9 @@ class HolidayEGTest extends AbstractCountryTestBase {
     final LocalDate expected = calendarUtil.create(YEAR, 4, 29);
     final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(EGYPT));
     final Set<Holiday> holidays = holidayManager.getHolidays(YEAR);
-    assertEquals(17, holidays.size());
-    assertTrue(holidays.stream().filter(holiday -> holiday.getPropertiesKey().equals("christian.EASTER_MONDAY")
-        && holiday.getDate().equals(expected)).count() == 1,
-      "Wrong / missing holiday for Easter Monday");
+    assertThat(holidays).hasSize(17);
+    assertThat(holidays.stream().filter(holiday -> holiday.getPropertiesKey().equals("christian.EASTER_MONDAY")
+      && holiday.getDate().equals(expected)).count()).isEqualTo(1);
   }
 
   @Test
@@ -42,10 +40,9 @@ class HolidayEGTest extends AbstractCountryTestBase {
     final LocalDate expected = calendarUtil.create(YEAR, 6, 4);
     final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(EGYPT));
     final Set<Holiday> holidays = holidayManager.getHolidays(YEAR);
-    assertEquals(17, holidays.size());
-    assertTrue(holidays.stream().filter(holiday -> holiday.getPropertiesKey().equals("islamic.ID_AL_FITR")
-        && holiday.getDate().equals(expected)).count() == 1,
-      "Wrong / missing holiday for Eid Fitr");
+    assertThat(holidays).hasSize(17);
+    assertThat(holidays.stream().filter(holiday -> holiday.getPropertiesKey().equals("islamic.ID_AL_FITR")
+      && holiday.getDate().equals(expected)).count()).isEqualTo(1);
   }
 
   @Test
@@ -53,10 +50,8 @@ class HolidayEGTest extends AbstractCountryTestBase {
     final LocalDate expected = calendarUtil.create(YEAR, 8, 10);
     final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(EGYPT));
     final Set<Holiday> holidays = holidayManager.getHolidays(YEAR);
-    assertEquals(17, holidays.size());
-    assertTrue(holidays.stream().filter(
-          holiday -> holiday.getPropertiesKey().equals("islamic.ARAFAAT") && holiday.getDate().equals(expected))
-        .count() == 1,
-      "Wrong / missing holiday for Arafaat");
+    assertThat(holidays).hasSize(17);
+    assertThat(holidays.stream().filter(holiday -> holiday.getPropertiesKey().equals("islamic.ARAFAAT")
+      && holiday.getDate().equals(expected)).count()).isEqualTo(1);
   }
 }

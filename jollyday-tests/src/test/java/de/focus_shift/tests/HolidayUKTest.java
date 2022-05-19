@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 import java.time.LocalDate;
 import java.util.Set;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.assertj.core.api.Assertions.assertThat;
 
 class HolidayUKTest extends AbstractCountryTestBase {
 
@@ -47,8 +47,8 @@ class HolidayUKTest extends AbstractCountryTestBase {
     final LocalDate boxingday = LocalDate.of(year, 12, dayOfBoxingday);
     final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(HolidayCalendar.UNITED_KINGDOM));
     final Set<Holiday> holidays = holidayManager.getHolidays(year);
-    assertTrue(contains(christmas, holidays), "There should be christmas on " + christmas);
-    assertTrue(contains(boxingday, holidays), "There should be boxing day on " + boxingday);
+    assertThat(contains(christmas, holidays)).isTrue();
+    assertThat(contains(boxingday, holidays)).isTrue();
   }
 
   private boolean contains(LocalDate localDate, Set<Holiday> holidays) {

@@ -9,8 +9,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * @author svdi1de
@@ -23,7 +22,7 @@ class FixedWeekdayInMonthParserTest {
   void testEmpty() {
     final Holidays config = new Holidays();
     final List<Holiday> holidays = sut.parse(2010, new JaxbHolidays(config));
-    assertTrue(holidays.isEmpty(), "Expected to be empty.");
+    assertThat(holidays).isEmpty();
   }
 
   @Test
@@ -34,6 +33,6 @@ class FixedWeekdayInMonthParserTest {
     config.getFixedWeekday().add(e);
 
     final List<Holiday> holidays = sut.parse(2010, new JaxbHolidays(config));
-    assertEquals(0, holidays.size(), "Expected to be empty.");
+    assertThat(holidays).isEmpty();
   }
 }

@@ -8,9 +8,8 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Properties;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 class ConfigurationServiceManagerTest {
 
@@ -20,26 +19,30 @@ class ConfigurationServiceManagerTest {
 
   @Test
   void testGetConfigurationServiceMissingConfig() {
-    assertThrows(IllegalStateException.class, () -> configurationServiceManager.getConfigurationService(managerParameter));
+    assertThatThrownBy(() -> configurationServiceManager.getConfigurationService(managerParameter))
+      .isInstanceOf(IllegalStateException.class);
   }
 
   @Test
   void testGetConfigurationServiceMissingClass() {
     managerParameter.setProperty(ManagerParameter.CONFIGURATION_DATASOURCE_IMPL_CLASS, "ThisIsNoClass");
-    assertThrows(IllegalStateException.class, () -> configurationServiceManager.getConfigurationService(managerParameter));
+    assertThatThrownBy(() -> configurationServiceManager.getConfigurationService(managerParameter))
+      .isInstanceOf(IllegalStateException.class);
   }
 
   @Test
   void testGetConfigurationServiceMissingConstructor() {
     managerParameter.setProperty(ManagerParameter.CONFIGURATION_DATASOURCE_IMPL_CLASS, "java.util.Calendar");
-    assertThrows(IllegalStateException.class, () -> configurationServiceManager.getConfigurationService(managerParameter));
+    assertThatThrownBy(() -> configurationServiceManager.getConfigurationService(managerParameter))
+      .isInstanceOf(IllegalStateException.class);
   }
 
   @Test
   void testGetConfigurationServiceXmlFileDataSource() {
     managerParameter.setProperty(ManagerParameter.CONFIGURATION_DATASOURCE_IMPL_CLASS, JaxbConfigurationService.class.getName());
-    ConfigurationService datasource = configurationServiceManager.getConfigurationService(managerParameter);
-    assertNotNull(datasource, "Missing datasource.");
-    assertEquals(JaxbConfigurationService.class, datasource.getClass(), "Unexpected class.");
+    final ConfigurationService datasource = configurationServiceManager.getConfigurationService(managerParameter);
+    assertThat(datasource)
+      .isNotNull()
+      .isInstanceOf(JaxbConfigurationService.class);
   }
 }

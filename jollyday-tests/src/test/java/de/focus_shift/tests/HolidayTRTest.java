@@ -11,8 +11,7 @@ import org.junit.jupiter.api.Test;
 import java.time.LocalDate;
 import java.util.Set;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.assertj.core.api.Assertions.assertThat;
 
 class HolidayTRTest extends AbstractCountryTestBase {
 
@@ -28,18 +27,18 @@ class HolidayTRTest extends AbstractCountryTestBase {
 
   @Test
   void testNumberOfHolidays() {
-    HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(HolidayCalendar.TURKEY));
-    Set<Holiday> holidays = holidayManager.getHolidays(YEAR);
-    assertEquals(9, holidays.size());
+    final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(HolidayCalendar.TURKEY));
+    final Set<Holiday> holidays = holidayManager.getHolidays(YEAR);
+    assertThat(holidays).hasSize(9);
   }
 
   @Test
   void testRamazan2019() {
     // Actually, in Turkey, Ramadan is one day after Eid Mubarak, for keep the Eid al Fitr for now
-    LocalDate expected = calendarUtil.create(YEAR, 6, 4);
-    HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(HolidayCalendar.TURKEY));
-    Set<Holiday> holidays = holidayManager.getHolidays(YEAR);
-    assertEquals(9, holidays.size());
+    final LocalDate expected = calendarUtil.create(YEAR, 6, 4);
+    final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(HolidayCalendar.TURKEY));
+    final Set<Holiday> holidays = holidayManager.getHolidays(YEAR);
+    assertThat(holidays).hasSize(9);
     boolean found = false;
     for (Holiday holiday : holidays) {
       if (holiday.getPropertiesKey().equals("islamic.ID_AL_FITR")) {
@@ -48,15 +47,15 @@ class HolidayTRTest extends AbstractCountryTestBase {
         }
       }
     }
-    assertTrue(found, "Wrong / missing holiday for Ramazan");
+    assertThat(found).isTrue();
   }
 
   @Test
   void testKurban2019() {
-    LocalDate expected = calendarUtil.create(YEAR, 8, 11);
-    HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(HolidayCalendar.TURKEY));
-    Set<Holiday> holidays = holidayManager.getHolidays(YEAR);
-    assertEquals(9, holidays.size());
+    final LocalDate expected = calendarUtil.create(YEAR, 8, 11);
+    final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(HolidayCalendar.TURKEY));
+    final Set<Holiday> holidays = holidayManager.getHolidays(YEAR);
+    assertThat(holidays).hasSize(9);
     boolean found = false;
     for (Holiday holiday : holidays) {
       if (holiday.getPropertiesKey().equals("islamic.ID_UL_ADHA")) {
@@ -65,6 +64,6 @@ class HolidayTRTest extends AbstractCountryTestBase {
         }
       }
     }
-    assertTrue(found, "Wrong / missing holiday for Kurban");
+    assertThat(found).isTrue();
   }
 }

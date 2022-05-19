@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
 import java.time.LocalDate;
 import java.util.Set;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.assertj.core.api.Assertions.assertThat;
 
 class HolidayNZTest extends AbstractCountryTestBase {
 
@@ -30,23 +30,22 @@ class HolidayNZTest extends AbstractCountryTestBase {
   @Test
   void testSouthlandAnniversary2011() {
     // Monday closest to 17 January
-    LocalDate expected = calendarUtil.create(2011, 1, 17);
-    Set<Holiday> holidays = holidayManager.getHolidays(2011, "stl");
+    final LocalDate expected = calendarUtil.create(2011, 1, 17);
+    final Set<Holiday> holidays = holidayManager.getHolidays(2011, "stl");
 
-    boolean found = holidays.stream().anyMatch(holiday -> holiday.getPropertiesKey().equals("SOUTHLAND_ANNIVERSARY")
-      && holiday.getDate().equals(expected));
-    assertTrue(found, "Did not find expected Southland Anniversary day at " + expected + " in 2011: " + holidays);
+    boolean found = holidays.stream()
+      .anyMatch(holiday -> holiday.getPropertiesKey().equals("SOUTHLAND_ANNIVERSARY") && holiday.getDate().equals(expected));
+    assertThat(found).isTrue();
   }
 
   @Test
   void testSouthlandAnniversary2012() {
     // Easter Tuesday
-    LocalDate expected = calendarUtil.create(2012, 4, 10);
-    Set<Holiday> holidays = holidayManager.getHolidays(2012, "stl");
+    final LocalDate expected = calendarUtil.create(2012, 4, 10);
+    final Set<Holiday> holidays = holidayManager.getHolidays(2012, "stl");
 
-    boolean found = holidays.stream().anyMatch(holiday -> holiday.getPropertiesKey().equals("SOUTHLAND_ANNIVERSARY")
-      && holiday.getDate().equals(expected));
-    assertTrue(found, "Did not find expected Southland Anniversary day at " + expected + " in 2012: " + holidays);
+    boolean found = holidays.stream()
+      .anyMatch(holiday -> holiday.getPropertiesKey().equals("SOUTHLAND_ANNIVERSARY") && holiday.getDate().equals(expected));
+    assertThat(found).isTrue();
   }
-
 }

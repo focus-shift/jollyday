@@ -12,8 +12,7 @@ import java.util.Locale;
 import java.util.ResourceBundle;
 import java.util.Set;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.fail;
 
 /**
@@ -23,7 +22,7 @@ import static org.junit.jupiter.api.Assertions.fail;
  */
 class ISOCodesTest {
 
-  private static final int NUMBER_OF_ISOCOUNTRIES = 248;
+  private static final int NUMBER_OF_ISO_COUNTRIES = 248;
 
   private Locale defaultLocale;
 
@@ -53,9 +52,10 @@ class ISOCodesTest {
   @Test
   void testISOCodes() {
     Locale.setDefault(defaultLocale);
-    Set<String> isoCodes = resourceUtil.getISOCodes();
-    assertNotNull(isoCodes);
-    assertEquals(NUMBER_OF_ISOCOUNTRIES, isoCodes.size(), "Wrong number of ISO codes.");
+    final Set<String> isoCodes = resourceUtil.getISOCodes();
+    assertThat(isoCodes)
+      .isNotNull()
+      .hasSize(NUMBER_OF_ISO_COUNTRIES);
   }
 
   /**
@@ -63,9 +63,10 @@ class ISOCodesTest {
    */
   @Test
   void testISOCodesEN() {
-    Set<String> isoCodes = resourceUtil.getISOCodes();
-    assertNotNull(isoCodes);
-    assertEquals(NUMBER_OF_ISOCOUNTRIES, isoCodes.size(), "Wrong number of ISO codes.");
+    final Set<String> isoCodes = resourceUtil.getISOCodes();
+    assertThat(isoCodes)
+      .isNotNull()
+      .hasSize(NUMBER_OF_ISO_COUNTRIES);
   }
 
   /**
@@ -74,9 +75,10 @@ class ISOCodesTest {
   @Test
   void testISOCodesDE() {
     Locale.setDefault(Locale.GERMANY);
-    Set<String> isoCodes = resourceUtil.getISOCodes();
-    assertNotNull(isoCodes);
-    assertEquals(NUMBER_OF_ISOCOUNTRIES, isoCodes.size(), "Wrong number of ISO codes.");
+    final Set<String> isoCodes = resourceUtil.getISOCodes();
+    assertThat(isoCodes)
+      .isNotNull()
+      .hasSize(NUMBER_OF_ISO_COUNTRIES);
   }
 
   /**
@@ -84,8 +86,8 @@ class ISOCodesTest {
    */
   @Test
   void testISOCodesCompareENWithDE() {
-    ResourceBundle en = load(Locale.ENGLISH);
-    ResourceBundle de = load(Locale.GERMANY);
+    final ResourceBundle en = load(Locale.ENGLISH);
+    final ResourceBundle de = load(Locale.GERMANY);
     compareL1WithL2(en, de);
     compareL1WithL2(de, en);
   }
@@ -97,12 +99,12 @@ class ISOCodesTest {
    * @param l2 the second language
    */
   private void compareL1WithL2(ResourceBundle l1, ResourceBundle l2) {
-    Locale locale = "".equals(l2.getLocale().getCountry()) ? Locale.ENGLISH : l2.getLocale();
-    Enumeration<String> keys = l1.getKeys();
-    Set<String> l2KeySet = new HashSet<>(Collections.list(l2.getKeys()));
-    StringBuilder misses = new StringBuilder();
+    final Locale locale = "".equals(l2.getLocale().getCountry()) ? Locale.ENGLISH : l2.getLocale();
+    final Enumeration<String> keys = l1.getKeys();
+    final Set<String> l2KeySet = new HashSet<>(Collections.list(l2.getKeys()));
+    final StringBuilder misses = new StringBuilder();
     while (keys.hasMoreElements()) {
-      String propertyName = keys.nextElement();
+      final String propertyName = keys.nextElement();
       if (!l2KeySet.contains(propertyName)) {
         misses.append(locale).append(" misses ").append(propertyName).append('\n');
       }

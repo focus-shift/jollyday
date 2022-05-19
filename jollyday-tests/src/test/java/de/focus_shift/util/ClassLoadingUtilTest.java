@@ -2,8 +2,8 @@ package de.focus_shift.util;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertSame;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 class ClassLoadingUtilTest {
 
@@ -11,18 +11,16 @@ class ClassLoadingUtilTest {
 
   @Test
   void testGetClassloader() {
-    assertSame(Thread.currentThread().getContextClassLoader(),
-      classLoadingUtil.getClassloader(),
-      "Expected the current threads classloader.");
+    assertThat(classLoadingUtil.getClassloader()).isEqualTo(Thread.currentThread().getContextClassLoader());
   }
 
   @Test
   void testClassNotFound() {
-    assertThrows(ClassNotFoundException.class, () -> classLoadingUtil.loadClass(""));
+    assertThatThrownBy(() -> classLoadingUtil.loadClass("")).isInstanceOf(ClassNotFoundException.class);
   }
 
   @Test
   void testClassloadingCorrect() throws ClassNotFoundException {
-    assertSame(ClassLoadingUtil.class, classLoadingUtil.loadClass(ClassLoadingUtil.class.getName()));
+    assertThat(classLoadingUtil.loadClass(ClassLoadingUtil.class.getName())).isEqualTo(ClassLoadingUtil.class);
   }
 }

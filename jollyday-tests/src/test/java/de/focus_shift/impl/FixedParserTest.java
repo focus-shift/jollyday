@@ -27,12 +27,9 @@ import static de.focus_shift.jaxb.mapping.Weekday.SATURDAY;
 import static de.focus_shift.jaxb.mapping.Weekday.SUNDAY;
 import static de.focus_shift.jaxb.mapping.With.NEXT;
 import static de.focus_shift.jaxb.mapping.With.PREVIOUS;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.assertj.core.api.Assertions.assertThat;
 
-/**
- * @author Sven
- */
+
 class FixedParserTest {
 
   private final FixedParser sut = new FixedParser();
@@ -62,33 +59,33 @@ class FixedParserTest {
   }
 
   @Test
-  void testCyle2YearsInvalid() {
+  void testCycle2YearsInvalid() {
     final Fixed fixed = createFixed(4, JANUARY);
     fixed.setValidFrom(2010);
     fixed.setEvery("TWO_YEARS");
     final Holidays config = createHolidays(fixed);
 
     final List<Holiday> holidays = sut.parse(2011, new JaxbHolidays(config));
-    assertTrue(holidays.isEmpty(), "Expected to be empty.");
+    assertThat(holidays).isEmpty();
   }
 
   @Test
-  void testCyle3Years() {
+  void testCycle3Years() {
     final Fixed fixed = createFixed(4, JANUARY);
     fixed.setValidFrom(2010);
     fixed.setEvery("THREE_YEARS");
     final Holidays config = createHolidays(fixed);
     final List<Holiday> holidays = sut.parse(2013, new JaxbHolidays(config));
-    assertEquals(1, holidays.size(), "Wrong number of holidays.");
+    assertThat(holidays).hasSize(1);
   }
 
   private void containsAll(List<Holiday> list, LocalDate... dates) {
-    assertEquals(dates.length, list.size(), "Number of holidays.");
-    List<LocalDate> expected = new ArrayList<>(Arrays.asList(dates));
+    assertThat(list).hasSameSizeAs(dates);
+    final List<LocalDate> expected = new ArrayList<>(Arrays.asList(dates));
     Collections.sort(expected);
     Collections.sort(list);
     for (int i = 0; i < expected.size(); i++) {
-      assertEquals(expected.get(i), list.get(i).getDate(), "Missing date.");
+      assertThat(list.get(i).getDate()).isEqualTo(expected.get(i));
     }
   }
 
@@ -98,9 +95,6 @@ class FixedParserTest {
     return config;
   }
 
-  /**
-   * @return
-   */
   Fixed createFixed(int day, Month m, MovingCondition... mc) {
     final Fixed fixed = new Fixed();
     fixed.setDay(day);

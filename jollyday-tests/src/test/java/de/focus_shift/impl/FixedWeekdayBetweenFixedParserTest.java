@@ -12,8 +12,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * @author svdi1de
@@ -27,7 +26,7 @@ class FixedWeekdayBetweenFixedParserTest extends FixedParserTest {
   void testEmpty() {
     final Holidays config = new Holidays();
     final List<Holiday> holidays = sut.parse(2010, new JaxbHolidays(config));
-    assertTrue(holidays.isEmpty(), "Expected to be empty.");
+    assertThat(holidays).isEmpty();
   }
 
   @Test
@@ -38,7 +37,7 @@ class FixedWeekdayBetweenFixedParserTest extends FixedParserTest {
     config.getFixedWeekdayBetweenFixed().add(e);
 
     final List<Holiday> holidays = sut.parse(2010, new JaxbHolidays(config));
-    assertTrue(holidays.isEmpty(), "Expected to be empty.");
+    assertThat(holidays).isEmpty();
   }
 
   @Test
@@ -51,7 +50,7 @@ class FixedWeekdayBetweenFixedParserTest extends FixedParserTest {
     config.getFixedWeekdayBetweenFixed().add(e);
 
     final List<Holiday> holidays = sut.parse(2011, new JaxbHolidays(config));
-    assertEquals(1, holidays.size(), "Wrong number of results.");
-    assertEquals(calendarUtil.create(2011, 1, 19), holidays.iterator().next().getDate(), "Wrong date.");
+    assertThat(holidays).hasSize(1);
+    assertThat(holidays.iterator().next().getDate()).isEqualTo(calendarUtil.create(2011, 1, 19));
   }
 }
