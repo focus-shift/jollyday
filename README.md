@@ -2,6 +2,8 @@
 
 Jollyday is a java library to query public holidays. Currently, we support **over 70 countries**.
 
+Thanks to @svendiedrichsen who started jollyday!
+
 ## How to use it
 
 **Jollyday** is based on **Java 11** and can be used directly as dependency via maven or gradle e.g.
