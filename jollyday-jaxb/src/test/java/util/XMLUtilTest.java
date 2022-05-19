@@ -15,7 +15,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import java.io.IOException;
 import java.io.InputStream;
 
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.mockito.Mockito.any;
 import static org.mockito.Mockito.eq;
 import static org.mockito.Mockito.mock;
@@ -36,13 +36,13 @@ class XMLUtilTest {
 
   @Test
   void testUnmarshallConfigurationNullCheck() {
-    assertThrows(IllegalArgumentException.class, () -> xmlUtil.unmarshallConfiguration(null));
+    assertThatThrownBy(() -> xmlUtil.unmarshallConfiguration(null)).isInstanceOf(IllegalArgumentException.class);
   }
 
   @Test
   void testUnmarshallConfigurationException() throws IOException, JAXBException {
     when(contextCreator.create(eq(XMLUtil.PACKAGE), any(ClassLoader.class))).thenThrow(new JAXBException("")).thenThrow(new JAXBException(""));
-    assertThrows(IllegalStateException.class, () -> xmlUtil.unmarshallConfiguration(inputStream));
+    assertThatThrownBy(() -> xmlUtil.unmarshallConfiguration(inputStream)).isInstanceOf(IllegalStateException.class);
     verify(inputStream, never()).close();
   }
 

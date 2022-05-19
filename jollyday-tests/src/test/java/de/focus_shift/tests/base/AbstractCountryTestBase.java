@@ -13,10 +13,6 @@ import java.util.Locale;
 import java.util.Set;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertNotSame;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
 
 public abstract class AbstractCountryTestBase {
@@ -30,11 +26,11 @@ public abstract class AbstractCountryTestBase {
    * @param found    This is the real live data structure.
    */
   protected void compareHierarchies(CalendarHierarchy expected, CalendarHierarchy found) {
-    assertNotNull(found.getDescription(), "Null description");
-    assertEquals(expected.getId(), found.getId(), "Wrong hierarchy id.");
-    assertEquals(expected.getChildren().size(), found.getChildren().size(), "Number of children of '" + expected.getDescription() + "' wrong.");
+    assertThat(found.getDescription()).isNotNull();
+    assertThat(found.getId()).isEqualTo(expected.getId());
+    assertThat(found.getChildren()).hasSize(expected.getChildren().size());
     for (String id : expected.getChildren().keySet()) {
-      assertTrue(found.getChildren().containsKey(id), "Missing " + id + " within " + found.getId());
+      assertThat(found.getChildren()).containsKey(id);
       compareHierarchies(expected.getChildren().get(id), found.getChildren().get(id));
     }
   }
@@ -49,7 +45,7 @@ public abstract class AbstractCountryTestBase {
     final Set<Holiday> expectedHolidays = expected.getHolidays(year, args.toArray(new String[]{}));
     final Set<Holiday> foundHolidays = found.getHolidays(year, args.toArray(new String[]{}));
     for (Holiday expectedHoliday : expectedHolidays) {
-      assertNotNull(expectedHoliday.getDescription(), "Description is null.");
+      assertThat(expectedHoliday.getDescription()).isNotNull();
       if (!calendarUtil.contains(foundHolidays, expectedHoliday.getDate())) {
         fail("Could not find " + expectedHoliday + " in " + h.getDescription() + " - " + foundHolidays);
       }
@@ -61,7 +57,7 @@ public abstract class AbstractCountryTestBase {
     }
 
     for (String id : h.getChildren().keySet()) {
-      ArrayList<String> newArgs = new ArrayList<>(args);
+      final ArrayList<String> newArgs = new ArrayList<>(args);
       newArgs.add(id);
       compareDates(expected, found, h.getChildren().get(id), newArgs, year, assertAllHolidaysChecked);
     }
@@ -95,7 +91,7 @@ public abstract class AbstractCountryTestBase {
     try {
       final HolidayManager defaultManager = HolidayManager.getInstance();
       final HolidayManager countryManager = HolidayManager.getInstance(ManagerParameters.create(countryCalendar, null));
-      assertEquals(defaultManager, countryManager, "Unexpected manager found");
+      assertThat(countryManager).isEqualTo(defaultManager);
     } catch (Exception e) {
       fail("Unexpected error occurred: " + e.getClass().getName() + " - " + e.getMessage());
     } finally {
@@ -113,7 +109,7 @@ public abstract class AbstractCountryTestBase {
     try {
       final HolidayManager defaultManager = HolidayManager.getInstance();
       final HolidayManager countryManager = HolidayManager.getInstance(ManagerParameters.create(countryCalendar, null));
-      assertNotSame(defaultManager, countryManager, "Unexpected manager found");
+      assertThat(countryManager).isNotEqualTo(defaultManager);
     } catch (Exception e) {
       fail("Unexpected error occurred: " + e.getClass().getName() + " - " + e.getMessage());
     } finally {

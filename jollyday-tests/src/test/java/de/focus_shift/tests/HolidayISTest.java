@@ -3,9 +3,6 @@ package de.focus_shift.tests;
 import de.focus_shift.tests.base.AbstractCountryTestBase;
 import org.junit.jupiter.api.Test;
 
-/**
- * @author Sven
- */
 class HolidayISTest extends AbstractCountryTestBase {
 
   private static final int YEAR = 2010;

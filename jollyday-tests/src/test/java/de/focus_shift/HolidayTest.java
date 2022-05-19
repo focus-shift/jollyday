@@ -4,37 +4,35 @@ import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static de.focus_shift.HolidayType.OFFICIAL_HOLIDAY;
+import static org.assertj.core.api.Assertions.assertThat;
 
 class HolidayTest {
 
   @Test
   void testComparable() {
-    final Holiday holiday = new Holiday(LocalDate.of(2015, 1, 1), null, HolidayType.OFFICIAL_HOLIDAY);
-    assertTrue(holiday instanceof Comparable, "Holiday does not implement the Comparable interface.");
+    final Holiday holiday = new Holiday(LocalDate.of(2015, 1, 1), null, OFFICIAL_HOLIDAY);
+    assertThat(holiday).isInstanceOf(Comparable.class);
   }
 
   @Test
   void testCompareToLess() {
-    final Holiday newYear = new Holiday(LocalDate.of(2015, 1, 1), null, HolidayType.OFFICIAL_HOLIDAY);
-    final Holiday christmas = new Holiday(LocalDate.of(2015, 12, 25), null, HolidayType.OFFICIAL_HOLIDAY);
-    int actual = newYear.compareTo(christmas);
-    assertTrue(actual < 0, "Wrong holiday comparator value for less.");
+    final Holiday newYear = new Holiday(LocalDate.of(2015, 1, 1), null, OFFICIAL_HOLIDAY);
+    final Holiday christmas = new Holiday(LocalDate.of(2015, 12, 25), null, OFFICIAL_HOLIDAY);
+    assertThat(newYear).isLessThan(christmas);
   }
 
   @Test
   void testCompareToGreater() {
-    final Holiday christmas = new Holiday(LocalDate.of(2015, 12, 25), null, HolidayType.OFFICIAL_HOLIDAY);
-    final Holiday newYear = new Holiday(LocalDate.of(2015, 1, 1), null, HolidayType.OFFICIAL_HOLIDAY);
-    int actual = christmas.compareTo(newYear);
-    assertTrue(actual > 0, "Wrong holiday comparator value for greater.");
+    final Holiday christmas = new Holiday(LocalDate.of(2015, 12, 25), null, OFFICIAL_HOLIDAY);
+    final Holiday newYear = new Holiday(LocalDate.of(2015, 1, 1), null, OFFICIAL_HOLIDAY);
+    assertThat(christmas).isGreaterThan(newYear);
   }
 
   @Test
   void testCompareToEqual() {
-    final Holiday firstDayOfYear = new Holiday(LocalDate.of(2015, 1, 1), null, HolidayType.OFFICIAL_HOLIDAY);
-    final Holiday newYear = new Holiday(LocalDate.of(2015, 1, 1), null, HolidayType.OFFICIAL_HOLIDAY);
-    int actual = firstDayOfYear.compareTo(newYear);
-    assertTrue(actual == 0, "Wrong holiday comparator for equal.");
+    final Holiday firstDayOfYear = new Holiday(LocalDate.of(2015, 1, 1), null, OFFICIAL_HOLIDAY);
+    final Holiday newYear = new Holiday(LocalDate.of(2015, 1, 1), null, OFFICIAL_HOLIDAY);
+    assertThat(firstDayOfYear).isEqualByComparingTo(newYear);
   }
 }

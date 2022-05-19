@@ -32,13 +32,13 @@ class HolidayAUTest extends AbstractCountryTestBase {
 
   @Test
   void testManagerAULoadFromUrl() {
-    HolidayManager calendarPartLoaded = HolidayManager.getInstance(ManagerParameters.create("test_au_2020"));
-    HolidayManager urlLoaded = HolidayManager.getInstance(
+    final HolidayManager calendarPartLoaded = HolidayManager.getInstance(ManagerParameters.create("test_au_2020"));
+    final HolidayManager urlLoaded = HolidayManager.getInstance(
       ManagerParameters.create(AbstractCountryTestBase.class.getClassLoader().getResource("holidays/Holidays_test_au_2020.xml"))
     );
 
-    CalendarHierarchy dataHierarchy = calendarPartLoaded.getCalendarHierarchy();
-    CalendarHierarchy testHierarchy = urlLoaded.getCalendarHierarchy();
+    final CalendarHierarchy dataHierarchy = calendarPartLoaded.getCalendarHierarchy();
+    final CalendarHierarchy testHierarchy = urlLoaded.getCalendarHierarchy();
 
     compareHierarchies(testHierarchy, dataHierarchy);
     compareData(urlLoaded, calendarPartLoaded, 2020, true);

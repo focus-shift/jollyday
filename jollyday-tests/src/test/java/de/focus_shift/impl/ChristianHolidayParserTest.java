@@ -26,7 +26,6 @@ import static de.focus_shift.jaxb.mapping.ChristianHolidayType.GENERAL_PRAYER_DA
 import static de.focus_shift.jaxb.mapping.ChristianHolidayType.PENTECOST;
 import static de.focus_shift.jaxb.mapping.ChristianHolidayType.SACRED_HEART;
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ChristianHolidayParserTest {
 
@@ -50,10 +49,10 @@ class ChristianHolidayParserTest {
   void testEaster() {
     final Holidays config = createConfig(EASTER);
     final List<Holiday> holidays = sut.parse(2011, new JaxbHolidays(config));
-    assertEquals(1, holidays.size(), "Wrong number of holidays.");
+    assertThat(holidays).hasSize(1);
     final Holiday easterDate = holidays.iterator().next();
     final LocalDate ed = calendarUtil.create(2011, 4, 24);
-    assertEquals(ed, easterDate.getDate(), "Wrong easter date.");
+    assertThat(easterDate.getDate()).isEqualTo(ed);
   }
 
   @Test
@@ -61,7 +60,7 @@ class ChristianHolidayParserTest {
     final Holidays config = createConfig(EASTER);
     config.getChristianHoliday().get(0).setValidTo(2010);
     final List<Holiday> holidays = sut.parse(2011, new JaxbHolidays(config));
-    assertEquals(0, holidays.size(), "Wrong number of holidays.");
+    assertThat(holidays).isEmpty();
   }
 
   @Test
@@ -71,8 +70,8 @@ class ChristianHolidayParserTest {
     final List<Holiday> holidays = p.parse(2011, new JaxbHolidays(config));
     final List<LocalDate> expected = new ArrayList<>();
     expected.add(calendarUtil.create(2011, 4, 25));
-    assertEquals(expected.size(), holidays.size(), "Wrong number of holidays.");
-    assertEquals(expected.get(0), holidays.iterator().next().getDate(), "Wrong holiday.");
+    assertThat(holidays).hasSameSizeAs(expected);
+    assertThat(holidays.iterator().next().getDate()).isEqualTo(expected.get(0));
   }
 
   @Test
@@ -89,14 +88,14 @@ class ChristianHolidayParserTest {
     expected.add(calendarUtil.create(2011, 6, 12));
     expected.add(calendarUtil.create(2011, 7, 1));
 
-    assertEquals(expected.size(), holidays.size(), "Wrong number of holidays.");
+    assertThat(holidays).hasSameSizeAs(expected);
 
     Collections.sort(expected);
     final List<Holiday> found = new ArrayList<>(holidays);
     Collections.sort(found);
 
     for (int i = 0; i < expected.size(); i++) {
-      assertEquals(expected.get(i), found.get(i).getDate(), "Wrong date.");
+      assertThat(found.get(i).getDate()).isEqualTo(expected.get(i));
     }
   }
 
@@ -109,11 +108,11 @@ class ChristianHolidayParserTest {
     final String expectedPropertiesKey = "CUSTOM_KEY";
     final LocalDate expectedDate = calendarUtil.create(2019, 4, 23);
 
-    assertEquals(1, holidays.size(), "Wrong number of holidays.");
+    assertThat(holidays).hasSize(1);
 
-    Holiday easterTuesday = holidays.iterator().next();
-    assertEquals(expectedDate, easterTuesday.getDate(), "Wrong holiday date.");
-    assertEquals(expectedPropertiesKey, easterTuesday.getPropertiesKey(), "Wrong holiday key.");
+    final Holiday easterTuesday = holidays.iterator().next();
+    assertThat(easterTuesday.getDate()).isEqualTo(expectedDate);
+    assertThat(easterTuesday.getPropertiesKey()).isEqualTo(expectedPropertiesKey);
   }
 
   private Holidays createConfig(int... days) {
@@ -136,5 +135,4 @@ class ChristianHolidayParserTest {
     }
     return config;
   }
-
 }

@@ -29,7 +29,7 @@ class HolidayAETest extends AbstractCountryTestBase {
 
   @Test
   void testRamadanEnd() {
-    LocalDate expected = calendarUtil.create(YEAR, 6, 3);
+    final LocalDate expected = calendarUtil.create(YEAR, 6, 3);
     final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(UNITED_ARAB_EMIRATES));
     final Set<Holiday> holidays = holidayManager.getHolidays(YEAR);
     assertThat(holidays).hasSize(13);

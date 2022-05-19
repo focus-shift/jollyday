@@ -15,8 +15,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * @author svdi1de
@@ -30,7 +29,7 @@ class RelativeToWeekdayInMonthParserTest {
   void testEmpty() {
     final Holidays config = new Holidays();
     final List<Holiday> holidays = sut.parse(2011, new JaxbHolidays(config));
-    assertTrue(holidays.isEmpty(), "Result is not empty.");
+    assertThat(holidays).isEmpty();
   }
 
   @Test
@@ -50,7 +49,7 @@ class RelativeToWeekdayInMonthParserTest {
     rule.setValidFrom(2012);
 
     final List<Holiday> holidays = sut.parse(2011, new JaxbHolidays(config));
-    assertTrue(holidays.isEmpty(), "Result is not empty.");
+    assertThat(holidays).isEmpty();
   }
 
   @Test
@@ -69,8 +68,8 @@ class RelativeToWeekdayInMonthParserTest {
     config.getRelativeToWeekdayInMonth().add(rule);
 
     final List<Holiday> holidays = sut.parse(2011, new JaxbHolidays(config));
-    assertEquals(1, holidays.size(), "Wrong number of dates.");
-    assertEquals(calendarUtil.create(2011, 7, 12), holidays.iterator().next().getDate(), "Wrong date.");
+    assertThat(holidays).hasSize(1);
+    assertThat(holidays.iterator().next().getDate()).isEqualTo(calendarUtil.create(2011, 7, 12));
   }
 
   @Test
@@ -89,8 +88,7 @@ class RelativeToWeekdayInMonthParserTest {
     config.getRelativeToWeekdayInMonth().add(rule);
 
     final List<Holiday> holidays = sut.parse(2018, new JaxbHolidays(config));
-    assertEquals(1, holidays.size(), "Wrong number of dates.");
-    assertEquals(calendarUtil.create(2018, 10, 29), holidays.iterator().next().getDate(), "Wrong date.");
+    assertThat(holidays).hasSize(1);
+    assertThat(holidays.iterator().next().getDate()).isEqualTo(calendarUtil.create(2018, 10, 29));
   }
-
 }

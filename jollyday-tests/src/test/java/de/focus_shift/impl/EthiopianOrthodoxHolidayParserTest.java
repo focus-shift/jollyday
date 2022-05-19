@@ -17,12 +17,9 @@ import java.util.Set;
 import static de.focus_shift.jaxb.mapping.EthiopianOrthodoxHolidayType.ENKUTATASH;
 import static de.focus_shift.jaxb.mapping.EthiopianOrthodoxHolidayType.MESKEL;
 import static de.focus_shift.jaxb.mapping.EthiopianOrthodoxHolidayType.TIMKAT;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.assertj.core.api.Assertions.assertThat;
 
-/**
- * @author Sven
- */
+
 class EthiopianOrthodoxHolidayParserTest {
 
   private final EthiopianOrthodoxHolidayParser sut = new EthiopianOrthodoxHolidayParser();
@@ -32,7 +29,7 @@ class EthiopianOrthodoxHolidayParserTest {
   void testEmpty() {
     final Holidays config = new Holidays();
     final List<Holiday> holidays = sut.parse(2010, new JaxbHolidays(config));
-    assertTrue(holidays.isEmpty(), "Expected to be empty.");
+    assertThat(holidays).isEmpty();
   }
 
   @Test
@@ -43,19 +40,16 @@ class EthiopianOrthodoxHolidayParserTest {
     config.getEthiopianOrthodoxHoliday().add(createHoliday(TIMKAT));
 
     final List<Holiday> holidays = sut.parse(2010, new JaxbHolidays(config));
-    assertEquals(3, holidays.size(), "Wrong number of holidays.");
+    assertThat(holidays).hasSize(3);
     assertContains(calendarUtil.create(2010, 1, 18), Sets.newHashSet(holidays));
     assertContains(calendarUtil.create(2010, 9, 11), Sets.newHashSet(holidays));
     assertContains(calendarUtil.create(2010, 9, 27), Sets.newHashSet(holidays));
   }
 
   private void assertContains(LocalDate date, Set<Holiday> holidays) {
-    assertTrue(calendarUtil.contains(holidays, date), "Missing holiday " + date);
+    assertThat(calendarUtil.contains(holidays, date)).isTrue();
   }
 
-  /**
-   * @return an EthiopianOrthodoxHoliday instance
-   */
   private EthiopianOrthodoxHoliday createHoliday(EthiopianOrthodoxHolidayType type) {
     final EthiopianOrthodoxHoliday ethiopianOrthodoxHoliday = new EthiopianOrthodoxHoliday();
     ethiopianOrthodoxHoliday.setType(type);

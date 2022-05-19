@@ -17,8 +17,7 @@ class UrlManagerParameterTest {
   @BeforeEach
   void setup() throws MalformedURLException {
     url = new URL("http://www.google.de");
-    Properties properties = new Properties();
-    urlManagerParameter = new UrlManagerParameter(url, properties);
+    urlManagerParameter = new UrlManagerParameter(url, new Properties());
   }
 
   @Test

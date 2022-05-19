@@ -10,8 +10,7 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import static de.focus_shift.configuration.ConfigurationProvider.CONFIG_PROVIDERS_PROPERTY;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.verify;
 
 @ExtendWith(MockitoExtension.class)
@@ -51,7 +50,7 @@ class ConfigurationProviderManagerTest {
     System.setProperty(CONFIG_PROVIDERS_PROPERTY, "de.focus_shift.configuration.TestProvider");
     configurationProviderManager.mergeConfigurationProperties(managerParameter);
     assertResult(managerParameter);
-    assertEquals("value", managerParameter.getProperty("key"), "Wrong value for property: key");
+    assertThat(managerParameter.getProperty("key")).isEqualTo("value");
   }
 
   @Test
@@ -59,7 +58,7 @@ class ConfigurationProviderManagerTest {
     System.setProperty(CONFIG_PROVIDERS_PROPERTY, "de.focus_shift.configuration.TestProvider, java.lang.String");
     configurationProviderManager.mergeConfigurationProperties(managerParameter);
     assertResult(managerParameter);
-    assertEquals("value", managerParameter.getProperty("key"), "Wrong value for property: key");
+    assertThat(managerParameter.getProperty("key")).isEqualTo("value");
   }
 
   @Test
@@ -70,12 +69,12 @@ class ConfigurationProviderManagerTest {
     configurationProviderManager.mergeConfigurationProperties(managerParameter);
 
     assertResult(managerParameter);
-    assertEquals("MANUAL_VALUE", managerParameter.getProperty("MANUAL_KEY"), "Wrong value for property: MANUAL_KEY");
-    assertEquals("NewImpl", managerParameter.getProperty("manager.impl"), "Wrong value for property: manager.impl");
+    assertThat(managerParameter.getProperty("MANUAL_KEY")).isEqualTo("MANUAL_VALUE");
+    assertThat(managerParameter.getProperty("manager.impl")).isEqualTo("NewImpl");
   }
 
   private void assertResult(ManagerParameter parameter) {
-    assertNotNull(parameter);
+    assertThat(parameter).isNotNull();
     verify(defaultConfigurationProvider).getProperties();
     verify(urlConfigurationProvider).getProperties();
   }

@@ -13,7 +13,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.xmlunit.validation.Languages.W3C_XML_SCHEMA_NS_URI;
 
 class XMLValidationTest {
@@ -30,9 +30,9 @@ class XMLValidationTest {
 
   @Test
   void testSchemaIsValid() {
-    assertTrue(schemaFile.exists(), "Schema file " + schemaFile + " does not exist.");
+    assertThat(schemaFile).exists();
     final ValidationResult validationResult = validator.validateSchema();
-    assertTrue(validationResult.isValid(), "Schema '" + schemaFile + "' is not valid: " + validationResult.getProblems());
+    assertThat(validationResult.isValid()).isTrue();
   }
 
   @Test
@@ -44,7 +44,7 @@ class XMLValidationTest {
   private void validateHolidayFile(Path path) {
     try {
       final ValidationResult validationResult = validator.validateInstance(new StreamSource(new FileInputStream(path.toFile())));
-      assertTrue(validationResult.isValid(), "Validation of holiday file '" + path + " failed: " + validationResult.getProblems());
+      assertThat(validationResult.isValid()).isTrue();
     } catch (FileNotFoundException e) {
       throw new IllegalStateException("Cannot validate holiday file " + path);
     }

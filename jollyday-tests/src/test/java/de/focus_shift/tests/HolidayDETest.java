@@ -14,9 +14,10 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Set;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotSame;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static java.util.Locale.FRANCE;
+import static java.util.Locale.GERMAN;
+import static java.util.Locale.GERMANY;
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.fail;
 
 class HolidayDETest extends AbstractCountryTestBase {
@@ -41,9 +42,9 @@ class HolidayDETest extends AbstractCountryTestBase {
       final List<LocalDate> expected = List.of(calendarUtil.create(2010, 12, 25),
         calendarUtil.create(2010, 12, 26), calendarUtil.create(2010, 10, 3),
         calendarUtil.create(2011, 1, 1));
-      assertEquals(expected.size(), holidays.size(), "Wrong number of holidays");
+      assertThat(holidays).hasSameSizeAs(expected);
       for (LocalDate d : expected) {
-        assertTrue(calendarUtil.contains(holidays, d), "Expected date " + d + " missing.");
+        assertThat(calendarUtil.contains(holidays, d)).isTrue();
       }
     } catch (Exception e) {
       fail("Unexpected error occurred: " + e.getClass().getName() + " - " + e.getMessage());
@@ -53,11 +54,11 @@ class HolidayDETest extends AbstractCountryTestBase {
   @Test
   void testManagerSameInstance() {
     final Locale defaultLocale = Locale.getDefault();
-    Locale.setDefault(Locale.GERMANY);
+    Locale.setDefault(GERMANY);
     try {
       final HolidayManager defaultManager = HolidayManager.getInstance();
       final HolidayManager germanManager = HolidayManager.getInstance(ManagerParameters.create(HolidayCalendar.GERMANY, null));
-      assertEquals(defaultManager, germanManager, "Unexpected manager found");
+      assertThat(defaultManager).isEqualTo(germanManager);
     } catch (Exception e) {
       fail("Unexpected error occurred: " + e.getClass().getName() + " - " + e.getMessage());
     } finally {
@@ -72,7 +73,7 @@ class HolidayDETest extends AbstractCountryTestBase {
     try {
       final HolidayManager defaultManager = HolidayManager.getInstance();
       final HolidayManager germanManager = HolidayManager.getInstance(ManagerParameters.create(HolidayCalendar.GERMANY, null));
-      assertNotSame(defaultManager, germanManager, "Unexpected manager found");
+      assertThat(defaultManager).isNotEqualTo(germanManager);
     } catch (Exception e) {
       fail("Unexpected error occurred: " + e.getClass().getName() + " - " + e.getMessage());
     } finally {
@@ -82,17 +83,17 @@ class HolidayDETest extends AbstractCountryTestBase {
 
   @Test
   void testSystemLocaleInfluence() {
-    Set<Holiday> french = getUsingSystemLocale(Locale.FRANCE);
-    Set<Holiday> german = getUsingSystemLocale(Locale.GERMANY);
-    assertEquals(german, french, "Holidays differ.");
+    final Set<Holiday> french = getUsingSystemLocale(FRANCE);
+    final Set<Holiday> german = getUsingSystemLocale(GERMANY);
+    assertThat(german).isEqualTo(french);
   }
 
   private Set<Holiday> getUsingSystemLocale(Locale systemLocale) {
-    Locale defaultLocale = Locale.getDefault();
+    final Locale defaultLocale = Locale.getDefault();
     try {
       Locale.setDefault(systemLocale);
-      ManagerParameter parameters = ManagerParameters.create(Locale.GERMAN);
-      HolidayManager mgr = HolidayManager.getInstance(parameters);
+      final ManagerParameter parameters = ManagerParameters.create(GERMAN);
+      final HolidayManager mgr = HolidayManager.getInstance(parameters);
       return mgr.getHolidays(2018);
     } finally {
       Locale.setDefault(defaultLocale);

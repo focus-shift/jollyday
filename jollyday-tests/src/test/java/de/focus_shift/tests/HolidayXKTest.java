@@ -1,7 +1,6 @@
 package de.focus_shift.tests;
 
 import de.focus_shift.Holiday;
-import de.focus_shift.HolidayCalendar;
 import de.focus_shift.HolidayManager;
 import de.focus_shift.ManagerParameters;
 import de.focus_shift.tests.base.AbstractCountryTestBase;
@@ -14,9 +13,8 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Set;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotSame;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static de.focus_shift.HolidayCalendar.KOSOVO;
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.fail;
 
 class HolidayXKTest extends AbstractCountryTestBase {
@@ -42,7 +40,7 @@ class HolidayXKTest extends AbstractCountryTestBase {
 
   @Test
   void testManagerXKInterval() {
-    HolidayManager instance = HolidayManager.getInstance(ManagerParameters.create(HolidayCalendar.KOSOVO, null));
+    HolidayManager instance = HolidayManager.getInstance(ManagerParameters.create(KOSOVO));
     Set<Holiday> holidays = instance.getHolidays(calendarUtil.create(2010, 6, 1),
       calendarUtil.create(2011, 5, 31));
 
@@ -62,9 +60,9 @@ class HolidayXKTest extends AbstractCountryTestBase {
       calendarUtil.create(2011, 5, 9)
     );
 
-    assertEquals(expected.size(), holidays.size(), "Wrong number of holidays");
-    holidays.forEach(holiday -> assertTrue(expected.contains(holiday.getDate()), "Holiday " + holiday + " is not expected."));
-    expected.forEach(d -> assertTrue(calendarUtil.contains(holidays, d), "Expected date " + d + " missing."));
+    assertThat(holidays).hasSameSizeAs(expected);
+    holidays.forEach(holiday -> assertThat(expected).contains(holiday.getDate()));
+    expected.forEach(d -> assertThat(calendarUtil.contains(holidays, d)).isTrue());
   }
 
   @Test
@@ -72,9 +70,9 @@ class HolidayXKTest extends AbstractCountryTestBase {
     Locale defaultLocale = Locale.getDefault();
     Locale.setDefault(Locale.US);
     try {
-      HolidayManager defaultManager = HolidayManager.getInstance();
-      HolidayManager germanManager = HolidayManager.getInstance(ManagerParameters.create(HolidayCalendar.KOSOVO, null));
-      assertNotSame(defaultManager, germanManager, "Unexpected manager found");
+      final HolidayManager defaultManager = HolidayManager.getInstance();
+      final HolidayManager germanManager = HolidayManager.getInstance(ManagerParameters.create(KOSOVO));
+      assertThat(defaultManager).isNotEqualTo(germanManager);
     } catch (Exception e) {
       fail("Unexpected error occurred: " + e.getClass().getName() + " - " + e.getMessage());
     } finally {
