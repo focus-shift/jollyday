@@ -27,7 +27,7 @@ jobs:
         run: >
           ./mvnw $MAVEN_CLI_OPTS
           -Prelease
-          clean verify deploy
+          clean deploy
         env:
           OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
           OSSRH_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
