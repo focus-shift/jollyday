@@ -57,7 +57,7 @@ public class JaxbFixed implements Fixed {
   public YearCycle cycle() {
     return fixed.getEvery() == null
       ? YearCycle.EVERY_YEAR
-      : YearCycle.valueOf(fixed.getEvery());
+      : YearCycle.valueOf(fixed.getEvery().name());
   }
 
   @Override

@@ -51,6 +51,6 @@ public class JaxbIslamicHoliday implements IslamicHoliday {
   public YearCycle cycle() {
     return islamicHoliday.getEvery() == null
       ? YearCycle.EVERY_YEAR
-      : YearCycle.valueOf(islamicHoliday.getEvery());
+      : YearCycle.valueOf(islamicHoliday.getEvery().name());
   }
 }

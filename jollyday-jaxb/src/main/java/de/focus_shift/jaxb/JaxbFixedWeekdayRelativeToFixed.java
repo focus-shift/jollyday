@@ -69,6 +69,6 @@ public class JaxbFixedWeekdayRelativeToFixed implements FixedWeekdayRelativeToFi
   public YearCycle cycle() {
     return fixedWeekdayRelativeToFixed.getEvery() == null
       ? YearCycle.EVERY_YEAR
-      : YearCycle.valueOf(fixedWeekdayRelativeToFixed.getEvery());
+      : YearCycle.valueOf(fixedWeekdayRelativeToFixed.getEvery().name());
   }
 }

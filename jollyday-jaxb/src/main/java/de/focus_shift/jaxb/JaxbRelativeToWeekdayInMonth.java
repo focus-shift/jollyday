@@ -63,6 +63,6 @@ public class JaxbRelativeToWeekdayInMonth implements RelativeToWeekdayInMonth {
   public YearCycle cycle() {
     return relativeToWeekdayInMonth.getEvery() == null
       ? YearCycle.EVERY_YEAR
-      : YearCycle.valueOf(relativeToWeekdayInMonth.getEvery());
+      : YearCycle.valueOf(relativeToWeekdayInMonth.getEvery().name());
   }
 }

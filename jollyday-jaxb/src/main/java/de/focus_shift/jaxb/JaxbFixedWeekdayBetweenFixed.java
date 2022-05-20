@@ -62,6 +62,6 @@ public class JaxbFixedWeekdayBetweenFixed implements FixedWeekdayBetweenFixed {
   public YearCycle cycle() {
     return fixedWeekdayBetweenFixed.getEvery() == null
       ? YearCycle.EVERY_YEAR
-      : YearCycle.valueOf(fixedWeekdayBetweenFixed.getEvery());
+      : YearCycle.valueOf(fixedWeekdayBetweenFixed.getEvery().name());
   }
 }

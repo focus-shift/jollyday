@@ -343,10 +343,11 @@
   <simpleType name="HolidayCycleType">
     <restriction base="string">
       <enumeration value="EVERY_YEAR"></enumeration>
-      <enumeration value="2_YEARS"></enumeration>
-      <enumeration value="4_YEARS"></enumeration>
-      <enumeration value="5_YEARS"></enumeration>
-      <enumeration value="6_YEARS"></enumeration>
+      <enumeration value="TWO_YEARS"></enumeration>
+      <enumeration value="THREE_YEARS"></enumeration>
+      <enumeration value="FOUR_YEARS"></enumeration>
+      <enumeration value="FIVE_YEARS"></enumeration>
+      <enumeration value="SIX_YEARS"></enumeration>
       <enumeration value="ODD_YEARS"></enumeration>
       <enumeration value="EVEN_YEARS"></enumeration>
     </restriction>

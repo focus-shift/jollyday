@@ -50,6 +50,6 @@ public class JaxbEthiopianOrthodoxHoliday implements EthiopianOrthodoxHoliday {
   public YearCycle cycle() {
     return ethiopianOrthodoxHoliday.getEvery() == null
       ? YearCycle.EVERY_YEAR
-      : YearCycle.valueOf(ethiopianOrthodoxHoliday.getEvery());
+      : YearCycle.valueOf(ethiopianOrthodoxHoliday.getEvery().name());
   }
 }

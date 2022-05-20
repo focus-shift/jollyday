@@ -62,6 +62,6 @@ public class JaxbFixedWeekdayInMonth implements FixedWeekdayInMonth {
   public YearCycle cycle() {
     return fixedWeekdayInMonth.getEvery() == null
       ? YearCycle.EVERY_YEAR
-      : YearCycle.valueOf(fixedWeekdayInMonth.getEvery());
+      : YearCycle.valueOf(fixedWeekdayInMonth.getEvery().name());
   }
 }

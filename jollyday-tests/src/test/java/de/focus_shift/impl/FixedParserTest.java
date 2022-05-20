@@ -3,6 +3,7 @@ package de.focus_shift.impl;
 import de.focus_shift.Holiday;
 import de.focus_shift.jaxb.JaxbHolidays;
 import de.focus_shift.jaxb.mapping.Fixed;
+import de.focus_shift.jaxb.mapping.HolidayCycleType;
 import de.focus_shift.jaxb.mapping.Holidays;
 import de.focus_shift.jaxb.mapping.Month;
 import de.focus_shift.jaxb.mapping.MovingCondition;
@@ -62,7 +63,7 @@ class FixedParserTest {
   void testCycle2YearsInvalid() {
     final Fixed fixed = createFixed(4, JANUARY);
     fixed.setValidFrom(2010);
-    fixed.setEvery("TWO_YEARS");
+    fixed.setEvery(HolidayCycleType.TWO_YEARS);
     final Holidays config = createHolidays(fixed);
 
     final List<Holiday> holidays = sut.parse(2011, new JaxbHolidays(config));
@@ -73,7 +74,7 @@ class FixedParserTest {
   void testCycle3Years() {
     final Fixed fixed = createFixed(4, JANUARY);
     fixed.setValidFrom(2010);
-    fixed.setEvery("THREE_YEARS");
+    fixed.setEvery(HolidayCycleType.THREE_YEARS);
     final Holidays config = createHolidays(fixed);
     final List<Holiday> holidays = sut.parse(2013, new JaxbHolidays(config));
     assertThat(holidays).hasSize(1);

@@ -66,7 +66,7 @@ public class JaxbChristianHoliday implements ChristianHoliday {
   public YearCycle cycle() {
     return christianHoliday.getEvery() == null
       ? YearCycle.EVERY_YEAR
-      : YearCycle.valueOf(christianHoliday.getEvery());
+      : YearCycle.valueOf(christianHoliday.getEvery().name());
   }
 
   @Override

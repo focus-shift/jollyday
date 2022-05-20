@@ -74,6 +74,6 @@ public class JaxbRelativeToFixed implements RelativeToFixed {
   public YearCycle cycle() {
     return relativeToFixed.getEvery() == null
       ? YearCycle.EVERY_YEAR
-      : YearCycle.valueOf(relativeToFixed.getEvery());
+      : YearCycle.valueOf(relativeToFixed.getEvery().name());
   }
 }

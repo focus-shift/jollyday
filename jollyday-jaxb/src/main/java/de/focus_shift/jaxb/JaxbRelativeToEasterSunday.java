@@ -51,7 +51,7 @@ public class JaxbRelativeToEasterSunday implements RelativeToEasterSunday {
   public YearCycle cycle() {
     return relativeToEasterSunday.getEvery() == null
       ? YearCycle.EVERY_YEAR
-      : YearCycle.valueOf(relativeToEasterSunday.getEvery());
+      : YearCycle.valueOf(relativeToEasterSunday.getEvery().name());
   }
 
   @Override
