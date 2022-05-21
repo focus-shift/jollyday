@@ -1,15 +1,16 @@
 package de.focus_shift.tests;
 
 import de.focus_shift.tests.base.AbstractCountryTestBase;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 class HolidayUSTest extends AbstractCountryTestBase {
 
   private static final String ISO_CODE = "us";
-  private static final int YEAR = 2010;
 
-  @Test
-  void testManagerUSStructure() {
-    validateCalendarData(ISO_CODE, YEAR);
+  @ParameterizedTest
+  @ValueSource(ints = {2010, 2022})
+  void testManagerUSStructure(final int year) {
+    validateCalendarData(ISO_CODE, year);
   }
 }
