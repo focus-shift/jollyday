@@ -3,7 +3,7 @@
 >
   <tns:Holidays>
     <tns:Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
-    <tns:Fixed month="DECEMBER" day="1" descriptionPropertiesKey="AE_COMMEORATION_DAY"/>
+    <tns:Fixed month="DECEMBER" day="1" descriptionPropertiesKey="AE_COMMEMORATION_DAY"/>
     <tns:Fixed month="DECEMBER" day="2" descriptionPropertiesKey="NATIONAL_DAY"/>
     <tns:Fixed month="DECEMBER" day="3" descriptionPropertiesKey="NATIONAL_DAY"/>
     <tns:IslamicHoliday type="RAMADAN_END" descriptionPropertiesKey="islamic.RAMADAN_END"/>
