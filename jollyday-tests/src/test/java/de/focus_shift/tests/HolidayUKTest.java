@@ -6,6 +6,8 @@ import de.focus_shift.HolidayManager;
 import de.focus_shift.ManagerParameters;
 import de.focus_shift.tests.base.AbstractCountryTestBase;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import java.time.LocalDate;
 import java.util.Set;
@@ -14,17 +16,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class HolidayUKTest extends AbstractCountryTestBase {
 
-  private static final int YEAR = 2010;
   private static final String ISO_CODE = "gb";
 
-  @Test
-  void testManagerUKStructure() {
-    validateCalendarData(ISO_CODE, YEAR);
-  }
-
-  @Test
-  void testManagerUKStructure2022() {
-    validateCalendarData(ISO_CODE, 2022);
+  @ParameterizedTest
+  @ValueSource(ints = {2010, 2022})
+  void testManagerUKStructure(final int year) {
+    validateCalendarData(ISO_CODE, year);
   }
 
   @Test
