@@ -66,6 +66,7 @@
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="he" description="Hessen">
     <tns:Holidays>
+      <tns:Fixed month="APRIL" day="4" descriptionPropertiesKey="christian.EASTER"/>
       <tns:Fixed month="JUNE" day="3" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
       <tns:Fixed month="MAY" day="23" descriptionPropertiesKey="christian.WHIT_SUNDAY"/>
     </tns:Holidays>
