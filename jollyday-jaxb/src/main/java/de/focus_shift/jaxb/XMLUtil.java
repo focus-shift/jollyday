@@ -21,7 +21,7 @@ public class XMLUtil {
   /**
    * the package name to search for the generated java classes.
    */
-  public static final String PACKAGE = "de.focus_shift.jaxb.mapping";
+  private static final String PACKAGE = "de.focus_shift.jaxb.mapping";
 
   private static final Logger LOG = LoggerFactory.getLogger(XMLUtil.class);
 
