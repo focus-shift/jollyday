@@ -1,4 +1,4 @@
-package util;
+package de.focus_shift.jaxb;
 
 import de.focus_shift.jaxb.XMLUtil;
 import de.focus_shift.spi.Configuration;
@@ -41,7 +41,7 @@ class XMLUtilTest {
 
   @Test
   void testUnmarshallConfigurationException() throws IOException, JAXBException {
-    when(contextCreator.create(eq(XMLUtil.PACKAGE), any(ClassLoader.class))).thenThrow(new JAXBException("")).thenThrow(new JAXBException(""));
+    when(contextCreator.create(eq("de.focus_shift.jaxb.mapping"), any(ClassLoader.class))).thenThrow(new JAXBException("")).thenThrow(new JAXBException(""));
     assertThatThrownBy(() -> xmlUtil.unmarshallConfiguration(inputStream)).isInstanceOf(IllegalStateException.class);
     verify(inputStream, never()).close();
   }
@@ -51,7 +51,7 @@ class XMLUtilTest {
     final JAXBContext ctx = mock(JAXBContext.class);
     final Unmarshaller unmarshaller = mock(Unmarshaller.class);
     @SuppressWarnings("unchecked") final JAXBElement<Configuration> element = mock(JAXBElement.class);
-    when(contextCreator.create(eq(XMLUtil.PACKAGE), any(ClassLoader.class))).thenReturn(null).thenReturn(ctx);
+    when(contextCreator.create(eq("de.focus_shift.jaxb.mapping"), any(ClassLoader.class))).thenReturn(null).thenReturn(ctx);
     when(ctx.createUnmarshaller()).thenReturn(unmarshaller);
     when(unmarshaller.unmarshal(inputStream)).thenReturn(element);
     xmlUtil.unmarshallConfiguration(inputStream);
