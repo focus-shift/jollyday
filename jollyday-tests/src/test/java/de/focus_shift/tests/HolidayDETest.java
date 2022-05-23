@@ -8,6 +8,8 @@ import de.focus_shift.ManagerParameters;
 import de.focus_shift.tests.base.AbstractCountryTestBase;
 import de.focus_shift.util.CalendarUtil;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -22,14 +24,15 @@ import static org.junit.jupiter.api.Assertions.fail;
 
 class HolidayDETest extends AbstractCountryTestBase {
 
-  private static final int YEAR = 2010;
   private static final String ISO_CODE = "de";
 
   private final CalendarUtil calendarUtil = new CalendarUtil();
 
-  @Test
-  void testManagerDEStructure() {
-    validateCalendarData(ISO_CODE, YEAR);
+
+  @ParameterizedTest
+  @ValueSource(ints = {2010, 2022, 2023})
+  void testManagerDEStructure(final int year) {
+    validateCalendarData(ISO_CODE, year, true);
   }
 
   @Test
