@@ -19,7 +19,7 @@ class HolidayGBTest extends AbstractCountryTestBase {
   private static final String ISO_CODE = "gb";
 
   @ParameterizedTest
-  @ValueSource(ints = {2010, 2022})
+  @ValueSource(ints = {2010, 2022, 2023})
   void testManagerGBStructure(final int year) {
     validateCalendarData(ISO_CODE, year, true);
   }
