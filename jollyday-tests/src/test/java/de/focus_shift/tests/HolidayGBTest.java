@@ -6,39 +6,36 @@ import de.focus_shift.HolidayManager;
 import de.focus_shift.ManagerParameters;
 import de.focus_shift.tests.base.AbstractCountryTestBase;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import java.time.LocalDate;
 import java.util.Set;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class HolidayUKTest extends AbstractCountryTestBase {
+class HolidayGBTest extends AbstractCountryTestBase {
 
-  private static final int YEAR = 2010;
   private static final String ISO_CODE = "gb";
 
-  @Test
-  void testManagerUKStructure() {
-    validateCalendarData(ISO_CODE, YEAR);
+  @ParameterizedTest
+  @ValueSource(ints = {2010, 2022, 2023})
+  void testManagerGBStructure(final int year) {
+    validateCalendarData(ISO_CODE, year, true);
   }
 
   @Test
-  void testManagerUKStructure2022() {
-    validateCalendarData(ISO_CODE, 2022);
-  }
-
-  @Test
-  void testManagerUKChristmasMovingDaysWhenChristmasOnSunday() {
+  void testManagerGBChristmasMovingDaysWhenChristmasOnSunday() {
     doChristmasContainmentTest(2011, 26, 27);
   }
 
   @Test
-  void testManagerUKChristmasMovingDaysWhenChristmasOnSaturday() {
+  void testManagerGBChristmasMovingDaysWhenChristmasOnSaturday() {
     doChristmasContainmentTest(2010, 27, 28);
   }
 
   @Test
-  void testManagerUKChristmasMovingDaysWhenChristmasOnFriday() {
+  void testManagerGBChristmasMovingDaysWhenChristmasOnFriday() {
     doChristmasContainmentTest(2009, 25, 28);
   }
 

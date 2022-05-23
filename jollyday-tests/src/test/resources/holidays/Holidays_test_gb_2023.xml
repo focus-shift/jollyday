@@ -3,13 +3,12 @@
                    xmlns:tns="http://www.example.org/Holiday" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                    xsi:schemaLocation="http://www.example.org/Holiday /Holiday.xsd">
   <tns:Holidays>
-    <tns:Fixed month="APRIL" day="15" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-    <tns:Fixed month="APRIL" day="17" descriptionPropertiesKey="christian.EASTER"/>
-    <tns:Fixed month="MAY" day="2" descriptionPropertiesKey="EARLY_MAY_BANK_HOLIDAY"/>
-    <tns:Fixed month="JUNE" day="2" descriptionPropertiesKey="BANK_HOLIDAY"/>
-    <tns:Fixed month="JUNE" day="3" descriptionPropertiesKey="QUEENS_PLATINUM_JUBILEE"/>
-    <tns:Fixed month="DECEMBER" day="26" descriptionPropertiesKey="CHRISTMAS"/>
-    <tns:Fixed month="DECEMBER" day="27" descriptionPropertiesKey="BOXING_DAY"/>
+    <tns:Fixed month="APRIL" day="7" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+    <tns:Fixed month="APRIL" day="9" descriptionPropertiesKey="christian.EASTER"/>
+    <tns:Fixed month="MAY" day="1" descriptionPropertiesKey="EARLY_MAY_BANK_HOLIDAY"/>
+    <tns:Fixed month="MAY" day="29" descriptionPropertiesKey="BANK_HOLIDAY"/>
+    <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+    <tns:Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY"/>
   </tns:Holidays>
   <tns:SubConfigurations hierarchy="al" description="Alderney">
     <tns:Holidays>
@@ -18,9 +17,9 @@
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="en" description="England">
     <tns:Holidays>
-      <tns:Fixed month="JANUARY" day="3" descriptionPropertiesKey="NEW_YEAR"/>
-      <tns:Fixed month="APRIL" day="18" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-      <tns:Fixed month="AUGUST" day="29" descriptionPropertiesKey="BANK_HOLIDAY"/>
+      <tns:Fixed month="JANUARY" day="2" descriptionPropertiesKey="NEW_YEAR"/>
+      <tns:Fixed month="APRIL" day="10" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+      <tns:Fixed month="AUGUST" day="28" descriptionPropertiesKey="BANK_HOLIDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="gu" description="Guernsey">
@@ -32,7 +31,7 @@
   <tns:SubConfigurations hierarchy="im" description="Isle of Man">
     <tns:Holidays>
       <tns:Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
-      <tns:Fixed month="JUNE" day="10" descriptionPropertiesKey="TOURIST_TROPHY"/>
+      <tns:Fixed month="JUNE" day="9" descriptionPropertiesKey="TOURIST_TROPHY"/>
       <tns:Fixed month="JULY" day="5" descriptionPropertiesKey="TYNWALD"/>
     </tns:Holidays>
   </tns:SubConfigurations>
@@ -47,23 +46,23 @@
       <tns:Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
       <tns:Fixed month="MARCH" day="17" descriptionPropertiesKey="ST_PATRICK"/>
       <tns:Fixed month="JULY" day="12" descriptionPropertiesKey="BATTLE_BOYNE"/>
-      <tns:Fixed month="APRIL" day="18" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-      <tns:Fixed month="AUGUST" day="29" descriptionPropertiesKey="BANK_HOLIDAY"/>
+      <tns:Fixed month="APRIL" day="10" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+      <tns:Fixed month="AUGUST" day="28" descriptionPropertiesKey="BANK_HOLIDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="sc" description="Scotland">
     <tns:Holidays>
+      <tns:Fixed month="JANUARY" day="2" descriptionPropertiesKey="NEW_YEAR"/>
       <tns:Fixed month="JANUARY" day="3" descriptionPropertiesKey="NEW_YEAR"/>
-      <tns:Fixed month="JANUARY" day="4" descriptionPropertiesKey="NEW_YEAR"/>
-      <tns:Fixed month="AUGUST" day="1" descriptionPropertiesKey="BANK_HOLIDAY"/>
+      <tns:Fixed month="AUGUST" day="7" descriptionPropertiesKey="BANK_HOLIDAY"/>
       <tns:Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="ST_ANDREW"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="wa" description="Wales">
     <tns:Holidays>
-      <tns:Fixed month="JANUARY" day="3" descriptionPropertiesKey="NEW_YEAR"/>
-      <tns:Fixed month="APRIL" day="18" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-      <tns:Fixed month="AUGUST" day="29" descriptionPropertiesKey="BANK_HOLIDAY"/>
+      <tns:Fixed month="JANUARY" day="2" descriptionPropertiesKey="NEW_YEAR"/>
+      <tns:Fixed month="APRIL" day="10" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+      <tns:Fixed month="AUGUST" day="28" descriptionPropertiesKey="BANK_HOLIDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
 </tns:Configuration>
