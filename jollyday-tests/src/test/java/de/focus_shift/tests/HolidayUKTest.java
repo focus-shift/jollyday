@@ -21,7 +21,7 @@ class HolidayUKTest extends AbstractCountryTestBase {
   @ParameterizedTest
   @ValueSource(ints = {2010, 2022})
   void testManagerUKStructure(final int year) {
-    validateCalendarData(ISO_CODE, year);
+    validateCalendarData(ISO_CODE, year, true);
   }
 
   @Test
