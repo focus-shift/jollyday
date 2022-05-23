@@ -11,13 +11,33 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Set;
+import java.util.stream.Collectors;
 
+import static de.focus_shift.HolidayCalendar.UNITED_STATES;
+import static java.util.Locale.FRANCE;
+import static java.util.Locale.US;
+import static java.util.stream.Collectors.toList;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.fail;
 
 public abstract class AbstractCountryTestBase {
 
   private final CalendarUtil calendarUtil = new CalendarUtil();
+
+  protected void validateCalendarData(final String countryCode, int year) {
+    validateCalendarData(countryCode, year, false);
+  }
+
+  protected void validateCalendarData(final String countryCode, int year, boolean assertAllHolidaysChecked) {
+    final HolidayManager dataManager = HolidayManager.getInstance(ManagerParameters.create(countryCode));
+    final HolidayManager testManager = HolidayManager.getInstance(ManagerParameters.create("test_" + countryCode + "_" + year));
+
+    final CalendarHierarchy dataHierarchy = dataManager.getCalendarHierarchy();
+    final CalendarHierarchy testHierarchy = testManager.getCalendarHierarchy();
+
+    compareHierarchies(testHierarchy, dataHierarchy);
+    compareData(testManager, dataManager, year, assertAllHolidaysChecked);
+  }
 
   /**
    * Compares two hierarchy structure by traversing down.
@@ -36,46 +56,7 @@ public abstract class AbstractCountryTestBase {
   }
 
   protected void compareData(HolidayManager expected, HolidayManager found, int year, boolean assertAllHolidaysChecked) {
-    final CalendarHierarchy expectedHierarchy = expected.getCalendarHierarchy();
-    final List<String> args = new ArrayList<>();
-    compareDates(expected, found, expectedHierarchy, args, year, assertAllHolidaysChecked);
-  }
-
-  private void compareDates(HolidayManager expected, HolidayManager found, CalendarHierarchy h, final List<String> args, int year, boolean assertAllHolidaysChecked) {
-    final Set<Holiday> expectedHolidays = expected.getHolidays(year, args.toArray(new String[]{}));
-    final Set<Holiday> foundHolidays = found.getHolidays(year, args.toArray(new String[]{}));
-    for (Holiday expectedHoliday : expectedHolidays) {
-      assertThat(expectedHoliday.getDescription()).isNotNull();
-      if (!calendarUtil.contains(foundHolidays, expectedHoliday.getDate())) {
-        fail("Could not find " + expectedHoliday + " in " + h.getDescription() + " - " + foundHolidays);
-      }
-    }
-
-    if (assertAllHolidaysChecked) {
-      foundHolidays.removeAll(expectedHolidays);
-      assertThat(foundHolidays).isEmpty();
-    }
-
-    for (String id : h.getChildren().keySet()) {
-      final ArrayList<String> newArgs = new ArrayList<>(args);
-      newArgs.add(id);
-      compareDates(expected, found, h.getChildren().get(id), newArgs, year, assertAllHolidaysChecked);
-    }
-  }
-
-  protected void validateCalendarData(final String countryCode, int year) {
-    validateCalendarData(countryCode, year, false);
-  }
-
-  protected void validateCalendarData(final String countryCode, int year, boolean assertAllHolidaysChecked) {
-    final HolidayManager dataManager = HolidayManager.getInstance(ManagerParameters.create(countryCode));
-    final HolidayManager testManager = HolidayManager.getInstance(ManagerParameters.create("test_" + countryCode + "_" + year));
-
-    final CalendarHierarchy dataHierarchy = dataManager.getCalendarHierarchy();
-    final CalendarHierarchy testHierarchy = testManager.getCalendarHierarchy();
-
-    compareHierarchies(testHierarchy, dataHierarchy);
-    compareData(testManager, dataManager, year, assertAllHolidaysChecked);
+    compareDates(expected, found, expected.getCalendarHierarchy(), List.of(), year, assertAllHolidaysChecked);
   }
 
   /**
@@ -99,12 +80,12 @@ public abstract class AbstractCountryTestBase {
     }
   }
 
-  protected void validateManagerDifferentInstance(HolidayCalendar countryCalendar) {
+  protected void validateManagerDifferentInstance(final HolidayCalendar countryCalendar) {
     final Locale defaultLocale = Locale.getDefault();
-    if (countryCalendar == HolidayCalendar.UNITED_STATES) {
-      Locale.setDefault(Locale.FRANCE);
+    if (countryCalendar == UNITED_STATES) {
+      Locale.setDefault(FRANCE);
     } else {
-      Locale.setDefault(Locale.US);
+      Locale.setDefault(US);
     }
     try {
       final HolidayManager defaultManager = HolidayManager.getInstance();
@@ -114,6 +95,30 @@ public abstract class AbstractCountryTestBase {
       fail("Unexpected error occurred: " + e.getClass().getName() + " - " + e.getMessage());
     } finally {
       Locale.setDefault(defaultLocale);
+    }
+  }
+
+  private void compareDates(final HolidayManager expected, final HolidayManager found, final CalendarHierarchy expectedHierarchy, final List<String> args, int year, boolean assertAllHolidaysChecked) {
+
+    final Set<Holiday> expectedHolidays = expected.getHolidays(year, args.toArray(String[]::new));
+    final Set<Holiday> foundHolidays = found.getHolidays(year, args.toArray(String[]::new));
+
+    for (final Holiday expectedHoliday : expectedHolidays) {
+      assertThat(expectedHoliday.getDescription()).isNotNull();
+      if (!calendarUtil.contains(foundHolidays, expectedHoliday.getDate())) {
+        fail("Could not find " + expectedHoliday + " in " + expectedHierarchy.getDescription() + " - " + foundHolidays);
+      }
+    }
+
+    if (assertAllHolidaysChecked) {
+      assertThat(expectedHolidays.stream().sorted().collect(toList()))
+        .containsAll(foundHolidays.stream().sorted().collect(toList()));
+    }
+
+    for (String id : expectedHierarchy.getChildren().keySet()) {
+      final List<String> newArgs = new ArrayList<>(args);
+      newArgs.add(id);
+      compareDates(expected, found, expectedHierarchy.getChildren().get(id), newArgs, year, assertAllHolidaysChecked);
     }
   }
 }
