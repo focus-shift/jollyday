@@ -11,7 +11,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 import static de.focus_shift.HolidayCalendar.UNITED_STATES;
 import static java.util.Locale.FRANCE;
@@ -111,7 +110,7 @@ public abstract class AbstractCountryTestBase {
     }
 
     if (assertAllHolidaysChecked) {
-      assertThat(expectedHolidays.stream().sorted().collect(toList()))
+      assertThat(expectedHolidays.stream().sorted().collect(toList())).describedAs(expectedHierarchy.getDescription())
         .containsAll(foundHolidays.stream().sorted().collect(toList()));
     }
 
