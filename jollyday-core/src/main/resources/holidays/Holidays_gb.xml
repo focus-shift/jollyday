@@ -25,7 +25,6 @@
     <tns:FixedWeekday which="LAST" weekday="MONDAY" month="MAY" validTo="2021" descriptionPropertiesKey="BANK_HOLIDAY"/>
     <tns:FixedWeekday which="LAST" weekday="MONDAY" month="MAY" validFrom="2023" descriptionPropertiesKey="BANK_HOLIDAY"/>
 
-    <tns:ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
     <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
   </tns:Holidays>
 
