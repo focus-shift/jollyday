@@ -8,8 +8,8 @@
     <tns:Fixed month="MAY" day="2" descriptionPropertiesKey="EARLY_MAY_BANK_HOLIDAY"/>
     <tns:Fixed month="JUNE" day="2" descriptionPropertiesKey="BANK_HOLIDAY"/>
     <tns:Fixed month="JUNE" day="3" descriptionPropertiesKey="QUEENS_PLATINUM_JUBILEE"/>
-    <tns:Fixed month="DECEMBER" day="26" descriptionPropertiesKey="CHRISTMAS"/>
-    <tns:Fixed month="DECEMBER" day="27" descriptionPropertiesKey="BOXING_DAY"/>
+    <tns:Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY"/>
+    <tns:Fixed month="DECEMBER" day="27" descriptionPropertiesKey="CHRISTMAS"/>
   </tns:Holidays>
   <tns:SubConfigurations hierarchy="al" description="Alderney">
     <tns:Holidays>
