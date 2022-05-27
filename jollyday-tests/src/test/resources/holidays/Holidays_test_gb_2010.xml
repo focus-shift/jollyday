@@ -4,7 +4,6 @@
                    xsi:schemaLocation="http://www.example.org/Holiday /Holiday.xsd">
   <tns:Holidays>
     <tns:Fixed month="APRIL" day="2" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-    <tns:Fixed month="APRIL" day="4" descriptionPropertiesKey="christian.EASTER"/>
     <tns:Fixed month="MAY" day="3" descriptionPropertiesKey="EARLY_MAY_BANK_HOLIDAY"/>
     <tns:Fixed month="MAY" day="31" descriptionPropertiesKey="BANK_HOLIDAY"/>
     <tns:Fixed month="DECEMBER" day="27" descriptionPropertiesKey="CHRISTMAS"/>
