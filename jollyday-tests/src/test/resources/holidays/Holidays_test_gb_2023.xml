@@ -55,7 +55,7 @@
       <tns:Fixed month="JANUARY" day="2" descriptionPropertiesKey="NEW_YEAR"/>
       <tns:Fixed month="JANUARY" day="3" descriptionPropertiesKey="NEW_YEAR"/>
       <tns:Fixed month="AUGUST" day="7" descriptionPropertiesKey="BANK_HOLIDAY"/>
-      <tns:Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="ST_ANDREW"/>
+      <tns:Fixed month="NOVEMBER" day="30" descriptionPropertiesKey="ST_ANDREW"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="wa" description="Wales">

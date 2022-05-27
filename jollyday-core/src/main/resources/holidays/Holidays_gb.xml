@@ -95,7 +95,7 @@
         <tns:MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
         <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </tns:Fixed>
-      <tns:Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="ST_ANDREW"/>
+      <tns:Fixed month="NOVEMBER" day="30" descriptionPropertiesKey="ST_ANDREW"/>
       <tns:FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="BANK_HOLIDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
