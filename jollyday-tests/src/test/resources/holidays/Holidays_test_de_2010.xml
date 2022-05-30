@@ -20,7 +20,7 @@
   <tns:SubConfigurations hierarchy="bb" description="Brandenburg">
     <tns:Holidays>
       <tns:Fixed month="APRIL" day="4" descriptionPropertiesKey="christian.EASTER"/>
-      <tns:Fixed month="MAY" day="23" descriptionPropertiesKey="christian.WHIT_SUNDAY"/>
+      <tns:Fixed month="MAY" day="23" descriptionPropertiesKey="christian.PENTECOST"/>
       <tns:Fixed month="OCTOBER" day="31" descriptionPropertiesKey="REFORMATION_DAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
@@ -68,7 +68,7 @@
     <tns:Holidays>
       <tns:Fixed month="APRIL" day="4" descriptionPropertiesKey="christian.EASTER"/>
       <tns:Fixed month="JUNE" day="3" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
-      <tns:Fixed month="MAY" day="23" descriptionPropertiesKey="christian.WHIT_SUNDAY"/>
+      <tns:Fixed month="MAY" day="23" descriptionPropertiesKey="christian.PENTECOST"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="mv" description="Mecklenburg-Vorpommern">
