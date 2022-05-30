@@ -9,6 +9,8 @@ import java.util.ResourceBundle;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
+import static java.util.ResourceBundle.getBundle;
+
 /**
  * <p>
  * ResourceUtil class.
@@ -160,11 +162,7 @@ public class ResourceUtil {
    * @return ResourceBundle containing the descriptions for the locale.
    */
   private ResourceBundle getResourceBundle(Locale locale, Map<Locale, ResourceBundle> resourceCache, String filePrefix) {
-    if (!resourceCache.containsKey(locale)) {
-      ResourceBundle bundle = ResourceBundle.getBundle(filePrefix, locale, classLoadingUtil.getClassloader());
-      resourceCache.put(locale, bundle);
-    }
-    return resourceCache.get(locale);
+    return resourceCache.computeIfAbsent(locale, givenLocale -> getBundle(filePrefix, givenLocale, classLoadingUtil.getClassloader()));
   }
 
   /**
@@ -181,5 +179,4 @@ public class ResourceUtil {
       throw new IllegalStateException("Cannot load resource: " + resourceName, e);
     }
   }
-
 }
