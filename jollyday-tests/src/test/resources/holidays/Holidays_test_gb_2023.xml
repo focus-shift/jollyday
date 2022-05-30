@@ -18,7 +18,7 @@
     <tns:Holidays>
       <tns:Fixed month="JANUARY" day="2" descriptionPropertiesKey="NEW_YEAR"/>
       <tns:Fixed month="APRIL" day="10" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-      <tns:Fixed month="AUGUST" day="28" descriptionPropertiesKey="BANK_HOLIDAY"/>
+      <tns:Fixed month="AUGUST" day="28" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="gu" description="Guernsey">
@@ -46,14 +46,14 @@
       <tns:Fixed month="MARCH" day="17" descriptionPropertiesKey="ST_PATRICK"/>
       <tns:Fixed month="JULY" day="12" descriptionPropertiesKey="BATTLE_BOYNE"/>
       <tns:Fixed month="APRIL" day="10" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-      <tns:Fixed month="AUGUST" day="28" descriptionPropertiesKey="BANK_HOLIDAY"/>
+      <tns:Fixed month="AUGUST" day="28" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="sc" description="Scotland">
     <tns:Holidays>
       <tns:Fixed month="JANUARY" day="2" descriptionPropertiesKey="NEW_YEAR"/>
       <tns:Fixed month="JANUARY" day="3" descriptionPropertiesKey="NEW_YEAR"/>
-      <tns:Fixed month="AUGUST" day="7" descriptionPropertiesKey="BANK_HOLIDAY"/>
+      <tns:Fixed month="AUGUST" day="7" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
       <tns:Fixed month="NOVEMBER" day="30" descriptionPropertiesKey="ST_ANDREW"/>
     </tns:Holidays>
   </tns:SubConfigurations>
@@ -61,7 +61,7 @@
     <tns:Holidays>
       <tns:Fixed month="JANUARY" day="2" descriptionPropertiesKey="NEW_YEAR"/>
       <tns:Fixed month="APRIL" day="10" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-      <tns:Fixed month="AUGUST" day="28" descriptionPropertiesKey="BANK_HOLIDAY"/>
+      <tns:Fixed month="AUGUST" day="28" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
 </tns:Configuration>
