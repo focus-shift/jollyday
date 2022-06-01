@@ -12,10 +12,11 @@ on:
 jobs:
   build:
     name: build and analyse
-    runs-on: ubuntu-20.04
     strategy:
       matrix:
         java: [ '11', '17' ]
+        os: [ 'ubuntu-latest', 'macos-latest', 'windows-latest' ]
+    runs-on: ${{ matrix.os }}
     env:
       MAVEN_CLI_OPTS: "--batch-mode --errors --fail-at-end --show-version"
     steps:
@@ -35,7 +36,7 @@ jobs:
           -Pcoverage
           clean verify
       - name: Analyse with SonarCloud
-        if: ${{ matrix.java == 11 && (github.event_name != 'pull_request' || (github.event.pull_request.head.repo.full_name == github.repository && github.actor != 'dependabot[bot]')) }}
+        if: ${{ matrix.java == 11 && matrix.os == 'ubuntu-latest' && (github.event_name != 'pull_request' || (github.event.pull_request.head.repo.full_name == github.repository && github.actor != 'dependabot[bot]')) }}
         run: >
           ./mvnw $MAVEN_CLI_OPTS
           -Pcoverage
