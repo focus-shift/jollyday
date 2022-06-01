@@ -118,6 +118,7 @@
               </systemProperties>
               <jvmArguments>
                 <jvmArgument>-Xms32m</jvmArgument>
+				<jvmArgument>-Dfile.encoding=UTF-8</jvmArgument>
               </jvmArguments>
               <arguments>
                 <!-- These are the arguments you would normally
