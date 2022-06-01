@@ -1,0 +1,3 @@
+# Auto detect text files and perform LF normalization
+*        text=auto
+*.java   text eol=lf encoding=UTF-8
