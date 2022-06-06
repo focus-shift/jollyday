@@ -102,8 +102,9 @@
       </plugin>
 
       <plugin>
-        <groupId>com.github.davidmoten</groupId>
-        <artifactId>jax-maven-plugin</artifactId>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>jaxb2-maven-plugin</artifactId>
+        <version>3.1.0</version>
         <executions>
           <execution>
             <id>generate</id>
@@ -112,25 +113,12 @@
               <goal>xjc</goal>
             </goals>
             <configuration>
-              <systemProperties>
-                <enableExternalEntityProcessing>true</enableExternalEntityProcessing>
-              </systemProperties>
-              <jvmArguments>
-                <jvmArgument>-Xms32m</jvmArgument>
-                <jvmArgument>-Dfile.encoding=UTF-8</jvmArgument>
-              </jvmArguments>
-              <arguments>
-                <!-- These are the arguments you would normally
-                    have put with a call to xjc -->
-                <argument>-verbose</argument>
-                <argument>-d</argument>
-                <argument>${project.build.directory}/generated-sources/jaxb</argument>
-                <argument>-target</argument>
-                <argument>3.0</argument>
-                <argument>-p</argument>
-                <argument>de.focus_shift.jaxb.mapping</argument>
-                <argument>${project.build.directory}/dependency/Holiday.xsd</argument>
-              </arguments>
+              <target>3.0</target>
+              <sources>
+                <source>${project.build.directory}/dependency/Holiday.xsd</source>
+              </sources>
+              <packageName>de.focus_shift.jaxb.mapping</packageName>
+              <externalEntityProcessing>true</externalEntityProcessing>
             </configuration>
           </execution>
         </executions>

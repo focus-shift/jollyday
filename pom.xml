@@ -151,18 +151,6 @@
         </plugin>
 
         <plugin>
-          <groupId>org.codehaus.mojo</groupId>
-          <artifactId>jaxb2-maven-plugin</artifactId>
-          <version>3.1.0</version>
-        </plugin>
-
-        <plugin>
-          <groupId>com.github.davidmoten</groupId>
-          <artifactId>jax-maven-plugin</artifactId>
-          <version>0.2</version>
-        </plugin>
-
-        <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-release-plugin</artifactId>
           <version>2.5.3</version>
