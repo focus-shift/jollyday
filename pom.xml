@@ -32,7 +32,7 @@
     <java.version>11</java.version>
 
     <junit.version>5.9.1</junit.version>
-    <mockito.version>4.8.0</mockito.version>
+    <mockito.version>4.8.1</mockito.version>
     <assertj.version>3.23.1</assertj.version>
 
     <!--suppress UnresolvedMavenProperty - for IDEA-->
