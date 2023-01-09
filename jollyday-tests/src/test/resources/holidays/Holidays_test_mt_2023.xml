@@ -7,6 +7,7 @@
     <tns:Fixed month="FEBRUARY" day="10" descriptionPropertiesKey="SAINT_PAUL_SHIPWRECK"/>
     <tns:Fixed month="MARCH" day="19" descriptionPropertiesKey="ST_JOSEPH"/>
     <tns:Fixed month="MARCH" day="31" descriptionPropertiesKey="FREEDOM_DEMOCRACY"/>
+    <tns:Fixed month="APRIL" day="7" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
     <tns:Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
     <tns:Fixed month="JUNE" day="7" descriptionPropertiesKey="SETTE_GIUGNO"/>
     <tns:Fixed month="JUNE" day="29" descriptionPropertiesKey="ST_PETER_PAUL"/>
@@ -16,6 +17,5 @@
     <tns:Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
     <tns:Fixed month="DECEMBER" day="13" descriptionPropertiesKey="REPUBLIC_DAY"/>
     <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-    <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
   </tns:Holidays>
 </tns:Configuration>
