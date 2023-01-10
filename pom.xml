@@ -33,7 +33,7 @@
 
     <junit.version>5.9.1</junit.version>
     <mockito.version>4.11.0</mockito.version>
-    <assertj.version>3.23.1</assertj.version>
+    <assertj.version>3.24.1</assertj.version>
 
     <!--suppress UnresolvedMavenProperty - for IDEA-->
     <sonar.coverage.jacoco.xmlReportPaths>
