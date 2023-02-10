@@ -41,7 +41,7 @@ If you already use one of these libraries in your project than just use the spec
 
   Returns all **german** public holidays in **2022**
   ```java
-  final HolidayManager holidayManager = HolidayManager.getInstance(HolidayCalendar.GERMANY);
+  final HolidayManager holidayManager = HolidayManager.getInstance();
   final Set<Holiday> holidays = holidayManager.getHolidays(2022, "de");
   ```
 </details>
