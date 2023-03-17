@@ -5,6 +5,7 @@
   <tns:Holidays>
     <tns:Fixed month="APRIL" day="2" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
     <tns:Fixed month="MAY" day="3" descriptionPropertiesKey="EARLY_MAY_BANK_HOLIDAY"/>
+    <tns:Fixed month="MAY" day="8" validFrom="2023" validTo="2023" descriptionPropertiesKey="KINGS_CORONATION"/>
     <tns:Fixed month="MAY" day="31" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
     <tns:Fixed month="DECEMBER" day="27" descriptionPropertiesKey="CHRISTMAS"/>
     <tns:Fixed month="DECEMBER" day="28" descriptionPropertiesKey="BOXING_DAY"/>
