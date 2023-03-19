@@ -10,13 +10,41 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import java.time.LocalDate;
+import java.util.Locale;
 import java.util.Set;
 
+import static de.focus_shift.HolidayCalendar.DENMARK;
+import static de.focus_shift.HolidayCalendar.UNITED_KINGDOM;
+import static de.focus_shift.ManagerParameters.create;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class HolidayGBTest extends AbstractCountryTestBase {
 
   private static final String ISO_CODE = "gb";
+
+
+  @Test
+  void ensuresThatKingsCoronationForKingCharlesIIIIn2023() {
+    final HolidayManager holidayManagerGB = HolidayManager.getInstance(create(UNITED_KINGDOM));
+
+    final Set<Holiday> holidays2022 = holidayManagerGB.getHolidays(2022);
+    assertThat(holidays2022)
+      .isNotEmpty()
+      .extracting(Holiday::getPropertiesKey)
+      .doesNotContain("KINGS_CORONATION");
+
+    final Set<Holiday> holidays2023 = holidayManagerGB.getHolidays(2023);
+    assertThat(holidays2023)
+      .isNotEmpty()
+      .extracting(Holiday::getPropertiesKey)
+      .contains("KINGS_CORONATION");
+
+    final Set<Holiday> holidays2024 = holidayManagerGB.getHolidays(2024);
+    assertThat(holidays2024)
+      .isNotEmpty()
+      .extracting(Holiday::getPropertiesKey)
+      .doesNotContain("KINGS_CORONATION");
+  }
 
   @ParameterizedTest
   @ValueSource(ints = {2010, 2022, 2023})
@@ -42,7 +70,7 @@ class HolidayGBTest extends AbstractCountryTestBase {
   private void doChristmasContainmentTest(int year, int dayOfChristmas, int dayOfBoxingday) {
     final LocalDate christmas = LocalDate.of(year, 12, dayOfChristmas);
     final LocalDate boxingday = LocalDate.of(year, 12, dayOfBoxingday);
-    final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(HolidayCalendar.UNITED_KINGDOM));
+    final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(UNITED_KINGDOM));
     final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(contains(christmas, holidays)).isTrue();
     assertThat(contains(boxingday, holidays)).isTrue();
