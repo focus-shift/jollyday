@@ -12,3 +12,6 @@ target/
 .classpath
 .settings/
 .project
+
+# jqwik
+/jollyday-tests/.jqwik-database
