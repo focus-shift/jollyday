@@ -1,4 +1,4 @@
-package de.focus_shift.util;
+package de.focus_shift.caching;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;

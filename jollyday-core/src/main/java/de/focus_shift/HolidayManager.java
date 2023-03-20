@@ -4,8 +4,8 @@ import de.focus_shift.caching.HolidayManagerValueHandler;
 import de.focus_shift.configuration.ConfigurationProviderManager;
 import de.focus_shift.parser.functions.CalendarToLocalDate;
 import de.focus_shift.spi.ConfigurationService;
-import de.focus_shift.util.Cache;
-import de.focus_shift.util.Cache.ValueHandler;
+import de.focus_shift.caching.Cache;
+import de.focus_shift.caching.Cache.ValueHandler;
 import de.focus_shift.util.CalendarUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -260,9 +260,9 @@ public abstract class HolidayManager {
    * Returns the holidays for the requested year and hierarchy structure.
    *
    * @param year i.e. 2010
-   * @param args i.e. args = {'ny'}. returns US/New York holidays. No args -&gt;
+   * @param args i.e. args = {'ny'}. returns US/New York holidays. No args ->
    *             holidays common to whole country
-   * @return the list of holidays for the requested year
+   * @return a set of holidays for the requested year
    */
   public abstract Set<Holiday> getHolidays(int year, String... args);
 

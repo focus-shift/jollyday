@@ -4,7 +4,6 @@ import de.focus_shift.HolidayManager;
 import de.focus_shift.ManagerParameter;
 import de.focus_shift.datasource.ConfigurationServiceManager;
 import de.focus_shift.spi.ConfigurationService;
-import de.focus_shift.util.Cache;
 import de.focus_shift.util.ClassLoadingUtil;
 
 /**
@@ -54,8 +53,7 @@ public class HolidayManagerValueHandler implements Cache.ValueHandler<HolidayMan
   private HolidayManager instantiateManagerImpl(String managerImplClassName) {
     try {
       final Class<?> managerImplClass = classLoadingUtil.loadClass(managerImplClassName);
-      final Object managerImplObject = managerImplClass.getDeclaredConstructor().newInstance();
-      return HolidayManager.class.cast(managerImplObject);
+      return (HolidayManager) managerImplClass.getDeclaredConstructor().newInstance();
     } catch (Exception e) {
       throw new IllegalStateException("Cannot create manager class " + managerImplClassName, e);
     }
