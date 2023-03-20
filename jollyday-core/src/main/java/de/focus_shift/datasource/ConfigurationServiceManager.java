@@ -23,7 +23,7 @@ public class ConfigurationServiceManager {
   private ConfigurationService instantiateDataSource(String dataSourceClassName) {
     try {
       final Class<?> dataSourceClass = classLoadingUtil.loadClass(dataSourceClassName);
-      return ConfigurationService.class.cast(dataSourceClass.getDeclaredConstructor().newInstance());
+      return (ConfigurationService) dataSourceClass.getDeclaredConstructor().newInstance();
     } catch (Exception e) {
       throw new IllegalStateException("Cannot instantiate datasource instance of " + dataSourceClassName, e);
     }
