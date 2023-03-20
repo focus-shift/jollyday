@@ -4,7 +4,6 @@ import de.focus_shift.HolidayManager;
 import de.focus_shift.ManagerParameter;
 import de.focus_shift.datasource.ConfigurationServiceManager;
 import de.focus_shift.spi.ConfigurationService;
-import de.focus_shift.util.Cache;
 import de.focus_shift.util.ClassLoadingUtil;
 
 /**
