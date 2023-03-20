@@ -1,7 +1,6 @@
 package de.focus_shift.tests;
 
 import de.focus_shift.Holiday;
-import de.focus_shift.HolidayCalendar;
 import de.focus_shift.HolidayManager;
 import de.focus_shift.ManagerParameters;
 import de.focus_shift.tests.base.AbstractCountryTestBase;
@@ -10,12 +9,12 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import java.time.LocalDate;
-import java.util.Locale;
 import java.util.Set;
 
-import static de.focus_shift.HolidayCalendar.DENMARK;
 import static de.focus_shift.HolidayCalendar.UNITED_KINGDOM;
+import static de.focus_shift.HolidayType.OFFICIAL_HOLIDAY;
 import static de.focus_shift.ManagerParameters.create;
+import static java.time.Month.MAY;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class HolidayGBTest extends AbstractCountryTestBase {
@@ -35,9 +34,7 @@ class HolidayGBTest extends AbstractCountryTestBase {
 
     final Set<Holiday> holidays2023 = holidayManagerGB.getHolidays(2023);
     assertThat(holidays2023)
-      .isNotEmpty()
-      .extracting(Holiday::getPropertiesKey)
-      .contains("KINGS_CORONATION");
+      .contains(new Holiday(LocalDate.of(2023, MAY, 8), "KINGS_CORONATION", OFFICIAL_HOLIDAY));
 
     final Set<Holiday> holidays2024 = holidayManagerGB.getHolidays(2024);
     assertThat(holidays2024)
