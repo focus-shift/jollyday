@@ -45,6 +45,12 @@
       <artifactId>mockito-junit-jupiter</artifactId>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>net.jqwik</groupId>
+      <artifactId>jqwik</artifactId>
+      <version>1.7.2</version>
+      <scope>test</scope>
+    </dependency>
 
     <!-- Logging -->
     <dependency>
