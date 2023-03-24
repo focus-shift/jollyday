@@ -117,7 +117,7 @@ class HolidayITTest extends AbstractCountryTestBase {
   }
 
   @Property
-  void ensuresThatEasterIsConfirued(@ForAll @YearRange Year year) {
+  void ensuresThatEasterIsConfigured(@ForAll @YearRange Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(ITALY));
     final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
     assertThat(holidays)
