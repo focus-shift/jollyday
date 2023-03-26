@@ -15,49 +15,41 @@
     <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     <tns:ChristianHoliday type="ASCENSION_DAY" descriptionPropertiesKey="christian.ASCENSION_DAY"/>
     <tns:ChristianHoliday type="WHIT_MONDAY" validTo="2003"/>
-    <tns:ChristianHoliday type="WHIT_MONDAY"
-                          validFrom="2008"/>
+    <tns:ChristianHoliday type="WHIT_MONDAY" validFrom="2008"/>
   </tns:Holidays>
-  <tns:SubConfigurations hierarchy="ma"
-                         description="Martinique">
+  <tns:SubConfigurations hierarchy="ma" description="Martinique">
     <tns:Holidays>
       <tns:Fixed month="MAY" day="22"/>
     </tns:Holidays>
   </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="gu"
-                         description="Guadeloupe">
+  <tns:SubConfigurations hierarchy="gu" description="Guadeloupe">
     <tns:Holidays>
       <tns:Fixed month="MAY" day="27"/>
     </tns:Holidays>
   </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="gy"
-                         description="Guyane">
+  <tns:SubConfigurations hierarchy="gy" description="Guyane">
     <tns:Holidays>
       <tns:Fixed month="JUNE" day="10"/>
     </tns:Holidays>
   </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="lr"
-                         description="La Reunion">
+  <tns:SubConfigurations hierarchy="lr" description="La Reunion">
     <tns:Holidays>
       <tns:Fixed month="DECEMBER" day="20"/>
     </tns:Holidays>
   </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="br"
-                         description="Bas-Rhin">
+  <tns:SubConfigurations hierarchy="br" description="Bas-Rhin">
     <tns:Holidays>
       <tns:Fixed month="DECEMBER" day="26"/>
       <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="hr"
-                         description="Haut-Rhin">
+  <tns:SubConfigurations hierarchy="hr" description="Haut-Rhin">
     <tns:Holidays>
       <tns:Fixed month="DECEMBER" day="26"/>
       <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="mo"
-                         description="Moselle">
+  <tns:SubConfigurations hierarchy="mo" description="Moselle">
     <tns:Holidays>
       <tns:Fixed month="DECEMBER" day="26"/>
     </tns:Holidays>
