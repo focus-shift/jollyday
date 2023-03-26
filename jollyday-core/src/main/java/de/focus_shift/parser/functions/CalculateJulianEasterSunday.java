@@ -21,5 +21,4 @@ public class CalculateJulianEasterSunday implements IntFunction<LocalDate> {
     day = (x % 31) + 1;
     return LocalDate.from(JulianChronology.INSTANCE.date(year, (month == 3 ? 3 : 4), day));
   }
-
 }
