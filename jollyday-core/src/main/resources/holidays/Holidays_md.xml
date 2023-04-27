@@ -10,8 +10,8 @@
     <tns:Fixed month="MAY" day="9" descriptionPropertiesKey="VICTORY"/>
     <tns:Fixed month="AUGUST" day="27" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
     <tns:Fixed month="AUGUST" day="31" descriptionPropertiesKey="LANGUAGE_DAY"/>
-    <tns:ChristianHoliday type="EASTER" chronology="JULIAN"/>
-    <tns:ChristianHoliday type="EASTER_MONDAY" chronology="JULIAN"/>
+    <tns:ChristianHoliday type="EASTER" chronology="JULIAN" descriptionPropertiesKey="christian.EASTER"/>
+    <tns:ChristianHoliday type="EASTER_MONDAY" chronology="JULIAN" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
   </tns:Holidays>
   <tns:SubConfigurations hierarchy="bti" description="Balti">
     <tns:Holidays>
