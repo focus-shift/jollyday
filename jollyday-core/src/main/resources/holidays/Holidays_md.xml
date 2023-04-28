@@ -6,10 +6,13 @@
     <tns:Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
     <tns:Fixed month="JANUARY" day="7" descriptionPropertiesKey="CHRISTMAS_EVE"/>
     <tns:Fixed month="JANUARY" day="8" descriptionPropertiesKey="CHRISTMAS"/>
+    <tns:Fixed month="MARCH" day="8" descriptionPropertiesKey="INTERNATIONAL_WOMAN" validFrom="1977"/>
     <tns:Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
     <tns:Fixed month="MAY" day="9" descriptionPropertiesKey="VICTORY" validFrom="1965"/>
+    <tns:Fixed month="JUNE" day="1" descriptionPropertiesKey="CHILDRENS_DAY" validFrom="2016"/>
     <tns:Fixed month="AUGUST" day="27" descriptionPropertiesKey="INDEPENDENCE_DAY" validFrom="1991"/>
     <tns:Fixed month="AUGUST" day="31" descriptionPropertiesKey="LANGUAGE_DAY" validFrom="1990"/>
+    <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
     <tns:ChristianHoliday type="EASTER" chronology="JULIAN" descriptionPropertiesKey="christian.EASTER"/>
     <tns:ChristianHoliday type="EASTER_MONDAY" chronology="JULIAN" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
   </tns:Holidays>
