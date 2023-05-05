@@ -11,11 +11,15 @@ import java.time.LocalDate;
 import java.time.Year;
 import java.util.Set;
 
-import static de.focus_shift.HolidayCalendar.ITALY;
 import static de.focus_shift.HolidayCalendar.MOLDOVA;
 import static de.focus_shift.HolidayType.OFFICIAL_HOLIDAY;
 import static de.focus_shift.ManagerParameters.create;
-import static java.time.Month.*;
+import static java.time.Month.AUGUST;
+import static java.time.Month.DECEMBER;
+import static java.time.Month.JANUARY;
+import static java.time.Month.JUNE;
+import static java.time.Month.MARCH;
+import static java.time.Month.MAY;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class HolidayMDTest extends AbstractCountryTestBase {
@@ -30,21 +34,32 @@ class HolidayMDTest extends AbstractCountryTestBase {
   }
 
   @Property
-  void ensuresThatChristmasEveIsConfigured(@ForAll @YearRange Year year) {
+  void ensuresThatOrthodoxChristmasIsConfigured(@ForAll @YearRange Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(MOLDOVA));
     final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
     assertThat(holidays)
       .isNotEmpty()
-      .contains(new Holiday(LocalDate.of(year.getValue(), JANUARY, 7), "CHRISTMAS_EVE", OFFICIAL_HOLIDAY));
+      .contains(new Holiday(LocalDate.of(year.getValue(), JANUARY, 7), "CHRISTMAS_EVE", OFFICIAL_HOLIDAY))
+      .contains(new Holiday(LocalDate.of(year.getValue(), JANUARY, 8), "CHRISTMAS", OFFICIAL_HOLIDAY));
   }
 
   @Property
-  void ensuresThatChristmasIsConfigured(@ForAll @YearRange Year year) {
+  void ensuresInternationalWomanDayIsNotConfiguredBefore1977(@ForAll @YearRange(max = 1976) Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(MOLDOVA));
     final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
     assertThat(holidays)
       .isNotEmpty()
-      .contains(new Holiday(LocalDate.of(year.getValue(), JANUARY, 8), "CHRISTMAS", OFFICIAL_HOLIDAY));
+      .extracting(Holiday::getPropertiesKey)
+      .doesNotContain("INTERNATIONAL_WOMAN");
+  }
+
+  @Property
+  void ensuresInternationalWomanDayIsConfiguredSince1977(@ForAll @YearRange(min = 1977) Year year) {
+    final HolidayManager holidayManager = HolidayManager.getInstance(create(MOLDOVA));
+    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    assertThat(holidays)
+      .isNotEmpty()
+      .contains(new Holiday(LocalDate.of(year.getValue(), MARCH, 8), "INTERNATIONAL_WOMAN", OFFICIAL_HOLIDAY));
   }
 
   @Property
@@ -54,6 +69,25 @@ class HolidayMDTest extends AbstractCountryTestBase {
     assertThat(holidays)
       .isNotEmpty()
       .contains(new Holiday(LocalDate.of(year.getValue(), MAY, 1), "LABOUR_DAY", OFFICIAL_HOLIDAY));
+  }
+
+  @Property
+  void ensuresThatChildrensDayIsNotConfiguredBefore2016(@ForAll @YearRange(max = 2015) Year year) {
+    final HolidayManager holidayManager = HolidayManager.getInstance(create(MOLDOVA));
+    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    assertThat(holidays)
+      .isNotEmpty()
+      .extracting(Holiday::getPropertiesKey)
+      .doesNotContain("CHILDRENS_DAY");
+  }
+
+  @Property
+  void ensuresThatChildrensDayIsConfiguredSine2016(@ForAll @YearRange(min = 2016) Year year) {
+    final HolidayManager holidayManager = HolidayManager.getInstance(create(MOLDOVA));
+    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    assertThat(holidays)
+      .isNotEmpty()
+      .contains(new Holiday(LocalDate.of(year.getValue(), JUNE, 1), "CHILDRENS_DAY", OFFICIAL_HOLIDAY));
   }
 
   @Property
@@ -133,4 +167,21 @@ class HolidayMDTest extends AbstractCountryTestBase {
       .doesNotContain("LANGUAGE_DAY");
   }
 
+  @Property
+  void ensuresThatChristmasIsConfigured(@ForAll @YearRange Year year) {
+    final HolidayManager holidayManager = HolidayManager.getInstance(create(MOLDOVA));
+    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    assertThat(holidays)
+      .isNotEmpty()
+      .contains(new Holiday(LocalDate.of(year.getValue(), DECEMBER, 25), "CHRISTMAS", OFFICIAL_HOLIDAY));
+  }
+
+  @Property
+  void ensuresThatBaltiDayIsConfigured(@ForAll @YearRange Year year) {
+    final HolidayManager holidayManager = HolidayManager.getInstance(create(MOLDOVA));
+    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue(), "bti");
+    assertThat(holidays)
+      .isNotEmpty()
+      .contains(new Holiday(LocalDate.of(year.getValue(), MAY, 22), "REGIONAL", OFFICIAL_HOLIDAY));
+  }
 }
