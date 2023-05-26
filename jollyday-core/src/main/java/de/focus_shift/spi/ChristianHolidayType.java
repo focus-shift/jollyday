@@ -19,5 +19,5 @@ public enum ChristianHolidayType {
   SACRED_HEART,
   EASTER,
   PENTECOST_MONDAY,
-  WHIT_SUNDAY;
+  WHIT_SUNDAY
 }

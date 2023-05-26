@@ -15,5 +15,5 @@ public enum IslamicHolidayType {
   ARAFAAT,
   ID_UL_ADHA,
   ID_UL_ADHA_2,
-  ID_UL_ADHA_3;
+  ID_UL_ADHA_3
 }

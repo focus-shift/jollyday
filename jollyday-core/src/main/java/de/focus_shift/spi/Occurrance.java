@@ -5,5 +5,5 @@ public enum Occurrance {
   SECOND,
   THIRD,
   FOURTH,
-  LAST;
+  LAST
 }

@@ -8,5 +8,5 @@ public enum YearCycle {
   THREE_YEARS,
   FOUR_YEARS,
   FIVE_YEARS,
-  SIX_YEARS;
+  SIX_YEARS
 }
