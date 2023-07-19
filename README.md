@@ -41,8 +41,8 @@ If you already use one of these libraries in your project than just use the spec
 
   Returns all **german** public holidays in **2022**
   ```java
-  final HolidayManager holidayManager = HolidayManager.getInstance();
-  final Set<Holiday> holidays = holidayManager.getHolidays(2022, "de");
+  final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(GERMANY));
+  final Set<Holiday> holidays = holidayManager.getHolidays(2022);
   ```
 </details>
 
@@ -51,8 +51,8 @@ If you already use one of these libraries in your project than just use the spec
 
   Returns all german public holidays from the **15th of april in 2022** until the **31st of may in 2023**
   ```java
-  final HolidayManager holidayManager = HolidayManager.getInstance();
-  final Set<Holiday> holidays = holidayManager.getHolidays(LocalDate.of(2022, 4, 15), LocalDate.of(2023, 5, 31), "de");
+  final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(GERMANY));
+  final Set<Holiday> holidays = holidayManager.getHolidays(LocalDate.of(2022, 4, 15), LocalDate.of(2023, 5, 31));
   ```
 </details>
 
@@ -61,14 +61,14 @@ If you already use one of these libraries in your project than just use the spec
 
   Returns true or false if a date is a public holidays in germany.
   ```java
-  final HolidayManager holidayManager = HolidayManager.getInstance();
-  final boolean isHoliday = holidayManager.isHoliday(LocalDate.of(2022, 6, 6), "de");
+  final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(GERMANY));
+  final boolean isHoliday = holidayManager.isHoliday(LocalDate.of(2022, 6, 6));
   ```
 
   Returns true or false if a date is a public holidays in Baden-Württemberg in germany.
   ```java
-  final HolidayManager holidayManager = HolidayManager.getInstance();
-  final boolean isHoliday = holidayManager.isHoliday(LocalDate.of(2022, 6, 6), "de", "bw");
+  final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(GERMANY));
+  final boolean isHoliday = holidayManager.isHoliday(LocalDate.of(2022, 6, 6), "bw");
   ```
 </details>
 
