@@ -6,8 +6,8 @@
     <tns:Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
     <tns:Fixed month="JANUARY" day="2" descriptionPropertiesKey="NEW_YEAR"/>
     <tns:Fixed month="JANUARY" day="7" descriptionPropertiesKey="CHRISTMAS"/>
-    <tns:Fixed month="FEBRUARY" day="15" descriptionPropertiesKey="CONSTITUTION_DAY"/>
-    <tns:Fixed month="FEBRUARY" day="16" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+    <tns:Fixed month="FEBRUARY" day="15" descriptionPropertiesKey="STATEHOOD"/>
+    <tns:Fixed month="FEBRUARY" day="16" descriptionPropertiesKey="STATEHOOD"/>
     <tns:Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
     <tns:Fixed month="MAY" day="2" descriptionPropertiesKey="LABOUR_DAY"/>
     <tns:Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="ARMISTICE"/>
