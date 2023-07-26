@@ -14,6 +14,7 @@
     <tns:Fixed month="APRIL" day="30" validFrom="1980" validTo="2013" descriptionPropertiesKey="QUEENS_BIRTHDAY">
       <tns:MovingCondition substitute="SUNDAY" with="PREVIOUS" weekday="SATURDAY"/>
     </tns:Fixed>
+    <tns:Fixed month="MAY" day="5" validFrom="1945" validTo="1989" descriptionPropertiesKey="LIBERATION" every="FIVE_YEARS"/>
     <tns:Fixed month="MAY" day="5" validFrom="1990" descriptionPropertiesKey="LIBERATION"/>
     <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
     <tns:Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
