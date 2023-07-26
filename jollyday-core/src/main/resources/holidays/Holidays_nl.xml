@@ -3,7 +3,7 @@
                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                    xsi:schemaLocation="http://www.example.org/Holiday /Holiday.xsd">
   <tns:Holidays>
-    <tns:Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <tns:Fixed month="JANUARY" day="1" validFrom="1967" descriptionPropertiesKey="NEW_YEAR"/>
     <tns:Fixed month="APRIL" day="27" validFrom="2014" descriptionPropertiesKey="KINGS_DAY">
       <tns:MovingCondition substitute="SUNDAY" with="PREVIOUS" weekday="SATURDAY"/>
     </tns:Fixed>
