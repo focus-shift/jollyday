@@ -165,12 +165,30 @@ class HolidaySITest extends AbstractCountryTestBase {
   }
 
   @Property
-  void ensuresThatChristmasIsConfigured(@ForAll @YearRange Year year) {
+  void ensuresThatChristmasIsConfiguredUntil1952(@ForAll @YearRange(max = 1952) Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(SLOWENIA));
     final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
     assertThat(holidays)
       .isNotEmpty()
       .contains(new Holiday(LocalDate.of(year.getValue(), DECEMBER, 25), "CHRISTMAS", OFFICIAL_HOLIDAY));
+  }
+
+  @Property
+  void ensuresThatChristmasIsConfiguredSince1991(@ForAll @YearRange(min = 1991) Year year) {
+    final HolidayManager holidayManager = HolidayManager.getInstance(create(SLOWENIA));
+    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    assertThat(holidays)
+      .isNotEmpty()
+      .contains(new Holiday(LocalDate.of(year.getValue(), DECEMBER, 25), "CHRISTMAS", OFFICIAL_HOLIDAY));
+  }
+
+  @Property
+  void ensuresThatChristmasIsNotConfiguredSince1953Until1990(@ForAll @YearRange(min = 1953, max = 1990) Year year) {
+    final HolidayManager holidayManager = HolidayManager.getInstance(create(SLOWENIA));
+    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    assertThat(holidays)
+      .isNotEmpty()
+      .doesNotContain(new Holiday(LocalDate.of(year.getValue(), DECEMBER, 25), "CHRISTMAS", OFFICIAL_HOLIDAY));
   }
 
   @Property
