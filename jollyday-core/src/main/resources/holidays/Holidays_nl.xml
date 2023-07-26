@@ -23,6 +23,5 @@
     <tns:ChristianHoliday type="ASCENSION_DAY" descriptionPropertiesKey="christian.ASCENSION_DAY"/>
     <tns:ChristianHoliday type="PENTECOST" descriptionPropertiesKey="christian.PENTECOST"/>
     <tns:ChristianHoliday type="WHIT_MONDAY" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
-    <tns:ChristianHoliday type="WHIT_SUNDAY" descriptionPropertiesKey="christian.WHIT_SUNDAY"/>
   </tns:Holidays>
 </tns:Configuration>
