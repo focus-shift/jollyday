@@ -16,7 +16,7 @@
     </tns:Fixed>
     <tns:Fixed month="MAY" day="5" validFrom="1990" descriptionPropertiesKey="LIBERATION"/>
     <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-    <tns:Fixed month="DECEMBER" day="26" descriptionPropertiesKey="CHRISTMAS"/>
+    <tns:Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
     <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
     <tns:ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
     <tns:ChristianHoliday type="EASTER_MONDAY" validFrom="1642" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
