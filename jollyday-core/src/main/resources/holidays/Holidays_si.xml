@@ -7,7 +7,6 @@
     <tns:Fixed month="JANUARY" day="2" validFrom="1955" validTo="2012" descriptionPropertiesKey="NEW_YEAR"/>
     <tns:Fixed month="JANUARY" day="2" validFrom="2017" descriptionPropertiesKey="NEW_YEAR"/>
     <tns:Fixed month="FEBRUARY" day="8" validFrom="1991" descriptionPropertiesKey="PRESEREN"/>
-    <tns:Fixed month="APRIL" day="23" descriptionPropertiesKey="ST_GEORGE" localizedType="UNOFFICIAL_HOLIDAY"/>
     <tns:Fixed month="APRIL" day="27" descriptionPropertiesKey="LIBERATION"/>
     <tns:Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
     <tns:Fixed month="MAY" day="2" descriptionPropertiesKey="LABOUR_DAY"/>
