@@ -7,6 +7,7 @@
     <tns:Fixed month="JANUARY" day="2" descriptionPropertiesKey="NEW_YEAR"/>
     <tns:Fixed month="JANUARY" day="7" descriptionPropertiesKey="CHRISTMAS"/>
     <tns:Fixed month="FEBRUARY" day="15" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+    <tns:Fixed month="FEBRUARY" day="16" descriptionPropertiesKey="CONSTITUTION_DAY"/>
     <tns:Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
     <tns:Fixed month="MAY" day="9" descriptionPropertiesKey="VICTORY" localizedType="UNOFFICIAL_HOLIDAY"/>
     <tns:ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
