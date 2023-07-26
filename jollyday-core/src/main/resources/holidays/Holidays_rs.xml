@@ -10,7 +10,6 @@
     <tns:Fixed month="FEBRUARY" day="16" descriptionPropertiesKey="CONSTITUTION_DAY"/>
     <tns:Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
     <tns:Fixed month="MAY" day="2" descriptionPropertiesKey="LABOUR_DAY"/>
-    <tns:Fixed month="MAY" day="9" descriptionPropertiesKey="VICTORY" localizedType="UNOFFICIAL_HOLIDAY"/>
     <tns:ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
     <tns:ChristianHoliday type="GOOD_FRIDAY" chronology="JULIAN" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
     <tns:ChristianHoliday type="EASTER_MONDAY" chronology="JULIAN" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
