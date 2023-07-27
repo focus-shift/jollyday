@@ -22,10 +22,10 @@ Is somebody already on it? Do you need to synchronize?
 
 ## Reporting Security Vulnerabilities
 
-If you think you have found a security vulnerability in jollyday please *DO NOT*
+If you think you have found a security vulnerability in Jollyday please *DO NOT*
 disclose it publicly until we've had a chance to fix it. Please *don't report security
-vulnerabilities using GitHub issues*, instead head over to info@focus-shift.de and
-learn how to disclose them responsibly.
+vulnerabilities using GitHub issues*, instead open a report of a security vulnerability
+via [Report a security vulnerability](https://github.com/focus-shift/jollyday/security/advisories/new)
 
 ## Code Conventions and Housekeeping
 
