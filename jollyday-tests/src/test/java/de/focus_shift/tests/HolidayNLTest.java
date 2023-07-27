@@ -60,6 +60,17 @@ class HolidayNLTest extends AbstractCountryTestBase {
   }
 
   @Property
+  void ensuresThatAllLiberationIsNotConfiguredBetweenEveryFiveYearsSince1945Until1989(@ForAll @YearRange(min = 1945, max = 1989) Year year) {
+    final HolidayManager holidayManager = HolidayManager.getInstance(create(NETHERLANDS));
+    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    if (year.getValue() % 5 != 0) {
+      assertThat(holidays)
+        .isNotEmpty()
+        .doesNotContain(new Holiday(LocalDate.of(year.getValue(), MAY, 5), "LIBERATION", OFFICIAL_HOLIDAY));
+    }
+  }
+
+  @Property
   void ensuresThatAllLiberationIsConfiguredUntil1990(@ForAll @YearRange(min = 1990) Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(NETHERLANDS));
     final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
