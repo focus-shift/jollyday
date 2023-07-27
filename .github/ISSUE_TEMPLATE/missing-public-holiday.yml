@@ -2,7 +2,7 @@
 name: Missing public holiday
 description: Report a missing public holiday
 title: "**short summary**"
-labels: ["topic: public holiday", "type: bug"]
+labels: ["status: new", "topic: public holiday", "type: bug"]
 body:
 
   - type: markdown

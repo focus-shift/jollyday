@@ -2,7 +2,7 @@
 name: Wrong public holiday
 description: Report a wrong public holiday
 title: "**short summary**"
-labels: ["topic: public holiday", "type: bug"]
+labels: ["status: new", "topic: public holiday", "type: bug"]
 body:
 
   - type: markdown
