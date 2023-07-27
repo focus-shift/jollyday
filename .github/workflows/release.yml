@@ -34,7 +34,7 @@ jobs:
           GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
       - name: Extract release tag
         id: vars
-        run: echo ::set-output name=version::${GITHUB_REF#refs/*/v}
+        run: echo "version=${GITHUB_REF#refs/*/v}" >> $GITHUB_OUTPUT
       - name: Create Release
         uses: softprops/action-gh-release@v1
         env:
