@@ -26,7 +26,7 @@ jobs:
       - name: Build with Maven
         run: >
           ./mvnw $MAVEN_CLI_OPTS
-          -Prelease
+          -Prelease -Drelease
           clean deploy
         env:
           OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
