@@ -44,7 +44,6 @@
   <modules>
     <module>jollyday-core</module>
     <module>jollyday-jaxb</module>
-    <module>jollyday-tests</module>
   </modules>
 
   <developers>
@@ -338,5 +337,24 @@
         </plugins>
       </build>
     </profile>
+
+    <profile>
+      <id>no-release</id>
+      <!--
+      According to https://github.com/sonatype/nexus-maven-plugins/tree/master/staging/maven-plugin
+      skipNexusStagingDeployMojo may not be set to true in the last reactor module. Because we don't
+      want to deploy our last module, nor a dummy module, we simply omit the relevant modules when
+      a deployment is in progress.
+      -->
+      <activation>
+        <property>
+          <name>!release</name>
+        </property>
+      </activation>
+      <modules>
+        <module>jollyday-tests</module>
+      </modules>
+    </profile>
+
   </profiles>
 </project>
