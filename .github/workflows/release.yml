@@ -23,11 +23,15 @@ jobs:
           server-password: OSSRH_PASSWORD
           gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
           gpg-passphrase: GPG_PASSPHRASE
+      - name: Tests with Maven
+        run: >
+          ./mvnw $MAVEN_CLI_OPTS
+          clean verify
       - name: Build with Maven
         run: >
           ./mvnw $MAVEN_CLI_OPTS
           -Prelease -Drelease
-          clean deploy
+          deploy
         env:
           OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
           OSSRH_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
