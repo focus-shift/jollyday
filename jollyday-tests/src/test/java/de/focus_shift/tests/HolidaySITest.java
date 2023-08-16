@@ -120,6 +120,33 @@ class HolidaySITest extends AbstractCountryTestBase {
   }
 
   @Property
+  void ensuresThatSolidarityDayIsNotConfiguredUntil2022(@ForAll @YearRange(max = 2022) Year year) {
+    final HolidayManager holidayManager = HolidayManager.getInstance(create(SLOWENIA));
+    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    assertThat(holidays)
+      .isNotEmpty()
+      .doesNotContain(new Holiday(LocalDate.of(year.getValue(), AUGUST, 14), "SOLIDARITY_DAY", OFFICIAL_HOLIDAY));
+  }
+
+  @Property
+  void ensuresThatSolidarityDayIsConfiguredIn2023(@ForAll @YearRange(min = 2023, max = 2023) Year year) {
+    final HolidayManager holidayManager = HolidayManager.getInstance(create(SLOWENIA));
+    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    assertThat(holidays)
+      .isNotEmpty()
+      .contains(new Holiday(LocalDate.of(year.getValue(), AUGUST, 14), "SOLIDARITY_DAY", OFFICIAL_HOLIDAY));
+  }
+
+  @Property
+  void ensuresThatSolidarityDayIsNotConfiguredSince2024(@ForAll @YearRange(min = 2024) Year year) {
+    final HolidayManager holidayManager = HolidayManager.getInstance(create(SLOWENIA));
+    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    assertThat(holidays)
+      .isNotEmpty()
+      .doesNotContain(new Holiday(LocalDate.of(year.getValue(), AUGUST, 14), "SOLIDARITY_DAY", OFFICIAL_HOLIDAY));
+  }
+
+  @Property
   void ensuresThatAssumptionDayIsConfiguredSince1992(@ForAll @YearRange(min = 1992) Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(SLOWENIA));
     final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
