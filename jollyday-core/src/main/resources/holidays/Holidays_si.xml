@@ -11,6 +11,7 @@
     <tns:Fixed month="MAY" day="1" validFrom="1949" descriptionPropertiesKey="LABOUR_DAY"/>
     <tns:Fixed month="MAY" day="2" validFrom="1949" descriptionPropertiesKey="LABOUR_DAY"/>
     <tns:Fixed month="JUNE" day="25" descriptionPropertiesKey="STATEHOOD"/>
+    <tns:Fixed month="AUGUST" day="14" validFrom="2023" validTo="2023" descriptionPropertiesKey="SOLIDARITY_DAY"/>
     <tns:Fixed month="AUGUST" day="15" validFrom="1992" descriptionPropertiesKey="ASSUMPTION_DAY"/>
     <tns:Fixed month="OCTOBER" day="31" validFrom="1992" descriptionPropertiesKey="REFORMATION_DAY"/>
     <tns:Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
