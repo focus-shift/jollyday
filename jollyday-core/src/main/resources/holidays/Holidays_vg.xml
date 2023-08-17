@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:Configuration hierarchy="vg" description="Virgin Islands (British)" xmlns:tns="http://www.example.org/Holiday"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.example.org/Holiday /Holiday.xsd">
+  <tns:Holidays>
+    <tns:Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
+      <tns:MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </tns:Fixed>
+
+    <!-- The Anniversary of the Birth of Hamilton Lavity Stoutt is always on the first Monday in the month of March even though he was born on the 7th March 1929 -->
+    <tns:Fixed month="MARCH" day="7" validFrom="1995" descriptionPropertiesKey="STOUTTS_BIRTHDAY">
+      <tns:MovingCondition substitute="TUESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <tns:MovingCondition substitute="WEDNESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <tns:MovingCondition substitute="THURSDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <tns:MovingCondition substitute="FRIDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <tns:MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <tns:MovingCondition substitute="SUNDAY" with="PREVIOUS" weekday="MONDAY"/>
+    </tns:Fixed>
+
+    <!-- http://www.bvi.gov.vg/media-centre/bvi-announces-public-holiday-april-21-celebrate-her-majesty-s-birthday -->
+    <!-- http://www.bvi.gov.vg/media-centre/revised-2016-public-holidays -->
+    <!-- 2016 it was moved due to the Queen's 90th birthday -->
+    <tns:Fixed month="APRIL" day="21" validFrom="2016" validTo="2016" descriptionPropertiesKey="SOVEREIGNS_BIRTHDAY"/>
+
+    <!-- https://bvi.gov.vg/media-centre/updatedofficialholidays20231 -->
+    <tns:Fixed month="MAY" day="8" validFrom="2023" validTo="2023" descriptionPropertiesKey="KINGS_CORONATION"/>
+
+    <!-- http://www.bvi.gov.vg/media-centre/revised-2022-public-holidays -->
+    <tns:Fixed month="JUNE" day="3" validFrom="2022" validTo="2022" descriptionPropertiesKey="QUEENS_PLATINUM_JUBILEE"/>
+    <!-- 2017 it was moved one week later -->
+    <tns:Fixed month="JUNE" day="17" validFrom="2017" validTo="2017" descriptionPropertiesKey="SOVEREIGNS_BIRTHDAY"/>
+    <!-- 2019 it was moved one week earlier -->
+    <tns:Fixed month="JUNE" day="7" validFrom="2019" validTo="2019" descriptionPropertiesKey="SOVEREIGNS_BIRTHDAY"/>
+    <!-- 2023 it was moved one week later -->
+    <tns:Fixed month="JUNE" day="16" validFrom="2023" validTo="2023" descriptionPropertiesKey="SOVEREIGNS_BIRTHDAY"/>
+
+    <!-- below information for colony day is just assumed to be the same as territory day, so may be very inaccurate -->
+    <tns:Fixed month="JULY" day="1" validFrom="1956" validTo="1977" descriptionPropertiesKey="COLONY_DAY">
+      <tns:MovingCondition substitute="WEDNESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <tns:MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+      <tns:MovingCondition substitute="TUESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <tns:MovingCondition substitute="THURSDAY" with="NEXT" weekday="FRIDAY"/>
+    </tns:Fixed>
+    <tns:Fixed month="JULY" day="1" validFrom="1978" validTo="2020" descriptionPropertiesKey="TERRITORY_DAY">
+      <tns:MovingCondition substitute="WEDNESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <tns:MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+      <!-- below assumed, as only data for 2015 to 2020 could be found, which did not include these weekdays -->
+      <tns:MovingCondition substitute="TUESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <tns:MovingCondition substitute="THURSDAY" with="NEXT" weekday="FRIDAY"/>
+    </tns:Fixed>
+    <tns:Fixed month="JULY" day="1" validFrom="2021" descriptionPropertiesKey="VIRGIN_ISLANDS_DAY">
+      <tns:MovingCondition substitute="TUESDAY" with="NEXT" weekday="MONDAY"/>
+      <tns:MovingCondition substitute="WEDNESDAY" with="NEXT" weekday="MONDAY"/>
+      <tns:MovingCondition substitute="THURSDAY" with="NEXT" weekday="MONDAY"/>
+      <tns:MovingCondition substitute="FRIDAY" with="NEXT" weekday="MONDAY"/>
+      <tns:MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </tns:Fixed>
+
+    <!-- assumed that the holidays before where following this rule too due to missing data for Wednesdays -->
+    <tns:Fixed month="OCTOBER" day="21" validTo="2015" descriptionPropertiesKey="ST_URSULA">
+      <tns:MovingCondition substitute="WEDNESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <tns:MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+      <!-- below assumed, as only data for 2015 to 2020 could be found, which did not include these weekdays -->
+      <tns:MovingCondition substitute="TUESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <tns:MovingCondition substitute="THURSDAY" with="NEXT" weekday="FRIDAY"/>
+    </tns:Fixed>
+    <tns:Fixed month="OCTOBER" day="21" validFrom="2016" validTo="2020" descriptionPropertiesKey="ST_URSULA">
+      <tns:MovingCondition substitute="WEDNESDAY" with="NEXT" weekday="FRIDAY"/>
+      <tns:MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+      <!-- below assumed, as only data for 2015 to 2020 could be found, which did not include these weekdays -->
+      <tns:MovingCondition substitute="TUESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <tns:MovingCondition substitute="THURSDAY" with="NEXT" weekday="FRIDAY"/>
+    </tns:Fixed>
+
+    <!-- assume that 2016 was an outlier -->
+    <tns:Fixed month="DECEMBER" day="25" validTo="2015" descriptionPropertiesKey="CHRISTMAS">
+      <tns:MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </tns:Fixed>
+    <!-- assume that 2016 was an outlier -->
+    <tns:Fixed month="DECEMBER" day="26" validTo="2015" descriptionPropertiesKey="BOXING_DAY">
+      <tns:MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </tns:Fixed>
+    <tns:Fixed month="DECEMBER" day="25" validFrom="2016" validTo="2016" descriptionPropertiesKey="CHRISTMAS">
+      <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </tns:Fixed>
+    <tns:Fixed month="DECEMBER" day="26" validFrom="2016" validTo="2016" descriptionPropertiesKey="BOXING_DAY">
+      <tns:MovingCondition substitute="MONDAY" with="NEXT" weekday="TUESDAY"/>
+    </tns:Fixed>
+    <tns:Fixed month="DECEMBER" day="25" validFrom="2017" descriptionPropertiesKey="CHRISTMAS">
+      <tns:MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </tns:Fixed>
+    <tns:Fixed month="DECEMBER" day="26" validFrom="2017" descriptionPropertiesKey="BOXING_DAY">
+      <tns:MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </tns:Fixed>
+
+    <tns:RelativeToWeekdayInMonth weekday="TUESDAY" when="AFTER" validTo="2020" descriptionPropertiesKey="FESTIVAL_TUESDAY">
+      <tns:FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST"/>
+    </tns:RelativeToWeekdayInMonth>
+    <tns:RelativeToWeekdayInMonth weekday="WEDNESDAY" when="AFTER" validTo="2020" descriptionPropertiesKey="FESTIVAL_WEDNESDAY">
+      <tns:FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST"/>
+    </tns:RelativeToWeekdayInMonth>
+    <tns:RelativeToWeekdayInMonth weekday="TUESDAY" when="AFTER" validFrom="2021" descriptionPropertiesKey="EMANCIPATION_TUESDAY">
+      <tns:FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST"/>
+    </tns:RelativeToWeekdayInMonth>
+    <tns:RelativeToWeekdayInMonth weekday="WEDNESDAY" when="AFTER" validFrom="2021" descriptionPropertiesKey="EMANCIPATION_WEDNESDAY">
+      <tns:FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST"/>
+    </tns:RelativeToWeekdayInMonth>
+
+    <!-- the start year may be wrong, it is currently set to the earliest possible year -->
+    <tns:FixedWeekday which="SECOND" weekday="MONDAY" month="MARCH" validFrom="1977" validTo="2020" descriptionPropertiesKey="COMMONWEALTH_DAY"/>
+
+    <tns:FixedWeekday which="SECOND" weekday="SATURDAY" month="JUNE" validTo="2015" descriptionPropertiesKey="SOVEREIGNS_BIRTHDAY"/>
+    <!-- 2016 it was moved due to the Queen's 90th birthday - see above -->
+    <!-- 2017 it was moved one week later - see above -->
+    <tns:FixedWeekday which="SECOND" weekday="SATURDAY" month="JUNE" validFrom="2018" validTo="2018" descriptionPropertiesKey="SOVEREIGNS_BIRTHDAY"/>
+    <!-- 2019 it was moved one week earlier - see above -->
+    <tns:FixedWeekday which="SECOND" weekday="FRIDAY" month="JUNE" validFrom="2020" validTo="2022" descriptionPropertiesKey="SOVEREIGNS_BIRTHDAY"/>
+    <!-- 2023 it was moved one week later - see above -->
+    <tns:FixedWeekday which="SECOND" weekday="FRIDAY" month="JUNE" validFrom="2024" descriptionPropertiesKey="SOVEREIGNS_BIRTHDAY"/>
+
+    <tns:FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST" validTo="2020" descriptionPropertiesKey="FESTIVAL_MONDAY"/>
+    <tns:FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST" validFrom="2021" descriptionPropertiesKey="EMANCIPATION_MONDAY"/>
+
+    <tns:FixedWeekday which="THIRD" weekday="MONDAY" month="OCTOBER" validFrom="2021" descriptionPropertiesKey="HEROES_AND_FOREPARENTS_DAY"/>
+
+    <!-- https://bvi.gov.vg/media-centre/message-dr-honourable-natalio-d-wheatley-1949-great-march-and-restoration-day -->
+    <tns:FixedWeekday which="FOURTH" weekday="MONDAY" month="NOVEMBER" validFrom="2021" descriptionPropertiesKey="1949_GREAT_MARCH_AND_RESTORATION"/>
+
+    <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+    <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+
+    <tns:ChristianHoliday type="WHIT_MONDAY" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
+  </tns:Holidays>
+</tns:Configuration>
