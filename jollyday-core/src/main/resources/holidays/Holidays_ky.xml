@@ -18,56 +18,6 @@
     <!-- https://www.gov.ky/news/press-release-details/public-holidays-2022 -->
     <tns:Fixed month="JUNE" day="3" validFrom="2022" validTo="2022" descriptionPropertiesKey="QUEENS_PLATINUM_JUBILEE"/>
 
-    <!-- The Public Holiday Act 2007 sets out the Sovereign’s official birthday celebration as “The Monday following the
-    Saturday appointed in the United Kingdom as the official birthday of the reigning sovereign”. -->
-
-    <!-- https://archives.gov.ky/Archive/view_press_release/1503/holidays-for-2008-confirmed -->
-    <!-- third Monday -->
-    <tns:Fixed month="JUNE" day="16" validFrom="2008" validTo="2008" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
-    <!-- the official Birthday in the UK was on Friday, 12th June 2009 -->
-    <!-- see also: https://www.timeanddate.com/holidays/cayman-islands/queens-birthday -->
-    <!-- second Monday -->
-    <tns:Fixed month="JUNE" day="15" validFrom="2009" validTo="2009" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
-    <!-- https://archives.gov.ky/Archive/view_press_release/3001/2010-public-holidays -->
-    <!-- second Monday -->
-    <tns:Fixed month="JUNE" day="14" validFrom="2010" validTo="2010" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
-    <!-- https://archives.gov.ky/Archive/view_press_release/3836/2011-public-holidays -->
-    <!-- second Monday -->
-    <tns:Fixed month="JUNE" day="13" validFrom="2011" validTo="2011" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
-    <!-- https://archives.gov.ky/Archive/view_press_release/4117/rounding-out-the-calendar -->
-    <!-- third Monday -->
-    <tns:Fixed month="JUNE" day="18" validFrom="2012" validTo="2012" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
-    <!-- https://archives.gov.ky/Archive/view_press_release/4494/public-holidays-in-2013 -->
-    <!-- third Monday -->
-    <tns:Fixed month="JUNE" day="17" validFrom="2013" validTo="2013" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
-    <!-- https://archives.gov.ky/Archive/view_press_release/4710/public-holidays-2014-confirmed -->
-    <!-- third Monday -->
-    <tns:Fixed month="JUNE" day="16" validFrom="2014" validTo="2014" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
-    <!-- https://archives.gov.ky/Archive/view_press_release/4916/public-holidays-2015 -->
-    <!-- third Monday -->
-    <tns:Fixed month="JUNE" day="15" validFrom="2015" validTo="2015" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
-    <!-- https://archives.gov.ky/Archive/view_press_release/5215/public-holidays-2016-confirmed -->
-    <!-- second Monday -->
-    <tns:Fixed month="JUNE" day="13" validFrom="2016" validTo="2016" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
-    <!-- https://archives.gov.ky/Archive/view_press_release/5419/2017-public-holidays-updated -->
-    <!-- third Monday -->
-    <tns:Fixed month="JUNE" day="19" validFrom="2017" validTo="2017" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
-    <!-- https://archives.gov.ky/Archive/view_press_release/5612/2018-public-holidays-released -->
-    <!-- second Monday -->
-    <tns:Fixed month="JUNE" day="11" validFrom="2018" validTo="2018" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
-    <!-- https://archives.gov.ky/Archive/view_press_release/5987/2019-public-holidays-listed -->
-    <!-- second Monday -->
-    <tns:Fixed month="JUNE" day="10" validFrom="2019" validTo="2019" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
-    <!-- https://archives.gov.ky/Archive/view_press_release/6233/2020-public-holidays -->
-    <!-- third Monday -->
-    <tns:Fixed month="JUNE" day="15" validFrom="2020" validTo="2020" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
-    <!-- https://www.gov.ky/news/press-release-details/public-holidays-for-2021 -->
-    <!-- second Monday -->
-    <tns:Fixed month="JUNE" day="14" validFrom="2021" validTo="2021" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
-    <!-- https://www.gov.ky/news/press-release-details/public-holidays-2022 -->
-    <!-- first Monday -->
-    <tns:Fixed month="JUNE" day="6" validFrom="2022" validTo="2022" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
-
     <!-- https://www.gov.ky/calendar/public-holidays -->
     <tns:Fixed month="JUNE" day="19" validFrom="2023" descriptionPropertiesKey="KINGS_DAY"/>
 
@@ -92,6 +42,20 @@
     <tns:FixedWeekday which="THIRD" weekday="MONDAY" month="MAY" descriptionPropertiesKey="DISCOVERY_DAY"/>
 
     <tns:FixedWeekday which="FOURTH" weekday="WEDNESDAY" month="MAY" validFrom="2013" validTo="2017" every="FOUR_YEARS"  descriptionPropertiesKey="ELECTION_DAY"/>
+
+    <!-- The Public Holiday Act 2007 sets out the Sovereign’s official birthday celebration as “The Monday following the
+    Saturday appointed in the United Kingdom as the official birthday of the reigning sovereign”. -->
+
+    <!-- information for pre-2008 will very likely be very inaccurate, as just assumed to be the same since the accession of Elizabeth II -->
+    <tns:FixedWeekday which="THIRD" weekday="MONDAY" month="JUNE" validFrom="1952" validTo="2009" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
+    <tns:FixedWeekday which="SECOND" weekday="MONDAY" month="JUNE" validFrom="2010" validTo="2011" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
+    <tns:FixedWeekday which="THIRD" weekday="MONDAY" month="JUNE" validFrom="2012" validTo="2015" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
+    <tns:FixedWeekday which="SECOND" weekday="MONDAY" month="JUNE" validFrom="2016" validTo="2016" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
+    <tns:FixedWeekday which="THIRD" weekday="MONDAY" month="JUNE" validFrom="2017" validTo="2017" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
+    <tns:FixedWeekday which="SECOND" weekday="MONDAY" month="JUNE" validFrom="2018" validTo="2019" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
+    <tns:FixedWeekday which="THIRD" weekday="MONDAY" month="JUNE" validFrom="2020" validTo="2020" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
+    <tns:FixedWeekday which="SECOND" weekday="MONDAY" month="JUNE" validFrom="2021" validTo="2021" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
+    <tns:FixedWeekday which="FIRST" weekday="MONDAY" month="JUNE" validFrom="2022" validTo="2022" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
 
     <tns:FixedWeekday which="FIRST" weekday="MONDAY" month="JULY" descriptionPropertiesKey="CONSTITUTION_DAY"/>
 
