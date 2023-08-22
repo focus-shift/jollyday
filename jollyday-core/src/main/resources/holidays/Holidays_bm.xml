@@ -20,67 +20,6 @@
     <!-- 2019 it was moved one week earlier -->
     <tns:Fixed month="MAY" day="24" validFrom="2019" validTo="2019" descriptionPropertiesKey="BERMUDA_DAY"/>
 
-    <!-- the Thursday before the first Monday in August -->
-
-    <!-- the start year may be wrong, it is currently set to the earliest possible year -->
-    <!-- fourth / last Thursday in July -->
-    <tns:Fixed month="JULY" day="28" validFrom="1947" validTo="2016" descriptionPropertiesKey="EMANCIPATION_DAY"/>
-    <!-- first Thursday in August -->
-    <tns:Fixed month="AUGUST" day="3" validFrom="2017" validTo="2017" descriptionPropertiesKey="EMANCIPATION_DAY"/>
-    <!-- first Thursday in August -->
-    <tns:Fixed month="AUGUST" day="2" validFrom="2018" validTo="2018" descriptionPropertiesKey="EMANCIPATION_DAY"/>
-    <!-- first Thursday in August -->
-    <tns:Fixed month="AUGUST" day="1" validFrom="2019" validTo="2019" descriptionPropertiesKey="EMANCIPATION_DAY"/>
-    <!-- fifth / last Thursday in July -->
-    <tns:Fixed month="JULY" day="30" validFrom="2020" validTo="2020" descriptionPropertiesKey="EMANCIPATION_DAY"/>
-    <!-- https://www.gov.bm/theofficialgazette/notices/gn00492021 -->
-    <!-- fifth / last Thursday in July -->
-    <tns:Fixed month="JULY" day="29" validFrom="2021" validTo="2021" descriptionPropertiesKey="EMANCIPATION_DAY"/>
-    <!-- https://www.gov.bm/theofficialgazette/notices/gn00502021 -->
-    <!-- fourth / last Thursday in July -->
-    <tns:Fixed month="JULY" day="28" validFrom="2022" validTo="2022" descriptionPropertiesKey="EMANCIPATION_DAY"/>
-    <!-- https://www.gov.bm/theofficialgazette/notices/gn00502021 -->
-    <!-- first Thursday in August -->
-    <tns:Fixed month="AUGUST" day="3" validFrom="2023" validTo="2023" descriptionPropertiesKey="EMANCIPATION_DAY"/>
-    <!-- https://www.gov.bm/theofficialgazette/notices/gn03652022 -->
-    <!-- first Thursday in August -->
-    <tns:Fixed month="AUGUST" day="1" validFrom="2024" validTo="2024" descriptionPropertiesKey="EMANCIPATION_DAY"/>
-    <!-- https://www.gov.bm/theofficialgazette/notices/gn03662022 -->
-    <!-- fifth / last Thursday in July -->
-    <tns:Fixed month="JULY" day="31" validFrom="2025" descriptionPropertiesKey="EMANCIPATION_DAY"/>
-
-    <!-- the Friday before the first Monday in August -->
-
-    <!-- the start year may be wrong, it is currently set to the earliest possible year -->
-    <!-- fourth / last Friday in July -->
-    <tns:Fixed month="JULY" day="29" validFrom="1947" validTo="2016" descriptionPropertiesKey="SOMERS_DAY"/>
-    <!-- first Friday in August -->
-    <tns:Fixed month="AUGUST" day="4" validFrom="2017" validTo="2017" descriptionPropertiesKey="SOMERS_DAY"/>
-    <!-- first Friday in August -->
-    <tns:Fixed month="AUGUST" day="3" validFrom="2018" validTo="2018" descriptionPropertiesKey="SOMERS_DAY"/>
-    <!-- first Friday in August -->
-    <tns:Fixed month="AUGUST" day="2" validFrom="2019" validTo="2019" descriptionPropertiesKey="SOMERS_DAY"/>
-
-    <!-- the Friday before the first Monday in August -->
-
-    <!-- fifth / last Friday in July -->
-    <tns:Fixed month="JULY" day="31" validFrom="2020" validTo="2020" descriptionPropertiesKey="MARY_PRINCE_DAY"/>
-    <!-- https://www.gov.bm/theofficialgazette/notices/gn00492021 -->
-    <!-- fifth / last Friday in July -->
-    <tns:Fixed month="JULY" day="30" validFrom="2021" validTo="2021" descriptionPropertiesKey="MARY_PRINCE_DAY"/>
-    <!-- https://www.gov.bm/theofficialgazette/notices/gn00502021 -->
-    <!-- fifth / last Friday in July -->
-    <tns:Fixed month="JULY" day="29" validFrom="2022" validTo="2022" descriptionPropertiesKey="MARY_PRINCE_DAY"/>
-    <!-- https://www.gov.bm/theofficialgazette/notices/gn00502021 -->
-    <!-- first Friday in August -->
-    <tns:Fixed month="AUGUST" day="4" validFrom="2023" validTo="2023" descriptionPropertiesKey="MARY_PRINCE_DAY"/>
-    <!-- https://www.gov.bm/theofficialgazette/notices/gn03652022 -->
-    <!-- first Friday in August -->
-    <tns:Fixed month="AUGUST" day="2" validFrom="2024" validTo="2024" descriptionPropertiesKey="MARY_PRINCE_DAY"/>
-    <!-- https://www.gov.bm/theofficialgazette/notices/gn03662022 -->
-    <!-- first Friday in August -->
-    <tns:Fixed month="AUGUST" day="1" validFrom="2025" descriptionPropertiesKey="MARY_PRINCE_DAY"/>
-
     <!-- https://culture.bm/photo/national-heroes-day/ -->
     <tns:Fixed month="OCTOBER" day="12" validFrom="2008" validTo="2008" descriptionPropertiesKey="NATIONAL_HEROES_DAY"/>
 
@@ -110,6 +49,27 @@
     <tns:FixedWeekday which="FOURTH" weekday="FRIDAY" month="MAY" validFrom="2021" descriptionPropertiesKey="BERMUDA_DAY"/>
 
     <tns:FixedWeekday which="THIRD" weekday="MONDAY" month="JUNE" validFrom="2009" descriptionPropertiesKey="NATIONAL_HEROES_DAY"/>
+
+    <!-- the Thursday before the first Monday in August -->
+
+    <!-- information for pre-2016 and post-2025 will very likely be very inaccurate, as just assumed to be the same all along -->
+    <tns:FixedWeekday which="LAST" weekday="THURSDAY" month="JULY" validFrom="1947" validTo="2016" descriptionPropertiesKey="EMANCIPATION_DAY"/>
+    <tns:FixedWeekday which="FIRST" weekday="THURSDAY" month="AUGUST" validFrom="2017" validTo="2019" descriptionPropertiesKey="EMANCIPATION_DAY"/>
+    <tns:FixedWeekday which="LAST" weekday="THURSDAY" month="JULY" validFrom="2020" validTo="2022" descriptionPropertiesKey="EMANCIPATION_DAY"/>
+    <tns:FixedWeekday which="FIRST" weekday="THURSDAY" month="AUGUST" validFrom="2023" validTo="2024" descriptionPropertiesKey="EMANCIPATION_DAY"/>
+    <tns:FixedWeekday which="LAST" weekday="THURSDAY" month="JULY" validFrom="2025" descriptionPropertiesKey="EMANCIPATION_DAY"/>
+
+    <!-- the Friday before the first Monday in August -->
+
+    <!-- information for pre-2016 will very likely be very inaccurate, as just assumed to be the same all along -->
+    <tns:FixedWeekday which="LAST" weekday="FRIDAY" month="JULY" validFrom="1947" validTo="2016" descriptionPropertiesKey="SOMERS_DAY"/>
+    <tns:FixedWeekday which="FIRST" weekday="FRIDAY" month="AUGUST" validFrom="2017" validTo="2019" descriptionPropertiesKey="SOMERS_DAY"/>
+
+    <!-- the Friday before the first Monday in August -->
+
+    <!-- information for post-2025 will very likely be very inaccurate, as just assumed to be the same all along -->
+    <tns:FixedWeekday which="LAST" weekday="FRIDAY" month="JULY" validFrom="2020" validTo="2022" descriptionPropertiesKey="MARY_PRINCE_DAY"/>
+    <tns:FixedWeekday which="FIRST" weekday="FRIDAY" month="AUGUST" validFrom="2023" descriptionPropertiesKey="MARY_PRINCE_DAY"/>
 
     <tns:FixedWeekday which="FIRST" weekday="MONDAY" month="SEPTEMBER" descriptionPropertiesKey="LABOUR_DAY"/>
 
