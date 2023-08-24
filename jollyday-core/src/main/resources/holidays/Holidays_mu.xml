@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration hierarchy="mu" description="Mauritius"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="JANUARY" day="2" descriptionPropertiesKey="NEW_YEAR"/>
+    <!-- https://pmo.govmu.org/Communique/35_Proclamation%20A5_2022.pdf -->
+    <Fixed month="JANUARY" day="3" validFrom="2023" validTo="2023" descriptionPropertiesKey="PUBLIC_HOLIDAY"/>
+
+    <!-- according to Wikipedia: -->
+    <!-- The first day of Chinese New Year begins on the new moon that appears between 21 January and 20 February. -->
+    <!-- And extremely rarely, 21 February, such as in 2319, the first occurrence since the 1645 calendar reform. -->
+    <Fixed month="FEBRUARY" day="10" validFrom="2013" validTo="2013" descriptionPropertiesKey="CHINESE_SPRING_FESTIVAL"/>
+    <Fixed month="JANUARY" day="31" validFrom="2014" validTo="2014" descriptionPropertiesKey="CHINESE_SPRING_FESTIVAL"/>
+    <Fixed month="FEBRUARY" day="19" validFrom="2015" validTo="2015" descriptionPropertiesKey="CHINESE_SPRING_FESTIVAL"/>
+    <Fixed month="FEBRUARY" day="8" validFrom="2016" validTo="2016" descriptionPropertiesKey="CHINESE_SPRING_FESTIVAL"/>
+    <Fixed month="JANUARY" day="28" validFrom="2017" validTo="2017" descriptionPropertiesKey="CHINESE_SPRING_FESTIVAL"/>
+    <Fixed month="FEBRUARY" day="16" validFrom="2018" validTo="2018" descriptionPropertiesKey="CHINESE_SPRING_FESTIVAL"/>
+    <Fixed month="FEBRUARY" day="5" validFrom="2019" validTo="2019" descriptionPropertiesKey="CHINESE_SPRING_FESTIVAL"/>
+    <Fixed month="JANUARY" day="25" validFrom="2020" validTo="2020" descriptionPropertiesKey="CHINESE_SPRING_FESTIVAL"/>
+    <Fixed month="FEBRUARY" day="12" validFrom="2021" validTo="2021" descriptionPropertiesKey="CHINESE_SPRING_FESTIVAL"/>
+    <Fixed month="FEBRUARY" day="1" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHINESE_SPRING_FESTIVAL"/>
+    <Fixed month="JANUARY" day="22" validFrom="2023" validTo="2023" descriptionPropertiesKey="CHINESE_SPRING_FESTIVAL"/>
+    <Fixed month="FEBRUARY" day="10" validFrom="2024" validTo="2024" descriptionPropertiesKey="CHINESE_SPRING_FESTIVAL"/>
+
+    <!-- according to Wikipedia: -->
+    <!-- the full moon of the Tamil month of Thai (January/February), usually coinciding with Pushya star, known as Pusam in Tamil -->
+    <Fixed month="JANUARY" day="27" validFrom="2013" validTo="2013" descriptionPropertiesKey="THAIPOOSAM_CAVEDEE"/>
+    <Fixed month="JANUARY" day="17" validFrom="2014" validTo="2014" descriptionPropertiesKey="THAIPOOSAM_CAVEDEE"/>
+    <Fixed month="FEBRUARY" day="3" validFrom="2015" validTo="2015" descriptionPropertiesKey="THAIPOOSAM_CAVEDEE"/>
+    <Fixed month="JANUARY" day="24" validFrom="2016" validTo="2016" descriptionPropertiesKey="THAIPOOSAM_CAVEDEE"/>
+    <Fixed month="FEBRUARY" day="9" validFrom="2017" validTo="2017" descriptionPropertiesKey="THAIPOOSAM_CAVEDEE"/>
+    <Fixed month="JANUARY" day="31" validFrom="2018" validTo="2018" descriptionPropertiesKey="THAIPOOSAM_CAVEDEE"/>
+    <Fixed month="JANUARY" day="21" validFrom="2019" validTo="2019" descriptionPropertiesKey="THAIPOOSAM_CAVEDEE"/>
+    <Fixed month="FEBRUARY" day="8" validFrom="2020" validTo="2020" descriptionPropertiesKey="THAIPOOSAM_CAVEDEE"/>
+    <Fixed month="JANUARY" day="28" validFrom="2021" validTo="2021" descriptionPropertiesKey="THAIPOOSAM_CAVEDEE"/>
+    <Fixed month="JANUARY" day="18" validFrom="2022" validTo="2022" descriptionPropertiesKey="THAIPOOSAM_CAVEDEE"/>
+    <Fixed month="FEBRUARY" day="4" validFrom="2023" validTo="2023" descriptionPropertiesKey="THAIPOOSAM_CAVEDEE"/>
+    <Fixed month="JANUARY" day="25" validFrom="2024" validTo="2024" descriptionPropertiesKey="THAIPOOSAM_CAVEDEE"/>
+
+    <Fixed month="FEBRUARY" day="1" descriptionPropertiesKey="ABOLITION_OF_SLAVERY"/>
+
+    <!-- according to Wikipedia: -->
+    <!-- the fourteenth day of the dark (waning) half of the lunar month of Phalguna or Magha -->
+    <!-- or simply the same as the Restricted Holiday of Maha Shivaratri in India? -->
+    <Fixed month="MARCH" day="10" validFrom="2013" validTo="2013" descriptionPropertiesKey="MAHA_SHIVRATREE"/>
+    <Fixed month="FEBRUARY" day="27" validFrom="2014" validTo="2014" descriptionPropertiesKey="MAHA_SHIVRATREE"/>
+    <Fixed month="FEBRUARY" day="17" validFrom="2015" validTo="2015" descriptionPropertiesKey="MAHA_SHIVRATREE"/>
+    <Fixed month="MARCH" day="7" validFrom="2016" validTo="2016" descriptionPropertiesKey="MAHA_SHIVRATREE"/>
+    <Fixed month="FEBRUARY" day="24" validFrom="2017" validTo="2017" descriptionPropertiesKey="MAHA_SHIVRATREE"/>
+    <Fixed month="FEBRUARY" day="13" validFrom="2018" validTo="2018" descriptionPropertiesKey="MAHA_SHIVRATREE"/>
+    <Fixed month="MARCH" day="4" validFrom="2019" validTo="2019" descriptionPropertiesKey="MAHA_SHIVRATREE"/>
+    <Fixed month="FEBRUARY" day="21" validFrom="2020" validTo="2020" descriptionPropertiesKey="MAHA_SHIVRATREE"/>
+    <Fixed month="MARCH" day="11" validFrom="2021" validTo="2021" descriptionPropertiesKey="MAHA_SHIVRATREE"/>
+    <Fixed month="MARCH" day="1" validFrom="2022" validTo="2022" descriptionPropertiesKey="MAHA_SHIVRATREE"/>
+    <Fixed month="FEBRUARY" day="18" validFrom="2023" validTo="2023" descriptionPropertiesKey="MAHA_SHIVRATREE"/>
+    <Fixed month="MARCH" day="8" validFrom="2024" validTo="2024" descriptionPropertiesKey="MAHA_SHIVRATREE"/>
+
+    <Fixed month="MARCH" day="12" validTo="2016" descriptionPropertiesKey="NATIONAL_DAY"/>
+    <Fixed month="MARCH" day="12" validFrom="2017" descriptionPropertiesKey="INDEPENDENCE_AND_REPUBLIC_DAY"/>
+
+    <!-- according to Wikipedia: -->
+    <!-- the first day of the Hindu lunisolar calendar month of Chaitra -->
+    <!-- Ugadi day is pivoted on the first New Moon after March Equinox -->
+    <Fixed month="APRIL" day="11" validFrom="2013" validTo="2013" descriptionPropertiesKey="UGAADI"/>
+    <Fixed month="MARCH" day="31" validFrom="2014" validTo="2014" descriptionPropertiesKey="UGAADI"/>
+    <Fixed month="MARCH" day="21" validFrom="2015" validTo="2015" descriptionPropertiesKey="UGAADI"/>
+    <Fixed month="APRIL" day="8" validFrom="2016" validTo="2016" descriptionPropertiesKey="UGAADI"/>
+    <Fixed month="MARCH" day="29" validFrom="2017" validTo="2017" descriptionPropertiesKey="UGAADI"/>
+    <Fixed month="MARCH" day="18" validFrom="2018" validTo="2018" descriptionPropertiesKey="UGAADI"/>
+    <Fixed month="APRIL" day="6" validFrom="2019" validTo="2019" descriptionPropertiesKey="UGAADI"/>
+    <Fixed month="MARCH" day="25" validFrom="2020" validTo="2020" descriptionPropertiesKey="UGAADI"/>
+    <Fixed month="APRIL" day="13" validFrom="2021" validTo="2021" descriptionPropertiesKey="UGAADI"/>
+    <Fixed month="APRIL" day="2" validFrom="2022" validTo="2022" descriptionPropertiesKey="UGAADI"/>
+    <Fixed month="MARCH" day="22" validFrom="2023" validTo="2023" descriptionPropertiesKey="UGAADI"/>
+    <Fixed month="APRIL" day="9" validFrom="2024" validTo="2024" descriptionPropertiesKey="UGAADI"/>
+
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+
+    <Fixed month="AUGUST" day="15" every="EVEN_YEARS" descriptionPropertiesKey="ASSUMPTION_BLESSED_VIRGIN_MARY"/>
+
+    <!-- the fourth day of the lunar month in August / September (?) -->
+    <!-- or simply one day after the Restricted Holiday of Ganesh Chaturthi in India? -->
+    <Fixed month="SEPTEMBER" day="10" validFrom="2013" validTo="2013" descriptionPropertiesKey="GANESH_CHATURTHI"/>
+    <Fixed month="AUGUST" day="30" validFrom="2014" validTo="2014" descriptionPropertiesKey="GANESH_CHATURTHI"/>
+    <Fixed month="SEPTEMBER" day="18" validFrom="2015" validTo="2015" descriptionPropertiesKey="GANESH_CHATURTHI"/>
+    <Fixed month="SEPTEMBER" day="6" validFrom="2016" validTo="2016" descriptionPropertiesKey="GANESH_CHATURTHI"/>
+    <Fixed month="AUGUST" day="26" validFrom="2017" validTo="2017" descriptionPropertiesKey="GANESH_CHATURTHI"/>
+    <Fixed month="SEPTEMBER" day="14" validFrom="2018" validTo="2018" descriptionPropertiesKey="GANESH_CHATURTHI"/>
+    <Fixed month="SEPTEMBER" day="3" validFrom="2019" validTo="2019" descriptionPropertiesKey="GANESH_CHATURTHI"/>
+    <Fixed month="AUGUST" day="23" validFrom="2020" validTo="2020" descriptionPropertiesKey="GANESH_CHATURTHI"/>
+    <Fixed month="SEPTEMBER" day="11" validFrom="2021" validTo="2021" descriptionPropertiesKey="GANESH_CHATURTHI"/>
+    <Fixed month="SEPTEMBER" day="1" validFrom="2022" validTo="2022" descriptionPropertiesKey="GANESH_CHATURTHI"/>
+    <Fixed month="SEPTEMBER" day="20" validFrom="2023" validTo="2023" descriptionPropertiesKey="GANESH_CHATURTHI"/>
+    <Fixed month="SEPTEMBER" day="8" validFrom="2024" validTo="2024" descriptionPropertiesKey="GANESH_CHATURTHI"/>
+
+    <!-- the day that according to Wikipedia is referred to in other regions as: -->
+    <!-- Lakshmi Puja: the amavasya (new moon day) in the Vikram Samvat Hindu calendar month of Ashwayuja (according to the amanta tradition) or Kartika (according to the purnimanta tradition) -->
+    <!-- Naraka Chaturdashi: Chaturdashi (the 14th day) of the Krishna Paksha in the Hindu calendar month of Ashvin (according to the amanta tradition) or Kartika (according to the purnimanta tradition) -->
+    <!-- Kali Puja: the new moon day (Dipannita Amavasya) of the Hindu calendar month of Ashwayuja (according to the amanta tradition) or Kartika (according to the purnimanta tradition) -->
+    <!-- or simply the same date as the Gazetted Holiday of Diwali in India? -->
+    <Fixed month="NOVEMBER" day="3" validFrom="2013" validTo="2013" descriptionPropertiesKey="DIVALI"/>
+    <Fixed month="OCTOBER" day="23" validFrom="2014" validTo="2014" descriptionPropertiesKey="DIVALI"/>
+    <Fixed month="NOVEMBER" day="11" validFrom="2015" validTo="2015" descriptionPropertiesKey="DIVALI"/>
+    <Fixed month="OCTOBER" day="30" validFrom="2016" validTo="2016" descriptionPropertiesKey="DIVALI"/>
+    <Fixed month="OCTOBER" day="19" validFrom="2017" validTo="2017" descriptionPropertiesKey="DIVALI"/>
+    <Fixed month="NOVEMBER" day="7" validFrom="2018" validTo="2018" descriptionPropertiesKey="DIVALI"/>
+    <Fixed month="OCTOBER" day="27" validFrom="2019" validTo="2019" descriptionPropertiesKey="DIVALI"/>
+    <Fixed month="NOVEMBER" day="14" validFrom="2020" validTo="2020" descriptionPropertiesKey="DIVALI"/>
+    <Fixed month="NOVEMBER" day="4" validFrom="2021" validTo="2021" descriptionPropertiesKey="DIVALI"/>
+    <Fixed month="OCTOBER" day="24" validFrom="2022" validTo="2022" descriptionPropertiesKey="DIVALI"/>
+    <Fixed month="NOVEMBER" day="12" validFrom="2023" validTo="2023" descriptionPropertiesKey="DIVALI"/>
+    <Fixed month="OCTOBER" day="31" validFrom="2024" validTo="2024" descriptionPropertiesKey="DIVALI"/>
+
+    <Fixed month="NOVEMBER" day="1" every="ODD_YEARS" descriptionPropertiesKey="ALL_SAINTS"/>
+    <Fixed month="NOVEMBER" day="2" descriptionPropertiesKey="ARRIVAL_OF_INDENTURED_LABORERS"/>
+
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+
+    <!-- assume that it was also moved all not through 4 divisible years before 2013 too -->
+    <IslamicHoliday type="ID_AL_FITR_2" validTo="2010" every="FOUR_YEARS" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+    <IslamicHoliday type="ID_AL_FITR" validTo="2012" every="FOUR_YEARS" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+    <!-- at least since 2013 always one day later than in the United Arab Emirates and Saudi Arabia (so on the same day as in India)
+    except in every through 4 divisible year (leap year), there it is on the same day as in the United Arab Emirates and Saudi Arabia (so one day earlier than in India) -->
+    <IslamicHoliday type="ID_AL_FITR_2" every="ODD_YEARS" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+    <IslamicHoliday type="ID_AL_FITR_2" validFrom="2014" every="FOUR_YEARS" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+    <IslamicHoliday type="ID_AL_FITR" validFrom="2016" every="FOUR_YEARS" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+  </Holidays>
+</Configuration>
