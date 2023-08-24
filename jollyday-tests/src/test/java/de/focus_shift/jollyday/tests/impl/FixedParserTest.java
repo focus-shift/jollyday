@@ -60,13 +60,24 @@ class FixedParserTest {
   }
 
   @Test
-  void testCycle2YearsInvalid() {
+  void testCycle2YearsInvalidRepeat() {
     final Fixed fixed = createFixed(4, JANUARY);
     fixed.setValidFrom(2010);
     fixed.setEvery(HolidayCycleType.TWO_YEARS);
     final Holidays config = createHolidays(fixed);
 
     final List<Holiday> holidays = sut.parse(2011, new JaxbHolidays(config));
+    assertThat(holidays).isEmpty();
+  }
+
+  @Test
+  void testCycle2YearsReverseInvalidRepeat() {
+    final Fixed fixed = createFixed(4, JANUARY);
+    fixed.setValidTo(2010);
+    fixed.setEvery(HolidayCycleType.TWO_YEARS);
+    final Holidays config = createHolidays(fixed);
+
+    final List<Holiday> holidays = sut.parse(2009, new JaxbHolidays(config));
     assertThat(holidays).isEmpty();
   }
 
@@ -78,6 +89,38 @@ class FixedParserTest {
     final Holidays config = createHolidays(fixed);
     final List<Holiday> holidays = sut.parse(2013, new JaxbHolidays(config));
     assertThat(holidays).hasSize(1);
+  }
+
+  @Test
+  void testCycle3YearsReverse() {
+    final Fixed fixed = createFixed(4, JANUARY);
+    fixed.setValidTo(2010);
+    fixed.setEvery(HolidayCycleType.THREE_YEARS);
+    final Holidays config = createHolidays(fixed);
+    final List<Holiday> holidays = sut.parse(2007, new JaxbHolidays(config));
+    assertThat(holidays).hasSize(1);
+  }
+
+  @Test
+  void testCycle5YearsInvalidBeforeStart() {
+    final Fixed fixed = createFixed(4, JANUARY);
+    fixed.setValidFrom(2010);
+    fixed.setEvery(HolidayCycleType.TWO_YEARS);
+    final Holidays config = createHolidays(fixed);
+
+    final List<Holiday> holidays = sut.parse(2005, new JaxbHolidays(config));
+    assertThat(holidays).isEmpty();
+  }
+
+  @Test
+  void testCycle5YearsReverseInvalidAfterEnd() {
+    final Fixed fixed = createFixed(4, JANUARY);
+    fixed.setValidTo(2010);
+    fixed.setEvery(HolidayCycleType.FIVE_YEARS);
+    final Holidays config = createHolidays(fixed);
+
+    final List<Holiday> holidays = sut.parse(2015, new JaxbHolidays(config));
+    assertThat(holidays).isEmpty();
   }
 
   private void containsAll(List<Holiday> list, LocalDate... dates) {
