@@ -11,7 +11,6 @@
     <tns:Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
     <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
     <tns:Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
-    <tns:ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
     <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     <tns:ChristianHoliday type="ASCENSION_DAY" descriptionPropertiesKey="christian.ASCENSION_DAY"/>
     <tns:ChristianHoliday type="WHIT_MONDAY" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
@@ -19,7 +18,6 @@
   <tns:SubConfigurations hierarchy="clu" description="City of Luxembourg">
     <tns:Holidays>
       <tns:Fixed month="FEBRUARY" day="15" descriptionPropertiesKey="CARNIVAL"/>
-      <tns:Fixed month="SEPTEMBER" day="1" descriptionPropertiesKey="REGIONAL"/>
     </tns:Holidays>
   </tns:SubConfigurations>
 </tns:Configuration>
