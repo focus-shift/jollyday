@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:Configuration hierarchy="bm" description="Bermuda" xmlns:tns="http://www.example.org/Holiday"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.example.org/Holiday /Holiday.xsd">
+  <tns:Holidays>
+    <tns:Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <tns:Fixed month="MARCH" day="30" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+    <tns:Fixed month="MAY" day="25" descriptionPropertiesKey="BERMUDA_DAY"/>
+    <tns:Fixed month="JUNE" day="18" descriptionPropertiesKey="NATIONAL_HEROES_DAY"/>
+    <tns:Fixed month="AUGUST" day="2" descriptionPropertiesKey="EMANCIPATION_DAY"/>
+    <tns:Fixed month="AUGUST" day="3" descriptionPropertiesKey="SOMERS_DAY"/>
+    <tns:Fixed month="SEPTEMBER" day="3" descriptionPropertiesKey="LABOUR_DAY"/>
+    <tns:Fixed month="NOVEMBER" day="12" descriptionPropertiesKey="REMEMBRANCE"/>
+    <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+    <tns:Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY"/>
+  </tns:Holidays>
+</tns:Configuration>
