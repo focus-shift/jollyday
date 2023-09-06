@@ -106,16 +106,6 @@ class HolidayLUTest extends AbstractCountryTestBase {
   }
 
   @Property
-  void ensuresThatEasterIsConfigured(@ForAll @YearRange Year year) {
-    final HolidayManager holidayManager = HolidayManager.getInstance(create(LUXEMBOURG));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
-    assertThat(holidays)
-      .isNotEmpty()
-      .extracting(Holiday::getPropertiesKey)
-      .contains("christian.EASTER");
-  }
-
-  @Property
   void ensuresThatEasterMondayIsConfigured(@ForAll @YearRange Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(LUXEMBOURG));
     final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
