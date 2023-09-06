@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:Configuration hierarchy="ky" description="Cayman Islands" xmlns:tns="http://www.example.org/Holiday"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.example.org/Holiday /Holiday.xsd">
+  <tns:Holidays>
+    <tns:Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
+      <tns:MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </tns:Fixed>
+
+    <!-- https://www.gov.ky/news/press-release-details/kings-coronation-celebrated-in-cayman -->
+    <!-- https://www.gov.ky/calendar/public-holidays -->
+    <tns:Fixed month="MAY" day="8" validFrom="2023" validTo="2023" descriptionPropertiesKey="KINGS_CORONATION"/>
+
+    <!-- https://archives.gov.ky/Archive/view_press_release/2663/public-holidays-2009 -->
+    <tns:Fixed month="MAY" day="20" validFrom="2009" validTo="2009"  descriptionPropertiesKey="ELECTION_DAY"/>
+
+    <!-- https://www.gov.ky/news/press-release-details/public-holidays-2022 -->
+    <tns:Fixed month="JUNE" day="3" validFrom="2022" validTo="2022" descriptionPropertiesKey="QUEENS_PLATINUM_JUBILEE"/>
+
+    <!-- https://www.gov.ky/calendar/public-holidays -->
+    <tns:Fixed month="JUNE" day="19" validFrom="2023" descriptionPropertiesKey="KINGS_DAY"/>
+
+    <!-- https://archives.gov.ky/Archive/view_press_release/3325/yes-its-a-public-holiday -->
+    <tns:Fixed month="NOVEMBER" day="6" validFrom="2009" validTo="2009" descriptionPropertiesKey="CONSTITUTION_COMMENCEMENT_2009"/>
+
+    <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS">
+      <tns:MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </tns:Fixed>
+    <tns:Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY">
+      <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+      <tns:MovingCondition substitute="MONDAY" with="NEXT" weekday="TUESDAY"/>
+      <tns:MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+    </tns:Fixed>
+
+    <tns:FixedWeekday which="FOURTH" weekday="MONDAY" month="JANUARY" descriptionPropertiesKey="NATIONAL_HEROES_DAY"/>
+
+    <!-- parliament dissolved early, assume this will be the new rule, TBD at last in 2025 -->
+    <tns:FixedWeekday which="SECOND" weekday="WEDNESDAY" month="APRIL" validFrom="2021" every="FOUR_YEARS" descriptionPropertiesKey="ELECTION_DAY"/>
+
+    <tns:FixedWeekday which="THIRD" weekday="MONDAY" month="MAY" descriptionPropertiesKey="DISCOVERY_DAY"/>
+
+    <tns:FixedWeekday which="FOURTH" weekday="WEDNESDAY" month="MAY" validFrom="2013" validTo="2017" every="FOUR_YEARS"  descriptionPropertiesKey="ELECTION_DAY"/>
+
+    <!-- The Public Holiday Act 2007 sets out the Sovereign’s official birthday celebration as “The Monday following the
+    Saturday appointed in the United Kingdom as the official birthday of the reigning sovereign”. -->
+
+    <!-- information for pre-2008 will very likely be very inaccurate, as just assumed to be the same since the accession of Elizabeth II -->
+    <tns:FixedWeekday which="THIRD" weekday="MONDAY" month="JUNE" validFrom="1952" validTo="2009" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
+    <tns:FixedWeekday which="SECOND" weekday="MONDAY" month="JUNE" validFrom="2010" validTo="2011" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
+    <tns:FixedWeekday which="THIRD" weekday="MONDAY" month="JUNE" validFrom="2012" validTo="2015" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
+    <tns:FixedWeekday which="SECOND" weekday="MONDAY" month="JUNE" validFrom="2016" validTo="2016" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
+    <tns:FixedWeekday which="THIRD" weekday="MONDAY" month="JUNE" validFrom="2017" validTo="2017" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
+    <tns:FixedWeekday which="SECOND" weekday="MONDAY" month="JUNE" validFrom="2018" validTo="2019" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
+    <tns:FixedWeekday which="THIRD" weekday="MONDAY" month="JUNE" validFrom="2020" validTo="2020" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
+    <tns:FixedWeekday which="SECOND" weekday="MONDAY" month="JUNE" validFrom="2021" validTo="2021" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
+    <tns:FixedWeekday which="FIRST" weekday="MONDAY" month="JUNE" validFrom="2022" validTo="2022" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
+
+    <tns:FixedWeekday which="FIRST" weekday="MONDAY" month="JULY" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+
+    <!-- https://www.gov.ky/calendar/public-holidays -->
+    <!-- To commemorate the official passage of the Atlantic hurricane season which ends on 30th November, Cayman
+    Thanksgiving is celebrated on the first Sunday in December. Whilst not a public holiday, this observance was agreed in
+    Cabinet and is officially recognised as part of the national calendar. -->
+    <!-- only "Observance (agreed in Cabinet)" and not "Official Public Holiday" -->
+    <tns:FixedWeekday which="FIRST" weekday="SUNDAY" month="DECEMBER" validFrom="2023" descriptionPropertiesKey="CAYMAN_THANKSGIVING"/>
+
+    <tns:ChristianHoliday type="ASH_WEDNESDAY" descriptionPropertiesKey="christian.ASH_WEDNESDAY"/>
+    <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+    <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+
+    <!-- https://archives.gov.ky/Archive/view_press_release/2356/public-holidays-2009 -->
+    <!-- The Monday after Remembrance Sunday (the Sunday nearest to 11 November) -->
+    <!-- the start year may be wrong, it is currently set to the earliest possible year -->
+    <tns:FixedWeekdayBetweenFixed weekday="MONDAY" validFrom="1919" descriptionPropertiesKey="REMEMBRANCE">
+      <tns:from month="NOVEMBER" day="9"/>
+      <tns:to month="NOVEMBER" day="15"/>
+    </tns:FixedWeekdayBetweenFixed>
+  </tns:Holidays>
+</tns:Configuration>
