@@ -19,7 +19,6 @@
   <tns:SubConfigurations hierarchy="clu" description="City of Luxembourg">
     <tns:Holidays>
       <tns:Fixed month="FEBRUARY" day="15" descriptionPropertiesKey="CARNIVAL"/>
-      <tns:Fixed month="SEPTEMBER" day="1" descriptionPropertiesKey="REGIONAL"/>
     </tns:Holidays>
   </tns:SubConfigurations>
 </tns:Configuration>
