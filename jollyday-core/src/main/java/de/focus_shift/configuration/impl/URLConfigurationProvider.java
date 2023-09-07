@@ -47,7 +47,7 @@ public class URLConfigurationProvider implements ConfigurationProvider {
       inputStream = configURL.openStream();
       properties.load(inputStream);
     } catch (Exception e) {
-      LOG.warn("Cannot read configuration from '{}'.", strURL, e);
+      LOG.warn("Cannot read configuration from '{}' with message '{}'.", strURL, e.getMessage());
     } finally {
       closeStreamFromURL(strURL, inputStream);
     }
