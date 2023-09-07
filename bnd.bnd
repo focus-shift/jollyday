@@ -1,2 +1,0 @@
-Bundle-SymbolicName: ${project.groupId}.${project.artifactId}
-Export-Package: de.focus_shift*
