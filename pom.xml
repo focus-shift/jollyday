@@ -193,7 +193,7 @@
         <artifactId>maven-javadoc-plugin</artifactId>
         <version>3.5.0</version>
         <configuration>
-          <doclint>none</doclint>
+          <quiet>true</quiet>
           <excludePackageNames>de.focus_shift.jaxb.mapping</excludePackageNames>
         </configuration>
         <executions>
