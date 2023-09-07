@@ -260,8 +260,7 @@ public abstract class HolidayManager {
    * Returns the holidays for the requested year and hierarchy structure.
    *
    * @param year i.e. 2010
-   * @param args i.e. args = {'ny'}. returns US/New York holidays. No args ->
-   *             holidays common to whole country
+   * @param args i.e. args = {'ny'}. returns US/New York holidays. No args means holidays common to whole country
    * @return a set of holidays for the requested year
    */
   public abstract Set<Holiday> getHolidays(int year, String... args);
