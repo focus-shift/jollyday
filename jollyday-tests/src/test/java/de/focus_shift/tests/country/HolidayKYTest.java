@@ -18,7 +18,7 @@ import java.util.Set;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.fail;
 
-public class HolidayKYTest extends AbstractCountryTestBase {
+class HolidayKYTest extends AbstractCountryTestBase {
 
   private static final String ISO_CODE = "ky";
 

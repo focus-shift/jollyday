@@ -18,7 +18,7 @@ import java.util.Set;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.fail;
 
-public class HolidayBMTest extends AbstractCountryTestBase  {
+class HolidayBMTest extends AbstractCountryTestBase {
 
   private static final String ISO_CODE = "bm";
 
