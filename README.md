@@ -123,6 +123,18 @@ If you already use one of these libraries in your project than just use the spec
   ```
 </details>
 
+### Java Platform Module System (JPMS)
+
+If you want to use Jollyday in a project that is modularized via java modules you need to require the `jollyday.core` module via
+
+```java
+module your.application {
+  ...
+  requires jollyday.core;
+  ...
+}
+```
+
 ## Development
 
 If you want to **support** us at the development on **jollyday** than take a look at [Contributing to jollyday](./CONTRIBUTING.md).
