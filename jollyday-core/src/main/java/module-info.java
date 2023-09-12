@@ -5,5 +5,5 @@ open module jollyday.core {
 
   exports de.focus_shift;
   exports de.focus_shift.spi;
-  exports de.focus_shift.util;
+  exports de.focus_shift.util to jollyday.jaxb;
 }
