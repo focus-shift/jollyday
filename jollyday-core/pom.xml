@@ -75,7 +75,7 @@
         <configuration>
           <instructions>
             <Bundle-SymbolicName>de.focus_shift.jollyday-core</Bundle-SymbolicName>
-            <Export-Package>de.focus_shift.*</Export-Package>
+            <Export-Package>de.focus_shift.jollyday.core.*</Export-Package>
           </instructions>
         </configuration>
       </plugin>

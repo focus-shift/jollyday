@@ -89,7 +89,7 @@
         <configuration>
           <instructions>
             <Bundle-SymbolicName>de.focus_shift.jollyday-jaxb</Bundle-SymbolicName>
-            <Export-Package>de.focus_shift.*</Export-Package>
+            <Export-Package>de.focus_shift.jollyday.jaxb.*</Export-Package>
           </instructions>
         </configuration>
       </plugin>
@@ -130,7 +130,7 @@
               <sources>
                 <source>${project.build.directory}/dependency/Holiday.xsd</source>
               </sources>
-              <packageName>de.focus_shift.jaxb.mapping</packageName>
+              <packageName>de.focus_shift.jollyday.jaxb.mapping</packageName>
               <externalEntityProcessing>true</externalEntityProcessing>
             </configuration>
           </execution>

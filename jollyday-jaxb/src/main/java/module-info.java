@@ -3,5 +3,6 @@ module jollyday.jaxb {
   requires jakarta.xml.bind;
   requires org.slf4j;
   requires org.threeten.extra;
+
   requires jollyday.core;
 }

@@ -194,7 +194,7 @@
         <version>3.5.0</version>
         <configuration>
           <quiet>true</quiet>
-          <excludePackageNames>de.focus_shift.jaxb.mapping</excludePackageNames>
+          <excludePackageNames>de.focus_shift.jollyday.jaxb.mapping</excludePackageNames>
         </configuration>
         <executions>
           <execution>
@@ -262,11 +262,6 @@
             <groupId>org.jacoco</groupId>
             <artifactId>jacoco-maven-plugin</artifactId>
             <version>0.8.10</version>
-            <configuration>
-              <excludes>
-                <exclude>de.focus_shift.config.*</exclude>
-              </excludes>
-            </configuration>
             <executions>
               <execution>
                 <id>prepare-agent</id>
