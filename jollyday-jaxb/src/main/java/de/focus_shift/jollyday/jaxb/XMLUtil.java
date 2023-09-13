@@ -1,11 +1,11 @@
 package de.focus_shift.jollyday.jaxb;
 
 import de.focus_shift.jollyday.core.HolidayType;
+import de.focus_shift.jollyday.core.util.ClassLoadingUtil;
 import de.focus_shift.jollyday.jaxb.mapping.Configuration;
 import de.focus_shift.jollyday.jaxb.mapping.Month;
 import de.focus_shift.jollyday.jaxb.mapping.ObjectFactory;
 import de.focus_shift.jollyday.jaxb.mapping.Weekday;
-import de.focus_shift.jollyday.core.util.ClassLoadingUtil;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBElement;
 import jakarta.xml.bind.JAXBException;

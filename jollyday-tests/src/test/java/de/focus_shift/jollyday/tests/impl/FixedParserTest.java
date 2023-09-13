@@ -1,6 +1,8 @@
 package de.focus_shift.jollyday.tests.impl;
 
 import de.focus_shift.jollyday.core.Holiday;
+import de.focus_shift.jollyday.core.parser.impl.FixedParser;
+import de.focus_shift.jollyday.core.util.CalendarUtil;
 import de.focus_shift.jollyday.jaxb.JaxbHolidays;
 import de.focus_shift.jollyday.jaxb.mapping.Fixed;
 import de.focus_shift.jollyday.jaxb.mapping.HolidayCycleType;
@@ -9,8 +11,6 @@ import de.focus_shift.jollyday.jaxb.mapping.Month;
 import de.focus_shift.jollyday.jaxb.mapping.MovingCondition;
 import de.focus_shift.jollyday.jaxb.mapping.Weekday;
 import de.focus_shift.jollyday.jaxb.mapping.With;
-import de.focus_shift.jollyday.core.parser.impl.FixedParser;
-import de.focus_shift.jollyday.core.util.CalendarUtil;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;

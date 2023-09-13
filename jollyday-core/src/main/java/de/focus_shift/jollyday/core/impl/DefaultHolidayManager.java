@@ -2,10 +2,10 @@ package de.focus_shift.jollyday.core.impl;
 
 import de.focus_shift.jollyday.core.CalendarHierarchy;
 import de.focus_shift.jollyday.core.Holiday;
+import de.focus_shift.jollyday.core.HolidayManager;
 import de.focus_shift.jollyday.core.parser.HolidayParser;
 import de.focus_shift.jollyday.core.spi.Configuration;
 import de.focus_shift.jollyday.core.spi.Holidays;
-import de.focus_shift.jollyday.core.HolidayManager;
 import de.focus_shift.jollyday.core.util.ClassLoadingUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

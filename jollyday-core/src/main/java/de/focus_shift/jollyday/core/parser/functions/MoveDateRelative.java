@@ -1,8 +1,8 @@
 package de.focus_shift.jollyday.core.parser.functions;
 
+import de.focus_shift.jollyday.core.parser.predicates.ValidMovingCondition;
 import de.focus_shift.jollyday.core.spi.Movable;
 import de.focus_shift.jollyday.core.spi.With;
-import de.focus_shift.jollyday.core.parser.predicates.ValidMovingCondition;
 
 import java.time.LocalDate;
 import java.util.function.Function;

@@ -1,10 +1,10 @@
 package de.focus_shift.jollyday.tests.impl;
 
 import de.focus_shift.jollyday.core.Holiday;
+import de.focus_shift.jollyday.core.parser.impl.RelativeToEasterSundayParser;
 import de.focus_shift.jollyday.jaxb.JaxbHolidays;
 import de.focus_shift.jollyday.jaxb.mapping.Holidays;
 import de.focus_shift.jollyday.jaxb.mapping.RelativeToEasterSunday;
-import de.focus_shift.jollyday.core.parser.impl.RelativeToEasterSundayParser;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;

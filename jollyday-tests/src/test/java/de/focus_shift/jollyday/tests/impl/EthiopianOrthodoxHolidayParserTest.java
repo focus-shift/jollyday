@@ -1,12 +1,12 @@
 package de.focus_shift.jollyday.tests.impl;
 
 import de.focus_shift.jollyday.core.Holiday;
+import de.focus_shift.jollyday.core.parser.impl.EthiopianOrthodoxHolidayParser;
+import de.focus_shift.jollyday.core.util.CalendarUtil;
 import de.focus_shift.jollyday.jaxb.JaxbHolidays;
 import de.focus_shift.jollyday.jaxb.mapping.EthiopianOrthodoxHoliday;
 import de.focus_shift.jollyday.jaxb.mapping.EthiopianOrthodoxHolidayType;
 import de.focus_shift.jollyday.jaxb.mapping.Holidays;
-import de.focus_shift.jollyday.core.parser.impl.EthiopianOrthodoxHolidayParser;
-import de.focus_shift.jollyday.core.util.CalendarUtil;
 import org.assertj.core.util.Sets;
 import org.junit.jupiter.api.Test;
 

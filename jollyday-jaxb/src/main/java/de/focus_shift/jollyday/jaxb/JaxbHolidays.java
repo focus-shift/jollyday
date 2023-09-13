@@ -1,12 +1,12 @@
 package de.focus_shift.jollyday.jaxb;
 
-import de.focus_shift.jollyday.core.spi.Holidays;
 import de.focus_shift.jollyday.core.spi.ChristianHoliday;
 import de.focus_shift.jollyday.core.spi.EthiopianOrthodoxHoliday;
 import de.focus_shift.jollyday.core.spi.Fixed;
 import de.focus_shift.jollyday.core.spi.FixedWeekdayBetweenFixed;
 import de.focus_shift.jollyday.core.spi.FixedWeekdayInMonth;
 import de.focus_shift.jollyday.core.spi.FixedWeekdayRelativeToFixed;
+import de.focus_shift.jollyday.core.spi.Holidays;
 import de.focus_shift.jollyday.core.spi.IslamicHoliday;
 import de.focus_shift.jollyday.core.spi.RelativeToEasterSunday;
 import de.focus_shift.jollyday.core.spi.RelativeToFixed;
