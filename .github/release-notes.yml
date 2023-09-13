@@ -3,27 +3,27 @@ changelog:
   milestone-reference: id
   sections:
     - title: "⚠️ Security Issues"
-      labels: ["type: security"]
+      labels: [ "type: security" ]
       sort: "title"
     - title: "⭐ Enhancements"
-      labels: ["type: enhancement"]
+      labels: [ "type: enhancement" ]
       sort: "title"
     - title: "🐞 Bugs"
-      labels: ["type: bug"]
+      labels: [ "type: bug" ]
       sort: "title"
     - title: "💥 Breaking Changes"
-      labels: ["type: breaking"]
+      labels: [ "type: breaking" ]
       sort: "title"
     - title: "🚮 Deprecation"
-      labels: ["type: deprecation"]
+      labels: [ "type: deprecation" ]
       sort: "title"
     - title: "🔨 Dependency upgrades"
-      labels: ["type: dependencies"]
+      labels: [ "type: dependencies" ]
       sort: "title"
     - title: "📝 Documentation"
-      labels: ["type: documentation"]
+      labels: [ "type: documentation" ]
       sort: "title"
   contributors:
     title: "❤️ Contributors"
     exclude:
-      names: ["dependabot[bot]"]
+      names: [ "dependabot[bot]" ]
