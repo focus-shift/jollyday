@@ -1,8 +1,8 @@
 package de.focus_shift.jollyday.jaxb;
 
 import de.focus_shift.jollyday.core.ManagerParameter;
-import de.focus_shift.jollyday.core.spi.Configuration;
-import de.focus_shift.jollyday.core.spi.ConfigurationService;
+import de.focus_shift.jollyday.core.Configuration;
+import de.focus_shift.jollyday.core.ConfigurationService;
 
 import java.io.InputStream;
 import java.net.URL;

@@ -1,4 +1,6 @@
-package de.focus_shift.jollyday.core.spi;
+package de.focus_shift.jollyday.core;
+
+import de.focus_shift.jollyday.core.spi.Holidays;
 
 import java.util.stream.Stream;
 

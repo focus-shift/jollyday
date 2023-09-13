@@ -1,7 +1,7 @@
 package de.focus_shift.jollyday.core.datasource;
 
 import de.focus_shift.jollyday.core.ManagerParameter;
-import de.focus_shift.jollyday.core.spi.ConfigurationService;
+import de.focus_shift.jollyday.core.ConfigurationService;
 import de.focus_shift.jollyday.core.util.ClassLoadingUtil;
 
 /**

@@ -4,7 +4,6 @@ import de.focus_shift.jollyday.core.caching.Cache;
 import de.focus_shift.jollyday.core.caching.HolidayManagerValueHandler;
 import de.focus_shift.jollyday.core.configuration.ConfigurationProviderManager;
 import de.focus_shift.jollyday.core.parser.functions.CalendarToLocalDate;
-import de.focus_shift.jollyday.core.spi.ConfigurationService;
 import de.focus_shift.jollyday.core.util.CalendarUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -3,7 +3,7 @@ package de.focus_shift.jollyday.core.caching;
 import de.focus_shift.jollyday.core.HolidayManager;
 import de.focus_shift.jollyday.core.ManagerParameter;
 import de.focus_shift.jollyday.core.datasource.ConfigurationServiceManager;
-import de.focus_shift.jollyday.core.spi.ConfigurationService;
+import de.focus_shift.jollyday.core.ConfigurationService;
 import de.focus_shift.jollyday.core.util.ClassLoadingUtil;
 
 /**
