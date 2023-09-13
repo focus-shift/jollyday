@@ -105,7 +105,7 @@
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="st" description="Saxony-Anhalt">
     <tns:Holidays>
-      <tns:Fixed month="JANUARY" day="6"  descriptionPropertiesKey="EPIPHANY"/>
+      <tns:Fixed month="JANUARY" day="6" descriptionPropertiesKey="EPIPHANY"/>
       <tns:Fixed month="OCTOBER" day="31" descriptionPropertiesKey="REFORMATION_DAY"/>
     </tns:Holidays>
   </tns:SubConfigurations>
