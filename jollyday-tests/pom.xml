@@ -8,7 +8,7 @@
   <parent>
     <groupId>de.focus-shift</groupId>
     <artifactId>jollyday</artifactId>
-    <version>0.20.0</version>
+    <version>0.21.0-SNAPSHOT</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
 
