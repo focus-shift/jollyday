@@ -13,8 +13,23 @@ If you already use one of these libraries in your project than just use the spec
 <details>
   <summary>Maven (click to expand)</summary>
 
-  #### Jakarta XML Binding (JAXB)
-  
+  You need the core library, that defines all functionality and the api for you as developer.
+
+  ```xml
+  <dependency>
+    <groupId>de.focus-shift</groupId>
+    <artifactId>jollyday-core</artifactId>
+    <version>${version}</version>
+  </dependency>
+  ```
+
+  ### XML-Binding libraries
+
+  Additionally, the XML-Binding library of your choice. At the moment we do only support JAXB, 
+  but in the future there should be more that one.
+
+  **Jakarta XML Binding (JAXB)**
+
   ```xml
   <dependency>
     <groupId>de.focus-shift</groupId>
@@ -27,11 +42,23 @@ If you already use one of these libraries in your project than just use the spec
 <details>
   <summary>Gradle (click to expand)</summary>
 
-  #### Jakarta XML Binding (JAXB)
-  
+  You need the core library, that defines all functionality and the api for you as developer.
+
+  ```gradle
+  implementation group: 'de.focus-shift', name: 'jollyday-core', version: '${version}'
+  ```
+
+  ### XML-Binding libraries
+
+  Additionally, the XML-Binding library of your choice. At the moment we do only support JAXB,
+  but in the future there should be more that one.
+
+  **Jakarta XML Binding (JAXB)**
+
   ```gradle
   implementation group: 'de.focus-shift', name: 'jollyday-jaxb', version: '${version}'
   ```
+
 </details>
 
 ### Examples
@@ -41,6 +68,12 @@ If you already use one of these libraries in your project than just use the spec
 
   Returns all **german** public holidays in **2022**
   ```java
+  import de.focus_shift.Holiday;
+  import de.focus_shift.HolidayCalendar.GERMANY;
+  import de.focus_shift.HolidayManager;
+  import de.focus_shift.ManagerParameters;
+  import java.time.LocalDate;
+
   final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(GERMANY));
   final Set<Holiday> holidays = holidayManager.getHolidays(2022);
   ```
@@ -51,6 +84,12 @@ If you already use one of these libraries in your project than just use the spec
 
   Returns all german public holidays from the **15th of april in 2022** until the **31st of may in 2023**
   ```java
+  import de.focus_shift.Holiday;
+  import de.focus_shift.HolidayCalendar.GERMANY;
+  import de.focus_shift.HolidayManager;
+  import de.focus_shift.ManagerParameters;
+  import java.time.LocalDate;
+
   final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(GERMANY));
   final Set<Holiday> holidays = holidayManager.getHolidays(LocalDate.of(2022, 4, 15), LocalDate.of(2023, 5, 31));
   ```
@@ -61,16 +100,40 @@ If you already use one of these libraries in your project than just use the spec
 
   Returns true or false if a date is a public holidays in germany.
   ```java
+  import de.focus_shift.Holiday;
+  import de.focus_shift.HolidayCalendar.GERMANY;
+  import de.focus_shift.HolidayManager;
+  import de.focus_shift.ManagerParameters;
+  import java.time.LocalDate;
+
   final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(GERMANY));
   final boolean isHoliday = holidayManager.isHoliday(LocalDate.of(2022, 6, 6));
   ```
 
   Returns true or false if a date is a public holidays in Baden-Württemberg in germany.
   ```java
+  import de.focus_shift.Holiday;
+  import de.focus_shift.HolidayCalendar.GERMANY;
+  import de.focus_shift.HolidayManager;
+  import de.focus_shift.ManagerParameters;
+  import java.time.LocalDate;
+
   final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(GERMANY));
   final boolean isHoliday = holidayManager.isHoliday(LocalDate.of(2022, 6, 6), "bw");
   ```
 </details>
+
+### Java Platform Module System (JPMS)
+
+If you want to use Jollyday in a project that is modularized via java modules you need to require the `jollyday.core` module via
+
+```java
+module your.application {
+  ...
+  requires jollyday.core;
+  ...
+}
+```
 
 ## Development
 
