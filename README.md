@@ -125,12 +125,12 @@ If you already use one of these libraries in your project than just use the spec
 
 ### Java Platform Module System (JPMS)
 
-If you want to use Jollyday in a project that is modularized via java modules you need to require the `jollyday.core` module via
+If you want to use Jollyday in a project that is modularized via java modules you need to require the `de.focus_shift.jollyday.core` module via
 
 ```java
 module your.application {
   ...
-  requires jollyday.core;
+  requires de.focus_shift.jollyday.core;
   ...
 }
 ```

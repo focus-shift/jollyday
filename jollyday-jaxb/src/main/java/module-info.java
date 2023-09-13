@@ -1,8 +1,8 @@
-module jollyday.jaxb {
+module de.focus_shift.jollyday.jaxb {
   requires java.xml;
   requires jakarta.xml.bind;
   requires org.slf4j;
   requires org.threeten.extra;
 
-  requires jollyday.core;
+  requires de.focus_shift.jollyday.core;
 }

@@ -1,4 +1,4 @@
-module jollyday.core {
+module de.focus_shift.jollyday.core {
 
   opens de.focus_shift.jollyday.core.datasource;
   opens de.focus_shift.jollyday.core.util;
@@ -11,5 +11,5 @@ module jollyday.core {
 
   exports de.focus_shift.jollyday.core;
   exports de.focus_shift.jollyday.core.spi;
-  exports de.focus_shift.jollyday.core.util to jollyday.jaxb;
+  exports de.focus_shift.jollyday.core.util to de.focus_shift.jollyday.jaxb;
 }
