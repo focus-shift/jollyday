@@ -4,6 +4,10 @@
 
   <artifactId>jollyday-core</artifactId>
   <name>Jollyday Core</name>
+  <description>
+    Core module of the jollyday library that contains the API for the developers and
+    the core concept how to retrieve holiday information for a country of jollyday.
+  </description>
 
   <parent>
     <groupId>de.focus-shift</groupId>
