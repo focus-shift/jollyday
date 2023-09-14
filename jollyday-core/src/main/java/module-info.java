@@ -1,6 +1,7 @@
 module de.focus_shift.jollyday.core {
 
-  opens de.focus_shift.jollyday.core.datasource;
+  uses de.focus_shift.jollyday.core.spi.ConfigurationService;
+
   opens de.focus_shift.jollyday.core.util;
   opens holidays;
   opens descriptions;
