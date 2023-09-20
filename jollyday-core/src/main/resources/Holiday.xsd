@@ -38,9 +38,9 @@
     <complexContent>
       <extension base="tns:Holiday">
         <sequence>
-          <choice maxOccurs="1" minOccurs="1">
-            <element name="Days" type="int" maxOccurs="1" minOccurs="0"/>
-            <element name="Weekday" type="tns:Weekday" maxOccurs="1" minOccurs="0"/>
+          <choice>
+            <element name="Days" type="int" minOccurs="0"/>
+            <element name="Weekday" type="tns:Weekday" minOccurs="0"/>
           </choice>
           <element name="When" type="tns:When"/>
           <element name="Date" type="tns:Fixed"/>
@@ -58,8 +58,7 @@
       <element name="ChristianHoliday" type="tns:ChristianHoliday" maxOccurs="unbounded" minOccurs="0"/>
       <element name="IslamicHoliday" type="tns:IslamicHoliday" maxOccurs="unbounded" minOccurs="0"/>
       <element name="FixedWeekdayBetweenFixed" type="tns:FixedWeekdayBetweenFixed" maxOccurs="unbounded" minOccurs="0"/>
-      <element name="FixedWeekdayRelativeToFixed" type="tns:FixedWeekdayRelativeToFixed" maxOccurs="unbounded"
-               minOccurs="0"/>
+      <element name="FixedWeekdayRelativeToFixed" type="tns:FixedWeekdayRelativeToFixed" maxOccurs="unbounded" minOccurs="0"/>
       <element name="EthiopianOrthodoxHoliday" type="tns:EthiopianOrthodoxHoliday" maxOccurs="unbounded" minOccurs="0"/>
       <element name="RelativeToEasterSunday" type="tns:RelativeToEasterSunday" minOccurs="0" maxOccurs="unbounded"/>
     </sequence>
