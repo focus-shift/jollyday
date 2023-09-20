@@ -1,54 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tns:Configuration hierarchy="test" description="Test holidays"
-                   xmlns:tns="http://www.example.org/Holiday"
-                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                   xsi:schemaLocation="http://www.example.org/Holiday /Holiday.xsd">
-  <tns:Holidays>
-    <tns:Fixed month="JANUARY" day="1"/>
-    <tns:Fixed month="JANUARY" day="16">
-      <tns:MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-    </tns:Fixed>
-    <tns:RelativeToFixed>
-      <tns:Weekday>WEDNESDAY</tns:Weekday>
-      <tns:When>BEFORE</tns:When>
-      <tns:Date month="NOVEMBER" day="23"/>
-    </tns:RelativeToFixed>
-    <tns:RelativeToFixed>
-      <tns:Days>5</tns:Days>
-      <tns:When>AFTER</tns:When>
-      <tns:Date month="NOVEMBER" day="23"/>
-    </tns:RelativeToFixed>
-    <tns:RelativeToWeekdayInMonth weekday="FRIDAY" when="AFTER">
-      <tns:FixedWeekday which="FOURTH" weekday="MONDAY" month="NOVEMBER"/>
-    </tns:RelativeToWeekdayInMonth>
-    <tns:FixedWeekday which="LAST" weekday="MONDAY" month="AUGUST"/>
-    <tns:ChristianHoliday type="GOOD_FRIDAY"/>
-    <tns:ChristianHoliday type="EASTER_MONDAY" chronology="GREGORIAN"/>
-    <tns:ChristianHoliday type="ASH_WEDNESDAY"/>
-  </tns:Holidays>
+<Configuration hierarchy="test" description="Test holidays"
+               xmlns="http://www.focus_shift.de/jollyday/xml/ns/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://www.focus_shift.de/jollyday/xml/ns/holiday http://www.focus_shift.de/jollyday/xml/ns/holiday/Holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1"/>
+    <Fixed month="JANUARY" day="16">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <RelativeToFixed>
+      <Weekday>WEDNESDAY</Weekday>
+      <When>BEFORE</When>
+      <Date month="NOVEMBER" day="23"/>
+    </RelativeToFixed>
+    <RelativeToFixed>
+      <Days>5</Days>
+      <When>AFTER</When>
+      <Date month="NOVEMBER" day="23"/>
+    </RelativeToFixed>
+    <RelativeToWeekdayInMonth weekday="FRIDAY" when="AFTER">
+      <FixedWeekday which="FOURTH" weekday="MONDAY" month="NOVEMBER"/>
+    </RelativeToWeekdayInMonth>
+    <FixedWeekday which="LAST" weekday="MONDAY" month="AUGUST"/>
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY" chronology="GREGORIAN"/>
+    <ChristianHoliday type="ASH_WEDNESDAY"/>
+  </Holidays>
 
-  <tns:SubConfigurations hierarchy="level1">
-    <tns:Holidays>
-      <tns:Fixed month="JANUARY" day="2"/>
-    </tns:Holidays>
-    <tns:SubConfigurations hierarchy="level2">
-      <tns:Holidays>
-        <tns:Fixed month="JANUARY" day="3"/>
-      </tns:Holidays>
-    </tns:SubConfigurations>
-  </tns:SubConfigurations>
+  <SubConfigurations hierarchy="level1">
+    <Holidays>
+      <Fixed month="JANUARY" day="2"/>
+    </Holidays>
+    <SubConfigurations hierarchy="level2">
+      <Holidays>
+        <Fixed month="JANUARY" day="3"/>
+      </Holidays>
+    </SubConfigurations>
+  </SubConfigurations>
 
-  <tns:SubConfigurations hierarchy="level11">
-    <tns:Holidays>
-      <tns:IslamicHoliday type="ID_AL_FITR"/>
-      <tns:IslamicHoliday type="NEWYEAR"/>
-      <tns:IslamicHoliday type="ASCHURA"/>
-      <tns:IslamicHoliday type="LAILAT_AL_BARAT"/>
-      <tns:IslamicHoliday type="LAILAT_AL_MIRAJ"/>
-      <tns:IslamicHoliday type="LAILAT_AL_QADR"/>
-      <tns:IslamicHoliday type="MAWLID_AN_NABI"/>
-      <tns:IslamicHoliday type="RAMADAN"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-</tns:Configuration>
+  <SubConfigurations hierarchy="level11">
+    <Holidays>
+      <IslamicHoliday type="ID_AL_FITR"/>
+      <IslamicHoliday type="NEWYEAR"/>
+      <IslamicHoliday type="ASCHURA"/>
+      <IslamicHoliday type="LAILAT_AL_BARAT"/>
+      <IslamicHoliday type="LAILAT_AL_MIRAJ"/>
+      <IslamicHoliday type="LAILAT_AL_QADR"/>
+      <IslamicHoliday type="MAWLID_AN_NABI"/>
+      <IslamicHoliday type="RAMADAN"/>
+    </Holidays>
+  </SubConfigurations>
+</Configuration>

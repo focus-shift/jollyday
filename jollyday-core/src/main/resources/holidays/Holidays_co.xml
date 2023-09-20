@@ -1,96 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tns:Configuration hierarchy="co" description="Colombia"
-                   xmlns:tns="http://www.example.org/Holiday" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                   xsi:schemaLocation="http://www.example.org/Holiday /Holiday.xsd">
-  <tns:Holidays>
-    <tns:Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
-    <tns:Fixed month="JANUARY" day="6" descriptionPropertiesKey="EPIPHANY">
-      <tns:MovingCondition substitute="TUESDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="WEDNESDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="THURSDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="FRIDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-    </tns:Fixed>
-    <tns:Fixed month="MARCH" day="19" descriptionPropertiesKey="ST_JOSEPH">
-      <tns:MovingCondition substitute="TUESDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="WEDNESDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="THURSDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="FRIDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-    </tns:Fixed>
-    <tns:Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
-    <tns:Fixed month="JUNE" day="29" descriptionPropertiesKey="ST_PETER_PAUL">
-      <tns:MovingCondition substitute="TUESDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="WEDNESDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="THURSDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="FRIDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-    </tns:Fixed>
-    <tns:Fixed month="JULY" day="20" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
-    <tns:Fixed month="AUGUST" day="7" descriptionPropertiesKey="BOYACA"/>
-    <tns:Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_MARY">
-      <tns:MovingCondition substitute="TUESDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="WEDNESDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="THURSDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="FRIDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-    </tns:Fixed>
-    <tns:Fixed month="OCTOBER" day="12" descriptionPropertiesKey="COLUMBUS_DAY">
-      <tns:MovingCondition substitute="TUESDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="WEDNESDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="THURSDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="FRIDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-    </tns:Fixed>
-    <tns:Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS">
-      <tns:MovingCondition substitute="TUESDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="WEDNESDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="THURSDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="FRIDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-    </tns:Fixed>
-    <tns:Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="CARTAGENA">
-      <tns:MovingCondition substitute="TUESDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="WEDNESDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="THURSDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="FRIDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-    </tns:Fixed>
-    <tns:Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
-    <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-    <tns:ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
-    <tns:ChristianHoliday type="MAUNDY_THURSDAY" descriptionPropertiesKey="christian.MAUNDY_THURSDAY"/>
-    <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-    <tns:ChristianHoliday type="ASCENSION_DAY" descriptionPropertiesKey="christian.ASCENSION_DAY">
-      <tns:MovingCondition substitute="TUESDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="WEDNESDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="THURSDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="FRIDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-    </tns:ChristianHoliday>
-    <tns:ChristianHoliday type="CORPUS_CHRISTI" descriptionPropertiesKey="christian.CORPUS_CHRISTI">
-      <tns:MovingCondition substitute="TUESDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="WEDNESDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="THURSDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="FRIDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-    </tns:ChristianHoliday>
-    <tns:ChristianHoliday type="SACRED_HEART" descriptionPropertiesKey="christian.SACRED_HEART">
-      <tns:MovingCondition substitute="TUESDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="WEDNESDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="THURSDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="FRIDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-    </tns:ChristianHoliday>
-  </tns:Holidays>
-</tns:Configuration>
+
+<Configuration hierarchy="co" description="Colombia"
+               xmlns="http://www.focus_shift.de/jollyday/xml/ns/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://www.focus_shift.de/jollyday/xml/ns/holiday http://www.focus_shift.de/jollyday/xml/ns/holiday/Holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="JANUARY" day="6" descriptionPropertiesKey="EPIPHANY">
+      <MovingCondition substitute="TUESDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="WEDNESDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="THURSDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="FRIDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="MARCH" day="19" descriptionPropertiesKey="ST_JOSEPH">
+      <MovingCondition substitute="TUESDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="WEDNESDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="THURSDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="FRIDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="JUNE" day="29" descriptionPropertiesKey="ST_PETER_PAUL">
+      <MovingCondition substitute="TUESDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="WEDNESDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="THURSDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="FRIDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="JULY" day="20" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <Fixed month="AUGUST" day="7" descriptionPropertiesKey="BOYACA"/>
+    <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_MARY">
+      <MovingCondition substitute="TUESDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="WEDNESDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="THURSDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="FRIDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="OCTOBER" day="12" descriptionPropertiesKey="COLUMBUS_DAY">
+      <MovingCondition substitute="TUESDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="WEDNESDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="THURSDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="FRIDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS">
+      <MovingCondition substitute="TUESDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="WEDNESDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="THURSDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="FRIDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="CARTAGENA">
+      <MovingCondition substitute="TUESDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="WEDNESDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="THURSDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="FRIDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+    <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
+    <ChristianHoliday type="MAUNDY_THURSDAY" descriptionPropertiesKey="christian.MAUNDY_THURSDAY"/>
+    <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+    <ChristianHoliday type="ASCENSION_DAY" descriptionPropertiesKey="christian.ASCENSION_DAY">
+      <MovingCondition substitute="TUESDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="WEDNESDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="THURSDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="FRIDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </ChristianHoliday>
+    <ChristianHoliday type="CORPUS_CHRISTI" descriptionPropertiesKey="christian.CORPUS_CHRISTI">
+      <MovingCondition substitute="TUESDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="WEDNESDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="THURSDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="FRIDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </ChristianHoliday>
+    <ChristianHoliday type="SACRED_HEART" descriptionPropertiesKey="christian.SACRED_HEART">
+      <MovingCondition substitute="TUESDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="WEDNESDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="THURSDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="FRIDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </ChristianHoliday>
+  </Holidays>
+</Configuration>

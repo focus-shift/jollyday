@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tns:Configuration hierarchy="sk" description="Slovakia"
-                   xmlns:tns="http://www.example.org/Holiday" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                   xsi:schemaLocation="http://www.example.org/Holiday /Holiday.xsd">
-  <tns:Holidays>
-    <tns:Fixed month="JANUARY" day="1" validFrom="1993" descriptionPropertiesKey="FOUNDATION"/>
-    <tns:Fixed month="JANUARY" day="6" descriptionPropertiesKey="EPIPHANY"/>
-    <tns:Fixed month="MAY" day="1" validFrom="1886" descriptionPropertiesKey="LABOUR_DAY"/>
-    <tns:Fixed month="MAY" day="8" descriptionPropertiesKey="VICTORY"/>
-    <tns:Fixed month="JULY" day="5" descriptionPropertiesKey="CYRUS_METHODIUS"/>
-    <tns:Fixed month="AUGUST" day="29" descriptionPropertiesKey="NATIONAL_UPRISING"/>
-    <tns:Fixed month="SEPTEMBER" day="1" descriptionPropertiesKey="CONSTITUTION_DAY"/>
-    <tns:Fixed month="SEPTEMBER" day="15" descriptionPropertiesKey="VIRGIN_MARY"/>
-    <tns:Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
-    <tns:Fixed month="NOVEMBER" day="17" descriptionPropertiesKey="FREEDOM_DEMOCRACY"/>
-    <tns:Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CHRISTMAS_EVE"/>
-    <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-    <tns:Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
-    <tns:ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
-    <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-    <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-  </tns:Holidays>
-</tns:Configuration>
+
+<Configuration hierarchy="sk" description="Slovakia"
+               xmlns="http://www.focus_shift.de/jollyday/xml/ns/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://www.focus_shift.de/jollyday/xml/ns/holiday http://www.focus_shift.de/jollyday/xml/ns/holiday/Holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" validFrom="1993" descriptionPropertiesKey="FOUNDATION"/>
+    <Fixed month="JANUARY" day="6" descriptionPropertiesKey="EPIPHANY"/>
+    <Fixed month="MAY" day="1" validFrom="1886" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="MAY" day="8" descriptionPropertiesKey="VICTORY"/>
+    <Fixed month="JULY" day="5" descriptionPropertiesKey="CYRUS_METHODIUS"/>
+    <Fixed month="AUGUST" day="29" descriptionPropertiesKey="NATIONAL_UPRISING"/>
+    <Fixed month="SEPTEMBER" day="1" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+    <Fixed month="SEPTEMBER" day="15" descriptionPropertiesKey="VIRGIN_MARY"/>
+    <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
+    <Fixed month="NOVEMBER" day="17" descriptionPropertiesKey="FREEDOM_DEMOCRACY"/>
+    <Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CHRISTMAS_EVE"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
+    <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
+    <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+  </Holidays>
+</Configuration>

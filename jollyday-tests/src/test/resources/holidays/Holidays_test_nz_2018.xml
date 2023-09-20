@@ -1,89 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tns:Configuration hierarchy="nz" description="New Zealand"
-                   xmlns:tns="http://www.example.org/Holiday" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                   xsi:schemaLocation="http://www.example.org/Holiday /Holiday.xsd">
-  <tns:Holidays>
+<Configuration hierarchy="nz" description="New Zealand"
+               xmlns="http://www.focus_shift.de/jollyday/xml/ns/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://www.focus_shift.de/jollyday/xml/ns/holiday http://www.focus_shift.de/jollyday/xml/ns/holiday/Holiday.xsd">
+  <Holidays>
     <!-- New Year's Day -->
-    <tns:Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
     <!-- Day after New Year's Day -->
-    <tns:Fixed month="JANUARY" day="2" descriptionPropertiesKey="DAY_AFTER_NEW_YEAR"/>
+    <Fixed month="JANUARY" day="2" descriptionPropertiesKey="DAY_AFTER_NEW_YEAR"/>
     <!-- Waitangi Day -->
-    <tns:Fixed month="FEBRUARY" day="6" descriptionPropertiesKey="WAITANGI_DAY"/>
+    <Fixed month="FEBRUARY" day="6" descriptionPropertiesKey="WAITANGI_DAY"/>
     <!-- Good Friday -->
-    <tns:Fixed month="MARCH" day="30"/>
+    <Fixed month="MARCH" day="30"/>
     <!-- Easter Monday -->
-    <tns:Fixed month="APRIL" day="2"/>
+    <Fixed month="APRIL" day="2"/>
     <!-- ANZAC Day -->
-    <tns:Fixed month="APRIL" day="25" descriptionPropertiesKey="ANZAC"/>
+    <Fixed month="APRIL" day="25" descriptionPropertiesKey="ANZAC"/>
     <!-- Queen's Birthday -->
-    <tns:Fixed month="JUNE" day="4" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
+    <Fixed month="JUNE" day="4" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
     <!-- Labour Day -->
-    <tns:Fixed month="OCTOBER" day="22" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="OCTOBER" day="22" descriptionPropertiesKey="LABOUR_DAY"/>
     <!-- Christmas Day -->
-    <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
     <!-- Boxing Day -->
-    <tns:Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY"/>
-  </tns:Holidays>
-  <tns:SubConfigurations hierarchy="auk" description="Auckland">
-    <tns:Holidays>
-      <tns:Fixed month="JANUARY" day="29" descriptionPropertiesKey="AUCKLAND_ANNIVERSARY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="tki" description="Taranaki">
-    <tns:Holidays>
-      <tns:Fixed month="MARCH" day="12" descriptionPropertiesKey="TARANAKI_ANNIVERSARY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="hkb" description="Hawke's Bay">
-    <tns:Holidays>
-      <tns:Fixed month="OCTOBER" day="19" descriptionPropertiesKey="HAWKES_BAY_ANNIVERSARY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="wgn" description="Wellington">
-    <tns:Holidays>
-      <tns:Fixed month="JANUARY" day="22" descriptionPropertiesKey="WELLINGTON_ANNIVERSARY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="mbh" description="Marlborough">
-    <tns:Holidays>
-      <tns:Fixed month="OCTOBER" day="29" descriptionPropertiesKey="MARLBOROUGH_ANNIVERSARY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="nsn" description="Nelson">
-    <tns:Holidays>
-      <tns:Fixed month="JANUARY" day="29" descriptionPropertiesKey="NELSON_ANNIVERSARY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="can" description="Canterbury">
-    <tns:Holidays>
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY"/>
+  </Holidays>
+  <SubConfigurations hierarchy="auk" description="Auckland">
+    <Holidays>
+      <Fixed month="JANUARY" day="29" descriptionPropertiesKey="AUCKLAND_ANNIVERSARY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="tki" description="Taranaki">
+    <Holidays>
+      <Fixed month="MARCH" day="12" descriptionPropertiesKey="TARANAKI_ANNIVERSARY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="hkb" description="Hawke's Bay">
+    <Holidays>
+      <Fixed month="OCTOBER" day="19" descriptionPropertiesKey="HAWKES_BAY_ANNIVERSARY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="wgn" description="Wellington">
+    <Holidays>
+      <Fixed month="JANUARY" day="22" descriptionPropertiesKey="WELLINGTON_ANNIVERSARY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="mbh" description="Marlborough">
+    <Holidays>
+      <Fixed month="OCTOBER" day="29" descriptionPropertiesKey="MARLBOROUGH_ANNIVERSARY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="nsn" description="Nelson">
+    <Holidays>
+      <Fixed month="JANUARY" day="29" descriptionPropertiesKey="NELSON_ANNIVERSARY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="can" description="Canterbury">
+    <Holidays>
       <!--
-      <tns:Fixed month="NOVEMBER" day="16" descriptionPropertiesKey="CANTERBURY_ANNIVERSARY"/>
+      <Fixed month="NOVEMBER" day="16" descriptionPropertiesKey="CANTERBURY_ANNIVERSARY"/>
       -->
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="cans" description="Canterbury (South)">
-    <tns:Holidays>
-      <tns:Fixed month="SEPTEMBER" day="24" descriptionPropertiesKey="CANTERBURY_SOUTH_ANNIVERSARY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="wtc" description="Westland">
-    <tns:Holidays>
-      <tns:Fixed month="DECEMBER" day="3" descriptionPropertiesKey="WESTLAND_ANNIVERSARY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="ota" description="Otago">
-    <tns:Holidays>
-      <tns:Fixed month="MARCH" day="26" descriptionPropertiesKey="OTAGO_ANNIVERSARY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="stl" description="Southland">
-    <tns:Holidays>
-      <tns:Fixed month="APRIL" day="3" descriptionPropertiesKey="SOUTHLAND_ANNIVERSARY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="cit" description="Chatham Islands">
-    <tns:Holidays>
-      <tns:Fixed month="DECEMBER" day="3" descriptionPropertiesKey="CHATHAM_ISLANDS_ANNIVERSARY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-</tns:Configuration>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="cans" description="Canterbury (South)">
+    <Holidays>
+      <Fixed month="SEPTEMBER" day="24" descriptionPropertiesKey="CANTERBURY_SOUTH_ANNIVERSARY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="wtc" description="Westland">
+    <Holidays>
+      <Fixed month="DECEMBER" day="3" descriptionPropertiesKey="WESTLAND_ANNIVERSARY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ota" description="Otago">
+    <Holidays>
+      <Fixed month="MARCH" day="26" descriptionPropertiesKey="OTAGO_ANNIVERSARY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="stl" description="Southland">
+    <Holidays>
+      <Fixed month="APRIL" day="3" descriptionPropertiesKey="SOUTHLAND_ANNIVERSARY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="cit" description="Chatham Islands">
+    <Holidays>
+      <Fixed month="DECEMBER" day="3" descriptionPropertiesKey="CHATHAM_ISLANDS_ANNIVERSARY"/>
+    </Holidays>
+  </SubConfigurations>
+</Configuration>

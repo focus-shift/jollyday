@@ -1,54 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tns:Configuration hierarchy="ua" description="Ukraine"
-                   xmlns:tns="http://www.example.org/Holiday" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                   xsi:schemaLocation="http://www.example.org/Holiday /Holiday.xsd">
-  <tns:Holidays>
-    <tns:Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
-      <tns:MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-    </tns:Fixed>
-    <tns:Fixed month="JANUARY" day="7" descriptionPropertiesKey="CHRISTMAS">
-      <tns:MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-    </tns:Fixed>
-    <tns:Fixed month="MARCH" day="8" descriptionPropertiesKey="INTERNATIONAL_WOMAN">
-      <tns:MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-    </tns:Fixed>
-    <tns:Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY">
-      <tns:MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-    </tns:Fixed>
-    <tns:Fixed month="MAY" day="2" descriptionPropertiesKey="LABOUR_DAY" validTo="2017">
-      <tns:MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-    </tns:Fixed>
-    <tns:Fixed month="MAY" day="3" descriptionPropertiesKey="LABOUR_DAY" validFrom="2016" validTo="2016"/>
-    <tns:Fixed month="MAY" day="9" descriptionPropertiesKey="VICTORY">
-      <tns:MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-    </tns:Fixed>
-    <tns:Fixed month="JUNE" day="28" descriptionPropertiesKey="CONSTITUTION_DAY">
-      <tns:MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-    </tns:Fixed>
-    <tns:Fixed month="AUGUST" day="24" descriptionPropertiesKey="INDEPENDENCE_DAY">
-      <tns:MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-    </tns:Fixed>
-    <tns:Fixed month="OCTOBER" day="14" descriptionPropertiesKey="DEFENDER_OF_UKRAINE" validFrom="2015">
-      <tns:MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-    </tns:Fixed>
-    <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS" validFrom="2017">
-      <tns:MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-    </tns:Fixed>
-    <tns:ChristianHoliday type="EASTER" chronology="JULIAN" descriptionPropertiesKey="christian.EASTER">
-      <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-    </tns:ChristianHoliday>
-    <tns:ChristianHoliday type="PENTECOST" chronology="JULIAN" descriptionPropertiesKey="christian.PENTECOST">
-      <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-    </tns:ChristianHoliday>
-  </tns:Holidays>
-</tns:Configuration>
+
+<Configuration hierarchy="ua" description="Ukraine"
+               xmlns="http://www.focus_shift.de/jollyday/xml/ns/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://www.focus_shift.de/jollyday/xml/ns/holiday http://www.focus_shift.de/jollyday/xml/ns/holiday/Holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="JANUARY" day="7" descriptionPropertiesKey="CHRISTMAS">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="MARCH" day="8" descriptionPropertiesKey="INTERNATIONAL_WOMAN">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="MAY" day="2" descriptionPropertiesKey="LABOUR_DAY" validTo="2017">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="MAY" day="3" descriptionPropertiesKey="LABOUR_DAY" validFrom="2016" validTo="2016"/>
+    <Fixed month="MAY" day="9" descriptionPropertiesKey="VICTORY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="JUNE" day="28" descriptionPropertiesKey="CONSTITUTION_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="AUGUST" day="24" descriptionPropertiesKey="INDEPENDENCE_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="OCTOBER" day="14" descriptionPropertiesKey="DEFENDER_OF_UKRAINE" validFrom="2015">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS" validFrom="2017">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <ChristianHoliday type="EASTER" chronology="JULIAN" descriptionPropertiesKey="christian.EASTER">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </ChristianHoliday>
+    <ChristianHoliday type="PENTECOST" chronology="JULIAN" descriptionPropertiesKey="christian.PENTECOST">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </ChristianHoliday>
+  </Holidays>
+</Configuration>

@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tns:Configuration hierarchy="tr" description="Turkey" xmlns:tns="http://www.example.org/Holiday"
->
-  <tns:Holidays>
-    <tns:Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
-    <tns:Fixed month="APRIL" day="23" descriptionPropertiesKey="TURKEY_CHILDRENS_DAY"/>
-    <tns:Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
-    <tns:Fixed month="MAY" day="19" descriptionPropertiesKey="TURKEY_COMMEMORATION_OF_ATATURK"/>
-    <tns:Fixed month="JULY" day="15" descriptionPropertiesKey="TURKEY_DEMOCRATIC_UNITY_DAY"/>
-    <tns:Fixed month="AUGUST" day="30" descriptionPropertiesKey="TURKEY_VICTORY_DAY"/>
-    <tns:Fixed month="OCTOBER" day="29" descriptionPropertiesKey="TURKEY_REPUBLIC_DAY"/>
-    <tns:IslamicHoliday type="ID_AL_FITR"
+
+<Configuration hierarchy="tr" description="Turkey"
+               xmlns="http://www.focus_shift.de/jollyday/xml/ns/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://www.focus_shift.de/jollyday/xml/ns/holiday http://www.focus_shift.de/jollyday/xml/ns/holiday/Holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="APRIL" day="23" descriptionPropertiesKey="TURKEY_CHILDRENS_DAY"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="MAY" day="19" descriptionPropertiesKey="TURKEY_COMMEMORATION_OF_ATATURK"/>
+    <Fixed month="JULY" day="15" descriptionPropertiesKey="TURKEY_DEMOCRATIC_UNITY_DAY"/>
+    <Fixed month="AUGUST" day="30" descriptionPropertiesKey="TURKEY_VICTORY_DAY"/>
+    <Fixed month="OCTOBER" day="29" descriptionPropertiesKey="TURKEY_REPUBLIC_DAY"/>
+    <IslamicHoliday type="ID_AL_FITR"
                         descriptionPropertiesKey="islamic.ID_AL_FITR"/> <!-- Ramazan / Şeker bayramı -->
-    <tns:IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/> <!-- Kurban bayramı -->
-  </tns:Holidays>
-</tns:Configuration>
+    <IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/> <!-- Kurban bayramı -->
+  </Holidays>
+</Configuration>

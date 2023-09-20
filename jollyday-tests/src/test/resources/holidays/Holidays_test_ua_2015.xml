@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tns:Configuration hierarchy="ua" description="Ukraine"
-                   xmlns:tns="http://www.example.org/Holiday" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                   xsi:schemaLocation="http://www.example.org/Holiday /Holiday.xsd">
-  <tns:Holidays>
-    <tns:Fixed month="JANUARY" day="1"/>
-    <tns:Fixed month="JANUARY" day="7"/>
-    <tns:Fixed month="MARCH" day="9"/>
-    <tns:Fixed month="APRIL" day="13"/>
-    <tns:Fixed month="MAY" day="1"/>
-    <tns:Fixed month="MAY" day="4"/>
-    <tns:Fixed month="MAY" day="11"/>
-    <tns:Fixed month="JUNE" day="1"/>
-    <tns:Fixed month="JUNE" day="29"/>
-    <tns:Fixed month="AUGUST" day="24"/>
-    <tns:Fixed month="OCTOBER" day="14"/>
-  </tns:Holidays>
-</tns:Configuration>
+<Configuration hierarchy="ua" description="Ukraine"
+               xmlns="http://www.focus_shift.de/jollyday/xml/ns/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://www.focus_shift.de/jollyday/xml/ns/holiday http://www.focus_shift.de/jollyday/xml/ns/holiday/Holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1"/>
+    <Fixed month="JANUARY" day="7"/>
+    <Fixed month="MARCH" day="9"/>
+    <Fixed month="APRIL" day="13"/>
+    <Fixed month="MAY" day="1"/>
+    <Fixed month="MAY" day="4"/>
+    <Fixed month="MAY" day="11"/>
+    <Fixed month="JUNE" day="1"/>
+    <Fixed month="JUNE" day="29"/>
+    <Fixed month="AUGUST" day="24"/>
+    <Fixed month="OCTOBER" day="14"/>
+  </Holidays>
+</Configuration>

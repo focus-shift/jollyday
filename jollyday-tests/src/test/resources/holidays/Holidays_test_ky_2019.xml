@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tns:Configuration hierarchy="ky" description="Cayman Islands" xmlns:tns="http://www.example.org/Holiday"
-                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                   xsi:schemaLocation="http://www.example.org/Holiday /Holiday.xsd">
-  <tns:Holidays>
-    <tns:Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
-    <tns:Fixed month="JANUARY" day="28" descriptionPropertiesKey="NATIONAL_HEROES_DAY"/>
-    <tns:Fixed month="MARCH" day="6" descriptionPropertiesKey="christian.ASH_WEDNESDAY"/>
-    <tns:Fixed month="APRIL" day="19" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-    <tns:Fixed month="APRIL" day="22" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-    <tns:Fixed month="MAY" day="20" descriptionPropertiesKey="DISCOVERY_DAY"/>
-    <tns:Fixed month="JUNE" day="10" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
-    <tns:Fixed month="JULY" day="1" descriptionPropertiesKey="CONSTITUTION_DAY"/>
-    <tns:Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="REMEMBRANCE"/>
-    <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-    <tns:Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY"/>
-  </tns:Holidays>
-</tns:Configuration>
+<Configuration hierarchy="ky" description="Cayman Islands"
+               xmlns="http://www.focus_shift.de/jollyday/xml/ns/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://www.focus_shift.de/jollyday/xml/ns/holiday http://www.focus_shift.de/jollyday/xml/ns/holiday/Holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="JANUARY" day="28" descriptionPropertiesKey="NATIONAL_HEROES_DAY"/>
+    <Fixed month="MARCH" day="6" descriptionPropertiesKey="christian.ASH_WEDNESDAY"/>
+    <Fixed month="APRIL" day="19" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+    <Fixed month="APRIL" day="22" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+    <Fixed month="MAY" day="20" descriptionPropertiesKey="DISCOVERY_DAY"/>
+    <Fixed month="JUNE" day="10" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
+    <Fixed month="JULY" day="1" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+    <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="REMEMBRANCE"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY"/>
+  </Holidays>
+</Configuration>

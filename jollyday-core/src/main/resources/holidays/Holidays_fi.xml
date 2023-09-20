@@ -1,35 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tns:Configuration hierarchy="fi" description="Finland"
-                   xmlns:tns="http://www.example.org/Holiday" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                   xsi:schemaLocation="http://www.example.org/Holiday /Holiday.xsd">
-  <tns:Holidays>
-    <tns:Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
-    <tns:Fixed month="JANUARY" day="6" descriptionPropertiesKey="EPIPHANY"/>
-    <tns:Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
-    <tns:Fixed month="DECEMBER" day="6" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
-    <tns:Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CHRISTMAS_EVE"/>
-    <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-    <tns:Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
-    <tns:ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
-    <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-    <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-    <tns:ChristianHoliday type="ASCENSION_DAY" descriptionPropertiesKey="christian.ASCENSION_DAY"/>
-    <tns:FixedWeekdayBetweenFixed weekday="FRIDAY" descriptionPropertiesKey="MIDSUMMER_EVE">
-      <tns:from month="JUNE" day="19"/>
-      <tns:to month="JUNE" day="25"/>
-    </tns:FixedWeekdayBetweenFixed>
-    <tns:FixedWeekdayBetweenFixed weekday="SATURDAY" descriptionPropertiesKey="MIDSUMMER">
-      <tns:from month="JUNE" day="20"/>
-      <tns:to month="JUNE" day="26"/>
-    </tns:FixedWeekdayBetweenFixed>
-    <tns:FixedWeekdayBetweenFixed weekday="SATURDAY" descriptionPropertiesKey="ALL_SAINTS">
-      <tns:from month="OCTOBER" day="31"/>
-      <tns:to month="NOVEMBER" day="6"/>
-    </tns:FixedWeekdayBetweenFixed>
-  </tns:Holidays>
-  <tns:SubConfigurations hierarchy="ax" description="Aland">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="9" descriptionPropertiesKey="SELF_GOVERNANCE"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-</tns:Configuration>
+
+<Configuration hierarchy="fi" description="Finland"
+               xmlns="http://www.focus_shift.de/jollyday/xml/ns/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://www.focus_shift.de/jollyday/xml/ns/holiday http://www.focus_shift.de/jollyday/xml/ns/holiday/Holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="JANUARY" day="6" descriptionPropertiesKey="EPIPHANY"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="DECEMBER" day="6" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CHRISTMAS_EVE"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
+    <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
+    <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+    <ChristianHoliday type="ASCENSION_DAY" descriptionPropertiesKey="christian.ASCENSION_DAY"/>
+    <FixedWeekdayBetweenFixed weekday="FRIDAY" descriptionPropertiesKey="MIDSUMMER_EVE">
+      <from month="JUNE" day="19"/>
+      <to month="JUNE" day="25"/>
+    </FixedWeekdayBetweenFixed>
+    <FixedWeekdayBetweenFixed weekday="SATURDAY" descriptionPropertiesKey="MIDSUMMER">
+      <from month="JUNE" day="20"/>
+      <to month="JUNE" day="26"/>
+    </FixedWeekdayBetweenFixed>
+    <FixedWeekdayBetweenFixed weekday="SATURDAY" descriptionPropertiesKey="ALL_SAINTS">
+      <from month="OCTOBER" day="31"/>
+      <to month="NOVEMBER" day="6"/>
+    </FixedWeekdayBetweenFixed>
+  </Holidays>
+  <SubConfigurations hierarchy="ax" description="Aland">
+    <Holidays>
+      <Fixed month="JUNE" day="9" descriptionPropertiesKey="SELF_GOVERNANCE"/>
+    </Holidays>
+  </SubConfigurations>
+</Configuration>

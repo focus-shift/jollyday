@@ -58,7 +58,20 @@ If you already use one of these libraries in your project than just use the spec
   ```gradle
   implementation group: 'de.focus-shift', name: 'jollyday-jaxb', version: '${version}'
   ```
+</details>
 
+<details>
+  <summary>with the Java Platform Module System (click to expand)</summary>
+
+  If you want to use Jollyday in a project that is modularized via java modules you need to require the `de.focus_shift.jollyday.core` module via
+  
+  ```java
+  module your.application {
+    ...
+    requires de.focus_shift.jollyday.core;
+    ...
+  }
+```
 </details>
 
 ### Examples
@@ -123,17 +136,37 @@ If you already use one of these libraries in your project than just use the spec
   ```
 </details>
 
-### Java Platform Module System (JPMS)
+<details>
+  <summary>Override an existing country (click to expand)</summary>
+  
+  If you want to override the public holidays of a provided country like **germany**, you need to put a holiday file
+  with the name `Holiday_de.xml` on your classpath. Jollyday will pick up yours at first. The File and the hierarchy needs
+  to be identical to the one you want to override.
 
-If you want to use Jollyday in a project that is modularized via java modules you need to require the `de.focus_shift.jollyday.core` module via
+  The holiday file structure needs to look like the one below. The XML Schema Definition file can be viewed [here](jollyday-core/src/main/resources/www.focus_shift.de/jollyday/xml/ns/holiday/Holiday.xsd)
 
-```java
-module your.application {
-  ...
-  requires de.focus_shift.jollyday.core;
-  ...
-}
-```
+  ```xml
+  <?xml version="1.0" encoding="UTF-8"?>
+  
+  <Configuration hierarchy="de" description="Germany"
+                 xmlns="http://www.focus_shift.de/jollyday/xml/ns/holiday"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://www.focus_shift.de/jollyday/xml/ns/holiday http://www.focus_shift.de/jollyday/xml/ns/holiday/Holiday.xsd">
+    <Holidays>
+      <!-- Add the holidays here-->
+    </Holidays>
+  
+    ...
+    
+    <SubConfigurations hierarchy="bw" description="Baden-Württemberg">
+      <Holidays>
+      ...
+      </Holidays>
+    </SubConfigurations>
+  </Configuration>
+  ```
+</details>
+
 
 ## Development
 
