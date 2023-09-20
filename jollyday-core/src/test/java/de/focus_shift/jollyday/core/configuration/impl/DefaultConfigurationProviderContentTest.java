@@ -12,7 +12,6 @@ class DefaultConfigurationProviderContentTest {
   private static final Set<String> KEYS_DEFAULT_CONFIG = Set.of(
     "manager.impl",
     "manager.impl.jp",
-    "configuration.datasource.impl",
     "parser.impl.de.focus_shift.jollyday.core.spi.Fixed",
     "parser.impl.de.focus_shift.jollyday.core.spi.FixedWeekdayInMonth",
     "parser.impl.de.focus_shift.jollyday.core.spi.IslamicHoliday",

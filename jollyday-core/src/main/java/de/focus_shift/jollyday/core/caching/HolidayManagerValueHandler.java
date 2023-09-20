@@ -4,6 +4,7 @@ import de.focus_shift.jollyday.core.HolidayManager;
 import de.focus_shift.jollyday.core.ManagerParameter;
 import de.focus_shift.jollyday.core.datasource.ConfigurationServiceManager;
 import de.focus_shift.jollyday.core.spi.ConfigurationService;
+import de.focus_shift.jollyday.core.support.LazyServiceLoaderCache;
 import de.focus_shift.jollyday.core.util.ClassLoadingUtil;
 
 /**
@@ -18,7 +19,8 @@ public class HolidayManagerValueHandler implements Cache.ValueHandler<HolidayMan
    * Manager for providing configuration data sources which return the holiday
    * data.
    */
-  private final ConfigurationServiceManager configurationServiceManager = new ConfigurationServiceManager();
+  private final ConfigurationServiceManager configurationServiceManager =
+    new ConfigurationServiceManager(new LazyServiceLoaderCache<>(ConfigurationService.class));
 
   /**
    * Utility to load classes.
@@ -38,7 +40,7 @@ public class HolidayManagerValueHandler implements Cache.ValueHandler<HolidayMan
   @Override
   public HolidayManager createValue() {
     final HolidayManager manager = instantiateManagerImpl(managerImplClassName);
-    final ConfigurationService configurationService = configurationServiceManager.getConfigurationService(parameter);
+    final ConfigurationService configurationService = configurationServiceManager.getConfigurationService();
     manager.setConfigurationService(configurationService);
     manager.init(parameter);
     return manager;

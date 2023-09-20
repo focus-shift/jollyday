@@ -5,7 +5,6 @@ import java.util.Properties;
 
 public interface ManagerParameter {
 
-  String CONFIGURATION_DATASOURCE_IMPL_CLASS = "configuration.datasource.impl";
   String MANAGER_IMPL_CLASS_PREFIX = "manager.impl";
 
   void mergeProperties(Properties properties);
