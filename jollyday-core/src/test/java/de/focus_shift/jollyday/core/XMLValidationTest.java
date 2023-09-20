@@ -8,10 +8,11 @@ import org.xmlunit.validation.Validator;
 import javax.xml.transform.stream.StreamSource;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.xmlunit.validation.Languages.W3C_XML_SCHEMA_NS_URI;
@@ -29,23 +30,24 @@ class XMLValidationTest {
   }
 
   @Test
-  void testSchemaIsValid() {
+  void ensureThatHolidaySchemaIsValid() {
     assertThat(schemaFile).exists();
-    final ValidationResult validationResult = validator.validateSchema();
-    assertThat(validationResult.isValid()).isTrue();
+    assertThat(validator.validateSchema().isValid()).isTrue();
   }
 
   @Test
   void testHolidayFilesAreValid() throws Exception {
     final Path holidaysFolder = Paths.get("src/main/resources/holidays/");
-    Files.list(holidaysFolder).forEach(this::validateHolidayFile);
+    try (final Stream<Path> list = Files.list(holidaysFolder)) {
+      list.forEach(this::validateHolidayFile);
+    }
   }
 
   private void validateHolidayFile(Path path) {
-    try {
-      final ValidationResult validationResult = validator.validateInstance(new StreamSource(new FileInputStream(path.toFile())));
+    try (final FileInputStream inputStream = new FileInputStream(path.toFile());) {
+      final ValidationResult validationResult = validator.validateInstance(new StreamSource(inputStream));
       assertThat(validationResult.isValid()).isTrue();
-    } catch (FileNotFoundException e) {
+    } catch (IOException e) {
       throw new IllegalStateException("Cannot validate holiday file " + path);
     }
   }

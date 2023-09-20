@@ -1,314 +1,314 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<schema xmlns="http://www.w3.org/2001/XMLSchema"
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
         targetNamespace="http://www.example.org/Holiday"
-        xmlns:tns="http://www.example.org/Holiday"
+        xmlns="http://www.example.org/Holiday"
         elementFormDefault="qualified">
 
-  <simpleType name="Weekday">
-    <restriction base="string">
-      <enumeration value="MONDAY"/>
-      <enumeration value="TUESDAY"/>
-      <enumeration value="WEDNESDAY"/>
-      <enumeration value="THURSDAY"/>
-      <enumeration value="FRIDAY"/>
-      <enumeration value="SATURDAY"/>
-      <enumeration value="SUNDAY"/>
-    </restriction>
-  </simpleType>
+  <xsd:simpleType name="Weekday">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="MONDAY"/>
+      <xsd:enumeration value="TUESDAY"/>
+      <xsd:enumeration value="WEDNESDAY"/>
+      <xsd:enumeration value="THURSDAY"/>
+      <xsd:enumeration value="FRIDAY"/>
+      <xsd:enumeration value="SATURDAY"/>
+      <xsd:enumeration value="SUNDAY"/>
+    </xsd:restriction>
+  </xsd:simpleType>
 
-  <simpleType name="Month">
-    <restriction base="string">
-      <enumeration value="JANUARY"/>
-      <enumeration value="FEBRUARY"/>
-      <enumeration value="MARCH"/>
-      <enumeration value="APRIL"/>
-      <enumeration value="MAY"/>
-      <enumeration value="JUNE"/>
-      <enumeration value="JULY"/>
-      <enumeration value="AUGUST"/>
-      <enumeration value="SEPTEMBER"/>
-      <enumeration value="OCTOBER"/>
-      <enumeration value="NOVEMBER"/>
-      <enumeration value="DECEMBER"/>
-    </restriction>
-  </simpleType>
+  <xsd:simpleType name="Month">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="JANUARY"/>
+      <xsd:enumeration value="FEBRUARY"/>
+      <xsd:enumeration value="MARCH"/>
+      <xsd:enumeration value="APRIL"/>
+      <xsd:enumeration value="MAY"/>
+      <xsd:enumeration value="JUNE"/>
+      <xsd:enumeration value="JULY"/>
+      <xsd:enumeration value="AUGUST"/>
+      <xsd:enumeration value="SEPTEMBER"/>
+      <xsd:enumeration value="OCTOBER"/>
+      <xsd:enumeration value="NOVEMBER"/>
+      <xsd:enumeration value="DECEMBER"/>
+    </xsd:restriction>
+  </xsd:simpleType>
 
-  <complexType name="RelativeToFixed">
-    <complexContent>
-      <extension base="tns:Holiday">
-        <sequence>
-          <choice>
-            <element name="Days" type="int" minOccurs="0"/>
-            <element name="Weekday" type="tns:Weekday" minOccurs="0"/>
-          </choice>
-          <element name="When" type="tns:When"/>
-          <element name="Date" type="tns:Fixed"/>
-        </sequence>
-      </extension>
-    </complexContent>
-  </complexType>
+  <xsd:complexType name="RelativeToFixed">
+    <xsd:complexContent>
+      <xsd:extension base="Holiday">
+        <xsd:sequence>
+          <xsd:choice>
+            <xsd:element name="Days" type="xsd:int" minOccurs="0"/>
+            <xsd:element name="Weekday" type="Weekday" minOccurs="0"/>
+          </xsd:choice>
+          <xsd:element name="When" type="When"/>
+          <xsd:element name="Date" type="Fixed"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
 
-  <complexType name="Holidays">
-    <sequence>
-      <element name="Fixed" type="tns:Fixed" maxOccurs="unbounded" minOccurs="0"/>
-      <element name="RelativeToFixed" type="tns:RelativeToFixed" maxOccurs="unbounded" minOccurs="0"/>
-      <element name="RelativeToWeekdayInMonth" type="tns:RelativeToWeekdayInMonth" maxOccurs="unbounded" minOccurs="0"/>
-      <element name="FixedWeekday" type="tns:FixedWeekdayInMonth" maxOccurs="unbounded" minOccurs="0"/>
-      <element name="ChristianHoliday" type="tns:ChristianHoliday" maxOccurs="unbounded" minOccurs="0"/>
-      <element name="IslamicHoliday" type="tns:IslamicHoliday" maxOccurs="unbounded" minOccurs="0"/>
-      <element name="FixedWeekdayBetweenFixed" type="tns:FixedWeekdayBetweenFixed" maxOccurs="unbounded" minOccurs="0"/>
-      <element name="FixedWeekdayRelativeToFixed" type="tns:FixedWeekdayRelativeToFixed" maxOccurs="unbounded" minOccurs="0"/>
-      <element name="EthiopianOrthodoxHoliday" type="tns:EthiopianOrthodoxHoliday" maxOccurs="unbounded" minOccurs="0"/>
-      <element name="RelativeToEasterSunday" type="tns:RelativeToEasterSunday" minOccurs="0" maxOccurs="unbounded"/>
-    </sequence>
-  </complexType>
+  <xsd:complexType name="Holidays">
+    <xsd:sequence>
+      <xsd:element name="Fixed" type="Fixed" maxOccurs="unbounded" minOccurs="0"/>
+      <xsd:element name="RelativeToFixed" type="RelativeToFixed" maxOccurs="unbounded" minOccurs="0"/>
+      <xsd:element name="RelativeToWeekdayInMonth" type="RelativeToWeekdayInMonth" maxOccurs="unbounded" minOccurs="0"/>
+      <xsd:element name="FixedWeekday" type="FixedWeekdayInMonth" maxOccurs="unbounded" minOccurs="0"/>
+      <xsd:element name="ChristianHoliday" type="ChristianHoliday" maxOccurs="unbounded" minOccurs="0"/>
+      <xsd:element name="IslamicHoliday" type="IslamicHoliday" maxOccurs="unbounded" minOccurs="0"/>
+      <xsd:element name="FixedWeekdayBetweenFixed" type="FixedWeekdayBetweenFixed" maxOccurs="unbounded" minOccurs="0"/>
+      <xsd:element name="FixedWeekdayRelativeToFixed" type="FixedWeekdayRelativeToFixed" maxOccurs="unbounded" minOccurs="0"/>
+      <xsd:element name="EthiopianOrthodoxHoliday" type="EthiopianOrthodoxHoliday" maxOccurs="unbounded" minOccurs="0"/>
+      <xsd:element name="RelativeToEasterSunday" type="RelativeToEasterSunday" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
 
-  <element name="Configuration" type="tns:Configuration"/>
+  <xsd:element name="Configuration" type="Configuration"/>
 
-  <complexType name="Configuration">
-    <sequence>
-      <element name="Holidays" type="tns:Holidays"/>
-      <element name="SubConfigurations" type="tns:Configuration" minOccurs="0" maxOccurs="unbounded"/>
-    </sequence>
-    <attribute name="hierarchy" type="string"/>
-    <attribute name="description" type="string"/>
-  </complexType>
+  <xsd:complexType name="Configuration">
+    <xsd:sequence>
+      <xsd:element name="Holidays" type="Holidays"/>
+      <xsd:element name="SubConfigurations" type="Configuration" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+    <xsd:attribute name="hierarchy" type="xsd:string"/>
+    <xsd:attribute name="description" type="xsd:string"/>
+  </xsd:complexType>
 
-  <complexType name="Fixed">
-    <complexContent>
-      <extension base="tns:MoveableHoliday">
-        <attribute name="month" type="tns:Month"/>
-        <attribute name="day">
-          <simpleType>
-            <restriction base="int">
-              <minInclusive value="1"/>
-              <maxInclusive value="31"/>
-            </restriction>
-          </simpleType>
-        </attribute>
-      </extension>
-    </complexContent>
-  </complexType>
+  <xsd:complexType name="Fixed">
+    <xsd:complexContent>
+      <xsd:extension base="MoveableHoliday">
+        <xsd:attribute name="month" type="Month"/>
+        <xsd:attribute name="day">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:int">
+              <xsd:minInclusive value="1"/>
+              <xsd:maxInclusive value="31"/>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
 
-  <simpleType name="When">
-    <restriction base="string">
-      <enumeration value="BEFORE"/>
-      <enumeration value="AFTER"/>
-      <enumeration value="CLOSEST"/>
-    </restriction>
-  </simpleType>
+  <xsd:simpleType name="When">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="BEFORE"/>
+      <xsd:enumeration value="AFTER"/>
+      <xsd:enumeration value="CLOSEST"/>
+    </xsd:restriction>
+  </xsd:simpleType>
 
-  <complexType name="FixedWeekdayInMonth">
-    <complexContent>
-      <extension base="tns:Holiday">
-        <attribute name="which" type="tns:Which"/>
-        <attribute name="weekday" type="tns:Weekday"/>
-        <attribute name="month" type="tns:Month"/>
-      </extension>
-    </complexContent>
-  </complexType>
+  <xsd:complexType name="FixedWeekdayInMonth">
+    <xsd:complexContent>
+      <xsd:extension base="Holiday">
+        <xsd:attribute name="which" type="Which"/>
+        <xsd:attribute name="weekday" type="Weekday"/>
+        <xsd:attribute name="month" type="Month"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
 
-  <simpleType name="Which">
-    <restriction base="string">
-      <enumeration value="FIRST"/>
-      <enumeration value="SECOND"/>
-      <enumeration value="THIRD"/>
-      <enumeration value="FOURTH"/>
-      <enumeration value="LAST"/>
-    </restriction>
-  </simpleType>
+  <xsd:simpleType name="Which">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="FIRST"/>
+      <xsd:enumeration value="SECOND"/>
+      <xsd:enumeration value="THIRD"/>
+      <xsd:enumeration value="FOURTH"/>
+      <xsd:enumeration value="LAST"/>
+    </xsd:restriction>
+  </xsd:simpleType>
 
-  <complexType name="RelativeToWeekdayInMonth">
-    <complexContent>
-      <extension base="tns:Holiday">
-        <sequence>
-          <element name="FixedWeekday" type="tns:FixedWeekdayInMonth"/>
-        </sequence>
-        <attribute name="weekday" type="tns:Weekday"/>
-        <attribute name="when" type="tns:When"/>
-      </extension>
-    </complexContent>
-  </complexType>
+  <xsd:complexType name="RelativeToWeekdayInMonth">
+    <xsd:complexContent>
+      <xsd:extension base="Holiday">
+        <xsd:sequence>
+          <xsd:element name="FixedWeekday" type="FixedWeekdayInMonth"/>
+        </xsd:sequence>
+        <xsd:attribute name="weekday" type="Weekday"/>
+        <xsd:attribute name="when" type="When"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
 
-  <complexType name="IslamicHoliday">
-    <complexContent>
-      <extension base="tns:Holiday">
-        <attribute name="type" type="tns:IslamicHolidayType"/>
-      </extension>
-    </complexContent>
-  </complexType>
+  <xsd:complexType name="IslamicHoliday">
+    <xsd:complexContent>
+      <xsd:extension base="Holiday">
+        <xsd:attribute name="type" type="IslamicHolidayType"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
 
-  <simpleType name="IslamicHolidayType">
-    <restriction base="string">
-      <enumeration value="NEWYEAR"/>
-      <enumeration value="ASCHURA"/>
-      <enumeration value="MAWLID_AN_NABI"/>
-      <enumeration value="LAILAT_AL_MIRAJ"/>
-      <enumeration value="LAILAT_AL_BARAT"/>
-      <enumeration value="RAMADAN"/>
-      <enumeration value="LAILAT_AL_QADR"/>
-      <enumeration value="RAMADAN_END"/>
-      <enumeration value="ID_AL_FITR"/>
-      <enumeration value="ID_AL_FITR_2"/>
-      <enumeration value="ID_AL_FITR_3"/>
-      <enumeration value="ARAFAAT"/>
-      <enumeration value="ID_UL_ADHA"/>
-      <enumeration value="ID_UL_ADHA_2"/>
-      <enumeration value="ID_UL_ADHA_3"/>
-    </restriction>
-  </simpleType>
+  <xsd:simpleType name="IslamicHolidayType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="NEWYEAR"/>
+      <xsd:enumeration value="ASCHURA"/>
+      <xsd:enumeration value="MAWLID_AN_NABI"/>
+      <xsd:enumeration value="LAILAT_AL_MIRAJ"/>
+      <xsd:enumeration value="LAILAT_AL_BARAT"/>
+      <xsd:enumeration value="RAMADAN"/>
+      <xsd:enumeration value="LAILAT_AL_QADR"/>
+      <xsd:enumeration value="RAMADAN_END"/>
+      <xsd:enumeration value="ID_AL_FITR"/>
+      <xsd:enumeration value="ID_AL_FITR_2"/>
+      <xsd:enumeration value="ID_AL_FITR_3"/>
+      <xsd:enumeration value="ARAFAAT"/>
+      <xsd:enumeration value="ID_UL_ADHA"/>
+      <xsd:enumeration value="ID_UL_ADHA_2"/>
+      <xsd:enumeration value="ID_UL_ADHA_3"/>
+    </xsd:restriction>
+  </xsd:simpleType>
 
-  <simpleType name="ChronologyType">
-    <restriction base="string">
-      <enumeration value="JULIAN"/>
-      <enumeration value="GREGORIAN"/>
-    </restriction>
-  </simpleType>
+  <xsd:simpleType name="ChronologyType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="JULIAN"/>
+      <xsd:enumeration value="GREGORIAN"/>
+    </xsd:restriction>
+  </xsd:simpleType>
 
-  <complexType name="ChristianHoliday">
-    <complexContent>
-      <extension base="tns:MoveableHoliday">
-        <attribute name="type" type="tns:ChristianHolidayType"/>
-        <attribute name="chronology" type="tns:ChronologyType"/>
-      </extension>
-    </complexContent>
-  </complexType>
+  <xsd:complexType name="ChristianHoliday">
+    <xsd:complexContent>
+      <xsd:extension base="MoveableHoliday">
+        <xsd:attribute name="type" type="ChristianHolidayType"/>
+        <xsd:attribute name="chronology" type="ChronologyType"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
 
-  <simpleType name="HolidayType">
-    <restriction base="string">
-      <enumeration value="OFFICIAL_HOLIDAY"/>
-      <enumeration value="UNOFFICIAL_HOLIDAY"/>
-    </restriction>
-  </simpleType>
+  <xsd:simpleType name="HolidayType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="OFFICIAL_HOLIDAY"/>
+      <xsd:enumeration value="UNOFFICIAL_HOLIDAY"/>
+    </xsd:restriction>
+  </xsd:simpleType>
 
-  <simpleType name="ChristianHolidayType">
-    <restriction base="string">
-      <enumeration value="GOOD_FRIDAY"/>
-      <enumeration value="EASTER_MONDAY"/>
-      <enumeration value="ASCENSION_DAY"/>
-      <enumeration value="WHIT_MONDAY"/>
-      <enumeration value="CORPUS_CHRISTI"/>
-      <enumeration value="MAUNDY_THURSDAY"/>
-      <enumeration value="ASH_WEDNESDAY"/>
-      <enumeration value="MARDI_GRAS"/>
-      <enumeration value="GENERAL_PRAYER_DAY"/>
-      <enumeration value="CLEAN_MONDAY"/>
-      <enumeration value="SHROVE_MONDAY"/>
-      <enumeration value="PENTECOST"/>
-      <enumeration value="CARNIVAL"/>
-      <enumeration value="EASTER_SATURDAY"/>
-      <enumeration value="EASTER_TUESDAY"/>
-      <enumeration value="SACRED_HEART"/>
-      <enumeration value="EASTER"/>
-      <enumeration value="PENTECOST_MONDAY"/>
-      <enumeration value="WHIT_SUNDAY"/>
-    </restriction>
-  </simpleType>
+  <xsd:simpleType name="ChristianHolidayType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="GOOD_FRIDAY"/>
+      <xsd:enumeration value="EASTER_MONDAY"/>
+      <xsd:enumeration value="ASCENSION_DAY"/>
+      <xsd:enumeration value="WHIT_MONDAY"/>
+      <xsd:enumeration value="CORPUS_CHRISTI"/>
+      <xsd:enumeration value="MAUNDY_THURSDAY"/>
+      <xsd:enumeration value="ASH_WEDNESDAY"/>
+      <xsd:enumeration value="MARDI_GRAS"/>
+      <xsd:enumeration value="GENERAL_PRAYER_DAY"/>
+      <xsd:enumeration value="CLEAN_MONDAY"/>
+      <xsd:enumeration value="SHROVE_MONDAY"/>
+      <xsd:enumeration value="PENTECOST"/>
+      <xsd:enumeration value="CARNIVAL"/>
+      <xsd:enumeration value="EASTER_SATURDAY"/>
+      <xsd:enumeration value="EASTER_TUESDAY"/>
+      <xsd:enumeration value="SACRED_HEART"/>
+      <xsd:enumeration value="EASTER"/>
+      <xsd:enumeration value="PENTECOST_MONDAY"/>
+      <xsd:enumeration value="WHIT_SUNDAY"/>
+    </xsd:restriction>
+  </xsd:simpleType>
 
-  <complexType name="FixedWeekdayBetweenFixed">
-    <complexContent>
-      <extension base="tns:Holiday">
-        <sequence>
-          <element name="from" type="tns:Fixed"/>
-          <element name="to" type="tns:Fixed"/>
-        </sequence>
-        <attribute name="weekday" type="tns:Weekday"/>
-      </extension>
-    </complexContent>
-  </complexType>
+  <xsd:complexType name="FixedWeekdayBetweenFixed">
+    <xsd:complexContent>
+      <xsd:extension base="Holiday">
+        <xsd:sequence>
+          <xsd:element name="from" type="Fixed"/>
+          <xsd:element name="to" type="Fixed"/>
+        </xsd:sequence>
+        <xsd:attribute name="weekday" type="Weekday"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
 
-  <complexType name="Holiday" abstract="true">
-    <attribute name="validFrom" type="int"/>
-    <attribute name="validTo" type="int"/>
-    <attribute name="every" type="tns:HolidayCycleType" default="EVERY_YEAR"/>
-    <attribute name="descriptionPropertiesKey" type="string"/>
-    <attribute name="localizedType" type="tns:HolidayType" default="OFFICIAL_HOLIDAY"/>
-  </complexType>
+  <xsd:complexType name="Holiday" abstract="true">
+    <xsd:attribute name="validFrom" type="xsd:int"/>
+    <xsd:attribute name="validTo" type="xsd:int"/>
+    <xsd:attribute name="every" type="HolidayCycleType" default="EVERY_YEAR"/>
+    <xsd:attribute name="descriptionPropertiesKey" type="xsd:string"/>
+    <xsd:attribute name="localizedType" type="HolidayType" default="OFFICIAL_HOLIDAY"/>
+  </xsd:complexType>
 
-  <simpleType name="Substituted">
-    <restriction base="string">
-      <enumeration value="ON_SATURDAY"/>
-      <enumeration value="ON_SUNDAY"/>
-      <enumeration value="ON_WEEKEND"/>
-      <enumeration value="ON_TUESDAY"/>
-      <enumeration value="ON_WEDNESDAY"/>
-    </restriction>
-  </simpleType>
+  <xsd:simpleType name="Substituted">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="ON_SATURDAY"/>
+      <xsd:enumeration value="ON_SUNDAY"/>
+      <xsd:enumeration value="ON_WEEKEND"/>
+      <xsd:enumeration value="ON_TUESDAY"/>
+      <xsd:enumeration value="ON_WEDNESDAY"/>
+    </xsd:restriction>
+  </xsd:simpleType>
 
-  <simpleType name="With">
-    <restriction base="string">
-      <enumeration value="NEXT"/>
-      <enumeration value="PREVIOUS"/>
-    </restriction>
-  </simpleType>
+  <xsd:simpleType name="With">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="NEXT"/>
+      <xsd:enumeration value="PREVIOUS"/>
+    </xsd:restriction>
+  </xsd:simpleType>
 
-  <complexType name="MovingCondition">
-    <attribute name="substitute" type="tns:Weekday"/>
-    <attribute name="with" type="tns:With"/>
-    <attribute name="weekday" type="tns:Weekday"/>
-  </complexType>
+  <xsd:complexType name="MovingCondition">
+    <xsd:attribute name="substitute" type="Weekday"/>
+    <xsd:attribute name="with" type="With"/>
+    <xsd:attribute name="weekday" type="Weekday"/>
+  </xsd:complexType>
 
-  <complexType name="MoveableHoliday" abstract="true">
-    <complexContent>
-      <extension base="tns:Holiday">
-        <sequence>
-          <element name="MovingCondition" type="tns:MovingCondition" maxOccurs="unbounded" minOccurs="0"/>
-        </sequence>
-      </extension>
-    </complexContent>
-  </complexType>
+  <xsd:complexType name="MoveableHoliday" abstract="true">
+    <xsd:complexContent>
+      <xsd:extension base="Holiday">
+        <xsd:sequence>
+          <xsd:element name="MovingCondition" type="MovingCondition" maxOccurs="unbounded" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
 
-  <complexType name="EthiopianOrthodoxHoliday">
-    <complexContent>
-      <extension base="tns:Holiday">
-        <attribute name="type" type="tns:EthiopianOrthodoxHolidayType"/>
-      </extension>
-    </complexContent>
-  </complexType>
+  <xsd:complexType name="EthiopianOrthodoxHoliday">
+    <xsd:complexContent>
+      <xsd:extension base="Holiday">
+        <xsd:attribute name="type" type="EthiopianOrthodoxHolidayType"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
 
-  <simpleType name="EthiopianOrthodoxHolidayType">
-    <restriction base="string">
-      <enumeration value="TIMKAT"/>
-      <enumeration value="ENKUTATASH"/>
-      <enumeration value="MESKEL"/>
-    </restriction>
-  </simpleType>
+  <xsd:simpleType name="EthiopianOrthodoxHolidayType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="TIMKAT"/>
+      <xsd:enumeration value="ENKUTATASH"/>
+      <xsd:enumeration value="MESKEL"/>
+    </xsd:restriction>
+  </xsd:simpleType>
 
-  <complexType name="FixedWeekdayRelativeToFixed">
-    <complexContent>
-      <extension base="tns:Holiday">
-        <sequence>
-          <element name="day" type="tns:Fixed"/>
-        </sequence>
-        <attribute name="which" type="tns:Which"/>
-        <attribute name="weekday" type="tns:Weekday"/>
-        <attribute name="when" type="tns:When"/>
-      </extension>
-    </complexContent>
-  </complexType>
+  <xsd:complexType name="FixedWeekdayRelativeToFixed">
+    <xsd:complexContent>
+      <xsd:extension base="Holiday">
+        <xsd:sequence>
+          <xsd:element name="day" type="Fixed"/>
+        </xsd:sequence>
+        <xsd:attribute name="which" type="Which"/>
+        <xsd:attribute name="weekday" type="Weekday"/>
+        <xsd:attribute name="when" type="When"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
 
-  <simpleType name="HolidayCycleType">
-    <restriction base="string">
-      <enumeration value="EVERY_YEAR"/>
-      <enumeration value="TWO_YEARS"/>
-      <enumeration value="THREE_YEARS"/>
-      <enumeration value="FOUR_YEARS"/>
-      <enumeration value="FIVE_YEARS"/>
-      <enumeration value="SIX_YEARS"/>
-      <enumeration value="ODD_YEARS"/>
-      <enumeration value="EVEN_YEARS"/>
-    </restriction>
-  </simpleType>
+  <xsd:simpleType name="HolidayCycleType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="EVERY_YEAR"/>
+      <xsd:enumeration value="TWO_YEARS"/>
+      <xsd:enumeration value="THREE_YEARS"/>
+      <xsd:enumeration value="FOUR_YEARS"/>
+      <xsd:enumeration value="FIVE_YEARS"/>
+      <xsd:enumeration value="SIX_YEARS"/>
+      <xsd:enumeration value="ODD_YEARS"/>
+      <xsd:enumeration value="EVEN_YEARS"/>
+    </xsd:restriction>
+  </xsd:simpleType>
 
-  <complexType name="RelativeToEasterSunday">
-    <complexContent>
-      <extension base="tns:Holiday">
-        <sequence>
-          <element name="chronology" type="tns:ChronologyType"/>
-          <element name="days" type="int"/>
-        </sequence>
-      </extension>
-    </complexContent>
-  </complexType>
-</schema>
+  <xsd:complexType name="RelativeToEasterSunday">
+    <xsd:complexContent>
+      <xsd:extension base="Holiday">
+        <xsd:sequence>
+          <xsd:element name="chronology" type="ChronologyType"/>
+          <xsd:element name="days" type="xsd:int"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>
