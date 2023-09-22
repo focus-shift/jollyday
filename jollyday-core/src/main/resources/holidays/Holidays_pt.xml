@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Configuration hierarchy="pt" description="Portugal"
-               xmlns="https://focus_shift.de/jollyday/xml/ns/holiday"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-               xsi:schemaLocation="https://focus_shift.de/jollyday/xml/ns/holiday https://focus_shift.de/jollyday/xml/ns/holiday/Holiday.xsd">
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/Holiday.xsd">
   <Holidays>
     <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
     <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>

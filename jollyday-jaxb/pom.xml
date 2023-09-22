@@ -128,7 +128,7 @@
             <configuration>
               <target>3.0</target>
               <sources>
-                <source>${project.build.directory}/dependency/focus_shift.de/jollyday/xml/ns/holiday/Holiday.xsd</source>
+                <source>${project.build.directory}/dependency/focus_shift.de/jollyday/schema/holiday/Holiday.xsd</source>
               </sources>
               <packageName>de.focus_shift.jollyday.jaxb.mapping</packageName>
               <externalEntityProcessing>true</externalEntityProcessing>

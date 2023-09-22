@@ -143,15 +143,15 @@ If you already use one of these libraries in your project than just use the spec
   with the name `Holiday_de.xml` on your classpath. Jollyday will pick up yours at first. The File and the hierarchy needs
   to be identical to the one you want to override.
 
-  The holiday file structure needs to look like the one below. The XML Schema Definition file can be viewed [here](jollyday-core/src/main/resources/focus_shift.de/jollyday/xml/ns/holiday/Holiday.xsd)
+  The holiday file structure needs to look like the one below. The XML Schema Definition file can be viewed [here](jollyday-core/src/main/resources/focus_shift.de/jollyday/schema/holiday/Holiday.xsd)
 
   ```xml
   <?xml version="1.0" encoding="UTF-8"?>
   
   <Configuration hierarchy="de" description="Germany"
-                 xmlns="https://focus_shift.de/jollyday/xml/ns/holiday"
+                 xmlns="https://focus_shift.de/jollyday/schema/holiday"
                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                 xsi:schemaLocation="https://focus_shift.de/jollyday/xml/ns/holiday https://focus_shift.de/jollyday/xml/ns/holiday/Holiday.xsd">
+                 xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/Holiday.xsd">
     <Holidays>
       <!-- Add the holidays here-->
     </Holidays>
