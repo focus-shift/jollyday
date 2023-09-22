@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration hierarchy="al" description="Albania"
-               xmlns="http://www.focus_shift.de/jollyday/xml/ns/holiday"
+               xmlns="https://www.focus_shift.de/jollyday/xml/ns/holiday"
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-               xsi:schemaLocation="http://www.focus_shift.de/jollyday/xml/ns/holiday http://www.focus_shift.de/jollyday/xml/ns/holiday/Holiday.xsd">
+               xsi:schemaLocation="https://www.focus_shift.de/jollyday/xml/ns/holiday https://www.focus_shift.de/jollyday/xml/ns/holiday/Holiday.xsd">
   <Holidays>
     <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
     <Fixed month="JANUARY" day="4" descriptionPropertiesKey="NEW_YEAR"/>

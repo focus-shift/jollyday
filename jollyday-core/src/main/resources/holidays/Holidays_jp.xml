@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Configuration hierarchy="jp" description="Japan"
-               xmlns="http://www.focus_shift.de/jollyday/xml/ns/holiday"
+               xmlns="https://www.focus_shift.de/jollyday/xml/ns/holiday"
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-               xsi:schemaLocation="http://www.focus_shift.de/jollyday/xml/ns/holiday http://www.focus_shift.de/jollyday/xml/ns/holiday/Holiday.xsd">
+               xsi:schemaLocation="https://www.focus_shift.de/jollyday/xml/ns/holiday https://www.focus_shift.de/jollyday/xml/ns/holiday/Holiday.xsd">
   <Holidays>
     <Fixed month="JANUARY" day="1" validFrom="1948" descriptionPropertiesKey="NEW_YEAR"/>
     <Fixed month="JANUARY" day="15" validFrom="1948" validTo="1999" descriptionPropertiesKey="COMING_OF_AGE"/>

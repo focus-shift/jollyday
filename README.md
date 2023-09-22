@@ -149,9 +149,9 @@ If you already use one of these libraries in your project than just use the spec
   <?xml version="1.0" encoding="UTF-8"?>
   
   <Configuration hierarchy="de" description="Germany"
-                 xmlns="http://www.focus_shift.de/jollyday/xml/ns/holiday"
+                 xmlns="https://www.focus_shift.de/jollyday/xml/ns/holiday"
                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                 xsi:schemaLocation="http://www.focus_shift.de/jollyday/xml/ns/holiday http://www.focus_shift.de/jollyday/xml/ns/holiday/Holiday.xsd">
+                 xsi:schemaLocation="https://www.focus_shift.de/jollyday/xml/ns/holiday https://www.focus_shift.de/jollyday/xml/ns/holiday/Holiday.xsd">
     <Holidays>
       <!-- Add the holidays here-->
     </Holidays>

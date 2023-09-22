@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Configuration hierarchy="in" description="India"
-               xmlns="http://www.focus_shift.de/jollyday/xml/ns/holiday"
+               xmlns="https://www.focus_shift.de/jollyday/xml/ns/holiday"
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-               xsi:schemaLocation="http://www.focus_shift.de/jollyday/xml/ns/holiday http://www.focus_shift.de/jollyday/xml/ns/holiday/Holiday.xsd">
+               xsi:schemaLocation="https://www.focus_shift.de/jollyday/xml/ns/holiday https://www.focus_shift.de/jollyday/xml/ns/holiday/Holiday.xsd">
   <Holidays>
     <Fixed month="JANUARY" day="26" descriptionPropertiesKey="REPUBLIC_DAY"/>
     <Fixed month="AUGUST" day="15" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
