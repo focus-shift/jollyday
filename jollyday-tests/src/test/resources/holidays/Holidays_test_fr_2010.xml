@@ -1,59 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tns:Configuration hierarchy="fr" description="France"
-                   xmlns:tns="http://www.example.org/Holiday" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                   xsi:schemaLocation="http://www.example.org/Holiday /Holiday.xsd">
-  <tns:Holidays>
-    <tns:Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
-    <tns:Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
-    <tns:Fixed month="MAY" day="8" descriptionPropertiesKey="VICTORY_DAY"/>
-    <tns:Fixed month="JULY" day="14" descriptionPropertiesKey="NATIONAL_DAY"/>
-    <tns:Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_MARY"/>
-    <tns:Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
-    <tns:Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="REMEMBRANCE"/>
-    <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-    <tns:Fixed month="APRIL" day="5" descriptionPropertiesKey="EASTER_MONDAY"/>
-    <tns:Fixed month="MAY" day="13" descriptionPropertiesKey="ASCENSION_DAY"/>
-    <tns:Fixed month="MAY" day="24" descriptionPropertiesKey="WHIT_MONDAY"/>
-  </tns:Holidays>
-  <tns:SubConfigurations hierarchy="ma"
-                         description="Martinique">
-    <tns:Holidays>
-      <tns:Fixed month="MAY" day="22"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="gu"
-                         description="Guadeloupe">
-    <tns:Holidays>
-      <tns:Fixed month="MAY" day="27"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="gy" description="Guyane">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="10"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="lr"
-                         description="La Reunion">
-    <tns:Holidays>
-      <tns:Fixed month="DECEMBER" day="20"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="br" description="Bas-Rhin">
-    <tns:Holidays>
-      <tns:Fixed month="DECEMBER" day="26"/>
-      <tns:ChristianHoliday type="GOOD_FRIDAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="hr"
-                         description="Haut-Rhin">
-    <tns:Holidays>
-      <tns:Fixed month="DECEMBER" day="26"/>
-      <tns:ChristianHoliday type="GOOD_FRIDAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="mo" description="Moselle">
-    <tns:Holidays>
-      <tns:Fixed month="DECEMBER" day="26"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-</tns:Configuration>
+<Configuration hierarchy="fr" description="France"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="MAY" day="8" descriptionPropertiesKey="VICTORY_DAY"/>
+    <Fixed month="JULY" day="14" descriptionPropertiesKey="NATIONAL_DAY"/>
+    <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_MARY"/>
+    <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
+    <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="REMEMBRANCE"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+    <Fixed month="APRIL" day="5" descriptionPropertiesKey="EASTER_MONDAY"/>
+    <Fixed month="MAY" day="13" descriptionPropertiesKey="ASCENSION_DAY"/>
+    <Fixed month="MAY" day="24" descriptionPropertiesKey="WHIT_MONDAY"/>
+  </Holidays>
+  <SubConfigurations hierarchy="ma"
+                     description="Martinique">
+    <Holidays>
+      <Fixed month="MAY" day="22"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="gu"
+                     description="Guadeloupe">
+    <Holidays>
+      <Fixed month="MAY" day="27"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="gy" description="Guyane">
+    <Holidays>
+      <Fixed month="JUNE" day="10"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="lr"
+                     description="La Reunion">
+    <Holidays>
+      <Fixed month="DECEMBER" day="20"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="br" description="Bas-Rhin">
+    <Holidays>
+      <Fixed month="DECEMBER" day="26"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="hr"
+                     description="Haut-Rhin">
+    <Holidays>
+      <Fixed month="DECEMBER" day="26"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="mo" description="Moselle">
+    <Holidays>
+      <Fixed month="DECEMBER" day="26"/>
+    </Holidays>
+  </SubConfigurations>
+</Configuration>

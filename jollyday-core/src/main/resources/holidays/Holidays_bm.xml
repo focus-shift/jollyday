@@ -1,78 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tns:Configuration hierarchy="bm" description="Bermuda" xmlns:tns="http://www.example.org/Holiday"
-                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                   xsi:schemaLocation="http://www.example.org/Holiday /Holiday.xsd">
-  <tns:Holidays>
-    <tns:Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
-      <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
-    </tns:Fixed>
+
+<Configuration hierarchy="bm" description="Bermuda"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
 
     <!-- https://www.gov.bm/theofficialgazette/notices/gn03142023 -->
     <!-- https://www.gov.bm/public-holidays -->
-    <tns:Fixed month="MAY" day="8" validFrom="2023" validTo="2023" descriptionPropertiesKey="KINGS_CORONATION"/>
+    <Fixed month="MAY" day="8" validFrom="2023" validTo="2023" descriptionPropertiesKey="KINGS_CORONATION"/>
 
-    <tns:Fixed month="MAY" day="24" validFrom="1979" validTo="2017" descriptionPropertiesKey="BERMUDA_DAY">
-      <tns:MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-    </tns:Fixed>
+    <Fixed month="MAY" day="24" validFrom="1979" validTo="2017" descriptionPropertiesKey="BERMUDA_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
 
     <!-- 2019 it was moved one week earlier -->
-    <tns:Fixed month="MAY" day="24" validFrom="2019" validTo="2019" descriptionPropertiesKey="BERMUDA_DAY"/>
+    <Fixed month="MAY" day="24" validFrom="2019" validTo="2019" descriptionPropertiesKey="BERMUDA_DAY"/>
 
     <!-- https://culture.bm/photo/national-heroes-day/ -->
-    <tns:Fixed month="OCTOBER" day="12" validFrom="2008" validTo="2008" descriptionPropertiesKey="NATIONAL_HEROES_DAY"/>
+    <Fixed month="OCTOBER" day="12" validFrom="2008" validTo="2008" descriptionPropertiesKey="NATIONAL_HEROES_DAY"/>
 
-    <tns:Fixed month="NOVEMBER" day="4" validFrom="2019" validTo="2019" descriptionPropertiesKey="170_ANNIVERSARY_ARRIVAL_BERMUDA"/>
+    <Fixed month="NOVEMBER" day="4" validFrom="2019" validTo="2019" descriptionPropertiesKey="170_ANNIVERSARY_ARRIVAL_BERMUDA"/>
 
     <!-- the start year may be wrong, it is currently set to the earliest possible year -->
-    <tns:Fixed month="NOVEMBER" day="11" validFrom="1919" descriptionPropertiesKey="REMEMBRANCE">
-      <tns:MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-    </tns:Fixed>
+    <Fixed month="NOVEMBER" day="11" validFrom="1919" descriptionPropertiesKey="REMEMBRANCE">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
 
-    <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS">
-      <tns:MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
-      <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-    </tns:Fixed>
-    <tns:Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY">
-      <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
-      <tns:MovingCondition substitute="MONDAY" with="NEXT" weekday="TUESDAY"/>
-      <tns:MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
-    </tns:Fixed>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+      <MovingCondition substitute="MONDAY" with="NEXT" weekday="TUESDAY"/>
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
 
-    <tns:FixedWeekday which="LAST" weekday="FRIDAY" month="MAY" validFrom="2018" validTo="2018" descriptionPropertiesKey="BERMUDA_DAY"/>
+    <FixedWeekday which="LAST" weekday="FRIDAY" month="MAY" validFrom="2018" validTo="2018" descriptionPropertiesKey="BERMUDA_DAY"/>
     <!-- 2019 it was moved one week earlier - see above -->
-    <tns:FixedWeekday which="LAST" weekday="FRIDAY" month="MAY" validFrom="2020" validTo="2020" descriptionPropertiesKey="BERMUDA_DAY"/>
+    <FixedWeekday which="LAST" weekday="FRIDAY" month="MAY" validFrom="2020" validTo="2020" descriptionPropertiesKey="BERMUDA_DAY"/>
 
     <!-- the Friday before the last Monday in May -->
-    <tns:FixedWeekday which="FOURTH" weekday="FRIDAY" month="MAY" validFrom="2021" descriptionPropertiesKey="BERMUDA_DAY"/>
+    <FixedWeekday which="FOURTH" weekday="FRIDAY" month="MAY" validFrom="2021" descriptionPropertiesKey="BERMUDA_DAY"/>
 
-    <tns:FixedWeekday which="THIRD" weekday="MONDAY" month="JUNE" validFrom="2009" descriptionPropertiesKey="NATIONAL_HEROES_DAY"/>
+    <FixedWeekday which="THIRD" weekday="MONDAY" month="JUNE" validFrom="2009" descriptionPropertiesKey="NATIONAL_HEROES_DAY"/>
 
     <!-- the Thursday before the first Monday in August -->
 
     <!-- information for pre-2016 and post-2025 will very likely be very inaccurate, as just assumed to be the same all along -->
-    <tns:FixedWeekday which="LAST" weekday="THURSDAY" month="JULY" validFrom="1947" validTo="2016" descriptionPropertiesKey="EMANCIPATION_DAY"/>
-    <tns:FixedWeekday which="FIRST" weekday="THURSDAY" month="AUGUST" validFrom="2017" validTo="2019" descriptionPropertiesKey="EMANCIPATION_DAY"/>
-    <tns:FixedWeekday which="LAST" weekday="THURSDAY" month="JULY" validFrom="2020" validTo="2022" descriptionPropertiesKey="EMANCIPATION_DAY"/>
-    <tns:FixedWeekday which="FIRST" weekday="THURSDAY" month="AUGUST" validFrom="2023" validTo="2024" descriptionPropertiesKey="EMANCIPATION_DAY"/>
-    <tns:FixedWeekday which="LAST" weekday="THURSDAY" month="JULY" validFrom="2025" descriptionPropertiesKey="EMANCIPATION_DAY"/>
+    <FixedWeekday which="LAST" weekday="THURSDAY" month="JULY" validFrom="1947" validTo="2016" descriptionPropertiesKey="EMANCIPATION_DAY"/>
+    <FixedWeekday which="FIRST" weekday="THURSDAY" month="AUGUST" validFrom="2017" validTo="2019" descriptionPropertiesKey="EMANCIPATION_DAY"/>
+    <FixedWeekday which="LAST" weekday="THURSDAY" month="JULY" validFrom="2020" validTo="2022" descriptionPropertiesKey="EMANCIPATION_DAY"/>
+    <FixedWeekday which="FIRST" weekday="THURSDAY" month="AUGUST" validFrom="2023" validTo="2024" descriptionPropertiesKey="EMANCIPATION_DAY"/>
+    <FixedWeekday which="LAST" weekday="THURSDAY" month="JULY" validFrom="2025" descriptionPropertiesKey="EMANCIPATION_DAY"/>
 
     <!-- the Friday before the first Monday in August -->
 
     <!-- information for pre-2016 will very likely be very inaccurate, as just assumed to be the same all along -->
-    <tns:FixedWeekday which="LAST" weekday="FRIDAY" month="JULY" validFrom="1947" validTo="2016" descriptionPropertiesKey="SOMERS_DAY"/>
-    <tns:FixedWeekday which="FIRST" weekday="FRIDAY" month="AUGUST" validFrom="2017" validTo="2019" descriptionPropertiesKey="SOMERS_DAY"/>
+    <FixedWeekday which="LAST" weekday="FRIDAY" month="JULY" validFrom="1947" validTo="2016" descriptionPropertiesKey="SOMERS_DAY"/>
+    <FixedWeekday which="FIRST" weekday="FRIDAY" month="AUGUST" validFrom="2017" validTo="2019" descriptionPropertiesKey="SOMERS_DAY"/>
 
     <!-- the Friday before the first Monday in August -->
 
     <!-- information for post-2025 will very likely be very inaccurate, as just assumed to be the same all along -->
-    <tns:FixedWeekday which="LAST" weekday="FRIDAY" month="JULY" validFrom="2020" validTo="2022" descriptionPropertiesKey="MARY_PRINCE_DAY"/>
-    <tns:FixedWeekday which="FIRST" weekday="FRIDAY" month="AUGUST" validFrom="2023" descriptionPropertiesKey="MARY_PRINCE_DAY"/>
+    <FixedWeekday which="LAST" weekday="FRIDAY" month="JULY" validFrom="2020" validTo="2022" descriptionPropertiesKey="MARY_PRINCE_DAY"/>
+    <FixedWeekday which="FIRST" weekday="FRIDAY" month="AUGUST" validFrom="2023" descriptionPropertiesKey="MARY_PRINCE_DAY"/>
 
-    <tns:FixedWeekday which="FIRST" weekday="MONDAY" month="SEPTEMBER" descriptionPropertiesKey="LABOUR_DAY"/>
+    <FixedWeekday which="FIRST" weekday="MONDAY" month="SEPTEMBER" descriptionPropertiesKey="LABOUR_DAY"/>
 
-    <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-  </tns:Holidays>
-</tns:Configuration>
+    <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+  </Holidays>
+</Configuration>

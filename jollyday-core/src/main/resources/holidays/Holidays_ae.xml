@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tns:Configuration hierarchy="ae" description="United Arab Emirates" xmlns:tns="http://www.example.org/Holiday"
->
-  <tns:Holidays>
-    <tns:Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
-    <tns:Fixed month="DECEMBER" day="1" descriptionPropertiesKey="AE_COMMEMORATION_DAY"/>
-    <tns:Fixed month="DECEMBER" day="2" descriptionPropertiesKey="NATIONAL_DAY"/>
-    <tns:Fixed month="DECEMBER" day="3" descriptionPropertiesKey="NATIONAL_DAY"/>
-    <tns:IslamicHoliday type="RAMADAN_END" descriptionPropertiesKey="islamic.RAMADAN_END"/>
-    <tns:IslamicHoliday type="ID_AL_FITR" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
-    <tns:IslamicHoliday type="ID_AL_FITR_2" descriptionPropertiesKey="islamic.ID_AL_FITR_2"/>
-    <tns:IslamicHoliday type="ID_AL_FITR_3" descriptionPropertiesKey="islamic.ID_AL_FITR_3"/>
-    <tns:IslamicHoliday type="ARAFAAT" descriptionPropertiesKey="islamic.ARAFAAT"/>
-    <tns:IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
-    <tns:IslamicHoliday type="ID_UL_ADHA_2" descriptionPropertiesKey="islamic.ID_UL_ADHA_2"/>
-    <tns:IslamicHoliday type="ID_UL_ADHA_3" descriptionPropertiesKey="islamic.ID_UL_ADHA_3"/>
-    <tns:IslamicHoliday type="NEWYEAR" descriptionPropertiesKey="islamic.NEWYEAR"/>
-  </tns:Holidays>
-</tns:Configuration>
+
+<Configuration hierarchy="ae" description="United Arab Emirates"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="DECEMBER" day="1" descriptionPropertiesKey="AE_COMMEMORATION_DAY"/>
+    <Fixed month="DECEMBER" day="2" descriptionPropertiesKey="NATIONAL_DAY"/>
+    <Fixed month="DECEMBER" day="3" descriptionPropertiesKey="NATIONAL_DAY"/>
+    <IslamicHoliday type="RAMADAN_END" descriptionPropertiesKey="islamic.RAMADAN_END"/>
+    <IslamicHoliday type="ID_AL_FITR" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+    <IslamicHoliday type="ID_AL_FITR_2" descriptionPropertiesKey="islamic.ID_AL_FITR_2"/>
+    <IslamicHoliday type="ID_AL_FITR_3" descriptionPropertiesKey="islamic.ID_AL_FITR_3"/>
+    <IslamicHoliday type="ARAFAAT" descriptionPropertiesKey="islamic.ARAFAAT"/>
+    <IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
+    <IslamicHoliday type="ID_UL_ADHA_2" descriptionPropertiesKey="islamic.ID_UL_ADHA_2"/>
+    <IslamicHoliday type="ID_UL_ADHA_3" descriptionPropertiesKey="islamic.ID_UL_ADHA_3"/>
+    <IslamicHoliday type="NEWYEAR" descriptionPropertiesKey="islamic.NEWYEAR"/>
+  </Holidays>
+</Configuration>

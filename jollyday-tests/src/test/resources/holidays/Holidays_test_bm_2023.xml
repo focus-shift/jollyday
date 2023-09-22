@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tns:Configuration hierarchy="bm" description="Bermuda" xmlns:tns="http://www.example.org/Holiday"
-                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                   xsi:schemaLocation="http://www.example.org/Holiday /Holiday.xsd">
-  <tns:Holidays>
-    <tns:Fixed month="JANUARY" day="2" descriptionPropertiesKey="NEW_YEAR"/>
-    <tns:Fixed month="APRIL" day="7" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-    <tns:Fixed month="MAY" day="8" descriptionPropertiesKey="KINGS_CORONATION"/>
-    <tns:Fixed month="MAY" day="26" descriptionPropertiesKey="BERMUDA_DAY"/>
-    <tns:Fixed month="JUNE" day="19" descriptionPropertiesKey="NATIONAL_HEROES_DAY"/>
-    <tns:Fixed month="AUGUST" day="3" descriptionPropertiesKey="EMANCIPATION_DAY"/>
-    <tns:Fixed month="AUGUST" day="4" descriptionPropertiesKey="MARY_PRINCE_DAY"/>
-    <tns:Fixed month="SEPTEMBER" day="4" descriptionPropertiesKey="LABOUR_DAY"/>
-    <tns:Fixed month="NOVEMBER" day="13" descriptionPropertiesKey="REMEMBRANCE"/>
-    <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-    <tns:Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY"/>
-  </tns:Holidays>
-</tns:Configuration>
+<Configuration hierarchy="bm" description="Bermuda"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="2" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="APRIL" day="7" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+    <Fixed month="MAY" day="8" descriptionPropertiesKey="KINGS_CORONATION"/>
+    <Fixed month="MAY" day="26" descriptionPropertiesKey="BERMUDA_DAY"/>
+    <Fixed month="JUNE" day="19" descriptionPropertiesKey="NATIONAL_HEROES_DAY"/>
+    <Fixed month="AUGUST" day="3" descriptionPropertiesKey="EMANCIPATION_DAY"/>
+    <Fixed month="AUGUST" day="4" descriptionPropertiesKey="MARY_PRINCE_DAY"/>
+    <Fixed month="SEPTEMBER" day="4" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="NOVEMBER" day="13" descriptionPropertiesKey="REMEMBRANCE"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY"/>
+  </Holidays>
+</Configuration>

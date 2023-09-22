@@ -24,7 +24,7 @@ class XMLValidationTest {
 
   @BeforeEach
   void setUp() {
-    schemaFile = new File("src/main/resources/Holiday.xsd");
+    schemaFile = new File("src/main/resources/focus_shift.de/jollyday/schema/holiday/holiday.xsd");
     validator = Validator.forLanguage(W3C_XML_SCHEMA_NS_URI);
     validator.setSchemaSource(new StreamSource(schemaFile));
   }

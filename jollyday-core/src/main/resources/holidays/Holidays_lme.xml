@@ -1,42 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tns:Configuration
-  hierarchy="lme" description="London metal exchange"
-  xmlns:tns="http://www.example.org/Holiday" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://www.example.org/Holiday /Holiday.xsd">
-  <tns:Holidays>
-    <tns:Fixed month="JANUARY" day="1"
-               descriptionPropertiesKey="NEW_YEARS_DAY">
-    </tns:Fixed>
-    <tns:Fixed month="AUGUST" day="28"
-               descriptionPropertiesKey="BANK_HOLIDAY">
-    </tns:Fixed>
-    <tns:Fixed month="DECEMBER" day="26"
-               descriptionPropertiesKey="BOXING_DAY">
-      <tns:MovingCondition substitute="SATURDAY" with="NEXT"
-                           weekday="MONDAY"/>
-      <tns:MovingCondition substitute="SUNDAY" with="NEXT"
-                           weekday="TUESDAY"/>
-      <tns:MovingCondition substitute="MONDAY" with="NEXT"
-                           weekday="TUESDAY"/>
-    </tns:Fixed>
-    <tns:Fixed month="DECEMBER" day="31"
-               descriptionPropertiesKey="NEW_YEARS_EVE">
-    </tns:Fixed>
-    <tns:Fixed month="DECEMBER" day="24"
-               descriptionPropertiesKey="CHRISTMAS_EVE">
-    </tns:Fixed>
-    <tns:Fixed month="DECEMBER" day="25"
-               descriptionPropertiesKey="CHRISTMAS">
-      <tns:MovingCondition substitute="SATURDAY" with="NEXT"
-                           weekday="MONDAY"/>
-      <tns:MovingCondition substitute="SUNDAY" with="NEXT"
-                           weekday="MONDAY"/>
-    </tns:Fixed>
-    <tns:FixedWeekday which="FIRST" weekday="MONDAY"
-                      month="MAY" descriptionPropertiesKey="BANK_HOLIDAY"/>
-    <tns:FixedWeekday which="LAST" weekday="MONDAY"
-                      month="MAY" descriptionPropertiesKey="BANK_HOLIDAY"/>
-    <tns:ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
-    <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-  </tns:Holidays>
-</tns:Configuration>
+
+<Configuration hierarchy="lme" description="London metal exchange"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEARS_DAY"/>
+    <Fixed month="AUGUST" day="28" descriptionPropertiesKey="BANK_HOLIDAY"/>
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+      <MovingCondition substitute="MONDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+    <Fixed month="DECEMBER" day="31" descriptionPropertiesKey="NEW_YEARS_EVE"/>
+    <Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CHRISTMAS_EVE">
+    </Fixed>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <FixedWeekday which="FIRST" weekday="MONDAY" month="MAY" descriptionPropertiesKey="BANK_HOLIDAY"/>
+    <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" descriptionPropertiesKey="BANK_HOLIDAY"/>
+    <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
+    <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+  </Holidays>
+</Configuration>

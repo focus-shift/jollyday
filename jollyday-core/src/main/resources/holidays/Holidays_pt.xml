@@ -1,1587 +1,1589 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tns:Configuration hierarchy="pt" description="Portugal"
-                   xmlns:tns="http://www.example.org/Holiday" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                   xsi:schemaLocation="http://www.example.org/Holiday /Holiday.xsd">
-  <tns:Holidays>
-    <tns:Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
-    <tns:Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
-    <tns:Fixed month="APRIL" day="25" descriptionPropertiesKey="FREEDOM_DEMOCRACY"/>
-    <tns:Fixed month="JUNE" day="10" descriptionPropertiesKey="NATIONAL_DAY"/>
-    <tns:Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
-    <tns:Fixed month="OCTOBER" day="5" descriptionPropertiesKey="REPUBLIC_DAY"/>
-    <tns:Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
-    <tns:Fixed month="DECEMBER" day="1" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
-    <tns:Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
-    <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-    <tns:ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
-    <tns:ChristianHoliday type="CARNIVAL" descriptionPropertiesKey="christian.CARNIVAL"/>
-    <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-    <tns:ChristianHoliday type="CORPUS_CHRISTI" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
-  </tns:Holidays>
-  <tns:SubConfigurations hierarchy="ABT" description="Abrantes">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="14" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="AGD" description="Águeda">
-    <tns:Holidays>
-      <tns:ChristianHoliday type="PENTECOST_MONDAY" descriptionPropertiesKey="christian.PENTECOST_MONDAY" localizedType="OFFICIAL_HOLIDAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="AGB" description="Aguiar da Beira">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="ADL" description="Alandroal">
-    <tns:Holidays>
+
+<Configuration hierarchy="pt" description="Portugal"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="APRIL" day="25" descriptionPropertiesKey="FREEDOM_DEMOCRACY"/>
+    <Fixed month="JUNE" day="10" descriptionPropertiesKey="NATIONAL_DAY"/>
+    <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
+    <Fixed month="OCTOBER" day="5" descriptionPropertiesKey="REPUBLIC_DAY"/>
+    <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
+    <Fixed month="DECEMBER" day="1" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+    <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
+    <ChristianHoliday type="CARNIVAL" descriptionPropertiesKey="christian.CARNIVAL"/>
+    <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+    <ChristianHoliday type="CORPUS_CHRISTI" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
+  </Holidays>
+  <SubConfigurations hierarchy="ABT" description="Abrantes">
+    <Holidays>
+      <Fixed month="JUNE" day="14" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="AGD" description="Águeda">
+    <Holidays>
+      <ChristianHoliday type="PENTECOST_MONDAY" descriptionPropertiesKey="christian.PENTECOST_MONDAY" localizedType="OFFICIAL_HOLIDAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="AGB" description="Aguiar da Beira">
+    <Holidays>
+      <Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ADL" description="Alandroal">
+    <Holidays>
       <!-- Second Monday after Easter -->
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="ALB" description="Albergaria-a-Velha">
-    <tns:Holidays>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ALB" description="Albergaria-a-Velha">
+    <Holidays>
       <!-- Monday after the third Sunday of August -->
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="ABF" description="Albufeira">
-    <tns:Holidays>
-      <tns:Fixed month="AUGUST" day="20" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="ASL" description="Alcácer do Sal">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="ACN" description="Alcanena">
-    <tns:Holidays>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ABF" description="Albufeira">
+    <Holidays>
+      <Fixed month="AUGUST" day="20" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ASL" description="Alcácer do Sal">
+    <Holidays>
+      <Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ACN" description="Alcanena">
+    <Holidays>
       <!-- ASCENSION THURSDAY -->
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="ACB" description="Alcobaça">
-    <tns:Holidays>
-      <tns:Fixed month="AUGUST" day="20" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="ACH" description="Alcochete">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="ACT" description="Alcoutim">
-    <tns:Holidays>
-      <tns:RelativeToWeekdayInMonth weekday="SUNDAY" when="AFTER" descriptionPropertiesKey="CITY_DAY">
-        <tns:FixedWeekday which="FIRST" weekday="FRIDAY" month="SEPTEMBER"/>
-      </tns:RelativeToWeekdayInMonth>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="ALQ" description="Alenquer">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="2" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ACB" description="Alcobaça">
+    <Holidays>
+      <Fixed month="AUGUST" day="20" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ACH" description="Alcochete">
+    <Holidays>
+      <Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ACT" description="Alcoutim">
+    <Holidays>
+      <RelativeToWeekdayInMonth weekday="SUNDAY" when="AFTER" descriptionPropertiesKey="CITY_DAY">
+        <FixedWeekday which="FIRST" weekday="FRIDAY" month="SEPTEMBER"/>
+      </RelativeToWeekdayInMonth>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ALQ" description="Alenquer">
+    <Holidays>
+      <Fixed month="JUNE" day="2" descriptionPropertiesKey="CITY_DAY"/>
       <!-- ASCENSION THURSDAY -->
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="AFE" description="Alfândega da Fé">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="29" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="ALJ" description="Alijó">
-    <tns:Holidays>
-      <tns:Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="AJZ" description="Aljezur">
-    <tns:Holidays>
-      <tns:Fixed month="AUGUST" day="29" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="AJT" description="Aljustrel">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="ALM" description="Almada">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="ALD" description="Almeida">
-    <tns:Holidays>
-      <tns:Fixed month="JULY" day="2" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="ALR" description="Almeirim">
-    <tns:Holidays>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="AFE" description="Alfândega da Fé">
+    <Holidays>
+      <Fixed month="JUNE" day="29" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ALJ" description="Alijó">
+    <Holidays>
+      <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="AJZ" description="Aljezur">
+    <Holidays>
+      <Fixed month="AUGUST" day="29" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="AJT" description="Aljustrel">
+    <Holidays>
+      <Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ALM" description="Almada">
+    <Holidays>
+      <Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ALD" description="Almeida">
+    <Holidays>
+      <Fixed month="JULY" day="2" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ALR" description="Almeirim">
+    <Holidays>
       <!-- ASCENSION THURSDAY -->
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="ADV" description="Almodôvar">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="APC" description="Alpiarça">
-    <tns:Holidays>
-      <tns:Fixed month="APRIL" day="2" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="ALT" description="Alter do Chão">
-    <tns:Holidays>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ADV" description="Almodôvar">
+    <Holidays>
+      <Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="APC" description="Alpiarça">
+    <Holidays>
+      <Fixed month="APRIL" day="2" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ALT" description="Alter do Chão">
+    <Holidays>
       <!-- ASCENSION THURSDAY -->
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="AVZ" description="Alvaiázere">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="AVT" description="Alvito">
-    <tns:Holidays>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="AVZ" description="Alvaiázere">
+    <Holidays>
+      <Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="AVT" description="Alvito">
+    <Holidays>
       <!-- ASCENSION THURSDAY -->
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="AMD" description="Amadora">
-    <tns:Holidays>
-      <tns:Fixed month="SEPTEMBER" day="11" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="AMT" description="Amarante">
-    <tns:Holidays>
-      <tns:Fixed month="JULY" day="8" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="AMR" description="Amares">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="AND" description="Anadia">
-    <tns:Holidays>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="AMD" description="Amadora">
+    <Holidays>
+      <Fixed month="SEPTEMBER" day="11" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="AMT" description="Amarante">
+    <Holidays>
+      <Fixed month="JULY" day="8" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="AMR" description="Amares">
+    <Holidays>
+      <Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="AND" description="Anadia">
+    <Holidays>
       <!-- ASCENSION THURSDAY -->
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="AGH" description="Angra do Heroísmo">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="ANS" description="Ansião">
-    <tns:Holidays>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="AGH" description="Angra do Heroísmo">
+    <Holidays>
+      <Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ANS" description="Ansião">
+    <Holidays>
       <!-- ASCENSION THURSDAY -->
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="AVV" description="Arcos de Valdevez">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="11" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="AGN" description="Arganil">
-    <tns:Holidays>
-      <tns:Fixed month="SEPTEMBER" day="7" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="AMM" description="Armamar">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="ARC" description="Arouca">
-    <tns:Holidays>
-      <tns:Fixed month="MAY" day="2" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="ARL" description="Arraiolos">
-    <tns:Holidays>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="AVV" description="Arcos de Valdevez">
+    <Holidays>
+      <Fixed month="JUNE" day="11" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="AGN" description="Arganil">
+    <Holidays>
+      <Fixed month="SEPTEMBER" day="7" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="AMM" description="Armamar">
+    <Holidays>
+      <Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ARC" description="Arouca">
+    <Holidays>
+      <Fixed month="MAY" day="2" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ARL" description="Arraiolos">
+    <Holidays>
       <!-- ASCENSION THURSDAY -->
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="ARR" description="Arronches">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="ARV" description="Arruda dos Vinhos">
-    <tns:Holidays>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ARR" description="Arronches">
+    <Holidays>
+      <Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ARV" description="Arruda dos Vinhos">
+    <Holidays>
       <!-- ASCENSION THURSDAY -->
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="AVR" description="Aveiro">
-    <tns:Holidays>
-      <tns:Fixed month="MAY" day="12" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="AVS" description="Avis">
-    <tns:Holidays>
-      <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="AZB" description="Azambuja">
-    <tns:Holidays>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="AVR" description="Aveiro">
+    <Holidays>
+      <Fixed month="MAY" day="12" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="AVS" description="Avis">
+    <Holidays>
+      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="AZB" description="Azambuja">
+    <Holidays>
       <!-- ASCENSION THURSDAY -->
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="BAO" description="Baião">
-    <tns:Holidays>
-      <tns:Fixed month="AUGUST" day="24" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="BCL" description="Barcelos">
-    <tns:Holidays>
-      <tns:Fixed month="MAY" day="3" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="BRC" description="Barrancos">
-    <tns:Holidays>
-      <tns:Fixed month="AUGUST" day="28" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="BRR" description="Barreiro">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="28" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="BTL" description="Batalha">
-    <tns:Holidays>
-      <tns:Fixed month="AUGUST" day="14" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="BJA" description="Beja">
-    <tns:Holidays>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="BAO" description="Baião">
+    <Holidays>
+      <Fixed month="AUGUST" day="24" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="BCL" description="Barcelos">
+    <Holidays>
+      <Fixed month="MAY" day="3" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="BRC" description="Barrancos">
+    <Holidays>
+      <Fixed month="AUGUST" day="28" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="BRR" description="Barreiro">
+    <Holidays>
+      <Fixed month="JUNE" day="28" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="BTL" description="Batalha">
+    <Holidays>
+      <Fixed month="AUGUST" day="14" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="BJA" description="Beja">
+    <Holidays>
       <!-- ASCENSION THURSDAY -->
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="BMT" description="Belmonte">
-    <tns:Holidays>
-      <tns:Fixed month="APRIL" day="26" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="BNV" description="Benavente">
-    <tns:Holidays>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="BMT" description="Belmonte">
+    <Holidays>
+      <Fixed month="APRIL" day="26" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="BNV" description="Benavente">
+    <Holidays>
       <!-- ASCENSION THURSDAY -->
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="BBR" description="Bombarral">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="29" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="BRB" description="Borba">
-    <tns:Holidays>
-      <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="BTC" description="Boticas">
-    <tns:Holidays>
-      <tns:Fixed month="NOVEMBER" day="6" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="BRG" description="Braga">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="BGC" description="Bragança">
-    <tns:Holidays>
-      <tns:Fixed month="AUGUST" day="22" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="CBC" description="Cabeceiras de Basto">
-    <tns:Holidays>
-      <tns:Fixed month="SEPTEMBER" day="29" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="CDV" description="Cadaval">
-    <tns:Holidays>
-      <tns:Fixed month="JANUARY" day="13" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="CLD" description="Caldas da Rainha">
-    <tns:Holidays>
-      <tns:Fixed month="MAY" day="15" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="CHT" description="Calheta (Açores)">
-    <tns:Holidays>
-      <tns:Fixed month="NOVEMBER" day="25" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="CLT" description="Calheta (Madeira)">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="CML" description="Câmara de Lobos">
-    <tns:Holidays>
-      <tns:Fixed month="OCTOBER" day="16" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="CMN" description="Caminha">
-    <tns:Holidays>
-      <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="CMR" description="Campo Maior">
-    <tns:Holidays>
-      <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="CNT" description="Cantanhede">
-    <tns:Holidays>
-      <tns:Fixed month="JULY" day="25" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="CRZ" description="Carrazeda de Ansiães">
-    <tns:Holidays>
-      <tns:Fixed month="AUGUST" day="31" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="BBR" description="Bombarral">
+    <Holidays>
+      <Fixed month="JUNE" day="29" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="BRB" description="Borba">
+    <Holidays>
+      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="BTC" description="Boticas">
+    <Holidays>
+      <Fixed month="NOVEMBER" day="6" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="BRG" description="Braga">
+    <Holidays>
+      <Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="BGC" description="Bragança">
+    <Holidays>
+      <Fixed month="AUGUST" day="22" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="CBC" description="Cabeceiras de Basto">
+    <Holidays>
+      <Fixed month="SEPTEMBER" day="29" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="CDV" description="Cadaval">
+    <Holidays>
+      <Fixed month="JANUARY" day="13" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="CLD" description="Caldas da Rainha">
+    <Holidays>
+      <Fixed month="MAY" day="15" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="CHT" description="Calheta (Açores)">
+    <Holidays>
+      <Fixed month="NOVEMBER" day="25" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="CLT" description="Calheta (Madeira)">
+    <Holidays>
+      <Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="CML" description="Câmara de Lobos">
+    <Holidays>
+      <Fixed month="OCTOBER" day="16" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="CMN" description="Caminha">
+    <Holidays>
+      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="CMR" description="Campo Maior">
+    <Holidays>
+      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="CNT" description="Cantanhede">
+    <Holidays>
+      <Fixed month="JULY" day="25" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="CRZ" description="Carrazeda de Ansiães">
+    <Holidays>
+      <Fixed month="AUGUST" day="31" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
   <!--
-      <tns:SubConfigurations hierarchy="CRS" description="Carregal do Sal">
-        <tns:Holidays>
-            <tns:Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
-          </tns:Holidays>
-      </tns:SubConfigurations>
+      <SubConfigurations hierarchy="CRS" description="Carregal do Sal">
+        <Holidays>
+            <Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
+          </Holidays>
+      </SubConfigurations>
    -->
-  <tns:SubConfigurations hierarchy="CTX" description="Cartaxo">
-    <tns:Holidays>
+  <SubConfigurations hierarchy="CTX" description="Cartaxo">
+    <Holidays>
       <!-- ASCENSION THURSDAY -->
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="CSC" description="Cascais">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="CSC" description="Cascais">
+    <Holidays>
+      <Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
   <!--
-      <tns:SubConfigurations hierarchy="CPR" description="Castanheira de Pera">
-        <tns:Holidays>
-            <tns:Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
-          </tns:Holidays>
-      </tns:SubConfigurations>
+      <SubConfigurations hierarchy="CPR" description="Castanheira de Pera">
+        <Holidays>
+            <Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
+          </Holidays>
+      </SubConfigurations>
    -->
-  <tns:SubConfigurations hierarchy="CTB" description="Castelo Branco">
-    <tns:Holidays>
+  <SubConfigurations hierarchy="CTB" description="Castelo Branco">
+    <Holidays>
       <!-- Tuesday of the second week after Easter -->
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="CPV" description="Castelo de Paiva">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="CVD" description="Castelo de Vide">
-    <tns:Holidays>
-      <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="CDR" description="Castro Daire">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="29" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="CTM" description="Castro Marim">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="CVR" description="Castro Verde">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="29" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="CPV" description="Castelo de Paiva">
+    <Holidays>
+      <Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="CVD" description="Castelo de Vide">
+    <Holidays>
+      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="CDR" description="Castro Daire">
+    <Holidays>
+      <Fixed month="JUNE" day="29" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="CTM" description="Castro Marim">
+    <Holidays>
+      <Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="CVR" description="Castro Verde">
+    <Holidays>
+      <Fixed month="JUNE" day="29" descriptionPropertiesKey="CITY_DAY"/>
       <!-- ASCENSION THURSDAY -->
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="CLB" description="Celorico da Beira">
-    <tns:Holidays>
-      <tns:Fixed month="MAY" day="13" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="CBT" description="Celorico de Basto">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="29" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="CHM" description="Chamusca">
-    <tns:Holidays>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="CLB" description="Celorico da Beira">
+    <Holidays>
+      <Fixed month="MAY" day="13" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="CBT" description="Celorico de Basto">
+    <Holidays>
+      <Fixed month="JUNE" day="29" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="CHM" description="Chamusca">
+    <Holidays>
       <!-- ASCENSION THURSDAY -->
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="CHV" description="Chaves">
-    <tns:Holidays>
-      <tns:Fixed month="JULY" day="8" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="CNF" description="Cinfães">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="CBR" description="Coimbra">
-    <tns:Holidays>
-      <tns:Fixed month="JULY" day="4" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="CDN" description="Condeixa-a-Nova">
-    <tns:Holidays>
-      <tns:Fixed month="JULY" day="24" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="CNS" description="Constância">
-    <tns:Holidays>
-      <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="CCH" description="Coruche">
-    <tns:Holidays>
-      <tns:Fixed month="AUGUST" day="17" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="CHV" description="Chaves">
+    <Holidays>
+      <Fixed month="JULY" day="8" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="CNF" description="Cinfães">
+    <Holidays>
+      <Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="CBR" description="Coimbra">
+    <Holidays>
+      <Fixed month="JULY" day="4" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="CDN" description="Condeixa-a-Nova">
+    <Holidays>
+      <Fixed month="JULY" day="24" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="CNS" description="Constância">
+    <Holidays>
+      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="CCH" description="Coruche">
+    <Holidays>
+      <Fixed month="AUGUST" day="17" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
   <!--
-      <tns:SubConfigurations hierarchy="CRV" description="Corvo">
-        <tns:Holidays>
-            <tns:Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
-          </tns:Holidays>
-      </tns:SubConfigurations>
+      <SubConfigurations hierarchy="CRV" description="Corvo">
+        <Holidays>
+            <Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
+          </Holidays>
+      </SubConfigurations>
    -->
-  <tns:SubConfigurations hierarchy="CVL" description="Covilhã">
-    <tns:Holidays>
-      <tns:Fixed month="OCTOBER" day="20" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="CRT" description="Crato">
-    <tns:Holidays>
-      <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="CBA" description="Cuba">
-    <tns:Holidays>
-      <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="ELV" description="Elvas">
-    <tns:Holidays>
-      <tns:Fixed month="JANUARY" day="14" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="ENT" description="Entroncamento">
-    <tns:Holidays>
-      <tns:Fixed month="NOVEMBER" day="24" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="ESP" description="Espinho">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="16" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="EPS" description="Esposende">
-    <tns:Holidays>
-      <tns:Fixed month="AUGUST" day="19" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="ETR" description="Estarreja">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="ETZ" description="Estremoz">
-    <tns:Holidays>
+  <SubConfigurations hierarchy="CVL" description="Covilhã">
+    <Holidays>
+      <Fixed month="OCTOBER" day="20" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="CRT" description="Crato">
+    <Holidays>
+      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="CBA" description="Cuba">
+    <Holidays>
+      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ELV" description="Elvas">
+    <Holidays>
+      <Fixed month="JANUARY" day="14" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ENT" description="Entroncamento">
+    <Holidays>
+      <Fixed month="NOVEMBER" day="24" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ESP" description="Espinho">
+    <Holidays>
+      <Fixed month="JUNE" day="16" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="EPS" description="Esposende">
+    <Holidays>
+      <Fixed month="AUGUST" day="19" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ETR" description="Estarreja">
+    <Holidays>
+      <Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ETZ" description="Estremoz">
+    <Holidays>
       <!-- ASCENSION THURSDAY -->
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="EVR" description="Évora">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="29" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="FAF" description="Fafe">
-    <tns:Holidays>
-      <tns:Fixed month="MAY" day="16" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="FAR" description="Faro">
-    <tns:Holidays>
-      <tns:Fixed month="SEPTEMBER" day="7" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="FLG" description="Felgueiras">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="29" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="FAL" description="Ferreira do Alentejo">
-    <tns:Holidays>
-      <tns:Fixed month="MARCH" day="5" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="FZZ" description="Ferreira do Zêzere">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="FIG" description="Figueira da Foz">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="FCR" description="Figueira de Castelo Rodrigo">
-    <tns:Holidays>
-      <tns:Fixed month="JULY" day="7" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="FVN" description="Figueiró dos Vinhos">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="FAG" description="Fornos de Algodres">
-    <tns:Holidays>
-      <tns:Fixed month="SEPTEMBER" day="29" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="FEC" description="Freixo de Espada à Cinta">
-    <tns:Holidays>
-      <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="FTR" description="Fronteira">
-    <tns:Holidays>
-      <tns:Fixed month="APRIL" day="6" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="FNC" description="Funchal">
-    <tns:Holidays>
-      <tns:Fixed month="AUGUST" day="21" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="FND" description="Fundão">
-    <tns:Holidays>
-      <tns:Fixed month="SEPTEMBER" day="15" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="GAV" description="Gavião">
-    <tns:Holidays>
-      <tns:Fixed month="NOVEMBER" day="23" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="GOI" description="Góis">
-    <tns:Holidays>
-      <tns:Fixed month="AUGUST" day="13" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="GLG" description="Golegã">
-    <tns:Holidays>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="EVR" description="Évora">
+    <Holidays>
+      <Fixed month="JUNE" day="29" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="FAF" description="Fafe">
+    <Holidays>
+      <Fixed month="MAY" day="16" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="FAR" description="Faro">
+    <Holidays>
+      <Fixed month="SEPTEMBER" day="7" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="FLG" description="Felgueiras">
+    <Holidays>
+      <Fixed month="JUNE" day="29" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="FAL" description="Ferreira do Alentejo">
+    <Holidays>
+      <Fixed month="MARCH" day="5" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="FZZ" description="Ferreira do Zêzere">
+    <Holidays>
+      <Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="FIG" description="Figueira da Foz">
+    <Holidays>
+      <Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="FCR" description="Figueira de Castelo Rodrigo">
+    <Holidays>
+      <Fixed month="JULY" day="7" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="FVN" description="Figueiró dos Vinhos">
+    <Holidays>
+      <Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="FAG" description="Fornos de Algodres">
+    <Holidays>
+      <Fixed month="SEPTEMBER" day="29" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="FEC" description="Freixo de Espada à Cinta">
+    <Holidays>
+      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="FTR" description="Fronteira">
+    <Holidays>
+      <Fixed month="APRIL" day="6" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="FNC" description="Funchal">
+    <Holidays>
+      <Fixed month="AUGUST" day="21" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="FND" description="Fundão">
+    <Holidays>
+      <Fixed month="SEPTEMBER" day="15" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="GAV" description="Gavião">
+    <Holidays>
+      <Fixed month="NOVEMBER" day="23" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="GOI" description="Góis">
+    <Holidays>
+      <Fixed month="AUGUST" day="13" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="GLG" description="Golegã">
+    <Holidays>
       <!-- ASCENSION THURSDAY -->
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="GDM" description="Gondomar">
-    <tns:Holidays>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="GDM" description="Gondomar">
+    <Holidays>
       <!-- Monday after the first Sunday of October -->
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="GVA" description="Gouveia">
-    <tns:Holidays>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="GVA" description="Gouveia">
+    <Holidays>
       <!-- Second Monday of August -->
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="GDL" description="Grândola">
-    <tns:Holidays>
-      <tns:Fixed month="OCTOBER" day="22" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="GRD" description="Guarda">
-    <tns:Holidays>
-      <tns:Fixed month="NOVEMBER" day="27" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="GMR" description="Guimarães">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="HRT" description="Horta">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="IDN" description="Idanha-a-Nova">
-    <tns:Holidays>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="GDL" description="Grândola">
+    <Holidays>
+      <Fixed month="OCTOBER" day="22" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="GRD" description="Guarda">
+    <Holidays>
+      <Fixed month="NOVEMBER" day="27" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="GMR" description="Guimarães">
+    <Holidays>
+      <Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="HRT" description="Horta">
+    <Holidays>
+      <Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="IDN" description="Idanha-a-Nova">
+    <Holidays>
       <!-- Third Monday after Easter -->
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="ILH" description="Ílhavo">
-    <tns:Holidays>
-      <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="LAG" description="Lagoa (Açores)">
-    <tns:Holidays>
-      <tns:Fixed month="APRIL" day="11" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="LGA" description="Lagoa (Algarve)">
-    <tns:Holidays>
-      <tns:Fixed month="SEPTEMBER" day="8" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="LGS" description="Lagos">
-    <tns:Holidays>
-      <tns:Fixed month="OCTOBER" day="27" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="LGF" description="Lajes das Flores">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="LGP" description="Lajes do Pico">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="29" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="LMG" description="Lamego">
-    <tns:Holidays>
-      <tns:Fixed month="SEPTEMBER" day="8" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="LRA" description="Leiria">
-    <tns:Holidays>
-      <tns:Fixed month="MAY" day="22" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="LSB" description="Lisboa">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="LLE" description="Loulé">
-    <tns:Holidays>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ILH" description="Ílhavo">
+    <Holidays>
+      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="LAG" description="Lagoa (Açores)">
+    <Holidays>
+      <Fixed month="APRIL" day="11" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="LGA" description="Lagoa (Algarve)">
+    <Holidays>
+      <Fixed month="SEPTEMBER" day="8" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="LGS" description="Lagos">
+    <Holidays>
+      <Fixed month="OCTOBER" day="27" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="LGF" description="Lajes das Flores">
+    <Holidays>
+      <Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="LGP" description="Lajes do Pico">
+    <Holidays>
+      <Fixed month="JUNE" day="29" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="LMG" description="Lamego">
+    <Holidays>
+      <Fixed month="SEPTEMBER" day="8" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="LRA" description="Leiria">
+    <Holidays>
+      <Fixed month="MAY" day="22" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="LSB" description="Lisboa">
+    <Holidays>
+      <Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="LLE" description="Loulé">
+    <Holidays>
       <!-- ASCENSION THURSDAY -->
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="LRS" description="Loures">
-    <tns:Holidays>
-      <tns:Fixed month="JULY" day="26" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="LNH" description="Lourinhã">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="LSA" description="Lousã">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="LRS" description="Loures">
+    <Holidays>
+      <Fixed month="JULY" day="26" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="LNH" description="Lourinhã">
+    <Holidays>
+      <Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="LSA" description="Lousã">
+    <Holidays>
+      <Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
   <!--
-      <tns:SubConfigurations hierarchy="LOU" description="Lousada">
-        <tns:Holidays>
-            <tns:Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
-          </tns:Holidays>
-      </tns:SubConfigurations>
+      <SubConfigurations hierarchy="LOU" description="Lousada">
+        <Holidays>
+            <Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
+          </Holidays>
+      </SubConfigurations>
    -->
-  <tns:SubConfigurations hierarchy="MAC" description="Mação">
-    <tns:Holidays>
-      <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="MCD" description="Macedo de Cavaleiros">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="29" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="MCH" description="Machico">
-    <tns:Holidays>
-      <tns:Fixed month="OCTOBER" day="9" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="MAD" description="Madalena">
-    <tns:Holidays>
-      <tns:Fixed month="JULY" day="22" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="MFR" description="Mafra">
-    <tns:Holidays>
+  <SubConfigurations hierarchy="MAC" description="Mação">
+    <Holidays>
+      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="MCD" description="Macedo de Cavaleiros">
+    <Holidays>
+      <Fixed month="JUNE" day="29" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="MCH" description="Machico">
+    <Holidays>
+      <Fixed month="OCTOBER" day="9" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="MAD" description="Madalena">
+    <Holidays>
+      <Fixed month="JULY" day="22" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="MFR" description="Mafra">
+    <Holidays>
       <!-- ASCENSION THURSDAY -->
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="MAI" description="Maia">
-    <tns:Holidays>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="MAI" description="Maia">
+    <Holidays>
       <!-- Monday after the second Sunday of June -->
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="MGL" description="Mangualde">
-    <tns:Holidays>
-      <tns:Fixed month="SEPTEMBER" day="8" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="MTG" description="Manteigas">
-    <tns:Holidays>
-      <tns:Fixed month="MARCH" day="4" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="MCN" description="Marco de Canaveses">
-    <tns:Holidays>
-      <tns:Fixed month="SEPTEMBER" day="8" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="MGR" description="Marinha Grande">
-    <tns:Holidays>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="MGL" description="Mangualde">
+    <Holidays>
+      <Fixed month="SEPTEMBER" day="8" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="MTG" description="Manteigas">
+    <Holidays>
+      <Fixed month="MARCH" day="4" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="MCN" description="Marco de Canaveses">
+    <Holidays>
+      <Fixed month="SEPTEMBER" day="8" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="MGR" description="Marinha Grande">
+    <Holidays>
       <!-- ASCENSION THURSDAY -->
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="MRV" description="Marvão">
-    <tns:Holidays>
-      <tns:Fixed month="SEPTEMBER" day="8" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="MTS" description="Matosinhos">
-    <tns:Holidays>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="MRV" description="Marvão">
+    <Holidays>
+      <Fixed month="SEPTEMBER" day="8" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="MTS" description="Matosinhos">
+    <Holidays>
       <!-- Tuesday after the Pentecost Sunday -->
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="MLD" description="Mealhada">
-    <tns:Holidays>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="MLD" description="Mealhada">
+    <Holidays>
       <!-- ASCENSION THURSDAY -->
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="MED" description="Mêda">
-    <tns:Holidays>
-      <tns:Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="MLG" description="Melgaço">
-    <tns:Holidays>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="MED" description="Mêda">
+    <Holidays>
+      <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="MLG" description="Melgaço">
+    <Holidays>
       <!-- ASCENSION THURSDAY -->
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="MTL" description="Mértola">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="MSF" description="Mesão Frio">
-    <tns:Holidays>
-      <tns:Fixed month="NOVEMBER" day="30" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="MIR" description="Mira">
-    <tns:Holidays>
-      <tns:Fixed month="JULY" day="25" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="MCV" description="Miranda do Corvo">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="1" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="MDR" description="Miranda do Douro">
-    <tns:Holidays>
-      <tns:Fixed month="JULY" day="10" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="MDL" description="Mirandela">
-    <tns:Holidays>
-      <tns:Fixed month="MAY" day="25" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="MGD" description="Mogadouro">
-    <tns:Holidays>
-      <tns:Fixed month="OCTOBER" day="15" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="MBR" description="Moimenta da Beira">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="MTA" description="Moita">
-    <tns:Holidays>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="MTL" description="Mértola">
+    <Holidays>
+      <Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="MSF" description="Mesão Frio">
+    <Holidays>
+      <Fixed month="NOVEMBER" day="30" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="MIR" description="Mira">
+    <Holidays>
+      <Fixed month="JULY" day="25" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="MCV" description="Miranda do Corvo">
+    <Holidays>
+      <Fixed month="JUNE" day="1" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="MDR" description="Miranda do Douro">
+    <Holidays>
+      <Fixed month="JULY" day="10" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="MDL" description="Mirandela">
+    <Holidays>
+      <Fixed month="MAY" day="25" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="MGD" description="Mogadouro">
+    <Holidays>
+      <Fixed month="OCTOBER" day="15" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="MBR" description="Moimenta da Beira">
+    <Holidays>
+      <Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="MTA" description="Moita">
+    <Holidays>
       <!-- Tuesday after the second Sunday of September -->
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="MNC" description="Monção">
-    <tns:Holidays>
-      <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="MCQ" description="Monchique">
-    <tns:Holidays>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="MNC" description="Monção">
+    <Holidays>
+      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="MCQ" description="Monchique">
+    <Holidays>
       <!-- ASCENSION THURSDAY -->
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="MDB" description="Mondim de Basto">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="25" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="MFT" description="Monforte">
-    <tns:Holidays>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="MDB" description="Mondim de Basto">
+    <Holidays>
+      <Fixed month="JUNE" day="25" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="MFT" description="Monforte">
+    <Holidays>
       <!-- Second Monday after Easter -->
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="MTR" description="Montalegre">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="9" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="MMN" description="Montemor-o-Novo">
-    <tns:Holidays>
-      <tns:Fixed month="MARCH" day="8" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="MMV" description="Montemor-o-Velho">
-    <tns:Holidays>
-      <tns:Fixed month="SEPTEMBER" day="8" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="MTJ" description="Montijo">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="29" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="MOR" description="Mora">
-    <tns:Holidays>
-      <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="MRT" description="Mortágua">
-    <tns:Holidays>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="MTR" description="Montalegre">
+    <Holidays>
+      <Fixed month="JUNE" day="9" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="MMN" description="Montemor-o-Novo">
+    <Holidays>
+      <Fixed month="MARCH" day="8" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="MMV" description="Montemor-o-Velho">
+    <Holidays>
+      <Fixed month="SEPTEMBER" day="8" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="MTJ" description="Montijo">
+    <Holidays>
+      <Fixed month="JUNE" day="29" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="MOR" description="Mora">
+    <Holidays>
+      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="MRT" description="Mortágua">
+    <Holidays>
       <!-- ASCENSION THURSDAY -->
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="MRA" description="Moura">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="MOU" description="Mourão">
-    <tns:Holidays>
-      <tns:Fixed month="FEBRUARY" day="2" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="MUR" description="Murça">
-    <tns:Holidays>
-      <tns:Fixed month="MAY" day="8" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="MRS" description="Murtosa">
-    <tns:Holidays>
-      <tns:Fixed month="SEPTEMBER" day="8" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="NZR" description="Nazaré">
-    <tns:Holidays>
-      <tns:Fixed month="SEPTEMBER" day="8" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="NLS" description="Nelas">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="NIS" description="Nisa">
-    <tns:Holidays>
-      <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="MRA" description="Moura">
+    <Holidays>
+      <Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="MOU" description="Mourão">
+    <Holidays>
+      <Fixed month="FEBRUARY" day="2" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="MUR" description="Murça">
+    <Holidays>
+      <Fixed month="MAY" day="8" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="MRS" description="Murtosa">
+    <Holidays>
+      <Fixed month="SEPTEMBER" day="8" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="NZR" description="Nazaré">
+    <Holidays>
+      <Fixed month="SEPTEMBER" day="8" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="NLS" description="Nelas">
+    <Holidays>
+      <Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="NIS" description="Nisa">
+    <Holidays>
+      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+    </Holidays>
+  </SubConfigurations>
   <!--
-      <tns:SubConfigurations hierarchy="NRD" description="Nordeste">
-        <tns:Holidays>
-            <tns:Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
-          </tns:Holidays>
-      </tns:SubConfigurations>
+      <SubConfigurations hierarchy="NRD" description="Nordeste">
+        <Holidays>
+            <Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
+          </Holidays>
+      </SubConfigurations>
    -->
-  <tns:SubConfigurations hierarchy="OBD" description="Óbidos">
-    <tns:Holidays>
-      <tns:Fixed month="JANUARY" day="11" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="ODM" description="Odemira">
-    <tns:Holidays>
-      <tns:Fixed month="SEPTEMBER" day="8" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="ODV" description="Odivelas">
-    <tns:Holidays>
-      <tns:Fixed month="NOVEMBER" day="19" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="OER" description="Oeiras">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="7" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="OLR" description="Oleiros">
-    <tns:Holidays>
+  <SubConfigurations hierarchy="OBD" description="Óbidos">
+    <Holidays>
+      <Fixed month="JANUARY" day="11" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ODM" description="Odemira">
+    <Holidays>
+      <Fixed month="SEPTEMBER" day="8" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ODV" description="Odivelas">
+    <Holidays>
+      <Fixed month="NOVEMBER" day="19" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="OER" description="Oeiras">
+    <Holidays>
+      <Fixed month="JUNE" day="7" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="OLR" description="Oleiros">
+    <Holidays>
       <!-- Second Monday of August -->
-    </tns:Holidays>
-  </tns:SubConfigurations>
+    </Holidays>
+  </SubConfigurations>
   <!--
-      <tns:SubConfigurations hierarchy="OLH" description="Olhão da Restauração">
-        <tns:Holidays>
-            <tns:Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
-          </tns:Holidays>
-      </tns:SubConfigurations>
+      <SubConfigurations hierarchy="OLH" description="Olhão da Restauração">
+        <Holidays>
+            <Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
+          </Holidays>
+      </SubConfigurations>
    -->
-  <tns:SubConfigurations hierarchy="OAZ" description="Oliveira de Azeméis">
-    <tns:Holidays>
+  <SubConfigurations hierarchy="OAZ" description="Oliveira de Azeméis">
+    <Holidays>
       <!-- Second Monday of August -->
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="OFR" description="Oliveira de Frades">
-    <tns:Holidays>
-      <tns:Fixed month="OCTOBER" day="7" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="OBR" description="Oliveira do Bairro">
-    <tns:Holidays>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="OFR" description="Oliveira de Frades">
+    <Holidays>
+      <Fixed month="OCTOBER" day="7" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="OBR" description="Oliveira do Bairro">
+    <Holidays>
       <!-- ASCENSION THURSDAY -->
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="OHP" description="Oliveira do Hospital">
-    <tns:Holidays>
-      <tns:Fixed month="OCTOBER" day="7" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="ORM" description="Ourém">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="20" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="ORQ" description="Ourique">
-    <tns:Holidays>
-      <tns:Fixed month="SEPTEMBER" day="8" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="OVR" description="Ovar">
-    <tns:Holidays>
-      <tns:Fixed month="JULY" day="25" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="PFR" description="Paços de Ferreira">
-    <tns:Holidays>
-      <tns:Fixed month="NOVEMBER" day="6" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="PLM" description="Palmela">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="1" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="PPS" description="Pampilhosa da Serra">
-    <tns:Holidays>
-      <tns:Fixed month="APRIL" day="10" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="PRD" description="Paredes">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="20" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="PCR" description="Paredes de Coura">
-    <tns:Holidays>
-      <tns:Fixed month="AUGUST" day="10" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="OHP" description="Oliveira do Hospital">
+    <Holidays>
+      <Fixed month="OCTOBER" day="7" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ORM" description="Ourém">
+    <Holidays>
+      <Fixed month="JUNE" day="20" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ORQ" description="Ourique">
+    <Holidays>
+      <Fixed month="SEPTEMBER" day="8" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="OVR" description="Ovar">
+    <Holidays>
+      <Fixed month="JULY" day="25" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="PFR" description="Paços de Ferreira">
+    <Holidays>
+      <Fixed month="NOVEMBER" day="6" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="PLM" description="Palmela">
+    <Holidays>
+      <Fixed month="JUNE" day="1" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="PPS" description="Pampilhosa da Serra">
+    <Holidays>
+      <Fixed month="APRIL" day="10" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="PRD" description="Paredes">
+    <Holidays>
+      <Fixed month="JUNE" day="20" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="PCR" description="Paredes de Coura">
+    <Holidays>
+      <Fixed month="AUGUST" day="10" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
   <!--
-      <tns:SubConfigurations hierarchy="PGR" description="Pedrógão Grande">
-        <tns:Holidays>
-            <tns:Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
-          </tns:Holidays>
-      </tns:SubConfigurations>
+      <SubConfigurations hierarchy="PGR" description="Pedrógão Grande">
+        <Holidays>
+            <Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
+          </Holidays>
+      </SubConfigurations>
    -->
-  <tns:SubConfigurations hierarchy="PCV" description="Penacova">
-    <tns:Holidays>
-      <tns:Fixed month="JULY" day="17" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="PNF" description="Penafiel">
-    <tns:Holidays>
-      <tns:Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
+  <SubConfigurations hierarchy="PCV" description="Penacova">
+    <Holidays>
+      <Fixed month="JULY" day="17" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="PNF" description="Penafiel">
+    <Holidays>
+      <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
   <!--
-      <tns:SubConfigurations hierarchy="PCT" description="Penalva do Castelo">
-        <tns:Holidays>
-            <tns:Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
-          </tns:Holidays>
-      </tns:SubConfigurations>
+      <SubConfigurations hierarchy="PCT" description="Penalva do Castelo">
+        <Holidays>
+            <Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
+          </Holidays>
+      </SubConfigurations>
    -->
-  <tns:SubConfigurations hierarchy="PNC" description="Penamacor">
-    <tns:Holidays>
-      <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="PND" description="Penedono">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="29" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="PNL" description="Penela">
-    <tns:Holidays>
-      <tns:Fixed month="SEPTEMBER" day="29" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="PNI" description="Peniche">
-    <tns:Holidays>
+  <SubConfigurations hierarchy="PNC" description="Penamacor">
+    <Holidays>
+      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="PND" description="Penedono">
+    <Holidays>
+      <Fixed month="JUNE" day="29" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="PNL" description="Penela">
+    <Holidays>
+      <Fixed month="SEPTEMBER" day="29" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="PNI" description="Peniche">
+    <Holidays>
       <!-- Monday after the first Sunday of August -->
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="PRG" description="Peso da Régua">
-    <tns:Holidays>
-      <tns:Fixed month="AUGUST" day="16" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="PNH" description="Pinhel">
-    <tns:Holidays>
-      <tns:Fixed month="AUGUST" day="25" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="PBL" description="Pombal">
-    <tns:Holidays>
-      <tns:Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="PDL" description="Ponta Delgada">
-    <tns:Holidays>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="PRG" description="Peso da Régua">
+    <Holidays>
+      <Fixed month="AUGUST" day="16" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="PNH" description="Pinhel">
+    <Holidays>
+      <Fixed month="AUGUST" day="25" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="PBL" description="Pombal">
+    <Holidays>
+      <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="PDL" description="Ponta Delgada">
+    <Holidays>
       <!-- Sixth Monday after Easter -->
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="PTS" description="Ponta do Sol">
-    <tns:Holidays>
-      <tns:Fixed month="SEPTEMBER" day="8" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="PTB" description="Ponte da Barca">
-    <tns:Holidays>
-      <tns:Fixed month="AUGUST" day="24" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="PTL" description="Ponte de Lima">
-    <tns:Holidays>
-      <tns:Fixed month="SEPTEMBER" day="20" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="PSR" description="Ponte de Sor">
-    <tns:Holidays>
-      <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="PTG" description="Portalegre">
-    <tns:Holidays>
-      <tns:Fixed month="MAY" day="23" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="PRL" description="Portel">
-    <tns:Holidays>
-      <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="PTM" description="Portimão">
-    <tns:Holidays>
-      <tns:Fixed month="DECEMBER" day="11" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="PRT" description="Porto">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="1" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="PMS" description="Porto de Mós">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="29" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="PMZ" description="Porto Moniz">
-    <tns:Holidays>
-      <tns:Fixed month="JULY" day="22" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="PST" description="Porto Santo">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="PVL" description="Póvoa de Lanhoso">
-    <tns:Holidays>
-      <tns:Fixed month="MARCH" day="19" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="PVZ" description="Póvoa de Varzim">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="29" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="PVC" description="Povoação">
-    <tns:Holidays>
-      <tns:Fixed month="JULY" day="3" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="VPV" description="Praia da Vitória">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="20" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="PNV" description="Proença-a-Nova">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="RDD" description="Redondo">
-    <tns:Holidays>
-      <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="RMZ" description="Reguengos de Monsaraz">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="RSD" description="Resende">
-    <tns:Holidays>
-      <tns:Fixed month="SEPTEMBER" day="29" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="RBR" description="Ribeira Brava">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="29" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="RPN" description="Ribeira de Pena">
-    <tns:Holidays>
-      <tns:Fixed month="AUGUST" day="16" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="RGR" description="Ribeira Grande">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="29" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="RMR" description="Rio Maior">
-    <tns:Holidays>
-      <tns:Fixed month="NOVEMBER" day="6" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="SBS" description="Sabrosa">
-    <tns:Holidays>
-      <tns:Fixed month="SEPTEMBER" day="8" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="SBG" description="Sabugal">
-    <tns:Holidays>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="PTS" description="Ponta do Sol">
+    <Holidays>
+      <Fixed month="SEPTEMBER" day="8" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="PTB" description="Ponte da Barca">
+    <Holidays>
+      <Fixed month="AUGUST" day="24" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="PTL" description="Ponte de Lima">
+    <Holidays>
+      <Fixed month="SEPTEMBER" day="20" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="PSR" description="Ponte de Sor">
+    <Holidays>
+      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="PTG" description="Portalegre">
+    <Holidays>
+      <Fixed month="MAY" day="23" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="PRL" description="Portel">
+    <Holidays>
+      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="PTM" description="Portimão">
+    <Holidays>
+      <Fixed month="DECEMBER" day="11" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="PRT" description="Porto">
+    <Holidays>
+      <Fixed month="JUNE" day="1" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="PMS" description="Porto de Mós">
+    <Holidays>
+      <Fixed month="JUNE" day="29" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="PMZ" description="Porto Moniz">
+    <Holidays>
+      <Fixed month="JULY" day="22" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="PST" description="Porto Santo">
+    <Holidays>
+      <Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="PVL" description="Póvoa de Lanhoso">
+    <Holidays>
+      <Fixed month="MARCH" day="19" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="PVZ" description="Póvoa de Varzim">
+    <Holidays>
+      <Fixed month="JUNE" day="29" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="PVC" description="Povoação">
+    <Holidays>
+      <Fixed month="JULY" day="3" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="VPV" description="Praia da Vitória">
+    <Holidays>
+      <Fixed month="JUNE" day="20" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="PNV" description="Proença-a-Nova">
+    <Holidays>
+      <Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="RDD" description="Redondo">
+    <Holidays>
+      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="RMZ" description="Reguengos de Monsaraz">
+    <Holidays>
+      <Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="RSD" description="Resende">
+    <Holidays>
+      <Fixed month="SEPTEMBER" day="29" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="RBR" description="Ribeira Brava">
+    <Holidays>
+      <Fixed month="JUNE" day="29" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="RPN" description="Ribeira de Pena">
+    <Holidays>
+      <Fixed month="AUGUST" day="16" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="RGR" description="Ribeira Grande">
+    <Holidays>
+      <Fixed month="JUNE" day="29" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="RMR" description="Rio Maior">
+    <Holidays>
+      <Fixed month="NOVEMBER" day="6" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="SBS" description="Sabrosa">
+    <Holidays>
+      <Fixed month="SEPTEMBER" day="8" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="SBG" description="Sabugal">
+    <Holidays>
       <!-- Second Monday after Easter -->
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="SMG" description="Salvaterra de Magos">
-    <tns:Holidays>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="SMG" description="Salvaterra de Magos">
+    <Holidays>
       <!-- ASCENSION THURSDAY -->
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="SCD" description="Santa Comba Dão">
-    <tns:Holidays>
-      <tns:Fixed month="MAY" day="3" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="SCR" description="Santa Cruz">
-    <tns:Holidays>
-      <tns:Fixed month="JANUARY" day="15" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="SCG" description="Santa Cruz da Graciosa">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="SCF" description="Santa Cruz das Flores">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="VFR" description="Santa Maria da Feira">
-    <tns:Holidays>
-      <tns:Fixed month="JANUARY" day="20" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="SMP" description="Santa Marta de Penaguião">
-    <tns:Holidays>
-      <tns:Fixed month="JANUARY" day="13" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="STN" description="Santana">
-    <tns:Holidays>
-      <tns:Fixed month="MAY" day="25" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="STR" description="Santarém">
-    <tns:Holidays>
-      <tns:Fixed month="MARCH" day="19" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="STC" description="Santiago do Cacém">
-    <tns:Holidays>
-      <tns:Fixed month="JULY" day="25" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="STS" description="Santo Tirso">
-    <tns:Holidays>
-      <tns:Fixed month="JULY" day="11" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="SBA" description="São Brás de Alportel">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="1" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="SJM" description="São João da Madeira">
-    <tns:Holidays>
-      <tns:Fixed month="OCTOBER" day="11" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="SCD" description="Santa Comba Dão">
+    <Holidays>
+      <Fixed month="MAY" day="3" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="SCR" description="Santa Cruz">
+    <Holidays>
+      <Fixed month="JANUARY" day="15" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="SCG" description="Santa Cruz da Graciosa">
+    <Holidays>
+      <Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="SCF" description="Santa Cruz das Flores">
+    <Holidays>
+      <Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="VFR" description="Santa Maria da Feira">
+    <Holidays>
+      <Fixed month="JANUARY" day="20" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="SMP" description="Santa Marta de Penaguião">
+    <Holidays>
+      <Fixed month="JANUARY" day="13" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="STN" description="Santana">
+    <Holidays>
+      <Fixed month="MAY" day="25" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="STR" description="Santarém">
+    <Holidays>
+      <Fixed month="MARCH" day="19" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="STC" description="Santiago do Cacém">
+    <Holidays>
+      <Fixed month="JULY" day="25" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="STS" description="Santo Tirso">
+    <Holidays>
+      <Fixed month="JULY" day="11" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="SBA" description="São Brás de Alportel">
+    <Holidays>
+      <Fixed month="JUNE" day="1" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="SJM" description="São João da Madeira">
+    <Holidays>
+      <Fixed month="OCTOBER" day="11" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
   <!--
-      <tns:SubConfigurations hierarchy="SJP" description="São João da Pesqueira">
-        <tns:Holidays>
-            <tns:Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
-          </tns:Holidays>
-      </tns:SubConfigurations>
+      <SubConfigurations hierarchy="SJP" description="São João da Pesqueira">
+        <Holidays>
+            <Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
+          </Holidays>
+      </SubConfigurations>
    -->
-  <tns:SubConfigurations hierarchy="SPS" description="São Pedro do Sul">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="29" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="SRQ" description="São Roque do Pico">
-    <tns:Holidays>
-      <tns:Fixed month="AUGUST" day="16" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="SVC" description="São Vicente">
-    <tns:Holidays>
-      <tns:Fixed month="JANUARY" day="22" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="SRD" description="Sardoal">
-    <tns:Holidays>
-      <tns:Fixed month="SEPTEMBER" day="22" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="SAT" description="Sátão">
-    <tns:Holidays>
-      <tns:Fixed month="AUGUST" day="20" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="SEI" description="Seia">
-    <tns:Holidays>
-      <tns:Fixed month="JULY" day="3" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="SXL" description="Seixal">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="29" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="SRN" description="Sernancelhe">
-    <tns:Holidays>
-      <tns:Fixed month="MAY" day="3" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
+  <SubConfigurations hierarchy="SPS" description="São Pedro do Sul">
+    <Holidays>
+      <Fixed month="JUNE" day="29" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="SRQ" description="São Roque do Pico">
+    <Holidays>
+      <Fixed month="AUGUST" day="16" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="SVC" description="São Vicente">
+    <Holidays>
+      <Fixed month="JANUARY" day="22" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="SRD" description="Sardoal">
+    <Holidays>
+      <Fixed month="SEPTEMBER" day="22" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="SAT" description="Sátão">
+    <Holidays>
+      <Fixed month="AUGUST" day="20" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="SEI" description="Seia">
+    <Holidays>
+      <Fixed month="JULY" day="3" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="SXL" description="Seixal">
+    <Holidays>
+      <Fixed month="JUNE" day="29" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="SRN" description="Sernancelhe">
+    <Holidays>
+      <Fixed month="MAY" day="3" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
   <!--
-      <tns:SubConfigurations hierarchy="SRP" description="Serpa">
-        <tns:Holidays>
-            <tns:Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
-          </tns:Holidays>
-      </tns:SubConfigurations>
+      <SubConfigurations hierarchy="SRP" description="Serpa">
+        <Holidays>
+            <Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
+          </Holidays>
+      </SubConfigurations>
    -->
-  <tns:SubConfigurations hierarchy="SRT" description="Sertã">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="SSB" description="Sesimbra">
-    <tns:Holidays>
-      <tns:Fixed month="MAY" day="4" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="STB" description="Setúbal">
-    <tns:Holidays>
-      <tns:Fixed month="SEPTEMBER" day="15" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="SVV" description="Sever do Vouga">
-    <tns:Holidays>
-      <tns:Fixed month="SEPTEMBER" day="21" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="SLV" description="Silves">
-    <tns:Holidays>
-      <tns:Fixed month="SEPTEMBER" day="3" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="SNS" description="Sines">
-    <tns:Holidays>
-      <tns:Fixed month="NOVEMBER" day="24" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="SNT" description="Sintra">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="29" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="SMA" description="Sobral de Monte Agraço">
-    <tns:Holidays>
+  <SubConfigurations hierarchy="SRT" description="Sertã">
+    <Holidays>
+      <Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="SSB" description="Sesimbra">
+    <Holidays>
+      <Fixed month="MAY" day="4" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="STB" description="Setúbal">
+    <Holidays>
+      <Fixed month="SEPTEMBER" day="15" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="SVV" description="Sever do Vouga">
+    <Holidays>
+      <Fixed month="SEPTEMBER" day="21" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="SLV" description="Silves">
+    <Holidays>
+      <Fixed month="SEPTEMBER" day="3" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="SNS" description="Sines">
+    <Holidays>
+      <Fixed month="NOVEMBER" day="24" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="SNT" description="Sintra">
+    <Holidays>
+      <Fixed month="JUNE" day="29" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="SMA" description="Sobral de Monte Agraço">
+    <Holidays>
       <!-- ASCENSION THURSDAY -->
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="SRE" description="Soure">
-    <tns:Holidays>
-      <tns:Fixed month="SEPTEMBER" day="21" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="SSL" description="Sousel">
-    <tns:Holidays>
-      <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="TBU" description="Tábua">
-    <tns:Holidays>
-      <tns:Fixed month="APRIL" day="10" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="TBC" description="Tabuaço">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="TRC" description="Tarouca">
-    <tns:Holidays>
-      <tns:Fixed month="SEPTEMBER" day="29" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="TVR" description="Tavira">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="TBR" description="Terras de Bouro">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="TMR" description="Tomar">
-    <tns:Holidays>
-      <tns:Fixed month="MARCH" day="1" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="TND" description="Tondela">
-    <tns:Holidays>
-      <tns:Fixed month="SEPTEMBER" day="16" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="TMC" description="Torre de Moncorvo">
-    <tns:Holidays>
-      <tns:Fixed month="MARCH" day="19" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="TNV" description="Torres Novas">
-    <tns:Holidays>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="SRE" description="Soure">
+    <Holidays>
+      <Fixed month="SEPTEMBER" day="21" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="SSL" description="Sousel">
+    <Holidays>
+      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="TBU" description="Tábua">
+    <Holidays>
+      <Fixed month="APRIL" day="10" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="TBC" description="Tabuaço">
+    <Holidays>
+      <Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="TRC" description="Tarouca">
+    <Holidays>
+      <Fixed month="SEPTEMBER" day="29" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="TVR" description="Tavira">
+    <Holidays>
+      <Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="TBR" description="Terras de Bouro">
+    <Holidays>
+      <Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="TMR" description="Tomar">
+    <Holidays>
+      <Fixed month="MARCH" day="1" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="TND" description="Tondela">
+    <Holidays>
+      <Fixed month="SEPTEMBER" day="16" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="TMC" description="Torre de Moncorvo">
+    <Holidays>
+      <Fixed month="MARCH" day="19" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="TNV" description="Torres Novas">
+    <Holidays>
       <!-- ASCENSION THURSDAY -->
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="TVD" description="Torres Vedras">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="TCR" description="Trancoso">
-    <tns:Holidays>
-      <tns:Fixed month="MAY" day="29" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="TRF" description="Trofa">
-    <tns:Holidays>
-      <tns:Fixed month="NOVEMBER" day="19" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="VGS" description="Vagos">
-    <tns:Holidays>
-      <tns:ChristianHoliday type="PENTECOST_MONDAY" descriptionPropertiesKey="christian.PENTECOST_MONDAY" localizedType="OFFICIAL_HOLIDAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="VAC" description="Vale de Cambra">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="VLC" description="Valença">
-    <tns:Holidays>
-      <tns:Fixed month="FEBRUARY" day="18" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="VLG" description="Valongo">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="VPC" description="Valpaços">
-    <tns:Holidays>
-      <tns:Fixed month="NOVEMBER" day="6" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="VLS" description="Velas">
-    <tns:Holidays>
-      <tns:Fixed month="APRIL" day="23" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="VND" description="Vendas Novas">
-    <tns:Holidays>
-      <tns:Fixed month="SEPTEMBER" day="7" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="VNT" description="Viana do Alentejo">
-    <tns:Holidays>
-      <tns:Fixed month="JANUARY" day="13" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="VCT" description="Viana do Castelo">
-    <tns:Holidays>
-      <tns:Fixed month="AUGUST" day="20" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="VDG" description="Vidigueira">
-    <tns:Holidays>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="TVD" description="Torres Vedras">
+    <Holidays>
+      <Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="TCR" description="Trancoso">
+    <Holidays>
+      <Fixed month="MAY" day="29" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="TRF" description="Trofa">
+    <Holidays>
+      <Fixed month="NOVEMBER" day="19" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="VGS" description="Vagos">
+    <Holidays>
+      <ChristianHoliday type="PENTECOST_MONDAY" descriptionPropertiesKey="christian.PENTECOST_MONDAY" localizedType="OFFICIAL_HOLIDAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="VAC" description="Vale de Cambra">
+    <Holidays>
+      <Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="VLC" description="Valença">
+    <Holidays>
+      <Fixed month="FEBRUARY" day="18" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="VLG" description="Valongo">
+    <Holidays>
+      <Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="VPC" description="Valpaços">
+    <Holidays>
+      <Fixed month="NOVEMBER" day="6" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="VLS" description="Velas">
+    <Holidays>
+      <Fixed month="APRIL" day="23" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="VND" description="Vendas Novas">
+    <Holidays>
+      <Fixed month="SEPTEMBER" day="7" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="VNT" description="Viana do Alentejo">
+    <Holidays>
+      <Fixed month="JANUARY" day="13" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="VCT" description="Viana do Castelo">
+    <Holidays>
+      <Fixed month="AUGUST" day="20" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="VDG" description="Vidigueira">
+    <Holidays>
       <!-- ASCENSION THURSDAY -->
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="VRM" description="Vieira do Minho">
-    <tns:Holidays>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="VRM" description="Vieira do Minho">
+    <Holidays>
       <!-- Monday after the first Sunday of October -->
-    </tns:Holidays>
-  </tns:SubConfigurations>
+    </Holidays>
+  </SubConfigurations>
   <!--
-      <tns:SubConfigurations hierarchy="VLR" description="Vila de Rei">
-        <tns:Holidays>
-            <tns:Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
-          </tns:Holidays>
-      </tns:SubConfigurations>
+      <SubConfigurations hierarchy="VLR" description="Vila de Rei">
+        <Holidays>
+            <Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
+          </Holidays>
+      </SubConfigurations>
    -->
-  <tns:SubConfigurations hierarchy="VBP" description="Vila do Bispo">
-    <tns:Holidays>
-      <tns:Fixed month="SEPTEMBER" day="20" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="VCD" description="Vila do Conde">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="VPT" description="Vila do Porto">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="VFL" description="Vila Flor">
-    <tns:Holidays>
-      <tns:Fixed month="AUGUST" day="24" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="VFX" description="Vila Franca de Xira">
-    <tns:Holidays>
+  <SubConfigurations hierarchy="VBP" description="Vila do Bispo">
+    <Holidays>
+      <Fixed month="SEPTEMBER" day="20" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="VCD" description="Vila do Conde">
+    <Holidays>
+      <Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="VPT" description="Vila do Porto">
+    <Holidays>
+      <Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="VFL" description="Vila Flor">
+    <Holidays>
+      <Fixed month="AUGUST" day="24" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="VFX" description="Vila Franca de Xira">
+    <Holidays>
       <!-- ASCENSION THURSDAY -->
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="VFC" description="Vila Franca do Campo">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="VNB" description="Vila Nova da Barquinha">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="VNC" description="Vila Nova de Cerveira">
-    <tns:Holidays>
-      <tns:Fixed month="OCTOBER" day="1" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="VNF" description="Vila Nova de Famalicão">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="VLF" description="Vila Nova de Foz Côa">
-    <tns:Holidays>
-      <tns:Fixed month="MAY" day="21" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="VNG" description="Vila Nova de Gaia">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="VNP" description="Vila Nova de Paiva">
-    <tns:Holidays>
-      <tns:Fixed month="MARCH" day="2" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="PRS" description="Vila Nova de Poiares">
-    <tns:Holidays>
-      <tns:Fixed month="JANUARY" day="13" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="VPA" description="Vila Pouca de Aguiar">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="22" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="VRL" description="Vila Real">
-    <tns:Holidays>
-      <tns:Fixed month="MAY" day="13" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="VRS" description="Vila Real de Santo António">
-    <tns:Holidays>
-      <tns:Fixed month="MAY" day="13" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="VVR" description="Vila Velha de Ródão">
-    <tns:Holidays>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="VFC" description="Vila Franca do Campo">
+    <Holidays>
+      <Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="VNB" description="Vila Nova da Barquinha">
+    <Holidays>
+      <Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="VNC" description="Vila Nova de Cerveira">
+    <Holidays>
+      <Fixed month="OCTOBER" day="1" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="VNF" description="Vila Nova de Famalicão">
+    <Holidays>
+      <Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="VLF" description="Vila Nova de Foz Côa">
+    <Holidays>
+      <Fixed month="MAY" day="21" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="VNG" description="Vila Nova de Gaia">
+    <Holidays>
+      <Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="VNP" description="Vila Nova de Paiva">
+    <Holidays>
+      <Fixed month="MARCH" day="2" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="PRS" description="Vila Nova de Poiares">
+    <Holidays>
+      <Fixed month="JANUARY" day="13" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="VPA" description="Vila Pouca de Aguiar">
+    <Holidays>
+      <Fixed month="JUNE" day="22" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="VRL" description="Vila Real">
+    <Holidays>
+      <Fixed month="MAY" day="13" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="VRS" description="Vila Real de Santo António">
+    <Holidays>
+      <Fixed month="MAY" day="13" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="VVR" description="Vila Velha de Ródão">
+    <Holidays>
       <!-- Monday after the fourth Sunday of August -->
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="VVD" description="Vila Verde">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="VVC" description="Vila Viçosa">
-    <tns:Holidays>
-      <tns:Fixed month="AUGUST" day="16" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="VMS" description="Vimioso">
-    <tns:Holidays>
-      <tns:Fixed month="AUGUST" day="10" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="VNH" description="Vinhais">
-    <tns:Holidays>
-      <tns:Fixed month="MAY" day="20" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="VIS" description="Viseu">
-    <tns:Holidays>
-      <tns:Fixed month="SEPTEMBER" day="21" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="VIZ" description="Vizela">
-    <tns:Holidays>
-      <tns:Fixed month="MARCH" day="19" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="VZL" description="Vouzela">
-    <tns:Holidays>
-      <tns:Fixed month="MAY" day="14" descriptionPropertiesKey="CITY_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-</tns:Configuration>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="VVD" description="Vila Verde">
+    <Holidays>
+      <Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="VVC" description="Vila Viçosa">
+    <Holidays>
+      <Fixed month="AUGUST" day="16" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="VMS" description="Vimioso">
+    <Holidays>
+      <Fixed month="AUGUST" day="10" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="VNH" description="Vinhais">
+    <Holidays>
+      <Fixed month="MAY" day="20" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="VIS" description="Viseu">
+    <Holidays>
+      <Fixed month="SEPTEMBER" day="21" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="VIZ" description="Vizela">
+    <Holidays>
+      <Fixed month="MARCH" day="19" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="VZL" description="Vouzela">
+    <Holidays>
+      <Fixed month="MAY" day="14" descriptionPropertiesKey="CITY_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+</Configuration>

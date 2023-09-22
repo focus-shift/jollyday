@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tns:Configuration hierarchy="tr" description="Turkey" xmlns:tns="http://www.example.org/Holiday"
-                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                   xsi:schemaLocation="http://www.example.org/Holiday /Holiday.xsd">
-  <tns:Holidays>
-    <tns:Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEARS_DAY"/>
-  </tns:Holidays>
-</tns:Configuration>
+<Configuration hierarchy="tr" description="Turkey"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEARS_DAY"/>
+  </Holidays>
+</Configuration>

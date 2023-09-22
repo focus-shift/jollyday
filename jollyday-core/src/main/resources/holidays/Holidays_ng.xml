@@ -1,26 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tns:Configuration hierarchy="ng" description="Nigeria"
-                   xmlns:tns="http://www.example.org/Holiday" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                   xsi:schemaLocation="http://www.example.org/Holiday /Holiday.xsd">
-  <tns:Holidays>
-    <tns:Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
-    <tns:Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
-    <tns:Fixed month="MAY" day="27" descriptionPropertiesKey="CHILDRENS_DAY"/>
-    <tns:Fixed month="MAY" day="29" descriptionPropertiesKey="FREEDOM_DEMOCRACY"/>
-    <tns:Fixed month="OCTOBER" day="1" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
-    <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-    <tns:Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY"/>
-    <tns:ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
-    <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-    <tns:ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-    <tns:IslamicHoliday type="RAMADAN" descriptionPropertiesKey="islamic.RAMADAN"/>
-    <tns:IslamicHoliday type="MAWLID_AN_NABI" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
-    <tns:IslamicHoliday type="ID_AL_FITR" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
-    <tns:IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
-  </tns:Holidays>
-  <tns:SubConfigurations hierarchy="lag" description="Lagos">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="12" descriptionPropertiesKey="ELECTION_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-</tns:Configuration>
+
+<Configuration hierarchy="ng" description="Nigeria"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="MAY" day="27" descriptionPropertiesKey="CHILDRENS_DAY"/>
+    <Fixed month="MAY" day="29" descriptionPropertiesKey="FREEDOM_DEMOCRACY"/>
+    <Fixed month="OCTOBER" day="1" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY"/>
+    <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
+    <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+    <IslamicHoliday type="RAMADAN" descriptionPropertiesKey="islamic.RAMADAN"/>
+    <IslamicHoliday type="MAWLID_AN_NABI" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+    <IslamicHoliday type="ID_AL_FITR" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+    <IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
+  </Holidays>
+  <SubConfigurations hierarchy="lag" description="Lagos">
+    <Holidays>
+      <Fixed month="JUNE" day="12" descriptionPropertiesKey="ELECTION_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+</Configuration>

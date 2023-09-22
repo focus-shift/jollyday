@@ -1,131 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tns:Configuration hierarchy="de" description="Germany" xmlns:tns="http://www.example.org/Holiday"
-                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                   xsi:schemaLocation="http://www.example.org/Holiday /Holiday.xsd">
-  <tns:Holidays>
-    <tns:Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
-    <tns:Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
-    <tns:Fixed month="OCTOBER" day="3" descriptionPropertiesKey="UNIFICATION_GERMANY"/>
-    <tns:Fixed month="DECEMBER" day="25" descriptionPropertiesKey="FIRST_CHRISTMAS_DAY"/>
-    <tns:Fixed month="DECEMBER" day="26" descriptionPropertiesKey="SECOND_CHRISTMAS_DAY"/>
-    <tns:Fixed month="APRIL" day="2" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-    <tns:Fixed month="APRIL" day="5" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-    <tns:Fixed month="MAY" day="13" descriptionPropertiesKey="christian.ASCENSION_DAY"/>
-    <tns:Fixed month="MAY" day="24" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
-  </tns:Holidays>
-  <tns:SubConfigurations hierarchy="be" description="Berlin">
-    <tns:Holidays>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="bb" description="Brandenburg">
-    <tns:Holidays>
-      <tns:Fixed month="APRIL" day="4" descriptionPropertiesKey="christian.EASTER"/>
-      <tns:Fixed month="MAY" day="23" descriptionPropertiesKey="christian.PENTECOST"/>
-      <tns:Fixed month="OCTOBER" day="31" descriptionPropertiesKey="REFORMATION_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="bw" description="Baden-Württemberg">
-    <tns:Holidays>
-      <tns:Fixed month="JANUARY" day="6" descriptionPropertiesKey="EPIPHANY"/>
-      <tns:Fixed month="JUNE" day="3" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
-      <tns:Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="by" description="Bayern">
-    <tns:Holidays>
-      <tns:Fixed month="JANUARY" day="6" descriptionPropertiesKey="EPIPHANY"/>
-      <tns:Fixed month="JUNE" day="3" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
-      <tns:Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
-    </tns:Holidays>
-    <tns:SubConfigurations hierarchy="mu" description="München">
-      <tns:Holidays>
-        <tns:Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
-      </tns:Holidays>
-    </tns:SubConfigurations>
-    <tns:SubConfigurations hierarchy="ag" description="Augsburg">
-      <tns:Holidays>
-        <tns:Fixed month="AUGUST" day="8" descriptionPropertiesKey="PEACE"/>
-        <tns:Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
-      </tns:Holidays>
-    </tns:SubConfigurations>
-    <tns:SubConfigurations hierarchy="wu" description="Würzburg">
-      <tns:Holidays>
-        <tns:Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
-      </tns:Holidays>
-    </tns:SubConfigurations>
-    <tns:SubConfigurations hierarchy="re" description="Regensburg">
-      <tns:Holidays>
-        <tns:Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
-      </tns:Holidays>
-    </tns:SubConfigurations>
-    <tns:SubConfigurations hierarchy="in" description="Ingolstadt">
-      <tns:Holidays>
-        <tns:Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
-      </tns:Holidays>
-    </tns:SubConfigurations>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="he" description="Hessen">
-    <tns:Holidays>
-      <tns:Fixed month="APRIL" day="4" descriptionPropertiesKey="christian.EASTER"/>
-      <tns:Fixed month="JUNE" day="3" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
-      <tns:Fixed month="MAY" day="23" descriptionPropertiesKey="christian.PENTECOST"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="mv" description="Mecklenburg-Vorpommern">
-    <tns:Holidays>
-      <tns:Fixed month="OCTOBER" day="31" descriptionPropertiesKey="REFORMATION_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="nw" description="Nordrhein-Westfalen">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="3" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
-      <tns:Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="rp" description="Rheinland-Pfalz">
-    <tns:Holidays>
-      <tns:Fixed month="JUNE" day="3" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
-      <tns:Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="sl" description="Saarland">
-    <tns:Holidays>
-      <tns:Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
-      <tns:Fixed month="JUNE" day="3" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
-      <tns:Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="sn" description="Saxony">
-    <tns:Holidays>
-      <tns:Fixed month="OCTOBER" day="31" descriptionPropertiesKey="REFORMATION_DAY"/>
-      <tns:Fixed month="NOVEMBER" day="17" descriptionPropertiesKey="REPENTANCE_PRAYER"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="st" description="Saxony-Anhalt">
-    <tns:Holidays>
-      <tns:Fixed month="JANUARY" day="6" descriptionPropertiesKey="EPIPHANY"/>
-      <tns:Fixed month="OCTOBER" day="31" descriptionPropertiesKey="REFORMATION_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="th" description="Thuringia">
-    <tns:Holidays>
-      <tns:Fixed month="OCTOBER" day="31" descriptionPropertiesKey="REFORMATION_DAY"/>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="sh" description="Schleswig-Holstein">
-    <tns:Holidays>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="hh" description="Hamburg">
-    <tns:Holidays>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="hb" description="Bremen">
-    <tns:Holidays>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-  <tns:SubConfigurations hierarchy="ni" description="Lower-Saxony">
-    <tns:Holidays>
-    </tns:Holidays>
-  </tns:SubConfigurations>
-</tns:Configuration>
+<Configuration hierarchy="de" description="Germany"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="OCTOBER" day="3" descriptionPropertiesKey="UNIFICATION_GERMANY"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="FIRST_CHRISTMAS_DAY"/>
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="SECOND_CHRISTMAS_DAY"/>
+    <Fixed month="APRIL" day="2" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+    <Fixed month="APRIL" day="5" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+    <Fixed month="MAY" day="13" descriptionPropertiesKey="christian.ASCENSION_DAY"/>
+    <Fixed month="MAY" day="24" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
+  </Holidays>
+  <SubConfigurations hierarchy="be" description="Berlin">
+    <Holidays>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="bb" description="Brandenburg">
+    <Holidays>
+      <Fixed month="APRIL" day="4" descriptionPropertiesKey="christian.EASTER"/>
+      <Fixed month="MAY" day="23" descriptionPropertiesKey="christian.PENTECOST"/>
+      <Fixed month="OCTOBER" day="31" descriptionPropertiesKey="REFORMATION_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="bw" description="Baden-Württemberg">
+    <Holidays>
+      <Fixed month="JANUARY" day="6" descriptionPropertiesKey="EPIPHANY"/>
+      <Fixed month="JUNE" day="3" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
+      <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="by" description="Bayern">
+    <Holidays>
+      <Fixed month="JANUARY" day="6" descriptionPropertiesKey="EPIPHANY"/>
+      <Fixed month="JUNE" day="3" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
+      <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
+    </Holidays>
+    <SubConfigurations hierarchy="mu" description="München">
+      <Holidays>
+        <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
+      </Holidays>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="ag" description="Augsburg">
+      <Holidays>
+        <Fixed month="AUGUST" day="8" descriptionPropertiesKey="PEACE"/>
+        <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
+      </Holidays>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="wu" description="Würzburg">
+      <Holidays>
+        <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
+      </Holidays>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="re" description="Regensburg">
+      <Holidays>
+        <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
+      </Holidays>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="in" description="Ingolstadt">
+      <Holidays>
+        <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
+      </Holidays>
+    </SubConfigurations>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="he" description="Hessen">
+    <Holidays>
+      <Fixed month="APRIL" day="4" descriptionPropertiesKey="christian.EASTER"/>
+      <Fixed month="JUNE" day="3" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
+      <Fixed month="MAY" day="23" descriptionPropertiesKey="christian.PENTECOST"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="mv" description="Mecklenburg-Vorpommern">
+    <Holidays>
+      <Fixed month="OCTOBER" day="31" descriptionPropertiesKey="REFORMATION_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="nw" description="Nordrhein-Westfalen">
+    <Holidays>
+      <Fixed month="JUNE" day="3" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
+      <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="rp" description="Rheinland-Pfalz">
+    <Holidays>
+      <Fixed month="JUNE" day="3" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
+      <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="sl" description="Saarland">
+    <Holidays>
+      <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
+      <Fixed month="JUNE" day="3" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
+      <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="sn" description="Saxony">
+    <Holidays>
+      <Fixed month="OCTOBER" day="31" descriptionPropertiesKey="REFORMATION_DAY"/>
+      <Fixed month="NOVEMBER" day="17" descriptionPropertiesKey="REPENTANCE_PRAYER"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="st" description="Saxony-Anhalt">
+    <Holidays>
+      <Fixed month="JANUARY" day="6" descriptionPropertiesKey="EPIPHANY"/>
+      <Fixed month="OCTOBER" day="31" descriptionPropertiesKey="REFORMATION_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="th" description="Thuringia">
+    <Holidays>
+      <Fixed month="OCTOBER" day="31" descriptionPropertiesKey="REFORMATION_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="sh" description="Schleswig-Holstein">
+    <Holidays>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="hh" description="Hamburg">
+    <Holidays>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="hb" description="Bremen">
+    <Holidays>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ni" description="Lower-Saxony">
+    <Holidays>
+    </Holidays>
+  </SubConfigurations>
+</Configuration>

@@ -1,49 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tns:Configuration hierarchy="nyse" description="New York Stock Exchange"
-                   xmlns:tns="http://www.example.org/Holiday" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                   xsi:schemaLocation="http://www.example.org/Holiday /Holiday.xsd ">
-  <tns:Holidays>
-    <tns:Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
-      <tns:MovingCondition substitute="SATURDAY" with="PREVIOUS"
+
+<Configuration hierarchy="nyse" description="New York Stock Exchange"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
+      <MovingCondition substitute="SATURDAY" with="PREVIOUS"
                            weekday="FRIDAY"/>
-      <tns:MovingCondition substitute="SUNDAY" with="NEXT"
+      <MovingCondition substitute="SUNDAY" with="NEXT"
                            weekday="MONDAY"/>
-    </tns:Fixed>
-    <tns:Fixed month="JULY" day="4" descriptionPropertiesKey="INDEPENDENCE_DAY">
-      <tns:MovingCondition substitute="SATURDAY" with="PREVIOUS"
+    </Fixed>
+    <Fixed month="JULY" day="4" descriptionPropertiesKey="INDEPENDENCE_DAY">
+      <MovingCondition substitute="SATURDAY" with="PREVIOUS"
                            weekday="FRIDAY"/>
-      <tns:MovingCondition substitute="SUNDAY" with="NEXT"
+      <MovingCondition substitute="SUNDAY" with="NEXT"
                            weekday="MONDAY"/>
-    </tns:Fixed>
-    <tns:Fixed month="DECEMBER" day="25"
+    </Fixed>
+    <Fixed month="DECEMBER" day="25"
                descriptionPropertiesKey="CHRISTMAS">
-      <tns:MovingCondition substitute="SATURDAY" with="PREVIOUS"
+      <MovingCondition substitute="SATURDAY" with="PREVIOUS"
                            weekday="FRIDAY"/>
-      <tns:MovingCondition substitute="SUNDAY" with="NEXT"
+      <MovingCondition substitute="SUNDAY" with="NEXT"
                            weekday="MONDAY"/>
-    </tns:Fixed>
-    <tns:Fixed month="JUNE" day="11" validFrom="2004" validTo="2004"
+    </Fixed>
+    <Fixed month="JUNE" day="11" validFrom="2004" validTo="2004"
                descriptionPropertiesKey="FUNERAL_OF_PRESIDENT_REAGAN">
-    </tns:Fixed>
-    <tns:Fixed month="JANUARY" day="2" validFrom="2007" validTo="2007"
+    </Fixed>
+    <Fixed month="JANUARY" day="2" validFrom="2007" validTo="2007"
                descriptionPropertiesKey="REMEMBERANCE_OF_PRESIDENT_FORD">
-    </tns:Fixed>
-    <tns:Fixed month="OCTOBER" day="29" validFrom="2012"
+    </Fixed>
+    <Fixed month="OCTOBER" day="29" validFrom="2012"
                validTo="2012" descriptionPropertiesKey="HURRICANE_SANDY">
-    </tns:Fixed>
-    <tns:Fixed month="OCTOBER" day="30" validFrom="2012"
+    </Fixed>
+    <Fixed month="OCTOBER" day="30" validFrom="2012"
                validTo="2012" descriptionPropertiesKey="HURRICANE_SANDY">
-    </tns:Fixed>
-    <tns:FixedWeekday which="THIRD" weekday="MONDAY"
+    </Fixed>
+    <FixedWeekday which="THIRD" weekday="MONDAY"
                       month="JANUARY" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
-    <tns:FixedWeekday which="THIRD" weekday="MONDAY"
+    <FixedWeekday which="THIRD" weekday="MONDAY"
                       month="FEBRUARY" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-    <tns:FixedWeekday which="LAST" weekday="MONDAY"
+    <FixedWeekday which="LAST" weekday="MONDAY"
                       month="MAY" descriptionPropertiesKey="MEMORIAL_DAY"/>
-    <tns:FixedWeekday which="FIRST" weekday="MONDAY"
+    <FixedWeekday which="FIRST" weekday="MONDAY"
                       month="SEPTEMBER" descriptionPropertiesKey="LABOUR_DAY"/>
-    <tns:FixedWeekday which="FOURTH" weekday="THURSDAY"
+    <FixedWeekday which="FOURTH" weekday="THURSDAY"
                       month="NOVEMBER" descriptionPropertiesKey="THANKSGIVING"/>
-    <tns:ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-  </tns:Holidays>
-</tns:Configuration>
+    <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+  </Holidays>
+</Configuration>
