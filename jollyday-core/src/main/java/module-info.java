@@ -5,7 +5,7 @@ module de.focus_shift.jollyday.core {
   opens de.focus_shift.jollyday.core.util;
   opens holidays;
   opens descriptions;
-  opens www.focus_shift.de.jollyday.xml.ns.holiday;
+  opens focus_shift.de.jollyday.xml.ns.holiday;
 
   requires org.slf4j;
   requires org.threeten.extra;
