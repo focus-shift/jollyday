@@ -133,7 +133,7 @@
 
   <xsd:complexType name="IslamicHoliday">
     <xsd:complexContent>
-      <xsd:extension base="Holiday">
+      <xsd:extension base="MoveableHoliday">
         <xsd:attribute name="type" type="IslamicHolidayType"/>
       </xsd:extension>
     </xsd:complexContent>

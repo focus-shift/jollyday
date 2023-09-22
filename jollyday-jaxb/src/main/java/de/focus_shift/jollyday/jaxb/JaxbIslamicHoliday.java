@@ -3,9 +3,13 @@ package de.focus_shift.jollyday.jaxb;
 import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.IslamicHoliday;
 import de.focus_shift.jollyday.core.spi.IslamicHolidayType;
+import de.focus_shift.jollyday.core.spi.MovingCondition;
 import de.focus_shift.jollyday.core.spi.YearCycle;
 
 import java.time.Year;
+import java.util.List;
+
+import static java.util.stream.Collectors.toList;
 
 
 public class JaxbIslamicHoliday implements IslamicHoliday {
@@ -52,5 +56,12 @@ public class JaxbIslamicHoliday implements IslamicHoliday {
     return islamicHoliday.getEvery() == null
       ? YearCycle.EVERY_YEAR
       : YearCycle.valueOf(islamicHoliday.getEvery().name());
+  }
+
+  @Override
+  public List<MovingCondition> conditions() {
+    return islamicHoliday.getMovingCondition().stream()
+      .map(JaxbMovingCondition::new)
+      .collect(toList());
   }
 }

@@ -4,6 +4,7 @@ import de.focus_shift.jollyday.core.Holiday;
 import de.focus_shift.jollyday.core.parser.HolidayParser;
 import de.focus_shift.jollyday.core.parser.functions.CalculateRelativeDatesFromChronologyWithinGregorianYear;
 import de.focus_shift.jollyday.core.parser.functions.CreateHoliday;
+import de.focus_shift.jollyday.core.parser.functions.MoveDateRelative;
 import de.focus_shift.jollyday.core.parser.predicates.ValidLimitation;
 import de.focus_shift.jollyday.core.spi.Holidays;
 
@@ -16,9 +17,6 @@ import static java.util.stream.Collectors.toList;
 
 /**
  * This parser calculates gregorian dates for the different islamic holidays.
- *
- * @author Sven Diedrichsen
- * @version $Id: $
  */
 public class IslamicHolidayParser implements HolidayParser {
 
@@ -26,9 +24,11 @@ public class IslamicHolidayParser implements HolidayParser {
   public List<Holiday> parse(int year, Holidays holidays) {
     return holidays.islamicHolidays().stream()
       .filter(new ValidLimitation(year))
-      .flatMap(ih -> {
-        Stream<LocalDate> islamicHolidays;
-        switch (ih.type()) {
+      .flatMap(islamicHoliday -> {
+
+        final Stream<LocalDate> islamicHolidays;
+
+        switch (islamicHoliday.type()) {
           case NEWYEAR:
             islamicHolidays = new CalculateRelativeDatesFromChronologyWithinGregorianYear(1, 1, HijrahChronology.INSTANCE, 0).apply(year);
             break;
@@ -75,9 +75,13 @@ public class IslamicHolidayParser implements HolidayParser {
             islamicHolidays = new CalculateRelativeDatesFromChronologyWithinGregorianYear(9, 1, HijrahChronology.INSTANCE, 0).apply(year);
             break;
           default:
-            throw new IllegalArgumentException("Unknown islamic holiday " + ih.type());
+            throw new IllegalArgumentException("Unknown islamic holiday " + islamicHoliday.type());
         }
-        return islamicHolidays.map(date -> new CreateHoliday(date).apply(ih));
+
+        return islamicHolidays
+          .map(date -> new MoveDateRelative(date).apply(islamicHoliday))
+          .map(date -> new CreateHoliday(date).apply(islamicHoliday));
+
       })
       .collect(toList());
   }
