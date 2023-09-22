@@ -106,6 +106,6 @@ class UtilTest {
     assertThat(hs)
       .isNotNull()
       .hasSize(1);
-    assertThat(hs.iterator().next().getDescription(Locale.GERMANY)).isEqualTo("Heilige Drei K\u00F6nige");
+    assertThat(hs.iterator().next().getDescription(Locale.GERMANY)).isEqualTo("Heilige Drei Könige");
   }
 }
