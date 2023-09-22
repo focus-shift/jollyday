@@ -22,7 +22,8 @@ public class ValidCycle implements Predicate<Limited> {
       case EVEN_YEARS:
         return year % 2 == 0;
       default:
-        int cycleYears;
+
+        final int cycleYears;
         switch (limited.cycle()) {
           case TWO_YEARS:
             cycleYears = 2;
@@ -42,6 +43,7 @@ public class ValidCycle implements Predicate<Limited> {
           default:
             throw new IllegalArgumentException("Cannot handle unknown cycle type '" + limited.cycle() + "'.");
         }
+
         if (limited.validFrom() != null) {
           // no need to test whether we are in range, as this is already done in ValidFromTo
           return (year - limited.validFrom().getValue()) % cycleYears == 0;
@@ -51,6 +53,7 @@ public class ValidCycle implements Predicate<Limited> {
         } else {
           throw new IllegalArgumentException("Cannot handle cycle type '" + limited.cycle() + "' without any reference year.");
         }
+
     }
   }
 }

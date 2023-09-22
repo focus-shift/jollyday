@@ -14,4 +14,4 @@ target/
 .project
 
 # jqwik
-/jollyday-tests/.jqwik-database
+.jqwik-database

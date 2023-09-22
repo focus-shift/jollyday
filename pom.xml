@@ -39,6 +39,7 @@
     <junit.version>5.10.0</junit.version>
     <mockito.version>5.5.0</mockito.version>
     <assertj.version>3.24.2</assertj.version>
+    <jqwik.version>1.8.0</jqwik.version>
 
     <!--suppress UnresolvedMavenProperty - for IDEA-->
     <sonar.coverage.jacoco.xmlReportPaths>
@@ -112,6 +113,13 @@
         <groupId>org.mockito</groupId>
         <artifactId>mockito-junit-jupiter</artifactId>
         <version>${mockito.version}</version>
+        <scope>test</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>net.jqwik</groupId>
+        <artifactId>jqwik</artifactId>
+        <version>${jqwik.version}</version>
         <scope>test</scope>
       </dependency>
 
