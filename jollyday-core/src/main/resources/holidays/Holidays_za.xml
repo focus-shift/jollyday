@@ -3,7 +3,7 @@
 <Configuration hierarchy="za" description="South Africa"
                xmlns="https://focus_shift.de/jollyday/schema/holiday"
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/Holiday.xsd">
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
   <Holidays>
     <!-- Once-off holidays including election days (see https://en.wikipedia.org/wiki/Public_holidays_in_South_Africa) -->
     <Fixed month="JUNE" day="2" validFrom="1999" validTo="1999" descriptionPropertiesKey="ELECTION_DAY"/>

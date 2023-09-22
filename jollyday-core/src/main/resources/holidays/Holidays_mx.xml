@@ -3,7 +3,7 @@
 <Configuration hierarchy="mx" description="Mexico"
                xmlns="https://focus_shift.de/jollyday/schema/holiday"
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/Holiday.xsd">
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
   <Holidays>
     <Fixed month="FEBRUARY" day="19" localizedType="UNOFFICIAL_HOLIDAY" descriptionPropertiesKey="ARMY_DAY"/>
     <Fixed month="FEBRUARY" day="24" validFrom="1937" localizedType="UNOFFICIAL_HOLIDAY"
