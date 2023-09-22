@@ -21,31 +21,37 @@ public class ValidCycle implements Predicate<Limited> {
         return year % 2 != 0;
       case EVEN_YEARS:
         return year % 2 == 0;
+      case TWO_YEARS:
+        return isValidWithReferenceYear(limited, 2);
+      case THREE_YEARS:
+        return isValidWithReferenceYear(limited, 3);
+      case FOUR_YEARS:
+        return isValidWithReferenceYear(limited, 4);
+      case FIVE_YEARS:
+        return isValidWithReferenceYear(limited, 5);
+      case SIX_YEARS:
+        return isValidWithReferenceYear(limited, 6);
       default:
-        if (limited.validFrom() != null) {
-          int cycleYears;
-          switch (limited.cycle()) {
-            case TWO_YEARS:
-              cycleYears = 2;
-              break;
-            case THREE_YEARS:
-              cycleYears = 3;
-              break;
-            case FOUR_YEARS:
-              cycleYears = 4;
-              break;
-            case FIVE_YEARS:
-              cycleYears = 5;
-              break;
-            case SIX_YEARS:
-              cycleYears = 6;
-              break;
-            default:
-              throw new IllegalArgumentException("Cannot handle unknown cycle type '" + limited.cycle() + "'.");
-          }
-          return (year - limited.validFrom().getValue()) % cycleYears == 0;
-        }
+        throw new IllegalArgumentException("Cannot handle unknown cycle type '" + limited.cycle() + "'.");
     }
-    return true;
+  }
+
+  /**
+   * Will validate if a given year based on the reference year (validFrom/validTo) is valid bases on the cycle strategy.
+   * <p>
+   * Note: no need to test whether we are in range, as this is already done in {@link ValidFromTo}
+   *
+   * @param limited    provides the reference years. First we use validFrom and if not given validTo
+   * @param cycleYears number of years to start the cycle starting from validFrom/validTo
+   * @return true if the given year based on validFrom/validTo and the cycle is valid, otherwise false
+   */
+  private boolean isValidWithReferenceYear(Limited limited, int cycleYears) {
+    if (limited.validFrom() != null) {
+      return (year - limited.validFrom().getValue()) % cycleYears == 0;
+    } else if (limited.validTo() != null) {
+      return (limited.validTo().getValue() - year) % cycleYears == 0;
+    }
+
+    throw new IllegalArgumentException("Cannot handle cycle type '" + limited.cycle() + "' without any reference year.");
   }
 }

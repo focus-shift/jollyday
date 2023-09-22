@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration hierarchy="mu" description="Mauritius"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="JANUARY" day="2" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="JANUARY" day="3" descriptionPropertiesKey="PUBLIC_HOLIDAY"/>
+    <Fixed month="JANUARY" day="22" descriptionPropertiesKey="CHINESE_SPRING_FESTIVAL"/>
+    <Fixed month="FEBRUARY" day="1" descriptionPropertiesKey="ABOLITION_OF_SLAVERY"/>
+    <Fixed month="FEBRUARY" day="4" descriptionPropertiesKey="THAIPOOSAM_CAVEDEE"/>
+    <Fixed month="FEBRUARY" day="18" descriptionPropertiesKey="MAHA_SHIVRATREE"/>
+    <Fixed month="MARCH" day="12" descriptionPropertiesKey="INDEPENDENCE_AND_REPUBLIC_DAY"/>
+    <Fixed month="MARCH" day="22" descriptionPropertiesKey="UGAADI"/>
+    <Fixed month="APRIL" day="22" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="SEPTEMBER" day="20" descriptionPropertiesKey="GANESH_CHATURTHI"/>
+    <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
+    <Fixed month="NOVEMBER" day="2" descriptionPropertiesKey="ARRIVAL_OF_INDENTURED_LABORERS"/>
+    <Fixed month="NOVEMBER" day="12" descriptionPropertiesKey="DIVALI"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+  </Holidays>
+</Configuration>
