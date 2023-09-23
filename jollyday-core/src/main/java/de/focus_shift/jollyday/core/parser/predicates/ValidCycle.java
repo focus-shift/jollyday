@@ -37,7 +37,7 @@ public class ValidCycle implements Predicate<Limited> {
   }
 
   /**
-   * Will validate if a given year based on the reference year (validFrom/validTo) is valid bases on the cycle strategy.
+   * Will validate if a given year based on the reference year (validFrom/validTo) is valid based on the cycle strategy.
    * <p>
    * Note: no need to test whether we are in range, as this is already done in {@link ValidFromTo}
    *
