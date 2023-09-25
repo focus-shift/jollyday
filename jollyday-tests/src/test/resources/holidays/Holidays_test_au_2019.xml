@@ -7,13 +7,13 @@
     <!-- Australia Day -->
     <Fixed month="JANUARY" day="28" descriptionPropertiesKey="NATIONAL_DAY"/>
     <!-- Good Friday -->
-    <Fixed month="APRIL" day="19" descriptionPropertiesKey="GOOD_FRIDAY"/>
+    <Fixed month="APRIL" day="19" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
     <!-- Easter Saturday -->
-    <Fixed month="APRIL" day="20" descriptionPropertiesKey="EASTER_SATURDAY"/>
+    <Fixed month="APRIL" day="20" descriptionPropertiesKey="christian.EASTER_SATURDAY"/>
     <!-- Easter Sunday -->
-    <Fixed month="APRIL" day="21" descriptionPropertiesKey="EASTER"/>
+    <Fixed month="APRIL" day="21" descriptionPropertiesKey="christian.EASTER"/>
     <!-- Easter Monday -->
-    <Fixed month="APRIL" day="22" descriptionPropertiesKey="EASTER_MONDAY"/>
+    <Fixed month="APRIL" day="22" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
   </Holidays>
   <SubConfigurations hierarchy="act" description="Australian Capital Territory">
     <Holidays>
@@ -108,7 +108,7 @@
       <!-- Queen's Birthday -->
       <Fixed month="JUNE" day="10" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
       <!-- Easter Tuesday -->
-      <Fixed month="APRIL" day="23" descriptionPropertiesKey="EASTER_TUESDAY"/>
+      <Fixed month="APRIL" day="23" descriptionPropertiesKey="christian.EASTER_TUESDAY"/>
       <!-- Christmas Day -->
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
       <!-- Boxing Day -->
@@ -150,7 +150,7 @@
       <!-- Labour Day -->
       <Fixed month="MARCH" day="4" descriptionPropertiesKey="LABOUR_DAY"/>
       <!-- Western Australia Day -->
-      <Fixed month="JUNE" day="3" descriptionPropertiesKey="FOUNDATION_DAY"/>
+      <Fixed month="JUNE" day="3" descriptionPropertiesKey="FOUNDATION"/>
       <!-- Queen's Birthday -->
       <Fixed month="SEPTEMBER" day="30" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
       <!-- Labour Day -->

@@ -6,16 +6,16 @@ import de.focus_shift.jollyday.core.ManagerParameters;
 import de.focus_shift.jollyday.core.util.CalendarUtil;
 import de.focus_shift.jollyday.tests.country.base.AbstractCountryTestBase;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Locale;
 import java.util.Set;
 
 import static de.focus_shift.jollyday.core.HolidayCalendar.KOSOVO;
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.fail;
 
 class HolidayXKTest extends AbstractCountryTestBase {
 
@@ -23,19 +23,10 @@ class HolidayXKTest extends AbstractCountryTestBase {
 
   private final CalendarUtil calendarUtil = new CalendarUtil();
 
-  @Test
-  void testManagerXKStructure2021() {
-    validateCalendarData(ISO_CODE, 2021);
-  }
-
-  @Test
-  void testManagerXKStructure2022() {
-    validateCalendarData(ISO_CODE, 2022);
-  }
-
-  @Test
-  void testManagerXKStructure2023() {
-    validateCalendarData(ISO_CODE, 2023);
+  @ParameterizedTest
+  @ValueSource(ints = {2021, 2022, 2023})
+  void testManagerXKStructure(final int year) {
+    validateCalendarData(ISO_CODE, year, true);
   }
 
   @Test
@@ -66,17 +57,7 @@ class HolidayXKTest extends AbstractCountryTestBase {
   }
 
   @Test
-  void testManagerDifferentInstance() {
-    Locale defaultLocale = Locale.getDefault();
-    Locale.setDefault(Locale.US);
-    try {
-      final HolidayManager defaultManager = HolidayManager.getInstance();
-      final HolidayManager germanManager = HolidayManager.getInstance(ManagerParameters.create(KOSOVO));
-      assertThat(defaultManager).isNotEqualTo(germanManager);
-    } catch (Exception e) {
-      fail("Unexpected error occurred: " + e.getClass().getName() + " - " + e.getMessage());
-    } finally {
-      Locale.setDefault(defaultLocale);
-    }
+  void testManagerDifferentInstanceXK() {
+    validateManagerDifferentInstance(KOSOVO);
   }
 }

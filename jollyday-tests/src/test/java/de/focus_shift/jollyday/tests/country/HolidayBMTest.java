@@ -12,7 +12,6 @@ import org.junit.jupiter.params.provider.ValueSource;
 
 import java.time.LocalDate;
 import java.util.List;
-import java.util.Locale;
 import java.util.Set;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -26,12 +25,12 @@ class HolidayBMTest extends AbstractCountryTestBase {
 
   @ParameterizedTest
   @ValueSource(ints = {2017, 2018, 2020, 2021, 2022, 2023, 2024, 2025})
-  void testManagerVGStructure(final int year) {
+  void testManagerBMStructure(final int year) {
     validateCalendarData(ISO_CODE, year, true);
   }
 
   @Test
-  void testManagerVGInterval() {
+  void testManagerBMInterval() {
     try {
       final HolidayManager instance = HolidayManager.getInstance(ManagerParameters.create(HolidayCalendar.BERMUDA, null));
       final LocalDate startDateInclusive = calendarUtil.create(2022, 10, 1);
@@ -50,17 +49,7 @@ class HolidayBMTest extends AbstractCountryTestBase {
   }
 
   @Test
-  void testManagerDifferentInstance() {
-    final Locale defaultLocale = Locale.getDefault();
-    Locale.setDefault(Locale.US);
-    try {
-      final HolidayManager defaultManager = HolidayManager.getInstance();
-      final HolidayManager virginIslandsManager = HolidayManager.getInstance(ManagerParameters.create(HolidayCalendar.BERMUDA, null));
-      assertThat(defaultManager).isNotEqualTo(virginIslandsManager);
-    } catch (Exception e) {
-      fail("Unexpected error occurred: " + e.getClass().getName() + " - " + e.getMessage());
-    } finally {
-      Locale.setDefault(defaultLocale);
-    }
+  void testManagerDifferentInstanceBM() {
+    validateManagerDifferentInstance(HolidayCalendar.BERMUDA);
   }
 }

@@ -5,29 +5,17 @@ import de.focus_shift.jollyday.core.HolidayManager;
 import de.focus_shift.jollyday.core.ManagerParameters;
 import de.focus_shift.jollyday.tests.country.base.AbstractCountryTestBase;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 class HolidayAUTest extends AbstractCountryTestBase {
 
   private static final String ISO_CODE = "au";
 
-  @Test
-  void testManagerAUStructure2019BeforeUpdate() {
-    validateCalendarData(ISO_CODE, 2019);
-  }
-
-  @Test
-  void testManagerAUStructure2020() {
-    validateCalendarData(ISO_CODE, 2020, true);
-  }
-
-  @Test
-  void testManagerAUStructure2021() {
-    validateCalendarData(ISO_CODE, 2021, true);
-  }
-
-  @Test
-  void testManagerAUStructure2022() {
-    validateCalendarData(ISO_CODE, 2022, true);
+  @ParameterizedTest
+  @ValueSource(ints = {2019, 2020, 2021, 2022})
+  void testManagerAUStructure(final int year) {
+    validateCalendarData(ISO_CODE, year, true);
   }
 
   @Test

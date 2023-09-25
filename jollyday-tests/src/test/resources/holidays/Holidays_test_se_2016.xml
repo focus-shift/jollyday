@@ -4,18 +4,18 @@
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
   <Holidays>
-    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEARS_DAY"/>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
     <Fixed month="JANUARY" day="6" descriptionPropertiesKey="EPIPHANY"/>
-    <Fixed month="MARCH" day="25" descriptionPropertiesKey="GOOD_FRIDAY"/>
-    <Fixed month="MARCH" day="27" descriptionPropertiesKey="EASTER"/>
-    <Fixed month="MARCH" day="28" descriptionPropertiesKey="EASTER_MONDAY"/>
+    <Fixed month="MARCH" day="25" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+    <Fixed month="MARCH" day="27" descriptionPropertiesKey="christian.EASTER"/>
+    <Fixed month="MARCH" day="28" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
-    <Fixed month="MAY" day="5" descriptionPropertiesKey="ASCENSION"/>
-    <Fixed month="MAY" day="15" descriptionPropertiesKey="PENTECOST"/>
+    <Fixed month="MAY" day="5" descriptionPropertiesKey="christian.ASCENSION_DAY"/>
+    <Fixed month="MAY" day="15" descriptionPropertiesKey="christian.PENTECOST"/>
     <Fixed month="JUNE" day="6" descriptionPropertiesKey="NATIONAL_DAY"/>
-    <Fixed month="JUNE" day="24" descriptionPropertiesKey="MIDSUMMERS_EVE"/>
-    <Fixed month="JUNE" day="25" descriptionPropertiesKey="MIDSUMMERS_DAY"/>
-    <Fixed month="NOVEMBER" day="5" descriptionPropertiesKey="ALL_SAINTS_DAY"/>
+    <Fixed month="JUNE" day="24" descriptionPropertiesKey="MIDSUMMER_EVE"/>
+    <Fixed month="JUNE" day="25" descriptionPropertiesKey="MIDSUMMER"/>
+    <Fixed month="NOVEMBER" day="5" descriptionPropertiesKey="ALL_SAINTS"/>
     <Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CHRISTMAS_EVE"/>
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
     <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY"/>

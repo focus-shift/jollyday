@@ -55,33 +55,13 @@ class HolidayDETest extends AbstractCountryTestBase {
   }
 
   @Test
-  void testManagerSameInstance() {
-    final Locale defaultLocale = Locale.getDefault();
-    Locale.setDefault(GERMANY);
-    try {
-      final HolidayManager defaultManager = HolidayManager.getInstance();
-      final HolidayManager germanManager = HolidayManager.getInstance(ManagerParameters.create(HolidayCalendar.GERMANY, null));
-      assertThat(defaultManager).isEqualTo(germanManager);
-    } catch (Exception e) {
-      fail("Unexpected error occurred: " + e.getClass().getName() + " - " + e.getMessage());
-    } finally {
-      Locale.setDefault(defaultLocale);
-    }
+  void testManagerSameInstanceDE() {
+    validateManagerSameInstance(GERMANY, HolidayCalendar.GERMANY);
   }
 
   @Test
-  void testManagerDifferentInstance() {
-    final Locale defaultLocale = Locale.getDefault();
-    Locale.setDefault(Locale.US);
-    try {
-      final HolidayManager defaultManager = HolidayManager.getInstance();
-      final HolidayManager germanManager = HolidayManager.getInstance(ManagerParameters.create(HolidayCalendar.GERMANY, null));
-      assertThat(defaultManager).isNotEqualTo(germanManager);
-    } catch (Exception e) {
-      fail("Unexpected error occurred: " + e.getClass().getName() + " - " + e.getMessage());
-    } finally {
-      Locale.setDefault(defaultLocale);
-    }
+  void testManagerDifferentInstanceDE() {
+    validateManagerDifferentInstance(HolidayCalendar.GERMANY);
   }
 
   @Test
