@@ -30,6 +30,11 @@
     <ChristianHoliday type="WHIT_MONDAY" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
   </Holidays>
 
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Germany</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:DE</Source>
+  </Sources>
+
   <SubConfigurations hierarchy="be" description="Berlin">
     <Holidays>
       <Fixed month="MARCH" day="8" descriptionPropertiesKey="INTERNATIONAL_WOMAN" validFrom="2019"/>
