@@ -12,9 +12,9 @@
     <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
     <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="REMEMBRANCE"/>
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-    <Fixed month="APRIL" day="5" descriptionPropertiesKey="EASTER_MONDAY"/>
-    <Fixed month="MAY" day="13" descriptionPropertiesKey="ASCENSION_DAY"/>
-    <Fixed month="MAY" day="24" descriptionPropertiesKey="WHIT_MONDAY"/>
+    <Fixed month="APRIL" day="5" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+    <Fixed month="MAY" day="13" descriptionPropertiesKey="christian.ASCENSION_DAY"/>
+    <Fixed month="MAY" day="24" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
   </Holidays>
   <SubConfigurations hierarchy="ma"
                      description="Martinique">
@@ -42,14 +42,14 @@
   <SubConfigurations hierarchy="br" description="Bas-Rhin">
     <Holidays>
       <Fixed month="DECEMBER" day="26"/>
-      <ChristianHoliday type="GOOD_FRIDAY"/>
+      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
     </Holidays>
   </SubConfigurations>
   <SubConfigurations hierarchy="hr"
                      description="Haut-Rhin">
     <Holidays>
       <Fixed month="DECEMBER" day="26"/>
-      <ChristianHoliday type="GOOD_FRIDAY"/>
+      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
     </Holidays>
   </SubConfigurations>
   <SubConfigurations hierarchy="mo" description="Moselle">
