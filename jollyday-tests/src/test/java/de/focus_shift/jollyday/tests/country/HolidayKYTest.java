@@ -26,12 +26,12 @@ class HolidayKYTest extends AbstractCountryTestBase {
 
   @ParameterizedTest
   @ValueSource(ints = {2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023})
-  void testManagerVGStructure(final int year) {
+  void testManagerKYStructure(final int year) {
     validateCalendarData(ISO_CODE, year, true);
   }
 
   @Test
-  void testManagerVGInterval() {
+  void testManagerKYInterval() {
     try {
       final HolidayManager instance = HolidayManager.getInstance(ManagerParameters.create(HolidayCalendar.CAYMAN_ISLANDS, null));
       final LocalDate startDateInclusive = calendarUtil.create(2022, 10, 1);
@@ -50,17 +50,7 @@ class HolidayKYTest extends AbstractCountryTestBase {
   }
 
   @Test
-  void testManagerDifferentInstance() {
-    final Locale defaultLocale = Locale.getDefault();
-    Locale.setDefault(Locale.US);
-    try {
-      final HolidayManager defaultManager = HolidayManager.getInstance();
-      final HolidayManager virginIslandsManager = HolidayManager.getInstance(ManagerParameters.create(HolidayCalendar.CAYMAN_ISLANDS, null));
-      assertThat(defaultManager).isNotEqualTo(virginIslandsManager);
-    } catch (Exception e) {
-      fail("Unexpected error occurred: " + e.getClass().getName() + " - " + e.getMessage());
-    } finally {
-      Locale.setDefault(defaultLocale);
-    }
+  void testManagerDifferentInstanceKY() {
+    validateManagerDifferentInstance(HolidayCalendar.CAYMAN_ISLANDS);
   }
 }

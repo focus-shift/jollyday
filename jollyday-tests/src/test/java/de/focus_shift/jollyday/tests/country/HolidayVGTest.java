@@ -12,7 +12,6 @@ import org.junit.jupiter.params.provider.ValueSource;
 
 import java.time.LocalDate;
 import java.util.List;
-import java.util.Locale;
 import java.util.Set;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -50,17 +49,7 @@ class HolidayVGTest extends AbstractCountryTestBase {
   }
 
   @Test
-  void testManagerDifferentInstance() {
-    final Locale defaultLocale = Locale.getDefault();
-    Locale.setDefault(Locale.US);
-    try {
-      final HolidayManager defaultManager = HolidayManager.getInstance();
-      final HolidayManager virginIslandsManager = HolidayManager.getInstance(ManagerParameters.create(HolidayCalendar.BRITISH_VIRGIN_ISLANDS, null));
-      assertThat(defaultManager).isNotEqualTo(virginIslandsManager);
-    } catch (Exception e) {
-      fail("Unexpected error occurred: " + e.getClass().getName() + " - " + e.getMessage());
-    } finally {
-      Locale.setDefault(defaultLocale);
-    }
+  void testManagerDifferentInstanceVG() {
+    validateManagerDifferentInstance(HolidayCalendar.BRITISH_VIRGIN_ISLANDS);
   }
 }
