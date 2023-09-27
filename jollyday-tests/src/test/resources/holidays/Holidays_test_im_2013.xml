@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration hierarchy="im" description="Isle of Man"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="MARCH" day="29" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+    <Fixed month="APRIL" day="1" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+    <Fixed month="MAY" day="6" descriptionPropertiesKey="EARLY_MAY_BANK_HOLIDAY"/>
+    <Fixed month="MAY" day="27" descriptionPropertiesKey="LATE_MAY_BANK_HOLIDAY"/>
+    <Fixed month="JUNE" day="7" descriptionPropertiesKey="TT_BANK_HOLIDAY"/>
+    <Fixed month="JULY" day="5" descriptionPropertiesKey="TYNWALD"/>
+    <Fixed month="AUGUST" day="26" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY"/>
+  </Holidays>
+</Configuration>
