@@ -35,4 +35,10 @@
 
     <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
   </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Guernsey</Source>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_the_United_Kingdom</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:GG</Source>
+  </Sources>
 </Configuration>
