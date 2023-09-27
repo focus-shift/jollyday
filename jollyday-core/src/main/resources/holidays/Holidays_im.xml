@@ -18,9 +18,9 @@
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
     </Fixed>
 
-    <!-- The 2020 bank holiday was moved from the 4th to the 8th of May -->
+    <!-- The 2020 Early May Bank Holiday was moved from the 4th to the 8th of May -->
     <Fixed month="MAY" day="8" validFrom="2020" validTo="2020" descriptionPropertiesKey="EARLY_MAY_BANK_HOLIDAY"/>
-    <!-- The 2022 spring bank holiday was moved from the 4th of May to the second of June -->
+    <!-- The 2022 Late May Bank Holiday was moved from the 31st of May to the second of June -->
     <Fixed month="JUNE" day="2" validFrom="2022" validTo="2022" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
     <Fixed month="JUNE" day="3" validFrom="2022" validTo="2022" descriptionPropertiesKey="QUEENS_PLATINUM_JUBILEE"/>
     <Fixed month="SEPTEMBER" day="19" validFrom="2022" validTo="2022" descriptionPropertiesKey="QUEENS_STATE_FUNERAL"/>
@@ -30,10 +30,12 @@
     <FixedWeekday which="SECOND" weekday="FRIDAY" month="MAY" validFrom="2020" validTo="2020" descriptionPropertiesKey="EARLY_MAY_BANK_HOLIDAY"/>
     <FixedWeekday which="FIRST" weekday="MONDAY" month="MAY" validFrom="2021" descriptionPropertiesKey="EARLY_MAY_BANK_HOLIDAY"/>
 
-    <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" validTo="2021" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
+    <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" validTo="2021" descriptionPropertiesKey="LATE_MAY_BANK_HOLIDAY"/>
     <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" validFrom="2023" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
 
     <FixedWeekday which="SECOND" weekday="FRIDAY" month="JUNE" descriptionPropertiesKey="TOURIST_TROPHY"/>
+
+    <FixedWeekday which="LAST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
 
     <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
   </Holidays>
