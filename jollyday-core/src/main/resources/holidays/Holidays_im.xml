@@ -41,8 +41,9 @@
   </Holidays>
 
   <Sources>
+    <Source>https://www.gov.im/categories/home-and-neighbourhood/bank-holidays/</Source>
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_the_Isle_of_Man</Source>
-    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_the_United_Kingdom</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:IM</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:IM</Source>
   </Sources>
 </Configuration>
