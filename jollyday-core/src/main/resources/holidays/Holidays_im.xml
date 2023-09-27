@@ -35,6 +35,8 @@
 
     <Fixed month="JUNE" day="3" validFrom="2022" validTo="2022" descriptionPropertiesKey="QUEENS_PLATINUM_JUBILEE"/>
 
+    <!-- The 2015 T.T. Bank Holiday was moved from the 5th of June to the 12th of June -->
+    <Fixed month="JUNE" day="12" validFrom="2015" validTo="2015" descriptionPropertiesKey="TT_BANK_HOLIDAY"/>
     <!-- The 2020 T.T. Bank Holiday was moved from the 5th of June to the 12th of June -->
     <Fixed month="JUNE" day="12" validFrom="2020" validTo="2020" descriptionPropertiesKey="TT_BANK_HOLIDAY"/>
     <!-- The 2021 T.T. Bank Holiday was moved from the 11th of June to the 27th of August -->
@@ -58,7 +60,12 @@
     <!-- the Friday of race week, which is the first week in June -->
     <!-- 11 days after the start of Isle of Man TT on Spring Bank Holiday -->
     <!-- the start year may be wrong, it is currently set to the earliest possible year -->
-    <FixedWeekdayBetweenFixed weekday="FRIDAY" validFrom="1907" validTo="2019" descriptionPropertiesKey="TT_BANK_HOLIDAY">
+    <FixedWeekdayBetweenFixed weekday="FRIDAY" validFrom="1907" validTo="2014" descriptionPropertiesKey="TT_BANK_HOLIDAY">
+      <from month="JUNE" day="5"/>
+      <to month="JUNE" day="11"/>
+    </FixedWeekdayBetweenFixed>
+    <!-- 2015 it was moved to the second Friday in June as TT Senior Race was moved one week later -->
+    <FixedWeekdayBetweenFixed weekday="FRIDAY" validFrom="2016" validTo="2019" descriptionPropertiesKey="TT_BANK_HOLIDAY">
       <from month="JUNE" day="5"/>
       <to month="JUNE" day="11"/>
     </FixedWeekdayBetweenFixed>
@@ -76,5 +83,6 @@
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:IM</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:IM</Source>
     <Source of="TT_BANK_HOLIDAY">https://en.wikipedia.org/wiki/Senior_TT</Source>
+    <Source of="TT_BANK_HOLIDAY">https://en.wikipedia.org/wiki/Isle_of_Man_TT</Source>
   </Sources>
 </Configuration>
