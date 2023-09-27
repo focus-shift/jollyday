@@ -12,35 +12,11 @@
     <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY"/>
     <Fixed month="DECEMBER" day="27" descriptionPropertiesKey="CHRISTMAS"/>
   </Holidays>
-  <SubConfigurations hierarchy="al" description="Alderney">
-    <Holidays>
-      <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
-    </Holidays>
-  </SubConfigurations>
   <SubConfigurations hierarchy="en" description="England">
     <Holidays>
       <Fixed month="JANUARY" day="3" descriptionPropertiesKey="NEW_YEAR"/>
       <Fixed month="APRIL" day="18" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
       <Fixed month="AUGUST" day="29" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
-    </Holidays>
-  </SubConfigurations>
-  <SubConfigurations hierarchy="gu" description="Guernsey">
-    <Holidays>
-      <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
-      <Fixed month="MAY" day="9" descriptionPropertiesKey="LIBERATION"/>
-    </Holidays>
-  </SubConfigurations>
-  <SubConfigurations hierarchy="im" description="Isle of Man">
-    <Holidays>
-      <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
-      <Fixed month="JUNE" day="10" descriptionPropertiesKey="TOURIST_TROPHY"/>
-      <Fixed month="JULY" day="5" descriptionPropertiesKey="TYNWALD"/>
-    </Holidays>
-  </SubConfigurations>
-  <SubConfigurations hierarchy="je" description="Jersey">
-    <Holidays>
-      <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
-      <Fixed month="MAY" day="9" descriptionPropertiesKey="LIBERATION"/>
     </Holidays>
   </SubConfigurations>
   <SubConfigurations hierarchy="ni" description="Northern Ireland">
