@@ -33,11 +33,17 @@
     <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" validTo="2021" descriptionPropertiesKey="LATE_MAY_BANK_HOLIDAY"/>
     <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" validFrom="2023" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
 
-    <FixedWeekday which="SECOND" weekday="FRIDAY" month="JUNE" descriptionPropertiesKey="TOURIST_TROPHY"/>
-
     <FixedWeekday which="LAST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
 
     <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+
+    <!-- the Friday of race week, which is the first week in June -->
+    <!-- 11 days after the start of Isle of Man TT on Spring Bank Holiday -->
+    <!-- the start year may be wrong, it is currently set to the earliest possible year -->
+    <FixedWeekdayBetweenFixed weekday="FRIDAY" validFrom="1907" descriptionPropertiesKey="TT_BANK_HOLIDAY">
+      <from month="JUNE" day="5"/>
+      <to month="JUNE" day="11"/>
+    </FixedWeekdayBetweenFixed>
   </Holidays>
 
   <Sources>
@@ -45,5 +51,6 @@
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_the_Isle_of_Man</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:IM</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:IM</Source>
+    <Source of="TT_BANK_HOLIDAY">https://en.wikipedia.org/wiki/Senior_TT</Source>
   </Sources>
 </Configuration>

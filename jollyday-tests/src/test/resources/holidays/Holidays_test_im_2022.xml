@@ -9,7 +9,7 @@
     <Fixed month="MAY" day="2" descriptionPropertiesKey="EARLY_MAY_BANK_HOLIDAY"/>
     <Fixed month="JUNE" day="2" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
     <Fixed month="JUNE" day="3" descriptionPropertiesKey="QUEENS_PLATINUM_JUBILEE"/>
-    <Fixed month="JUNE" day="10" descriptionPropertiesKey="TOURIST_TROPHY"/>
+    <Fixed month="JUNE" day="10" descriptionPropertiesKey="TT_BANK_HOLIDAY"/>
     <Fixed month="JULY" day="5" descriptionPropertiesKey="TYNWALD"/>
     <Fixed month="AUGUST" day="29" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
     <Fixed month="SEPTEMBER" day="19" descriptionPropertiesKey="QUEENS_STATE_FUNERAL"/>
