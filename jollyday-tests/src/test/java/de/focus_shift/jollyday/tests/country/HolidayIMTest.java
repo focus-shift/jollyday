@@ -43,7 +43,7 @@ class HolidayIMTest extends AbstractCountryTestBase {
   }
 
   @ParameterizedTest
-  @ValueSource(ints = {2010, 2022, 2023})
+  @ValueSource(ints = {2010, 2022, 2023, 2024})
   void testManagerIMStructure(final int year) {
     validateCalendarData(ISO_CODE, year, true);
   }
