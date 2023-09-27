@@ -10,18 +10,22 @@
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
 
-    <Fixed month="JULY" day="5" descriptionPropertiesKey="TYNWALD"/>
+    <Fixed month="JULY" day="5" descriptionPropertiesKey="TYNWALD">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
 
-    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY">
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS">
       <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
     </Fixed>
-    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS">
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY">
       <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
     </Fixed>
 
     <!-- The 2020 Early May Bank Holiday was moved from the 4th to the 8th of May -->
+    <!-- to mark the 75th anniversary of Victory in Europe Day (VE Day) -->
     <Fixed month="MAY" day="8" validFrom="2020" validTo="2020" descriptionPropertiesKey="EARLY_MAY_BANK_HOLIDAY"/>
 
     <Fixed month="MAY" day="8" validFrom="2023" validTo="2023" descriptionPropertiesKey="KINGS_CORONATION"/>
@@ -31,6 +35,8 @@
 
     <Fixed month="JUNE" day="3" validFrom="2022" validTo="2022" descriptionPropertiesKey="QUEENS_PLATINUM_JUBILEE"/>
 
+    <!-- The 2020 T.T. Bank Holiday was moved from the 5th of June to the 12th of June -->
+    <Fixed month="JUNE" day="12" validFrom="2020" validTo="2020" descriptionPropertiesKey="TT_BANK_HOLIDAY"/>
     <!-- The 2021 T.T. Bank Holiday was moved from the 11th of June to the 27th of August -->
     <Fixed month="AUGUST" day="27" validFrom="2021" validTo="2021" descriptionPropertiesKey="TT_BANK_HOLIDAY"/>
 
@@ -52,10 +58,11 @@
     <!-- the Friday of race week, which is the first week in June -->
     <!-- 11 days after the start of Isle of Man TT on Spring Bank Holiday -->
     <!-- the start year may be wrong, it is currently set to the earliest possible year -->
-    <FixedWeekdayBetweenFixed weekday="FRIDAY" validFrom="1907" validTo="2020" descriptionPropertiesKey="TT_BANK_HOLIDAY">
+    <FixedWeekdayBetweenFixed weekday="FRIDAY" validFrom="1907" validTo="2019" descriptionPropertiesKey="TT_BANK_HOLIDAY">
       <from month="JUNE" day="5"/>
       <to month="JUNE" day="11"/>
     </FixedWeekdayBetweenFixed>
+    <!-- 2020 it was moved to the second Friday in June as TT Senior Race was canceled -->
     <!-- 2021 it was moved to the last Friday in August as TT Senior Race was canceled -->
     <FixedWeekdayBetweenFixed weekday="FRIDAY" validFrom="2022" descriptionPropertiesKey="TT_BANK_HOLIDAY">
       <from month="JUNE" day="5"/>
