@@ -39,6 +39,7 @@
     <FixedWeekday which="LAST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
 
     <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
 
     <!-- the Friday of race week, which is the first week in June -->
     <!-- 11 days after the start of Isle of Man TT on Spring Bank Holiday -->

@@ -6,6 +6,7 @@
   <Holidays>
     <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
     <Fixed month="APRIL" day="2" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+    <Fixed month="APRIL" day="5" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     <Fixed month="MAY" day="3" descriptionPropertiesKey="EARLY_MAY_BANK_HOLIDAY"/>
     <Fixed month="MAY" day="31" descriptionPropertiesKey="LATE_MAY_BANK_HOLIDAY"/>
     <Fixed month="JUNE" day="11" descriptionPropertiesKey="TT_BANK_HOLIDAY"/>
