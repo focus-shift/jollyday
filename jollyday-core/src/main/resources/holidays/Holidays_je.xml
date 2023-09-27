@@ -5,6 +5,8 @@
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
   <Holidays>
+    <!-- If a bank holiday is on a weekend, a substitute weekday becomes a bank holiday, normally the following Monday. -->
+
     <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
       <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
@@ -40,6 +42,8 @@
     <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" validTo="2021" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
     <!-- 2022 it was moved to the first Thursday of June -->
     <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" validFrom="2023" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
+
+    <FixedWeekday which="LAST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
 
     <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
     <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
