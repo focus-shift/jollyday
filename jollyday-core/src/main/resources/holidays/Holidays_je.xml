@@ -46,8 +46,8 @@
 
     <Fixed month="APRIL" day="29" validFrom="2011" validTo="2011" descriptionPropertiesKey="ROYAL_WEDDING"/>
 
-    <!-- The 2020 Early May Bank Holiday was moved from the 4th to the 8th of May -->
-    <Fixed month="MAY" day="8" validFrom="2020" validTo="2020" descriptionPropertiesKey="EARLY_MAY_BANK_HOLIDAY"/>
+    <!-- The 2020 Summer Bank Holiday was replaced with the 8th of May -->
+    <Fixed month="MAY" day="8" validFrom="2020" validTo="2020" descriptionPropertiesKey="75_ANNIVERSARY_VE_DAY"/>
 
     <Fixed month="MAY" day="8" validFrom="2023" validTo="2023" descriptionPropertiesKey="KINGS_CORONATION"/>
 
@@ -64,9 +64,7 @@
 
     <Fixed month="SEPTEMBER" day="19" validFrom="2022" validTo="2022" descriptionPropertiesKey="QUEENS_STATE_FUNERAL"/>
 
-    <FixedWeekday which="FIRST" weekday="MONDAY" month="MAY" validFrom="1900" validTo="2019" descriptionPropertiesKey="EARLY_MAY_BANK_HOLIDAY"/>
-    <!-- 2020 it was moved to the second Friday of May -->
-    <FixedWeekday which="FIRST" weekday="MONDAY" month="MAY" validFrom="2021" descriptionPropertiesKey="EARLY_MAY_BANK_HOLIDAY"/>
+    <FixedWeekday which="FIRST" weekday="MONDAY" month="MAY" validFrom="1900" descriptionPropertiesKey="EARLY_MAY_BANK_HOLIDAY"/>
 
     <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" validTo="2011" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
     <!-- 2012 it was moved to the first Monday of June -->
@@ -74,7 +72,9 @@
     <!-- 2022 it was moved to the first Thursday of June -->
     <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" validFrom="2023" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
 
-    <FixedWeekday which="LAST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
+    <FixedWeekday which="LAST" weekday="MONDAY" month="AUGUST" validTo="2019" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
+    <!-- 2020 it was replaced by the 75th Anniversary of VE Day on the second Friday of May -->
+    <FixedWeekday which="LAST" weekday="MONDAY" month="AUGUST" validFrom="2021" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
 
     <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
     <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>

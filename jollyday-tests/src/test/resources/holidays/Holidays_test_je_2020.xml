@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration hierarchy="je" description="Jersey"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="APRIL" day="10" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+    <Fixed month="APRIL" day="13" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+    <Fixed month="MAY" day="4" descriptionPropertiesKey="EARLY_MAY_BANK_HOLIDAY"/>
+    <Fixed month="MAY" day="8" descriptionPropertiesKey="75_ANNIVERSARY_VE_DAY"/>
+    <Fixed month="MAY" day="9" descriptionPropertiesKey="LIBERATION"/>
+    <Fixed month="MAY" day="25" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+    <Fixed month="DECEMBER" day="28" descriptionPropertiesKey="BOXING_DAY"/>
+  </Holidays>
+</Configuration>
