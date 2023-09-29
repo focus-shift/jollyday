@@ -6,8 +6,8 @@
                xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
   <Holidays>
     <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
-      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
 
     <!-- https://www.gov.bm/theofficialgazette/notices/gn03142023 -->
@@ -18,7 +18,6 @@
       <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
-
     <!-- 2019 it was moved one week earlier -->
     <Fixed month="MAY" day="24" validFrom="2019" validTo="2019" descriptionPropertiesKey="BERMUDA_DAY"/>
 
@@ -38,9 +37,9 @@
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
     <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
       <MovingCondition substitute="MONDAY" with="NEXT" weekday="TUESDAY"/>
-      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
 
     <FixedWeekday which="LAST" weekday="FRIDAY" month="MAY" validFrom="2018" validTo="2018" descriptionPropertiesKey="BERMUDA_DAY"/>
@@ -52,29 +51,25 @@
 
     <FixedWeekday which="THIRD" weekday="MONDAY" month="JUNE" validFrom="2009" descriptionPropertiesKey="NATIONAL_HEROES_DAY"/>
 
-    <!-- the Thursday before the first Monday in August -->
-
-    <!-- information for pre-2016 and post-2025 will very likely be very inaccurate, as just assumed to be the same all along -->
-    <FixedWeekday which="LAST" weekday="THURSDAY" month="JULY" validFrom="1947" validTo="2016" descriptionPropertiesKey="EMANCIPATION_DAY"/>
-    <FixedWeekday which="FIRST" weekday="THURSDAY" month="AUGUST" validFrom="2017" validTo="2019" descriptionPropertiesKey="EMANCIPATION_DAY"/>
-    <FixedWeekday which="LAST" weekday="THURSDAY" month="JULY" validFrom="2020" validTo="2022" descriptionPropertiesKey="EMANCIPATION_DAY"/>
-    <FixedWeekday which="FIRST" weekday="THURSDAY" month="AUGUST" validFrom="2023" validTo="2024" descriptionPropertiesKey="EMANCIPATION_DAY"/>
-    <FixedWeekday which="LAST" weekday="THURSDAY" month="JULY" validFrom="2025" descriptionPropertiesKey="EMANCIPATION_DAY"/>
-
-    <!-- the Friday before the first Monday in August -->
-
-    <!-- information for pre-2016 will very likely be very inaccurate, as just assumed to be the same all along -->
-    <FixedWeekday which="LAST" weekday="FRIDAY" month="JULY" validFrom="1947" validTo="2016" descriptionPropertiesKey="SOMERS_DAY"/>
-    <FixedWeekday which="FIRST" weekday="FRIDAY" month="AUGUST" validFrom="2017" validTo="2019" descriptionPropertiesKey="SOMERS_DAY"/>
-
-    <!-- the Friday before the first Monday in August -->
-
-    <!-- information for post-2025 will very likely be very inaccurate, as just assumed to be the same all along -->
-    <FixedWeekday which="LAST" weekday="FRIDAY" month="JULY" validFrom="2020" validTo="2022" descriptionPropertiesKey="MARY_PRINCE_DAY"/>
-    <FixedWeekday which="FIRST" weekday="FRIDAY" month="AUGUST" validFrom="2023" descriptionPropertiesKey="MARY_PRINCE_DAY"/>
-
     <FixedWeekday which="FIRST" weekday="MONDAY" month="SEPTEMBER" descriptionPropertiesKey="LABOUR_DAY"/>
 
     <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+
+    <!-- the Thursday before the first Monday in August -->
+    <FixedWeekdayBetweenFixed weekday="THURSDAY" validFrom="1947" descriptionPropertiesKey="EMANCIPATION_DAY">
+      <from month="JULY" day="28"/>
+      <to month="AUGUST" day="3"/>
+    </FixedWeekdayBetweenFixed>
+
+    <!-- the Friday before the first Monday in August -->
+    <FixedWeekdayBetweenFixed weekday="FRIDAY" validFrom="1947" validTo="2019" descriptionPropertiesKey="SOMERS_DAY">
+      <from month="JULY" day="29"/>
+      <to month="AUGUST" day="4"/>
+    </FixedWeekdayBetweenFixed>
+    <!-- the Friday before the first Monday in August -->
+    <FixedWeekdayBetweenFixed weekday="FRIDAY" validFrom="2020" descriptionPropertiesKey="MARY_PRINCE_DAY">
+      <from month="JULY" day="29"/>
+      <to month="AUGUST" day="4"/>
+    </FixedWeekdayBetweenFixed>
   </Holidays>
 </Configuration>
