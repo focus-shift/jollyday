@@ -43,7 +43,7 @@ class HolidayJETest extends AbstractCountryTestBase {
   }
 
   @ParameterizedTest
-  @ValueSource(ints = {2010, 2011, 2012, 2022, 2023})
+  @ValueSource(ints = {2010, 2011, 2012, 2013, 2022, 2023})
   void testManagerJEStructure(final int year) {
     validateCalendarData(ISO_CODE, year, true);
   }
