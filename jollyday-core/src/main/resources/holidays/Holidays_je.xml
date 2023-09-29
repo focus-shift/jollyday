@@ -6,6 +6,7 @@
                xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
   <Holidays>
     <!-- If a bank holiday is on a weekend, a substitute weekday becomes a bank holiday, normally the following Monday. -->
+    <!-- Jersey has the same public holidays as the United Kingdom - plus an extra day on 9 May, to mark Liberation Day. -->
 
     <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
       <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
