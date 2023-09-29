@@ -24,7 +24,7 @@ class HolidayBMTest extends AbstractCountryTestBase {
   private final CalendarUtil calendarUtil = new CalendarUtil();
 
   @ParameterizedTest
-  @ValueSource(ints = {2017, 2018, 2020, 2021, 2022, 2023, 2024, 2025})
+  @ValueSource(ints = {2015, 2016, 2017, 2018, 2020, 2021, 2022, 2023, 2024, 2025})
   void testManagerBMStructure(final int year) {
     validateCalendarData(ISO_CODE, year, true);
   }

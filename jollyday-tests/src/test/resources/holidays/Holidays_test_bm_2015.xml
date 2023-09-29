@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration hierarchy="bm" description="Bermuda"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="APRIL" day="3" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+    <Fixed month="MAY" day="25" descriptionPropertiesKey="BERMUDA_DAY"/>
+    <Fixed month="JUNE" day="15" descriptionPropertiesKey="NATIONAL_HEROES_DAY"/>
+    <Fixed month="JULY" day="30" descriptionPropertiesKey="EMANCIPATION_DAY"/>
+    <Fixed month="JULY" day="31" descriptionPropertiesKey="SOMERS_DAY"/>
+    <Fixed month="SEPTEMBER" day="7" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="REMEMBRANCE"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+    <Fixed month="DECEMBER" day="28" descriptionPropertiesKey="BOXING_DAY"/>
+  </Holidays>
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Bermuda</Source>
+  </Sources>
+</Configuration>
