@@ -51,8 +51,14 @@
 
     <!-- The 2022 Spring Bank Holiday was moved from the 31st of May to the 2nd of June -->
     <Fixed month="JUNE" day="2" validFrom="2022" validTo="2022" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
+    <!-- The 2012 late May bank holiday will be moved to Monday 4 June 2012 -->
+    <Fixed month="JUNE" day="4" validFrom="2012" validTo="2012" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
 
     <Fixed month="JUNE" day="3" validFrom="2022" validTo="2022" descriptionPropertiesKey="QUEENS_PLATINUM_JUBILEE"/>
+
+    <!-- There will be a special bank holiday in 2012 to celebrate the Queen’s Diamond Jubilee. -->
+    <!-- the Jubilee bank holiday will be on Tuesday 5 June 2012. -->
+    <Fixed month="JUNE" day="5" validFrom="2012" validTo="2012" descriptionPropertiesKey="QUEENS_DIAMOND_JUBILEE"/>
 
     <Fixed month="SEPTEMBER" day="19" validFrom="2022" validTo="2022" descriptionPropertiesKey="QUEENS_STATE_FUNERAL"/>
 
@@ -60,7 +66,9 @@
     <!-- 2020 it was moved to the second Friday of May -->
     <FixedWeekday which="FIRST" weekday="MONDAY" month="MAY" validFrom="2021" descriptionPropertiesKey="EARLY_MAY_BANK_HOLIDAY"/>
 
-    <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" validTo="2021" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
+    <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" validTo="2011" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
+    <!-- 2012 it was moved to the first Monday of June -->
+    <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" validFrom="2013" validTo="2021" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
     <!-- 2022 it was moved to the first Thursday of June -->
     <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" validFrom="2023" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
 
