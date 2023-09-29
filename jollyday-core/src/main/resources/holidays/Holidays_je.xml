@@ -64,7 +64,7 @@
     <!-- the Jubilee bank holiday will be on Tuesday 5 June 2012. -->
     <Fixed month="JUNE" day="5" validFrom="2012" validTo="2012" descriptionPropertiesKey="QUEENS_DIAMOND_JUBILEE"/>
 
-    <Fixed month="SEPTEMBER" day="19" validFrom="2022" validTo="2022" descriptionPropertiesKey="QUEENS_STATE_FUNERAL"/>
+    <Fixed month="SEPTEMBER" day="19" validFrom="2022" validTo="2022" descriptionPropertiesKey="FUNERAL_QUEEN_ELIZABETH_II"/>
 
     <!-- The 2021 Liberation Day was replaced with the 27th of September -->
     <Fixed month="SEPTEMBER" day="27" validFrom="2021" validTo="2021" descriptionPropertiesKey="CORN_RIOTS_ANNIVERSARY"/>

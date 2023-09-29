@@ -13,7 +13,7 @@
     <Fixed month="JUNE" day="10" descriptionPropertiesKey="TT_BANK_HOLIDAY"/>
     <Fixed month="JULY" day="5" descriptionPropertiesKey="TYNWALD"/>
     <Fixed month="AUGUST" day="29" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
-    <Fixed month="SEPTEMBER" day="19" descriptionPropertiesKey="QUEENS_STATE_FUNERAL"/>
+    <Fixed month="SEPTEMBER" day="19" descriptionPropertiesKey="STATE_FUNERAL_QUEEN_ELIZABETH_II"/>
     <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY"/>
     <Fixed month="DECEMBER" day="27" descriptionPropertiesKey="CHRISTMAS"/>
   </Holidays>

@@ -42,7 +42,7 @@
     <!-- The 2021 T.T. Bank Holiday was moved from the 11th of June to the 27th of August -->
     <Fixed month="AUGUST" day="27" validFrom="2021" validTo="2021" descriptionPropertiesKey="TT_BANK_HOLIDAY"/>
 
-    <Fixed month="SEPTEMBER" day="19" validFrom="2022" validTo="2022" descriptionPropertiesKey="QUEENS_STATE_FUNERAL"/>
+    <Fixed month="SEPTEMBER" day="19" validFrom="2022" validTo="2022" descriptionPropertiesKey="STATE_FUNERAL_QUEEN_ELIZABETH_II"/>
 
     <FixedWeekday which="FIRST" weekday="MONDAY" month="MAY" validFrom="1900" validTo="2019" descriptionPropertiesKey="EARLY_MAY_BANK_HOLIDAY"/>
     <!-- 2020 it was moved to the second Friday of May -->
