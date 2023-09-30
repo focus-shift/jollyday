@@ -53,7 +53,7 @@
 
     <Fixed month="MAY" day="8" validFrom="2023" validTo="2023" descriptionPropertiesKey="KINGS_CORONATION"/>
 
-    <!-- The 2022 Spring Bank Holiday was moved from the 31st of May to the 2nd of June -->
+    <!-- The 2022 Spring Bank Holiday was moved from the 30th of May to the 2nd of June -->
     <Fixed month="JUNE" day="2" validFrom="2022" validTo="2022" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
     <!-- The 2012 late May bank holiday will be moved to Monday 4 June 2012 -->
     <Fixed month="JUNE" day="4" validFrom="2012" validTo="2012" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>

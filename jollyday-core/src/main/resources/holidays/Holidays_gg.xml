@@ -21,12 +21,12 @@
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
     </Fixed>
 
-    <!-- The 2020 Early May Bank Holiday was moved from the 4th to the 8th of May -->
+    <!-- The 2020 Early May bank holiday was moved from the 4th to the 8th of May -->
     <Fixed month="MAY" day="8" validFrom="2020" validTo="2020" descriptionPropertiesKey="EARLY_MAY_BANK_HOLIDAY"/>
 
     <Fixed month="MAY" day="8" validFrom="2023" validTo="2023" descriptionPropertiesKey="KINGS_CORONATION"/>
 
-    <!-- The 2022 Spring Bank Holiday was moved from the 31st of May to the 2nd of June -->
+    <!-- The 2022 Spring bank holiday was moved from the 30th of May to the 2nd of June -->
     <Fixed month="JUNE" day="2" validFrom="2022" validTo="2022" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
 
     <Fixed month="JUNE" day="3" validFrom="2022" validTo="2022" descriptionPropertiesKey="QUEENS_PLATINUM_JUBILEE"/>
