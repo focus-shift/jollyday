@@ -10,7 +10,10 @@
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
 
-    <Fixed month="MAY" day="9" descriptionPropertiesKey="LIBERATION"/>
+    <Fixed month="MAY" day="9" validTo="2009" descriptionPropertiesKey="LIBERATION"/>
+    <Fixed month="MAY" day="10" validFrom="2010" validTo="2010" descriptionPropertiesKey="LIBERATION"/>
+    <!-- Liberation Day in 2021 falls on a Sunday -->
+    <Fixed month="MAY" day="9" validFrom="2011" descriptionPropertiesKey="LIBERATION"/>
 
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS">
       <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
