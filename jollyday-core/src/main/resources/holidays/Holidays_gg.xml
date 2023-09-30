@@ -12,6 +12,7 @@
 
     <Fixed month="MAY" day="9" validTo="2009" descriptionPropertiesKey="LIBERATION"/>
     <Fixed month="MAY" day="10" validFrom="2010" validTo="2010" descriptionPropertiesKey="LIBERATION"/>
+    <!-- Liberation Day in 2020 falls on a Saturday -->
     <!-- Liberation Day in 2021 falls on a Sunday -->
     <Fixed month="MAY" day="9" validFrom="2011" descriptionPropertiesKey="LIBERATION"/>
 
@@ -24,7 +25,8 @@
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
     </Fixed>
 
-    <!-- The 2020 May Day bank holiday was moved from the 4th to the 8th of May -->
+    <!-- The May Day holiday which was due to fall on 4th May has been moved
+    to 8th May to commemorate the 75th Anniversary of VE Day -->
     <Fixed month="MAY" day="8" validFrom="2020" validTo="2020" descriptionPropertiesKey="MAY_DAY_BANK_HOLIDAY"/>
 
     <Fixed month="MAY" day="8" validFrom="2023" validTo="2023" descriptionPropertiesKey="KINGS_CORONATION"/>
