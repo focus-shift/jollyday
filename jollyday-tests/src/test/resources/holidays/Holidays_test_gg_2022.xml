@@ -11,6 +11,7 @@
     <Fixed month="MAY" day="9" descriptionPropertiesKey="LIBERATION"/>
     <Fixed month="JUNE" day="2" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
     <Fixed month="JUNE" day="3" descriptionPropertiesKey="QUEENS_PLATINUM_JUBILEE"/>
+    <Fixed month="AUGUST" day="29" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
     <Fixed month="SEPTEMBER" day="19" descriptionPropertiesKey="QUEENS_STATE_FUNERAL"/>
     <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY"/>
     <Fixed month="DECEMBER" day="27" descriptionPropertiesKey="CHRISTMAS"/>

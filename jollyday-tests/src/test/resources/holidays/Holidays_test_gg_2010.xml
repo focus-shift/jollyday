@@ -10,6 +10,7 @@
     <Fixed month="MAY" day="3" descriptionPropertiesKey="EARLY_MAY_BANK_HOLIDAY"/>
     <Fixed month="MAY" day="9" descriptionPropertiesKey="LIBERATION"/>
     <Fixed month="MAY" day="31" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
+    <Fixed month="AUGUST" day="30" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
     <Fixed month="DECEMBER" day="27" descriptionPropertiesKey="CHRISTMAS"/>
     <Fixed month="DECEMBER" day="28" descriptionPropertiesKey="BOXING_DAY"/>
   </Holidays>
