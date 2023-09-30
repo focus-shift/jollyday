@@ -24,8 +24,8 @@
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
     </Fixed>
 
-    <!-- The 2020 Early May bank holiday was moved from the 4th to the 8th of May -->
-    <Fixed month="MAY" day="8" validFrom="2020" validTo="2020" descriptionPropertiesKey="EARLY_MAY_BANK_HOLIDAY"/>
+    <!-- The 2020 May Day bank holiday was moved from the 4th to the 8th of May -->
+    <Fixed month="MAY" day="8" validFrom="2020" validTo="2020" descriptionPropertiesKey="MAY_DAY_BANK_HOLIDAY"/>
 
     <Fixed month="MAY" day="8" validFrom="2023" validTo="2023" descriptionPropertiesKey="KINGS_CORONATION"/>
 
@@ -36,9 +36,9 @@
 
     <Fixed month="SEPTEMBER" day="19" validFrom="2022" validTo="2022" descriptionPropertiesKey="QUEENS_STATE_FUNERAL"/>
 
-    <FixedWeekday which="FIRST" weekday="MONDAY" month="MAY" validFrom="1900" validTo="2019" descriptionPropertiesKey="EARLY_MAY_BANK_HOLIDAY"/>
+    <FixedWeekday which="FIRST" weekday="MONDAY" month="MAY" validFrom="1900" validTo="2019" descriptionPropertiesKey="MAY_DAY_BANK_HOLIDAY"/>
     <!-- 2020 it was moved to the second Friday of May -->
-    <FixedWeekday which="FIRST" weekday="MONDAY" month="MAY" validFrom="2021" descriptionPropertiesKey="EARLY_MAY_BANK_HOLIDAY"/>
+    <FixedWeekday which="FIRST" weekday="MONDAY" month="MAY" validFrom="2021" descriptionPropertiesKey="MAY_DAY_BANK_HOLIDAY"/>
 
     <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" validTo="2021" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
     <!-- 2022 it was moved to the first Thursday of June -->
@@ -53,6 +53,8 @@
   <Sources>
     <Source>https://gov.gg/holidaydates</Source>
     <Source>https://www.gov.gg/article/120214/Public-and-school-holiday-dates</Source>
+    <Source>https://guernseylegalresources.gg/ordinances/guernsey-bailiwick/p/public-holidays/</Source>
+    <Source of="Liberation Day in 2010">https://guernseylegalresources.gg/ordinances/guernsey-bailiwick/p/public-holidays/public-holidays-liberation-day-in-2010-ordinance-2010/</Source>
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Guernsey</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:JE</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:GG</Source>
