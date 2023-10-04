@@ -5,6 +5,11 @@
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
   <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
     <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY">
       <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
@@ -34,26 +39,13 @@
 
   <SubConfigurations hierarchy="en" description="England">
     <Holidays>
-      <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
-        <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
-        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-      </Fixed>
       <FixedWeekday which="LAST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
       <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     </Holidays>
   </SubConfigurations>
-
-  <SubConfigurations hierarchy="ni" description="Northern Ireland">
+  <!-- England and Wales are always the same -->
+  <SubConfigurations hierarchy="wa" description="Wales">
     <Holidays>
-      <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
-      <Fixed month="MARCH" day="17" descriptionPropertiesKey="ST_PATRICK">
-        <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
-        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-      </Fixed>
-      <Fixed month="JULY" day="12" descriptionPropertiesKey="BATTLE_BOYNE">
-        <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
-        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-      </Fixed>
       <FixedWeekday which="LAST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
       <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     </Holidays>
@@ -61,22 +53,23 @@
 
   <SubConfigurations hierarchy="sc" description="Scotland">
     <Holidays>
-      <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
-        <MovingCondition substitute="SATURDAY" with="NEXT" weekday="TUESDAY"/>
-        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
-      </Fixed>
       <Fixed month="JANUARY" day="2" descriptionPropertiesKey="NEW_YEAR">
         <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
-        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+        <MovingCondition substitute="MONDAY" with="NEXT" weekday="TUESDAY"/>
       </Fixed>
       <Fixed month="NOVEMBER" day="30" descriptionPropertiesKey="ST_ANDREW"/>
       <FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
     </Holidays>
   </SubConfigurations>
 
-  <SubConfigurations hierarchy="wa" description="Wales">
+  <SubConfigurations hierarchy="ni" description="Northern Ireland">
     <Holidays>
-      <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
+      <Fixed month="MARCH" day="17" descriptionPropertiesKey="ST_PATRICK">
+        <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+      </Fixed>
+      <Fixed month="JULY" day="12" descriptionPropertiesKey="BATTLE_BOYNE">
         <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
