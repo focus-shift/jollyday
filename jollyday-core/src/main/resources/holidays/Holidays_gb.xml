@@ -5,6 +5,8 @@
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
   <Holidays>
+    <!-- If a bank holiday is on a weekend, a ‘substitute’ weekday becomes a bank holiday, normally the following Monday. -->
+
     <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
       <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
@@ -37,11 +39,25 @@
     <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
   </Holidays>
 
+  <Sources>
+    <Source>https://www.gov.uk/bank-holidays</Source>
+    <Source>https://www.direct.gov.uk/en/Governmentcitizensandrights/LivingintheUK/DG_073741</Source>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_the_United_Kingdom</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:GB</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:GB</Source>
+  </Sources>
+
   <SubConfigurations hierarchy="eng" description="England">
     <Holidays>
       <FixedWeekday which="LAST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
       <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     </Holidays>
+
+    <Sources>
+      <Source>https://www.gov.uk/bank-holidays#england-and-wales</Source>
+      <Source>https://www.direct.gov.uk/en/Governmentcitizensandrights/LivingintheUK/DG_073741</Source>
+      <Source>https://en.wikipedia.org/wiki/Public_holidays_in_the_United_Kingdom</Source>
+    </Sources>
   </SubConfigurations>
   <!-- England and Wales are always the same -->
   <SubConfigurations hierarchy="wls" description="Wales">
@@ -49,6 +65,12 @@
       <FixedWeekday which="LAST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
       <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     </Holidays>
+
+    <Sources>
+      <Source>https://www.gov.uk/bank-holidays#england-and-wales</Source>
+      <Source>https://www.direct.gov.uk/en/Governmentcitizensandrights/LivingintheUK/DG_073741</Source>
+      <Source>https://en.wikipedia.org/wiki/Public_holidays_in_the_United_Kingdom</Source>
+    </Sources>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="sct" description="Scotland">
@@ -61,6 +83,18 @@
       <Fixed month="NOVEMBER" day="30" descriptionPropertiesKey="ST_ANDREW"/>
       <FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
     </Holidays>
+
+    <Sources>
+      <Source>https://www.gov.uk/bank-holidays#scotland</Source>
+      <Source>https://www.direct.gov.uk/en/Governmentcitizensandrights/LivingintheUK/DG_073741</Source>
+      <Source>https://www.mygov.scot/scotland-bank-holidays</Source>
+      <Source>https://www.gov.scot/publications/bank-holidays/</Source>
+      <Source>https://scotland.gov.uk/Topics/People/bank-holidays/</Source>
+      <Source>https://scotland.gov.uk/Topics/People/bank-holidays/2004-09</Source>
+      <Source>https://www.scotland.gov.uk./Publications/2005/01/bankholidays</Source>
+      <Source>https://en.wikipedia.org/wiki/Public_and_bank_holidays_in_Scotland</Source>
+      <Source>https://en.wikipedia.org/wiki/Public_holidays_in_the_United_Kingdom</Source>
+    </Sources>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="nir" description="Northern Ireland">
@@ -76,5 +110,12 @@
       <FixedWeekday which="LAST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
       <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     </Holidays>
+
+    <Sources>
+      <Source>https://www.gov.uk/bank-holidays#northern-ireland</Source>
+      <Source>https://www.direct.gov.uk/en/Governmentcitizensandrights/LivingintheUK/DG_073741</Source>
+      <Source>https://www.nidirect.gov.uk/index/government-citizens-and-rights/living-in-northern-ireland/bank-holidays.htm</Source>
+      <Source>https://en.wikipedia.org/wiki/Public_holidays_in_the_United_Kingdom</Source>
+    </Sources>
   </SubConfigurations>
 </Configuration>
