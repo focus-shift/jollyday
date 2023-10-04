@@ -5,14 +5,14 @@
                xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
   <Holidays>
     <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
-    <Fixed month="APRIL" day="2" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-    <Fixed month="APRIL" day="5" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-    <Fixed month="MAY" day="3" descriptionPropertiesKey="EARLY_MAY_BANK_HOLIDAY"/>
-    <Fixed month="MAY" day="31" descriptionPropertiesKey="LATE_MAY_BANK_HOLIDAY"/>
-    <Fixed month="JUNE" day="11" descriptionPropertiesKey="TT_BANK_HOLIDAY"/>
+    <Fixed month="MARCH" day="25" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+    <Fixed month="MARCH" day="28" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+    <Fixed month="MAY" day="2" descriptionPropertiesKey="EARLY_MAY_BANK_HOLIDAY"/>
+    <Fixed month="MAY" day="30" descriptionPropertiesKey="LATE_MAY_BANK_HOLIDAY"/>
+    <Fixed month="JUNE" day="10" descriptionPropertiesKey="TT_BANK_HOLIDAY"/>
     <Fixed month="JULY" day="5" descriptionPropertiesKey="TYNWALD"/>
-    <Fixed month="AUGUST" day="30" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
+    <Fixed month="AUGUST" day="29" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY"/>
     <Fixed month="DECEMBER" day="27" descriptionPropertiesKey="CHRISTMAS"/>
-    <Fixed month="DECEMBER" day="28" descriptionPropertiesKey="BOXING_DAY"/>
   </Holidays>
 </Configuration>

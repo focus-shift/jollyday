@@ -5,40 +5,62 @@
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
   <Holidays>
-    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
-
-    <Fixed month="MAY" day="9" descriptionPropertiesKey="LIBERATION"/>
-
-    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY">
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
       <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
-      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
+
+    <Fixed month="MAY" day="9" validTo="2009" descriptionPropertiesKey="LIBERATION"/>
+    <Fixed month="MAY" day="10" validFrom="2010" validTo="2010" descriptionPropertiesKey="LIBERATION"/>
+    <!-- Liberation Day in 2020 falls on a Saturday -->
+    <!-- Liberation Day in 2021 falls on a Sunday -->
+    <Fixed month="MAY" day="9" validFrom="2011" descriptionPropertiesKey="LIBERATION"/>
+
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS">
       <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
     </Fixed>
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
 
-    <!-- The 2020 bank holiday was moved from the 4th to the 8th of May -->
-    <Fixed month="MAY" day="8" validFrom="2020" validTo="2020" descriptionPropertiesKey="EARLY_MAY_BANK_HOLIDAY"/>
-    <!-- The 2022 spring bank holiday was moved from the 4th of May to the second of June -->
-    <Fixed month="JUNE" day="2" validFrom="2022" validTo="2022" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
-    <Fixed month="JUNE" day="3" validFrom="2022" validTo="2022" descriptionPropertiesKey="QUEENS_PLATINUM_JUBILEE"/>
-    <Fixed month="SEPTEMBER" day="19" validFrom="2022" validTo="2022" descriptionPropertiesKey="QUEENS_STATE_FUNERAL"/>
+    <!-- The May Day holiday which was due to fall on 4th May has been moved
+    to 8th May to commemorate the 75th Anniversary of VE Day -->
+    <Fixed month="MAY" day="8" validFrom="2020" validTo="2020" descriptionPropertiesKey="MAY_DAY_BANK_HOLIDAY"/>
+
     <Fixed month="MAY" day="8" validFrom="2023" validTo="2023" descriptionPropertiesKey="KINGS_CORONATION"/>
 
-    <FixedWeekday which="FIRST" weekday="MONDAY" month="MAY" validFrom="1900" validTo="2019" descriptionPropertiesKey="EARLY_MAY_BANK_HOLIDAY"/>
-    <FixedWeekday which="SECOND" weekday="FRIDAY" month="MAY" validFrom="2020" validTo="2020" descriptionPropertiesKey="EARLY_MAY_BANK_HOLIDAY"/>
-    <FixedWeekday which="FIRST" weekday="MONDAY" month="MAY" validFrom="2021" descriptionPropertiesKey="EARLY_MAY_BANK_HOLIDAY"/>
+    <!-- The 2022 Spring bank holiday was moved from the 30th of May to the 2nd of June -->
+    <Fixed month="JUNE" day="2" validFrom="2022" validTo="2022" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
+
+    <Fixed month="JUNE" day="3" validFrom="2022" validTo="2022" descriptionPropertiesKey="QUEENS_PLATINUM_JUBILEE"/>
+
+    <Fixed month="SEPTEMBER" day="19" validFrom="2022" validTo="2022" descriptionPropertiesKey="QUEENS_STATE_FUNERAL"/>
+
+    <FixedWeekday which="FIRST" weekday="MONDAY" month="MAY" validFrom="1900" validTo="2019" descriptionPropertiesKey="MAY_DAY_BANK_HOLIDAY"/>
+    <!-- 2020 it was moved to the second Friday of May -->
+    <FixedWeekday which="FIRST" weekday="MONDAY" month="MAY" validFrom="2021" descriptionPropertiesKey="MAY_DAY_BANK_HOLIDAY"/>
 
     <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" validTo="2021" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
+    <!-- 2022 it was moved to the first Thursday of June -->
     <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" validFrom="2023" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
 
+    <FixedWeekday which="LAST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
+
     <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
   </Holidays>
 
   <Sources>
+    <Source>https://gov.gg/holidaydates</Source>
+    <Source>https://www.gov.gg/article/120214/Public-and-school-holiday-dates</Source>
+    <Source>https://guernseylegalresources.gg/ordinances/guernsey-bailiwick/p/public-holidays/</Source>
+    <Source of="Liberation Day in 2010">https://guernseylegalresources.gg/ordinances/guernsey-bailiwick/p/public-holidays/public-holidays-liberation-day-in-2010-ordinance-2010/</Source>
+    <Source of="75th Anniversary of Liberation Day in 2020">https://guernseylegalresources.gg/ordinances/guernsey-bailiwick/p/public-holidays/public-holidays-ordinance-2019/</Source>
+    <Source of="QUEENS_STATE_FUNERAL">https://www.gov.gg/HM-Queen-Elizabeth-II</Source>
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Guernsey</Source>
-    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_the_United_Kingdom</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:JE</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:GG</Source>
   </Sources>
 </Configuration>

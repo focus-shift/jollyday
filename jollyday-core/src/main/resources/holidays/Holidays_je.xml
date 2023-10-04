@@ -5,40 +5,90 @@
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
   <Holidays>
-    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <!-- Jersey has the same public holidays as the United Kingdom - plus an extra day on 9 May, to mark Liberation Day. -->
+    <!-- If a bank holiday is on a weekend, a substitute weekday becomes a bank holiday, normally the following Monday. -->
 
-    <Fixed month="MAY" day="9" descriptionPropertiesKey="LIBERATION"/>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
 
-    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY">
+    <!-- A substitute day will not be given for Liberation Day. -->
+    <Fixed month="MAY" day="9" validTo="2020" descriptionPropertiesKey="LIBERATION"/>
+    <!-- 2021 it was replaced by the Corn Riots Anniversary on the fourth Monday of September -->
+    <Fixed month="MAY" day="9" validFrom="2022" descriptionPropertiesKey="LIBERATION"/>
+
+    <!-- assume that 2011 was an outlier -->
+    <Fixed month="DECEMBER" day="25" validTo="2010" descriptionPropertiesKey="CHRISTMAS">
       <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
     </Fixed>
-    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS">
+    <Fixed month="DECEMBER" day="25" validFrom="2011" validTo="2011" descriptionPropertiesKey="CHRISTMAS">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="DECEMBER" day="25" validFrom="2012" descriptionPropertiesKey="CHRISTMAS">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+    <!-- assume that 2011 was an outlier -->
+    <Fixed month="DECEMBER" day="26" validTo="2010" descriptionPropertiesKey="BOXING_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+    <Fixed month="DECEMBER" day="26" validFrom="2011" validTo="2011" descriptionPropertiesKey="BOXING_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+      <MovingCondition substitute="MONDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+    <Fixed month="DECEMBER" day="26" validFrom="2012" descriptionPropertiesKey="BOXING_DAY">
       <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
     </Fixed>
 
-    <!-- The 2020 bank holiday was moved from the 4th to the 8th of May -->
-    <Fixed month="MAY" day="8" validFrom="2020" validTo="2020" descriptionPropertiesKey="EARLY_MAY_BANK_HOLIDAY"/>
-    <!-- The 2022 spring bank holiday was moved from the 4th of May to the second of June -->
-    <Fixed month="JUNE" day="2" validFrom="2022" validTo="2022" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
-    <Fixed month="JUNE" day="3" validFrom="2022" validTo="2022" descriptionPropertiesKey="QUEENS_PLATINUM_JUBILEE"/>
-    <Fixed month="SEPTEMBER" day="19" validFrom="2022" validTo="2022" descriptionPropertiesKey="QUEENS_STATE_FUNERAL"/>
+    <Fixed month="APRIL" day="29" validFrom="2011" validTo="2011" descriptionPropertiesKey="ROYAL_WEDDING"/>
+
+    <!-- The 2020 Summer Bank Holiday was replaced with the 8th of May -->
+    <Fixed month="MAY" day="8" validFrom="2020" validTo="2020" descriptionPropertiesKey="75_ANNIVERSARY_VE_DAY"/>
+
     <Fixed month="MAY" day="8" validFrom="2023" validTo="2023" descriptionPropertiesKey="KINGS_CORONATION"/>
 
-    <FixedWeekday which="FIRST" weekday="MONDAY" month="MAY" validFrom="1900" validTo="2019" descriptionPropertiesKey="EARLY_MAY_BANK_HOLIDAY"/>
-    <FixedWeekday which="SECOND" weekday="FRIDAY" month="MAY" validFrom="2020" validTo="2020" descriptionPropertiesKey="EARLY_MAY_BANK_HOLIDAY"/>
-    <FixedWeekday which="FIRST" weekday="MONDAY" month="MAY" validFrom="2021" descriptionPropertiesKey="EARLY_MAY_BANK_HOLIDAY"/>
+    <!-- The 2022 Spring Bank Holiday was moved from the 30th of May to the 2nd of June -->
+    <Fixed month="JUNE" day="2" validFrom="2022" validTo="2022" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
+    <!-- The 2012 late May bank holiday will be moved to Monday 4 June 2012 -->
+    <Fixed month="JUNE" day="4" validFrom="2012" validTo="2012" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
 
-    <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" validTo="2021" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
+    <Fixed month="JUNE" day="3" validFrom="2022" validTo="2022" descriptionPropertiesKey="QUEENS_PLATINUM_JUBILEE"/>
+
+    <!-- There will be a special bank holiday in 2012 to celebrate the Queen’s Diamond Jubilee. -->
+    <!-- the Jubilee bank holiday will be on Tuesday 5 June 2012. -->
+    <Fixed month="JUNE" day="5" validFrom="2012" validTo="2012" descriptionPropertiesKey="QUEENS_DIAMOND_JUBILEE"/>
+
+    <Fixed month="SEPTEMBER" day="19" validFrom="2022" validTo="2022" descriptionPropertiesKey="FUNERAL_QUEEN_ELIZABETH_II"/>
+
+    <!-- The 2021 Liberation Day was replaced with the 27th of September -->
+    <Fixed month="SEPTEMBER" day="27" validFrom="2021" validTo="2021" descriptionPropertiesKey="CORN_RIOTS_ANNIVERSARY"/>
+
+    <FixedWeekday which="FIRST" weekday="MONDAY" month="MAY" validFrom="1900" descriptionPropertiesKey="EARLY_MAY_BANK_HOLIDAY"/>
+
+    <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" validTo="2011" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
+    <!-- 2012 it was moved to the first Monday of June -->
+    <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" validFrom="2013" validTo="2021" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
+    <!-- 2022 it was moved to the first Thursday of June -->
     <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" validFrom="2023" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
 
+    <FixedWeekday which="LAST" weekday="MONDAY" month="AUGUST" validTo="2019" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
+    <!-- 2020 it was replaced by the 75th Anniversary of VE Day on the second Friday of May -->
+    <FixedWeekday which="LAST" weekday="MONDAY" month="AUGUST" validFrom="2021" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
+
     <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
   </Holidays>
 
   <Sources>
+    <Source>https://www.gov.je/Leisure/Events/WhatsOn/Pages/BankHolidayDates.aspx</Source>
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Jersey</Source>
-    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_the_United_Kingdom</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:JE</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:JE</Source>
   </Sources>
 </Configuration>

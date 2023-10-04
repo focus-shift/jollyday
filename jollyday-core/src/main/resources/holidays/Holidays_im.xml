@@ -5,42 +5,84 @@
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
   <Holidays>
-    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
-
-    <Fixed month="JULY" day="5" descriptionPropertiesKey="TYNWALD"/>
-
-    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY">
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
       <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
-      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
+
+    <Fixed month="JULY" day="5" descriptionPropertiesKey="TYNWALD">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS">
       <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
     </Fixed>
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
 
-    <!-- The 2020 bank holiday was moved from the 4th to the 8th of May -->
+    <!-- The 2020 Early May Bank Holiday was moved from the 4th to the 8th of May -->
+    <!-- to mark the 75th anniversary of Victory in Europe Day (VE Day) -->
     <Fixed month="MAY" day="8" validFrom="2020" validTo="2020" descriptionPropertiesKey="EARLY_MAY_BANK_HOLIDAY"/>
-    <!-- The 2022 spring bank holiday was moved from the 4th of May to the second of June -->
-    <Fixed month="JUNE" day="2" validFrom="2022" validTo="2022" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
-    <Fixed month="JUNE" day="3" validFrom="2022" validTo="2022" descriptionPropertiesKey="QUEENS_PLATINUM_JUBILEE"/>
-    <Fixed month="SEPTEMBER" day="19" validFrom="2022" validTo="2022" descriptionPropertiesKey="QUEENS_STATE_FUNERAL"/>
+
     <Fixed month="MAY" day="8" validFrom="2023" validTo="2023" descriptionPropertiesKey="KINGS_CORONATION"/>
 
+    <!-- The 2022 Spring Bank Holiday was moved from the 30st of May to the 2nd of June -->
+    <Fixed month="JUNE" day="2" validFrom="2022" validTo="2022" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
+
+    <Fixed month="JUNE" day="3" validFrom="2022" validTo="2022" descriptionPropertiesKey="QUEENS_PLATINUM_JUBILEE"/>
+
+    <!-- The 2015 T.T. Bank Holiday was moved from the 5th of June to the 12th of June -->
+    <Fixed month="JUNE" day="12" validFrom="2015" validTo="2015" descriptionPropertiesKey="TT_BANK_HOLIDAY"/>
+    <!-- The 2020 T.T. Bank Holiday was moved from the 5th of June to the 12th of June -->
+    <Fixed month="JUNE" day="12" validFrom="2020" validTo="2020" descriptionPropertiesKey="TT_BANK_HOLIDAY"/>
+    <!-- The 2021 T.T. Bank Holiday was moved from the 11th of June to the 27th of August -->
+    <Fixed month="AUGUST" day="27" validFrom="2021" validTo="2021" descriptionPropertiesKey="TT_BANK_HOLIDAY"/>
+
+    <Fixed month="SEPTEMBER" day="19" validFrom="2022" validTo="2022" descriptionPropertiesKey="STATE_FUNERAL_QUEEN_ELIZABETH_II"/>
+
     <FixedWeekday which="FIRST" weekday="MONDAY" month="MAY" validFrom="1900" validTo="2019" descriptionPropertiesKey="EARLY_MAY_BANK_HOLIDAY"/>
-    <FixedWeekday which="SECOND" weekday="FRIDAY" month="MAY" validFrom="2020" validTo="2020" descriptionPropertiesKey="EARLY_MAY_BANK_HOLIDAY"/>
+    <!-- 2020 it was moved to the second Friday of May -->
     <FixedWeekday which="FIRST" weekday="MONDAY" month="MAY" validFrom="2021" descriptionPropertiesKey="EARLY_MAY_BANK_HOLIDAY"/>
 
-    <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" validTo="2021" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
+    <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" validTo="2021" descriptionPropertiesKey="LATE_MAY_BANK_HOLIDAY"/>
+    <!-- 2022 it was moved to the first Thursday of June -->
     <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" validFrom="2023" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
 
-    <FixedWeekday which="SECOND" weekday="FRIDAY" month="JUNE" descriptionPropertiesKey="TOURIST_TROPHY"/>
+    <FixedWeekday which="LAST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
 
     <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+
+    <!-- the Friday of race week, which is the first week in June -->
+    <!-- 11 days after the start of Isle of Man TT on Spring Bank Holiday -->
+    <!-- the start year may be wrong, it is currently set to the earliest possible year -->
+    <FixedWeekdayBetweenFixed weekday="FRIDAY" validFrom="1907" validTo="2014" descriptionPropertiesKey="TT_BANK_HOLIDAY">
+      <from month="JUNE" day="5"/>
+      <to month="JUNE" day="11"/>
+    </FixedWeekdayBetweenFixed>
+    <!-- 2015 it was moved to the second Friday in June as TT Senior Race was moved one week later -->
+    <FixedWeekdayBetweenFixed weekday="FRIDAY" validFrom="2016" validTo="2019" descriptionPropertiesKey="TT_BANK_HOLIDAY">
+      <from month="JUNE" day="5"/>
+      <to month="JUNE" day="11"/>
+    </FixedWeekdayBetweenFixed>
+    <!-- 2020 it was moved to the second Friday in June as TT Senior Race was canceled -->
+    <!-- 2021 it was moved to the last Friday in August as TT Senior Race was canceled -->
+    <FixedWeekdayBetweenFixed weekday="FRIDAY" validFrom="2022" descriptionPropertiesKey="TT_BANK_HOLIDAY">
+      <from month="JUNE" day="5"/>
+      <to month="JUNE" day="11"/>
+    </FixedWeekdayBetweenFixed>
   </Holidays>
 
   <Sources>
+    <Source>https://www.gov.im/categories/home-and-neighbourhood/bank-holidays/</Source>
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_the_Isle_of_Man</Source>
-    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_the_United_Kingdom</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:IM</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:IM</Source>
+    <Source of="TT_BANK_HOLIDAY">https://en.wikipedia.org/wiki/Senior_TT</Source>
+    <Source of="TT_BANK_HOLIDAY">https://en.wikipedia.org/wiki/Isle_of_Man_TT</Source>
   </Sources>
 </Configuration>

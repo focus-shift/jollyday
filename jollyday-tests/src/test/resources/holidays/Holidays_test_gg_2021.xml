@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration hierarchy="im" description="Isle of Man"
+<Configuration hierarchy="gg" description="Guernsey"
                xmlns="https://focus_shift.de/jollyday/schema/holiday"
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
@@ -7,10 +7,9 @@
     <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
     <Fixed month="APRIL" day="2" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
     <Fixed month="APRIL" day="5" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-    <Fixed month="MAY" day="3" descriptionPropertiesKey="EARLY_MAY_BANK_HOLIDAY"/>
-    <Fixed month="MAY" day="31" descriptionPropertiesKey="LATE_MAY_BANK_HOLIDAY"/>
-    <Fixed month="JUNE" day="11" descriptionPropertiesKey="TT_BANK_HOLIDAY"/>
-    <Fixed month="JULY" day="5" descriptionPropertiesKey="TYNWALD"/>
+    <Fixed month="MAY" day="3" descriptionPropertiesKey="MAY_DAY_BANK_HOLIDAY"/>
+    <Fixed month="MAY" day="9" descriptionPropertiesKey="LIBERATION"/>
+    <Fixed month="MAY" day="31" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
     <Fixed month="AUGUST" day="30" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
     <Fixed month="DECEMBER" day="27" descriptionPropertiesKey="CHRISTMAS"/>
     <Fixed month="DECEMBER" day="28" descriptionPropertiesKey="BOXING_DAY"/>
