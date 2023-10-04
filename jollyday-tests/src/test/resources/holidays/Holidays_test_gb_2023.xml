@@ -27,7 +27,7 @@
 
   <SubConfigurations hierarchy="sct" description="Scotland">
     <Holidays>
-      <Fixed month="JANUARY" day="3" descriptionPropertiesKey="NEW_YEAR"/>
+      <Fixed month="JANUARY" day="3" descriptionPropertiesKey="2ND_JANUARY"/>
       <Fixed month="AUGUST" day="7" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
       <Fixed month="NOVEMBER" day="30" descriptionPropertiesKey="ST_ANDREW"/>
     </Holidays>

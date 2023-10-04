@@ -53,7 +53,7 @@
 
   <SubConfigurations hierarchy="sct" description="Scotland">
     <Holidays>
-      <Fixed month="JANUARY" day="2" descriptionPropertiesKey="NEW_YEAR">
+      <Fixed month="JANUARY" day="2" descriptionPropertiesKey="2ND_JANUARY">
         <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
         <MovingCondition substitute="MONDAY" with="NEXT" weekday="TUESDAY"/>
