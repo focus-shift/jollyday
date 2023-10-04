@@ -1,5 +1,0 @@
-files:
-  - source: /jollyday-core/src/main/resources/descriptions/country_descriptions.properties
-    translation: /jollyday-core/src/main/resources/descriptions/country_descriptions_%two_letters_code%.properties
-  - source: /jollyday-core/src/main/resources/descriptions/holiday_descriptions.properties
-    translation: /jollyday-core/src/main/resources/descriptions/holiday_descriptions_%two_letters_code%.properties
