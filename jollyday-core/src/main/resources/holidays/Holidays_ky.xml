@@ -31,9 +31,9 @@
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
     <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
       <MovingCondition substitute="MONDAY" with="NEXT" weekday="TUESDAY"/>
-      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
 
     <FixedWeekday which="FOURTH" weekday="MONDAY" month="JANUARY" descriptionPropertiesKey="NATIONAL_HEROES_DAY"/>
@@ -47,7 +47,6 @@
 
     <!-- The Public Holiday Act 2007 sets out the Sovereign’s official birthday celebration as “The Monday following the
     Saturday appointed in the United Kingdom as the official birthday of the reigning sovereign”. -->
-
     <!-- information for pre-2008 will very likely be very inaccurate, as just assumed to be the same since the accession of Elizabeth II -->
     <FixedWeekday which="THIRD" weekday="MONDAY" month="JUNE" validFrom="1952" validTo="2009" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
     <FixedWeekday which="SECOND" weekday="MONDAY" month="JUNE" validFrom="2010" validTo="2011" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>

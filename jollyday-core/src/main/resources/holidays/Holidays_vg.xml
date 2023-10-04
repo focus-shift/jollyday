@@ -85,20 +85,23 @@
       <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
     </Fixed>
+    <Fixed month="DECEMBER" day="25" validFrom="2016" validTo="2016" descriptionPropertiesKey="CHRISTMAS">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="DECEMBER" day="25" validFrom="2017" descriptionPropertiesKey="CHRISTMAS">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
     <!-- assume that 2016 was an outlier -->
     <Fixed month="DECEMBER" day="26" validTo="2015" descriptionPropertiesKey="BOXING_DAY">
       <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
     </Fixed>
-    <Fixed month="DECEMBER" day="25" validFrom="2016" validTo="2016" descriptionPropertiesKey="CHRISTMAS">
-      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-    </Fixed>
     <Fixed month="DECEMBER" day="26" validFrom="2016" validTo="2016" descriptionPropertiesKey="BOXING_DAY">
-      <MovingCondition substitute="MONDAY" with="NEXT" weekday="TUESDAY"/>
-    </Fixed>
-    <Fixed month="DECEMBER" day="25" validFrom="2017" descriptionPropertiesKey="CHRISTMAS">
       <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+      <MovingCondition substitute="MONDAY" with="NEXT" weekday="TUESDAY"/>
     </Fixed>
     <Fixed month="DECEMBER" day="26" validFrom="2017" descriptionPropertiesKey="BOXING_DAY">
       <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
