@@ -37,21 +37,21 @@
     <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
   </Holidays>
 
-  <SubConfigurations hierarchy="en" description="England">
+  <SubConfigurations hierarchy="eng" description="England">
     <Holidays>
       <FixedWeekday which="LAST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
       <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     </Holidays>
   </SubConfigurations>
   <!-- England and Wales are always the same -->
-  <SubConfigurations hierarchy="wa" description="Wales">
+  <SubConfigurations hierarchy="wls" description="Wales">
     <Holidays>
       <FixedWeekday which="LAST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
       <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     </Holidays>
   </SubConfigurations>
 
-  <SubConfigurations hierarchy="sc" description="Scotland">
+  <SubConfigurations hierarchy="sct" description="Scotland">
     <Holidays>
       <Fixed month="JANUARY" day="2" descriptionPropertiesKey="NEW_YEAR">
         <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
@@ -63,7 +63,7 @@
     </Holidays>
   </SubConfigurations>
 
-  <SubConfigurations hierarchy="ni" description="Northern Ireland">
+  <SubConfigurations hierarchy="nir" description="Northern Ireland">
     <Holidays>
       <Fixed month="MARCH" day="17" descriptionPropertiesKey="ST_PATRICK">
         <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>

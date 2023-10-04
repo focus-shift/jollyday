@@ -13,20 +13,20 @@
     <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY"/>
     <Fixed month="DECEMBER" day="27" descriptionPropertiesKey="CHRISTMAS"/>
   </Holidays>
-  <SubConfigurations hierarchy="en" description="England">
+  <SubConfigurations hierarchy="eng" description="England">
     <Holidays>
       <Fixed month="APRIL" day="18" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
       <Fixed month="AUGUST" day="29" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
     </Holidays>
   </SubConfigurations>
-  <SubConfigurations hierarchy="wa" description="Wales">
+  <SubConfigurations hierarchy="wls" description="Wales">
     <Holidays>
       <Fixed month="APRIL" day="18" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
       <Fixed month="AUGUST" day="29" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
     </Holidays>
   </SubConfigurations>
 
-  <SubConfigurations hierarchy="sc" description="Scotland">
+  <SubConfigurations hierarchy="sct" description="Scotland">
     <Holidays>
       <Fixed month="JANUARY" day="4" descriptionPropertiesKey="NEW_YEAR"/>
       <Fixed month="AUGUST" day="1" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
@@ -34,7 +34,7 @@
     </Holidays>
   </SubConfigurations>
 
-  <SubConfigurations hierarchy="ni" description="Northern Ireland">
+  <SubConfigurations hierarchy="nir" description="Northern Ireland">
     <Holidays>
       <Fixed month="MARCH" day="17" descriptionPropertiesKey="ST_PATRICK"/>
       <Fixed month="APRIL" day="18" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
