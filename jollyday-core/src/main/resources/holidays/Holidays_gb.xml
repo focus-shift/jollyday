@@ -12,14 +12,40 @@
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
 
-    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY">
+    <!-- assume that 2011 was an outlier -->
+    <Fixed month="DECEMBER" day="25" validTo="2010" descriptionPropertiesKey="CHRISTMAS">
       <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
     </Fixed>
-    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS">
+    <Fixed month="DECEMBER" day="25" validFrom="2011" validTo="2011" descriptionPropertiesKey="CHRISTMAS">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="DECEMBER" day="25" validFrom="2012" descriptionPropertiesKey="CHRISTMAS">
       <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
     </Fixed>
+    <!-- assume that 2011 was an outlier -->
+    <Fixed month="DECEMBER" day="26" validTo="2010" descriptionPropertiesKey="BOXING_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+    <Fixed month="DECEMBER" day="26" validFrom="2011" validTo="2011" descriptionPropertiesKey="BOXING_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+      <MovingCondition substitute="MONDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+    <Fixed month="DECEMBER" day="26" validFrom="2012" descriptionPropertiesKey="BOXING_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+
+    <!-- It has been announced that there will be a special bank holiday in 2011 to celebrate the royal wedding -->
+    <!-- 29 April 2011 was also a special bank holiday to celebrate the royal wedding. -->
+    <!-- The Scottish government has announced that there will be an additional bank holiday on 29 April 2011
+    when the royal wedding is due to take place. -->
+    <!-- There was an additional bank holiday on 29 April 2011 for the royal wedding. -->
+    <Fixed month="APRIL" day="29" validFrom="2011" validTo="2011" descriptionPropertiesKey="ROYAL_WEDDING"/>
 
     <!-- The 2020 Early May bank holiday was moved from the 4th to the 8th of May -->
     <Fixed month="MAY" day="8" validFrom="2020" validTo="2020" descriptionPropertiesKey="EARLY_MAY_BANK_HOLIDAY"/>
