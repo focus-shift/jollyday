@@ -111,7 +111,10 @@
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
         <MovingCondition substitute="MONDAY" with="NEXT" weekday="TUESDAY"/>
       </Fixed>
-      <Fixed month="NOVEMBER" day="30" descriptionPropertiesKey="ST_ANDREW"/>
+      <Fixed month="NOVEMBER" day="30" validFrom="2007" descriptionPropertiesKey="ST_ANDREW">
+        <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+      </Fixed>
       <FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
     </Holidays>
 
