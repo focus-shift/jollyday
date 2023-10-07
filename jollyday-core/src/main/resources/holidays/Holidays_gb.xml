@@ -7,10 +7,16 @@
   <Holidays>
     <!-- If a bank holiday is on a weekend, a ‘substitute’ weekday becomes a bank holiday, normally the following Monday. -->
 
+    <!-- New Year's Day did not become a bank holiday in England, Wales and Northern Ireland until 1 January 1974. -->
     <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
       <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
+
+    <!-- https://www.scotland.gov.uk./Publications/2005/01/bankholidays and
+    https://scotland.gov.uk/Topics/People/bank-holidays/2004-09 actually state that in Scotland
+    in 2004 Christmas Day shall have been on Dec 28 and Boxing Day on Dec 27
+    and in 2005 Christmas Day shall have been on Dec 26 and Boxing Day on Dec 27 -->
 
     <!-- assume that 2011 was an outlier -->
     <Fixed month="DECEMBER" day="25" validTo="2010" descriptionPropertiesKey="CHRISTMAS">
@@ -25,6 +31,7 @@
       <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
     </Fixed>
+    <!-- Boxing Day did not become a bank holiday in Scotland until 1974. -->
     <!-- assume that 2011 was an outlier -->
     <Fixed month="DECEMBER" day="26" validTo="2010" descriptionPropertiesKey="BOXING_DAY">
       <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
@@ -106,6 +113,9 @@
 
   <SubConfigurations hierarchy="sct" description="Scotland">
     <Holidays>
+      <!-- according to The National Archives (nationalarchives.gov.uk): -->
+      <!-- 2 January was created an additional bank holiday in Scotland by the 1971 Act.
+      However, the provision did not come into effect until 1973. -->
       <Fixed month="JANUARY" day="2" descriptionPropertiesKey="2ND_JANUARY">
         <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
@@ -133,10 +143,16 @@
 
   <SubConfigurations hierarchy="nir" description="Northern Ireland">
     <Holidays>
-      <Fixed month="MARCH" day="17" descriptionPropertiesKey="ST_PATRICK">
+      <!-- In 1903, the Bank Holiday (Ireland) Act added 17 March, Saint Patrick's Day, as a bank holiday in Ireland only -->
+      <!-- NOTE: the act was passed by the house of commons before the 17th of March 1903
+      but the house of lords only passed it after the 17th of March 1903 -->
+      <Fixed month="MARCH" day="17" validFrom="1903" descriptionPropertiesKey="ST_PATRICK">
         <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
+      <!-- according to The National Archives (nationalarchives.gov.uk): -->
+      <!-- Two additional days were subsequently appointed in Northern Ireland: [...]
+      12 July (Anniversary of the Battle of the Boyne in 1690), by the Governor of Northern Ireland in 1926. -->
       <Fixed month="JULY" day="12" descriptionPropertiesKey="BATTLE_BOYNE">
         <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
