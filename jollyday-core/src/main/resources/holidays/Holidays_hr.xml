@@ -10,16 +10,23 @@
     <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
     <Fixed month="MAY" day="30" descriptionPropertiesKey="NATIONAL_DAY" validFrom="2020"/>
     <Fixed month="JUNE" day="22" descriptionPropertiesKey="ANTI_FASCIST"/>
-    <Fixed month="JUNE" day="25" descriptionPropertiesKey="NATIONAL_DAY" validFrom="2002" validTo="2019"/>
+    <Fixed month="JUNE" day="25" descriptionPropertiesKey="STATEHOOD" validFrom="2002" validTo="2019"/>
     <Fixed month="AUGUST" day="5" descriptionPropertiesKey="VICTORY"/>
     <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_MARY"/>
-    <Fixed month="OCTOBER" day="8" descriptionPropertiesKey="INDEPENDENCE_DAY" validTo="2019"/>
+    <Fixed month="OCTOBER" day="8" descriptionPropertiesKey="INDEPENDENCE_DAY" validFrom="2002" validTo="2019"/>
     <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
-    <Fixed month="NOVEMBER" day="18" descriptionPropertiesKey="MEMORIAL_DAY" validFrom="2020"/>
+    <Fixed month="NOVEMBER" day="18" descriptionPropertiesKey="REMEMBRANCE" validFrom="2020"/>
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
     <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
     <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
     <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     <ChristianHoliday type="CORPUS_CHRISTI" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
   </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Croatia</Source>
+    <Source of="INDEPENDENCE_DAY">https://en.wikipedia.org/wiki/Independence_Day_(Croatia)</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:HR</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:HR</Source>
+  </Sources>
 </Configuration>
