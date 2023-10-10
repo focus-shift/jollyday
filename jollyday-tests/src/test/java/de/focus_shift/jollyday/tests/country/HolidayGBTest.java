@@ -47,7 +47,7 @@ class HolidayGBTest extends AbstractCountryTestBase {
   // the test data for 2012, 2017 and 2023 exists, but it is not tested, as for New Year's Day and 2nd January in Scotland
   // the official government websites contradict themselves, and it is therefore unclear, when these really are
   // this is to ensure to not enforce wrong holidays
-  @ValueSource(ints = {2008, 2009, 2010, 2011, 2013, 2014, 2015, 2022})
+  @ValueSource(ints = {2008, 2009, 2010, 2011, 2013, 2014, 2015, 2016, 2022})
   void testManagerGBStructure(final int year) {
     validateCalendarData(ISO_CODE, year, true);
   }
