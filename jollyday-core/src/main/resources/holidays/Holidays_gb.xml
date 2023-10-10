@@ -8,6 +8,9 @@
     <!-- If a bank holiday is on a weekend, a ‘substitute’ weekday becomes a bank holiday, normally the following Monday. -->
 
     <!-- New Year's Day did not become a bank holiday in England, Wales and Northern Ireland until 1 January 1974. -->
+    <!-- WARNING: for New Year's Day and 2nd January in Scotland the official government websites
+      contradict themselves, and it is therefore unclear, when these really are -->
+    <!-- the current ruleset is chosen for reasons of most simple code -->
     <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
       <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
@@ -62,7 +65,14 @@
     <!-- The 2022 Spring bank holiday was moved from the 30th of May to the 2nd of June -->
     <Fixed month="JUNE" day="2" validFrom="2022" validTo="2022" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
 
+    <!-- The 2012 late May bank holiday will be moved to Monday 4 June 2012 -->
+    <Fixed month="JUNE" day="4" validFrom="2012" validTo="2012" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
+
     <Fixed month="JUNE" day="3" validFrom="2022" validTo="2022" descriptionPropertiesKey="QUEENS_PLATINUM_JUBILEE"/>
+
+    <!-- an additional Jubilee bank holiday will be on Tuesday 5 June 2012 -->
+    <!-- It has been announced that there will be a special bank holiday in 2012 to celebrate the Queen’s Diamond Jubilee. -->
+    <Fixed month="JUNE" day="5" validFrom="2012" validTo="2012" descriptionPropertiesKey="QUEENS_DIAMOND_JUBILEE"/>
 
     <Fixed month="SEPTEMBER" day="19" validFrom="2022" validTo="2022" descriptionPropertiesKey="QUEENS_STATE_FUNERAL"/>
 
@@ -70,7 +80,9 @@
     <!-- 2020 it was moved to the second Friday of May -->
     <FixedWeekday which="FIRST" weekday="MONDAY" month="MAY" validFrom="2021" descriptionPropertiesKey="EARLY_MAY_BANK_HOLIDAY"/>
 
-    <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" validTo="2021" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
+    <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" validTo="2011" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
+    <!-- 2012 it was moved to the first Monday of June -->
+    <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" validFrom="2013" validTo="2021" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
     <!-- 2022 it was moved to the first Thursday of June -->
     <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" validFrom="2023" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
 
@@ -116,6 +128,9 @@
       <!-- according to The National Archives (nationalarchives.gov.uk): -->
       <!-- 2 January was created an additional bank holiday in Scotland by the 1971 Act.
       However, the provision did not come into effect until 1973. -->
+      <!-- WARNING: for New Year's Day and 2nd January in Scotland the official government websites
+      contradict themselves, and it is therefore unclear, when these really are -->
+      <!-- the current ruleset is chosen for reasons of most simple code -->
       <Fixed month="JANUARY" day="2" descriptionPropertiesKey="2ND_JANUARY">
         <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
