@@ -179,7 +179,7 @@ class HolidayMDTest extends AbstractCountryTestBase {
   @Property
   void ensuresThatBaltiDayIsConfigured(@ForAll @YearRange Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(MOLDOVA));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue(), "bti");
+    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue(), "ba");
     assertThat(holidays)
       .isNotEmpty()
       .contains(new Holiday(LocalDate.of(year.getValue(), MAY, 22), "REGIONAL", OFFICIAL_HOLIDAY));
