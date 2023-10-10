@@ -32,6 +32,7 @@
 
   <Sources>
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Germany</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:DE</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:DE</Source>
   </Sources>
 
@@ -75,6 +76,11 @@
   <SubConfigurations hierarchy="by" description="Bavaria">
     <Holidays>
       <Fixed month="JANUARY" day="6" descriptionPropertiesKey="EPIPHANY"/>
+
+      <!-- it actually is not in all of Bavaria, but in most of it:
+      https://www.statistik.bayern.de/statistik/gebiet_bevoelkerung/zensus/himmelfahrt/index.php -->
+      <Fixed day="15" month="AUGUST" descriptionPropertiesKey="ASSUMPTION_DAY"/>
+
       <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
       <RelativeToFixed validFrom="1981" validTo="1989" descriptionPropertiesKey="REPENTANCE_PRAYER">
         <Weekday>WEDNESDAY</Weekday>
@@ -84,34 +90,9 @@
       <ChristianHoliday type="CORPUS_CHRISTI" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
     </Holidays>
 
-    <SubConfigurations hierarchy="mu" description="Munich">
-      <Holidays>
-        <Fixed day="15" month="AUGUST" descriptionPropertiesKey="ASSUMPTION_DAY"/>
-      </Holidays>
-    </SubConfigurations>
-
     <SubConfigurations hierarchy="ag" description="Augsburg">
       <Holidays>
         <Fixed day="8" month="AUGUST" descriptionPropertiesKey="PEACE"/>
-        <Fixed day="15" month="AUGUST" descriptionPropertiesKey="ASSUMPTION_DAY"/>
-      </Holidays>
-    </SubConfigurations>
-
-    <SubConfigurations hierarchy="wu" description="Würzburg">
-      <Holidays>
-        <Fixed day="15" month="AUGUST" descriptionPropertiesKey="ASSUMPTION_DAY"/>
-      </Holidays>
-    </SubConfigurations>
-
-    <SubConfigurations hierarchy="re" description="Regensburg">
-      <Holidays>
-        <Fixed day="15" month="AUGUST" descriptionPropertiesKey="ASSUMPTION_DAY"/>
-      </Holidays>
-    </SubConfigurations>
-
-    <SubConfigurations hierarchy="in" description="Ingolstadt">
-      <Holidays>
-        <Fixed day="15" month="AUGUST" descriptionPropertiesKey="ASSUMPTION_DAY"/>
       </Holidays>
     </SubConfigurations>
   </SubConfigurations>
