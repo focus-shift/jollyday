@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration hierarchy="gb" description="United Kingdom of Great Britain and Northern Ireland"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="MARCH" day="29" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+    <Fixed month="MAY" day="6" descriptionPropertiesKey="EARLY_MAY_BANK_HOLIDAY"/>
+    <Fixed month="MAY" day="27" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY"/>
+  </Holidays>
+  <SubConfigurations hierarchy="eng" description="England">
+    <Holidays>
+      <Fixed month="APRIL" day="1" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+      <Fixed month="AUGUST" day="26" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="wls" description="Wales">
+    <Holidays>
+      <Fixed month="APRIL" day="1" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+      <Fixed month="AUGUST" day="26" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
+    </Holidays>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="sct" description="Scotland">
+    <Holidays>
+      <Fixed month="JANUARY" day="2" descriptionPropertiesKey="2ND_JANUARY"/>
+      <Fixed month="AUGUST" day="5" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
+      <Fixed month="DECEMBER" day="2" descriptionPropertiesKey="ST_ANDREW"/>
+    </Holidays>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="nir" description="Northern Ireland">
+    <Holidays>
+      <Fixed month="MARCH" day="18" descriptionPropertiesKey="ST_PATRICK"/>
+      <Fixed month="APRIL" day="1" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+      <Fixed month="JULY" day="12" descriptionPropertiesKey="BATTLE_BOYNE"/>
+      <Fixed month="AUGUST" day="26" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
+    </Holidays>
+  </SubConfigurations>
+</Configuration>

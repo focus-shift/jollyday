@@ -5,51 +5,169 @@
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
   <Holidays>
-    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY">
+    <!-- If a bank holiday is on a weekend, a ‘substitute’ weekday becomes a bank holiday, normally the following Monday. -->
+
+    <!-- New Year's Day did not become a bank holiday in England, Wales and Northern Ireland until 1 January 1974. -->
+    <!-- WARNING: for New Year's Day and 2nd January in Scotland the official government websites
+      contradict themselves, and it is therefore unclear, when these really are -->
+    <!-- the current ruleset is chosen for reasons of most simple code -->
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- https://www.scotland.gov.uk./Publications/2005/01/bankholidays and
+    https://scotland.gov.uk/Topics/People/bank-holidays/2004-09 actually state that in Scotland
+    in 2004 Christmas Day shall have been on Dec 28 and Boxing Day on Dec 27
+    and in 2005 Christmas Day shall have been on Dec 26 and Boxing Day on Dec 27 -->
+
+    <!-- assume that 2011 was an outlier -->
+    <Fixed month="DECEMBER" day="25" validTo="2010" descriptionPropertiesKey="CHRISTMAS">
       <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
     </Fixed>
-    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS">
+    <Fixed month="DECEMBER" day="25" validFrom="2011" validTo="2011" descriptionPropertiesKey="CHRISTMAS">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="DECEMBER" day="25" validFrom="2012" descriptionPropertiesKey="CHRISTMAS">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+    <!-- Boxing Day did not become a bank holiday in Scotland until 1974. -->
+    <!-- assume that 2011 was an outlier -->
+    <Fixed month="DECEMBER" day="26" validTo="2010" descriptionPropertiesKey="BOXING_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+    <Fixed month="DECEMBER" day="26" validFrom="2011" validTo="2011" descriptionPropertiesKey="BOXING_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+      <MovingCondition substitute="MONDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+    <Fixed month="DECEMBER" day="26" validFrom="2012" descriptionPropertiesKey="BOXING_DAY">
       <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
     </Fixed>
 
-    <!-- The 2020 bank holiday was moved from the 4th to the 8th of May -->
+    <!-- It has been announced that there will be a special bank holiday in 2011 to celebrate the royal wedding -->
+    <!-- 29 April 2011 was also a special bank holiday to celebrate the royal wedding. -->
+    <!-- The Scottish government has announced that there will be an additional bank holiday on 29 April 2011
+    when the royal wedding is due to take place. -->
+    <!-- There was an additional bank holiday on 29 April 2011 for the royal wedding. -->
+    <Fixed month="APRIL" day="29" validFrom="2011" validTo="2011" descriptionPropertiesKey="ROYAL_WEDDING"/>
+
+    <!-- The 2020 Early May bank holiday was moved from the 4th to the 8th of May -->
     <Fixed month="MAY" day="8" validFrom="2020" validTo="2020" descriptionPropertiesKey="EARLY_MAY_BANK_HOLIDAY"/>
-    <!-- The 2022 spring bank holiday was moved from the 4th of May to the second of June -->
-    <Fixed month="JUNE" day="2" validFrom="2022" validTo="2022" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
-    <Fixed month="JUNE" day="3" validFrom="2022" validTo="2022" descriptionPropertiesKey="QUEENS_PLATINUM_JUBILEE"/>
-    <Fixed month="SEPTEMBER" day="19" validFrom="2022" validTo="2022" descriptionPropertiesKey="QUEENS_STATE_FUNERAL"/>
+
     <Fixed month="MAY" day="8" validFrom="2023" validTo="2023" descriptionPropertiesKey="KINGS_CORONATION"/>
 
+    <!-- The 2022 Spring bank holiday was moved from the 30th of May to the 2nd of June -->
+    <Fixed month="JUNE" day="2" validFrom="2022" validTo="2022" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
+
+    <!-- The 2012 late May bank holiday will be moved to Monday 4 June 2012 -->
+    <Fixed month="JUNE" day="4" validFrom="2012" validTo="2012" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
+
+    <Fixed month="JUNE" day="3" validFrom="2022" validTo="2022" descriptionPropertiesKey="QUEENS_PLATINUM_JUBILEE"/>
+
+    <!-- an additional Jubilee bank holiday will be on Tuesday 5 June 2012 -->
+    <!-- It has been announced that there will be a special bank holiday in 2012 to celebrate the Queen’s Diamond Jubilee. -->
+    <Fixed month="JUNE" day="5" validFrom="2012" validTo="2012" descriptionPropertiesKey="QUEENS_DIAMOND_JUBILEE"/>
+
+    <Fixed month="SEPTEMBER" day="19" validFrom="2022" validTo="2022" descriptionPropertiesKey="QUEENS_STATE_FUNERAL"/>
+
     <FixedWeekday which="FIRST" weekday="MONDAY" month="MAY" validFrom="1900" validTo="2019" descriptionPropertiesKey="EARLY_MAY_BANK_HOLIDAY"/>
-    <FixedWeekday which="SECOND" weekday="FRIDAY" month="MAY" validFrom="2020" validTo="2020" descriptionPropertiesKey="EARLY_MAY_BANK_HOLIDAY"/>
+    <!-- 2020 it was moved to the second Friday of May -->
     <FixedWeekday which="FIRST" weekday="MONDAY" month="MAY" validFrom="2021" descriptionPropertiesKey="EARLY_MAY_BANK_HOLIDAY"/>
 
-    <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" validTo="2021" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
+    <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" validTo="2011" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
+    <!-- 2012 it was moved to the first Monday of June -->
+    <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" validFrom="2013" validTo="2021" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
+    <!-- 2022 it was moved to the first Thursday of June -->
     <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" validFrom="2023" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
 
     <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
   </Holidays>
 
-  <SubConfigurations hierarchy="en" description="England">
+  <Sources>
+    <Source>https://www.gov.uk/bank-holidays</Source>
+    <Source>https://www.direct.gov.uk/en/Governmentcitizensandrights/LivingintheUK/DG_073741</Source>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_the_United_Kingdom</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:GB</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:GB</Source>
+  </Sources>
+
+  <SubConfigurations hierarchy="eng" description="England">
     <Holidays>
-      <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
-        <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
-        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-      </Fixed>
       <FixedWeekday which="LAST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
       <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     </Holidays>
+
+    <Sources>
+      <Source>https://www.gov.uk/bank-holidays#england-and-wales</Source>
+      <Source>https://www.direct.gov.uk/en/Governmentcitizensandrights/LivingintheUK/DG_073741</Source>
+      <Source>https://en.wikipedia.org/wiki/Public_holidays_in_the_United_Kingdom</Source>
+    </Sources>
+  </SubConfigurations>
+  <!-- England and Wales are always the same -->
+  <SubConfigurations hierarchy="wls" description="Wales">
+    <Holidays>
+      <FixedWeekday which="LAST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
+      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+    </Holidays>
+
+    <Sources>
+      <Source>https://www.gov.uk/bank-holidays#england-and-wales</Source>
+      <Source>https://www.direct.gov.uk/en/Governmentcitizensandrights/LivingintheUK/DG_073741</Source>
+      <Source>https://en.wikipedia.org/wiki/Public_holidays_in_the_United_Kingdom</Source>
+    </Sources>
   </SubConfigurations>
 
-  <SubConfigurations hierarchy="ni" description="Northern Ireland">
+  <SubConfigurations hierarchy="sct" description="Scotland">
     <Holidays>
-      <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
-      <Fixed month="MARCH" day="17" descriptionPropertiesKey="ST_PATRICK">
+      <!-- according to The National Archives (nationalarchives.gov.uk): -->
+      <!-- 2 January was created an additional bank holiday in Scotland by the 1971 Act.
+      However, the provision did not come into effect until 1973. -->
+      <!-- WARNING: for New Year's Day and 2nd January in Scotland the official government websites
+      contradict themselves, and it is therefore unclear, when these really are -->
+      <!-- the current ruleset is chosen for reasons of most simple code -->
+      <Fixed month="JANUARY" day="2" descriptionPropertiesKey="2ND_JANUARY">
+        <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+        <MovingCondition substitute="MONDAY" with="NEXT" weekday="TUESDAY"/>
+      </Fixed>
+      <Fixed month="NOVEMBER" day="30" validFrom="2007" descriptionPropertiesKey="ST_ANDREW">
         <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
+      <FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
+    </Holidays>
+
+    <Sources>
+      <Source>https://www.gov.uk/bank-holidays#scotland</Source>
+      <Source>https://www.direct.gov.uk/en/Governmentcitizensandrights/LivingintheUK/DG_073741</Source>
+      <Source>https://www.mygov.scot/scotland-bank-holidays</Source>
+      <Source>https://www.gov.scot/publications/bank-holidays/</Source>
+      <Source>https://scotland.gov.uk/Topics/People/bank-holidays/</Source>
+      <Source>https://scotland.gov.uk/Topics/People/bank-holidays/2004-09</Source>
+      <Source>https://www.scotland.gov.uk./Publications/2005/01/bankholidays</Source>
+      <Source>https://en.wikipedia.org/wiki/Public_and_bank_holidays_in_Scotland</Source>
+      <Source>https://en.wikipedia.org/wiki/Public_holidays_in_the_United_Kingdom</Source>
+    </Sources>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="nir" description="Northern Ireland">
+    <Holidays>
+      <!-- In 1903, the Bank Holiday (Ireland) Act added 17 March, Saint Patrick's Day, as a bank holiday in Ireland only -->
+      <!-- NOTE: the act was passed by the house of commons before the 17th of March 1903
+      but the house of lords only passed it after the 17th of March 1903 -->
+      <Fixed month="MARCH" day="17" validFrom="1903" descriptionPropertiesKey="ST_PATRICK">
+        <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+      </Fixed>
+      <!-- according to The National Archives (nationalarchives.gov.uk): -->
+      <!-- Two additional days were subsequently appointed in Northern Ireland: [...]
+      12 July (Anniversary of the Battle of the Boyne in 1690), by the Governor of Northern Ireland in 1926. -->
       <Fixed month="JULY" day="12" descriptionPropertiesKey="BATTLE_BOYNE">
         <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
@@ -57,31 +175,12 @@
       <FixedWeekday which="LAST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
       <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     </Holidays>
-  </SubConfigurations>
 
-  <SubConfigurations hierarchy="sc" description="Scotland">
-    <Holidays>
-      <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
-        <MovingCondition substitute="SATURDAY" with="NEXT" weekday="TUESDAY"/>
-        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
-      </Fixed>
-      <Fixed month="JANUARY" day="2" descriptionPropertiesKey="NEW_YEAR">
-        <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
-        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-      </Fixed>
-      <Fixed month="NOVEMBER" day="30" descriptionPropertiesKey="ST_ANDREW"/>
-      <FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
-    </Holidays>
-  </SubConfigurations>
-
-  <SubConfigurations hierarchy="wa" description="Wales">
-    <Holidays>
-      <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
-        <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
-        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-      </Fixed>
-      <FixedWeekday which="LAST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
-      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-    </Holidays>
+    <Sources>
+      <Source>https://www.gov.uk/bank-holidays#northern-ireland</Source>
+      <Source>https://www.direct.gov.uk/en/Governmentcitizensandrights/LivingintheUK/DG_073741</Source>
+      <Source>https://www.nidirect.gov.uk/index/government-citizens-and-rights/living-in-northern-ireland/bank-holidays.htm</Source>
+      <Source>https://en.wikipedia.org/wiki/Public_holidays_in_the_United_Kingdom</Source>
+    </Sources>
   </SubConfigurations>
 </Configuration>

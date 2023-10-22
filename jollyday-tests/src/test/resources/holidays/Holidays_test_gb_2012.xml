@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration hierarchy="gb" description="United Kingdom of Great Britain and Northern Ireland"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <!-- WARNING: according to https://www.gov.uk/bank-holidays#scotland in Scotland New Year's Day was on the 3rd -->
+    <!-- according to https://www.direct.gov.uk/en/Governmentcitizensandrights/LivingintheUK/DG_073741 and
+    https://scotland.gov.uk/Topics/People/bank-holidays/ it was on the 2nd -->
+    <Fixed month="JANUARY" day="2" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="APRIL" day="6" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+    <Fixed month="MAY" day="7" descriptionPropertiesKey="EARLY_MAY_BANK_HOLIDAY"/>
+    <Fixed month="JUNE" day="4" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
+    <Fixed month="JUNE" day="5" descriptionPropertiesKey="QUEENS_DIAMOND_JUBILEE"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY"/>
+  </Holidays>
+  <SubConfigurations hierarchy="eng" description="England">
+    <Holidays>
+      <Fixed month="APRIL" day="9" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+      <Fixed month="AUGUST" day="27" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
+    </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="wls" description="Wales">
+    <Holidays>
+      <Fixed month="APRIL" day="9" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+      <Fixed month="AUGUST" day="27" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
+    </Holidays>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="sct" description="Scotland">
+    <Holidays>
+      <!-- WARNING: according to https://www.gov.uk/bank-holidays#scotland in Scotland 2nd January was on the 2nd -->
+      <!-- according to https://www.direct.gov.uk/en/Governmentcitizensandrights/LivingintheUK/DG_073741 and
+      https://scotland.gov.uk/Topics/People/bank-holidays/ it was on the 3rd -->
+      <Fixed month="JANUARY" day="3" descriptionPropertiesKey="2ND_JANUARY"/>
+      <Fixed month="AUGUST" day="6" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
+      <Fixed month="NOVEMBER" day="30" descriptionPropertiesKey="ST_ANDREW"/>
+    </Holidays>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="nir" description="Northern Ireland">
+    <Holidays>
+      <Fixed month="MARCH" day="19" descriptionPropertiesKey="ST_PATRICK"/>
+      <Fixed month="APRIL" day="9" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+      <Fixed month="JULY" day="12" descriptionPropertiesKey="BATTLE_BOYNE"/>
+      <Fixed month="AUGUST" day="27" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
+    </Holidays>
+  </SubConfigurations>
+</Configuration>

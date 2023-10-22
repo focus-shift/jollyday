@@ -5,29 +5,29 @@
                xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
   <Holidays>
     <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
-    <Fixed month="APRIL" day="2" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-    <Fixed month="MAY" day="3" descriptionPropertiesKey="EARLY_MAY_BANK_HOLIDAY"/>
-    <Fixed month="MAY" day="31" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
-    <Fixed month="DECEMBER" day="27" descriptionPropertiesKey="CHRISTMAS"/>
+    <Fixed month="APRIL" day="10" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+    <Fixed month="MAY" day="8" descriptionPropertiesKey="EARLY_MAY_BANK_HOLIDAY"/>
+    <Fixed month="MAY" day="25" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
     <Fixed month="DECEMBER" day="28" descriptionPropertiesKey="BOXING_DAY"/>
   </Holidays>
   <SubConfigurations hierarchy="eng" description="England">
     <Holidays>
-      <Fixed month="APRIL" day="5" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-      <Fixed month="AUGUST" day="30" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
+      <Fixed month="APRIL" day="13" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+      <Fixed month="AUGUST" day="31" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
     </Holidays>
   </SubConfigurations>
   <SubConfigurations hierarchy="wls" description="Wales">
     <Holidays>
-      <Fixed month="APRIL" day="5" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-      <Fixed month="AUGUST" day="30" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
+      <Fixed month="APRIL" day="13" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+      <Fixed month="AUGUST" day="31" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
     </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="sct" description="Scotland">
     <Holidays>
-      <Fixed month="JANUARY" day="4" descriptionPropertiesKey="2ND_JANUARY"/>
-      <Fixed month="AUGUST" day="2" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
+      <Fixed month="JANUARY" day="2" descriptionPropertiesKey="2ND_JANUARY"/>
+      <Fixed month="AUGUST" day="3" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
       <Fixed month="NOVEMBER" day="30" descriptionPropertiesKey="ST_ANDREW"/>
     </Holidays>
   </SubConfigurations>
@@ -35,9 +35,9 @@
   <SubConfigurations hierarchy="nir" description="Northern Ireland">
     <Holidays>
       <Fixed month="MARCH" day="17" descriptionPropertiesKey="ST_PATRICK"/>
-      <Fixed month="APRIL" day="5" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-      <Fixed month="JULY" day="12" descriptionPropertiesKey="BATTLE_BOYNE"/>
-      <Fixed month="AUGUST" day="30" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
+      <Fixed month="APRIL" day="13" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+      <Fixed month="JULY" day="13" descriptionPropertiesKey="BATTLE_BOYNE"/>
+      <Fixed month="AUGUST" day="31" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
     </Holidays>
   </SubConfigurations>
 </Configuration>
