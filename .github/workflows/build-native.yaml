@@ -1,0 +1,33 @@
+name: Build Native
+
+on:
+  schedule:
+    - cron: "30 0 * * *"
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        java: [ '17', '21' ]
+        os: [ 'ubuntu-latest', 'macos-latest', 'windows-latest' ]
+
+    name: ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    env:
+      MAVEN_CLI_OPTS: "--batch-mode --errors --fail-at-end --show-version"
+    continue-on-error: true
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: graalvm/setup-graalvm@v1
+        with:
+          java-version: ${{ matrix.java }}
+          distribution: 'graalvm'
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          cache: 'maven'
+      - run: ./mvnw $MAVEN_CLI_OPTS -Pnative package
