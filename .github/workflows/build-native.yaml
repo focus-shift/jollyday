@@ -9,6 +9,9 @@ on:
   pull_request:
   workflow_dispatch:
 
+env:
+  MAVEN_ARGS: "--batch-mode --errors --fail-at-end --show-version"
+
 jobs:
   build:
     strategy:
@@ -18,8 +21,6 @@ jobs:
 
     name: ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
-    env:
-      MAVEN_CLI_OPTS: "--batch-mode --errors --fail-at-end --show-version"
     continue-on-error: true
 
     steps:
@@ -30,4 +31,4 @@ jobs:
           distribution: 'graalvm'
           github-token: ${{ secrets.GITHUB_TOKEN }}
           cache: 'maven'
-      - run: ./mvnw $MAVEN_CLI_OPTS -Pnative package
+      - run: ./mvnw -Pnative package

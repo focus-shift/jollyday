@@ -9,6 +9,9 @@ on:
   pull_request:
   workflow_dispatch:
 
+env:
+  MAVEN_ARGS: "--batch-mode --errors --fail-at-end --show-version"
+
 jobs:
   build:
     name: build and analyse
@@ -17,8 +20,6 @@ jobs:
         java: [ '11', '17', '21' ]
         os: [ 'ubuntu-latest', 'macos-latest', 'windows-latest' ]
     runs-on: ${{ matrix.os }}
-    env:
-      MAVEN_CLI_OPTS: "--batch-mode --errors --fail-at-end --show-version"
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -31,16 +32,11 @@ jobs:
           java-version: ${{ matrix.java }}
           cache: 'maven'
       - name: Build
-        run: >
-          ./mvnw $MAVEN_CLI_OPTS
-          -Pcoverage
-          clean verify
+        run: ./mvnw -Pcoverage clean verify
       - name: Analyse with SonarCloud
         if: ${{ matrix.java == 17 && matrix.os == 'ubuntu-latest' && (github.event_name != 'pull_request' || (github.event.pull_request.head.repo.full_name == github.repository && github.actor != 'dependabot[bot]')) }}
         run: >
-          ./mvnw $MAVEN_CLI_OPTS
-          -Pcoverage
-          verify
+          ./mvnw -Pcoverage verify
           sonar:sonar
           -Dsonar.host.url=https://sonarcloud.io
           -Dsonar.organization=focus-shift

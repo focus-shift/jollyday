@@ -5,11 +5,12 @@ on:
     tags:
       - 'v*'
 
+env:
+  MAVEN_ARGS: "--batch-mode --errors --fail-at-end --show-version"
+
 jobs:
   release:
     runs-on: ubuntu-20.04
-    env:
-      MAVEN_CLI_OPTS: "--batch-mode --no-transfer-progress --errors --fail-at-end --show-version"
     steps:
       - uses: actions/checkout@v4
       - name: Set up JDK 11
@@ -24,14 +25,9 @@ jobs:
           gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
           gpg-passphrase: GPG_PASSPHRASE
       - name: Tests with Maven
-        run: >
-          ./mvnw $MAVEN_CLI_OPTS
-          clean verify
+        run: ./mvnw clean verify
       - name: Build with Maven
-        run: >
-          ./mvnw $MAVEN_CLI_OPTS
-          -Prelease -Drelease
-          deploy
+        run: ./mvnw -Prelease -Drelease deploy
         env:
           OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
           OSSRH_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
