@@ -12,6 +12,11 @@
     <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
   </Holidays>
 
+  <Sources>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:CH</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:CH</Source>
+  </Sources>
+
   <SubConfigurations hierarchy="ag" description="Aargau">
     <Holidays>
       <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
@@ -83,7 +88,7 @@
     </Holidays>
   </SubConfigurations>
 
-  <SubConfigurations hierarchy="ge" description="Genf">
+  <SubConfigurations hierarchy="ge" description="Genève">
     <Holidays>
       <RelativeToWeekdayInMonth weekday="THURSDAY" when="AFTER" descriptionPropertiesKey="GENEVAN_FAST">
         <FixedWeekday which="FIRST" weekday="SUNDAY" month="SEPTEMBER"/>
@@ -141,7 +146,7 @@
     </Holidays>
   </SubConfigurations>
 
-  <SubConfigurations hierarchy="ne" description="Neuenburg">
+  <SubConfigurations hierarchy="ne" description="Neuchâtel">
     <Holidays>
       <Fixed month="JANUARY" day="2" descriptionPropertiesKey="ST_BERCHTHOLD"/>
       <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
@@ -180,7 +185,7 @@
     </Holidays>
   </SubConfigurations>
 
-  <SubConfigurations hierarchy="sg" description="St.Gallen">
+  <SubConfigurations hierarchy="sg" description="Sankt Gallen">
     <Holidays>
       <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
       <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
@@ -234,7 +239,7 @@
     </Holidays>
   </SubConfigurations>
 
-  <SubConfigurations hierarchy="ti" description="Tessin">
+  <SubConfigurations hierarchy="ti" description="Ticino">
     <Holidays>
       <Fixed month="JANUARY" day="6" descriptionPropertiesKey="EPIPHANY"/>
       <Fixed month="MARCH" day="19" descriptionPropertiesKey="ST_JOSEPH"/>
@@ -264,7 +269,7 @@
     </Holidays>
   </SubConfigurations>
 
-  <SubConfigurations hierarchy="vd" description="Waadt">
+  <SubConfigurations hierarchy="vd" description="Vaud">
     <Holidays>
       <Fixed month="JANUARY" day="2" descriptionPropertiesKey="ST_BERCHTHOLD"/>
       <RelativeToWeekdayInMonth weekday="MONDAY" when="AFTER"
@@ -277,7 +282,7 @@
     </Holidays>
   </SubConfigurations>
 
-  <SubConfigurations hierarchy="vs" description="Wallis">
+  <SubConfigurations hierarchy="vs" description="Valais">
     <Holidays>
       <Fixed month="MARCH" day="19" descriptionPropertiesKey="ST_JOSEPH"/>
       <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
