@@ -37,6 +37,7 @@
   <SubConfigurations hierarchy="ar" description="Appenzell Ausserrhoden">
     <Holidays>
       <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
+      <Fixed month="APRIL" day="15" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
       <Fixed month="APRIL" day="18" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
       <Fixed month="JUNE" day="6" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
     </Holidays>
