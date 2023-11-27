@@ -22,7 +22,6 @@
 
   <SubConfigurations hierarchy="ai" description="Appenzell Innerrhoden">
     <Holidays>
-      <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
       <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
       <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
       <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
@@ -37,6 +36,7 @@
   <SubConfigurations hierarchy="ar" description="Appenzell Ausserrhoden">
     <Holidays>
       <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
+      <Fixed month="APRIL" day="15" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
       <Fixed month="APRIL" day="18" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
       <Fixed month="JUNE" day="6" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
     </Holidays>
@@ -82,7 +82,7 @@
     </Holidays>
   </SubConfigurations>
 
-  <SubConfigurations hierarchy="ge" description="Genf">
+  <SubConfigurations hierarchy="ge" description="Genève">
     <Holidays>
       <Fixed month="SEPTEMBER" day="8" descriptionPropertiesKey="GENEVAN_FAST"/>
       <Fixed month="APRIL" day="15" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
@@ -138,7 +138,7 @@
     </Holidays>
   </SubConfigurations>
 
-  <SubConfigurations hierarchy="ne" description="Neuenburg">
+  <SubConfigurations hierarchy="ne" description="Neuchâtel">
     <Holidays>
       <Fixed month="JANUARY" day="2" descriptionPropertiesKey="ST_BERCHTHOLD"/>
       <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
@@ -177,8 +177,9 @@
     </Holidays>
   </SubConfigurations>
 
-  <SubConfigurations hierarchy="sg" description="St.Gallen">
+  <SubConfigurations hierarchy="sg" description="Sankt Gallen">
     <Holidays>
+      <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
       <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
       <Fixed month="APRIL" day="15" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
       <Fixed month="APRIL" day="18" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
@@ -231,7 +232,7 @@
     </Holidays>
   </SubConfigurations>
 
-  <SubConfigurations hierarchy="ti" description="Tessin">
+  <SubConfigurations hierarchy="ti" description="Ticino">
     <Holidays>
       <Fixed month="JANUARY" day="6" descriptionPropertiesKey="EPIPHANY"/>
       <Fixed month="MARCH" day="19" descriptionPropertiesKey="ST_JOSEPH"/>
@@ -261,7 +262,7 @@
     </Holidays>
   </SubConfigurations>
 
-  <SubConfigurations hierarchy="vd" description="Waadt">
+  <SubConfigurations hierarchy="vd" description="Vaud">
     <Holidays>
       <Fixed month="JANUARY" day="2" descriptionPropertiesKey="ST_BERCHTHOLD"/>
       <Fixed month="APRIL" day="15" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
@@ -271,7 +272,7 @@
     </Holidays>
   </SubConfigurations>
 
-  <SubConfigurations hierarchy="vs" description="Wallis">
+  <SubConfigurations hierarchy="vs" description="Valais">
     <Holidays>
       <Fixed month="MARCH" day="19" descriptionPropertiesKey="ST_JOSEPH"/>
       <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
