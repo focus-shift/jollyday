@@ -16,45 +16,51 @@
     <Fixed month="MAY" day="13" descriptionPropertiesKey="christian.ASCENSION_DAY"/>
     <Fixed month="MAY" day="24" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
   </Holidays>
-  <SubConfigurations hierarchy="ma"
-                     description="Martinique">
+
+  <SubConfigurations hierarchy="ges" description="Grand Est">
+    <Holidays/>
+    <SubConfigurations hierarchy="67" description="Bas-Rhin">
+      <Holidays>
+        <Fixed month="DECEMBER" day="26"/>
+        <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+      </Holidays>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="68" description="Haut-Rhin">
+      <Holidays>
+        <Fixed month="DECEMBER" day="26"/>
+        <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+      </Holidays>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="57" description="Moselle">
+      <Holidays>
+        <Fixed month="DECEMBER" day="26"/>
+      </Holidays>
+    </SubConfigurations>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="972" description="Martinique">
     <Holidays>
       <Fixed month="MAY" day="22"/>
     </Holidays>
   </SubConfigurations>
-  <SubConfigurations hierarchy="gu"
-                     description="Guadeloupe">
+
+  <SubConfigurations hierarchy="971" description="Guadeloupe">
     <Holidays>
       <Fixed month="MAY" day="27"/>
     </Holidays>
   </SubConfigurations>
-  <SubConfigurations hierarchy="gy" description="Guyane">
+
+  <SubConfigurations hierarchy="973" description="Guyane">
     <Holidays>
       <Fixed month="JUNE" day="10"/>
     </Holidays>
   </SubConfigurations>
-  <SubConfigurations hierarchy="lr"
-                     description="La Reunion">
+
+  <SubConfigurations hierarchy="974" description="La Reunion">
     <Holidays>
       <Fixed month="DECEMBER" day="20"/>
-    </Holidays>
-  </SubConfigurations>
-  <SubConfigurations hierarchy="br" description="Bas-Rhin">
-    <Holidays>
-      <Fixed month="DECEMBER" day="26"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-    </Holidays>
-  </SubConfigurations>
-  <SubConfigurations hierarchy="hr"
-                     description="Haut-Rhin">
-    <Holidays>
-      <Fixed month="DECEMBER" day="26"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-    </Holidays>
-  </SubConfigurations>
-  <SubConfigurations hierarchy="mo" description="Moselle">
-    <Holidays>
-      <Fixed month="DECEMBER" day="26"/>
     </Holidays>
   </SubConfigurations>
 </Configuration>

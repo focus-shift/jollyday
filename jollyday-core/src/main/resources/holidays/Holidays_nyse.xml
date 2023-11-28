@@ -6,46 +6,31 @@
                xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
   <Holidays>
     <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
-      <MovingCondition substitute="SATURDAY" with="PREVIOUS"
-                           weekday="FRIDAY"/>
-      <MovingCondition substitute="SUNDAY" with="NEXT"
-                           weekday="MONDAY"/>
+      <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
     <Fixed month="JULY" day="4" descriptionPropertiesKey="INDEPENDENCE_DAY">
-      <MovingCondition substitute="SATURDAY" with="PREVIOUS"
-                           weekday="FRIDAY"/>
-      <MovingCondition substitute="SUNDAY" with="NEXT"
-                           weekday="MONDAY"/>
+      <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
-    <Fixed month="DECEMBER" day="25"
-               descriptionPropertiesKey="CHRISTMAS">
-      <MovingCondition substitute="SATURDAY" with="PREVIOUS"
-                           weekday="FRIDAY"/>
-      <MovingCondition substitute="SUNDAY" with="NEXT"
-                           weekday="MONDAY"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS">
+      <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
-    <Fixed month="JUNE" day="11" validFrom="2004" validTo="2004"
-               descriptionPropertiesKey="FUNERAL_OF_PRESIDENT_REAGAN">
-    </Fixed>
-    <Fixed month="JANUARY" day="2" validFrom="2007" validTo="2007"
-               descriptionPropertiesKey="REMEMBERANCE_OF_PRESIDENT_FORD">
-    </Fixed>
-    <Fixed month="OCTOBER" day="29" validFrom="2012"
-               validTo="2012" descriptionPropertiesKey="HURRICANE_SANDY">
-    </Fixed>
-    <Fixed month="OCTOBER" day="30" validFrom="2012"
-               validTo="2012" descriptionPropertiesKey="HURRICANE_SANDY">
-    </Fixed>
+    <Fixed month="JUNE" day="11" validFrom="2004" validTo="2004" descriptionPropertiesKey="FUNERAL_OF_PRESIDENT_REAGAN"/>
+    <Fixed month="JANUARY" day="2" validFrom="2007" validTo="2007" descriptionPropertiesKey="REMEMBERANCE_OF_PRESIDENT_FORD"/>
+    <Fixed month="OCTOBER" day="29" validFrom="2012" validTo="2012" descriptionPropertiesKey="HURRICANE_SANDY"/>
+    <Fixed month="OCTOBER" day="30" validFrom="2012" validTo="2012" descriptionPropertiesKey="HURRICANE_SANDY"/>
     <FixedWeekday which="THIRD" weekday="MONDAY"
-                      month="JANUARY" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+                  month="JANUARY" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
     <FixedWeekday which="THIRD" weekday="MONDAY"
-                      month="FEBRUARY" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+                  month="FEBRUARY" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
     <FixedWeekday which="LAST" weekday="MONDAY"
-                      month="MAY" descriptionPropertiesKey="MEMORIAL_DAY"/>
+                  month="MAY" descriptionPropertiesKey="MEMORIAL_DAY"/>
     <FixedWeekday which="FIRST" weekday="MONDAY"
-                      month="SEPTEMBER" descriptionPropertiesKey="LABOUR_DAY"/>
+                  month="SEPTEMBER" descriptionPropertiesKey="LABOUR_DAY"/>
     <FixedWeekday which="FOURTH" weekday="THURSDAY"
-                      month="NOVEMBER" descriptionPropertiesKey="THANKSGIVING"/>
+                  month="NOVEMBER" descriptionPropertiesKey="THANKSGIVING"/>
     <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
   </Holidays>
 </Configuration>

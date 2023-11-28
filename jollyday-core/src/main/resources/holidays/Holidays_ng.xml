@@ -20,7 +20,8 @@
     <IslamicHoliday type="ID_AL_FITR" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
     <IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
   </Holidays>
-  <SubConfigurations hierarchy="lag" description="Lagos">
+
+  <SubConfigurations hierarchy="la" description="Lagos">
     <Holidays>
       <Fixed month="JUNE" day="12" descriptionPropertiesKey="ELECTION_DAY"/>
     </Holidays>

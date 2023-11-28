@@ -19,40 +19,63 @@
     <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
     <ChristianHoliday type="MAUNDY_THURSDAY" descriptionPropertiesKey="christian.MAUNDY_THURSDAY"/>
   </Holidays>
+
   <SubConfigurations hierarchy="bo" description="Boaco">
     <Holidays>
       <Fixed month="JULY" day="25" descriptionPropertiesKey="SANTIAGO"/>
     </Holidays>
   </SubConfigurations>
-  <SubConfigurations hierarchy="so" description="Somoto">
-    <Holidays>
-      <Fixed month="JULY" day="25" descriptionPropertiesKey="SANTIAGO"/>
-    </Holidays>
+
+  <SubConfigurations hierarchy="gr" description="Granada">
+    <Holidays/>
+
+    <SubConfigurations hierarchy="na" description="Nandaime">
+      <Holidays>
+        <Fixed month="JULY" day="26" descriptionPropertiesKey="SANTA_ANA"/>
+      </Holidays>
+    </SubConfigurations>
   </SubConfigurations>
+
+  <SubConfigurations hierarchy="md" description="Madriz">
+    <Holidays/>
+
+    <SubConfigurations hierarchy="so" description="Somoto">
+      <Holidays>
+        <Fixed month="JULY" day="25" descriptionPropertiesKey="SANTIAGO"/>
+      </Holidays>
+    </SubConfigurations>
+  </SubConfigurations>
+
   <SubConfigurations hierarchy="mn" description="Managua">
     <Holidays>
       <Fixed month="JULY" day="25" descriptionPropertiesKey="SANTIAGO"/>
       <Fixed month="AUGUST" day="1" descriptionPropertiesKey="SANTO_DOMINGO"/>
     </Holidays>
   </SubConfigurations>
-  <SubConfigurations hierarchy="na" description="Nandaime">
-    <Holidays>
-      <Fixed month="JULY" day="26" descriptionPropertiesKey="SANTA_ANA"/>
-    </Holidays>
+
+  <SubConfigurations hierarchy="ms" description="Masaya">
+    <Holidays/>
+
+    <SubConfigurations hierarchy="ni" description="Niquinohomo">
+      <Holidays>
+        <Fixed month="JULY" day="26" descriptionPropertiesKey="SANTA_ANA"/>
+      </Holidays>
+    </SubConfigurations>
   </SubConfigurations>
-  <SubConfigurations hierarchy="ni" description="Niquinohomo">
-    <Holidays>
-      <Fixed month="JULY" day="26" descriptionPropertiesKey="SANTA_ANA"/>
-    </Holidays>
-  </SubConfigurations>
-  <SubConfigurations hierarchy="mo" description="Moyogalpa">
-    <Holidays>
-      <Fixed month="JULY" day="26" descriptionPropertiesKey="SANTA_ANA"/>
-    </Holidays>
-  </SubConfigurations>
-  <SubConfigurations hierarchy="om" description="Ometepe">
-    <Holidays>
-      <Fixed month="JULY" day="26" descriptionPropertiesKey="SANTA_ANA"/>
-    </Holidays>
+
+  <SubConfigurations hierarchy="ri" description="Rivas">
+    <Holidays/>
+
+    <SubConfigurations hierarchy="mo" description="Moyogalpa">
+      <Holidays>
+        <Fixed month="JULY" day="26" descriptionPropertiesKey="SANTA_ANA"/>
+      </Holidays>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="om" description="Ometepe">
+      <Holidays>
+        <Fixed month="JULY" day="26" descriptionPropertiesKey="SANTA_ANA"/>
+      </Holidays>
+    </SubConfigurations>
   </SubConfigurations>
 </Configuration>

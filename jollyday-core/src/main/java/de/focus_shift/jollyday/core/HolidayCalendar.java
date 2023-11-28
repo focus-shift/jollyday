@@ -5,7 +5,6 @@ import java.util.Locale;
 /**
  * This enum provides a list of all supported holiday calendars.
  *
- * @author Sven Diedrichsen (sven.diedrichsen@gmail.com)
  * @version $Id$
  */
 public enum HolidayCalendar {
@@ -47,5 +46,4 @@ public enum HolidayCalendar {
   public String getId() {
     return id;
   }
-
 }

@@ -39,7 +39,6 @@
     <Holidays>
       <Fixed month="MARCH" day="8" descriptionPropertiesKey="INTERNATIONAL_WOMAN" validFrom="2019"/>
       <Fixed month="MAY" day="8" descriptionPropertiesKey="LIBERATION" validFrom="2020" validTo="2020"/>
-
       <RelativeToFixed validFrom="1945" validTo="1989" descriptionPropertiesKey="REPENTANCE_PRAYER">
         <Weekday>WEDNESDAY</Weekday>
         <When>BEFORE</When>
@@ -75,36 +74,39 @@
     <Holidays>
       <Fixed month="JANUARY" day="6" descriptionPropertiesKey="EPIPHANY"/>
       <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
-
       <RelativeToFixed validFrom="1981" validTo="1989" descriptionPropertiesKey="REPENTANCE_PRAYER">
-      <Weekday>WEDNESDAY</Weekday>
-      <When>BEFORE</When>
-      <Date month="NOVEMBER" day="23"/>
-    </RelativeToFixed>
-
+        <Weekday>WEDNESDAY</Weekday>
+        <When>BEFORE</When>
+        <Date month="NOVEMBER" day="23"/>
+      </RelativeToFixed>
       <ChristianHoliday type="CORPUS_CHRISTI" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
     </Holidays>
+
     <SubConfigurations hierarchy="mu" description="Munich">
       <Holidays>
         <Fixed day="15" month="AUGUST" descriptionPropertiesKey="ASSUMPTION_DAY"/>
       </Holidays>
     </SubConfigurations>
+
     <SubConfigurations hierarchy="ag" description="Augsburg">
       <Holidays>
         <Fixed day="8" month="AUGUST" descriptionPropertiesKey="PEACE"/>
         <Fixed day="15" month="AUGUST" descriptionPropertiesKey="ASSUMPTION_DAY"/>
       </Holidays>
     </SubConfigurations>
+
     <SubConfigurations hierarchy="wu" description="Würzburg">
       <Holidays>
         <Fixed day="15" month="AUGUST" descriptionPropertiesKey="ASSUMPTION_DAY"/>
       </Holidays>
     </SubConfigurations>
+
     <SubConfigurations hierarchy="re" description="Regensburg">
       <Holidays>
         <Fixed day="15" month="AUGUST" descriptionPropertiesKey="ASSUMPTION_DAY"/>
       </Holidays>
     </SubConfigurations>
+
     <SubConfigurations hierarchy="in" description="Ingolstadt">
       <Holidays>
         <Fixed day="15" month="AUGUST" descriptionPropertiesKey="ASSUMPTION_DAY"/>
@@ -119,7 +121,6 @@
         <When>BEFORE</When>
         <Date month="NOVEMBER" day="23"/>
       </RelativeToFixed>
-
       <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
       <ChristianHoliday type="CORPUS_CHRISTI" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
       <ChristianHoliday type="PENTECOST" descriptionPropertiesKey="christian.PENTECOST"/>
@@ -136,13 +137,11 @@
   <SubConfigurations hierarchy="nw" description="North Rhine-Westphalia">
     <Holidays>
       <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
-
       <RelativeToFixed validFrom="1945" validTo="1989" descriptionPropertiesKey="REPENTANCE_PRAYER">
         <Weekday>WEDNESDAY</Weekday>
         <When>BEFORE</When>
         <Date month="NOVEMBER" day="23"/>
       </RelativeToFixed>
-
       <ChristianHoliday type="CORPUS_CHRISTI" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
     </Holidays>
   </SubConfigurations>
@@ -150,13 +149,11 @@
   <SubConfigurations hierarchy="rp" description="Rhineland-Palatinate">
     <Holidays>
       <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
-
       <RelativeToFixed validFrom="1945" validTo="1989" descriptionPropertiesKey="REPENTANCE_PRAYER">
         <Weekday>WEDNESDAY</Weekday>
         <When>BEFORE</When>
         <Date month="NOVEMBER" day="23"/>
       </RelativeToFixed>
-
       <ChristianHoliday type="CORPUS_CHRISTI" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
     </Holidays>
   </SubConfigurations>
@@ -165,13 +162,11 @@
     <Holidays>
       <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
       <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
-
       <RelativeToFixed validFrom="1945" validTo="1989" descriptionPropertiesKey="REPENTANCE_PRAYER">
         <Weekday>WEDNESDAY</Weekday>
         <When>BEFORE</When>
         <Date month="NOVEMBER" day="23"/>
       </RelativeToFixed>
-
       <ChristianHoliday type="CORPUS_CHRISTI" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
     </Holidays>
   </SubConfigurations>
@@ -179,7 +174,6 @@
   <SubConfigurations hierarchy="sn" description="Saxony">
     <Holidays>
       <Fixed month="OCTOBER" day="31" descriptionPropertiesKey="REFORMATION_DAY"/>
-
       <RelativeToFixed validFrom="1995" descriptionPropertiesKey="REPENTANCE_PRAYER">
         <Weekday>WEDNESDAY</Weekday>
         <When>BEFORE</When>
@@ -205,7 +199,6 @@
   <SubConfigurations hierarchy="sh" description="Schleswig-Holstein">
     <Holidays>
       <Fixed month="OCTOBER" day="31" descriptionPropertiesKey="REFORMATION_DAY" validFrom="2018"/>
-
       <RelativeToFixed validFrom="1945" validTo="1989" descriptionPropertiesKey="REPENTANCE_PRAYER">
         <Weekday>WEDNESDAY</Weekday>
         <When>BEFORE</When>
@@ -217,7 +210,6 @@
   <SubConfigurations hierarchy="hh" description="Hamburg">
     <Holidays>
       <Fixed month="OCTOBER" day="31" descriptionPropertiesKey="REFORMATION_DAY" validFrom="2018"/>
-
       <RelativeToFixed validFrom="1945" validTo="1989" descriptionPropertiesKey="REPENTANCE_PRAYER">
         <Weekday>WEDNESDAY</Weekday>
         <When>BEFORE</When>
@@ -229,7 +221,6 @@
   <SubConfigurations hierarchy="hb" description="Bremen">
     <Holidays>
       <Fixed month="OCTOBER" day="31" descriptionPropertiesKey="REFORMATION_DAY" validFrom="2018"/>
-
       <RelativeToFixed validFrom="1945" validTo="1989" descriptionPropertiesKey="REPENTANCE_PRAYER">
         <Weekday>WEDNESDAY</Weekday>
         <When>BEFORE</When>
@@ -241,7 +232,6 @@
   <SubConfigurations hierarchy="ni" description="Lower-Saxony">
     <Holidays>
       <Fixed month="OCTOBER" day="31" descriptionPropertiesKey="REFORMATION_DAY" validFrom="2018"/>
-
       <RelativeToFixed validFrom="1945" validTo="1989" descriptionPropertiesKey="REPENTANCE_PRAYER">
         <Weekday>WEDNESDAY</Weekday>
         <When>BEFORE</When>

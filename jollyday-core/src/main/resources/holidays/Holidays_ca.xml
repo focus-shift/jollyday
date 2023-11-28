@@ -12,6 +12,7 @@
     <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
     <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
   </Holidays>
+
   <SubConfigurations hierarchy="on" description="Ontario">
     <Holidays>
       <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY"/>
@@ -24,6 +25,7 @@
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="THANKSGIVING"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="yt" description="Yukon">
     <Holidays>
       <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="REMEMBRANCE"/>
@@ -35,6 +37,7 @@
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="THANKSGIVING"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="qc" description="Quebec">
     <Holidays>
       <Fixed month="JUNE" day="24" descriptionPropertiesKey="SAINT_JEAN_BAPTISTE_DAY"/>
@@ -47,17 +50,20 @@
       <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="ns" description="Nova Scotia">
     <Holidays>
       <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="REMEMBRANCE"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="nb" description="New Brunswick">
     <Holidays>
       <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="REMEMBRANCE"/>
       <FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="NATIONAL_DAY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="mb" description="Manitoba">
     <Holidays>
       <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="REMEMBRANCE"/>
@@ -70,6 +76,7 @@
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" descriptionPropertiesKey="FAMILY_DAY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="nt" description="Northwest Territories">
     <Holidays>
       <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="REMEMBRANCE"/>
@@ -82,6 +89,7 @@
       <FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="CIVIC"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="nu" description="Nunavut">
     <Holidays>
       <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="REMEMBRANCE"/>
@@ -94,6 +102,7 @@
       <FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="CIVIC"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="bc" description="British Columbia">
     <Holidays>
       <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="REMEMBRANCE"/>
@@ -106,11 +115,13 @@
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="THANKSGIVING"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="pe" description="Prince Edward Island">
     <Holidays>
       <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="REMEMBRANCE"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="sk" description="Saskatchewan">
     <Holidays>
       <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="REMEMBRANCE"/>
@@ -124,6 +135,7 @@
       <FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="NATIONAL_DAY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="ab" description="Alberta">
     <Holidays>
       <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="REMEMBRANCE"/>
@@ -137,9 +149,11 @@
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="THANKSGIVING"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="nl" description="Newfoundland and Labrador">
     <Holidays>
       <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="REMEMBRANCE"/>
     </Holidays>
   </SubConfigurations>
+
 </Configuration>

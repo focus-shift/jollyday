@@ -35,6 +35,7 @@
     <FixedWeekday which="THIRD" weekday="MONDAY" month="MARCH" descriptionPropertiesKey="JUAREZ_BIRTHDAY"/>
     <FixedWeekday which="THIRD" weekday="MONDAY" month="NOVEMBER" descriptionPropertiesKey="REVOLUTION"/>
   </Holidays>
+
   <SubConfigurations hierarchy="pue" description="Puebla">
     <Holidays>
       <Fixed month="MAY" day="5" descriptionPropertiesKey="MAY_DAY" localizedType="UNOFFICIAL_HOLIDAY"/>
