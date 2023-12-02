@@ -18,7 +18,13 @@
     <ChristianHoliday type="EASTER" chronology="JULIAN" descriptionPropertiesKey="christian.EASTER"/>
     <ChristianHoliday type="EASTER_MONDAY" chronology="JULIAN" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
   </Holidays>
-  <SubConfigurations hierarchy="bti" description="Balti">
+
+  <Sources>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:MD</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:MD</Source>
+  </Sources>
+
+  <SubConfigurations hierarchy="ba" description="Bălți">
     <Holidays>
       <Fixed month="MAY" day="22" descriptionPropertiesKey="REGIONAL"/>
     </Holidays>
