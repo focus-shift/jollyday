@@ -1,13 +1,14 @@
 package de.focus_shift.jackson;
 
+import java.io.InputStream;
+import java.time.DayOfWeek;
+
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
-import de.focus_shift.HolidayType;
+
 import de.focus_shift.jackson.mapping.Configuration;
 import de.focus_shift.jackson.mapping.Month;
 import de.focus_shift.jackson.mapping.Weekday;
-
-import java.io.InputStream;
-import java.time.DayOfWeek;
+import de.focus_shift.jollyday.core.HolidayType;
 
 public class XMLUtil {
 

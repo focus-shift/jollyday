@@ -1,14 +1,14 @@
 package de.focus_shift.jackson;
 
-import de.focus_shift.HolidayType;
-import de.focus_shift.spi.Fixed;
-import de.focus_shift.spi.FixedWeekdayRelativeToFixed;
-import de.focus_shift.spi.Occurrance;
-import de.focus_shift.spi.Relation;
-import de.focus_shift.spi.YearCycle;
-
 import java.time.DayOfWeek;
 import java.time.Year;
+
+import de.focus_shift.jollyday.core.HolidayType;
+import de.focus_shift.jollyday.core.spi.Fixed;
+import de.focus_shift.jollyday.core.spi.FixedWeekdayRelativeToFixed;
+import de.focus_shift.jollyday.core.spi.Occurrance;
+import de.focus_shift.jollyday.core.spi.Relation;
+import de.focus_shift.jollyday.core.spi.YearCycle;
 
 
 public class JacksonFixedWeekdayRelativeToFixed implements FixedWeekdayRelativeToFixed {

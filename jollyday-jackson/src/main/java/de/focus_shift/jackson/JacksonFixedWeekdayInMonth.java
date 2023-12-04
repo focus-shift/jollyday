@@ -1,13 +1,13 @@
 package de.focus_shift.jackson;
 
-import de.focus_shift.HolidayType;
-import de.focus_shift.spi.FixedWeekdayInMonth;
-import de.focus_shift.spi.Occurrance;
-import de.focus_shift.spi.YearCycle;
-
 import java.time.DayOfWeek;
 import java.time.Month;
 import java.time.Year;
+
+import de.focus_shift.jollyday.core.HolidayType;
+import de.focus_shift.jollyday.core.spi.FixedWeekdayInMonth;
+import de.focus_shift.jollyday.core.spi.Occurrance;
+import de.focus_shift.jollyday.core.spi.YearCycle;
 
 public class JacksonFixedWeekdayInMonth implements FixedWeekdayInMonth {
 

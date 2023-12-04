@@ -1,16 +1,17 @@
 package de.focus_shift.jackson;
 
-import de.focus_shift.HolidayType;
-import de.focus_shift.spi.RelativeToEasterSunday;
-import de.focus_shift.spi.YearCycle;
-import org.threeten.extra.Days;
-import org.threeten.extra.chrono.JulianChronology;
+import static de.focus_shift.jackson.mapping.ChronologyType.JULIAN;
 
 import java.time.Year;
 import java.time.chrono.Chronology;
 import java.time.chrono.IsoChronology;
 
-import static de.focus_shift.jackson.mapping.ChronologyType.JULIAN;
+import org.threeten.extra.Days;
+import org.threeten.extra.chrono.JulianChronology;
+
+import de.focus_shift.jollyday.core.HolidayType;
+import de.focus_shift.jollyday.core.spi.RelativeToEasterSunday;
+import de.focus_shift.jollyday.core.spi.YearCycle;
 
 
 public class JacksonRelativeToEasterSunday implements RelativeToEasterSunday {

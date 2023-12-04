@@ -1,11 +1,14 @@
 package de.focus_shift.jackson;
 
-import de.focus_shift.HolidayType;
-import de.focus_shift.spi.IslamicHoliday;
-import de.focus_shift.spi.IslamicHolidayType;
-import de.focus_shift.spi.YearCycle;
-
 import java.time.Year;
+import java.util.Collections;
+import java.util.List;
+
+import de.focus_shift.jollyday.core.HolidayType;
+import de.focus_shift.jollyday.core.spi.IslamicHoliday;
+import de.focus_shift.jollyday.core.spi.IslamicHolidayType;
+import de.focus_shift.jollyday.core.spi.MovingCondition;
+import de.focus_shift.jollyday.core.spi.YearCycle;
 
 
 public class JacksonIslamicHoliday implements IslamicHoliday {
@@ -52,5 +55,10 @@ public class JacksonIslamicHoliday implements IslamicHoliday {
     return islamicHoliday.getEvery() == null
       ? YearCycle.EVERY_YEAR
       : YearCycle.valueOf(islamicHoliday.getEvery().name());
+  }
+
+  @Override
+  public List<MovingCondition> conditions() {
+    return Collections.emptyList();
   }
 }
