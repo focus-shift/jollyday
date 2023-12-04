@@ -12,6 +12,7 @@ import de.focus_shift.jollyday.core.spi.RelativeToEasterSunday;
 import de.focus_shift.jollyday.core.spi.YearCycle;
 import de.focus_shift.jollyday.jackson.mapping.ChronologyType;
 
+
 public class JacksonRelativeToEasterSunday implements RelativeToEasterSunday {
 
   private final de.focus_shift.jollyday.jackson.mapping.RelativeToEasterSunday relativeToEasterSunday;

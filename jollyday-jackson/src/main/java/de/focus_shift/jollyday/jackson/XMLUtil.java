@@ -1,8 +1,5 @@
 package de.focus_shift.jollyday.jackson;
 
-import java.io.InputStream;
-import java.time.DayOfWeek;
-
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 
