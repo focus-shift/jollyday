@@ -1,22 +1,22 @@
 package de.focus_shift.jackson;
 
-import de.focus_shift.spi.ChristianHoliday;
-import de.focus_shift.spi.EthiopianOrthodoxHoliday;
-import de.focus_shift.spi.Fixed;
-import de.focus_shift.spi.FixedWeekdayBetweenFixed;
-import de.focus_shift.spi.FixedWeekdayInMonth;
-import de.focus_shift.spi.FixedWeekdayRelativeToFixed;
-import de.focus_shift.spi.IslamicHoliday;
-import de.focus_shift.spi.RelativeToEasterSunday;
-import de.focus_shift.spi.RelativeToFixed;
-import de.focus_shift.spi.RelativeToWeekdayInMonth;
+import static java.util.stream.Collectors.toList;
 
 import java.util.List;
 
-import static java.util.stream.Collectors.toList;
+import de.focus_shift.jollyday.core.spi.ChristianHoliday;
+import de.focus_shift.jollyday.core.spi.EthiopianOrthodoxHoliday;
+import de.focus_shift.jollyday.core.spi.Fixed;
+import de.focus_shift.jollyday.core.spi.FixedWeekdayBetweenFixed;
+import de.focus_shift.jollyday.core.spi.FixedWeekdayInMonth;
+import de.focus_shift.jollyday.core.spi.FixedWeekdayRelativeToFixed;
+import de.focus_shift.jollyday.core.spi.IslamicHoliday;
+import de.focus_shift.jollyday.core.spi.RelativeToEasterSunday;
+import de.focus_shift.jollyday.core.spi.RelativeToFixed;
+import de.focus_shift.jollyday.core.spi.RelativeToWeekdayInMonth;
 
 
-public class JacksonHolidays implements de.focus_shift.spi.Holidays {
+public class JacksonHolidays implements de.focus_shift.jollyday.core.spi.Holidays {
 
   private final de.focus_shift.jackson.mapping.Holidays holidays;
 
