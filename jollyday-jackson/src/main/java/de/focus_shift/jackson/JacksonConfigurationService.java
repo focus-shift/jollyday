@@ -1,11 +1,11 @@
 package de.focus_shift.jackson;
 
-import de.focus_shift.ManagerParameter;
-import de.focus_shift.spi.Configuration;
-import de.focus_shift.spi.ConfigurationService;
-
 import java.io.InputStream;
 import java.net.URL;
+
+import de.focus_shift.jollyday.core.ManagerParameter;
+import de.focus_shift.jollyday.core.spi.Configuration;
+import de.focus_shift.jollyday.core.spi.ConfigurationService;
 
 
 public class JacksonConfigurationService implements ConfigurationService {
