@@ -16,7 +16,6 @@ import de.focus_shift.jollyday.core.spi.MovingCondition;
 import de.focus_shift.jollyday.core.spi.YearCycle;
 import de.focus_shift.jollyday.jackson.mapping.ChronologyType;
 
-
 public class JacksonChristianHoliday implements ChristianHoliday {
 
   private final de.focus_shift.jollyday.jackson.mapping.ChristianHoliday christianHoliday;
