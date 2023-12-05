@@ -1,6 +1,7 @@
 package de.focus_shift.jollyday.jackson;
 
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 
 import de.focus_shift.jollyday.core.HolidayType;
