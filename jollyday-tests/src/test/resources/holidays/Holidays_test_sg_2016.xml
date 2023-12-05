@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration hierarchy="sg" description="Singapore"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="FEBRUARY" day="8" descriptionPropertiesKey="CHINESE_NEW_YEAR"/>
+    <Fixed month="FEBRUARY" day="9" descriptionPropertiesKey="CHINESE_NEW_YEAR"/>
+    <Fixed month="MARCH" day="25" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+    <Fixed month="MAY" day="2" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="MAY" day="21" descriptionPropertiesKey="VESAK_DAY"/>
+    <Fixed month="JULY" day="6" descriptionPropertiesKey="HARI_RAYA_PUASA"/>
+    <Fixed month="AUGUST" day="9" descriptionPropertiesKey="NATIONAL_DAY"/>
+    <Fixed month="SEPTEMBER" day="12" descriptionPropertiesKey="HARI_RAYA_HAJI"/>
+    <Fixed month="OCTOBER" day="29" descriptionPropertiesKey="DEEPAVALI"/>
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="CHRISTMAS"/>
+  </Holidays>
+</Configuration>
