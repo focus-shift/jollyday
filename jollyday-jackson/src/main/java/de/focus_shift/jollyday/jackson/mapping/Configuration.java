@@ -1,16 +1,19 @@
 package de.focus_shift.jollyday.jackson.mapping;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Configuration {
 
   protected Holidays holidays;
   protected List<Configuration> subConfigurations;
+  @JacksonXmlProperty(localName = "hierarchy", isAttribute = true)
   protected String hierarchy;
+  @JacksonXmlProperty(localName = "description", isAttribute = true)
   protected String description;
 
   /**

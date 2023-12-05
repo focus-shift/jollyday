@@ -1,11 +1,18 @@
 package de.focus_shift.jollyday.jackson.mapping;
 
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+
 public abstract class Holiday {
 
+  @JacksonXmlProperty(localName = "validFrom", isAttribute = true)
   protected Integer validFrom;
+  @JacksonXmlProperty(localName = "validTo", isAttribute = true)
   protected Integer validTo;
+  @JacksonXmlProperty(localName = "every", isAttribute = true)
   protected HolidayCycleType every;
+  @JacksonXmlProperty(localName = "descriptionPropertiesKey", isAttribute = true)
   protected String descriptionPropertiesKey;
+  @JacksonXmlProperty(localName = "localizedType", isAttribute = true)
   protected HolidayType localizedType;
 
   /**

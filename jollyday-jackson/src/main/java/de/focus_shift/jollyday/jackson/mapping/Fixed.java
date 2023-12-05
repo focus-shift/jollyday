@@ -1,8 +1,12 @@
 package de.focus_shift.jollyday.jackson.mapping;
 
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+
 public class Fixed extends MoveableHoliday {
 
+  @JacksonXmlProperty(localName = "month", isAttribute = true)
   protected Month month;
+  @JacksonXmlProperty(localName = "day", isAttribute = true)
   protected Integer day;
 
   /**
