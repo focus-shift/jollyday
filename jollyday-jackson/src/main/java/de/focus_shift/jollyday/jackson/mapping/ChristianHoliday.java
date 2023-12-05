@@ -1,8 +1,13 @@
 package de.focus_shift.jollyday.jackson.mapping;
 
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+
 public class ChristianHoliday extends MoveableHoliday {
 
+  @JacksonXmlProperty(localName = "type", isAttribute = true)
   protected ChristianHolidayType type;
+
+  @JacksonXmlProperty(localName = "chronology", isAttribute = true)
   protected ChronologyType chronology;
 
   /**

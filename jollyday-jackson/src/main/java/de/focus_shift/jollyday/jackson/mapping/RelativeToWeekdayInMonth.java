@@ -1,9 +1,13 @@
 package de.focus_shift.jollyday.jackson.mapping;
 
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+
 public class RelativeToWeekdayInMonth extends Holiday {
 
   protected FixedWeekdayInMonth fixedWeekday;
+  @JacksonXmlProperty(localName = "weekday", isAttribute = true)
   protected Weekday weekday;
+  @JacksonXmlProperty(localName = "when", isAttribute = true)
   protected When when;
 
   /**

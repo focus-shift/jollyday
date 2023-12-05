@@ -1,9 +1,14 @@
 package de.focus_shift.jollyday.jackson.mapping;
 
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+
 public class FixedWeekdayBetweenFixed extends Holiday {
+
 
   protected Fixed from;
   protected Fixed to;
+
+  @JacksonXmlProperty(localName = "weekday", isAttribute = true)
   protected Weekday weekday;
 
   /**

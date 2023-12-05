@@ -3,16 +3,22 @@ package de.focus_shift.jollyday.jackson;
 import java.io.InputStream;
 import java.time.DayOfWeek;
 
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 
+import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.jackson.mapping.Configuration;
 import de.focus_shift.jollyday.jackson.mapping.Month;
 import de.focus_shift.jollyday.jackson.mapping.Weekday;
-import de.focus_shift.jollyday.core.HolidayType;
 
 public class XMLUtil {
 
-  private final XmlMapper mapper = new XmlMapper();
+  private final XmlMapper mapper;
+
+  public XMLUtil() {
+    mapper = new XmlMapper();
+    mapper.setPropertyNamingStrategy(PropertyNamingStrategy.UPPER_CAMEL_CASE);
+  }
 
   /**
    * Unmarshalls the configuration from the stream. Uses <code>jackson</code> for
