@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration hierarchy="hk" description="Hong Kong"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="FIRST_DAY_OF_JANUARY"/>
+    <Fixed month="JANUARY" day="31" descriptionPropertiesKey="LUNAR_NEW_YEARS_DAY"/>
+    <Fixed month="FEBRUARY" day="1" descriptionPropertiesKey="SECOND_DAY_OF_LUNAR_NEW_YEAR"/>
+    <Fixed month="FEBRUARY" day="3" descriptionPropertiesKey="THIRD_DAY_OF_LUNAR_NEW_YEAR"/>
+    <Fixed month="APRIL" day="5" descriptionPropertiesKey="CHING_MING_FESTIVAL"/>
+    <Fixed month="APRIL" day="18" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+    <Fixed month="APRIL" day="19" descriptionPropertiesKey="DAY_FOLLOWING_GOOD_FRIDAY"/>
+    <Fixed month="APRIL" day="21" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="MAY" day="6" descriptionPropertiesKey="BIRTHDAY_OF_THE_BUDDHA"/>
+    <Fixed month="JUNE" day="2" descriptionPropertiesKey="TUEN_NG_FESTIVAL"/>
+    <Fixed month="JULY" day="1" descriptionPropertiesKey="HONG_KONG_SPECIAL_REGION"/>
+    <Fixed month="SEPTEMBER" day="9" descriptionPropertiesKey="DAY_FOLLOWING_CHINESE_MID_AUTUMN"/>
+    <Fixed month="OCTOBER" day="1" descriptionPropertiesKey="NATIONAL_DAY"/>
+    <Fixed month="OCTOBER" day="2" descriptionPropertiesKey="CHUNG_YEUNG_FESTIVAL"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="FIRST_WEEKDAY_AFTER_CHRISTMAS"/>
+  </Holidays>
+</Configuration>

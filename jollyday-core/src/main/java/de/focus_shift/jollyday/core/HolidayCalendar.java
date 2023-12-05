@@ -17,7 +17,7 @@ public enum HolidayCalendar {
   ECUADOR("EC"), EGYPT("EG"), ESTONIA("EE"), ETHIOPIA("ET"),
   FINLAND("FI"), FRANCE(Locale.FRANCE.getCountry()),
   GERMANY(Locale.GERMANY.getCountry()), GUERNSEY("GG"), GREECE("GR"),
-  HUNGARY("HU"),
+  HONG_KONG("HK"), HUNGARY("HU"),
   ICELAND("IS"), IRELAND("IE"), ISLE_OF_MAN("IM"), ITALY(Locale.ITALY.getCountry()),
   JAPAN("JP"), JERSEY("JE"),
   KAZAKHSTAN("KZ"), KOSOVO("XK"),
