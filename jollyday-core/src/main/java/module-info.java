@@ -13,6 +13,6 @@ module de.focus_shift.jollyday.core {
 
   exports de.focus_shift.jollyday.core;
   exports de.focus_shift.jollyday.core.spi;
-  exports de.focus_shift.jollyday.core.util to de.focus_shift.jollyday.jaxb, de.focus_shift.jackson;
+  exports de.focus_shift.jollyday.core.util to de.focus_shift.jollyday.jaxb, de.focus_shift.jollyday.jackson;
 
 }
