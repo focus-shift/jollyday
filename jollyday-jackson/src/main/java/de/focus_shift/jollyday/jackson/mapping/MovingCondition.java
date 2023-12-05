@@ -1,9 +1,14 @@
 package de.focus_shift.jollyday.jackson.mapping;
 
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+
 public class MovingCondition {
 
+  @JacksonXmlProperty(localName = "substitute", isAttribute = true)
   protected Weekday substitute;
+  @JacksonXmlProperty(localName = "with", isAttribute = true)
   protected With with;
+  @JacksonXmlProperty(localName = "weekday", isAttribute = true)
   protected Weekday weekday;
 
   /**

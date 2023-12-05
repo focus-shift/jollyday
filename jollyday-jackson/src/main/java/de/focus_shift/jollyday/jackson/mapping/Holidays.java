@@ -3,17 +3,29 @@ package de.focus_shift.jollyday.jackson.mapping;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
+
 public class Holidays {
 
+  @JacksonXmlElementWrapper(useWrapping = false)
   protected List<Fixed> fixed;
+  @JacksonXmlElementWrapper(useWrapping = false)
   protected List<RelativeToFixed> relativeToFixed;
+  @JacksonXmlElementWrapper(useWrapping = false)
   protected List<RelativeToWeekdayInMonth> relativeToWeekdayInMonth;
+  @JacksonXmlElementWrapper(useWrapping = false)
   protected List<FixedWeekdayInMonth> fixedWeekday;
+  @JacksonXmlElementWrapper(useWrapping = false)
   protected List<ChristianHoliday> christianHoliday;
+  @JacksonXmlElementWrapper(useWrapping = false)
   protected List<IslamicHoliday> islamicHoliday;
+  @JacksonXmlElementWrapper(useWrapping = false)
   protected List<FixedWeekdayBetweenFixed> fixedWeekdayBetweenFixed;
+  @JacksonXmlElementWrapper(useWrapping = false)
   protected List<FixedWeekdayRelativeToFixed> fixedWeekdayRelativeToFixed;
+  @JacksonXmlElementWrapper(useWrapping = false)
   protected List<EthiopianOrthodoxHoliday> ethiopianOrthodoxHoliday;
+  @JacksonXmlElementWrapper(useWrapping = false)
   protected List<RelativeToEasterSunday> relativeToEasterSunday;
 
   /**
