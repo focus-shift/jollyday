@@ -11,6 +11,8 @@ import org.junit.jupiter.api.Test;
 import java.time.LocalDate;
 import java.util.Set;
 
+import static de.focus_shift.jollyday.core.HolidayCalendar.NEW_ZEALAND;
+import static de.focus_shift.jollyday.core.ManagerParameters.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class HolidayNZTest extends AbstractCountryTestBase {
@@ -19,8 +21,7 @@ class HolidayNZTest extends AbstractCountryTestBase {
   private static final int YEAR = 2018;
 
   private final CalendarUtil calendarUtil = new CalendarUtil();
-  private final HolidayManager holidayManager = HolidayManager
-    .getInstance(ManagerParameters.create(HolidayCalendar.NEW_ZEALAND));
+  private final HolidayManager holidayManager = HolidayManager.getInstance(create(NEW_ZEALAND));
 
   @Test
   void testManagerNZStructure() {

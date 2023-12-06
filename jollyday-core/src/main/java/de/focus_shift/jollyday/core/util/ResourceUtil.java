@@ -107,10 +107,10 @@ public class ResourceUtil {
    * @return 2-digit ISO codes.
    */
   public Set<String> getISOCodes() {
-    Set<String> codes = new HashSet<>();
-    ResourceBundle countryDescriptions = getCountryDescriptions(Locale.getDefault());
+    final Set<String> codes = new HashSet<>();
+    final ResourceBundle countryDescriptions = getCountryDescriptions(Locale.getDefault());
     for (String property : Collections.list(countryDescriptions.getKeys())) {
-      String[] split = property.split("\\.");
+      final String[] split = property.split("\\.");
       if (split.length > 2) {
         codes.add(split[2].toLowerCase());
       }

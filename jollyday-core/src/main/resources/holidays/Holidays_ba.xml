@@ -25,14 +25,16 @@
     <IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
     <IslamicHoliday type="MAWLID_AN_NABI" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
   </Holidays>
-  <SubConfigurations hierarchy="rs" description="Republika Srpska">
+
+  <SubConfigurations hierarchy="srp" description="Republika Srpska">
     <Holidays>
       <Fixed month="JANUARY" day="9" descriptionPropertiesKey="REPUBLIC_DAY"/>
       <Fixed month="MAY" day="9" descriptionPropertiesKey="VICTORY"/>
       <Fixed month="NOVEMBER" day="21" descriptionPropertiesKey="DAYTON"/>
     </Holidays>
   </SubConfigurations>
-  <SubConfigurations hierarchy="fbh" description="Federation of Bosnia and Herzegovina">
+
+  <SubConfigurations hierarchy="bih" description="Federation of Bosnia and Herzegovina">
     <Holidays>
       <Fixed month="MARCH" day="1" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
       <Fixed month="NOVEMBER" day="25" descriptionPropertiesKey="NATIONAL_DAY"/>

@@ -50,6 +50,12 @@
       <artifactId>jqwik</artifactId>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>com.vitorsvieira</groupId>
+      <artifactId>scala-iso_2.12</artifactId>
+      <version>0.1.2</version>
+      <scope>test</scope>
+    </dependency>
 
     <!-- Logging -->
     <dependency>

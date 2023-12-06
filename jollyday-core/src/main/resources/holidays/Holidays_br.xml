@@ -19,6 +19,7 @@
     <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
     <ChristianHoliday type="CORPUS_CHRISTI" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
   </Holidays>
+
   <SubConfigurations hierarchy="rj" description="Rio de Janeiro">
     <Holidays>
       <Fixed month="APRIL" day="23" validFrom="2007" descriptionPropertiesKey="ST_GEORGE"/>
@@ -31,6 +32,7 @@
       </Holidays>
     </SubConfigurations>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="sp" description="Sao Paulo">
     <Holidays>
       <Fixed month="JULY" day="9" descriptionPropertiesKey="CONST_REVOLUTION"/>
@@ -42,8 +44,9 @@
       </Holidays>
     </SubConfigurations>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="mg" description="Minas Gerais">
-    <Holidays></Holidays>
+    <Holidays/>
     <SubConfigurations hierarchy="bh" description="Belo Horizonte">
       <Holidays>
         <Fixed month="AUGUST" day="15" descriptionPropertiesKey="LADY_GOOD_VOYAGE"/>
@@ -51,64 +54,76 @@
       </Holidays>
     </SubConfigurations>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="ms" description="Mato Grosso do Sul">
     <Holidays>
       <Fixed month="OCTOBER" day="11" descriptionPropertiesKey="FOUNDATION"/>
     </Holidays>
+
     <SubConfigurations hierarchy="cg" description="Campo Grande">
       <Holidays>
         <Fixed month="AUGUST" day="26" descriptionPropertiesKey="FOUNDATION"/>
       </Holidays>
     </SubConfigurations>
+
     <SubConfigurations hierarchy="do" description="Dourados">
       <Holidays>
         <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="LADY_CONCEICAO"/>
       </Holidays>
     </SubConfigurations>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="pr" description="Parana">
-    <Holidays></Holidays>
+    <Holidays/>
     <SubConfigurations hierarchy="cu" description="Curitiba">
       <Holidays>
         <Fixed month="SEPTEMBER" day="8" descriptionPropertiesKey="LADY_LIGHT_PINE"/>
       </Holidays>
     </SubConfigurations>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="rs" description="Rio Grande do Sul">
     <Holidays>
       <Fixed month="SEPTEMBER" day="20" descriptionPropertiesKey="FARROUS_REVOLUTION"/>
     </Holidays>
+
     <SubConfigurations hierarchy="sm" description="Santa Maria">
       <Holidays>
         <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="LADY_CONCEICAO"/>
       </Holidays>
     </SubConfigurations>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="rn" description="Rio Grande do Norte">
     <Holidays>
       <Fixed month="OCTOBER" day="3" descriptionPropertiesKey="MARTYRS_DAY"/>
     </Holidays>
+
     <SubConfigurations hierarchy="na" description="Natal">
       <Holidays>
         <Fixed month="NOVEMBER" day="21" descriptionPropertiesKey="LADY_APRESENTACAO"/>
       </Holidays>
     </SubConfigurations>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="go" description="Goiás">
     <Holidays>
       <Fixed month="OCTOBER" day="24" descriptionPropertiesKey="FOUNDATION"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="pe" description="Pernambuco">
     <Holidays>
       <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="LADY_CONCEICAO"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="pb" description="Paraíba">
     <Holidays>
       <Fixed month="JULY" day="26" descriptionPropertiesKey="JOAO_PESSOA_DAY"/>
       <Fixed month="AUGUST" day="5" descriptionPropertiesKey="FOUNDATION"/>
     </Holidays>
+
     <SubConfigurations hierarchy="jpa" description="João Pessoa">
       <Holidays>
         <Fixed month="JUNE" day="24" descriptionPropertiesKey="ST_JOHN"/>

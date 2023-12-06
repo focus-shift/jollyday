@@ -25,66 +25,105 @@
     <!-- Boxing Day -->
     <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY"/>
   </Holidays>
+
   <SubConfigurations hierarchy="auk" description="Auckland">
     <Holidays>
       <Fixed month="JANUARY" day="29" descriptionPropertiesKey="AUCKLAND_ANNIVERSARY"/>
     </Holidays>
   </SubConfigurations>
-  <SubConfigurations hierarchy="tki" description="Taranaki">
+
+  <SubConfigurations hierarchy="bop" description="Bay of Plenty">
     <Holidays>
-      <Fixed month="MARCH" day="12" descriptionPropertiesKey="TARANAKI_ANNIVERSARY"/>
+      <Fixed month="JANUARY" day="29" descriptionPropertiesKey="AUCKLAND_ANNIVERSARY"/>
     </Holidays>
   </SubConfigurations>
+
+  <SubConfigurations hierarchy="can" description="Canterbury">
+    <Holidays>
+      <Fixed month="SEPTEMBER" day="24" descriptionPropertiesKey="CANTERBURY_SOUTH_ANNIVERSARY"/>
+    </Holidays>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="cit" description="Chatham Islands Territory">
+    <Holidays>
+      <Fixed month="DECEMBER" day="3" descriptionPropertiesKey="CHATHAM_ISLANDS_ANNIVERSARY"/>
+    </Holidays>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="gis" description="Girborne">
+    <Holidays>
+      <Fixed month="JANUARY" day="29" descriptionPropertiesKey="AUCKLAND_ANNIVERSARY"/>
+    </Holidays>
+  </SubConfigurations>
+
   <SubConfigurations hierarchy="hkb" description="Hawke's Bay">
     <Holidays>
       <Fixed month="OCTOBER" day="19" descriptionPropertiesKey="HAWKES_BAY_ANNIVERSARY"/>
     </Holidays>
   </SubConfigurations>
-  <SubConfigurations hierarchy="wgn" description="Wellington">
-    <Holidays>
-      <Fixed month="JANUARY" day="22" descriptionPropertiesKey="WELLINGTON_ANNIVERSARY"/>
-    </Holidays>
-  </SubConfigurations>
+
   <SubConfigurations hierarchy="mbh" description="Marlborough">
     <Holidays>
       <Fixed month="OCTOBER" day="29" descriptionPropertiesKey="MARLBOROUGH_ANNIVERSARY"/>
     </Holidays>
   </SubConfigurations>
+
+  <SubConfigurations hierarchy="mwt" description="Manawatu-Wanganui">
+    <Holidays>
+      <Fixed month="JANUARY" day="22" descriptionPropertiesKey="WELLINGTON_ANNIVERSARY"/>
+      <Fixed month="JANUARY" day="29" descriptionPropertiesKey="AUCKLAND_ANNIVERSARY"/>
+    </Holidays>
+  </SubConfigurations>
+
   <SubConfigurations hierarchy="nsn" description="Nelson">
     <Holidays>
       <Fixed month="JANUARY" day="29" descriptionPropertiesKey="NELSON_ANNIVERSARY"/>
     </Holidays>
   </SubConfigurations>
-  <SubConfigurations hierarchy="can" description="Canterbury">
+
+  <SubConfigurations hierarchy="ntl" description="Northland">
     <Holidays>
-      <!--
-      <Fixed month="NOVEMBER" day="16" descriptionPropertiesKey="CANTERBURY_ANNIVERSARY"/>
-      -->
+      <Fixed month="JANUARY" day="29" descriptionPropertiesKey="AUCKLAND_ANNIVERSARY"/>
     </Holidays>
   </SubConfigurations>
-  <SubConfigurations hierarchy="cans" description="Canterbury (South)">
-    <Holidays>
-      <Fixed month="SEPTEMBER" day="24" descriptionPropertiesKey="CANTERBURY_SOUTH_ANNIVERSARY"/>
-    </Holidays>
-  </SubConfigurations>
-  <SubConfigurations hierarchy="wtc" description="Westland">
-    <Holidays>
-      <Fixed month="DECEMBER" day="3" descriptionPropertiesKey="WESTLAND_ANNIVERSARY"/>
-    </Holidays>
-  </SubConfigurations>
+
   <SubConfigurations hierarchy="ota" description="Otago">
     <Holidays>
       <Fixed month="MARCH" day="26" descriptionPropertiesKey="OTAGO_ANNIVERSARY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="stl" description="Southland">
     <Holidays>
       <Fixed month="APRIL" day="3" descriptionPropertiesKey="SOUTHLAND_ANNIVERSARY"/>
     </Holidays>
   </SubConfigurations>
-  <SubConfigurations hierarchy="cit" description="Chatham Islands">
+
+  <SubConfigurations hierarchy="tas" description="Tasman">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="tki" description="Taranaki">
     <Holidays>
-      <Fixed month="DECEMBER" day="3" descriptionPropertiesKey="CHATHAM_ISLANDS_ANNIVERSARY"/>
+      <Fixed month="MARCH" day="12" descriptionPropertiesKey="TARANAKI_ANNIVERSARY"/>
+    </Holidays>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="wgn" description="Wellington">
+    <Holidays>
+      <Fixed month="JANUARY" day="22" descriptionPropertiesKey="WELLINGTON_ANNIVERSARY"/>
+    </Holidays>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="wko" description="Waikato">
+    <Holidays>
+      <Fixed month="JANUARY" day="29" descriptionPropertiesKey="AUCKLAND_ANNIVERSARY"/>
+    </Holidays>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="wtc" description="Westland">
+    <Holidays>
+      <Fixed month="DECEMBER" day="3" descriptionPropertiesKey="WESTLAND_ANNIVERSARY"/>
     </Holidays>
   </SubConfigurations>
 </Configuration>

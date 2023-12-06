@@ -43,6 +43,7 @@
     <ChristianHoliday type="EASTER_SATURDAY" descriptionPropertiesKey="christian.EASTER_SATURDAY"/>
     <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
   </Holidays>
+
   <SubConfigurations hierarchy="act" description="Australian Capital Territory">
     <Holidays>
       <Fixed month="JANUARY" day="1" validFrom="2008" validTo="2019" descriptionPropertiesKey="NEW_YEAR">
@@ -69,13 +70,14 @@
       <FixedWeekday which="SECOND" weekday="MONDAY" month="JUNE" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
       <FixedWeekday which="FIRST" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="LABOUR_DAY"/>
       <FixedWeekday which="FIRST" weekday="TUESDAY" month="NOVEMBER" validTo="2019"
-                        descriptionPropertiesKey="FAMILY_COMMUNITY"/>
+                    descriptionPropertiesKey="FAMILY_COMMUNITY"/>
       <FixedWeekdayRelativeToFixed validFrom="2020" which="FIRST" weekday="MONDAY" when="AFTER"
-                                       descriptionPropertiesKey="RECONCILIATION">
+                                   descriptionPropertiesKey="RECONCILIATION">
         <day month="MAY" day="26"/>
       </FixedWeekdayRelativeToFixed>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="nsw" description="New South Wales">
     <Holidays>
       <Fixed month="JANUARY" day="1" validFrom="2008" validTo="2019" descriptionPropertiesKey="NEW_YEAR">
@@ -95,9 +97,10 @@
       <FixedWeekday which="SECOND" weekday="MONDAY" month="JUNE" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
       <FixedWeekday which="FIRST" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="LABOUR_DAY"/>
       <FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST" validFrom="2020"
-                        descriptionPropertiesKey="BANK_HOLIDAY"/>
+                    descriptionPropertiesKey="BANK_HOLIDAY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="nt" description="Nothern Territory">
     <Holidays>
       <Fixed month="JANUARY" day="1" validFrom="2008" validTo="2019" descriptionPropertiesKey="NEW_YEAR">
@@ -123,6 +126,7 @@
       <FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="PICNIC"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="qld" description="Queensland">
     <Holidays>
       <Fixed month="JANUARY" day="1" validFrom="2008" validTo="2019" descriptionPropertiesKey="NEW_YEAR">
@@ -142,10 +146,11 @@
       </Fixed>
       <FixedWeekday which="FIRST" weekday="MONDAY" month="MAY" descriptionPropertiesKey="LABOUR_DAY"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="JUNE" validTo="2019"
-                        descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
+                    descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
       <FixedWeekday which="FIRST" weekday="MONDAY" month="OCTOBER" validFrom="2020"
-                        descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
+                    descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
     </Holidays>
+
     <SubConfigurations hierarchy="br" description="Brisbane Area">
       <Holidays>
         <FixedWeekdayBetweenFixed weekday="WEDNESDAY" validFrom="2020" descriptionPropertiesKey="EKKA">
@@ -155,6 +160,7 @@
       </Holidays>
     </SubConfigurations>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="sa" description="South Australia">
     <Holidays>
       <Fixed month="JANUARY" day="1" validFrom="2008" validTo="2019" descriptionPropertiesKey="NEW_YEAR">
@@ -186,6 +192,7 @@
       <FixedWeekday which="FIRST" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="LABOUR_DAY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="tas" description="Tasmania">
     <Holidays>
       <Fixed month="APRIL" day="25" validTo="2019" descriptionPropertiesKey="ANZAC"/>
@@ -205,17 +212,21 @@
       <FixedWeekday which="SECOND" weekday="MONDAY" month="JUNE" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
       <ChristianHoliday type="EASTER_TUESDAY" descriptionPropertiesKey="christian.EASTER_TUESDAY"/>
     </Holidays>
+
     <SubConfigurations hierarchy="ho" description="Hobart Area">
       <Holidays>
         <FixedWeekday which="SECOND" weekday="MONDAY" month="FEBRUARY" descriptionPropertiesKey="HOBART"/>
       </Holidays>
     </SubConfigurations>
+
     <SubConfigurations hierarchy="nh" description="Non-Hobart Area">
       <Holidays>
         <FixedWeekday which="FIRST" weekday="MONDAY" month="NOVEMBER" descriptionPropertiesKey="RECREATION"/>
       </Holidays>
     </SubConfigurations>
+
   </SubConfigurations>
+
   <SubConfigurations hierarchy="vic" description="Victoria">
     <Holidays>
       <Fixed month="APRIL" day="25" validTo="2019" descriptionPropertiesKey="ANZAC"/>
@@ -233,10 +244,10 @@
       <FixedWeekday which="SECOND" weekday="MONDAY" month="MARCH" descriptionPropertiesKey="LABOUR_DAY"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="JUNE" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
       <FixedWeekday which="FIRST" weekday="TUESDAY" month="NOVEMBER" descriptionPropertiesKey="MELBOURNE_CUP"/>
-      <FixedWeekday which="LAST" weekday="FRIDAY" month="SEPTEMBER" validFrom="2020"
-                        descriptionPropertiesKey="AFL"/>
+      <FixedWeekday which="LAST" weekday="FRIDAY" month="SEPTEMBER" validFrom="2020" descriptionPropertiesKey="AFL"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="wa" description="Western Australia">
     <Holidays>
       <Fixed month="JANUARY" day="1" validFrom="2008" validTo="2019" descriptionPropertiesKey="NEW_YEAR">
@@ -260,10 +271,9 @@
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
       <FixedWeekday which="FIRST" weekday="MONDAY" month="MARCH" descriptionPropertiesKey="LABOUR_DAY"/>
-      <FixedWeekday which="FIRST" weekday="MONDAY" month="JUNE" validTo="2019"
-                        descriptionPropertiesKey="FOUNDATION"/>
+      <FixedWeekday which="FIRST" weekday="MONDAY" month="JUNE" validTo="2019" descriptionPropertiesKey="FOUNDATION"/>
       <FixedWeekday which="FIRST" weekday="MONDAY" month="JUNE" validFrom="2020"
-                        descriptionPropertiesKey="WESTERN_AUSTRALIA"/>
+                    descriptionPropertiesKey="WESTERN_AUSTRALIA"/>
       <FixedWeekday which="LAST" weekday="MONDAY" month="SEPTEMBER" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
     </Holidays>
   </SubConfigurations>

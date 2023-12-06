@@ -2,8 +2,6 @@
 
 Jollyday is a java library to query public holidays. Currently, we support **over 70 countries**.
 
-Thanks to @svendiedrichsen who started jollyday!
-
 ## How to use it
 
 **Jollyday** is based on **Java 11** and can be used directly as dependency via maven or gradle e.g.
@@ -167,6 +165,19 @@ If you already use one of these libraries in your project than just use the spec
   ```
 </details>
 
+## ISO 3166
+
+To retrieve the public holidays of a country the [ISO 3166-1 alpha-2] standard is used. An [list of current ISO 3166-1 alpha-2 codes] is available at wikipedia.
+
+To access the public holidays of a subdivision of a country, e.g. Baden-Württemberg of Germany the [ISO 3166-2] standard is used. A [list of current ISO 3166-2 codes] is available at wikipedia.
+
+### Data precision
+
+| Precision                      | Supported |
+|--------------------------------|-----------|
+| Country ([ISO 3166-1 alpha-2]) | Yes       |
+| Subdivisions ([ISO 3166-2])    | Yes       |
+| City Holiday                   | Yes       |
 
 ## Development
 
@@ -201,3 +212,7 @@ or for Windows user:
 [Apache License, Version 2.0](LICENSE.md)
 
 [Discussions]: https://github.com/focus-shift/jollyday/discussions
+[ISO 3166-1 alpha-2]: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
+[list of current ISO 3166-1 alpha-2 codes]: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Current_codes
+[ISO 3166-2]: https://en.wikipedia.org/wiki/ISO_3166-2
+[list of current ISO 3166-2 codes]: https://en.wikipedia.org/wiki/ISO_3166-2#Current_codes
