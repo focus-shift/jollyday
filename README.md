@@ -79,11 +79,13 @@ If you already use one of these libraries in your project than just use the spec
 
   Returns all **german** public holidays in **2022**
   ```java
-  import de.focus_shift.jolldayday.core.Holiday;
-  import de.focus_shift.jolldayday.core.HolidayCalendar.GERMANY;
-  import de.focus_shift.jolldayday.core.HolidayManager;
-  import de.focus_shift.jolldayday.core.ManagerParameters;
-  import java.time.LocalDate;
+  import de.focus_shift.jollyday.core.Holiday;
+  import de.focus_shift.jollyday.core.HolidayManager;
+  import de.focus_shift.jollyday.core.ManagerParameters;
+
+  import java.util.Set;
+
+  import static de.focus_shift.jollyday.core.HolidayCalendar.GERMANY;
 
   final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(GERMANY));
   final Set<Holiday> holidays = holidayManager.getHolidays(2022);
@@ -95,11 +97,14 @@ If you already use one of these libraries in your project than just use the spec
 
   Returns all german public holidays from the **15th of april in 2022** until the **31st of may in 2023**
   ```java
-  import de.focus_shift.jolldayday.core.Holiday;
-  import de.focus_shift.jolldayday.core.HolidayCalendar.GERMANY;
-  import de.focus_shift.jolldayday.core.HolidayManager;
-  import de.focus_shift.jolldayday.core.ManagerParameters;
+  import de.focus_shift.jollyday.core.Holiday;
+  import de.focus_shift.jollyday.core.HolidayManager;
+  import de.focus_shift.jollyday.core.ManagerParameters;
+
   import java.time.LocalDate;
+  import java.util.Set;
+
+  import static de.focus_shift.jollyday.core.HolidayCalendar.GERMANY;
 
   final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(GERMANY));
   final Set<Holiday> holidays = holidayManager.getHolidays(LocalDate.of(2022, 4, 15), LocalDate.of(2023, 5, 31));
@@ -111,11 +116,12 @@ If you already use one of these libraries in your project than just use the spec
 
   Returns true or false if a date is a public holidays in germany.
   ```java
-  import de.focus_shift.jolldayday.core.Holiday;
-  import de.focus_shift.jolldayday.core.HolidayCalendar.GERMANY;
-  import de.focus_shift.jolldayday.core.HolidayManager;
-  import de.focus_shift.jolldayday.core.ManagerParameters;
+  import de.focus_shift.jollyday.core.HolidayManager;
+  import de.focus_shift.jollyday.core.ManagerParameters;
+
   import java.time.LocalDate;
+
+  import static de.focus_shift.jollyday.core.HolidayCalendar.GERMANY;
 
   final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(GERMANY));
   final boolean isHoliday = holidayManager.isHoliday(LocalDate.of(2022, 6, 6));
@@ -123,11 +129,12 @@ If you already use one of these libraries in your project than just use the spec
 
   Returns true or false if a date is a public holidays in Baden-Württemberg in germany.
   ```java
-  import de.focus_shift.jolldayday.core.Holiday;
-  import de.focus_shift.jolldayday.core.HolidayCalendar.GERMANY;
-  import de.focus_shift.jolldayday.core.HolidayManager;
-  import de.focus_shift.jolldayday.core.ManagerParameters;
+  import de.focus_shift.jollyday.core.HolidayManager;
+  import de.focus_shift.jollyday.core.ManagerParameters;
+
   import java.time.LocalDate;
+
+  import static de.focus_shift.jollyday.core.HolidayCalendar.GERMANY;
 
   final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(GERMANY));
   final boolean isHoliday = holidayManager.isHoliday(LocalDate.of(2022, 6, 6), "bw");
