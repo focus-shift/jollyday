@@ -17,7 +17,7 @@ public enum HolidayCalendar {
   FINLAND("FI"), FRANCE(Locale.FRANCE.getCountry()),
   GERMANY(Locale.GERMANY.getCountry()), GUERNSEY("GG"), GREECE("GR"),
   HONG_KONG("HK"), HUNGARY("HU"),
-  ICELAND("IS"), IRELAND("IE"), ISLE_OF_MAN("IM"), ITALY(Locale.ITALY.getCountry()),
+  ICELAND("IS"), INDIA("IN"), IRELAND("IE"), ISLE_OF_MAN("IM"), ITALY(Locale.ITALY.getCountry()),
   JAPAN("JP"), JERSEY("JE"),
   KAZAKHSTAN("KZ"), KOSOVO("XK"),
   LATVIA("LV"), LIECHTENSTEIN("LI"), LITHUANIA("LT"), LONDON_METAL_EXCHANGE("LME"), LUXEMBOURG("LU"),
