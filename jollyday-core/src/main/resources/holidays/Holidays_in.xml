@@ -86,7 +86,7 @@
     </Holidays>
   </SubConfigurations>
 
-  <SubConfigurations hierarchy="ct" description="Chhattīsgarh">
+  <SubConfigurations hierarchy="cg" description="Chhattīsgarh">
     <Holidays>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
       <IslamicHoliday type="ASCHURA" descriptionPropertiesKey="islamic.ASCHURA"/>
@@ -279,7 +279,7 @@
     </Holidays>
   </SubConfigurations>
 
-  <SubConfigurations hierarchy="or" description="Odisha">
+  <SubConfigurations hierarchy="od" description="Odisha">
     <Holidays>
       <Fixed month="APRIL" day="14"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
@@ -331,10 +331,6 @@
     </Holidays>
   </SubConfigurations>
 
-  <SubConfigurations hierarchy="tg" description="Telangāna">
-    <Holidays/>
-  </SubConfigurations>
-
   <SubConfigurations hierarchy="tn" description="Tamil Nādu">
     <Holidays>
       <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
@@ -348,6 +344,10 @@
       <IslamicHoliday type="ID_AL_FITR" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
       <IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
     </Holidays>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ts" description="Telangāna">
+    <Holidays/>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="tr" description="Tripura">
@@ -373,7 +373,7 @@
     </Holidays>
   </SubConfigurations>
 
-  <SubConfigurations hierarchy="ut" description="Uttarākhand">
+  <SubConfigurations hierarchy="uk" description="Uttarākhand">
     <Holidays>
       <Fixed month="APRIL" day="14"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
