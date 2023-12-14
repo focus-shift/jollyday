@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration hierarchy="hk" description="Hong Kong"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <!-- https://www.gov.hk/en/about/abouthk/holiday/index.htm -->
+    <!-- https://www.elegislation.gov.hk/hk/cap149!en-zh-Hant-HK.pdf -->
+    <!-- all holidays in Hong Kong will be moved to the following weekday, that isn't a holiday, if they fall on a Sunday
+    or such other day as the Chief Executive in Council may, by order in the Gazette, appoint in place of that day -->
+
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="FIRST_DAY_OF_JANUARY">
+      <!-- actually: The day following the first day of January -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- according to Wikipedia: -->
+    <!-- The first day of Chinese New Year begins on the new moon that appears between 21 January and 20 February. -->
+    <!-- And extremely rarely, 21 February, such as in 2319, the first occurrence since the 1645 calendar reform. -->
+    <Fixed month="FEBRUARY" day="18" validFrom="2007" validTo="2007" descriptionPropertiesKey="LUNAR_NEW_YEARS_DAY">
+      <!-- actually: The day preceding Lunar New Year's Day -->
+      <MovingCondition substitute="SUNDAY" with="PREVIOUS" weekday="SATURDAY"/>
+    </Fixed>
+    <Fixed month="FEBRUARY" day="19" validFrom="2007" validTo="2007" descriptionPropertiesKey="SECOND_DAY_OF_LUNAR_NEW_YEAR">
+      <!-- actually: The fourth day of Lunar New Year -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+    <Fixed month="FEBRUARY" day="20" validFrom="2007" validTo="2007" descriptionPropertiesKey="THIRD_DAY_OF_LUNAR_NEW_YEAR">
+      <!-- actually: The fourth day of Lunar New Year -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="FEBRUARY" day="7" validFrom="2008" validTo="2008" descriptionPropertiesKey="LUNAR_NEW_YEARS_DAY">
+      <!-- actually: The day preceding Lunar New Year's Day -->
+      <MovingCondition substitute="SUNDAY" with="PREVIOUS" weekday="SATURDAY"/>
+    </Fixed>
+    <Fixed month="FEBRUARY" day="8" validFrom="2008" validTo="2008" descriptionPropertiesKey="SECOND_DAY_OF_LUNAR_NEW_YEAR">
+      <!-- actually: The fourth day of Lunar New Year -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+    <Fixed month="FEBRUARY" day="9" validFrom="2008" validTo="2008" descriptionPropertiesKey="THIRD_DAY_OF_LUNAR_NEW_YEAR">
+      <!-- actually: The fourth day of Lunar New Year -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="JANUARY" day="26" validFrom="2009" validTo="2009" descriptionPropertiesKey="LUNAR_NEW_YEARS_DAY">
+      <!-- actually: The fourth day of Lunar New Year -->
+      <MovingCondition substitute="SUNDAY" with="PREVIOUS" weekday="SATURDAY"/>
+    </Fixed>
+    <Fixed month="JANUARY" day="27" validFrom="2009" validTo="2009" descriptionPropertiesKey="SECOND_DAY_OF_LUNAR_NEW_YEAR">
+      <!-- actually: The fourth day of Lunar New Year -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+    <Fixed month="JANUARY" day="28" validFrom="2009" validTo="2009" descriptionPropertiesKey="THIRD_DAY_OF_LUNAR_NEW_YEAR">
+      <!-- actually: The fourth day of Lunar New Year -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="FEBRUARY" day="14" validFrom="2010" validTo="2010" descriptionPropertiesKey="LUNAR_NEW_YEARS_DAY">
+      <!-- actually: The fourth day of Lunar New Year -->
+      <MovingCondition substitute="SUNDAY" with="PREVIOUS" weekday="SATURDAY"/>
+    </Fixed>
+    <Fixed month="FEBRUARY" day="15" validFrom="2010" validTo="2010" descriptionPropertiesKey="SECOND_DAY_OF_LUNAR_NEW_YEAR">
+      <!-- actually: The fourth day of Lunar New Year -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+    <Fixed month="FEBRUARY" day="16" validFrom="2010" validTo="2010" descriptionPropertiesKey="THIRD_DAY_OF_LUNAR_NEW_YEAR">
+      <!-- actually: The fourth day of Lunar New Year -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="FEBRUARY" day="3" validFrom="2011" validTo="2011" descriptionPropertiesKey="LUNAR_NEW_YEARS_DAY">
+      <!-- actually: The fourth day of Lunar New Year -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="WEDNESDAY"/>
+    </Fixed>
+    <Fixed month="FEBRUARY" day="4" validFrom="2011" validTo="2011" descriptionPropertiesKey="SECOND_DAY_OF_LUNAR_NEW_YEAR">
+      <!-- actually: The fourth day of Lunar New Year -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+    <Fixed month="FEBRUARY" day="5" validFrom="2011" validTo="2011" descriptionPropertiesKey="THIRD_DAY_OF_LUNAR_NEW_YEAR">
+      <!-- actually: The fourth day of Lunar New Year -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="JANUARY" day="23" validFrom="2012" validTo="2012" descriptionPropertiesKey="LUNAR_NEW_YEARS_DAY">
+      <!-- actually: The fourth day of Lunar New Year -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="WEDNESDAY"/>
+    </Fixed>
+    <Fixed month="JANUARY" day="24" validFrom="2012" validTo="2012" descriptionPropertiesKey="SECOND_DAY_OF_LUNAR_NEW_YEAR">
+      <!-- actually: The fourth day of Lunar New Year -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+    <Fixed month="JANUARY" day="25" validFrom="2012" validTo="2012" descriptionPropertiesKey="THIRD_DAY_OF_LUNAR_NEW_YEAR">
+      <!-- actually: The fourth day of Lunar New Year -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="FEBRUARY" day="10" validFrom="2013" validTo="2013" descriptionPropertiesKey="LUNAR_NEW_YEARS_DAY">
+      <!-- actually: The fourth day of Lunar New Year -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="WEDNESDAY"/>
+    </Fixed>
+    <Fixed month="FEBRUARY" day="11" validFrom="2013" validTo="2013" descriptionPropertiesKey="SECOND_DAY_OF_LUNAR_NEW_YEAR">
+      <!-- actually: The fourth day of Lunar New Year -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+    <Fixed month="FEBRUARY" day="12" validFrom="2013" validTo="2013" descriptionPropertiesKey="THIRD_DAY_OF_LUNAR_NEW_YEAR">
+      <!-- actually: The fourth day of Lunar New Year -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="JANUARY" day="31" validFrom="2014" validTo="2014" descriptionPropertiesKey="LUNAR_NEW_YEARS_DAY">
+      <!-- actually: The fourth day of Lunar New Year -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="WEDNESDAY"/>
+    </Fixed>
+    <Fixed month="FEBRUARY" day="1" validFrom="2014" validTo="2014" descriptionPropertiesKey="SECOND_DAY_OF_LUNAR_NEW_YEAR">
+      <!-- actually: The fourth day of Lunar New Year -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+    <Fixed month="FEBRUARY" day="2" validFrom="2014" validTo="2014" descriptionPropertiesKey="THIRD_DAY_OF_LUNAR_NEW_YEAR">
+      <!-- actually: The fourth day of Lunar New Year -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="FEBRUARY" day="19" validFrom="2015" validTo="2015" descriptionPropertiesKey="LUNAR_NEW_YEARS_DAY">
+      <!-- actually: The fourth day of Lunar New Year -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="WEDNESDAY"/>
+    </Fixed>
+    <Fixed month="FEBRUARY" day="20" validFrom="2015" validTo="2015" descriptionPropertiesKey="SECOND_DAY_OF_LUNAR_NEW_YEAR">
+      <!-- actually: The fourth day of Lunar New Year -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+    <Fixed month="FEBRUARY" day="21" validFrom="2015" validTo="2015" descriptionPropertiesKey="THIRD_DAY_OF_LUNAR_NEW_YEAR">
+      <!-- actually: The fourth day of Lunar New Year -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="FEBRUARY" day="8" validFrom="2016" validTo="2016" descriptionPropertiesKey="LUNAR_NEW_YEARS_DAY">
+      <!-- actually: The fourth day of Lunar New Year -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="WEDNESDAY"/>
+    </Fixed>
+    <Fixed month="FEBRUARY" day="9" validFrom="2016" validTo="2016" descriptionPropertiesKey="SECOND_DAY_OF_LUNAR_NEW_YEAR">
+      <!-- actually: The fourth day of Lunar New Year -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+    <Fixed month="FEBRUARY" day="10" validFrom="2016" validTo="2016" descriptionPropertiesKey="THIRD_DAY_OF_LUNAR_NEW_YEAR">
+      <!-- actually: The fourth day of Lunar New Year -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="JANUARY" day="28" validFrom="2017" validTo="2017" descriptionPropertiesKey="LUNAR_NEW_YEARS_DAY">
+      <!-- actually: The fourth day of Lunar New Year -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="WEDNESDAY"/>
+    </Fixed>
+    <Fixed month="JANUARY" day="29" validFrom="2017" validTo="2017" descriptionPropertiesKey="SECOND_DAY_OF_LUNAR_NEW_YEAR">
+      <!-- actually: The fourth day of Lunar New Year -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+    <Fixed month="JANUARY" day="30" validFrom="2017" validTo="2017" descriptionPropertiesKey="THIRD_DAY_OF_LUNAR_NEW_YEAR">
+      <!-- actually: The fourth day of Lunar New Year -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="FEBRUARY" day="16" validFrom="2018" validTo="2018" descriptionPropertiesKey="LUNAR_NEW_YEARS_DAY">
+      <!-- actually: The fourth day of Lunar New Year -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="WEDNESDAY"/>
+    </Fixed>
+    <Fixed month="FEBRUARY" day="17" validFrom="2018" validTo="2018" descriptionPropertiesKey="SECOND_DAY_OF_LUNAR_NEW_YEAR">
+      <!-- actually: The fourth day of Lunar New Year -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+    <Fixed month="FEBRUARY" day="18" validFrom="2018" validTo="2018" descriptionPropertiesKey="THIRD_DAY_OF_LUNAR_NEW_YEAR">
+      <!-- actually: The fourth day of Lunar New Year -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="FEBRUARY" day="5" validFrom="2019" validTo="2019" descriptionPropertiesKey="LUNAR_NEW_YEARS_DAY">
+      <!-- actually: The fourth day of Lunar New Year -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="WEDNESDAY"/>
+    </Fixed>
+    <Fixed month="FEBRUARY" day="6" validFrom="2019" validTo="2019" descriptionPropertiesKey="SECOND_DAY_OF_LUNAR_NEW_YEAR">
+      <!-- actually: The fourth day of Lunar New Year -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+    <Fixed month="FEBRUARY" day="7" validFrom="2019" validTo="2019" descriptionPropertiesKey="THIRD_DAY_OF_LUNAR_NEW_YEAR">
+      <!-- actually: The fourth day of Lunar New Year -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="JANUARY" day="25" validFrom="2020" validTo="2020" descriptionPropertiesKey="LUNAR_NEW_YEARS_DAY">
+      <!-- actually: The fourth day of Lunar New Year -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="WEDNESDAY"/>
+    </Fixed>
+    <Fixed month="JANUARY" day="26" validFrom="2020" validTo="2020" descriptionPropertiesKey="SECOND_DAY_OF_LUNAR_NEW_YEAR">
+      <!-- actually: The fourth day of Lunar New Year -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+    <Fixed month="JANUARY" day="27" validFrom="2020" validTo="2020" descriptionPropertiesKey="THIRD_DAY_OF_LUNAR_NEW_YEAR">
+      <!-- actually: The fourth day of Lunar New Year -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="FEBRUARY" day="12" validFrom="2021" validTo="2021" descriptionPropertiesKey="LUNAR_NEW_YEARS_DAY">
+      <!-- actually: The fourth day of Lunar New Year -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="WEDNESDAY"/>
+    </Fixed>
+    <Fixed month="FEBRUARY" day="13" validFrom="2021" validTo="2021" descriptionPropertiesKey="SECOND_DAY_OF_LUNAR_NEW_YEAR">
+      <!-- actually: The fourth day of Lunar New Year -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+    <Fixed month="FEBRUARY" day="14" validFrom="2021" validTo="2021" descriptionPropertiesKey="THIRD_DAY_OF_LUNAR_NEW_YEAR">
+      <!-- actually: The fourth day of Lunar New Year -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="FEBRUARY" day="1" validFrom="2022" validTo="2022" descriptionPropertiesKey="LUNAR_NEW_YEARS_DAY">
+      <!-- actually: The fourth day of Lunar New Year -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="WEDNESDAY"/>
+    </Fixed>
+    <Fixed month="FEBRUARY" day="2" validFrom="2022" validTo="2022" descriptionPropertiesKey="SECOND_DAY_OF_LUNAR_NEW_YEAR">
+      <!-- actually: The fourth day of Lunar New Year -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+    <Fixed month="FEBRUARY" day="3" validFrom="2022" validTo="2022" descriptionPropertiesKey="THIRD_DAY_OF_LUNAR_NEW_YEAR">
+      <!-- actually: The fourth day of Lunar New Year -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="JANUARY" day="22" validFrom="2023" validTo="2023" descriptionPropertiesKey="LUNAR_NEW_YEARS_DAY">
+      <!-- actually: The fourth day of Lunar New Year -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="WEDNESDAY"/>
+    </Fixed>
+    <Fixed month="JANUARY" day="23" validFrom="2023" validTo="2023" descriptionPropertiesKey="SECOND_DAY_OF_LUNAR_NEW_YEAR">
+      <!-- actually: The fourth day of Lunar New Year -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+    <Fixed month="JANUARY" day="24" validFrom="2023" validTo="2023" descriptionPropertiesKey="THIRD_DAY_OF_LUNAR_NEW_YEAR">
+      <!-- actually: The fourth day of Lunar New Year -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="FEBRUARY" day="10" validFrom="2024" validTo="2024" descriptionPropertiesKey="LUNAR_NEW_YEARS_DAY">
+      <!-- actually: The fourth day of Lunar New Year -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="WEDNESDAY"/>
+    </Fixed>
+    <Fixed month="FEBRUARY" day="11" validFrom="2024" validTo="2024" descriptionPropertiesKey="SECOND_DAY_OF_LUNAR_NEW_YEAR">
+      <!-- actually: The fourth day of Lunar New Year -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+    <Fixed month="FEBRUARY" day="12" validFrom="2024" validTo="2024" descriptionPropertiesKey="THIRD_DAY_OF_LUNAR_NEW_YEAR">
+      <!-- actually: The fourth day of Lunar New Year -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- according to Wikipedia: -->
+    <!-- the first day of the fifth solar term (also called Qingming) of the traditional Chinese lunisolar calendar -->
+    <!-- This makes it the 15th day after the Spring Equinox, either 4, 5 or 6 April in a given year. -->
+    <Fixed month="APRIL" day="5" validTo="2007" descriptionPropertiesKey="CHING_MING_FESTIVAL">
+      <!-- actually: The day following Ching Ming Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="APRIL" day="4" validFrom="2008" validTo="2009" descriptionPropertiesKey="CHING_MING_FESTIVAL">
+      <!-- actually: The day following Ching Ming Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <!-- https://www.gov.hk/en/about/abouthk/holiday/2010.htm -->
+    <!-- the Ching Ming Festival and the Easter Monday in 2010 fall on the same day,
+    thus the next following day that is not itself a general holiday will be observed as an additional general holiday -->
+    <!-- actually: The day following Ching Ming Festival -->
+    <Fixed month="APRIL" day="6" validFrom="2010" validTo="2010" descriptionPropertiesKey="CHING_MING_FESTIVAL"/>
+    <Fixed month="APRIL" day="5" validFrom="2011" validTo="2011" descriptionPropertiesKey="CHING_MING_FESTIVAL">
+      <!-- actually: The day following Ching Ming Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="APRIL" day="4" validFrom="2012" validTo="2013" descriptionPropertiesKey="CHING_MING_FESTIVAL">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="APRIL" day="5" validFrom="2014" validTo="2015" descriptionPropertiesKey="CHING_MING_FESTIVAL">
+      <!-- actually: The day following Ching Ming Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="APRIL" day="4" validFrom="2016" validTo="2017" descriptionPropertiesKey="CHING_MING_FESTIVAL">
+      <!-- actually: The day following Ching Ming Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="APRIL" day="5" validFrom="2018" validTo="2019" descriptionPropertiesKey="CHING_MING_FESTIVAL">
+      <!-- actually: The day following Ching Ming Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="APRIL" day="4" validFrom="2020" validTo="2021" descriptionPropertiesKey="CHING_MING_FESTIVAL">
+      <!-- actually: The day following Ching Ming Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="APRIL" day="5" validFrom="2022" validTo="2023" descriptionPropertiesKey="CHING_MING_FESTIVAL">
+      <!-- actually: The day following Ching Ming Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="APRIL" day="4" validFrom="2024" descriptionPropertiesKey="CHING_MING_FESTIVAL">
+      <!-- actually: The day following Ching Ming Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY">
+      <!-- actually: The day following Labour Day -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- according to Wikipedia: -->
+    <!-- 8th day of the 4th month (Lunar calendar) -->
+    <Fixed month="MAY" day="24" validFrom="2007" validTo="2007" descriptionPropertiesKey="BIRTHDAY_OF_THE_BUDDHA">
+      <!-- actually: The day following the Birthday of the Buddha -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="MAY" day="12" validFrom="2008" validTo="2008" descriptionPropertiesKey="BIRTHDAY_OF_THE_BUDDHA">
+      <!-- actually: The day following the Birthday of the Buddha -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="MAY" day="2" validFrom="2009" validTo="2009" descriptionPropertiesKey="BIRTHDAY_OF_THE_BUDDHA">
+      <!-- actually: The day following the Birthday of the Buddha -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="MAY" day="21" validFrom="2010" validTo="2010" descriptionPropertiesKey="BIRTHDAY_OF_THE_BUDDHA">
+      <!-- actually: The day following the Birthday of the Buddha -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="MAY" day="10" validFrom="2011" validTo="2011" descriptionPropertiesKey="BIRTHDAY_OF_THE_BUDDHA">
+      <!-- actually: The day following the Birthday of the Buddha -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="APRIL" day="28" validFrom="2012" validTo="2012" descriptionPropertiesKey="BIRTHDAY_OF_THE_BUDDHA">
+      <!-- actually: The day following the Birthday of the Buddha -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="MAY" day="17" validFrom="2013" validTo="2013" descriptionPropertiesKey="BIRTHDAY_OF_THE_BUDDHA">
+      <!-- actually: The day following the Birthday of the Buddha -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="MAY" day="6" validFrom="2014" validTo="2014" descriptionPropertiesKey="BIRTHDAY_OF_THE_BUDDHA">
+      <!-- actually: The day following the Birthday of the Buddha -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="MAY" day="25" validFrom="2015" validTo="2015" descriptionPropertiesKey="BIRTHDAY_OF_THE_BUDDHA">
+      <!-- actually: The day following the Birthday of the Buddha -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="MAY" day="14" validFrom="2016" validTo="2016" descriptionPropertiesKey="BIRTHDAY_OF_THE_BUDDHA">
+      <!-- actually: The day following the Birthday of the Buddha -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="MAY" day="3" validFrom="2017" validTo="2017" descriptionPropertiesKey="BIRTHDAY_OF_THE_BUDDHA">
+      <!-- actually: The day following the Birthday of the Buddha -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="MAY" day="22" validFrom="2018" validTo="2018" descriptionPropertiesKey="BIRTHDAY_OF_THE_BUDDHA">
+      <!-- actually: The day following the Birthday of the Buddha -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="MAY" day="12" validFrom="2019" validTo="2019" descriptionPropertiesKey="BIRTHDAY_OF_THE_BUDDHA">
+      <!-- actually: The day following the Birthday of the Buddha -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="APRIL" day="30" validFrom="2020" validTo="2020" descriptionPropertiesKey="BIRTHDAY_OF_THE_BUDDHA">
+      <!-- actually: The day following the Birthday of the Buddha -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="MAY" day="19" validFrom="2021" validTo="2021" descriptionPropertiesKey="BIRTHDAY_OF_THE_BUDDHA">
+      <!-- actually: The day following the Birthday of the Buddha -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="MAY" day="8" validFrom="2022" validTo="2022" descriptionPropertiesKey="BIRTHDAY_OF_THE_BUDDHA">
+      <!-- actually: The day following the Birthday of the Buddha -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="MAY" day="26" validFrom="2023" validTo="2023" descriptionPropertiesKey="BIRTHDAY_OF_THE_BUDDHA">
+      <!-- actually: The day following the Birthday of the Buddha -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="MAY" day="15" validFrom="2024" validTo="2024" descriptionPropertiesKey="BIRTHDAY_OF_THE_BUDDHA">
+      <!-- actually: The day following the Birthday of the Buddha -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- accroding to Wikipedia: -->
+    <!-- 5th day of the 5th month (Lunar calendar) -->
+    <Fixed month="JUNE" day="19" validFrom="2007" validTo="2007" descriptionPropertiesKey="TUEN_NG_FESTIVAL">
+      <!-- actually: The day following Tuen Ng Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="JUNE" day="8" validFrom="2008" validTo="2008" descriptionPropertiesKey="TUEN_NG_FESTIVAL">
+      <!-- actually: The day following Tuen Ng Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="MAY" day="28" validFrom="2009" validTo="2009" descriptionPropertiesKey="TUEN_NG_FESTIVAL">
+      <!-- actually: The day following Tuen Ng Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="JUNE" day="16" validFrom="2010" validTo="2010" descriptionPropertiesKey="TUEN_NG_FESTIVAL">
+      <!-- actually: The day following Tuen Ng Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="JUNE" day="6" validFrom="2011" validTo="2011" descriptionPropertiesKey="TUEN_NG_FESTIVAL">
+      <!-- actually: The day following Tuen Ng Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="JUNE" day="23" validFrom="2012" validTo="2012" descriptionPropertiesKey="TUEN_NG_FESTIVAL">
+      <!-- actually: The day following Tuen Ng Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="JUNE" day="12" validFrom="2013" validTo="2013" descriptionPropertiesKey="TUEN_NG_FESTIVAL">
+      <!-- actually: The day following Tuen Ng Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="JUNE" day="2" validFrom="2014" validTo="2014" descriptionPropertiesKey="TUEN_NG_FESTIVAL">
+      <!-- actually: The day following Tuen Ng Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="JUNE" day="20" validFrom="2015" validTo="2015" descriptionPropertiesKey="TUEN_NG_FESTIVAL">
+      <!-- actually: The day following Tuen Ng Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="JUNE" day="9" validFrom="2016" validTo="2016" descriptionPropertiesKey="TUEN_NG_FESTIVAL">
+      <!-- actually: The day following Tuen Ng Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="MAY" day="30" validFrom="2017" validTo="2017" descriptionPropertiesKey="TUEN_NG_FESTIVAL">
+      <!-- actually: The day following Tuen Ng Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="JUNE" day="18" validFrom="2018" validTo="2018" descriptionPropertiesKey="TUEN_NG_FESTIVAL">
+      <!-- actually: The day following Tuen Ng Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="JUNE" day="7" validFrom="2019" validTo="2019" descriptionPropertiesKey="TUEN_NG_FESTIVAL">
+      <!-- actually: The day following Tuen Ng Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="JUNE" day="25" validFrom="2020" validTo="2020" descriptionPropertiesKey="TUEN_NG_FESTIVAL">
+      <!-- actually: The day following Tuen Ng Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="JUNE" day="14" validFrom="2021" validTo="2021" descriptionPropertiesKey="TUEN_NG_FESTIVAL">
+      <!-- actually: The day following Tuen Ng Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="JUNE" day="3" validFrom="2022" validTo="2022" descriptionPropertiesKey="TUEN_NG_FESTIVAL">
+      <!-- actually: The day following Tuen Ng Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="JUNE" day="22" validFrom="2023" validTo="2023" descriptionPropertiesKey="TUEN_NG_FESTIVAL">
+      <!-- actually: The day following Tuen Ng Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="JUNE" day="10" validFrom="2024" validTo="2024" descriptionPropertiesKey="TUEN_NG_FESTIVAL">
+      <!-- actually: The day following Tuen Ng Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <Fixed month="JULY" day="1" validFrom="1997" descriptionPropertiesKey="HONG_KONG_SPECIAL_REGION">
+      <!-- actually: The day following Hong Kong Special Administrative Region Establishment Day -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- https://www.gov.hk/en/about/abouthk/holiday/2015.htm -->
+    <!--  The Government has, by legislation, designated 3 September 2015,
+    the 70th anniversary day of the victory of the Chinese people's war of resistance against Japanese aggression,
+    on a one-off basis as an additional Statutory Holiday and General Holiday for 2015. -->
+    <Fixed month="SEPTEMBER" day="3" validFrom="2015" validTo="2015" descriptionPropertiesKey="70_ANNIVERSARY_VICTORY_CH_VS_JP"/>
+
+    <!-- according to Wikipedia: -->
+    <!-- 16th day of the 8th month (Lunar calendar) -->
+    <Fixed month="SEPTEMBER" day="26" validFrom="2007" validTo="2007" descriptionPropertiesKey="DAY_FOLLOWING_CHINESE_MID_AUTUMN">
+      <!-- actually: The second day following the Chinese Mid-Autumn Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="SEPTEMBER" day="15" validFrom="2008" validTo="2008" descriptionPropertiesKey="DAY_FOLLOWING_CHINESE_MID_AUTUMN">
+      <!-- actually: The second day following the Chinese Mid-Autumn Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <!-- https://www.gov.hk/en/about/abouthk/holiday/2009.htm -->
+    <!-- As the day following the Chinese Mid-Autumn Festival in 2009 falls on a Sunday,
+    the day of that Festival will be designated as an additional general holiday -->
+    <Fixed month="OCTOBER" day="3" validFrom="2009" validTo="2009" descriptionPropertiesKey="CHINESE_MID_AUTUMN_FESTIVAL"/>
+    <Fixed month="SEPTEMBER" day="23" validFrom="2010" validTo="2010" descriptionPropertiesKey="DAY_FOLLOWING_CHINESE_MID_AUTUMN">
+      <!-- actually: The second day following the Chinese Mid-Autumn Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="SEPTEMBER" day="13" validFrom="2011" validTo="2011" descriptionPropertiesKey="DAY_FOLLOWING_CHINESE_MID_AUTUMN">
+      <!-- actually: The second day following the Chinese Mid-Autumn Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="OCTOBER" day="1" validFrom="2012" validTo="2012" descriptionPropertiesKey="DAY_FOLLOWING_CHINESE_MID_AUTUMN">
+      <!-- actually: The second day following the Chinese Mid-Autumn Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="SEPTEMBER" day="20" validFrom="2013" validTo="2013" descriptionPropertiesKey="DAY_FOLLOWING_CHINESE_MID_AUTUMN">
+      <!-- actually: The second day following the Chinese Mid-Autumn Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="SEPTEMBER" day="9" validFrom="2014" validTo="2014" descriptionPropertiesKey="DAY_FOLLOWING_CHINESE_MID_AUTUMN">
+      <!-- actually: The second day following the Chinese Mid-Autumn Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="SEPTEMBER" day="28" validFrom="2015" validTo="2015" descriptionPropertiesKey="DAY_FOLLOWING_CHINESE_MID_AUTUMN">
+      <!-- actually: The second day following the Chinese Mid-Autumn Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="SEPTEMBER" day="16" validFrom="2016" validTo="2016" descriptionPropertiesKey="DAY_FOLLOWING_CHINESE_MID_AUTUMN">
+      <!-- actually: The second day following the Chinese Mid-Autumn Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="OCTOBER" day="5" validFrom="2017" validTo="2017" descriptionPropertiesKey="DAY_FOLLOWING_CHINESE_MID_AUTUMN">
+      <!-- actually: The second day following the Chinese Mid-Autumn Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="SEPTEMBER" day="25" validFrom="2018" validTo="2018" descriptionPropertiesKey="DAY_FOLLOWING_CHINESE_MID_AUTUMN">
+      <!-- actually: The second day following the Chinese Mid-Autumn Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="SEPTEMBER" day="14" validFrom="2019" validTo="2019" descriptionPropertiesKey="DAY_FOLLOWING_CHINESE_MID_AUTUMN">
+      <!-- actually: The second day following the Chinese Mid-Autumn Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="OCTOBER" day="2" validFrom="2020" validTo="2020" descriptionPropertiesKey="DAY_FOLLOWING_CHINESE_MID_AUTUMN">
+      <!-- actually: The second day following the Chinese Mid-Autumn Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="SEPTEMBER" day="22" validFrom="2021" validTo="2021" descriptionPropertiesKey="DAY_FOLLOWING_CHINESE_MID_AUTUMN">
+      <!-- actually: The second day following the Chinese Mid-Autumn Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="SEPTEMBER" day="11" validFrom="2022" validTo="2022" descriptionPropertiesKey="DAY_FOLLOWING_CHINESE_MID_AUTUMN">
+      <!-- actually: The second day following the Chinese Mid-Autumn Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="SEPTEMBER" day="30" validFrom="2023" validTo="2023" descriptionPropertiesKey="DAY_FOLLOWING_CHINESE_MID_AUTUMN">
+      <!-- actually: The second day following the Chinese Mid-Autumn Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="SEPTEMBER" day="18" validFrom="2024" validTo="2024" descriptionPropertiesKey="DAY_FOLLOWING_CHINESE_MID_AUTUMN">
+      <!-- actually: The second day following the Chinese Mid-Autumn Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- according to Wikipedia: -->
+    <!-- 9th day of the 9th month (Lunar calendar) -->
+    <Fixed month="OCTOBER" day="19" validFrom="2007" validTo="2007" descriptionPropertiesKey="CHUNG_YEUNG_FESTIVAL">
+      <!-- actually: The day following Chung Yeung Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="OCTOBER" day="7" validFrom="2008" validTo="2008" descriptionPropertiesKey="CHUNG_YEUNG_FESTIVAL">
+      <!-- actually: The day following Chung Yeung Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="OCTOBER" day="26" validFrom="2009" validTo="2009" descriptionPropertiesKey="CHUNG_YEUNG_FESTIVAL">
+      <!-- actually: The day following Chung Yeung Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="OCTOBER" day="16" validFrom="2010" validTo="2010" descriptionPropertiesKey="CHUNG_YEUNG_FESTIVAL">
+      <!-- actually: The day following Chung Yeung Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="OCTOBER" day="5" validFrom="2011" validTo="2011" descriptionPropertiesKey="CHUNG_YEUNG_FESTIVAL">
+      <!-- actually: The day following Chung Yeung Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="OCTOBER" day="23" validFrom="2012" validTo="2012" descriptionPropertiesKey="CHUNG_YEUNG_FESTIVAL">
+      <!-- actually: The day following Chung Yeung Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="OCTOBER" day="13" validFrom="2013" validTo="2013" descriptionPropertiesKey="CHUNG_YEUNG_FESTIVAL">
+      <!-- actually: The day following Chung Yeung Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="OCTOBER" day="2" validFrom="2014" validTo="2014" descriptionPropertiesKey="CHUNG_YEUNG_FESTIVAL">
+      <!-- actually: The day following Chung Yeung Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="OCTOBER" day="21" validFrom="2015" validTo="2015" descriptionPropertiesKey="CHUNG_YEUNG_FESTIVAL">
+      <!-- actually: The day following Chung Yeung Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="OCTOBER" day="9" validFrom="2016" validTo="2016" descriptionPropertiesKey="CHUNG_YEUNG_FESTIVAL">
+      <!-- actually: The day following Chung Yeung Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="OCTOBER" day="28" validFrom="2017" validTo="2017" descriptionPropertiesKey="CHUNG_YEUNG_FESTIVAL">
+      <!-- actually: The day following Chung Yeung Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="OCTOBER" day="17" validFrom="2018" validTo="2018" descriptionPropertiesKey="CHUNG_YEUNG_FESTIVAL">
+      <!-- actually: The day following Chung Yeung Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="OCTOBER" day="7" validFrom="2019" validTo="2019" descriptionPropertiesKey="CHUNG_YEUNG_FESTIVAL">
+      <!-- actually: The day following Chung Yeung Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="OCTOBER" day="25" validFrom="2020" validTo="2020" descriptionPropertiesKey="CHUNG_YEUNG_FESTIVAL">
+      <!-- actually: The day following Chung Yeung Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="OCTOBER" day="14" validFrom="2021" validTo="2021" descriptionPropertiesKey="CHUNG_YEUNG_FESTIVAL">
+      <!-- actually: The day following Chung Yeung Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="OCTOBER" day="4" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHUNG_YEUNG_FESTIVAL">
+      <!-- actually: The day following Chung Yeung Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="OCTOBER" day="23" validFrom="2023" validTo="2023" descriptionPropertiesKey="CHUNG_YEUNG_FESTIVAL">
+      <!-- actually: The day following Chung Yeung Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="OCTOBER" day="11" validFrom="2024" validTo="2024" descriptionPropertiesKey="CHUNG_YEUNG_FESTIVAL">
+      <!-- actually: The day following Chung Yeung Festival -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <Fixed month="OCTOBER" day="1" validTo="2011" descriptionPropertiesKey="NATIONAL_DAY">
+      <!-- actually: The day following National Day -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <!-- https://www.gov.hk/en/about/abouthk/holiday/2012.htm -->
+    <!-- as the day following the Chinese Mid-Autumn Festival and the National Day in 2012 fall on the same day,
+    the next following day that is not itself a general holiday will thus be observed as an additional general holiday. -->
+    <Fixed month="OCTOBER" day="2" validFrom="2012" validTo="2012" descriptionPropertiesKey="NATIONAL_DAY"/>
+    <Fixed month="OCTOBER" day="1" validFrom="2013" descriptionPropertiesKey="NATIONAL_DAY">
+      <!-- actually: The day following National Day -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS">
+      <!-- actually: The second weekday after Christmas Day -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="FIRST_WEEKDAY_AFTER_CHRISTMAS">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_SATURDAY" descriptionPropertiesKey="DAY_FOLLOWING_GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY" validTo="2014" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+    <!-- https://www.gov.hk/en/about/abouthk/holiday/2015.htm -->
+    <!-- as the day following Ching Ming Festival and Easter Monday fall on the same day,
+    the next following day that is not itself a general holiday will be observed as an additional general holiday. -->
+    <ChristianHoliday type="EASTER_TUESDAY" validFrom="2015" validTo="2015" descriptionPropertiesKey="DAY_FOLLOWING_EASTER_MONDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY" validFrom="2016" validTo="2020" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+    <!-- https://www.gov.hk/en/about/abouthk/holiday/2021.htm -->
+    <!-- as the day following Ching Ming Festival and Easter Monday fall on the same day,
+    the next following day that is not itself a general holiday will be observed as an additional general holiday. -->
+    <ChristianHoliday type="EASTER_TUESDAY" validFrom="2021" validTo="2021" descriptionPropertiesKey="DAY_FOLLOWING_EASTER_MONDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY" validFrom="2022" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+  </Holidays>
+</Configuration>

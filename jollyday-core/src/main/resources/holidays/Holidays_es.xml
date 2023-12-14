@@ -4,6 +4,7 @@
                xmlns="https://focus_shift.de/jollyday/schema/holiday"
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+
   <Holidays>
     <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
     <Fixed month="JANUARY" day="6" descriptionPropertiesKey="EPIPHANY"/>
@@ -15,6 +16,7 @@
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
     <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
   </Holidays>
+
   <SubConfigurations hierarchy="an" description="Andalucia">
     <Holidays>
       <Fixed month="MARCH" day="1" descriptionPropertiesKey="REGIONAL"/>
@@ -26,6 +28,7 @@
       <ChristianHoliday type="MAUNDY_THURSDAY" descriptionPropertiesKey="christian.MAUNDY_THURSDAY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="ar" description="Aragon">
     <Holidays>
       <Fixed month="APRIL" day="23" descriptionPropertiesKey="REGIONAL"/>
@@ -36,6 +39,7 @@
       <ChristianHoliday type="MAUNDY_THURSDAY" descriptionPropertiesKey="christian.MAUNDY_THURSDAY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="ce" description="Ceuta">
     <Holidays>
       <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
@@ -44,6 +48,7 @@
       <IslamicHoliday type="ID_UL_ADHA" validFrom="2010" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="ml" description="Melilla">
     <Holidays>
       <Fixed month="MARCH" day="19" descriptionPropertiesKey="ST_JOSEPH"/>
@@ -52,6 +57,7 @@
       <IslamicHoliday type="ID_UL_ADHA" validFrom="2010" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="cl" description="Castile and Leon">
     <Holidays>
       <Fixed month="MARCH" day="19" descriptionPropertiesKey="ST_JOSEPH"/>
@@ -60,6 +66,7 @@
       <ChristianHoliday type="MAUNDY_THURSDAY" descriptionPropertiesKey="christian.MAUNDY_THURSDAY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="cm" description="Castile - La Mancha">
     <Holidays>
       <Fixed month="MARCH" day="19" descriptionPropertiesKey="ST_JOSEPH"/>
@@ -68,6 +75,7 @@
       <ChristianHoliday type="MAUNDY_THURSDAY" descriptionPropertiesKey="christian.MAUNDY_THURSDAY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="cn" description="Canary Islands">
     <Holidays>
       <Fixed month="MAY" day="31" descriptionPropertiesKey="REGIONAL"/>
@@ -75,6 +83,7 @@
       <ChristianHoliday type="MAUNDY_THURSDAY" descriptionPropertiesKey="christian.MAUNDY_THURSDAY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="ct" description="Catalonia">
     <Holidays>
       <Fixed month="JUNE" day="24" descriptionPropertiesKey="ST_JOHN"/>
@@ -88,7 +97,9 @@
         <ChristianHoliday type="WHIT_MONDAY" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
       </Holidays>
     </SubConfigurations>
+
   </SubConfigurations>
+
   <SubConfigurations hierarchy="ex" description="Extremadura">
     <Holidays>
       <Fixed month="MARCH" day="19" descriptionPropertiesKey="ST_JOSEPH"/>
@@ -97,6 +108,7 @@
       <ChristianHoliday type="MAUNDY_THURSDAY" descriptionPropertiesKey="christian.MAUNDY_THURSDAY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="ga" description="Galicia">
     <Holidays>
       <Fixed month="MARCH" day="19" descriptionPropertiesKey="ST_JOSEPH"/>
@@ -106,6 +118,7 @@
       <ChristianHoliday type="MAUNDY_THURSDAY" descriptionPropertiesKey="christian.MAUNDY_THURSDAY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="ib" description="Balearic Island">
     <Holidays>
       <Fixed month="MARCH" day="1" descriptionPropertiesKey="REGIONAL"/>
@@ -114,6 +127,7 @@
       <ChristianHoliday type="MAUNDY_THURSDAY" descriptionPropertiesKey="christian.MAUNDY_THURSDAY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="lo" description="La Rioja">
     <Holidays>
       <Fixed month="MARCH" day="19" descriptionPropertiesKey="ST_JOSEPH"/>
@@ -122,7 +136,8 @@
       <ChristianHoliday type="MAUNDY_THURSDAY" descriptionPropertiesKey="christian.MAUNDY_THURSDAY"/>
     </Holidays>
   </SubConfigurations>
-  <SubConfigurations hierarchy="m" description="Madrid">
+
+  <SubConfigurations hierarchy="md" description="Madrid">
     <Holidays>
       <Fixed month="MARCH" day="19" descriptionPropertiesKey="ST_JOSEPH"/>
       <Fixed month="MAY" day="2" descriptionPropertiesKey="REGIONAL"/>
@@ -135,8 +150,10 @@
         <Fixed month="NOVEMBER" day="9" descriptionPropertiesKey="ALMUDENA_DAY"/>
       </Holidays>
     </SubConfigurations>
+
   </SubConfigurations>
-  <SubConfigurations hierarchy="mu" description="Murcia">
+
+  <SubConfigurations hierarchy="mc" description="Murcia">
     <Holidays>
       <Fixed month="MARCH" day="19" descriptionPropertiesKey="ST_JOSEPH"/>
       <Fixed month="JUNE" day="9" descriptionPropertiesKey="REGIONAL"/>
@@ -144,7 +161,8 @@
       <ChristianHoliday type="MAUNDY_THURSDAY" descriptionPropertiesKey="christian.MAUNDY_THURSDAY"/>
     </Holidays>
   </SubConfigurations>
-  <SubConfigurations hierarchy="na" description="Navarre">
+
+  <SubConfigurations hierarchy="nc" description="Navarra">
     <Holidays>
       <Fixed month="MARCH" day="19" descriptionPropertiesKey="ST_JOSEPH"/>
       <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
@@ -152,7 +170,8 @@
       <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     </Holidays>
   </SubConfigurations>
-  <SubConfigurations hierarchy="o" description="Asturias">
+
+  <SubConfigurations hierarchy="as" description="Asturias">
     <Holidays>
       <Fixed month="SEPTEMBER" day="8" descriptionPropertiesKey="REGIONAL"/>
       <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY">
@@ -162,6 +181,7 @@
       <ChristianHoliday type="MAUNDY_THURSDAY" descriptionPropertiesKey="christian.MAUNDY_THURSDAY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="pv" description="Euskadi">
     <Holidays>
       <Fixed month="MARCH" day="19" descriptionPropertiesKey="ST_JOSEPH"/>
@@ -171,13 +191,15 @@
       <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     </Holidays>
   </SubConfigurations>
-  <SubConfigurations hierarchy="s" description="Cantabria">
+
+  <SubConfigurations hierarchy="cb" description="Cantabria">
     <Holidays>
       <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
       <Fixed month="SEPTEMBER" day="15" descriptionPropertiesKey="APARECIDA"/>
       <ChristianHoliday type="MAUNDY_THURSDAY" descriptionPropertiesKey="christian.MAUNDY_THURSDAY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="vc" description="Valencia">
     <Holidays>
       <Fixed month="MARCH" day="19" descriptionPropertiesKey="ST_JOSEPH"/>
@@ -186,6 +208,7 @@
       <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     </Holidays>
   </SubConfigurations>
+
 </Configuration>
 
 

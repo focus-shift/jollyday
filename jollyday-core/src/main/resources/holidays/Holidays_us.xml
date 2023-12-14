@@ -14,193 +14,156 @@
     <Fixed month="JULY" day="4" validFrom="1776" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
     <Fixed month="NOVEMBER" day="11" validFrom="1938" descriptionPropertiesKey="VETERANS_DAY"/>
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-    <RelativeToWeekdayInMonth weekday="TUESDAY" when="AFTER" descriptionPropertiesKey="ELECTION_DAY"
-                                  every="EVEN_YEARS">
+    <RelativeToWeekdayInMonth weekday="TUESDAY" when="AFTER" descriptionPropertiesKey="ELECTION_DAY" every="EVEN_YEARS">
       <FixedWeekday which="FIRST" weekday="MONDAY" month="NOVEMBER"/>
     </RelativeToWeekdayInMonth>
-    <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
-                      descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
-    <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1971"
-                      descriptionPropertiesKey="PRESIDENTS_DAY"/>
-    <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" validFrom="1968"
-                      descriptionPropertiesKey="MEMORIAL_DAY"/>
-    <FixedWeekday which="FIRST" weekday="MONDAY" month="SEPTEMBER" validFrom="1895"
-                      descriptionPropertiesKey="LABOUR_DAY"/>
-    <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1937"
-                      descriptionPropertiesKey="COLUMBUS_DAY"/>
-    <FixedWeekday which="FOURTH" weekday="THURSDAY" month="NOVEMBER" validFrom="1863"
-                      descriptionPropertiesKey="THANKSGIVING"/>
+    <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+    <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1971" descriptionPropertiesKey="PRESIDENTS_DAY"/>
+    <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" validFrom="1968" descriptionPropertiesKey="MEMORIAL_DAY"/>
+    <FixedWeekday which="FIRST" weekday="MONDAY" month="SEPTEMBER" validFrom="1895" descriptionPropertiesKey="LABOUR_DAY"/>
+    <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1937" descriptionPropertiesKey="COLUMBUS_DAY"/>
+    <FixedWeekday which="FOURTH" weekday="THURSDAY" month="NOVEMBER" validFrom="1863" descriptionPropertiesKey="THANKSGIVING"/>
   </Holidays>
+
   <SubConfigurations hierarchy="al" description="Alabama">
     <Holidays>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
-                        descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968"
-                        descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="FOURTH" weekday="MONDAY" month="APRIL" descriptionPropertiesKey="CONFEDERATE"/>
       <FixedWeekday which="FIRST" weekday="MONDAY" month="JUNE" descriptionPropertiesKey="JEFFERSON_DAVIS"/>
-      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934"
-                        descriptionPropertiesKey="COLUMBUS_DAY"/>
+      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="ak" description="Alaska">
     <Holidays>
       <Fixed month="OCTOBER" day="18" descriptionPropertiesKey="ALASKA"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
-                        descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968"
-                        descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="LAST" weekday="MONDAY" month="MARCH" descriptionPropertiesKey="SEWARD"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="az" description="Arizona">
     <Holidays>
-      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967"
-                 descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
-                        descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968"
-                        descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934"
-                        descriptionPropertiesKey="COLUMBUS_DAY"/>
+      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="ar" description="Arkansas">
     <Holidays>
       <Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CHRISTMAS_EVE"/>
-      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967"
-                 descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
-                        descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968"
-                        descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="ca" description="California">
     <Holidays>
       <Fixed month="FEBRUARY" day="12" descriptionPropertiesKey="LINCOLN"/>
       <Fixed month="MARCH" day="31" descriptionPropertiesKey="CESAR_CHAVEZ"/>
-      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967"
-                 descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
-                        descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968"
-                        descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
     </Holidays>
+
     <SubConfigurations hierarchy="be" description="Berkeley">
       <Holidays>
         <Fixed month="MARCH" day="8"/>
         <Fixed month="OCTOBER" day="21"/>
       </Holidays>
     </SubConfigurations>
+
   </SubConfigurations>
+
   <SubConfigurations hierarchy="co" description="Colorado">
     <Holidays>
-      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967"
-                 descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
-                        descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968"
-                        descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1906"
-                        descriptionPropertiesKey="COLUMBUS_DAY"/>
+      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1906" descriptionPropertiesKey="COLUMBUS_DAY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="ct" description="Connecticut">
     <Holidays>
       <Fixed month="FEBRUARY" day="12" descriptionPropertiesKey="LINCOLN"/>
-      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967"
-                 descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
-                        descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968"
-                        descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934"
-                        descriptionPropertiesKey="COLUMBUS_DAY"/>
+      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
       <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="de" description="Delaware">
     <Holidays>
-      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967"
-                 descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
-                        descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968"
-                        descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="fl" description="Florida">
     <Holidays>
-      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967"
-                 descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
-                        descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968"
-                        descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934"
-                        descriptionPropertiesKey="COLUMBUS_DAY"/>
+      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
       <FixedWeekday which="FOURTH" weekday="MONDAY" month="APRIL" descriptionPropertiesKey="CONFEDERATE"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="ga" description="Georgia">
     <Holidays>
-      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967"
-                 descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
-                        descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968"
-                        descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934"
-                        descriptionPropertiesKey="COLUMBUS_DAY"/>
+      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
       <FixedWeekday which="FOURTH" weekday="MONDAY" month="APRIL" descriptionPropertiesKey="CONFEDERATE"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="hi" description="Hawaii">
     <Holidays>
       <Fixed month="MARCH" day="26" descriptionPropertiesKey="KALANIANAOLE"/>
       <Fixed month="JUNE" day="11" descriptionPropertiesKey="KAMEHAMEHA"/>
-      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967"
-                 descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
-                        descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968"
-                        descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="THIRD" weekday="FRIDAY" month="AUGUST" descriptionPropertiesKey="STATEHOOD"/>
       <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="id" description="Idaho">
     <Holidays>
-      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967"
-                 descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
-                        descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968"
-                        descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934"
-                        descriptionPropertiesKey="COLUMBUS_DAY"/>
+      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="il" description="Illinois">
     <Holidays>
       <Fixed month="FEBRUARY" day="12" descriptionPropertiesKey="LINCOLN"/>
-      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967"
-                 descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <RelativeToWeekdayInMonth weekday="TUESDAY" when="AFTER" descriptionPropertiesKey="ELECTION_DAY"
-                                    every="EVEN_YEARS">
+      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <RelativeToWeekdayInMonth weekday="TUESDAY" when="AFTER" descriptionPropertiesKey="ELECTION_DAY" every="EVEN_YEARS">
         <FixedWeekday which="FIRST" weekday="MONDAY" month="NOVEMBER"/>
       </RelativeToWeekdayInMonth>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
-                        descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968"
-                        descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934"
-                        descriptionPropertiesKey="COLUMBUS_DAY"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
       <FixedWeekday which="FIRST" weekday="MONDAY" month="MARCH" descriptionPropertiesKey="PULASKI"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="in" description="Indiana">
     <Holidays>
       <Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CHRISTMAS_EVE"/>
@@ -210,55 +173,52 @@
       <RelativeToWeekdayInMonth weekday="TUESDAY" when="AFTER" descriptionPropertiesKey="ELECTION_DAY">
         <FixedWeekday which="FIRST" weekday="MONDAY" month="NOVEMBER"/>
       </RelativeToWeekdayInMonth>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
-                        descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
       <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
       <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="ia" description="Iowa">
     <Holidays>
       <Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CHRISTMAS_EVE"/>
       <Fixed month="DECEMBER" day="31" descriptionPropertiesKey="NEW_YEARS_EVE"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
-                        descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="ks" description="Kansas">
     <Holidays>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
-                        descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="ky" description="Kentucky">
     <Holidays>
       <Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CHRISTMAS_EVE"/>
       <Fixed month="DECEMBER" day="31" descriptionPropertiesKey="NEW_YEARS_EVE"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
-                        descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
       <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="la" description="Louisiana">
     <Holidays>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
-                        descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
       <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
       <ChristianHoliday type="MARDI_GRAS" descriptionPropertiesKey="christian.MARDI_GRAS"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="me" description="Maine">
     <Holidays>
-      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967"
-                 descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
-                        descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968"
-                        descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934"
-                        descriptionPropertiesKey="COLUMBUS_DAY"/>
+      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="md" description="Maryland">
     <Holidays>
       <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
@@ -268,25 +228,19 @@
       <RelativeToWeekdayInMonth weekday="TUESDAY" when="AFTER" descriptionPropertiesKey="ELECTION_DAY">
         <FixedWeekday which="FIRST" weekday="MONDAY" month="NOVEMBER"/>
       </RelativeToWeekdayInMonth>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
-                        descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968"
-                        descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934"
-                        descriptionPropertiesKey="COLUMBUS_DAY"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="ma" description="Massachusetts">
     <Holidays>
-      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967"
-                 descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
-                        descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968"
-                        descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="APRIL" descriptionPropertiesKey="PATRIOT"/>
-      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934"
-                        descriptionPropertiesKey="COLUMBUS_DAY"/>
+      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
     </Holidays>
     <SubConfigurations hierarchy="sc" description="Suffolk County">
       <Holidays>
@@ -294,149 +248,125 @@
         <Fixed month="JUNE" day="17" descriptionPropertiesKey="BUNKER_HILL"/>
       </Holidays>
     </SubConfigurations>
+
     <SubConfigurations hierarchy="ca" description="Cambridge">
       <Holidays>
         <Fixed month="MARCH" day="17" descriptionPropertiesKey="EVACUATION"/>
       </Holidays>
     </SubConfigurations>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="mi" description="Michigan">
     <Holidays>
       <Fixed month="OCTOBER" day="30"/>
       <Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CHRISTMAS_EVE"/>
       <Fixed month="DECEMBER" day="31" descriptionPropertiesKey="NEW_YEARS_EVE"/>
-      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967"
-                 descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
-                        descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968"
-                        descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="mn" description="Minnesota">
     <Holidays>
-      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967"
-                 descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
-                        descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968"
-                        descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="ms" description="Mississippi">
     <Holidays>
-      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967"
-                 descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
-                        descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968"
-                        descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="FOURTH" weekday="MONDAY" month="APRIL" descriptionPropertiesKey="CONFEDERATE"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="mo" description="Missouri">
     <Holidays>
       <Fixed month="FEBRUARY" day="12" descriptionPropertiesKey="LINCOLN"/>
       <Fixed month="MAY" day="8" descriptionPropertiesKey="TRUMAN"/>
-      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967"
-                 descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
-                        descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968"
-                        descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934"
-                        descriptionPropertiesKey="COLUMBUS_DAY"/>
+      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="mt" description="Montana">
     <Holidays>
       <Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CHRISTMAS_EVE"/>
       <Fixed month="DECEMBER" day="31" descriptionPropertiesKey="NEW_YEARS_EVE"/>
-      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967"
-                 descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <RelativeToWeekdayInMonth weekday="TUESDAY" when="AFTER" descriptionPropertiesKey="THANKSGIVING">
         <FixedWeekday which="FIRST" weekday="MONDAY" month="NOVEMBER"/>
       </RelativeToWeekdayInMonth>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
-                        descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968"
-                        descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="ne" description="Nebraska">
     <Holidays>
-      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967"
-                 descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
-                        descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968"
-                        descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="LAST" weekday="FRIDAY" month="APRIL" descriptionPropertiesKey="ARBOR"/>
-      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934"
-                        descriptionPropertiesKey="COLUMBUS_DAY"/>
+      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="nv" description="Nevada">
     <Holidays>
-      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967"
-                 descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
-                        descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968"
-                        descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="LAST" weekday="FRIDAY" month="OCTOBER" descriptionPropertiesKey="NEVADA"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="nh" description="New Hampshire">
     <Holidays>
-      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967"
-                 descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
-                        descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968"
-                        descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="nj" description="New Jersey">
     <Holidays>
       <Fixed month="FEBRUARY" day="12" descriptionPropertiesKey="LINCOLN"/>
-      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967"
-                 descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <RelativeToWeekdayInMonth weekday="TUESDAY" when="AFTER" descriptionPropertiesKey="ELECTION_DAY">
         <FixedWeekday which="FIRST" weekday="MONDAY" month="NOVEMBER"/>
       </RelativeToWeekdayInMonth>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
-                        descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968"
-                        descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934"
-                        descriptionPropertiesKey="COLUMBUS_DAY"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
       <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="nm" description="New Mexico">
     <Holidays>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
-                        descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
-      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934"
-                        descriptionPropertiesKey="COLUMBUS_DAY"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="ny" description="New York">
     <Holidays>
-      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967"
-                 descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <Fixed month="FEBRUARY" day="12" descriptionPropertiesKey="LINCOLN"/>
       <RelativeToWeekdayInMonth weekday="TUESDAY" when="AFTER" descriptionPropertiesKey="ELECTION_DAY">
         <FixedWeekday which="FIRST" weekday="MONDAY" month="NOVEMBER"/>
       </RelativeToWeekdayInMonth>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
-                        descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968"
-                        descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934"
-                        descriptionPropertiesKey="COLUMBUS_DAY"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
       <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     </Holidays>
     <SubConfigurations hierarchy="nyc" description="New York City">
@@ -445,11 +375,11 @@
       </Holidays>
     </SubConfigurations>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="nc" description="North Carolina">
     <Holidays>
       <Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CHRISTMAS_EVE"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
-                        descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
       <FixedWeekday which="FOURTH" weekday="MONDAY" month="APRIL" descriptionPropertiesKey="CONFEDERATE"/>
       <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
     </Holidays>
@@ -458,227 +388,184 @@
         <Fixed month="MAY" day="20" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
       </Holidays>
     </SubConfigurations>
+
     <SubConfigurations hierarchy="me" description="Mecklenburg">
       <Holidays>
         <Fixed month="MAY" day="20" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
       </Holidays>
     </SubConfigurations>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="nd" description="North Dakota">
     <Holidays>
-      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967"
-                 descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
-                        descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968"
-                        descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
       <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="oh" description="Ohio">
     <Holidays>
-      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967"
-                 descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
-                        descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968"
-                        descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934"
-                        descriptionPropertiesKey="COLUMBUS_DAY"/>
+      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="ok" description="Oklahoma">
     <Holidays>
-      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967"
-                 descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
-                        descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968"
-                        descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="or" description="Oregon">
     <Holidays>
-      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967"
-                 descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
-                        descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968"
-                        descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="pa" description="Pennsylvania">
     <Holidays>
-      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967"
-                 descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
-                        descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968"
-                        descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934"
-                        descriptionPropertiesKey="COLUMBUS_DAY"/>
+      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="ri" description="Rhode Island">
     <Holidays>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="VICTORY"/>
-      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934"
-                        descriptionPropertiesKey="COLUMBUS_DAY"/>
+      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="sc" description="South Carolina">
     <Holidays>
       <Fixed month="MAY" day="10" descriptionPropertiesKey="CONFEDERATE"/>
-      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967"
-                 descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <RelativeToWeekdayInMonth weekday="TUESDAY" when="AFTER" descriptionPropertiesKey="ELECTION_DAY">
         <FixedWeekday which="FIRST" weekday="MONDAY" month="NOVEMBER"/>
       </RelativeToWeekdayInMonth>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
-                        descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968"
-                        descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="sd" description="South Dakota">
     <Holidays>
-      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967"
-                 descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
-                        descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968"
-                        descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934"
-                        descriptionPropertiesKey="COLUMBUS_DAY"/>
+      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="tn" description="Tennesee">
     <Holidays>
       <Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CHRISTMAS_EVE"/>
-      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967"
-                 descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
-                        descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968"
-                        descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="FOURTH" weekday="MONDAY" month="APRIL" descriptionPropertiesKey="CONFEDERATE"/>
       <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="tx" description="Texas">
     <Holidays>
       <Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CHRISTMAS_EVE"/>
-      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967"
-                 descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
-                        descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968"
-                        descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="FOURTH" weekday="MONDAY" month="APRIL" descriptionPropertiesKey="CONFEDERATE"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="ut" description="Utah">
     <Holidays>
       <Fixed month="JULY" day="24" descriptionPropertiesKey="PIONEER"/>
-      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967"
-                 descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
-                        descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968"
-                        descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934"
-                        descriptionPropertiesKey="COLUMBUS_DAY"/>
+      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="vt" description="Vermont">
     <Holidays>
-      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967"
-                 descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
-                        descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968"
-                        descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="BENNINGTON"/>
-      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934"
-                        descriptionPropertiesKey="COLUMBUS_DAY"/>
+      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="va" description="Virginia">
     <Holidays>
-      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967"
-                 descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <RelativeToWeekdayInMonth weekday="FRIDAY" when="BEFORE" descriptionPropertiesKey="LEE_JACKSON">
-        <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
-                          descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+        <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
       </RelativeToWeekdayInMonth>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
-                        descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968"
-                        descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934"
-                        descriptionPropertiesKey="COLUMBUS_DAY"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="wa" description="Washington">
     <Holidays>
-      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967"
-                 descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
-                        descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968"
-                        descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="dc" description="District of Columbia">
     <Holidays>
-      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967"
-                 descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
-                        descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968"
-                        descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934"
-                        descriptionPropertiesKey="COLUMBUS_DAY"/>
+      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="wv" description="West Virginia">
     <Holidays>
       <Fixed month="JUNE" day="20" descriptionPropertiesKey="WEST_VIRGINIA"/>
-      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967"
-                 descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
-                        descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968"
-                        descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934"
-                        descriptionPropertiesKey="COLUMBUS_DAY"/>
+      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="wi" description="Wisconsin">
     <Holidays>
-      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967"
-                 descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <RelativeToWeekdayInMonth weekday="TUESDAY" when="AFTER" descriptionPropertiesKey="ELECTION_DAY">
         <FixedWeekday which="FIRST" weekday="MONDAY" month="NOVEMBER"/>
       </RelativeToWeekdayInMonth>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
-                        descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968"
-                        descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="SECOND" weekday="TUESDAY" month="SEPTEMBER" descriptionPropertiesKey="ELECTION_DAY"/>
-      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934"
-                        descriptionPropertiesKey="COLUMBUS_DAY"/>
+      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="wy" description="Wyoming">
     <Holidays>
-      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967"
-                 descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986"
-                        descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968"
-                        descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
     </Holidays>
   </SubConfigurations>
 </Configuration>

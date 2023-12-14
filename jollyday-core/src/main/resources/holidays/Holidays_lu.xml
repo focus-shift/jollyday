@@ -4,6 +4,7 @@
                xmlns="https://focus_shift.de/jollyday/schema/holiday"
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+
   <Holidays>
     <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
     <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
@@ -17,9 +18,14 @@
     <ChristianHoliday type="ASCENSION_DAY" descriptionPropertiesKey="christian.ASCENSION_DAY"/>
     <ChristianHoliday type="WHIT_MONDAY" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
   </Holidays>
-  <SubConfigurations hierarchy="clu" description="City of Luxembourg">
-    <Holidays>
-      <Fixed month="FEBRUARY" day="15" descriptionPropertiesKey="CARNIVAL"/>
-    </Holidays>
+
+  <SubConfigurations hierarchy="lu" description="Luxembourg">
+    <Holidays/>
+
+    <SubConfigurations hierarchy="clu" description="City of Luxembourg">
+      <Holidays>
+        <Fixed month="FEBRUARY" day="15" descriptionPropertiesKey="CARNIVAL"/>
+      </Holidays>
+    </SubConfigurations>
   </SubConfigurations>
 </Configuration>

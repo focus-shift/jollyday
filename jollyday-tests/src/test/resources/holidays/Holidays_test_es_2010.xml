@@ -14,6 +14,7 @@
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
     <Fixed month="APRIL" day="2"/>
   </Holidays>
+
   <SubConfigurations hierarchy="an" description="Andalucia">
     <Holidays>
       <Fixed month="MARCH" day="1"/>
@@ -22,6 +23,7 @@
       <Fixed month="APRIL" day="1"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="ar" description="Aragon">
     <Holidays>
       <Fixed month="APRIL" day="23"/>
@@ -29,6 +31,7 @@
       <Fixed month="APRIL" day="1"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="ce" description="Ceuta">
     <Holidays>
       <Fixed month="AUGUST" day="15"/>
@@ -37,6 +40,7 @@
       <Fixed month="NOVEMBER" day="16"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="ml" description="Melilla">
     <Holidays>
       <Fixed month="MARCH" day="19"/>
@@ -45,6 +49,7 @@
       <Fixed month="NOVEMBER" day="16"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="cl" description="Castile and Leon">
     <Holidays>
       <Fixed month="MARCH" day="19"/>
@@ -53,6 +58,7 @@
       <Fixed month="APRIL" day="1"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="cm" description="Castile - La Mancha">
     <Holidays>
       <Fixed month="MARCH" day="19"/>
@@ -61,6 +67,7 @@
       <Fixed month="APRIL" day="1"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="cn" description="Canary Islands">
     <Holidays>
       <Fixed month="MAY" day="31"/>
@@ -68,6 +75,7 @@
       <Fixed month="APRIL" day="1"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="ct" description="Catalonia">
     <Holidays>
       <Fixed month="JUNE" day="24"/>
@@ -75,11 +83,13 @@
       <Fixed month="AUGUST" day="15"/>
       <Fixed month="APRIL" day="5"/>
     </Holidays>
+
     <SubConfigurations hierarchy="bcn" description="Barcelona">
       <Holidays>
       </Holidays>
     </SubConfigurations>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="ex" description="Extremadura">
     <Holidays>
       <Fixed month="MARCH" day="19"/>
@@ -97,6 +107,7 @@
       <Fixed month="APRIL" day="1"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="ib" description="Balearic Island">
     <Holidays>
       <Fixed month="MARCH" day="1"/>
@@ -105,6 +116,7 @@
       <Fixed month="APRIL" day="1"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="lo" description="La Rioja">
     <Holidays>
       <Fixed month="MARCH" day="19"/>
@@ -113,7 +125,8 @@
       <Fixed month="APRIL" day="1"/>
     </Holidays>
   </SubConfigurations>
-  <SubConfigurations hierarchy="m" description="Madrid">
+
+  <SubConfigurations hierarchy="md" description="Madrid">
     <Holidays>
       <Fixed month="MARCH" day="19"/>
       <Fixed month="AUGUST" day="15"/>
@@ -126,7 +139,8 @@
       </Holidays>
     </SubConfigurations>
   </SubConfigurations>
-  <SubConfigurations hierarchy="mu" description="Murcia">
+
+  <SubConfigurations hierarchy="mc" description="Murcia">
     <Holidays>
       <Fixed month="MARCH" day="19"/>
       <Fixed month="JUNE" day="9"/>
@@ -134,7 +148,8 @@
       <Fixed month="APRIL" day="1"/>
     </Holidays>
   </SubConfigurations>
-  <SubConfigurations hierarchy="na" description="Navarre">
+
+  <SubConfigurations hierarchy="nc" description="Navarre">
     <Holidays>
       <Fixed month="MARCH" day="19"/>
       <Fixed month="AUGUST" day="15"/>
@@ -142,13 +157,15 @@
       <Fixed month="APRIL" day="5"/>
     </Holidays>
   </SubConfigurations>
-  <SubConfigurations hierarchy="o" description="Asturias">
+
+  <SubConfigurations hierarchy="as" description="Asturias">
     <Holidays>
       <Fixed month="SEPTEMBER" day="8"/>
       <Fixed month="AUGUST" day="16"/>
       <Fixed month="APRIL" day="1"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="pv" description="Euskadi">
     <Holidays>
       <Fixed month="MARCH" day="19"/>
@@ -157,13 +174,15 @@
       <Fixed month="APRIL" day="5"/>
     </Holidays>
   </SubConfigurations>
-  <SubConfigurations hierarchy="s" description="Cantabria">
+
+  <SubConfigurations hierarchy="cb" description="Cantabria">
     <Holidays>
       <Fixed month="AUGUST" day="15"/>
       <Fixed month="SEPTEMBER" day="15"/>
       <Fixed month="APRIL" day="1"/>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="vc" description="Valencia">
     <Holidays>
       <Fixed month="MARCH" day="19"/>

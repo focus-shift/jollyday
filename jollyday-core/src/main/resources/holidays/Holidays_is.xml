@@ -26,8 +26,7 @@
       <from month="JANUARY" day="19"/>
       <to month="JANUARY" day="25"/>
     </FixedWeekdayBetweenFixed>
-    <FixedWeekdayRelativeToFixed which="FIRST" weekday="THURSDAY" when="AFTER"
-                                     descriptionPropertiesKey="FIRST_DAY_SUMMER">
+    <FixedWeekdayRelativeToFixed which="FIRST" weekday="THURSDAY" when="AFTER" descriptionPropertiesKey="FIRST_DAY_SUMMER">
       <day month="APRIL" day="18"/>
     </FixedWeekdayRelativeToFixed>
   </Holidays>

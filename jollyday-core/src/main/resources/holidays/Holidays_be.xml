@@ -16,13 +16,9 @@
     <Fixed month="NOVEMBER" day="15" localizedType="UNOFFICIAL_HOLIDAY" descriptionPropertiesKey="KINGS_FEAST"/>
     <Fixed month="DECEMBER" day="31" descriptionPropertiesKey="NEW_YEARS_EVE" localizedType="UNOFFICIAL_HOLIDAY"/>
     <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER" localizedType="OFFICIAL_HOLIDAY"/>
-    <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"
-                      localizedType="OFFICIAL_HOLIDAY"/>
-    <ChristianHoliday type="ASCENSION_DAY" descriptionPropertiesKey="christian.ASCENSION_DAY"
-                      localizedType="OFFICIAL_HOLIDAY"/>
-    <ChristianHoliday type="PENTECOST" descriptionPropertiesKey="christian.PENTECOST"
-                      localizedType="OFFICIAL_HOLIDAY"/>
-    <ChristianHoliday type="PENTECOST_MONDAY" descriptionPropertiesKey="christian.PENTECOST_MONDAY"
-                      localizedType="OFFICIAL_HOLIDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+    <ChristianHoliday type="ASCENSION_DAY" descriptionPropertiesKey="christian.ASCENSION_DAY"/>
+    <ChristianHoliday type="PENTECOST" descriptionPropertiesKey="christian.PENTECOST"/>
+    <ChristianHoliday type="PENTECOST_MONDAY" descriptionPropertiesKey="christian.PENTECOST_MONDAY"/>
   </Holidays>
 </Configuration>

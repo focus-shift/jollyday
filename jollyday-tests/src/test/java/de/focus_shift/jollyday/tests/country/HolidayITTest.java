@@ -159,7 +159,7 @@ class HolidayITTest extends AbstractCountryTestBase {
   @Property
   void ensuresThatWhitMondayInBZIsConfigured(@ForAll @YearRange Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(ITALY));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue(), "bz");
+    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue(), "32");
     assertThat(holidays)
       .isNotEmpty()
       .extracting(Holiday::getPropertiesKey)

@@ -5,7 +5,6 @@ import java.util.Locale;
 /**
  * This enum provides a list of all supported holiday calendars.
  *
- * @author Sven Diedrichsen (sven.diedrichsen@gmail.com)
  * @version $Id$
  */
 public enum HolidayCalendar {
@@ -17,7 +16,7 @@ public enum HolidayCalendar {
   ECUADOR("EC"), EGYPT("EG"), ESTONIA("EE"), ETHIOPIA("ET"),
   FINLAND("FI"), FRANCE(Locale.FRANCE.getCountry()),
   GERMANY(Locale.GERMANY.getCountry()), GUERNSEY("GG"), GREECE("GR"),
-  HUNGARY("HU"),
+  HONG_KONG("HK"), HUNGARY("HU"),
   ICELAND("IS"), IRELAND("IE"), ISLE_OF_MAN("IM"), ITALY(Locale.ITALY.getCountry()),
   JAPAN("JP"), JERSEY("JE"),
   KAZAKHSTAN("KZ"), KOSOVO("XK"),
@@ -26,7 +25,7 @@ public enum HolidayCalendar {
   NETHERLANDS("NL"), NEW_ZEALAND("NZ"), NICARAGUA("NI"), NIGERIA("NG"), NORWAY("NO"), NYSE("NYSE"),
   PANAMA("PA"), PARAGUAY("PY"), PERU("PE"), POLAND("PL"), PORTUGAL("PT"),
   ROMANIA("RO"), RUSSIA("RU"),
-  SAUDI_ARABIA("SA"), SERBIA("RS"), SLOWAKIA("SK"), SLOWENIA("SI"), SOUTH_AFRICA("ZA"), SPAIN("ES"), SWEDEN("SE"), SWITZERLAND("CH"),
+  SAUDI_ARABIA("SA"), SERBIA("RS"), SINGAPORE("SG"), SLOWAKIA("SK"), SLOWENIA("SI"), SOUTH_AFRICA("ZA"), SPAIN("ES"), SWEDEN("SE"), SWITZERLAND("CH"),
   TARGET("TARGET"), TURKEY("TR"),
   UKRAINE("UA"), UNITED_ARAB_EMIRATES("AE"), UNITED_KINGDOM(Locale.UK.getCountry()), UNITED_STATES(Locale.US.getCountry()), URUGUAY("UY"),
   VENEZUELA("VE");
@@ -47,5 +46,4 @@ public enum HolidayCalendar {
   public String getId() {
     return id;
   }
-
 }

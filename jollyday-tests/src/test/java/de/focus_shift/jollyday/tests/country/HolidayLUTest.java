@@ -16,6 +16,7 @@ import static de.focus_shift.jollyday.core.HolidayType.OFFICIAL_HOLIDAY;
 import static de.focus_shift.jollyday.core.ManagerParameters.create;
 import static java.time.Month.AUGUST;
 import static java.time.Month.DECEMBER;
+import static java.time.Month.FEBRUARY;
 import static java.time.Month.JANUARY;
 import static java.time.Month.JUNE;
 import static java.time.Month.MAY;
@@ -133,5 +134,14 @@ class HolidayLUTest extends AbstractCountryTestBase {
       .isNotEmpty()
       .extracting(Holiday::getPropertiesKey)
       .contains("christian.WHIT_MONDAY");
+  }
+
+  @Property
+  void ensuresThatCarnivalForCityOfLuxemburgIsConfigured(@ForAll @YearRange Year year) {
+    final HolidayManager holidayManager = HolidayManager.getInstance(create(LUXEMBOURG));
+    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue(), "lu", "clu");
+    assertThat(holidays)
+      .isNotEmpty()
+      .contains(new Holiday(LocalDate.of(year.getValue(), FEBRUARY, 15), "CARNIVAL", OFFICIAL_HOLIDAY));
   }
 }

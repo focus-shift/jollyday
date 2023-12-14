@@ -40,67 +40,99 @@
     <Fixed month="JULY" day="10" validFrom="2026" validTo="2026" descriptionPropertiesKey="MATARIKI"/>
     <Fixed month="JUNE" day="25" validFrom="2027" validTo="2027" descriptionPropertiesKey="MATARIKI"/>
     <Fixed month="JULY" day="14" validFrom="2028" validTo="2028" descriptionPropertiesKey="MATARIKI"/>
-    <Fixed month="JULY" day="6"  validFrom="2029" validTo="2029" descriptionPropertiesKey="MATARIKI"/>
+    <Fixed month="JULY" day="6" validFrom="2029" validTo="2029" descriptionPropertiesKey="MATARIKI"/>
     <Fixed month="JUNE" day="21" validFrom="2030" validTo="2030" descriptionPropertiesKey="MATARIKI"/>
     <Fixed month="JULY" day="11" validFrom="2031" validTo="2031" descriptionPropertiesKey="MATARIKI"/>
-    <Fixed month="JULY" day="2"  validFrom="2032" validTo="2032" descriptionPropertiesKey="MATARIKI"/>
+    <Fixed month="JULY" day="2" validFrom="2032" validTo="2032" descriptionPropertiesKey="MATARIKI"/>
     <Fixed month="JUNE" day="24" validFrom="2033" validTo="2033" descriptionPropertiesKey="MATARIKI"/>
-    <Fixed month="JULY" day="7"  validFrom="2034" validTo="2034" descriptionPropertiesKey="MATARIKI"/>
+    <Fixed month="JULY" day="7" validFrom="2034" validTo="2034" descriptionPropertiesKey="MATARIKI"/>
     <Fixed month="JUNE" day="29" validFrom="2035" validTo="2035" descriptionPropertiesKey="MATARIKI"/>
     <Fixed month="JULY" day="18" validFrom="2036" validTo="2036" descriptionPropertiesKey="MATARIKI"/>
     <Fixed month="JULY" day="10" validFrom="2037" validTo="2037" descriptionPropertiesKey="MATARIKI"/>
     <Fixed month="JUNE" day="25" validFrom="2038" validTo="2038" descriptionPropertiesKey="MATARIKI"/>
     <Fixed month="JULY" day="15" validFrom="2039" validTo="2039" descriptionPropertiesKey="MATARIKI"/>
-    <Fixed month="JULY" day="6"  validFrom="2040" validTo="2040" descriptionPropertiesKey="MATARIKI"/>
+    <Fixed month="JULY" day="6" validFrom="2040" validTo="2040" descriptionPropertiesKey="MATARIKI"/>
     <Fixed month="JULY" day="19" validFrom="2041" validTo="2041" descriptionPropertiesKey="MATARIKI"/>
     <Fixed month="JULY" day="11" validFrom="2042" validTo="2042" descriptionPropertiesKey="MATARIKI"/>
-    <Fixed month="JULY" day="3"  validFrom="2043" validTo="2043" descriptionPropertiesKey="MATARIKI"/>
+    <Fixed month="JULY" day="3" validFrom="2043" validTo="2043" descriptionPropertiesKey="MATARIKI"/>
     <Fixed month="JUNE" day="24" validFrom="2044" validTo="2044" descriptionPropertiesKey="MATARIKI"/>
-    <Fixed month="JULY" day="7"  validFrom="2045" validTo="2045" descriptionPropertiesKey="MATARIKI"/>
+    <Fixed month="JULY" day="7" validFrom="2045" validTo="2045" descriptionPropertiesKey="MATARIKI"/>
     <Fixed month="JUNE" day="29" validFrom="2046" validTo="2046" descriptionPropertiesKey="MATARIKI"/>
     <Fixed month="JULY" day="19" validFrom="2047" validTo="2047" descriptionPropertiesKey="MATARIKI"/>
-    <Fixed month="JULY" day="3"  validFrom="2048" validTo="2048" descriptionPropertiesKey="MATARIKI"/>
+    <Fixed month="JULY" day="3" validFrom="2048" validTo="2048" descriptionPropertiesKey="MATARIKI"/>
     <Fixed month="JUNE" day="25" validFrom="2049" validTo="2049" descriptionPropertiesKey="MATARIKI"/>
     <Fixed month="JULY" day="15" validFrom="2050" validTo="2050" descriptionPropertiesKey="MATARIKI"/>
     <Fixed month="JUNE" day="30" validFrom="2051" validTo="2051" descriptionPropertiesKey="MATARIKI"/>
     <Fixed month="JUNE" day="21" validFrom="2052" validTo="2052" descriptionPropertiesKey="MATARIKI"/>
 
-    <FixedWeekday which="FIRST" weekday="MONDAY" month="JUNE" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
+    <FixedWeekday which="FIRST" weekday="MONDAY" month="JUNE" validTo="2022" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
+    <FixedWeekday which="FIRST" weekday="MONDAY" month="JUNE" validFrom="2023" descriptionPropertiesKey="KINGS_DAY"/>
+
     <FixedWeekday which="FOURTH" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="LABOUR_DAY"/>
 
     <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
     <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
   </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_New_Zealand</Source>
+    <Source>https://www.mbie.govt.nz/assets/matariki-dates-2022-to-2052-matariki-advisory-group.pdf</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:NZ</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:NZ</Source>
+  </Sources>
+
   <SubConfigurations hierarchy="auk" description="Auckland">
     <Holidays>
-      <FixedWeekdayRelativeToFixed which="FIRST" weekday="MONDAY" when="CLOSEST"
-                                       descriptionPropertiesKey="AUCKLAND_ANNIVERSARY">
+      <FixedWeekdayRelativeToFixed which="FIRST" weekday="MONDAY" when="CLOSEST" descriptionPropertiesKey="AUCKLAND_ANNIVERSARY">
         <day month="JANUARY" day="29"/>
       </FixedWeekdayRelativeToFixed>
     </Holidays>
   </SubConfigurations>
-  <SubConfigurations hierarchy="tki" description="Taranaki">
+
+  <SubConfigurations hierarchy="bop" description="Bay of Plenty">
     <Holidays>
-      <!-- 31 March, but moves to 2nd Monday in March to avoid Easter. -->
-      <FixedWeekday which="SECOND" weekday="MONDAY" month="MARCH" descriptionPropertiesKey="TARANAKI_ANNIVERSARY"/>
+      <FixedWeekdayRelativeToFixed which="FIRST" weekday="MONDAY" when="CLOSEST" descriptionPropertiesKey="AUCKLAND_ANNIVERSARY">
+        <day month="JANUARY" day="29"/>
+      </FixedWeekdayRelativeToFixed>
     </Holidays>
   </SubConfigurations>
+
+  <SubConfigurations hierarchy="can" description="Canterbury">
+    <Holidays>
+      <!-- 16 December, but South Canterbury observes Dominion Day, the 4th Monday in September. -->
+      <FixedWeekday which="FOURTH" weekday="MONDAY" month="SEPTEMBER" descriptionPropertiesKey="CANTERBURY_SOUTH_ANNIVERSARY"/>
+    </Holidays>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="cit" description="Chatham Islands Territory">
+    <Holidays>
+      <FixedWeekdayRelativeToFixed which="FIRST" weekday="MONDAY" when="CLOSEST" descriptionPropertiesKey="CHATHAM_ISLANDS_ANNIVERSARY">
+        <day month="NOVEMBER" day="30"/>
+      </FixedWeekdayRelativeToFixed>
+    </Holidays>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="gis" description="Gisborne">
+    <Holidays>
+      <FixedWeekdayRelativeToFixed which="FIRST" weekday="MONDAY" when="CLOSEST" descriptionPropertiesKey="AUCKLAND_ANNIVERSARY">
+        <day month="JANUARY" day="29"/>
+      </FixedWeekdayRelativeToFixed>
+    </Holidays>
+  </SubConfigurations>
+
   <SubConfigurations hierarchy="hkb" description="Hawke's Bay">
     <Holidays>
       <!-- 1 November, but moves to Friday before Labour Day. -->
       <RelativeToWeekdayInMonth weekday="FRIDAY" when="BEFORE" descriptionPropertiesKey="HAWKES_BAY_ANNIVERSARY">
         <FixedWeekday which="FOURTH" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="LABOUR_DAY"/>
       </RelativeToWeekdayInMonth>
-    </Holidays>
-  </SubConfigurations>
-  <SubConfigurations hierarchy="wgn" description="Wellington">
-    <Holidays>
-      <FixedWeekdayRelativeToFixed which="FIRST" weekday="MONDAY" when="CLOSEST"
-                                       descriptionPropertiesKey="WELLINGTON_ANNIVERSARY">
-        <day month="JANUARY" day="22"/>
+
+      <FixedWeekdayRelativeToFixed which="FIRST" weekday="MONDAY" when="CLOSEST" descriptionPropertiesKey="AUCKLAND_ANNIVERSARY">
+        <day month="JANUARY" day="29"/>
       </FixedWeekdayRelativeToFixed>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="mbh" description="Marlborough">
     <Holidays>
       <!-- 1 November, but observed 1st Monday after Labour Day. -->
@@ -109,66 +141,84 @@
       </RelativeToWeekdayInMonth>
     </Holidays>
   </SubConfigurations>
+
+  <SubConfigurations hierarchy="mwt" description="Manawatu-Wanganui">
+    <Holidays>
+      <FixedWeekdayRelativeToFixed which="FIRST" weekday="MONDAY" when="CLOSEST" descriptionPropertiesKey="WELLINGTON_ANNIVERSARY">
+        <day month="JANUARY" day="22"/>
+      </FixedWeekdayRelativeToFixed>
+      <FixedWeekdayRelativeToFixed which="FIRST" weekday="MONDAY" when="CLOSEST" descriptionPropertiesKey="AUCKLAND_ANNIVERSARY">
+        <day month="JANUARY" day="29"/>
+      </FixedWeekdayRelativeToFixed>
+    </Holidays>
+  </SubConfigurations>
+
   <SubConfigurations hierarchy="nsn" description="Nelson">
     <Holidays>
-      <FixedWeekdayRelativeToFixed which="FIRST" weekday="MONDAY" when="CLOSEST"
-                                       descriptionPropertiesKey="NELSON_ANNIVERSARY">
+      <FixedWeekdayRelativeToFixed which="FIRST" weekday="MONDAY" when="CLOSEST" descriptionPropertiesKey="NELSON_ANNIVERSARY">
         <day month="FEBRUARY" day="1"/>
       </FixedWeekdayRelativeToFixed>
     </Holidays>
   </SubConfigurations>
-  <SubConfigurations hierarchy="can" description="Canterbury">
+
+  <SubConfigurations hierarchy="ntl" description="Northland">
     <Holidays>
-      <!-- 16 December, but Northern & Central Canterbury areas observe Christchurch Show Day.
-           The definition for the Canterbury Anniversary Day celebration as decided by Christchurch City
-           is the second Friday after the first Tuesday in November each year.
-       -->
-      <!--
-      <RelativeToWeekdayInMonth which="SECOND" weekday="FRIDAY", when="AFTER" descriptionPropertiesKey="CANTERBURY_SOUTH_ANNIVERSARY">
-         <FixedWeekday which="FIRST" weekday="TUESDAY" month="NOVEMBER" />
-      </RelativeToWeekdayInMonth>
-     -->
-    </Holidays>
-  </SubConfigurations>
-  <SubConfigurations hierarchy="cans" description="Canterbury (South)">
-    <Holidays>
-      <!-- 16 December, but South Canterbury observes Dominion Day, the 4th Monday in September. -->
-      <FixedWeekday which="FOURTH" weekday="MONDAY" month="SEPTEMBER"
-                        descriptionPropertiesKey="CANTERBURY_SOUTH_ANNIVERSARY"/>
-    </Holidays>
-  </SubConfigurations>
-  <SubConfigurations hierarchy="wtc" description="Westland">
-    <Holidays>
-      <!-- Varies throughout Westland, but Greymouth observes the official day. -->
-      <FixedWeekdayRelativeToFixed which="FIRST" weekday="MONDAY" when="CLOSEST"
-                                       descriptionPropertiesKey="WESTLAND_ANNIVERSARY">
-        <day month="DECEMBER" day="1"/>
+      <FixedWeekdayRelativeToFixed which="FIRST" weekday="MONDAY" when="CLOSEST" descriptionPropertiesKey="AUCKLAND_ANNIVERSARY">
+        <day month="JANUARY" day="29"/>
       </FixedWeekdayRelativeToFixed>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="ota" description="Otago">
     <Holidays>
-      <FixedWeekdayRelativeToFixed which="FIRST" weekday="MONDAY" when="CLOSEST"
-                                       descriptionPropertiesKey="OTAGO_ANNIVERSARY">
+      <FixedWeekdayRelativeToFixed which="FIRST" weekday="MONDAY" when="CLOSEST" descriptionPropertiesKey="OTAGO_ANNIVERSARY">
         <day month="MARCH" day="23"/>
       </FixedWeekdayRelativeToFixed>
     </Holidays>
   </SubConfigurations>
+
   <SubConfigurations hierarchy="stl" description="Southland">
     <Holidays>
       <!-- In December 2011 the three southern Mayors decided Southland Anniversary Day will be celebrated on Easter Tuesday. -->
       <ChristianHoliday validFrom="2012" type="EASTER_TUESDAY" descriptionPropertiesKey="SOUTHLAND_ANNIVERSARY"/>
-      <FixedWeekdayRelativeToFixed validTo="2011" which="FIRST" weekday="MONDAY" when="CLOSEST"
-                                       descriptionPropertiesKey="SOUTHLAND_ANNIVERSARY">
+      <FixedWeekdayRelativeToFixed validTo="2011" which="FIRST" weekday="MONDAY" when="CLOSEST" descriptionPropertiesKey="SOUTHLAND_ANNIVERSARY">
         <day month="JANUARY" day="17"/>
       </FixedWeekdayRelativeToFixed>
     </Holidays>
   </SubConfigurations>
-  <SubConfigurations hierarchy="cit" description="Chatham Islands">
+
+  <SubConfigurations hierarchy="tas" description="Tasman">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="tki" description="Taranaki">
     <Holidays>
-      <FixedWeekdayRelativeToFixed which="FIRST" weekday="MONDAY" when="CLOSEST"
-                                       descriptionPropertiesKey="CHATHAM_ISLANDS_ANNIVERSARY">
-        <day month="NOVEMBER" day="30"/>
+      <!-- 31 March, but moves to 2nd Monday in March to avoid Easter. -->
+      <FixedWeekday which="SECOND" weekday="MONDAY" month="MARCH" descriptionPropertiesKey="TARANAKI_ANNIVERSARY"/>
+    </Holidays>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="wgn" description="Wellington">
+    <Holidays>
+      <FixedWeekdayRelativeToFixed which="FIRST" weekday="MONDAY" when="CLOSEST" descriptionPropertiesKey="WELLINGTON_ANNIVERSARY">
+        <day month="JANUARY" day="22"/>
+      </FixedWeekdayRelativeToFixed>
+    </Holidays>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="wko" description="Waikato">
+    <Holidays>
+      <FixedWeekdayRelativeToFixed which="FIRST" weekday="MONDAY" when="CLOSEST" descriptionPropertiesKey="AUCKLAND_ANNIVERSARY">
+        <day month="JANUARY" day="29"/>
+      </FixedWeekdayRelativeToFixed>
+    </Holidays>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="wtc" description="West Coast">
+    <Holidays>
+      <!-- Varies throughout Westland, but Greymouth observes the official day. -->
+      <FixedWeekdayRelativeToFixed which="FIRST" weekday="MONDAY" when="CLOSEST" descriptionPropertiesKey="WESTLAND_ANNIVERSARY">
+        <day month="DECEMBER" day="1"/>
       </FixedWeekdayRelativeToFixed>
     </Holidays>
   </SubConfigurations>

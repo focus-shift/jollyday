@@ -29,7 +29,8 @@
       <to month="NOVEMBER" day="6"/>
     </FixedWeekdayBetweenFixed>
   </Holidays>
-  <SubConfigurations hierarchy="ax" description="Aland">
+
+  <SubConfigurations hierarchy="01" description="Aland">
     <Holidays>
       <Fixed month="JUNE" day="9" descriptionPropertiesKey="SELF_GOVERNANCE"/>
     </Holidays>
