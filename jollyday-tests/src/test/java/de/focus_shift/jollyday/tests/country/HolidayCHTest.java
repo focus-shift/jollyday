@@ -12,12 +12,11 @@ import java.time.LocalDate;
 import java.time.Year;
 import java.util.Set;
 
-import static de.focus_shift.jollyday.core.HolidayCalendar.CZECH_REPUBLIC;
 import static de.focus_shift.jollyday.core.HolidayCalendar.SWITZERLAND;
 import static de.focus_shift.jollyday.core.HolidayType.OFFICIAL_HOLIDAY;
 import static de.focus_shift.jollyday.core.ManagerParameters.create;
-import static java.time.Month.MAY;
 import static java.time.Month.SEPTEMBER;
+import static java.time.Month.JUNE;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class HolidayCHTest extends AbstractCountryTestBase {
@@ -46,5 +45,14 @@ class HolidayCHTest extends AbstractCountryTestBase {
     assertThat(holidays)
       .isNotEmpty()
       .contains(new Holiday(LocalDate.of(year.getValue(), SEPTEMBER, 25), "ST_NICHOLAS", OFFICIAL_HOLIDAY));
+  }
+
+  @Property
+  void ensuresThatStPeterAndPaulIsConfiguredInTicino(@ForAll @YearRange Year year) {
+    final HolidayManager holidayManager = HolidayManager.getInstance(create(SWITZERLAND));
+    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue(), "ti");
+    assertThat(holidays)
+      .isNotEmpty()
+      .contains(new Holiday(LocalDate.of(year.getValue(), JUNE, 29), "ST_PETER_PAUL", OFFICIAL_HOLIDAY));
   }
 }
