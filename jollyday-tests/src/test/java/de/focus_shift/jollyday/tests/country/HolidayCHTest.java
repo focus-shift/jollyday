@@ -55,4 +55,13 @@ class HolidayCHTest extends AbstractCountryTestBase {
       .isNotEmpty()
       .contains(new Holiday(LocalDate.of(year.getValue(), JUNE, 29), "ST_PETER_PAUL", OFFICIAL_HOLIDAY));
   }
+
+  @Property
+  void ensuresThatDayOfIndependenceIsConfiguredInJura(@ForAll @YearRange Year year) {
+    final HolidayManager holidayManager = HolidayManager.getInstance(create(SWITZERLAND));
+    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue(), "ju");
+    assertThat(holidays)
+      .isNotEmpty()
+      .contains(new Holiday(LocalDate.of(year.getValue(), JUNE, 23), "INDEPENDENCE_DAY", OFFICIAL_HOLIDAY));
+  }
 }
