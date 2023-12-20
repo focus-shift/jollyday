@@ -90,6 +90,7 @@
 
   <SubConfigurations hierarchy="ge" description="Genève">
     <Holidays>
+      <Fixed month="DECEMBER" day="31" descriptionPropertiesKey="RESTORATION_OF_THE_REPUBLIC"/>
       <RelativeToWeekdayInMonth weekday="THURSDAY" when="AFTER" descriptionPropertiesKey="GENEVAN_FAST">
         <FixedWeekday which="FIRST" weekday="SUNDAY" month="SEPTEMBER"/>
       </RelativeToWeekdayInMonth>
