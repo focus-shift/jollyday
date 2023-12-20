@@ -85,6 +85,7 @@
   <SubConfigurations hierarchy="ge" description="Genève">
     <Holidays>
       <Fixed month="SEPTEMBER" day="8" descriptionPropertiesKey="GENEVAN_FAST"/>
+      <Fixed month="DECEMBER" day="31" descriptionPropertiesKey="RESTORATION_OF_THE_REPUBLIC"/>
       <Fixed month="APRIL" day="15" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
       <Fixed month="APRIL" day="18" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
       <Fixed month="JUNE" day="6" descriptionPropertiesKey="christian.WHIT_MONDAY"/>

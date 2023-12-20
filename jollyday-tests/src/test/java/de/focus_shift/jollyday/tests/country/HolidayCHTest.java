@@ -15,6 +15,7 @@ import java.util.Set;
 import static de.focus_shift.jollyday.core.HolidayCalendar.SWITZERLAND;
 import static de.focus_shift.jollyday.core.HolidayType.OFFICIAL_HOLIDAY;
 import static de.focus_shift.jollyday.core.ManagerParameters.create;
+import static java.time.Month.DECEMBER;
 import static java.time.Month.SEPTEMBER;
 import static java.time.Month.JUNE;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -63,5 +64,14 @@ class HolidayCHTest extends AbstractCountryTestBase {
     assertThat(holidays)
       .isNotEmpty()
       .contains(new Holiday(LocalDate.of(year.getValue(), JUNE, 23), "INDEPENDENCE_DAY", OFFICIAL_HOLIDAY));
+  }
+
+  @Property
+  void ensuresThatRestorationOfTheRepublicIsConfiguredInGeneve(@ForAll @YearRange Year year) {
+    final HolidayManager holidayManager = HolidayManager.getInstance(create(SWITZERLAND));
+    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue(), "ge");
+    assertThat(holidays)
+      .isNotEmpty()
+      .contains(new Holiday(LocalDate.of(year.getValue(), DECEMBER, 31), "RESTORATION_OF_THE_REPUBLIC", OFFICIAL_HOLIDAY));
   }
 }
