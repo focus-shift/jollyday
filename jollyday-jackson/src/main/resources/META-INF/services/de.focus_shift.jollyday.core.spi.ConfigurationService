@@ -1,0 +1,2 @@
+# disabled per default because otherwise jollyday-tests finds multiple instances
+# de.focus_shift.jollyday.jackson.JacksonConfigurationService
