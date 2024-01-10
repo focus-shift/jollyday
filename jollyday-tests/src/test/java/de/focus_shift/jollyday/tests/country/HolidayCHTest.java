@@ -16,8 +16,8 @@ import static de.focus_shift.jollyday.core.HolidayCalendar.SWITZERLAND;
 import static de.focus_shift.jollyday.core.HolidayType.OFFICIAL_HOLIDAY;
 import static de.focus_shift.jollyday.core.ManagerParameters.create;
 import static java.time.Month.DECEMBER;
-import static java.time.Month.SEPTEMBER;
 import static java.time.Month.JUNE;
+import static java.time.Month.SEPTEMBER;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class HolidayCHTest extends AbstractCountryTestBase {
