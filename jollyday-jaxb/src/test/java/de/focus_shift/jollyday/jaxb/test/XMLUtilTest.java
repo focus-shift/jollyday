@@ -1,6 +1,7 @@
-package de.focus_shift.jollyday.jaxb;
+package de.focus_shift.jollyday.jaxb.test;
 
 import de.focus_shift.jollyday.core.spi.Configuration;
+import de.focus_shift.jollyday.jaxb.XMLUtil;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBElement;
 import jakarta.xml.bind.JAXBException;

@@ -1,6 +1,5 @@
-package de.focus_shift.jollyday.tests;
+package de.focus_shift.jollyday.core;
 
-import de.focus_shift.jollyday.core.Holiday;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;

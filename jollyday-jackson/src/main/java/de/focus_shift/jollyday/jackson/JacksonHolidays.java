@@ -1,9 +1,5 @@
 package de.focus_shift.jollyday.jackson;
 
-import static java.util.stream.Collectors.toList;
-
-import java.util.List;
-
 import de.focus_shift.jollyday.core.spi.ChristianHoliday;
 import de.focus_shift.jollyday.core.spi.EthiopianOrthodoxHoliday;
 import de.focus_shift.jollyday.core.spi.Fixed;
@@ -15,6 +11,10 @@ import de.focus_shift.jollyday.core.spi.RelativeToEasterSunday;
 import de.focus_shift.jollyday.core.spi.RelativeToFixed;
 import de.focus_shift.jollyday.core.spi.RelativeToWeekdayInMonth;
 import de.focus_shift.jollyday.jackson.mapping.Holidays;
+
+import java.util.List;
+
+import static java.util.stream.Collectors.toList;
 
 public class JacksonHolidays implements de.focus_shift.jollyday.core.spi.Holidays {
 

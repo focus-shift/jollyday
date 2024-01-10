@@ -1,20 +1,19 @@
 package de.focus_shift.jollyday.jackson;
 
-import static java.util.stream.Collectors.toList;
-
-import java.time.Year;
-import java.time.chrono.Chronology;
-import java.time.chrono.IsoChronology;
-import java.util.List;
-
-import org.threeten.extra.chrono.JulianChronology;
-
 import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.ChristianHoliday;
 import de.focus_shift.jollyday.core.spi.ChristianHolidayType;
 import de.focus_shift.jollyday.core.spi.MovingCondition;
 import de.focus_shift.jollyday.core.spi.YearCycle;
 import de.focus_shift.jollyday.jackson.mapping.ChronologyType;
+import org.threeten.extra.chrono.JulianChronology;
+
+import java.time.Year;
+import java.time.chrono.Chronology;
+import java.time.chrono.IsoChronology;
+import java.util.List;
+
+import static java.util.stream.Collectors.toList;
 
 public class JacksonChristianHoliday implements ChristianHoliday {
 

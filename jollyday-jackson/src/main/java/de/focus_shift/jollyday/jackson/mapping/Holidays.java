@@ -1,9 +1,9 @@
 package de.focus_shift.jollyday.jackson.mapping;
 
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 
 public class Holidays {
 

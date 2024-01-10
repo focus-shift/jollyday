@@ -6,7 +6,6 @@ import de.focus_shift.jollyday.core.spi.IslamicHoliday;
 import de.focus_shift.jollyday.core.spi.IslamicHolidayType;
 import de.focus_shift.jollyday.core.spi.MovingCondition;
 import de.focus_shift.jollyday.core.spi.With;
-import de.focus_shift.jollyday.core.spi.YearCycle;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
@@ -15,7 +14,6 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import java.time.DayOfWeek;
 import java.util.List;
 
-import static de.focus_shift.jollyday.core.spi.IslamicHolidayType.ARAFAAT;
 import static de.focus_shift.jollyday.core.spi.YearCycle.EVERY_YEAR;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.when;

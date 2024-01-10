@@ -38,7 +38,7 @@ class CalendarHierarchyTest {
         holidayManager.getCalendarHierarchy().getChildren().keySet()
           .forEach(subdivision -> {
             final String subdivisionWithCountry = holidayCalendar.getId() + "-" + subdivision.toUpperCase();
-            if(!okSubdivisions.contains(subdivisionWithCountry)) {
+            if (!okSubdivisions.contains(subdivisionWithCountry)) {
               assertThat(subdivisionWithCountry).isIn(subdivisions);
             }
           });

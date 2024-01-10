@@ -1,4 +1,4 @@
-package de.focus_shift.jollyday.tests.impl;
+package de.focus_shift.jollyday.jaxb.test;
 
 import de.focus_shift.jollyday.core.Holiday;
 import de.focus_shift.jollyday.core.parser.impl.FixedWeekdayRelativeToFixedParser;

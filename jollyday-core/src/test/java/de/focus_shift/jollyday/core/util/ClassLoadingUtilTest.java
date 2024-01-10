@@ -1,6 +1,5 @@
-package de.focus_shift.jollyday.tests.util;
+package de.focus_shift.jollyday.core.util;
 
-import de.focus_shift.jollyday.core.util.ClassLoadingUtil;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;

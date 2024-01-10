@@ -1,9 +1,9 @@
 package de.focus_shift.jollyday.jackson;
 
-import java.util.stream.Stream;
-
 import de.focus_shift.jollyday.core.spi.Configuration;
 import de.focus_shift.jollyday.core.spi.Holidays;
+
+import java.util.stream.Stream;
 
 
 public class JacksonConfiguration implements Configuration {

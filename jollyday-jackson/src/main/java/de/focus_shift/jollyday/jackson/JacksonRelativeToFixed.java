@@ -1,15 +1,14 @@
 package de.focus_shift.jollyday.jackson;
 
-import java.time.DayOfWeek;
-import java.time.Year;
-
-import org.threeten.extra.Days;
-
 import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.Fixed;
 import de.focus_shift.jollyday.core.spi.Relation;
 import de.focus_shift.jollyday.core.spi.RelativeToFixed;
 import de.focus_shift.jollyday.core.spi.YearCycle;
+import org.threeten.extra.Days;
+
+import java.time.DayOfWeek;
+import java.time.Year;
 
 public class JacksonRelativeToFixed implements RelativeToFixed {
 

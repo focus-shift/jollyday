@@ -1,14 +1,14 @@
 package de.focus_shift.jollyday.jackson;
 
-import java.time.Year;
-import java.util.Collections;
-import java.util.List;
-
 import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.IslamicHoliday;
 import de.focus_shift.jollyday.core.spi.IslamicHolidayType;
 import de.focus_shift.jollyday.core.spi.MovingCondition;
 import de.focus_shift.jollyday.core.spi.YearCycle;
+
+import java.time.Year;
+import java.util.Collections;
+import java.util.List;
 
 
 public class JacksonIslamicHoliday implements IslamicHoliday {

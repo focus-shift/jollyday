@@ -11,7 +11,13 @@ module de.focus_shift.jollyday.jaxb {
   requires org.threeten.extra;
   requires de.focus_shift.jollyday.core;
 
-  exports de.focus_shift.jollyday.jaxb to de.focus_shift.jollyday.core;
+  exports de.focus_shift.jollyday.jaxb to
+    de.focus_shift.jollyday.core,
+    de.focus_shift.jollyday.jaxb.test;
+
+  exports de.focus_shift.jollyday.jaxb.mapping to
+    de.focus_shift.jollyday.jaxb.test;
+
   provides ConfigurationService
     with JaxbConfigurationService;
 }

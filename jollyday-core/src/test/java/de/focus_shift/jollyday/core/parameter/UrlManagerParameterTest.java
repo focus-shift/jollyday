@@ -1,6 +1,5 @@
-package de.focus_shift.jollyday.tests.parameter;
+package de.focus_shift.jollyday.core.parameter;
 
-import de.focus_shift.jollyday.core.parameter.UrlManagerParameter;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

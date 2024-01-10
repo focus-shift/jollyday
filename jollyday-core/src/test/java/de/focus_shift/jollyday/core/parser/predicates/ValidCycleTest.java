@@ -156,7 +156,7 @@ class ValidCycleTest {
 
   private static int getModulo(YearCycle cycle) {
     int modulo = 0;
-    switch (cycle){
+    switch (cycle) {
       case TWO_YEARS:
         modulo = 2;
         break;
