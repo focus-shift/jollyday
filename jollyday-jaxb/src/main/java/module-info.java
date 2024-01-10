@@ -3,21 +3,21 @@ import de.focus_shift.jollyday.jaxb.JaxbConfigurationService;
 
 module de.focus_shift.jollyday.jaxb {
 
-  opens de.focus_shift.jollyday.jaxb.mapping to jakarta.xml.bind;
+  provides ConfigurationService with
+    JaxbConfigurationService;
 
-  requires java.xml;
+  opens de.focus_shift.jollyday.jaxb.mapping to
+    jakarta.xml.bind;
+
+  requires de.focus_shift.jollyday.core;
   requires jakarta.xml.bind;
+  requires java.xml;
   requires org.slf4j;
   requires org.threeten.extra;
-  requires de.focus_shift.jollyday.core;
 
   exports de.focus_shift.jollyday.jaxb to
     de.focus_shift.jollyday.core,
     de.focus_shift.jollyday.jaxb.test;
-
   exports de.focus_shift.jollyday.jaxb.mapping to
     de.focus_shift.jollyday.jaxb.test;
-
-  provides ConfigurationService
-    with JaxbConfigurationService;
 }

@@ -1,6 +1,7 @@
 module de.focus_shift.jollyday.jaxb.test {
 
-  opens de.focus_shift.jollyday.jaxb.test to org.junit.platform.commons;
+  opens de.focus_shift.jollyday.jaxb.test to
+    org.junit.platform.commons;
 
   requires de.focus_shift.jollyday.core;
   requires de.focus_shift.jollyday.jaxb;

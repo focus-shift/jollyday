@@ -1,6 +1,7 @@
 module de.focus_shift.jollyday.jackson.test {
 
-  opens de.focus_shift.jollyday.jackson.test to org.junit.platform.commons;
+  opens de.focus_shift.jollyday.jackson.test to
+    org.junit.platform.commons;
 
   requires com.fasterxml.jackson.databind;
   requires com.fasterxml.jackson.dataformat.xml;
