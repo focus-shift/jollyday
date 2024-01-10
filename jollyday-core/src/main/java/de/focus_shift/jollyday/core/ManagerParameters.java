@@ -16,6 +16,10 @@ public final class ManagerParameters {
     return create(calendarPart, null);
   }
 
+  public static ManagerParameter create(String calendarPart, Properties properties) {
+    return new CalendarPartManagerParameter(prepareCalendarName(calendarPart), properties);
+  }
+
   /**
    * Uses the locales country if it exists or its language otherwise.
    *
@@ -37,10 +41,6 @@ public final class ManagerParameters {
 
   public static ManagerParameter create(URL calendarFileUrl) {
     return create(calendarFileUrl, null);
-  }
-
-  public static ManagerParameter create(String calendarPart, Properties properties) {
-    return new CalendarPartManagerParameter(prepareCalendarName(calendarPart), properties);
   }
 
   public static ManagerParameter create(URL calendarFileUrl, Properties properties) {
