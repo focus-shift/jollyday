@@ -1,16 +1,4 @@
-package de.focus_shift.jollyday.tests.jackson.impl;
-
-import static de.focus_shift.jollyday.jackson.mapping.EthiopianOrthodoxHolidayType.ENKUTATASH;
-import static de.focus_shift.jollyday.jackson.mapping.EthiopianOrthodoxHolidayType.MESKEL;
-import static de.focus_shift.jollyday.jackson.mapping.EthiopianOrthodoxHolidayType.TIMKAT;
-import static org.assertj.core.api.Assertions.assertThat;
-
-import java.time.LocalDate;
-import java.util.List;
-import java.util.Set;
-
-import org.assertj.core.util.Sets;
-import org.junit.jupiter.api.Test;
+package de.focus_shift.jollyday.jackson.test;
 
 import de.focus_shift.jollyday.core.Holiday;
 import de.focus_shift.jollyday.core.parser.impl.EthiopianOrthodoxHolidayParser;
@@ -19,6 +7,17 @@ import de.focus_shift.jollyday.jackson.JacksonHolidays;
 import de.focus_shift.jollyday.jackson.mapping.EthiopianOrthodoxHoliday;
 import de.focus_shift.jollyday.jackson.mapping.EthiopianOrthodoxHolidayType;
 import de.focus_shift.jollyday.jackson.mapping.Holidays;
+import org.assertj.core.util.Sets;
+import org.junit.jupiter.api.Test;
+
+import java.time.LocalDate;
+import java.util.List;
+import java.util.Set;
+
+import static de.focus_shift.jollyday.jackson.mapping.EthiopianOrthodoxHolidayType.ENKUTATASH;
+import static de.focus_shift.jollyday.jackson.mapping.EthiopianOrthodoxHolidayType.MESKEL;
+import static de.focus_shift.jollyday.jackson.mapping.EthiopianOrthodoxHolidayType.TIMKAT;
+import static org.assertj.core.api.Assertions.assertThat;
 
 class EthiopianOrthodoxHolidayParserTest {
 

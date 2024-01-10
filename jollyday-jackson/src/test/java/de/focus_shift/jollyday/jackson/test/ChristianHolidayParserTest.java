@@ -1,21 +1,4 @@
-package de.focus_shift.jollyday.tests.jackson.impl;
-
-import static de.focus_shift.jollyday.jackson.mapping.ChristianHolidayType.CLEAN_MONDAY;
-import static de.focus_shift.jollyday.jackson.mapping.ChristianHolidayType.EASTER;
-import static de.focus_shift.jollyday.jackson.mapping.ChristianHolidayType.EASTER_SATURDAY;
-import static de.focus_shift.jollyday.jackson.mapping.ChristianHolidayType.EASTER_TUESDAY;
-import static de.focus_shift.jollyday.jackson.mapping.ChristianHolidayType.GENERAL_PRAYER_DAY;
-import static de.focus_shift.jollyday.jackson.mapping.ChristianHolidayType.PENTECOST;
-import static de.focus_shift.jollyday.jackson.mapping.ChristianHolidayType.SACRED_HEART;
-import static org.assertj.core.api.Assertions.assertThat;
-
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+package de.focus_shift.jollyday.jackson.test;
 
 import de.focus_shift.jollyday.core.Holiday;
 import de.focus_shift.jollyday.core.parser.impl.ChristianHolidayParser;
@@ -27,6 +10,22 @@ import de.focus_shift.jollyday.jackson.mapping.ChristianHolidayType;
 import de.focus_shift.jollyday.jackson.mapping.ChronologyType;
 import de.focus_shift.jollyday.jackson.mapping.Holidays;
 import de.focus_shift.jollyday.jackson.mapping.RelativeToEasterSunday;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import static de.focus_shift.jollyday.jackson.mapping.ChristianHolidayType.CLEAN_MONDAY;
+import static de.focus_shift.jollyday.jackson.mapping.ChristianHolidayType.EASTER;
+import static de.focus_shift.jollyday.jackson.mapping.ChristianHolidayType.EASTER_SATURDAY;
+import static de.focus_shift.jollyday.jackson.mapping.ChristianHolidayType.EASTER_TUESDAY;
+import static de.focus_shift.jollyday.jackson.mapping.ChristianHolidayType.GENERAL_PRAYER_DAY;
+import static de.focus_shift.jollyday.jackson.mapping.ChristianHolidayType.PENTECOST;
+import static de.focus_shift.jollyday.jackson.mapping.ChristianHolidayType.SACRED_HEART;
+import static org.assertj.core.api.Assertions.assertThat;
 
 class ChristianHolidayParserTest {
 

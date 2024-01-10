@@ -1,23 +1,4 @@
-package de.focus_shift.jollyday.tests.jackson.impl;
-
-import static de.focus_shift.jollyday.jackson.mapping.Month.JANUARY;
-import static de.focus_shift.jollyday.jackson.mapping.Month.MARCH;
-import static de.focus_shift.jollyday.jackson.mapping.Month.MAY;
-import static de.focus_shift.jollyday.jackson.mapping.Weekday.FRIDAY;
-import static de.focus_shift.jollyday.jackson.mapping.Weekday.MONDAY;
-import static de.focus_shift.jollyday.jackson.mapping.Weekday.SATURDAY;
-import static de.focus_shift.jollyday.jackson.mapping.Weekday.SUNDAY;
-import static de.focus_shift.jollyday.jackson.mapping.With.NEXT;
-import static de.focus_shift.jollyday.jackson.mapping.With.PREVIOUS;
-import static org.assertj.core.api.Assertions.assertThat;
-
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-
-import org.junit.jupiter.api.Test;
+package de.focus_shift.jollyday.jackson.test;
 
 import de.focus_shift.jollyday.core.Holiday;
 import de.focus_shift.jollyday.core.parser.impl.FixedParser;
@@ -30,6 +11,24 @@ import de.focus_shift.jollyday.jackson.mapping.Month;
 import de.focus_shift.jollyday.jackson.mapping.MovingCondition;
 import de.focus_shift.jollyday.jackson.mapping.Weekday;
 import de.focus_shift.jollyday.jackson.mapping.With;
+import org.junit.jupiter.api.Test;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
+import static de.focus_shift.jollyday.jackson.mapping.Month.JANUARY;
+import static de.focus_shift.jollyday.jackson.mapping.Month.MARCH;
+import static de.focus_shift.jollyday.jackson.mapping.Month.MAY;
+import static de.focus_shift.jollyday.jackson.mapping.Weekday.FRIDAY;
+import static de.focus_shift.jollyday.jackson.mapping.Weekday.MONDAY;
+import static de.focus_shift.jollyday.jackson.mapping.Weekday.SATURDAY;
+import static de.focus_shift.jollyday.jackson.mapping.Weekday.SUNDAY;
+import static de.focus_shift.jollyday.jackson.mapping.With.NEXT;
+import static de.focus_shift.jollyday.jackson.mapping.With.PREVIOUS;
+import static org.assertj.core.api.Assertions.assertThat;
 
 
 class FixedParserTest {

@@ -1,10 +1,4 @@
-package de.focus_shift.jollyday.tests.jackson.impl;
-
-import static org.assertj.core.api.Assertions.assertThat;
-
-import java.util.List;
-
-import org.junit.jupiter.api.Test;
+package de.focus_shift.jollyday.jackson.test;
 
 import de.focus_shift.jollyday.core.Holiday;
 import de.focus_shift.jollyday.core.parser.impl.FixedWeekdayRelativeToFixedParser;
@@ -17,6 +11,11 @@ import de.focus_shift.jollyday.jackson.mapping.Month;
 import de.focus_shift.jollyday.jackson.mapping.Weekday;
 import de.focus_shift.jollyday.jackson.mapping.When;
 import de.focus_shift.jollyday.jackson.mapping.Which;
+import org.junit.jupiter.api.Test;
+
+import java.util.List;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 class FixedWeekdayRelativeToFixedParserTest {
 

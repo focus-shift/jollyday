@@ -1,7 +1,8 @@
-package de.focus_shift.jollyday.jackson;
+package de.focus_shift.jollyday.jackson.test;
 
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
+import de.focus_shift.jollyday.jackson.XMLUtil;
 import de.focus_shift.jollyday.jackson.mapping.Configuration;
 import de.focus_shift.jollyday.jackson.mapping.Fixed;
 import de.focus_shift.jollyday.jackson.mapping.Holidays;
