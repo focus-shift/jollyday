@@ -27,8 +27,12 @@ public final class ManagerParameters {
    * @return parameters
    */
   public static ManagerParameter create(Locale lc) {
+    return create(lc, null);
+  }
+
+  public static ManagerParameter create(Locale lc, Properties properties) {
     final String calendarPart = "".equals(lc.getCountry()) ? lc.getLanguage() : lc.getCountry();
-    return create(calendarPart, null);
+    return create(calendarPart, properties);
   }
 
   public static ManagerParameter create(HolidayCalendar calendar) {
@@ -48,7 +52,7 @@ public final class ManagerParameters {
   }
 
   private static String prepareCalendarName(String calendar) {
-    if (calendar == null || "".equals(calendar.trim())) {
+    if (calendar == null || calendar.trim().isEmpty()) {
       return Locale.getDefault().getCountry().toLowerCase();
     } else {
       return calendar.trim().toLowerCase();
