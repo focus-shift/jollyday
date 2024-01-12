@@ -23,8 +23,8 @@ If you already use one of these libraries in your project than just use the spec
 
   ### XML-Binding libraries
 
-  Additionally, the XML-Binding library of your choice. At the moment we do only support JAXB, 
-  but in the future there should be more that one.
+  Additionally, the XML-Binding library of your choice. At the moment we do support JAXB and Jackson,
+  but in the future there could be more that these.
 
   **Jakarta XML Binding (JAXB)**
 
@@ -32,6 +32,16 @@ If you already use one of these libraries in your project than just use the spec
   <dependency>
     <groupId>de.focus-shift</groupId>
     <artifactId>jollyday-jaxb</artifactId>
+    <version>${version}</version>
+  </dependency>
+  ```
+
+  **Jackson**
+
+  ```xml
+  <dependency>
+    <groupId>de.focus-shift</groupId>
+    <artifactId>jollyday-jackson</artifactId>
     <version>${version}</version>
   </dependency>
   ```
@@ -48,13 +58,19 @@ If you already use one of these libraries in your project than just use the spec
 
   ### XML-Binding libraries
 
-  Additionally, the XML-Binding library of your choice. At the moment we do only support JAXB,
-  but in the future there should be more that one.
+  Additionally, the XML-Binding library of your choice. At the moment we do support JAXB and Jackson,
+  but in the future there could be more that these.
 
   **Jakarta XML Binding (JAXB)**
 
   ```gradle
   implementation group: 'de.focus-shift', name: 'jollyday-jaxb', version: '${version}'
+  ```
+
+  **Jackson**
+
+  ```gradle
+  implementation group: 'de.focus-shift', name: 'jollyday-jackson', version: '${version}'
   ```
 </details>
 
