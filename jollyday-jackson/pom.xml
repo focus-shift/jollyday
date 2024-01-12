@@ -72,7 +72,7 @@
         <configuration>
           <instructions>
             <Bundle-SymbolicName>de.focus_shift.jollyday-jackson</Bundle-SymbolicName>
-            <Export-Package>de.focus_shift.jackson.*</Export-Package>
+            <Export-Package>de.focus_shift.jollyday.jackson.*</Export-Package>
             <Require-Capability>osgi.extender;filter:="(osgi.extender=osgi.serviceloader.registrar)"</Require-Capability>
             <Provide-Capability>osgi.serviceloader;osgi.serviceloader=de.focus_shift.jollyday.core.spi.ConfigurationService</Provide-Capability>
           </instructions>
