@@ -7,8 +7,9 @@ import de.focus_shift.jollyday.core.spi.MovingCondition;
 import de.focus_shift.jollyday.core.spi.YearCycle;
 
 import java.time.Year;
-import java.util.Collections;
 import java.util.List;
+
+import static java.util.stream.Collectors.toList;
 
 
 public class JacksonIslamicHoliday implements IslamicHoliday {
@@ -59,6 +60,8 @@ public class JacksonIslamicHoliday implements IslamicHoliday {
 
   @Override
   public List<MovingCondition> conditions() {
-    return Collections.emptyList();
+    return islamicHoliday.getMovingCondition().stream()
+      .map(JacksonMovingCondition::new)
+      .collect(toList());
   }
 }
