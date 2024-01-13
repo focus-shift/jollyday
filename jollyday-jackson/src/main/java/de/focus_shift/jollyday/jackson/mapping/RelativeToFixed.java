@@ -1,10 +1,16 @@
 package de.focus_shift.jollyday.jackson.mapping;
 
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
+
 public class RelativeToFixed extends Holiday {
 
+  @JacksonXmlElementWrapper(localName = "Days", useWrapping = false)
   protected Integer days;
+  @JacksonXmlElementWrapper(localName = "Weekday", useWrapping = false)
   protected Weekday weekday;
+  @JacksonXmlElementWrapper(localName = "When", useWrapping = false)
   protected When when;
+  @JacksonXmlElementWrapper(localName = "Date", useWrapping = false)
   protected Fixed date;
 
   /**
