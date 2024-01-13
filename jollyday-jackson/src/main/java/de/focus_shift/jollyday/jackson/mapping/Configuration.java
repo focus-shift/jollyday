@@ -12,6 +12,8 @@ public class Configuration {
 
   @JacksonXmlElementWrapper(localName = "Holidays", useWrapping = false)
   protected Holidays holidays;
+  @JacksonXmlElementWrapper(localName = "Sources", useWrapping = false)
+  protected Sources sources;
   @JacksonXmlElementWrapper(localName = "SubConfigurations", useWrapping = false)
   protected List<Configuration> subConfigurations;
 
@@ -38,6 +40,26 @@ public class Configuration {
    */
   public void setHolidays(Holidays value) {
     this.holidays = value;
+  }
+
+  /**
+   * Gets the value of the sources' property.
+   *
+   * @return possible object is
+   * {@link Sources }
+   */
+  public Sources getSources() {
+    return this.sources;
+  }
+
+  /**
+   * Sets the value of the sources property.
+   *
+   * @param sources allowed object is
+   *              {@link Sources }
+   */
+  public void setSources(Sources sources) {
+    this.sources = sources;
   }
 
   /**
