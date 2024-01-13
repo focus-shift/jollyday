@@ -4,6 +4,7 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 
 public class FixedWeekdayRelativeToFixed extends Holiday {
 
+  @JacksonXmlProperty(localName = "day")
   protected Fixed day;
   @JacksonXmlProperty(localName = "which", isAttribute = true)
   protected Which which;
