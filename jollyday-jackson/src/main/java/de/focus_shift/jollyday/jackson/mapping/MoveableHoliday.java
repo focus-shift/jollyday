@@ -1,10 +1,13 @@
 package de.focus_shift.jollyday.jackson.mapping;
 
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public abstract class MoveableHoliday extends Holiday {
 
+  @JacksonXmlElementWrapper(localName = "MovingCondition", useWrapping = false)
   protected List<MovingCondition> movingCondition;
 
   /**

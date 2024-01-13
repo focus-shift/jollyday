@@ -1,8 +1,12 @@
 package de.focus_shift.jollyday.jackson.mapping;
 
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+
 public class RelativeToEasterSunday extends Holiday {
 
+  @JacksonXmlProperty(localName = "chronology", isAttribute = true)
   protected ChronologyType chronology;
+  @JacksonXmlProperty(localName = "days", isAttribute = true)
   protected int days;
 
   /**

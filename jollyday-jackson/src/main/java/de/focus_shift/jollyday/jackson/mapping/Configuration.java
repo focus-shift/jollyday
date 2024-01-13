@@ -1,6 +1,7 @@
 package de.focus_shift.jollyday.jackson.mapping;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 
 import java.util.ArrayList;
@@ -9,8 +10,13 @@ import java.util.List;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Configuration {
 
+  @JacksonXmlElementWrapper(localName = "Holidays", useWrapping = false)
   protected Holidays holidays;
+  @JacksonXmlElementWrapper(localName = "Sources", useWrapping = false)
+  protected Sources sources;
+  @JacksonXmlElementWrapper(localName = "SubConfigurations", useWrapping = false)
   protected List<Configuration> subConfigurations;
+
   @JacksonXmlProperty(localName = "hierarchy", isAttribute = true)
   protected String hierarchy;
   @JacksonXmlProperty(localName = "description", isAttribute = true)
@@ -34,6 +40,26 @@ public class Configuration {
    */
   public void setHolidays(Holidays value) {
     this.holidays = value;
+  }
+
+  /**
+   * Gets the value of the sources' property.
+   *
+   * @return possible object is
+   * {@link Sources }
+   */
+  public Sources getSources() {
+    return this.sources;
+  }
+
+  /**
+   * Sets the value of the sources property.
+   *
+   * @param sources allowed object is
+   *              {@link Sources }
+   */
+  public void setSources(Sources sources) {
+    this.sources = sources;
   }
 
   /**
