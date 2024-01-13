@@ -5,7 +5,9 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 public class FixedWeekdayBetweenFixed extends Holiday {
 
 
+  @JacksonXmlProperty(localName = "from", isAttribute = true)
   protected Fixed from;
+  @JacksonXmlProperty(localName = "to", isAttribute = true)
   protected Fixed to;
 
   @JacksonXmlProperty(localName = "weekday", isAttribute = true)
