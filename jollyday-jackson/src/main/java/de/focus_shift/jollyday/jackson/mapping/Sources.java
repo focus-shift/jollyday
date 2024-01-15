@@ -50,7 +50,7 @@ public class Sources {
    */
   public List<Source> getSource() {
     if (source == null) {
-      source = new ArrayList<Source>();
+      source = new ArrayList<>();
     }
     return this.source;
   }
