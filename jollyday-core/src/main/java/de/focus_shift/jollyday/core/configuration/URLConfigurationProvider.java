@@ -32,7 +32,7 @@ class URLConfigurationProvider implements ConfigurationProvider {
     final String configURLs = System.getProperty(CONFIG_URLS_PROPERTY);
 
     if (configURLs != null) {
-      stream(configURLs.split(","))
+        stream(configURLs.split(","))
         .filter(Objects::nonNull)
         .filter(not(String::isEmpty))
         .map(String::trim)
@@ -46,17 +46,13 @@ class URLConfigurationProvider implements ConfigurationProvider {
 
   private void readPropertiesFromURL(final Properties properties, final URL url) {
     try (final InputStream inputStream = url.openStream()) {
-      if (inputStream != null) {
-        properties.load(inputStream);
-      } else {
-        LOG.warn("Could not load default properties file '{}' from classpath.", url);
-      }
+      properties.load(inputStream);
     } catch (IOException e) {
       throw new IllegalStateException("Could not load default properties from classpath.", e);
     }
   }
 
-  private URL createUrl(String stringUrl) {
+  private URL createUrl(final String stringUrl) {
     URL url = null;
     try {
       url = new URL(stringUrl);
