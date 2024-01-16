@@ -12,10 +12,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.time.LocalDate;
+import java.util.Arrays;
 import java.util.Calendar;
-import java.util.HashSet;
 import java.util.Properties;
 import java.util.Set;
+
+import static java.util.Arrays.stream;
+import static java.util.stream.Collectors.toUnmodifiableSet;
 
 /**
  * Abstract base class for all holiday manager implementations. Upon call of
@@ -246,16 +249,15 @@ public abstract class HolidayManager {
   }
 
   /**
-   * Returns a set of all currently supported calendar codes.
+   * Returns a set of all currently supported ISO 3166-1 alpha-2 codes.
    *
    * @return Set of supported calendar codes.
    */
   public static Set<String> getSupportedCalendarCodes() {
-    Set<String> supportedCalendars = new HashSet<>();
-    for (HolidayCalendar holidayCalendar : HolidayCalendar.values()) {
-      supportedCalendars.add(holidayCalendar.getId());
-    }
-    return supportedCalendars;
+    // TODO move this into HolidayCalendar class
+    return stream(HolidayCalendar.values())
+      .map(HolidayCalendar::getId)
+      .collect(toUnmodifiableSet());
   }
 
   /**
