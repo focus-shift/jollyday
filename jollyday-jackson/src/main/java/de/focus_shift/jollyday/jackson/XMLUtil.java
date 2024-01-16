@@ -12,12 +12,7 @@ import java.time.DayOfWeek;
 
 public class XMLUtil {
 
-  private final XmlMapper mapper;
-
-  public XMLUtil() {
-    mapper = new XmlMapper();
-    mapper.setPropertyNamingStrategy(PropertyNamingStrategies.UPPER_CAMEL_CASE);
-  }
+  private final JacksonMapperCreator mapper = new JacksonMapperCreator();
 
   /**
    * Unmarshalls the configuration from the stream. Uses <code>jackson</code> for
@@ -28,7 +23,7 @@ public class XMLUtil {
    */
   public Configuration unmarshallConfiguration(InputStream stream) {
     try {
-      return mapper.readValue(stream, Configuration.class);
+      return mapper.create().readValue(stream, Configuration.class);
     } catch (Exception e) {
       throw new IllegalStateException("Cannot parse holidays XML file.", e);
     }
@@ -68,6 +63,14 @@ public class XMLUtil {
         return HolidayType.UNOFFICIAL_HOLIDAY;
       default:
         throw new IllegalArgumentException("Unknown type " + type);
+    }
+  }
+
+  public static class JacksonMapperCreator {
+    public XmlMapper create() {
+      final XmlMapper mapper = new XmlMapper();
+      mapper.setPropertyNamingStrategy(PropertyNamingStrategies.UPPER_CAMEL_CASE);
+      return mapper;
     }
   }
 }
