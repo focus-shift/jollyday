@@ -14,9 +14,9 @@ import java.util.Properties;
  * 'jollyday.properties' default configuration file from the classpath
  * and provides the configuration.
  */
-class DefaultConfigurationProvider implements ConfigurationProvider {
+class ClasspathConfigurationProvider implements ConfigurationProvider {
 
-  private static final Logger LOG = LoggerFactory.getLogger(DefaultConfigurationProvider.class);
+  private static final Logger LOG = LoggerFactory.getLogger(ClasspathConfigurationProvider.class);
 
   private static final String CONFIG_FILE = "jollyday.properties";
 

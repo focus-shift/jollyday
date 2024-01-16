@@ -8,13 +8,13 @@ import java.util.Properties;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
-class DefaultConfigurationProviderContentTest {
+class ClasspathConfigurationProviderContentTest {
 
-  private DefaultConfigurationProvider sut;
+  private ClasspathConfigurationProvider sut;
 
   @BeforeEach
   void setUp() {
-    sut = new DefaultConfigurationProvider();
+    sut = new ClasspathConfigurationProvider();
   }
 
   @Test

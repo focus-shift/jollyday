@@ -16,9 +16,9 @@ import static org.mockito.Mockito.verify;
 class ConfigurationProviderManagerTest {
 
   @Mock
-  private ConfigurationProvider defaultConfigurationProvider;
+  private ClasspathConfigurationProvider classpathConfigurationProvider;
   @Mock
-  private ConfigurationProvider urlConfigurationProvider;
+  private URLConfigurationProvider urlConfigurationProvider;
 
   @InjectMocks
   private final ConfigurationProviderManager configurationProviderManager = new ConfigurationProviderManager();
@@ -74,7 +74,7 @@ class ConfigurationProviderManagerTest {
 
   private void assertResult(ManagerParameter parameter) {
     assertThat(parameter).isNotNull();
-    verify(defaultConfigurationProvider).getProperties();
+    verify(classpathConfigurationProvider).getProperties();
     verify(urlConfigurationProvider).getProperties();
   }
 }

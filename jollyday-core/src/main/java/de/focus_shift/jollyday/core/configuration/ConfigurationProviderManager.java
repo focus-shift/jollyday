@@ -12,13 +12,13 @@ public class ConfigurationProviderManager {
 
   private static final Logger LOG = LoggerFactory.getLogger(ConfigurationProviderManager.class);
 
-  private ConfigurationProvider defaultConfigurationProvider = new DefaultConfigurationProvider();
+  private ConfigurationProvider classpathConfigurationProvider = new ClasspathConfigurationProvider();
   private ConfigurationProvider urlConfigurationProvider = new URLConfigurationProvider();
   private final ClassLoadingUtil classLoadingUtil = new ClassLoadingUtil();
 
   /**
    * Reads the jollyday configuration from the
-   * {@link DefaultConfigurationProvider}, the
+   * {@link ClasspathConfigurationProvider}, the
    * {@link URLConfigurationProvider} and any configuration provider specified
    * by the system property 'config.providers'.
    *
@@ -31,7 +31,7 @@ public class ConfigurationProviderManager {
 
   private void addInternalConfigurationProviderProperties(ManagerParameter parameter) {
     parameter.mergeProperties(urlConfigurationProvider.getProperties());
-    parameter.mergeProperties(defaultConfigurationProvider.getProperties());
+    parameter.mergeProperties(classpathConfigurationProvider.getProperties());
   }
 
   private void addCustomConfigurationProviderProperties(ManagerParameter parameter) {
