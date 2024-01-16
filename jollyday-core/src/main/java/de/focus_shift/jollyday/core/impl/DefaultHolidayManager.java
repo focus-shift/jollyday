@@ -23,6 +23,8 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
 
+import static java.util.Arrays.copyOfRange;
+
 /**
  * Manager implementation for reading data from the configuration datasource.
  * It uses a list a parsers for parsing the different type of XML nodes.
@@ -123,34 +125,17 @@ public class DefaultHolidayManager extends HolidayManager {
     if (LOG.isDebugEnabled()) {
       LOG.debug("Adding holidays for {}", configuration.description());
     }
+
     parseHolidays(year, holidaySet, configuration.holidays());
+
     if (args != null && args.length > 0) {
       final String hierarchy = args[0];
+
       configuration.subConfigurations()
         .filter(sub -> hierarchy.equalsIgnoreCase(sub.hierarchy()))
-        .forEach(config ->
-          getHolidays(year, config, holidaySet, copyOfRange(args, 1, args.length))
+        .forEach(config -> getHolidays(year, config, holidaySet, copyOfRange(args, 1, args.length))
         );
     }
-  }
-
-  /**
-   * Copies the specified range from the original array to a new array. This
-   * is a replacement for Java 1.6 Arrays.copyOfRange() specialized in String.
-   *
-   * @param original the original array to copy range from
-   * @param from     the start of the range to copy from the original array
-   * @param to       the inclusive end of the range to copy from the original array
-   * @return the copied range
-   */
-  private String[] copyOfRange(final String[] original, int from, int to) {
-    int newLength = to - from;
-    if (newLength < 0) {
-      throw new IllegalArgumentException(from + " > " + to);
-    }
-    final String[] copy = new String[newLength];
-    System.arraycopy(original, from, copy, 0, Math.min(original.length - from, newLength));
-    return copy;
   }
 
   /**
