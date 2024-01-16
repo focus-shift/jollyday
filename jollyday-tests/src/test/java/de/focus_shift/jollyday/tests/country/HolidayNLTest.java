@@ -80,21 +80,21 @@ class HolidayNLTest extends AbstractCountryTestBase {
   }
 
   @Property
-  void ensuresThatChristmasIsConfigured(@ForAll @YearRange Year year) {
+  void ensuresThatFirstChristmasDayIsConfigured(@ForAll @YearRange Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(NETHERLANDS));
     final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
     assertThat(holidays)
       .isNotEmpty()
-      .contains(new Holiday(LocalDate.of(year.getValue(), DECEMBER, 25), "CHRISTMAS", OFFICIAL_HOLIDAY));
+      .contains(new Holiday(LocalDate.of(year.getValue(), DECEMBER, 25), "FIRST_CHRISTMAS_DAY", OFFICIAL_HOLIDAY));
   }
 
   @Property
-  void ensuresThatStephensIsConfigured(@ForAll @YearRange Year year) {
+  void ensuresThatSecondChristmasDayIsConfigured(@ForAll @YearRange Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(NETHERLANDS));
     final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
     assertThat(holidays)
       .isNotEmpty()
-      .contains(new Holiday(LocalDate.of(year.getValue(), DECEMBER, 26), "STEPHENS", OFFICIAL_HOLIDAY));
+      .contains(new Holiday(LocalDate.of(year.getValue(), DECEMBER, 26), "SECOND_CHRISTMAS_DAY", OFFICIAL_HOLIDAY));
   }
 
   @Property
@@ -158,12 +158,12 @@ class HolidayNLTest extends AbstractCountryTestBase {
   }
 
   @Property
-  void ensuresThatWhitMondayIsConfigured(@ForAll @YearRange Year year) {
+  void ensuresThatPentecostMondayIsConfigured(@ForAll @YearRange Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(NETHERLANDS));
     final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
     assertThat(holidays)
       .isNotEmpty()
       .extracting(Holiday::getPropertiesKey)
-      .contains("christian.WHIT_MONDAY");
+      .contains("christian.PENTECOST_MONDAY");
   }
 }
