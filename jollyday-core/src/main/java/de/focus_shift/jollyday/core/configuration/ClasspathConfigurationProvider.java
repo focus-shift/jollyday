@@ -1,8 +1,6 @@
 package de.focus_shift.jollyday.core.configuration;
 
 import de.focus_shift.jollyday.core.util.ResourceUtil;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -16,34 +14,41 @@ import java.util.Properties;
  */
 class ClasspathConfigurationProvider implements ConfigurationProvider {
 
-  private static final Logger LOG = LoggerFactory.getLogger(ClasspathConfigurationProvider.class);
-
-  private static final String CONFIG_FILE = "jollyday.properties";
-
   private final ResourceUtil resourceUtil = new ResourceUtil();
+
+  private static final String DEFAULT_CONFIGURATION_FILE_NAME = "jollyday.properties";
+  private URL configurationFile;
+
+  public ClasspathConfigurationProvider() {
+    this.configurationFile = getConfigurationFile(DEFAULT_CONFIGURATION_FILE_NAME);
+  }
 
   @Override
   public Properties getProperties() {
-    final URL config = resourceUtil.getResource(CONFIG_FILE);
-    if (config == null) {
-      throw new IllegalStateException("Properties file " + CONFIG_FILE + " not found on classpath.");
-    }
-    return mapConfigurationFromUrl(config);
+    return mapConfigurationFromUrl(configurationFile);
+  }
+
+  public void overrideConfigurationFileName(final String configurationFile) {
+    this.configurationFile = getConfigurationFile(configurationFile);
   }
 
   private Properties mapConfigurationFromUrl(final URL url) {
     final Properties properties = new Properties();
 
     try (final InputStream inputStream = url.openStream()) {
-      if (inputStream != null) {
-        properties.load(inputStream);
-      } else {
-        LOG.warn("Could not load default properties file '{}' from classpath.", url);
-      }
+      properties.load(inputStream);
     } catch (IOException e) {
-      throw new IllegalStateException("Could not load default properties from classpath.", e);
+      throw new IllegalStateException("Could not load default configuration from classpath.", e);
     }
 
     return properties;
+  }
+
+  private URL getConfigurationFile(final String configurationFileName) {
+    final URL configuration = resourceUtil.getResource(configurationFileName);
+    if (configuration == null) {
+      throw new IllegalStateException("Configuration file '" + configurationFileName + "' not found on classpath.");
+    }
+    return configuration;
   }
 }
