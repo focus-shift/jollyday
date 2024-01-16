@@ -21,7 +21,7 @@ class ConfigurationProviderManagerTest {
   private URLConfigurationProvider urlConfigurationProvider;
 
   @InjectMocks
-  private final ConfigurationProviderManager configurationProviderManager = new ConfigurationProviderManager();
+  private final ConfigurationProviderManager sut = new ConfigurationProviderManager();
 
   private final ManagerParameter managerParameter = ManagerParameters.create((String) null);
 
@@ -33,21 +33,21 @@ class ConfigurationProviderManagerTest {
   @Test
   void testGetPropertiesWithEmptyProvidersList() {
     System.setProperty(ConfigurationProvider.CONFIG_PROVIDERS_PROPERTY, "");
-    configurationProviderManager.mergeConfigurationProperties(managerParameter);
+    sut.mergeConfigurationProperties(managerParameter);
     assertResult(managerParameter);
   }
 
   @Test
   void testGetPropertiesWithWrongClass() {
     System.setProperty(ConfigurationProvider.CONFIG_PROVIDERS_PROPERTY, "java.lang.String");
-    configurationProviderManager.mergeConfigurationProperties(managerParameter);
+    sut.mergeConfigurationProperties(managerParameter);
     assertResult(managerParameter);
   }
 
   @Test
   void testGetPropertiesWithCorrectClass() {
     System.setProperty(ConfigurationProvider.CONFIG_PROVIDERS_PROPERTY, "de.focus_shift.jollyday.core.configuration.TestProvider");
-    configurationProviderManager.mergeConfigurationProperties(managerParameter);
+    sut.mergeConfigurationProperties(managerParameter);
     assertResult(managerParameter);
     assertThat(managerParameter.getProperty("key")).isEqualTo("value");
   }
@@ -55,7 +55,7 @@ class ConfigurationProviderManagerTest {
   @Test
   void testGetPropertiesWithWrongAndCorrectClass() {
     System.setProperty(ConfigurationProvider.CONFIG_PROVIDERS_PROPERTY, "de.focus_shift.jollyday.core.configuration.TestProvider, java.lang.String");
-    configurationProviderManager.mergeConfigurationProperties(managerParameter);
+    sut.mergeConfigurationProperties(managerParameter);
     assertResult(managerParameter);
     assertThat(managerParameter.getProperty("key")).isEqualTo("value");
   }
@@ -65,7 +65,7 @@ class ConfigurationProviderManagerTest {
     managerParameter.setProperty("MANUAL_KEY", "MANUAL_VALUE");
     managerParameter.setProperty("manager.impl", "NewImpl");
 
-    configurationProviderManager.mergeConfigurationProperties(managerParameter);
+    sut.mergeConfigurationProperties(managerParameter);
 
     assertResult(managerParameter);
     assertThat(managerParameter.getProperty("MANUAL_KEY")).isEqualTo("MANUAL_VALUE");
