@@ -39,7 +39,7 @@ public class ConfigurationProviderManager {
     if (providersStrList != null) {
       final String[] providersClassNames = providersStrList.split(",");
       for (String providerClassName : providersClassNames) {
-        if (providerClassName == null || "".equals(providerClassName))
+        if (providerClassName == null || providerClassName.isEmpty())
           continue;
         try {
           final Class<?> providerClass = Class.forName(providerClassName.trim(), true, classLoadingUtil.getClassloader());
