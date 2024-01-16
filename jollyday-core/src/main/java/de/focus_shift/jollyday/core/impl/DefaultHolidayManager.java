@@ -22,8 +22,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 import static java.util.Arrays.copyOfRange;
+import static java.util.stream.Collectors.toUnmodifiableSet;
+import static java.util.stream.IntStream.rangeClosed;
 
 /**
  * Manager implementation for reading data from the configuration datasource.
@@ -87,16 +91,12 @@ public class DefaultHolidayManager extends HolidayManager {
   public Set<Holiday> getHolidays(LocalDate startDateInclusive, LocalDate endDateInclusive, final String... args) {
     Objects.requireNonNull(startDateInclusive, "startDateInclusive is null");
     Objects.requireNonNull(endDateInclusive, "endInclusive is null");
-    final Set<Holiday> holidays = new HashSet<>();
-    for (int year = startDateInclusive.getYear(); year <= endDateInclusive.getYear(); year++) {
-      final Set<Holiday> yearHolidays = getHolidays(year, args);
-      for (Holiday h : yearHolidays) {
-        if (!startDateInclusive.isAfter(h.getDate()) && !endDateInclusive.isBefore(h.getDate())) {
-          holidays.add(h);
-        }
-      }
-    }
-    return holidays;
+
+    return rangeClosed(startDateInclusive.getYear(), endDateInclusive.getYear())
+      .mapToObj(year -> getHolidays(year, args))
+      .flatMap(Collection::stream)
+      .filter(holiday -> !startDateInclusive.isAfter(holiday.getDate()) && !endDateInclusive.isBefore(holiday.getDate()))
+      .collect(toUnmodifiableSet());
   }
 
   /**
