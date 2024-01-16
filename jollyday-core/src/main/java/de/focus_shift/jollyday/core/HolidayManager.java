@@ -3,8 +3,10 @@ package de.focus_shift.jollyday.core;
 import de.focus_shift.jollyday.core.caching.Cache;
 import de.focus_shift.jollyday.core.caching.HolidayManagerValueHandler;
 import de.focus_shift.jollyday.core.configuration.ConfigurationProviderManager;
+import de.focus_shift.jollyday.core.datasource.ConfigurationServiceManager;
 import de.focus_shift.jollyday.core.parser.functions.CalendarToLocalDate;
 import de.focus_shift.jollyday.core.spi.ConfigurationService;
+import de.focus_shift.jollyday.core.support.LazyServiceLoaderCache;
 import de.focus_shift.jollyday.core.util.CalendarUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -32,14 +34,24 @@ public abstract class HolidayManager {
    * to getInstance will return a newly instantiated and initialized manager.
    */
   private static boolean cachingEnabled = true;
+
   /**
    * Cache for manager instances on a per country basis.
    */
   private static final Cache<HolidayManager> HOLIDAY_MANAGER_CACHE = new Cache<>();
+
   /**
    * Manager for configuration providers. Delivers the jollyday configuration.
    */
   private static final ConfigurationProviderManager CONFIGURATION_MANAGER_PROVIDER = new ConfigurationProviderManager();
+
+  /**
+   * Manager for providing configuration data sources which return the holiday
+   * data.
+   */
+  private static final ConfigurationServiceManager configurationServiceManager =
+    new ConfigurationServiceManager(new LazyServiceLoaderCache<>(ConfigurationService.class));
+
   /**
    * the holiday cache
    */
@@ -100,7 +112,7 @@ public abstract class HolidayManager {
     LOG.debug("Creating HolidayManager for calendar '{}'. Caching enabled: {}", parameter, isManagerCachingEnabled());
     CONFIGURATION_MANAGER_PROVIDER.mergeConfigurationProperties(parameter);
     final String managerImplClassName = readManagerImplClassName(parameter);
-    final HolidayManagerValueHandler holidayManagerValueHandler = new HolidayManagerValueHandler(parameter, managerImplClassName);
+    final HolidayManagerValueHandler holidayManagerValueHandler = new HolidayManagerValueHandler(parameter, managerImplClassName, configurationServiceManager);
     if (isManagerCachingEnabled()) {
       return HOLIDAY_MANAGER_CACHE.get(holidayManagerValueHandler);
     } else {

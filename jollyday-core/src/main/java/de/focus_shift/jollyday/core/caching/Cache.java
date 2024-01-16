@@ -9,22 +9,17 @@ import java.util.concurrent.ConcurrentHashMap;
  * @param <V> the type of cached values
  */
 public class Cache<V> {
-  /**
-   * Map for caching
-   */
+
   private final Map<String, V> cachingMap = new ConcurrentHashMap<>();
 
   /**
    * Returns the value defined by the {@link ValueHandler}
    *
    * @param valueHandler which creates the key and the value if necessary
-   * @return the eventually cached value
+   * @return the eventually cached value, otherwise the newly created via {@link ValueHandler#createValue}
    */
   public V get(ValueHandler<V> valueHandler) {
-    final String key = valueHandler.getKey();
-    // Try to first get the value which is most likely cached to avoid creating a lambda.
-    final V value = cachingMap.get(key);
-    return value != null ? value : cachingMap.computeIfAbsent(key, k -> valueHandler.createValue());
+    return cachingMap.computeIfAbsent(valueHandler.getKey(), key -> valueHandler.createValue());
   }
 
   /**
