@@ -19,10 +19,7 @@ public class Cache<V> {
    * @return the eventually cached value, otherwise the newly created via {@link ValueHandler#createValue}
    */
   public V get(ValueHandler<V> valueHandler) {
-    final String key = valueHandler.getKey();
-    // Try to first get the value which is most likely cached to avoid creating a lambda.
-    final V value = cachingMap.get(key);
-    return value != null ? value : cachingMap.computeIfAbsent(key, k -> valueHandler.createValue());
+    return cachingMap.computeIfAbsent(valueHandler.getKey(), key -> valueHandler.createValue());
   }
 
   /**
