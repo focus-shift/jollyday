@@ -172,16 +172,26 @@ public abstract class HolidayManager {
   }
 
 
+  /**
+   * Returns true or false if the requested calendar date is a holiday in the state or
+   * the optional given region and below
+   *
+   * @param calendar {@link java.util.Calendar} to check.
+   * @param args     Hierarchy to request the holidays for. i.e. args = {'ny'} -&gt; New York holidays
+   * @return if the date is a holiday
+   */
   public boolean isHoliday(final Calendar calendar, final String... args) {
     return isHoliday(calendar, null, args);
   }
 
   /**
-   * Calls isHoliday with {@link LocalDate} object.
+   * Returns true or false if the requested calendar date is a holiday in the state or
+   * based on the given {@link HolidayType} and
+   * the optional given region and below
    *
    * @param calendar    {@link java.util.Calendar} to check.
-   * @param holidayType type holidays to be considered. NULL checks any.
-   * @param args        a {@link java.lang.String} object.
+   * @param holidayType a {@link HolidayType} to be considered
+   * @param args        Hierarchy to request the holidays for. i.e. args = {'ny'} -&gt; New York holidays
    * @return if the date is a holiday
    */
   public boolean isHoliday(final Calendar calendar, HolidayType holidayType, final String... args) {
@@ -189,23 +199,26 @@ public abstract class HolidayManager {
   }
 
   /**
-   * Calls #isHoliday(c, null, args)
+   * Returns true or false if the requested date is a holiday in the state or
+   * the optional given region and below
    *
-   * @param localDate the date to check
-   * @param args      the arguments to find the calendar
-   * @return whether the date is a holiday
+   * @param localDate The potential holiday.
+   * @param args      Hierarchy to request the holidays for. i.e. args = {'ny'} -&gt; New York holidays
+   * @return true if the given date is a holiday in the state/region and below, otherwise false
    */
   public boolean isHoliday(final LocalDate localDate, final String... args) {
     return isHoliday(localDate, null, args);
   }
 
   /**
-   * Show if the requested date is a holiday.
+   * Returns true or false if the requested date is a holiday in the state,
+   * based on the given {@link HolidayType} and
+   * the optional given region and below
    *
    * @param localDate   The potential holiday.
-   * @param holidayType a {@link HolidayType} object
+   * @param holidayType a {@link HolidayType} to be considered
    * @param args        Hierarchy to request the holidays for. i.e. args = {'ny'} -&gt; New York holidays
-   * @return is a holiday in the state/region
+   * @return true if the given date is a holiday in the state/region and below, otherwise false
    */
   public boolean isHoliday(final LocalDate localDate, HolidayType holidayType, final String... args) {
 
