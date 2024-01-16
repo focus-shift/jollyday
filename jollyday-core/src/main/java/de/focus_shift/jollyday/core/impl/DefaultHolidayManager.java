@@ -26,8 +26,6 @@ import java.util.Set;
 /**
  * Manager implementation for reading data from the configuration datasource.
  * It uses a list a parsers for parsing the different type of XML nodes.
- *
- * @author Sven Diedrichsen
  */
 public class DefaultHolidayManager extends HolidayManager {
 
@@ -37,14 +35,30 @@ public class DefaultHolidayManager extends HolidayManager {
    * The configuration prefix for parser implementations.
    */
   private static final String PARSER_IMPL_PREFIX = "parser.impl.";
+
   /**
    * Parser cache by XML class name.
    */
   private final Map<String, HolidayParser> parserCache = new HashMap<>();
+
   /**
    * Configuration parsed on initialization.
    */
   protected Configuration configuration;
+
+  /**
+   * {@inheritDoc}
+   * <p>
+   * Initializes the DefaultHolidayManager by loading the holidays XML file as resource
+   * from the classpath. When the XML file is found it will be unmarshalled
+   * with JAXB to some Java classes.
+   */
+  @Override
+  public void doInit() {
+    configuration = getConfigurationService().getConfiguration(getManagerParameter());
+    validateConfigurationHierarchy(configuration);
+    logHierarchy(configuration, 0);
+  }
 
   /**
    * {@inheritDoc}
@@ -81,6 +95,19 @@ public class DefaultHolidayManager extends HolidayManager {
       }
     }
     return holidays;
+  }
+
+  /**
+   * {@inheritDoc}
+   * <p>
+   * Returns the configurations hierarchy.<br>
+   * i.e. Hierarchy 'us' -&gt; Children 'al','ak','ar', ... ,'wv','wy'. Every
+   * child might itself have children. The ids be used to call
+   * getHolidays()/isHoliday().
+   */
+  @Override
+  public CalendarHierarchy getCalendarHierarchy() {
+    return createConfigurationHierarchy(configuration, null);
   }
 
   /**
@@ -185,20 +212,6 @@ public class DefaultHolidayManager extends HolidayManager {
   }
 
   /**
-   * {@inheritDoc}
-   * <p>
-   * Initializes the DefaultHolidayManager by loading the holidays XML file as resource
-   * from the classpath. When the XML file is found it will be unmarshalled
-   * with JAXB to some Java classes.
-   */
-  @Override
-  public void doInit() {
-    configuration = getConfigurationService().getConfiguration(getManagerParameter());
-    validateConfigurationHierarchy(configuration);
-    logHierarchy(configuration, 0);
-  }
-
-  /**
    * Logs the hierarchy structure.
    *
    * @param configuration Configuration to log hierarchy for.
@@ -251,19 +264,6 @@ public class DefaultHolidayManager extends HolidayManager {
       throw new IllegalArgumentException(msg.toString().trim());
     }
     c.subConfigurations().forEach(DefaultHolidayManager::validateConfigurationHierarchy);
-  }
-
-  /**
-   * {@inheritDoc}
-   * <p>
-   * Returns the configurations hierarchy.<br>
-   * i.e. Hierarchy 'us' -&gt; Children 'al','ak','ar', ... ,'wv','wy'. Every
-   * child might itself have children. The ids be used to call
-   * getHolidays()/isHoliday().
-   */
-  @Override
-  public CalendarHierarchy getCalendarHierarchy() {
-    return createConfigurationHierarchy(configuration, null);
   }
 
   /**
