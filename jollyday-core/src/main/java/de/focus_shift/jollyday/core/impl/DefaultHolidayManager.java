@@ -22,10 +22,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 import static java.util.Arrays.copyOfRange;
+import static java.util.stream.Collectors.toCollection;
 import static java.util.stream.Collectors.toUnmodifiableSet;
 import static java.util.stream.IntStream.rangeClosed;
 
@@ -145,11 +144,11 @@ public class DefaultHolidayManager extends HolidayManager {
    * @param holidays the set to put the holidays into
    * @param config   the holiday configuration
    */
-  private void parseHolidays(int year, Set<Holiday> holidays, final Holidays config) {
-    final Collection<HolidayParser> parsers = getParsers(config);
-    for (HolidayParser p : parsers) {
-      holidays.addAll(p.parse(year, config));
-    }
+  private void parseHolidays(final int year, final Set<Holiday> holidays, final Holidays config) {
+    getParsers(config).stream()
+      .map(holidayParser -> holidayParser.parse(year, config))
+      .flatMap(Collection::stream)
+      .collect(toCollection(() -> holidays));
   }
 
   /**
