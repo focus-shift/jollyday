@@ -3,9 +3,7 @@ package de.focus_shift.jollyday.core.configuration;
 import java.util.Properties;
 
 /**
- * The interface for jollyday configuration provider.
- *
- * @author sven
+ * Interface for the configuration providers
  */
 public interface ConfigurationProvider {
 
@@ -15,6 +13,7 @@ public interface ConfigurationProvider {
    * configuration.
    */
   String CONFIG_PROVIDERS_PROPERTY = "config.providers";
+
   /**
    * System property to define URLs to overriding jollyday configuration
    * files.
@@ -25,5 +24,4 @@ public interface ConfigurationProvider {
    * @return the configuration properties for jollyday.
    */
   Properties getProperties();
-
 }

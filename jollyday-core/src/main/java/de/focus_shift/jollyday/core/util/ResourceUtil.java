@@ -173,7 +173,7 @@ public class ResourceUtil {
    */
   public URL getResource(String resourceName) {
     try {
-      URL resource = classLoadingUtil.getClassloader().getResource(resourceName);
+      final URL resource = classLoadingUtil.getClassloader().getResource(resourceName);
       return resource == null ? this.getClass().getClassLoader().getResource(resourceName) : resource;
     } catch (Exception e) {
       throw new IllegalStateException("Cannot load resource: " + resourceName, e);
