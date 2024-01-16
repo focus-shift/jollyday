@@ -12,7 +12,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.time.LocalDate;
-import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Properties;
 import java.util.Set;
@@ -302,8 +301,8 @@ public abstract class HolidayManager {
    *
    * @param startDateInclusive the start date of the interval in which holidays lie, inclusive
    * @param endDateInclusive   the end date of the interval in which holidays lie, inclusive
-   * @param args               a {@link java.lang.String} object.
-   * @return list of holidays within the interval
+   * @param args               i.e. args = {'ny'}. returns US/New York holidays. No args means holidays common to whole country
+   * @return set of holidays within the interval
    */
   public abstract Set<Holiday> getHolidays(LocalDate startDateInclusive, LocalDate endDateInclusive, String... args);
 
