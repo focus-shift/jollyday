@@ -1,18 +1,12 @@
 package de.focus_shift.jollyday.core.configuration;
 
 import de.focus_shift.jollyday.core.ManagerParameter;
-import de.focus_shift.jollyday.core.configuration.impl.DefaultConfigurationProvider;
-import de.focus_shift.jollyday.core.configuration.impl.URLConfigurationProvider;
 import de.focus_shift.jollyday.core.util.ClassLoadingUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-
 /**
- * Manages the configuration provider implementations and thus delivering the
- * jollyday configuration.
- *
- * @author Sven Diedrichsen
+ * Manages the configuration provider implementations and thus delivering the jollyday configuration.
  */
 public class ConfigurationProviderManager {
 

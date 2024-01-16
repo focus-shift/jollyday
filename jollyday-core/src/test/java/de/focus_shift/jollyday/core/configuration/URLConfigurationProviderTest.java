@@ -1,6 +1,5 @@
-package de.focus_shift.jollyday.core.configuration.impl;
+package de.focus_shift.jollyday.core.configuration;
 
-import de.focus_shift.jollyday.core.configuration.ConfigurationProvider;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
