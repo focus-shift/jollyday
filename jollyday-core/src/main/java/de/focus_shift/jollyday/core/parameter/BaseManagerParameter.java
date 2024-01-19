@@ -8,7 +8,7 @@ public abstract class BaseManagerParameter implements ManagerParameter {
 
   private Properties properties = new Properties();
 
-  public BaseManagerParameter(Properties properties) {
+  BaseManagerParameter(Properties properties) {
     if (properties != null) {
       this.properties.putAll(properties);
     }
