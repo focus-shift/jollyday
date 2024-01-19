@@ -7,17 +7,9 @@ import java.util.Properties;
 
 public class CalendarPartManagerParameter extends BaseManagerParameter {
 
-  /**
-   * prefix of the config files.
-   */
   private static final String FILE_PREFIX = "holidays/Holidays";
-  /**
-   * suffix of the config files.
-   */
   private static final String FILE_SUFFIX = ".xml";
-  /**
-   * The utility to load resources.
-   */
+
   private final ResourceUtil resourceUtil = new ResourceUtil();
 
   private final String calendarPart;
@@ -66,5 +58,4 @@ public class CalendarPartManagerParameter extends BaseManagerParameter {
   public String toString() {
     return this.getClass().getSimpleName() + " - " + this.calendarPart;
   }
-
 }

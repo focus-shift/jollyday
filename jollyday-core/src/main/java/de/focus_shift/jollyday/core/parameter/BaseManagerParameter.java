@@ -8,7 +8,7 @@ public abstract class BaseManagerParameter implements ManagerParameter {
 
   private Properties properties = new Properties();
 
-  public BaseManagerParameter(Properties properties) {
+  BaseManagerParameter(Properties properties) {
     if (properties != null) {
       this.properties.putAll(properties);
     }
@@ -38,5 +38,4 @@ public abstract class BaseManagerParameter implements ManagerParameter {
   public String getManagerImplClassName() {
     return getProperty(MANAGER_IMPL_CLASS_PREFIX);
   }
-
 }
