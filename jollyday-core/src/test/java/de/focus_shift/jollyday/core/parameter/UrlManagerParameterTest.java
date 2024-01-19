@@ -11,27 +11,34 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class UrlManagerParameterTest {
 
-  private UrlManagerParameter urlManagerParameter;
+  private UrlManagerParameter sut;
   private URL url;
 
   @BeforeEach
   void setup() throws MalformedURLException {
-    url = new URL("http://www.google.de");
-    urlManagerParameter = new UrlManagerParameter(url, new Properties());
+    url = new URL("https://www.example.org");
+
+    sut = new UrlManagerParameter(url, new Properties());
   }
 
   @Test
-  void testCreateCacheKey() {
-    assertThat(urlManagerParameter.createCacheKey()).isEqualTo("http://www.google.de");
+  void ensureToGetUrlAsCacheKey() {
+    assertThat(sut.createCacheKey()).isEqualTo("https://www.example.org");
   }
 
   @Test
-  void testGetDisplayName() {
-    assertThat(urlManagerParameter.getDisplayName()).isEqualTo("http://www.google.de");
+  void ensureToGetUrlAsDisplayName() {
+    assertThat(sut.getDisplayName()).isEqualTo("https://www.example.org");
   }
 
   @Test
-  void testCreateResourceUrl() {
-    assertThat(urlManagerParameter.createResourceUrl()).isEqualTo(url);
+  void ensureToCreateResourceUrl() {
+    assertThat(sut.createResourceUrl()).isEqualTo(url);
+  }
+
+  @Test
+  void ensureToGetCorrectToString() {
+    assertThat(sut.toString())
+      .isEqualTo("UrlManagerParameter - https://www.example.org");
   }
 }
