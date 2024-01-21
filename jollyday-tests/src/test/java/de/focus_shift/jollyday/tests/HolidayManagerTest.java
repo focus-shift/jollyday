@@ -1,4 +1,4 @@
-package de.focus_shift.jollyday.tests.country;
+package de.focus_shift.jollyday.tests;
 
 import de.focus_shift.jollyday.core.CalendarHierarchy;
 import de.focus_shift.jollyday.core.Holiday;
@@ -24,8 +24,6 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicLong;
 
-import static de.focus_shift.jollyday.core.HolidayType.OFFICIAL_HOLIDAY;
-import static de.focus_shift.jollyday.core.HolidayType.UNOFFICIAL_HOLIDAY;
 import static java.time.Month.APRIL;
 import static java.time.Month.AUGUST;
 import static java.time.Month.DECEMBER;
@@ -34,16 +32,15 @@ import static java.time.Month.JANUARY;
 import static java.time.Month.JULY;
 import static java.time.Month.NOVEMBER;
 import static java.time.Month.SEPTEMBER;
-import static java.util.Locale.ENGLISH;
 import static java.util.Locale.GERMAN;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.junit.jupiter.api.Assertions.fail;
 
 
-class HolidayTest {
+class HolidayManagerTest {
 
-  private static final Logger LOG = LoggerFactory.getLogger(HolidayTest.class);
+  private static final Logger LOG = LoggerFactory.getLogger(HolidayManagerTest.class);
 
   private static final Set<LocalDate> test_days = new HashSet<>();
   private static final Set<LocalDate> test_days_l1 = new HashSet<>();
