@@ -14,8 +14,6 @@ import java.util.Properties;
  */
 class ClasspathConfigurationProvider implements ConfigurationProvider {
 
-  private final ResourceUtil resourceUtil = new ResourceUtil();
-
   private static final String DEFAULT_CONFIGURATION_FILE_NAME = "jollyday.properties";
   private URL configurationFile;
 
@@ -45,7 +43,7 @@ class ClasspathConfigurationProvider implements ConfigurationProvider {
   }
 
   private URL getConfigurationFile(final String configurationFileName) {
-    final URL configuration = resourceUtil.getResource(configurationFileName);
+    final URL configuration = ResourceUtil.getResource(configurationFileName);
     if (configuration == null) {
       throw new IllegalStateException("Configuration file '" + configurationFileName + "' not found on classpath.");
     }

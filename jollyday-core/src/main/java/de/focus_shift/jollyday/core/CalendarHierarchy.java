@@ -16,7 +16,6 @@ public class CalendarHierarchy {
   private final String id;
   private Map<String, CalendarHierarchy> children = new HashMap<>();
   private final CalendarHierarchy parent;
-  private final ResourceUtil resourceUtil = new ResourceUtil();
   private String fallbackDescription;
 
   /**
@@ -58,7 +57,7 @@ public class CalendarHierarchy {
    * @return Description text
    */
   public String getDescription(Locale l) {
-    String descr = resourceUtil.getCountryDescription(l, getPropertiesKey());
+    String descr = ResourceUtil.getCountryDescription(l, getPropertiesKey());
     if (ResourceUtil.UNDEFINED.equals(descr) && fallbackDescription != null) {
       descr = fallbackDescription;
     }
