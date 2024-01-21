@@ -20,7 +20,6 @@ class HolidaySGTest extends AbstractCountryTestBase {
 
   private static final String ISO_CODE = "sg";
 
-  private final CalendarUtil calendarUtil = new CalendarUtil();
 
   @ParameterizedTest
   @ValueSource(ints = {2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024})
@@ -32,15 +31,15 @@ class HolidaySGTest extends AbstractCountryTestBase {
   void testManagerSGInterval() {
     try {
       final HolidayManager instance = HolidayManager.getInstance(ManagerParameters.create(HolidayCalendar.SINGAPORE, null));
-      final LocalDate startDateInclusive = calendarUtil.create(2022, 10, 1);
-      final LocalDate endDateInclusive = calendarUtil.create(2023, 1, 31);
+      final LocalDate startDateInclusive = CalendarUtil.create(2022, 10, 1);
+      final LocalDate endDateInclusive = CalendarUtil.create(2023, 1, 31);
       final Set<Holiday> holidays = instance.getHolidays(startDateInclusive, endDateInclusive);
-      final List<LocalDate> expected = List.of(calendarUtil.create(2022, 10, 24),
-        calendarUtil.create(2022, 12, 26), calendarUtil.create(2023, 1, 2),
-        calendarUtil.create(2023, 1, 24), calendarUtil.create(2023, 1, 23));
+      final List<LocalDate> expected = List.of(CalendarUtil.create(2022, 10, 24),
+        CalendarUtil.create(2022, 12, 26), CalendarUtil.create(2023, 1, 2),
+        CalendarUtil.create(2023, 1, 24), CalendarUtil.create(2023, 1, 23));
       assertThat(holidays).hasSameSizeAs(expected);
       for (LocalDate d : expected) {
-        assertThat(calendarUtil.contains(holidays, d)).isTrue();
+        assertThat(CalendarUtil.contains(holidays, d)).isTrue();
       }
     } catch (Exception e) {
       fail("Unexpected error occurred: " + e.getClass().getName() + " - " + e.getMessage());

@@ -30,10 +30,6 @@ public final class Holiday implements Comparable<Holiday> {
    * The type of holiday. e.g. official holiday or not.
    */
   private final HolidayType type;
-  /**
-   * Utility for accessing resources.
-   */
-  private final ResourceUtil resourceUtil = new ResourceUtil();
 
   /**
    * Constructs a holiday for a date using the provided properties key to
@@ -78,7 +74,7 @@ public final class Holiday implements Comparable<Holiday> {
    * @return Description for this holiday
    */
   public String getDescription() {
-    return resourceUtil.getHolidayDescription(Locale.getDefault(), getPropertiesKey());
+    return ResourceUtil.getHolidayDescription(Locale.getDefault(), getPropertiesKey());
   }
 
   /**
@@ -88,7 +84,7 @@ public final class Holiday implements Comparable<Holiday> {
    * @return Description for this holiday
    */
   public String getDescription(Locale locale) {
-    return resourceUtil.getHolidayDescription(locale, getPropertiesKey());
+    return ResourceUtil.getHolidayDescription(locale, getPropertiesKey());
   }
 
   @Override

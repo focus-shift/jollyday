@@ -56,10 +56,7 @@ public abstract class HolidayManager {
    * the holiday cache
    */
   private final Cache<Set<Holiday>> holidayCache = new Cache<>();
-  /**
-   * Utility for calendar operations
-   */
-  protected final CalendarUtil calendarUtil = new CalendarUtil();
+
   /**
    * The datasource to get the holiday data from.
    */
@@ -205,7 +202,7 @@ public abstract class HolidayManager {
         return getHolidays(c.getYear(), args);
       }
     });
-    return calendarUtil.contains(holidays, c, holidayType);
+    return CalendarUtil.contains(holidays, c, holidayType);
   }
 
   /**

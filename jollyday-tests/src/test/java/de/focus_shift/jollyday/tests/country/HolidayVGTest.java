@@ -20,7 +20,6 @@ class HolidayVGTest extends AbstractCountryTestBase {
 
   private static final String ISO_CODE = "vg";
 
-  private final CalendarUtil calendarUtil = new CalendarUtil();
 
   @ParameterizedTest
   @ValueSource(ints = {2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023})
@@ -32,15 +31,15 @@ class HolidayVGTest extends AbstractCountryTestBase {
   void testManagerVGInterval() {
     try {
       final HolidayManager instance = HolidayManager.getInstance(ManagerParameters.create(HolidayCalendar.BRITISH_VIRGIN_ISLANDS, null));
-      final LocalDate startDateInclusive = calendarUtil.create(2015, 10, 1);
-      final LocalDate endDateInclusive = calendarUtil.create(2016, 1, 31);
+      final LocalDate startDateInclusive = CalendarUtil.create(2015, 10, 1);
+      final LocalDate endDateInclusive = CalendarUtil.create(2016, 1, 31);
       final Set<Holiday> holidays = instance.getHolidays(startDateInclusive, endDateInclusive);
-      final List<LocalDate> expected = List.of(calendarUtil.create(2015, 12, 25),
-        calendarUtil.create(2015, 12, 28), calendarUtil.create(2015, 10, 19),
-        calendarUtil.create(2016, 1, 1));
+      final List<LocalDate> expected = List.of(CalendarUtil.create(2015, 12, 25),
+        CalendarUtil.create(2015, 12, 28), CalendarUtil.create(2015, 10, 19),
+        CalendarUtil.create(2016, 1, 1));
       assertThat(holidays).hasSameSizeAs(expected);
       for (LocalDate d : expected) {
-        assertThat(calendarUtil.contains(holidays, d)).isTrue();
+        assertThat(CalendarUtil.contains(holidays, d)).isTrue();
       }
     } catch (Exception e) {
       fail("Unexpected error occurred: " + e.getClass().getName() + " - " + e.getMessage());

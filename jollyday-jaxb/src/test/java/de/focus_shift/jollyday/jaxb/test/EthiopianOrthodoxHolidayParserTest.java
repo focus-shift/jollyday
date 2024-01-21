@@ -23,7 +23,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 class EthiopianOrthodoxHolidayParserTest {
 
   private final EthiopianOrthodoxHolidayParser sut = new EthiopianOrthodoxHolidayParser();
-  private final CalendarUtil calendarUtil = new CalendarUtil();
 
   @Test
   void testEmpty() {
@@ -41,13 +40,13 @@ class EthiopianOrthodoxHolidayParserTest {
 
     final List<Holiday> holidays = sut.parse(2010, new JaxbHolidays(config));
     assertThat(holidays).hasSize(3);
-    assertContains(calendarUtil.create(2010, 1, 18), Sets.newHashSet(holidays));
-    assertContains(calendarUtil.create(2010, 9, 11), Sets.newHashSet(holidays));
-    assertContains(calendarUtil.create(2010, 9, 27), Sets.newHashSet(holidays));
+    assertContains(CalendarUtil.create(2010, 1, 18), Sets.newHashSet(holidays));
+    assertContains(CalendarUtil.create(2010, 9, 11), Sets.newHashSet(holidays));
+    assertContains(CalendarUtil.create(2010, 9, 27), Sets.newHashSet(holidays));
   }
 
   private void assertContains(LocalDate date, Set<Holiday> holidays) {
-    assertThat(calendarUtil.contains(holidays, date)).isTrue();
+    assertThat(CalendarUtil.contains(holidays, date)).isTrue();
   }
 
   private EthiopianOrthodoxHoliday createHoliday(EthiopianOrthodoxHolidayType type) {

@@ -14,6 +14,11 @@ import static java.util.ResourceBundle.getBundle;
  * TODO improve javadoc
  */
 public class ResourceUtil {
+
+  private ResourceUtil() {
+    // ok
+  }
+
   /**
    * Property prefix for country descriptions.
    */
@@ -43,10 +48,6 @@ public class ResourceUtil {
    * Cache for the country descriptions resource bundles.
    */
   private static final Map<Locale, ResourceBundle> COUNTRY_DESCRIPTIONS_CACHE = new ConcurrentHashMap<>();
-  /**
-   * Util class to provide the correct classloader.
-   */
-  private final ClassLoadingUtil classLoadingUtil = new ClassLoadingUtil();
 
   /**
    * The description read with the default locale.
@@ -54,7 +55,7 @@ public class ResourceUtil {
    * @param key a {@link java.lang.String} object.
    * @return holiday description using default locale.
    */
-  public String getHolidayDescription(String key) {
+  public static String getHolidayDescription(String key) {
     return getHolidayDescription(Locale.getDefault(), key);
   }
 
@@ -65,7 +66,7 @@ public class ResourceUtil {
    * @param key    a {@link java.lang.String} object.
    * @return holiday description using the provided locale.
    */
-  public String getHolidayDescription(Locale locale, String key) {
+  public static String getHolidayDescription(Locale locale, String key) {
     return getDescription(HOLIDAY_PROPERTY_PREFIX + "." + key, getHolidayDescriptions(locale));
   }
 
@@ -77,7 +78,7 @@ public class ResourceUtil {
    * @param key a {@link java.lang.String} object.
    * @return the description
    */
-  public String getCountryDescription(String key) {
+  public static String getCountryDescription(String key) {
     return getCountryDescription(Locale.getDefault(), key);
   }
 
@@ -88,7 +89,7 @@ public class ResourceUtil {
    * @param key a {@link java.lang.String} object.
    * @return Description text
    */
-  public String getCountryDescription(Locale l, String key) {
+  public static String getCountryDescription(Locale l, String key) {
     if (key != null) {
       return getDescription(COUNTRY_PROPERTY_PREFIX + "." + key.toLowerCase(), getCountryDescriptions(l));
     }
@@ -103,7 +104,7 @@ public class ResourceUtil {
    * @param bundle the bundle to get the description
    * @return description the description behind the key
    */
-  private String getDescription(String key, final ResourceBundle bundle) {
+  private static String getDescription(String key, final ResourceBundle bundle) {
     if (!bundle.containsKey(key)) {
       return UNDEFINED;
     }
@@ -117,7 +118,7 @@ public class ResourceUtil {
    * @param locale Locale to retrieve the descriptions for.
    * @return ResourceBundle containing the descriptions for the locale.
    */
-  private ResourceBundle getHolidayDescriptions(Locale locale) {
+  private static ResourceBundle getHolidayDescriptions(Locale locale) {
     return getResourceBundle(locale, HOLIDAY_DESCRIPTION_CACHE, HOLIDAY_DESCRIPTIONS_FILE_PREFIX);
   }
 
@@ -128,7 +129,7 @@ public class ResourceUtil {
    * @param locale Locale to retrieve the descriptions for.
    * @return ResourceBundle containing the descriptions for the locale.
    */
-  private ResourceBundle getCountryDescriptions(Locale locale) {
+  private static ResourceBundle getCountryDescriptions(Locale locale) {
     return getResourceBundle(locale, COUNTRY_DESCRIPTIONS_CACHE, COUNTRY_DESCRIPTIONS_FILE_PREFIX);
   }
 
@@ -138,8 +139,8 @@ public class ResourceUtil {
    * @param locale Locale to retrieve the descriptions for.
    * @return ResourceBundle containing the descriptions for the locale.
    */
-  private ResourceBundle getResourceBundle(Locale locale, Map<Locale, ResourceBundle> resourceCache, String filePrefix) {
-    return resourceCache.computeIfAbsent(locale, givenLocale -> getBundle(filePrefix, givenLocale, classLoadingUtil.getClassloader()));
+  private static ResourceBundle getResourceBundle(Locale locale, Map<Locale, ResourceBundle> resourceCache, String filePrefix) {
+    return resourceCache.computeIfAbsent(locale, givenLocale -> getBundle(filePrefix, givenLocale, ClassLoadingUtil.getClassloader()));
   }
 
   /**
@@ -148,10 +149,9 @@ public class ResourceUtil {
    * @param resourceName the name/path of the resource to load
    * @return the URL to the resource
    */
-  public URL getResource(String resourceName) {
+  public static URL getResource(String resourceName) {
     try {
-      final URL resource = classLoadingUtil.getClassloader().getResource(resourceName);
-      return resource == null ? this.getClass().getClassLoader().getResource(resourceName) : resource;
+      return ClassLoadingUtil.getClassloader().getResource(resourceName);
     } catch (Exception e) {
       throw new IllegalStateException("Cannot load resource: " + resourceName, e);
     }

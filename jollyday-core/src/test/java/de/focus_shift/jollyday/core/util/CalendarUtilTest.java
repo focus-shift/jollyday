@@ -18,18 +18,16 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class CalendarUtilTest {
 
-  private final CalendarUtil sut = new CalendarUtil();
-
   @Test
   void testWeekend() {
     final LocalDate dateFriday = LocalDate.of(2010, MARCH, 12);
     final LocalDate dateSaturday = LocalDate.of(2010, MARCH, 13);
     final LocalDate dateSunday = LocalDate.of(2010, MARCH, 14);
     final LocalDate dateMonday = LocalDate.of(2010, MARCH, 15);
-    assertThat(sut.isWeekend(dateFriday)).isFalse();
-    assertThat(sut.isWeekend(dateSaturday)).isTrue();
-    assertThat(sut.isWeekend(dateSunday)).isTrue();
-    assertThat(sut.isWeekend(dateMonday)).isFalse();
+    assertThat(CalendarUtil.isWeekend(dateFriday)).isFalse();
+    assertThat(CalendarUtil.isWeekend(dateSaturday)).isTrue();
+    assertThat(CalendarUtil.isWeekend(dateSunday)).isTrue();
+    assertThat(CalendarUtil.isWeekend(dateMonday)).isFalse();
   }
 
   @Test
@@ -37,7 +35,7 @@ class CalendarUtilTest {
     final Set<LocalDate> expected = new HashSet<>();
     expected.add(LocalDate.of(2008, JANUARY, 10));
     expected.add(LocalDate.of(2008, DECEMBER, 29));
-    final Stream<LocalDate> holidays = sut.getIslamicHolidaysInGregorianYear(2008, 1, 1);
+    final Stream<LocalDate> holidays = CalendarUtil.getIslamicHolidaysInGregorianYear(2008, 1, 1);
 
     final Set<LocalDate> collect = holidays.collect(toSet());
     assertThat(collect)
@@ -49,7 +47,7 @@ class CalendarUtilTest {
   void testCalendarIslamicAschura2008() {
     final Set<LocalDate> expected = new HashSet<>();
     expected.add(LocalDate.of(2008, JANUARY, 19));
-    final Stream<LocalDate> holidays = sut.getIslamicHolidaysInGregorianYear(2008, 1, 10);
+    final Stream<LocalDate> holidays = CalendarUtil.getIslamicHolidaysInGregorianYear(2008, 1, 10);
 
     final Set<LocalDate> collect = holidays.collect(toSet());
     assertThat(collect)
@@ -62,7 +60,7 @@ class CalendarUtilTest {
     final Set<LocalDate> expected = new HashSet<>();
     expected.add(LocalDate.of(2009, JANUARY, 7));
     expected.add(LocalDate.of(2009, DECEMBER, 27));
-    final Stream<LocalDate> holidays = sut.getIslamicHolidaysInGregorianYear(2009, 1, 10);
+    final Stream<LocalDate> holidays = CalendarUtil.getIslamicHolidaysInGregorianYear(2009, 1, 10);
 
     final Set<LocalDate> collect = holidays.collect(toSet());
     assertThat(collect)
@@ -74,7 +72,7 @@ class CalendarUtilTest {
   void testCalendarIslamicIdAlFitr2008() {
     final Set<LocalDate> expected = new HashSet<>();
     expected.add(LocalDate.of(2008, OCTOBER, 1));
-    final Stream<LocalDate> holidays = sut.getIslamicHolidaysInGregorianYear(2008, 10, 1);
+    final Stream<LocalDate> holidays = CalendarUtil.getIslamicHolidaysInGregorianYear(2008, 10, 1);
     final Set<LocalDate> collect = holidays.collect(toSet());
     assertThat(collect)
       .isEqualTo(expected)
@@ -85,7 +83,7 @@ class CalendarUtilTest {
   void testCalendarIslamicIdAlFitr2009() {
     final Set<LocalDate> expected = new HashSet<>();
     expected.add(LocalDate.of(2009, SEPTEMBER, 20));
-    final Stream<LocalDate> holidays = sut.getIslamicHolidaysInGregorianYear(2009, 10, 1);
+    final Stream<LocalDate> holidays = CalendarUtil.getIslamicHolidaysInGregorianYear(2009, 10, 1);
     final Set<LocalDate> collect = holidays.collect(toSet());
     assertThat(collect)
       .isEqualTo(expected)

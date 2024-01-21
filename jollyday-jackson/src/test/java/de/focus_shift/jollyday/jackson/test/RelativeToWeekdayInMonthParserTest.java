@@ -23,7 +23,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 class RelativeToWeekdayInMonthParserTest {
 
   private final RelativeToWeekdayInMonthParser sut = new RelativeToWeekdayInMonthParser();
-  private final CalendarUtil calendarUtil = new CalendarUtil();
 
   @Test
   void testEmpty() {
@@ -69,7 +68,7 @@ class RelativeToWeekdayInMonthParserTest {
 
     final List<Holiday> holidays = sut.parse(2011, new JacksonHolidays(config));
     assertThat(holidays).hasSize(1);
-    assertThat(holidays.iterator().next().getDate()).isEqualTo(calendarUtil.create(2011, 7, 12));
+    assertThat(holidays.iterator().next().getDate()).isEqualTo(CalendarUtil.create(2011, 7, 12));
   }
 
   @Test
@@ -89,6 +88,6 @@ class RelativeToWeekdayInMonthParserTest {
 
     final List<Holiday> holidays = sut.parse(2018, new JacksonHolidays(config));
     assertThat(holidays).hasSize(1);
-    assertThat(holidays.iterator().next().getDate()).isEqualTo(calendarUtil.create(2018, 10, 29));
+    assertThat(holidays.iterator().next().getDate()).isEqualTo(CalendarUtil.create(2018, 10, 29));
   }
 }

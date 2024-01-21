@@ -47,8 +47,6 @@ class HolidayManagerTest {
   private static final Set<LocalDate> test_days_l2 = new HashSet<>();
   private static final Set<LocalDate> test_days_l11 = new HashSet<>();
 
-  private final static CalendarUtil calendarUtil = new CalendarUtil();
-
   static {
     test_days.add(LocalDate.of(2010, FEBRUARY, 17));
     test_days.add(LocalDate.of(2010, AUGUST, 30));
@@ -174,7 +172,7 @@ class HolidayManagerTest {
 
   private void assertDates(Set<LocalDate> expected, Set<Holiday> holidays) {
     for (LocalDate localDate : expected) {
-      if (!calendarUtil.contains(holidays, localDate)) {
+      if (!CalendarUtil.contains(holidays, localDate)) {
         fail("Missing " + localDate + " in " + holidays);
       }
     }

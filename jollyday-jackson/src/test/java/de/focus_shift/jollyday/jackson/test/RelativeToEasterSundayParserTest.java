@@ -14,7 +14,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 class RelativeToEasterSundayParserTest {
 
   private final RelativeToEasterSundayParser sut = new RelativeToEasterSundayParser();
-  // private final CalendarUtil calendarUtil = new CalendarUtil();
 
   @Test
   void testForEasterMonday() {
@@ -35,7 +34,7 @@ class RelativeToEasterSundayParserTest {
 
 /* TODO
     final Holiday holiday = holidays.iterator().next();
-    final LocalDate targetDate = calendarUtil.getEasterSunday(year).plusDays(days);
+    final LocalDate targetDate = CalendarUtil.getEasterSunday(year).plusDays(days);
     assertEquals(targetDate, holiday.getDate(), "Wrong date found.");*/
   }
 

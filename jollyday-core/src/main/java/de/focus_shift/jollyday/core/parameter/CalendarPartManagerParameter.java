@@ -10,7 +10,6 @@ public class CalendarPartManagerParameter extends BaseManagerParameter {
   private static final String FILE_PREFIX = "holidays/Holidays";
   private static final String FILE_SUFFIX = ".xml";
 
-  private final ResourceUtil resourceUtil = new ResourceUtil();
 
   private final String calendarPart;
 
@@ -32,7 +31,7 @@ public class CalendarPartManagerParameter extends BaseManagerParameter {
   @Override
   public URL createResourceUrl() {
     final String configurationFileName = getConfigurationFileName(calendarPart);
-    return resourceUtil.getResource(configurationFileName);
+    return ResourceUtil.getResource(configurationFileName);
   }
 
   @Override
