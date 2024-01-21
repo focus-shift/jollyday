@@ -15,7 +15,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 class HolidayEGTest extends AbstractCountryTestBase {
 
   private static final int YEAR = 2019;
-  private final CalendarUtil calendarUtil = new CalendarUtil();
 
   @Test
   void testNumberOfHolidays() {
@@ -26,7 +25,7 @@ class HolidayEGTest extends AbstractCountryTestBase {
 
   @Test
   void testEasterMonday2019() {
-    final LocalDate expected = calendarUtil.create(YEAR, 4, 29);
+    final LocalDate expected = CalendarUtil.create(YEAR, 4, 29);
     final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(EGYPT));
     final Set<Holiday> holidays = holidayManager.getHolidays(YEAR);
     assertThat(holidays).hasSize(17);
@@ -36,7 +35,7 @@ class HolidayEGTest extends AbstractCountryTestBase {
 
   @Test
   void testEidFitr2019() {
-    final LocalDate expected = calendarUtil.create(YEAR, 6, 4);
+    final LocalDate expected = CalendarUtil.create(YEAR, 6, 4);
     final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(EGYPT));
     final Set<Holiday> holidays = holidayManager.getHolidays(YEAR);
     assertThat(holidays).hasSize(17);
@@ -46,7 +45,7 @@ class HolidayEGTest extends AbstractCountryTestBase {
 
   @Test
   void testArafaat2019() {
-    final LocalDate expected = calendarUtil.create(YEAR, 8, 10);
+    final LocalDate expected = CalendarUtil.create(YEAR, 8, 10);
     final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(EGYPT));
     final Set<Holiday> holidays = holidayManager.getHolidays(YEAR);
     assertThat(holidays).hasSize(17);

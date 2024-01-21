@@ -34,7 +34,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 class FixedParserTest {
 
   private final FixedParser sut = new FixedParser();
-  private final CalendarUtil calendarUtil = new CalendarUtil();
 
   @Test
   void testFixedWithValidity() {
@@ -45,7 +44,7 @@ class FixedParserTest {
     );
 
     final List<Holiday> holidays = sut.parse(2010, new JacksonHolidays(config));
-    containsAll(holidays, calendarUtil.create(2010, 1, 1), calendarUtil.create(2010, 3, 3));
+    containsAll(holidays, CalendarUtil.create(2010, 1, 1), CalendarUtil.create(2010, 3, 3));
   }
 
   @Test
@@ -56,7 +55,7 @@ class FixedParserTest {
     );
 
     final List<Holiday> holidays = sut.parse(2011, new JacksonHolidays(config));
-    containsAll(holidays, calendarUtil.create(2011, 1, 7), calendarUtil.create(2011, 1, 24));
+    containsAll(holidays, CalendarUtil.create(2011, 1, 7), CalendarUtil.create(2011, 1, 24));
   }
 
   @Test

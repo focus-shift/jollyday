@@ -20,7 +20,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 class FixedWeekdayRelativeToFixedParserTest {
 
   private final FixedWeekdayRelativeToFixedParser sut = new FixedWeekdayRelativeToFixedParser();
-  private final CalendarUtil calendarUtil = new CalendarUtil();
 
   @Test
   void testEmpty() {
@@ -65,7 +64,7 @@ class FixedWeekdayRelativeToFixedParserTest {
 
     final List<Holiday> holidays = sut.parse(2011, new JaxbHolidays(config));
     assertThat(holidays).hasSize(1);
-    assertThat(holidays.iterator().next().getDate()).isEqualTo(calendarUtil.create(2011, 1, 24));
+    assertThat(holidays.iterator().next().getDate()).isEqualTo(CalendarUtil.create(2011, 1, 24));
   }
 
   @Test
@@ -84,7 +83,7 @@ class FixedWeekdayRelativeToFixedParserTest {
 
     final List<Holiday> holidays = sut.parse(2011, new JaxbHolidays(config));
     assertThat(holidays).hasSize(1);
-    assertThat(holidays.iterator().next().getDate()).isEqualTo(calendarUtil.create(2011, 1, 17));
+    assertThat(holidays.iterator().next().getDate()).isEqualTo(CalendarUtil.create(2011, 1, 17));
   }
 
   @Test
@@ -104,7 +103,7 @@ class FixedWeekdayRelativeToFixedParserTest {
 
     final List<Holiday> holidays = sut.parse(2011, new JaxbHolidays(config));
     assertThat(holidays).hasSize(1);
-    assertThat(holidays.iterator().next().getDate()).isEqualTo(calendarUtil.create(2011, 2, 14));
+    assertThat(holidays.iterator().next().getDate()).isEqualTo(CalendarUtil.create(2011, 2, 14));
   }
 
   @Test
@@ -124,7 +123,7 @@ class FixedWeekdayRelativeToFixedParserTest {
 
     final List<Holiday> holidays = sut.parse(2011, new JaxbHolidays(config));
     assertThat(holidays).hasSize(1);
-    assertThat(holidays.iterator().next().getDate()).isEqualTo(calendarUtil.create(2011, 4, 12));
+    assertThat(holidays.iterator().next().getDate()).isEqualTo(CalendarUtil.create(2011, 4, 12));
   }
 
   @Test
@@ -144,7 +143,7 @@ class FixedWeekdayRelativeToFixedParserTest {
 
     final List<Holiday> holidays = sut.parse(2019, new JaxbHolidays(config));
     assertThat(holidays).hasSize(1);
-    assertThat(holidays.iterator().next().getDate()).isEqualTo(calendarUtil.create(2019, 6, 11));
+    assertThat(holidays.iterator().next().getDate()).isEqualTo(CalendarUtil.create(2019, 6, 11));
   }
 
   @Test
@@ -165,39 +164,39 @@ class FixedWeekdayRelativeToFixedParserTest {
 
     final List<Holiday> holidays = sut.parse(2019, new JaxbHolidays(config));
     assertThat(holidays).hasSize(1);
-    assertThat(holidays.iterator().next().getDate()).isEqualTo(calendarUtil.create(2019, 6, 11));
+    assertThat(holidays.iterator().next().getDate()).isEqualTo(CalendarUtil.create(2019, 6, 11));
   }
 
 /* TODO
   @Test
   void testClosestAdjusterSameMonth() {
     final TemporalAdjuster adjuster = FixedWeekdayRelativeToFixedParser.closest(DayOfWeek.MONDAY);
-    final LocalDate date = calendarUtil.create(2018, 12, 1); // Saturday
-    final LocalDate expectedDate = calendarUtil.create(2018, 12, 3); // Monday
+    final LocalDate date = CalendarUtil.create(2018, 12, 1); // Saturday
+    final LocalDate expectedDate = CalendarUtil.create(2018, 12, 3); // Monday
     assertEquals(expectedDate, date.with(adjuster));
   }
 
   @Test
   void testClosestAdjusterPreviousMonth() {
     final TemporalAdjuster adjuster = FixedWeekdayRelativeToFixedParser.closest(DayOfWeek.FRIDAY);
-    final LocalDate date = calendarUtil.create(2019, 6, 3); // Monday
-    final LocalDate expectedDate = calendarUtil.create(2019, 5, 31); // Friday
+    final LocalDate date = CalendarUtil.create(2019, 6, 3); // Monday
+    final LocalDate expectedDate = CalendarUtil.create(2019, 5, 31); // Friday
     assertEquals(expectedDate, date.with(adjuster));
   }
 
   @Test
   void testClosestAdjusterNextMonth() {
     final TemporalAdjuster adjuster = FixedWeekdayRelativeToFixedParser.closest(DayOfWeek.MONDAY);
-    final LocalDate date = calendarUtil.create(2019, 6, 30); // Sunday
-    final LocalDate expectedDate = calendarUtil.create(2019, 7, 1); // Monday
+    final LocalDate date = CalendarUtil.create(2019, 6, 30); // Sunday
+    final LocalDate expectedDate = CalendarUtil.create(2019, 7, 1); // Monday
     assertEquals(expectedDate, date.with(adjuster));
   }
 
   @Test
   void testClosestAdjusterNextYear() {
     final TemporalAdjuster adjuster = FixedWeekdayRelativeToFixedParser.closest(DayOfWeek.WEDNESDAY);
-    final LocalDate date = calendarUtil.create(2019, 12, 31); // Tuesday
-    final LocalDate expectedDate = calendarUtil.create(2020, 1, 1); // Wednesday
+    final LocalDate date = CalendarUtil.create(2019, 12, 31); // Tuesday
+    final LocalDate expectedDate = CalendarUtil.create(2020, 1, 1); // Wednesday
     assertEquals(expectedDate, date.with(adjuster));
   }*/
 }

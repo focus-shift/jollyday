@@ -17,7 +17,6 @@ class HolidayTRTest extends AbstractCountryTestBase {
   private static final String ISO_CODE = "tr";
   private static final int YEAR = 2019;
 
-  private final CalendarUtil calendarUtil = new CalendarUtil();
 
   @Test
   void testManagerTRStructure() {
@@ -34,7 +33,7 @@ class HolidayTRTest extends AbstractCountryTestBase {
   @Test
   void testRamazan2019() {
     // Actually, in Turkey, Ramadan is one day after Eid Mubarak, for keep the Eid al Fitr for now
-    final LocalDate expected = calendarUtil.create(YEAR, 6, 4);
+    final LocalDate expected = CalendarUtil.create(YEAR, 6, 4);
     final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(HolidayCalendar.TURKEY));
     final Set<Holiday> holidays = holidayManager.getHolidays(YEAR);
     assertThat(holidays).hasSize(9);
@@ -51,7 +50,7 @@ class HolidayTRTest extends AbstractCountryTestBase {
 
   @Test
   void testKurban2019() {
-    final LocalDate expected = calendarUtil.create(YEAR, 8, 11);
+    final LocalDate expected = CalendarUtil.create(YEAR, 8, 11);
     final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(HolidayCalendar.TURKEY));
     final Set<Holiday> holidays = holidayManager.getHolidays(YEAR);
     assertThat(holidays).hasSize(9);

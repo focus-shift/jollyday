@@ -21,7 +21,6 @@ import static org.junit.jupiter.api.Assertions.fail;
 
 public abstract class AbstractCountryTestBase {
 
-  private final CalendarUtil calendarUtil = new CalendarUtil();
 
   protected void validateCalendarData(final String countryCode, int year) {
     validateCalendarData(countryCode, year, false);
@@ -104,7 +103,7 @@ public abstract class AbstractCountryTestBase {
 
     for (final Holiday expectedHoliday : expectedHolidays) {
       assertThat(expectedHoliday.getDescription()).isNotNull();
-      if (!calendarUtil.contains(foundHolidays, expectedHoliday.getDate())) {
+      if (!CalendarUtil.contains(foundHolidays, expectedHoliday.getDate())) {
         fail("Could not find " + expectedHoliday + " in " + expectedHierarchy.getDescription() + " - " + foundHolidays);
       }
     }

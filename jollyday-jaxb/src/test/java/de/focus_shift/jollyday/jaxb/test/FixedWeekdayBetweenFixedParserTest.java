@@ -20,7 +20,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 class FixedWeekdayBetweenFixedParserTest extends FixedParserTest {
 
   private final FixedWeekdayBetweenFixedParser sut = new FixedWeekdayBetweenFixedParser();
-  private final CalendarUtil calendarUtil = new CalendarUtil();
 
   @Test
   void testEmpty() {
@@ -51,6 +50,6 @@ class FixedWeekdayBetweenFixedParserTest extends FixedParserTest {
 
     final List<Holiday> holidays = sut.parse(2011, new JaxbHolidays(config));
     assertThat(holidays).hasSize(1);
-    assertThat(holidays.iterator().next().getDate()).isEqualTo(calendarUtil.create(2011, 1, 19));
+    assertThat(holidays.iterator().next().getDate()).isEqualTo(CalendarUtil.create(2011, 1, 19));
   }
 }

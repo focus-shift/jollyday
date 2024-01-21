@@ -19,7 +19,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 class RelativeToFixedParserTest {
 
   private final RelativeToFixedParser sut = new RelativeToFixedParser();
-  private final CalendarUtil calendarUtil = new CalendarUtil();
 
   @Test
   void testEmpty() {
@@ -53,7 +52,7 @@ class RelativeToFixedParserTest {
 
     final List<Holiday> holidays = sut.parse(2011, new JacksonHolidays(config));
     assertThat(holidays).hasSize(1);
-    assertThat(holidays.iterator().next().getDate()).isEqualTo(calendarUtil.create(2011, 8, 11));
+    assertThat(holidays.iterator().next().getDate()).isEqualTo(CalendarUtil.create(2011, 8, 11));
   }
 
   @Test
@@ -72,7 +71,7 @@ class RelativeToFixedParserTest {
 
     final List<Holiday> holidays = sut.parse(2016, new JacksonHolidays(config));
     assertThat(holidays).hasSize(1);
-    assertThat(holidays.iterator().next().getDate()).isEqualTo(calendarUtil.create(2016, 11, 16));
+    assertThat(holidays.iterator().next().getDate()).isEqualTo(CalendarUtil.create(2016, 11, 16));
   }
 
   @Test
@@ -91,6 +90,6 @@ class RelativeToFixedParserTest {
 
     final List<Holiday> holidays = sut.parse(2011, new JacksonHolidays(config));
     assertThat(holidays).hasSize(1);
-    assertThat(holidays.iterator().next().getDate()).isEqualTo(calendarUtil.create(2011, 8, 2));
+    assertThat(holidays.iterator().next().getDate()).isEqualTo(CalendarUtil.create(2011, 8, 2));
   }
 }

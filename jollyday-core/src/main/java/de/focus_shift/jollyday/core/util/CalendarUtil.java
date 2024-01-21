@@ -22,18 +22,19 @@ import static java.time.Month.JANUARY;
 
 /**
  * Utility class for date operations.
- *
- * @author Sven Diedrichsen
- * @version $Id: $
  */
 public class CalendarUtil {
+
+  private CalendarUtil() {
+    // ok
+  }
 
   /**
    * Creates the current date within the gregorian calendar.
    *
    * @return today
    */
-  public LocalDate create() {
+  public static LocalDate create() {
     return LocalDate.now();
   }
 
@@ -45,7 +46,7 @@ public class CalendarUtil {
    * @param day   a int.
    * @return date
    */
-  public LocalDate create(int year, int month, int day) {
+  public static LocalDate create(int year, int month, int day) {
     return LocalDate.of(year, month, day);
   }
 
@@ -58,7 +59,7 @@ public class CalendarUtil {
    * @param chronology the chronology to use
    * @return date the {@link LocalDate}
    */
-  public ChronoLocalDate create(int year, int month, int day, Chronology chronology) {
+  public static ChronoLocalDate create(int year, int month, int day, Chronology chronology) {
     return chronology.date(year, month, day);
   }
 
@@ -68,7 +69,7 @@ public class CalendarUtil {
    * @param date a {@link LocalDate} object.
    * @return is weekend
    */
-  public boolean isWeekend(final LocalDate date) {
+  public static boolean isWeekend(final LocalDate date) {
     return date.getDayOfWeek() == SATURDAY || date.getDayOfWeek() == SUNDAY;
   }
 
@@ -84,7 +85,7 @@ public class CalendarUtil {
    * @param islamicDay    a int.
    * @return List of gregorian dates for the islamic month/day.
    */
-  public Stream<LocalDate> getIslamicHolidaysInGregorianYear(int gregorianYear, int islamicMonth, int islamicDay) {
+  public static Stream<LocalDate> getIslamicHolidaysInGregorianYear(int gregorianYear, int islamicMonth, int islamicDay) {
     return getDatesFromChronologyWithinGregorianYear(islamicMonth, islamicDay, gregorianYear, HijrahChronology.INSTANCE);
   }
 
@@ -101,7 +102,7 @@ public class CalendarUtil {
    * @param relativeShift a int.
    * @return List of gregorian dates for the islamic month/day shifted by relative shift days.
    */
-  public Set<LocalDate> getRelativeIslamicHolidaysInGregorianYear(int gregorianYear, int islamicMonth, int islamicDay, int relativeShift) {
+  public static Set<LocalDate> getRelativeIslamicHolidaysInGregorianYear(int gregorianYear, int islamicMonth, int islamicDay, int relativeShift) {
     return getRelativeDatesFromChronologyWithinGregorianYear(islamicMonth, islamicDay, gregorianYear,
       HijrahChronology.INSTANCE, relativeShift);
   }
@@ -117,7 +118,7 @@ public class CalendarUtil {
    * @param eoDay         a int.
    * @return List of gregorian dates for the ethiopian orthodox month/day.
    */
-  public Stream<LocalDate> getEthiopianOrthodoxHolidaysInGregorianYear(int gregorianYear, int eoMonth, int eoDay) {
+  public static Stream<LocalDate> getEthiopianOrthodoxHolidaysInGregorianYear(int gregorianYear, int eoMonth, int eoDay) {
 
     return getDatesFromChronologyWithinGregorianYear(eoMonth, eoDay, gregorianYear, CopticChronology.INSTANCE);
   }
@@ -132,7 +133,7 @@ public class CalendarUtil {
    * @param targetChrono
    * @return the list of gregorian dates.
    */
-  private Stream<LocalDate> getDatesFromChronologyWithinGregorianYear(int targetMonth, int targetDay, int gregorianYear, Chronology targetChrono) {
+  private static Stream<LocalDate> getDatesFromChronologyWithinGregorianYear(int targetMonth, int targetDay, int gregorianYear, Chronology targetChrono) {
     return new CalculateRelativeDatesFromChronologyWithinGregorianYear(targetMonth, targetDay, targetChrono, 0).apply(gregorianYear);
   }
 
@@ -147,8 +148,8 @@ public class CalendarUtil {
    * @param relativeShift
    * @return the list of gregorian dates.
    */
-  private Set<LocalDate> getRelativeDatesFromChronologyWithinGregorianYear(int targetMonth, int targetDay,
-                                                                           int gregorianYear, Chronology targetChrono, int relativeShift) {
+  private static Set<LocalDate> getRelativeDatesFromChronologyWithinGregorianYear(int targetMonth, int targetDay,
+                                                                                  int gregorianYear, Chronology targetChrono, int relativeShift) {
     int absoluteShift = Math.abs(relativeShift);
     Set<LocalDate> holidays = new HashSet<>();
     LocalDate firstGregorianDate = LocalDate.of(gregorianYear, JANUARY, 1);
@@ -179,7 +180,7 @@ public class CalendarUtil {
    * @param holidayType a {@link HolidayType} object
    * @return contains this date
    */
-  public boolean contains(final Set<Holiday> holidays, final LocalDate date, final HolidayType holidayType) {
+  public static boolean contains(final Set<Holiday> holidays, final LocalDate date, final HolidayType holidayType) {
     return holidays.stream().anyMatch(h -> h.getDate().equals(date) && (holidayType == null || h.getType() == holidayType));
   }
 
@@ -190,8 +191,7 @@ public class CalendarUtil {
    * @param date     the date to look for
    * @return the date is contained in the set of holidays
    */
-  public boolean contains(final Set<Holiday> holidays, final LocalDate date) {
+  public static boolean contains(final Set<Holiday> holidays, final LocalDate date) {
     return contains(holidays, date, null);
   }
-
 }
