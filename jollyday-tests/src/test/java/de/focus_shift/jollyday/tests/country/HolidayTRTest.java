@@ -5,7 +5,6 @@ import de.focus_shift.jollyday.core.HolidayCalendar;
 import de.focus_shift.jollyday.core.HolidayManager;
 import de.focus_shift.jollyday.core.ManagerParameters;
 import de.focus_shift.jollyday.core.util.CalendarUtil;
-import de.focus_shift.jollyday.tests.country.base.AbstractCountryTestBase;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;

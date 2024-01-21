@@ -1,6 +1,5 @@
 package de.focus_shift.jollyday.tests.country;
 
-import de.focus_shift.jollyday.tests.country.base.AbstractCountryTestBase;
 import org.junit.jupiter.api.Test;
 
 class HolidayISTest extends AbstractCountryTestBase {

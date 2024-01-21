@@ -3,7 +3,6 @@ package de.focus_shift.jollyday.tests.country;
 import de.focus_shift.jollyday.core.Holiday;
 import de.focus_shift.jollyday.core.HolidayManager;
 import de.focus_shift.jollyday.core.util.CalendarUtil;
-import de.focus_shift.jollyday.tests.country.base.AbstractCountryTestBase;
 import net.jqwik.api.ForAll;
 import net.jqwik.api.Property;
 import net.jqwik.time.api.constraints.YearRange;

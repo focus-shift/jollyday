@@ -1,6 +1,5 @@
 package de.focus_shift.jollyday.tests.country;
 
-import de.focus_shift.jollyday.tests.country.base.AbstractCountryTestBase;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 

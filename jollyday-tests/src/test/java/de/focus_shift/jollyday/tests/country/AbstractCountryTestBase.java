@@ -1,4 +1,4 @@
-package de.focus_shift.jollyday.tests.country.base;
+package de.focus_shift.jollyday.tests.country;
 
 import de.focus_shift.jollyday.core.CalendarHierarchy;
 import de.focus_shift.jollyday.core.Holiday;

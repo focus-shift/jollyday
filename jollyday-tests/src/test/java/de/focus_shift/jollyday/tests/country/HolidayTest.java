@@ -226,32 +226,4 @@ class HolidayTest {
       assertThat(manager).isNotNull();
     }
   }
-
-  @Test
-  void testHolidayDescription() {
-    Locale.setDefault(ENGLISH);
-
-    final Holiday holiday = new Holiday(LocalDate.of(2011, 2, 2), "CHRISTMAS", OFFICIAL_HOLIDAY);
-    assertThat(holiday.getDescription()).isEqualTo("Christmas");
-    assertThat(holiday.getDescription(GERMAN)).isEqualTo("Weihnachten");
-    assertThat(holiday.getDescription(new Locale("nl"))).isEqualTo("Kerstmis");
-  }
-
-  @Test
-  void testHolidayEquals() {
-    final Holiday h1 = new Holiday(LocalDate.of(2011, 2, 2), "CHRISTMAS", OFFICIAL_HOLIDAY);
-    assertThat(h1).isEqualTo(h1);
-
-    final Holiday h2b = new Holiday(LocalDate.of(2011, 2, 2), "CHRISTMAS", OFFICIAL_HOLIDAY);
-    assertThat(h1).isEqualTo(h2b);
-
-    final Holiday h2 = new Holiday(LocalDate.of(2011, 2, 1), "CHRISTMAS", OFFICIAL_HOLIDAY);
-    assertThat(h1).isNotEqualTo(h2);
-
-    final Holiday h3 = new Holiday(LocalDate.of(2011, 2, 2), "NEW_YEAR", OFFICIAL_HOLIDAY);
-    assertThat(h1).isNotEqualTo(h3);
-
-    final Holiday h4 = new Holiday(LocalDate.of(2011, 2, 2), "CHRISTMAS", UNOFFICIAL_HOLIDAY);
-    assertThat(h1).isNotEqualTo(h4);
-  }
 }

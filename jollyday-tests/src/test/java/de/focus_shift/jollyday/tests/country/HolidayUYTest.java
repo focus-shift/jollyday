@@ -3,7 +3,6 @@ package de.focus_shift.jollyday.tests.country;
 import de.focus_shift.jollyday.core.Holiday;
 import de.focus_shift.jollyday.core.HolidayManager;
 import de.focus_shift.jollyday.core.ManagerParameters;
-import de.focus_shift.jollyday.tests.country.base.AbstractCountryTestBase;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
