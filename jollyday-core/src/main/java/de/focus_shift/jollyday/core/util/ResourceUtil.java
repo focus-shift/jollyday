@@ -148,11 +148,11 @@ public class ResourceUtil {
    * Returns the eventually cached ResourceBundle for the holiday
    * descriptions.
    *
-   * @param l Locale to retrieve the descriptions for.
+   * @param locale Locale to retrieve the descriptions for.
    * @return ResourceBundle containing the descriptions for the locale.
    */
-  private ResourceBundle getCountryDescriptions(Locale l) {
-    return getResourceBundle(l, COUNTRY_DESCRIPTIONS_CACHE, COUNTRY_DESCRIPTIONS_FILE_PREFIX);
+  private ResourceBundle getCountryDescriptions(Locale locale) {
+    return getResourceBundle(locale, COUNTRY_DESCRIPTIONS_CACHE, COUNTRY_DESCRIPTIONS_FILE_PREFIX);
   }
 
   /**
