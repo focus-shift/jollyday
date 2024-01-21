@@ -1,23 +1,17 @@
 package de.focus_shift.jollyday.core.util;
 
 import java.net.URL;
-import java.util.Collections;
-import java.util.HashSet;
 import java.util.Locale;
 import java.util.Map;
 import java.util.ResourceBundle;
-import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 import static java.util.ResourceBundle.getBundle;
 
 /**
- * <p>
  * ResourceUtil class.
- * </p>
- *
- * @author Sven Diedrichsen
- * @version $Id: $
+ * <p>
+ * TODO improve javadoc
  */
 public class ResourceUtil {
   /**
@@ -99,23 +93,6 @@ public class ResourceUtil {
       return getDescription(COUNTRY_PROPERTY_PREFIX + "." + key.toLowerCase(), getCountryDescriptions(l));
     }
     return ResourceUtil.UNDEFINED;
-  }
-
-  /**
-   * Returns a list of ISO codes.
-   *
-   * @return 2-digit ISO codes.
-   */
-  public Set<String> getISOCodes() {
-    final Set<String> codes = new HashSet<>();
-    final ResourceBundle countryDescriptions = getCountryDescriptions(Locale.getDefault());
-    for (String property : Collections.list(countryDescriptions.getKeys())) {
-      final String[] split = property.split("\\.");
-      if (split.length > 2) {
-        codes.add(split[2].toLowerCase());
-      }
-    }
-    return codes;
   }
 
   /**
