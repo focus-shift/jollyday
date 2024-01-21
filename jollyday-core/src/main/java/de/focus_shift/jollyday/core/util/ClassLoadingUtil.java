@@ -8,11 +8,12 @@ import org.slf4j.LoggerFactory;
  * <p>
  * ClassLoadingUtil class.
  * </p>
- *
- * @author José Pedro Pereira - Linkare TI
- * @version $Id: $
  */
 public class ClassLoadingUtil {
+
+  private ClassLoadingUtil() {
+    // ok
+  }
 
   private static final Logger LOG = LoggerFactory.getLogger(ClassLoadingUtil.class);
 
@@ -25,7 +26,7 @@ public class ClassLoadingUtil {
    * @return a {@link java.lang.Class} object.
    * @throws java.lang.ClassNotFoundException if any.
    */
-  public Class<?> loadClass(String className) throws ClassNotFoundException {
+  public static Class<?> loadClass(String className) throws ClassNotFoundException {
     try {
       return Class.forName(className, true, getClassloader());
     } catch (Exception e) {
@@ -40,7 +41,7 @@ public class ClassLoadingUtil {
    * @return the current threads context classloader
    * @see Thread#currentThread()
    */
-  public ClassLoader getClassloader() {
+  public static ClassLoader getClassloader() {
     return Thread.currentThread().getContextClassLoader();
   }
 }

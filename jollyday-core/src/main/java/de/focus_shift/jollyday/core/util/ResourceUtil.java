@@ -43,10 +43,6 @@ public class ResourceUtil {
    * Cache for the country descriptions resource bundles.
    */
   private static final Map<Locale, ResourceBundle> COUNTRY_DESCRIPTIONS_CACHE = new ConcurrentHashMap<>();
-  /**
-   * Util class to provide the correct classloader.
-   */
-  private final ClassLoadingUtil classLoadingUtil = new ClassLoadingUtil();
 
   /**
    * The description read with the default locale.
@@ -139,7 +135,7 @@ public class ResourceUtil {
    * @return ResourceBundle containing the descriptions for the locale.
    */
   private ResourceBundle getResourceBundle(Locale locale, Map<Locale, ResourceBundle> resourceCache, String filePrefix) {
-    return resourceCache.computeIfAbsent(locale, givenLocale -> getBundle(filePrefix, givenLocale, classLoadingUtil.getClassloader()));
+    return resourceCache.computeIfAbsent(locale, givenLocale -> getBundle(filePrefix, givenLocale, ClassLoadingUtil.getClassloader()));
   }
 
   /**
@@ -150,7 +146,7 @@ public class ResourceUtil {
    */
   public URL getResource(String resourceName) {
     try {
-      final URL resource = classLoadingUtil.getClassloader().getResource(resourceName);
+      final URL resource = ClassLoadingUtil.getClassloader().getResource(resourceName);
       return resource == null ? this.getClass().getClassLoader().getResource(resourceName) : resource;
     } catch (Exception e) {
       throw new IllegalStateException("Cannot load resource: " + resourceName, e);

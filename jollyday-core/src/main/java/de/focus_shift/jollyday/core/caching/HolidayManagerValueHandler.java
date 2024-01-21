@@ -15,11 +15,6 @@ public class HolidayManagerValueHandler implements Cache.ValueHandler<HolidayMan
   private final String managerImplClassName;
   private final ConfigurationServiceManager configurationServiceManager;
 
-  /**
-   * Utility to load classes.
-   */
-  private final ClassLoadingUtil classLoadingUtil = new ClassLoadingUtil();
-
   public HolidayManagerValueHandler(final ManagerParameter parameter, final String managerImplClassName, final ConfigurationServiceManager configurationServiceManager) {
     this.parameter = parameter;
     this.managerImplClassName = managerImplClassName;
@@ -50,7 +45,7 @@ public class HolidayManagerValueHandler implements Cache.ValueHandler<HolidayMan
    */
   private HolidayManager instantiateManagerImpl(String managerImplClassName) {
     try {
-      final Class<?> managerImplClass = classLoadingUtil.loadClass(managerImplClassName);
+      final Class<?> managerImplClass = ClassLoadingUtil.loadClass(managerImplClassName);
       return (HolidayManager) managerImplClass.getDeclaredConstructor().newInstance();
     } catch (Exception e) {
       throw new IllegalStateException("Cannot create manager class " + managerImplClassName, e);

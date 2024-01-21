@@ -14,7 +14,6 @@ public class ConfigurationProviderManager {
 
   private ConfigurationProvider classpathConfigurationProvider = new ClasspathConfigurationProvider();
   private ConfigurationProvider urlConfigurationProvider = new URLConfigurationProvider();
-  private final ClassLoadingUtil classLoadingUtil = new ClassLoadingUtil();
 
   /**
    * Reads the jollyday configuration from the
@@ -42,7 +41,7 @@ public class ConfigurationProviderManager {
         if (providerClassName == null || providerClassName.isEmpty())
           continue;
         try {
-          final Class<?> providerClass = Class.forName(providerClassName.trim(), true, classLoadingUtil.getClassloader());
+          final Class<?> providerClass = Class.forName(providerClassName.trim(), true, ClassLoadingUtil.getClassloader());
           final ConfigurationProvider configurationProvider = (ConfigurationProvider) providerClass.getDeclaredConstructor().newInstance();
           parameter.mergeProperties(configurationProvider.getProperties());
         } catch (Exception e) {

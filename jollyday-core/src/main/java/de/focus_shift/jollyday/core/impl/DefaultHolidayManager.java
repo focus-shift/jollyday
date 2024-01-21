@@ -45,10 +45,6 @@ public class DefaultHolidayManager extends HolidayManager {
    * Configuration parsed on initialization.
    */
   protected Configuration configuration;
-  /**
-   * Utility class to handle class loading
-   */
-  private final ClassLoadingUtil classLoadingUtil = new ClassLoadingUtil();
 
   /**
    * {@inheritDoc}
@@ -180,7 +176,7 @@ public class DefaultHolidayManager extends HolidayManager {
       final String propName = PARSER_IMPL_PREFIX + className;
       final String parserClassName = getManagerParameter().getProperty(propName);
       if (parserClassName != null) {
-        final Class<?> parserClass = classLoadingUtil.loadClass(parserClassName);
+        final Class<?> parserClass = ClassLoadingUtil.loadClass(parserClassName);
         holidayParser = (HolidayParser) parserClass.getConstructor().newInstance();
         parserCache.put(className, holidayParser);
       }
