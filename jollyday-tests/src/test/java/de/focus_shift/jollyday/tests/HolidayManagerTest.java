@@ -44,8 +44,6 @@ import static org.junit.jupiter.api.Assertions.fail;
 
 class HolidayManagerTest {
 
-  private static final Logger LOG = LoggerFactory.getLogger(HolidayManagerTest.class);
-
   private static final Set<LocalDate> test_days_base = new HashSet<>();
   private static final Set<LocalDate> test_days_l1_1 = new HashSet<>();
   private static final Set<LocalDate> test_days_l1_1_l2 = new HashSet<>();
@@ -164,34 +162,6 @@ class HolidayManagerTest {
     for (CalendarHierarchy calendarHierarchyChild : calendarHierarchy.getChildren().values()) {
       assertNotUndefined(holidayCalendar, calendarHierarchyChild);
     }
-  }
-
-  @Test
-  void testIsHolidayPerformanceMultiThread() throws InterruptedException {
-
-    LocalDate date = LocalDate.of(2010, 1, 1);
-    final AtomicLong count = new AtomicLong(0);
-    final AtomicLong sumDuration = new AtomicLong(0);
-
-    final ExecutorService executorService = Executors.newCachedThreadPool();
-    while (date.getYear() < 2013) {
-      final LocalDate localDate = date;
-      executorService.submit(() -> {
-        final long start = System.currentTimeMillis();
-
-        final HolidayManager holidayManager = HolidayManager.getInstance(create("test"));
-        holidayManager.isHoliday(localDate);
-
-        final long duration = System.currentTimeMillis() - start;
-        count.incrementAndGet();
-        sumDuration.addAndGet(duration);
-      });
-      date = date.plusDays(1);
-    }
-    executorService.shutdown();
-    executorService.awaitTermination(5, SECONDS);
-
-    LOG.info("isHoliday took {} millis average tested with {} calls.", sumDuration.doubleValue() / count.doubleValue(), count.longValue());
   }
 
   @Test
