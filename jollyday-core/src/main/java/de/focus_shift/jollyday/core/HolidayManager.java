@@ -99,7 +99,7 @@ public abstract class HolidayManager {
    * the provided properties.
    *
    * @param properties the overriding configuration properties.
-   * @return a eventually cached HolidayManager instance
+   * @return an eventually cached HolidayManager instance
    */
   public static HolidayManager getInstance(Properties properties) {
     return getInstance(ManagerParameters.create((String) null, properties));
