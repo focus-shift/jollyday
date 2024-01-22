@@ -7,6 +7,7 @@ import de.focus_shift.jollyday.core.HolidayManager;
 import de.focus_shift.jollyday.core.ManagerParameter;
 import de.focus_shift.jollyday.core.impl.JapaneseHolidayManager;
 import de.focus_shift.jollyday.core.util.CalendarUtil;
+import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -79,12 +80,50 @@ class HolidayManagerTest {
     test_days_l1_2.add(LocalDate.of(2010, DECEMBER, 16));
   }
 
+  @Nested
+  class Caching {
+    @Test
+    void ensureThatCachingIsEnabledByDefault() {
+      assertThat(HolidayManager.isManagerCachingEnabled()).isTrue();
+    }
+
+    @Test
+    void ensureThatTheCachedHolidayManagerWillReturnedOnSecondCall() {
+      HolidayManager.setManagerCachingEnabled(true);
+      final HolidayManager first = HolidayManager.getInstance(create("test"));
+      final HolidayManager second = HolidayManager.getInstance(create("test"));
+      assertThat(second).isSameAs(first);
+    }
+
+    @Test
+    void ensureThatDisablingTheCacheDoesNotReturnCachedHolidayManager() {
+
+      final HolidayManager holidayManagerCached = HolidayManager.getInstance(create("test"));
+
+      HolidayManager.setManagerCachingEnabled(false);
+      assertThat(HolidayManager.getInstance(create("test"))).isNotSameAs(holidayManagerCached);
+      HolidayManager.setManagerCachingEnabled(true);
+    }
+
+    @Test
+    void ensureThatTheCachedHolidayManagerWillBeCleared() {
+      HolidayManager.setManagerCachingEnabled(true);
+      final HolidayManager first = HolidayManager.getInstance(create("test"));
+      final HolidayManager second = HolidayManager.getInstance(create("test"));
+      assertThat(first).isSameAs(second);
+      HolidayManager.clearManagerCache();
+      final HolidayManager third = HolidayManager.getInstance(create("test"));
+      assertThat(third).isNotSameAs(first).isNotSameAs(second);
+    }
+  }
+
   @Test
   void ensureToInstantiateHolidayManagerImplementationBasedOnCountry() {
     System.setProperty("config.urls", "file:./src/test/resources/test.app.properties");
 
+    HolidayManager.setManagerCachingEnabled(false);
     assertThat(HolidayManager.getInstance(create("test"))).isInstanceOf(JapaneseHolidayManager.class);
-    HolidayManager.clearManagerCache();
+    HolidayManager.setManagerCachingEnabled(true);
 
     System.clearProperty("config.urls");
   }

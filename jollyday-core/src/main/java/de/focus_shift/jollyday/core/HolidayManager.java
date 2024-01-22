@@ -55,7 +55,13 @@ public abstract class HolidayManager {
     new ConfigurationServiceManager(new LazyServiceLoaderCache<>(ConfigurationService.class));
 
   /**
-   * the holiday cache
+   * Caches the instance based country specific holidays so that e.g.
+   * the created HolidayManager via
+   * {@code HolidayManager.getInstance(create("de"))} only contains the german holidays.
+   * <p>
+   * This is also the reason this cache is not static.
+   * If it was static all holidays over all holiday manager instances would be cached,
+   * but only the german holidays are important for the german holiday manager, so only save them.
    */
   private final Cache<Set<Holiday>> holidayCache = new Cache<>();
 
@@ -63,6 +69,7 @@ public abstract class HolidayManager {
    * The datasource to get the holiday data from.
    */
   private ConfigurationService configurationService;
+
   /**
    * the manager parameter
    */
@@ -84,7 +91,7 @@ public abstract class HolidayManager {
    * Creates a HolidayManager instance for the default locale country using
    * the configured properties from the configuration file.
    *
-   * @return a eventually cached HolidayManager instance
+   * @return an eventually cached HolidayManager instance
    */
   public static HolidayManager getInstance() {
     return getInstance(ManagerParameters.create((String) null, null));
@@ -113,7 +120,7 @@ public abstract class HolidayManager {
   }
 
   /**
-   * Creates a new <code>HolidayManager</code> instance for the country and
+   * Creates a new {@code HolidayManager} instance for the country and
    * puts it to the manager cache.
    *
    * @param parameter the parameter will be merged into the current configuration
@@ -172,7 +179,6 @@ public abstract class HolidayManager {
   public static void clearManagerCache() {
     HOLIDAY_MANAGER_CACHE.clear();
   }
-
 
   /**
    * Returns true or false if the requested calendar date is a holiday in the state or
