@@ -5,6 +5,7 @@
                xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
   <Holidays>
     <Fixed month="JANUARY" day="1"/>
+    <Fixed month="JANUARY" day="4" localizedType="UNOFFICIAL_HOLIDAY"/>
     <Fixed month="JANUARY" day="16">
       <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
@@ -28,18 +29,18 @@
     <ChristianHoliday type="ASH_WEDNESDAY"/>
   </Holidays>
 
-  <SubConfigurations hierarchy="level1">
+  <SubConfigurations hierarchy="level1_1">
     <Holidays>
       <Fixed month="JANUARY" day="2"/>
     </Holidays>
-    <SubConfigurations hierarchy="level2">
+    <SubConfigurations hierarchy="level1_1_l2">
       <Holidays>
         <Fixed month="JANUARY" day="3"/>
       </Holidays>
     </SubConfigurations>
   </SubConfigurations>
 
-  <SubConfigurations hierarchy="level11">
+  <SubConfigurations hierarchy="level1_2">
     <Holidays>
       <IslamicHoliday type="ID_AL_FITR"/>
       <IslamicHoliday type="NEWYEAR"/>
