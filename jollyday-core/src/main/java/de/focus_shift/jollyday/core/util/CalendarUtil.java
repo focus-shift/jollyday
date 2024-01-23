@@ -10,7 +10,6 @@ import java.time.chrono.ChronoLocalDate;
 import java.time.chrono.Chronology;
 import java.time.chrono.HijrahChronology;
 import java.time.temporal.ChronoField;
-import java.time.temporal.ChronoUnit;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Stream;
@@ -19,6 +18,7 @@ import static java.time.DayOfWeek.SATURDAY;
 import static java.time.DayOfWeek.SUNDAY;
 import static java.time.Month.DECEMBER;
 import static java.time.Month.JANUARY;
+import static java.time.temporal.ChronoUnit.DAYS;
 
 /**
  * Utility class for date operations.
@@ -119,7 +119,6 @@ public class CalendarUtil {
    * @return List of gregorian dates for the ethiopian orthodox month/day.
    */
   public static Stream<LocalDate> getEthiopianOrthodoxHolidaysInGregorianYear(int gregorianYear, int eoMonth, int eoDay) {
-
     return getDatesFromChronologyWithinGregorianYear(eoMonth, eoDay, gregorianYear, CopticChronology.INSTANCE);
   }
 
@@ -162,14 +161,25 @@ public class CalendarUtil {
     final int lastYear = lastTargetDate.get(ChronoField.YEAR);
 
     while (targetYear <= lastYear) {
-      ChronoLocalDate d = targetChrono.date(targetYear, targetMonth, targetDay).plus(relativeShift,
-        ChronoUnit.DAYS);
+      ChronoLocalDate d = targetChrono.date(targetYear, targetMonth, targetDay).plus(relativeShift, DAYS);
       if (!firstGregorianDate.isAfter(d) && !lastGregorianDate.isBefore(d)) {
         holidays.add(LocalDate.from(d));
       }
       targetYear++;
     }
     return holidays;
+  }
+
+  /**
+   * Shows if the requested date is contained in the Set of holidays.
+   * Calls #contains(holidays, date, null)
+   *
+   * @param holidays the holidays to search through
+   * @param date     the date to look for
+   * @return the date is contained in the set of holidays
+   */
+  public static boolean contains(final Set<Holiday> holidays, final LocalDate date) {
+    return contains(holidays, date, null);
   }
 
   /**
@@ -181,17 +191,7 @@ public class CalendarUtil {
    * @return contains this date
    */
   public static boolean contains(final Set<Holiday> holidays, final LocalDate date, final HolidayType holidayType) {
-    return holidays.stream().anyMatch(h -> h.getDate().equals(date) && (holidayType == null || h.getType() == holidayType));
-  }
-
-  /**
-   * Calls #contains(holidays, date, null)
-   *
-   * @param holidays the holidays to search through
-   * @param date     the date to look for
-   * @return the date is contained in the set of holidays
-   */
-  public static boolean contains(final Set<Holiday> holidays, final LocalDate date) {
-    return contains(holidays, date, null);
+    return holidays.stream()
+      .anyMatch(holiday -> holiday.getDate().equals(date) && (holidayType == null || holiday.getType() == holidayType));
   }
 }

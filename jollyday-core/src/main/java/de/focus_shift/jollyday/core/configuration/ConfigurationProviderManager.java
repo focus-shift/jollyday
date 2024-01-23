@@ -38,8 +38,11 @@ public class ConfigurationProviderManager {
     if (providersStrList != null) {
       final String[] providersClassNames = providersStrList.split(",");
       for (String providerClassName : providersClassNames) {
-        if (providerClassName == null || providerClassName.isEmpty())
+
+        if (providerClassName == null || providerClassName.isEmpty()) {
           continue;
+        }
+
         try {
           final Class<?> providerClass = Class.forName(providerClassName.trim(), true, ClassLoadingUtil.getClassloader());
           final ConfigurationProvider configurationProvider = (ConfigurationProvider) providerClass.getDeclaredConstructor().newInstance();
