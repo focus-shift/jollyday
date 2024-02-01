@@ -20,9 +20,6 @@
     <!-- https://www.gov.ky/news/press-release-details/public-holidays-2022 -->
     <Fixed month="JUNE" day="3" validFrom="2022" validTo="2022" descriptionPropertiesKey="QUEENS_PLATINUM_JUBILEE"/>
 
-    <!-- https://www.gov.ky/calendar/public-holidays -->
-    <Fixed month="JUNE" day="19" validFrom="2023" descriptionPropertiesKey="KINGS_DAY"/>
-
     <!-- https://archives.gov.ky/Archive/view_press_release/3325/yes-its-a-public-holiday -->
     <Fixed month="NOVEMBER" day="6" validFrom="2009" validTo="2009" descriptionPropertiesKey="CONSTITUTION_COMMENCEMENT_2009"/>
 
@@ -41,7 +38,8 @@
     <!-- parliament dissolved early, assume this will be the new rule, TBD at last in 2025 -->
     <FixedWeekday which="SECOND" weekday="WEDNESDAY" month="APRIL" validFrom="2021" every="FOUR_YEARS" descriptionPropertiesKey="ELECTION_DAY"/>
 
-    <FixedWeekday which="THIRD" weekday="MONDAY" month="MAY" descriptionPropertiesKey="DISCOVERY_DAY"/>
+    <FixedWeekday which="THIRD" weekday="MONDAY" month="MAY" validTo="2023" descriptionPropertiesKey="DISCOVERY_DAY"/>
+    <FixedWeekday which="FIRST" weekday="MONDAY" month="MAY" validFrom="2024" descriptionPropertiesKey="EMANCIPATION_DAY"/>
 
     <FixedWeekday which="FOURTH" weekday="WEDNESDAY" month="MAY" validFrom="2013" validTo="2017" every="FOUR_YEARS"  descriptionPropertiesKey="ELECTION_DAY"/>
 
@@ -57,6 +55,9 @@
     <FixedWeekday which="THIRD" weekday="MONDAY" month="JUNE" validFrom="2020" validTo="2020" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
     <FixedWeekday which="SECOND" weekday="MONDAY" month="JUNE" validFrom="2021" validTo="2021" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
     <FixedWeekday which="FIRST" weekday="MONDAY" month="JUNE" validFrom="2022" validTo="2022" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
+
+    <!-- https://www.gov.ky/calendar/public-holidays -->
+    <FixedWeekday which="THIRD" weekday="MONDAY" month="JUNE" validFrom="2023" descriptionPropertiesKey="KINGS_DAY"/>
 
     <FixedWeekday which="FIRST" weekday="MONDAY" month="JULY" descriptionPropertiesKey="CONSTITUTION_DAY"/>
 
@@ -79,4 +80,11 @@
       <to month="NOVEMBER" day="15"/>
     </FixedWeekdayBetweenFixed>
   </Holidays>
+
+  <Sources>
+    <Source>https://www.gov.ky/calendar/public-holidays</Source>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_the_Cayman_Islands</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:KY</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:KY</Source>
+  </Sources>
 </Configuration>
