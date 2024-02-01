@@ -9,7 +9,7 @@ class HolidayNYSETest extends AbstractCountryTestBase {
 
   @ParameterizedTest
   @ValueSource(ints = {2023})
-  void testManagerUSStructure(final int year) {
-    validateCalendarData(ISO_CODE, year);
+  void testManagerNYSEStructure(final int year) {
+    validateCalendarData(ISO_CODE, year, true);
   }
 }
