@@ -1,0 +1,1158 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Jollyday                                                           [pom]
+[INFO] Jollyday Core                                                      [jar]
+[INFO] Jollyday with Jackson                                              [jar]
+[INFO] Jollyday with Jakarta XML Binding (JAXB)                           [jar]
+[INFO] Jollyday Tests                                                     [jar]
+[INFO] 
+[INFO] ----------------------< de.focus-shift:jollyday >-----------------------
+[INFO] Building Jollyday 0.25.0-SNAPSHOT                                  [1/5]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ jollyday ---
+[INFO] 
+[INFO] --- enforcer:3.4.1:enforce (enforce-versions) @ jollyday ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] Rule 1: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO] Rule 2: org.apache.maven.plugins.enforcer.RestrictImports passed
+[INFO] 
+[INFO] --- source:3.3.0:jar-no-fork (attach-sources) @ jollyday ---
+[INFO] 
+[INFO] --- javadoc:3.6.3:jar (attach-javadocs) @ jollyday ---
+[INFO] Not executing Javadoc as the project is not a Java classpath-capable package
+[INFO] 
+[INFO] --------------------< de.focus-shift:jollyday-core >--------------------
+[INFO] Building Jollyday Core 0.25.0-SNAPSHOT                             [2/5]
+[INFO]   from jollyday-core/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ jollyday-core ---
+[INFO] Deleting /home/slee/jollyday/jollyday-core/target
+[INFO] 
+[INFO] --- enforcer:3.4.1:enforce (enforce-versions) @ jollyday-core ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] Rule 1: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO] Rule 2: org.apache.maven.plugins.enforcer.RestrictImports passed
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ jollyday-core ---
+[INFO] Copying 100 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.12.1:compile (default-compile) @ jollyday-core ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 75 source files with javac [debug target 11 module-path] to target/classes
+[WARNING] system modules path not set in conjunction with -source 11
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/module-info.java:[17,28] module not found: de.focus_shift.jollyday.jaxb
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/module-info.java:[18,28] module not found: de.focus_shift.jollyday.jackson
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/module-info.java:[19,36] module not found: de.focus_shift.jollyday.jackson.test
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/module-info.java:[20,33] module not found: de.focus_shift.jollyday.jaxb.test
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/module-info.java:[22,36] module not found: de.focus_shift.jollyday.jackson.test
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/module-info.java:[23,33] module not found: de.focus_shift.jollyday.jaxb.test
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/module-info.java:[7,39] package is empty or does not exist: focus_shift.de.jollyday.schema.holiday
+[INFO] 
+[INFO] --- bundle:5.1.9:manifest (bundle-manifest) @ jollyday-core ---
+[INFO] No MANIFEST.MF file found, generating manifest.
+[INFO] Writing manifest: /home/slee/jollyday/jollyday-core/target/classes/META-INF/MANIFEST.MF
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ jollyday-core ---
+[INFO] Copying 5 resources from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.12.1:testCompile (default-testCompile) @ jollyday-core ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 23 source files with javac [debug target 11 module-path] to target/test-classes
+[WARNING] system modules path not set in conjunction with -source 11
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ jollyday-core ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running de.focus_shift.jollyday.core.datasource.ConfigurationServiceManagerTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.932 s -- in de.focus_shift.jollyday.core.datasource.ConfigurationServiceManagerTest
+[INFO] Running de.focus_shift.jollyday.core.parser.impl.IslamicHolidayParserTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.262 s -- in de.focus_shift.jollyday.core.parser.impl.IslamicHolidayParserTest
+[INFO] Running de.focus_shift.jollyday.core.parser.functions.CalculateJulianEasterSundayTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.154 s -- in de.focus_shift.jollyday.core.parser.functions.CalculateJulianEasterSundayTest
+[INFO] Running de.focus_shift.jollyday.core.parser.functions.CalculateGregorianEasterSundayTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.035 s -- in de.focus_shift.jollyday.core.parser.functions.CalculateGregorianEasterSundayTest
+[INFO] Running de.focus_shift.jollyday.core.parser.functions.CalendarToLocalDateTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.046 s -- in de.focus_shift.jollyday.core.parser.functions.CalendarToLocalDateTest
+[INFO] Running de.focus_shift.jollyday.core.HolidayCalendarTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.028 s -- in de.focus_shift.jollyday.core.HolidayCalendarTest
+[INFO] Running de.focus_shift.jollyday.core.HolidayTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.044 s -- in de.focus_shift.jollyday.core.HolidayTest
+[INFO] Running de.focus_shift.jollyday.core.descriptions.CountryDescriptionsTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.829 s -- in de.focus_shift.jollyday.core.descriptions.CountryDescriptionsTest
+[INFO] Running de.focus_shift.jollyday.core.ManagerParametersTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.151 s -- in de.focus_shift.jollyday.core.ManagerParametersTest
+[INFO] Running de.focus_shift.jollyday.core.configuration.ClasspathConfigurationProviderContentTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.043 s -- in de.focus_shift.jollyday.core.configuration.ClasspathConfigurationProviderContentTest
+[INFO] Running de.focus_shift.jollyday.core.configuration.ConfigurationProviderManagerTest
+W 16:35:19.306 [n.ConfigurationProviderManager] Cannot load configuration from provider class ' java.lang.String'. ClassCastException (class java.lang.String cannot be cast to class de.focus_shift.jollyday.core.configuration.ConfigurationProvider (java.lang.String is in module java.base of loader 'bootstrap'; de.focus_shift.jollyday.core.configuration.ConfigurationProvider is in module de.focus_shift.jollyday.core@0.25.0-SNAPSHOT of loader 'app')).
+W 16:35:19.337 [n.ConfigurationProviderManager] Cannot load configuration from provider class 'java.lang.String'. ClassCastException (class java.lang.String cannot be cast to class de.focus_shift.jollyday.core.configuration.ConfigurationProvider (java.lang.String is in module java.base of loader 'bootstrap'; de.focus_shift.jollyday.core.configuration.ConfigurationProvider is in module de.focus_shift.jollyday.core@0.25.0-SNAPSHOT of loader 'app')).
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.160 s -- in de.focus_shift.jollyday.core.configuration.ConfigurationProviderManagerTest
+[INFO] Running de.focus_shift.jollyday.core.configuration.URLConfigurationProviderTest
+W 16:35:19.382 [ation.URLConfigurationProvider] Cannot read configuration from 'TestIllegalData' with message 'no protocol: TestIllegalData'.
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s -- in de.focus_shift.jollyday.core.configuration.URLConfigurationProviderTest
+[INFO] Running de.focus_shift.jollyday.core.XMLValidationTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.917 s -- in de.focus_shift.jollyday.core.XMLValidationTest
+[INFO] Running de.focus_shift.jollyday.core.util.ClassLoadingUtilTest
+W 16:35:20.321 [day.core.util.ClassLoadingUtil] Could not load class with current threads context classloader. Using default. Reason: ClassNotFoundException: 
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s -- in de.focus_shift.jollyday.core.util.ClassLoadingUtilTest
+[INFO] Running de.focus_shift.jollyday.core.util.CalendarUtilTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 s -- in de.focus_shift.jollyday.core.util.CalendarUtilTest
+[INFO] Running de.focus_shift.jollyday.core.caching.CacheTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.026 s -- in de.focus_shift.jollyday.core.caching.CacheTest
+[INFO] Running de.focus_shift.jollyday.core.caching.HolidayManagerValueHandlerTest
+W 16:35:20.437 [day.core.util.ClassLoadingUtil] Could not load class with current threads context classloader. Using default. Reason: ClassNotFoundException: de.focus_shift.jollyday.core.impl.WrongHolidayManager
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.190 s -- in de.focus_shift.jollyday.core.caching.HolidayManagerValueHandlerTest
+[INFO] Running de.focus_shift.jollyday.core.HolidayDescriptionTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 s -- in de.focus_shift.jollyday.core.HolidayDescriptionTest
+[INFO] Running de.focus_shift.jollyday.core.parameter.UrlManagerParameterTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.034 s -- in de.focus_shift.jollyday.core.parameter.UrlManagerParameterTest
+[INFO] Running de.focus_shift.jollyday.core.parameter.CalendarPartManagerParameterTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 s -- in de.focus_shift.jollyday.core.parameter.CalendarPartManagerParameterTest
+[INFO] Running de.focus_shift.jollyday.core.parameter.BaseManagerParameterTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s -- in de.focus_shift.jollyday.core.parameter.BaseManagerParameterTest
+[INFO] Running de.focus_shift.jollyday.core.parser.predicates.ValidCycleTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.624 s -- in de.focus_shift.jollyday.core.parser.predicates.ValidCycleTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 83, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.3.0:jar (default-jar) @ jollyday-core ---
+[INFO] Building jar: /home/slee/jollyday/jollyday-core/target/jollyday-core-0.25.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- source:3.3.0:jar-no-fork (attach-sources) @ jollyday-core ---
+[INFO] Building jar: /home/slee/jollyday/jollyday-core/target/jollyday-core-0.25.0-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] --- javadoc:3.6.3:jar (attach-javadocs) @ jollyday-core ---
+[INFO] No previous run data found, generating javadoc.
+[WARNING] Javadoc Warnings
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/spi/ChristianHoliday.java:5: warning: no comment
+[WARNING] public interface ChristianHoliday extends Limited, Described, Movable {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/spi/ChristianHoliday.java:8: warning: no comment
+[WARNING] Chronology chronology();
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/spi/ChristianHoliday.java:6: warning: no comment
+[WARNING] ChristianHolidayType type();
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/spi/ChristianHolidayType.java:3: warning: no comment
+[WARNING] public enum ChristianHolidayType {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/spi/ChristianHolidayType.java:6: warning: no comment
+[WARNING] ASCENSION_DAY,
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/spi/ChristianHolidayType.java:10: warning: no comment
+[WARNING] ASH_WEDNESDAY,
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/spi/ChristianHolidayType.java:16: warning: no comment
+[WARNING] CARNIVAL,
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/spi/ChristianHolidayType.java:13: warning: no comment
+[WARNING] CLEAN_MONDAY,
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/spi/ChristianHolidayType.java:8: warning: no comment
+[WARNING] CORPUS_CHRISTI,
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/spi/ChristianHolidayType.java:20: warning: no comment
+[WARNING] EASTER,
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/spi/ChristianHolidayType.java:5: warning: no comment
+[WARNING] EASTER_MONDAY,
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/spi/ChristianHolidayType.java:17: warning: no comment
+[WARNING] EASTER_SATURDAY,
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/spi/ChristianHolidayType.java:18: warning: no comment
+[WARNING] EASTER_TUESDAY,
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/spi/ChristianHolidayType.java:12: warning: no comment
+[WARNING] GENERAL_PRAYER_DAY,
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/spi/ChristianHolidayType.java:4: warning: no comment
+[WARNING] GOOD_FRIDAY,
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/spi/ChristianHolidayType.java:11: warning: no comment
+[WARNING] MARDI_GRAS,
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/spi/ChristianHolidayType.java:9: warning: no comment
+[WARNING] MAUNDY_THURSDAY,
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/spi/ChristianHolidayType.java:15: warning: no comment
+[WARNING] PENTECOST,
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/spi/ChristianHolidayType.java:21: warning: no comment
+[WARNING] PENTECOST_MONDAY,
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/spi/ChristianHolidayType.java:19: warning: no comment
+[WARNING] SACRED_HEART,
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/spi/ChristianHolidayType.java:14: warning: no comment
+[WARNING] SHROVE_MONDAY,
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/spi/ChristianHolidayType.java:7: warning: no comment
+[WARNING] WHIT_MONDAY,
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/spi/ChristianHolidayType.java:22: warning: no comment
+[WARNING] WHIT_SUNDAY
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/spi/Configuration.java:16: warning: no comment
+[WARNING] String description();
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/spi/Configuration.java:14: warning: no comment
+[WARNING] String hierarchy();
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/spi/Configuration.java:10: warning: no comment
+[WARNING] Holidays holidays();
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/spi/Configuration.java:12: warning: no comment
+[WARNING] Stream<Configuration> subConfigurations();
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/spi/ConfigurationService.java:9: warning: no comment
+[WARNING] Configuration getConfiguration(ManagerParameter parameter);
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/spi/Described.java:5: warning: no comment
+[WARNING] public interface Described {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/spi/Described.java:6: warning: no comment
+[WARNING] String descriptionPropertiesKey();
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/spi/Described.java:8: warning: no comment
+[WARNING] HolidayType officiality();
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/spi/EthiopianOrthodoxHoliday.java:3: warning: no comment
+[WARNING] public interface EthiopianOrthodoxHoliday extends Described, Limited {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/spi/EthiopianOrthodoxHoliday.java:4: warning: no comment
+[WARNING] EthiopianOrthodoxHolidayType type();
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/spi/EthiopianOrthodoxHolidayType.java:3: warning: no comment
+[WARNING] public enum EthiopianOrthodoxHolidayType {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/spi/EthiopianOrthodoxHolidayType.java:5: warning: no comment
+[WARNING] ENKUTATASH,
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/spi/EthiopianOrthodoxHolidayType.java:6: warning: no comment
+[WARNING] MESKEL
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/spi/EthiopianOrthodoxHolidayType.java:4: warning: no comment
+[WARNING] TIMKAT,
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/spi/Fixed.java:5: warning: no comment
+[WARNING] public interface Fixed extends Described, Movable, Limited {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/spi/Fixed.java:6: warning: no comment
+[WARNING] MonthDay day();
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/spi/FixedWeekdayBetweenFixed.java:5: warning: no comment
+[WARNING] public interface FixedWeekdayBetweenFixed extends Described, Limited {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/spi/FixedWeekdayBetweenFixed.java:6: warning: no comment
+[WARNING] Fixed from();
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/spi/FixedWeekdayBetweenFixed.java:8: warning: no comment
+[WARNING] Fixed to();
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/spi/FixedWeekdayBetweenFixed.java:10: warning: no comment
+[WARNING] DayOfWeek weekday();
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/spi/FixedWeekdayInMonth.java:6: warning: no comment
+[WARNING] public interface FixedWeekdayInMonth extends Described, Limited {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/spi/FixedWeekdayInMonth.java:9: warning: no comment
+[WARNING] Month month();
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/spi/FixedWeekdayInMonth.java:7: warning: no comment
+[WARNING] DayOfWeek weekday();
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/spi/FixedWeekdayInMonth.java:11: warning: no comment
+[WARNING] Occurrance which();
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/spi/FixedWeekdayRelativeToFixed.java:5: warning: no comment
+[WARNING] public interface FixedWeekdayRelativeToFixed extends Described, Limited {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/spi/FixedWeekdayRelativeToFixed.java:6: warning: no comment
+[WARNING] Fixed day();
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/spi/FixedWeekdayRelativeToFixed.java:10: warning: no comment
+[WARNING] DayOfWeek weekday();
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/spi/FixedWeekdayRelativeToFixed.java:12: warning: no comment
+[WARNING] Relation when();
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/spi/FixedWeekdayRelativeToFixed.java:8: warning: no comment
+[WARNING] Occurrance which();
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/HolidayCalendar.java:12: warning: no comment
+[WARNING] ALBANIA("AL"), ARGENTINA("AR"), AUSTRALIA("AU"), AUSTRIA("AT"),
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/HolidayCalendar.java:12: warning: no comment
+[WARNING] ALBANIA("AL"), ARGENTINA("AR"), AUSTRALIA("AU"), AUSTRIA("AT"),
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/HolidayCalendar.java:12: warning: no comment
+[WARNING] ALBANIA("AL"), ARGENTINA("AR"), AUSTRALIA("AU"), AUSTRIA("AT"),
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/HolidayCalendar.java:12: warning: no comment
+[WARNING] ALBANIA("AL"), ARGENTINA("AR"), AUSTRALIA("AU"), AUSTRIA("AT"),
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/HolidayCalendar.java:13: warning: no comment
+[WARNING] BAHAMAS("BS"), BELARUS("BY"), BELGIUM("BE"), BERMUDA("BM"), BOLIVIA("BO"), BOSNIA_HERZIGOWINA("BA"), BRAZIL("BR"), BRITISH_VIRGIN_ISLANDS("VG"), BULGARIA("BG"),
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/HolidayCalendar.java:13: warning: no comment
+[WARNING] BAHAMAS("BS"), BELARUS("BY"), BELGIUM("BE"), BERMUDA("BM"), BOLIVIA("BO"), BOSNIA_HERZIGOWINA("BA"), BRAZIL("BR"), BRITISH_VIRGIN_ISLANDS("VG"), BULGARIA("BG"),
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/HolidayCalendar.java:13: warning: no comment
+[WARNING] BAHAMAS("BS"), BELARUS("BY"), BELGIUM("BE"), BERMUDA("BM"), BOLIVIA("BO"), BOSNIA_HERZIGOWINA("BA"), BRAZIL("BR"), BRITISH_VIRGIN_ISLANDS("VG"), BULGARIA("BG"),
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/HolidayCalendar.java:13: warning: no comment
+[WARNING] BAHAMAS("BS"), BELARUS("BY"), BELGIUM("BE"), BERMUDA("BM"), BOLIVIA("BO"), BOSNIA_HERZIGOWINA("BA"), BRAZIL("BR"), BRITISH_VIRGIN_ISLANDS("VG"), BULGARIA("BG"),
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/HolidayCalendar.java:13: warning: no comment
+[WARNING] BAHAMAS("BS"), BELARUS("BY"), BELGIUM("BE"), BERMUDA("BM"), BOLIVIA("BO"), BOSNIA_HERZIGOWINA("BA"), BRAZIL("BR"), BRITISH_VIRGIN_ISLANDS("VG"), BULGARIA("BG"),
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/HolidayCalendar.java:13: warning: no comment
+[WARNING] BAHAMAS("BS"), BELARUS("BY"), BELGIUM("BE"), BERMUDA("BM"), BOLIVIA("BO"), BOSNIA_HERZIGOWINA("BA"), BRAZIL("BR"), BRITISH_VIRGIN_ISLANDS("VG"), BULGARIA("BG"),
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/HolidayCalendar.java:13: warning: no comment
+[WARNING] BAHAMAS("BS"), BELARUS("BY"), BELGIUM("BE"), BERMUDA("BM"), BOLIVIA("BO"), BOSNIA_HERZIGOWINA("BA"), BRAZIL("BR"), BRITISH_VIRGIN_ISLANDS("VG"), BULGARIA("BG"),
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/HolidayCalendar.java:13: warning: no comment
+[WARNING] BAHAMAS("BS"), BELARUS("BY"), BELGIUM("BE"), BERMUDA("BM"), BOLIVIA("BO"), BOSNIA_HERZIGOWINA("BA"), BRAZIL("BR"), BRITISH_VIRGIN_ISLANDS("VG"), BULGARIA("BG"),
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/HolidayCalendar.java:13: warning: no comment
+[WARNING] BAHAMAS("BS"), BELARUS("BY"), BELGIUM("BE"), BERMUDA("BM"), BOLIVIA("BO"), BOSNIA_HERZIGOWINA("BA"), BRAZIL("BR"), BRITISH_VIRGIN_ISLANDS("VG"), BULGARIA("BG"),
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/HolidayCalendar.java:14: warning: no comment
+[WARNING] CANADA(Locale.CANADA.getCountry()), CAYMAN_ISLANDS("KY"), CHILE("CL"), COLOMBIA("CO"), COSTA_RICA("CR"), CROATIA("HR"), CZECH_REPUBLIC("CZ"),
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/HolidayCalendar.java:14: warning: no comment
+[WARNING] CANADA(Locale.CANADA.getCountry()), CAYMAN_ISLANDS("KY"), CHILE("CL"), COLOMBIA("CO"), COSTA_RICA("CR"), CROATIA("HR"), CZECH_REPUBLIC("CZ"),
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/HolidayCalendar.java:14: warning: no comment
+[WARNING] CANADA(Locale.CANADA.getCountry()), CAYMAN_ISLANDS("KY"), CHILE("CL"), COLOMBIA("CO"), COSTA_RICA("CR"), CROATIA("HR"), CZECH_REPUBLIC("CZ"),
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/HolidayCalendar.java:14: warning: no comment
+[WARNING] CANADA(Locale.CANADA.getCountry()), CAYMAN_ISLANDS("KY"), CHILE("CL"), COLOMBIA("CO"), COSTA_RICA("CR"), CROATIA("HR"), CZECH_REPUBLIC("CZ"),
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/HolidayCalendar.java:14: warning: no comment
+[WARNING] CANADA(Locale.CANADA.getCountry()), CAYMAN_ISLANDS("KY"), CHILE("CL"), COLOMBIA("CO"), COSTA_RICA("CR"), CROATIA("HR"), CZECH_REPUBLIC("CZ"),
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/HolidayCalendar.java:14: warning: no comment
+[WARNING] CANADA(Locale.CANADA.getCountry()), CAYMAN_ISLANDS("KY"), CHILE("CL"), COLOMBIA("CO"), COSTA_RICA("CR"), CROATIA("HR"), CZECH_REPUBLIC("CZ"),
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/HolidayCalendar.java:14: warning: no comment
+[WARNING] CANADA(Locale.CANADA.getCountry()), CAYMAN_ISLANDS("KY"), CHILE("CL"), COLOMBIA("CO"), COSTA_RICA("CR"), CROATIA("HR"), CZECH_REPUBLIC("CZ"),
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/HolidayCalendar.java:15: warning: no comment
+[WARNING] DENMARK("DK"), DOW_JONES_STOXX("DJ_STOXX"),
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/HolidayCalendar.java:15: warning: no comment
+[WARNING] DENMARK("DK"), DOW_JONES_STOXX("DJ_STOXX"),
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/HolidayCalendar.java:16: warning: no comment
+[WARNING] ECUADOR("EC"), EGYPT("EG"), ESTONIA("EE"), ETHIOPIA("ET"),
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/HolidayCalendar.java:16: warning: no comment
+[WARNING] ECUADOR("EC"), EGYPT("EG"), ESTONIA("EE"), ETHIOPIA("ET"),
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/HolidayCalendar.java:16: warning: no comment
+[WARNING] ECUADOR("EC"), EGYPT("EG"), ESTONIA("EE"), ETHIOPIA("ET"),
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/HolidayCalendar.java:16: warning: no comment
+[WARNING] ECUADOR("EC"), EGYPT("EG"), ESTONIA("EE"), ETHIOPIA("ET"),
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/HolidayCalendar.java:17: warning: no comment
+[WARNING] FINLAND("FI"), FRANCE(Locale.FRANCE.getCountry()),
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/HolidayCalendar.java:17: warning: no comment
+[WARNING] FINLAND("FI"), FRANCE(Locale.FRANCE.getCountry()),
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/HolidayCalendar.java:18: warning: no comment
+[WARNING] GERMANY(Locale.GERMANY.getCountry()), GUERNSEY("GG"), GREECE("GR"),
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/HolidayCalendar.java:18: warning: no comment
+[WARNING] GERMANY(Locale.GERMANY.getCountry()), GUERNSEY("GG"), GREECE("GR"),
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/HolidayCalendar.java:18: warning: no comment
+[WARNING] GERMANY(Locale.GERMANY.getCountry()), GUERNSEY("GG"), GREECE("GR"),
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/HolidayCalendar.java:19: warning: no comment
+[WARNING] HONG_KONG("HK"), HUNGARY("HU"),
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/HolidayCalendar.java:19: warning: no comment
+[WARNING] HONG_KONG("HK"), HUNGARY("HU"),
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/HolidayCalendar.java:20: warning: no comment
+[WARNING] ICELAND("IS"), IRELAND("IE"), ISLE_OF_MAN("IM"), ITALY(Locale.ITALY.getCountry()),
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/HolidayCalendar.java:20: warning: no comment
+[WARNING] ICELAND("IS"), IRELAND("IE"), ISLE_OF_MAN("IM"), ITALY(Locale.ITALY.getCountry()),
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/HolidayCalendar.java:20: warning: no comment
+[WARNING] ICELAND("IS"), IRELAND("IE"), ISLE_OF_MAN("IM"), ITALY(Locale.ITALY.getCountry()),
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/HolidayCalendar.java:20: warning: no comment
+[WARNING] ICELAND("IS"), IRELAND("IE"), ISLE_OF_MAN("IM"), ITALY(Locale.ITALY.getCountry()),
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/HolidayCalendar.java:21: warning: no comment
+[WARNING] JAPAN("JP"), JERSEY("JE"),
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/HolidayCalendar.java:21: warning: no comment
+[WARNING] JAPAN("JP"), JERSEY("JE"),
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/HolidayCalendar.java:22: warning: no comment
+[WARNING] KAZAKHSTAN("KZ"), KOSOVO("XK"),
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/HolidayCalendar.java:22: warning: no comment
+[WARNING] KAZAKHSTAN("KZ"), KOSOVO("XK"),
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/HolidayCalendar.java:23: warning: no comment
+[WARNING] LATVIA("LV"), LIECHTENSTEIN("LI"), LITHUANIA("LT"), LONDON_METAL_EXCHANGE("LME"), LUXEMBOURG("LU"),
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/HolidayCalendar.java:23: warning: no comment
+[WARNING] LATVIA("LV"), LIECHTENSTEIN("LI"), LITHUANIA("LT"), LONDON_METAL_EXCHANGE("LME"), LUXEMBOURG("LU"),
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/HolidayCalendar.java:23: warning: no comment
+[WARNING] LATVIA("LV"), LIECHTENSTEIN("LI"), LITHUANIA("LT"), LONDON_METAL_EXCHANGE("LME"), LUXEMBOURG("LU"),
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/HolidayCalendar.java:23: warning: no comment
+[WARNING] LATVIA("LV"), LIECHTENSTEIN("LI"), LITHUANIA("LT"), LONDON_METAL_EXCHANGE("LME"), LUXEMBOURG("LU"),
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/HolidayCalendar.java:23: warning: no comment
+[WARNING] LATVIA("LV"), LIECHTENSTEIN("LI"), LITHUANIA("LT"), LONDON_METAL_EXCHANGE("LME"), LUXEMBOURG("LU"),
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/HolidayCalendar.java:24: warning: no comment
+[WARNING] MACEDONIA("MK"), MALTA("MT"), MAURITIUS("MU"), MEXICO("MX"), MOLDOVA("MD"), MONTENEGRO("ME"),
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-core/src/main/java/de/focus_shift/jollyday/core/HolidayCalendar.java:24: warning: no comment
+[WARNING] MACEDONIA("MK"), MALTA("MT"), MAURITIUS("MU"), MEXICO("MX"), MOLDOVA("MD"), MONTENEGRO("ME"),
+[WARNING] ^
+[WARNING] 100 warnings
+[INFO] Building jar: /home/slee/jollyday/jollyday-core/target/jollyday-core-0.25.0-SNAPSHOT-javadoc.jar
+[INFO] 
+[INFO] ------------------< de.focus-shift:jollyday-jackson >-------------------
+[INFO] Building Jollyday with Jackson 0.25.0-SNAPSHOT                     [3/5]
+[INFO]   from jollyday-jackson/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ jollyday-jackson ---
+[INFO] Deleting /home/slee/jollyday/jollyday-jackson/target
+[INFO] 
+[INFO] --- enforcer:3.4.1:enforce (enforce-versions) @ jollyday-jackson ---
+[INFO] Rule 2: org.apache.maven.plugins.enforcer.RestrictImports passed
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ jollyday-jackson ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.12.1:compile (default-compile) @ jollyday-jackson ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 45 source files with javac [debug target 11 module-path] to target/classes
+[WARNING] system modules path not set in conjunction with -source 11
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/module-info.java:[23,36] module not found: de.focus_shift.jollyday.jackson.test
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/module-info.java:[26,36] module not found: de.focus_shift.jollyday.jackson.test
+[INFO] 
+[INFO] --- bundle:5.1.9:manifest (bundle-manifest) @ jollyday-jackson ---
+[INFO] No MANIFEST.MF file found, generating manifest.
+[INFO] Writing manifest: /home/slee/jollyday/jollyday-jackson/target/classes/META-INF/MANIFEST.MF
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ jollyday-jackson ---
+[INFO] skip non existing resourceDirectory /home/slee/jollyday/jollyday-jackson/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.12.1:testCompile (default-testCompile) @ jollyday-jackson ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 11 source files with javac [debug target 11 module-path] to target/test-classes
+[WARNING] system modules path not set in conjunction with -source 11
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ jollyday-jackson ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running de.focus_shift.jollyday.jackson.test.FixedWeekdayInMonthParserTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.128 s -- in de.focus_shift.jollyday.jackson.test.FixedWeekdayInMonthParserTest
+[INFO] Running de.focus_shift.jollyday.jackson.test.XMLUtilTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.660 s -- in de.focus_shift.jollyday.jackson.test.XMLUtilTest
+[INFO] Running de.focus_shift.jollyday.jackson.test.EthiopianOrthodoxHolidayParserTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.031 s -- in de.focus_shift.jollyday.jackson.test.EthiopianOrthodoxHolidayParserTest
+[INFO] Running de.focus_shift.jollyday.jackson.test.RelativeToEasterSundayParserTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s -- in de.focus_shift.jollyday.jackson.test.RelativeToEasterSundayParserTest
+[INFO] Running de.focus_shift.jollyday.jackson.test.FixedWeekdayBetweenFixedParserTest
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.054 s -- in de.focus_shift.jollyday.jackson.test.FixedWeekdayBetweenFixedParserTest
+[INFO] Running de.focus_shift.jollyday.jackson.test.FixedWeekdayRelativeToFixedParserTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.040 s -- in de.focus_shift.jollyday.jackson.test.FixedWeekdayRelativeToFixedParserTest
+[INFO] Running de.focus_shift.jollyday.jackson.test.ChristianHolidayParserTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.045 s -- in de.focus_shift.jollyday.jackson.test.ChristianHolidayParserTest
+[INFO] Running de.focus_shift.jollyday.jackson.test.RelativeToFixedParserTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.010 s -- in de.focus_shift.jollyday.jackson.test.RelativeToFixedParserTest
+[INFO] Running de.focus_shift.jollyday.jackson.test.RelativeToWeekdayInMonthParserTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s -- in de.focus_shift.jollyday.jackson.test.RelativeToWeekdayInMonthParserTest
+[INFO] Running de.focus_shift.jollyday.jackson.test.FixedParserTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s -- in de.focus_shift.jollyday.jackson.test.FixedParserTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 55, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.3.0:jar (default-jar) @ jollyday-jackson ---
+[INFO] Building jar: /home/slee/jollyday/jollyday-jackson/target/jollyday-jackson-0.25.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- source:3.3.0:jar-no-fork (attach-sources) @ jollyday-jackson ---
+[INFO] Building jar: /home/slee/jollyday/jollyday-jackson/target/jollyday-jackson-0.25.0-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] --- javadoc:3.6.3:jar (attach-javadocs) @ jollyday-jackson ---
+[INFO] No previous run data found, generating javadoc.
+[WARNING] Javadoc Warnings
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/MoveableHoliday.java:33: warning: no @return
+[WARNING] public List<MovingCondition> getMovingCondition() {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/ChristianHoliday.java:5: warning: no comment
+[WARNING] public class ChristianHoliday extends MoveableHoliday {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/ChristianHoliday.java:11: warning: no comment
+[WARNING] protected ChronologyType chronology;
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/ChristianHoliday.java:8: warning: no comment
+[WARNING] protected ChristianHolidayType type;
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/ChristianHolidayType.java:25: warning: no comment
+[WARNING] public String value() {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/ChristianHolidayType.java:29: warning: no comment
+[WARNING] public static ChristianHolidayType fromValue(String v) {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/ChristianHolidayType.java:3: warning: no comment
+[WARNING] public enum ChristianHolidayType {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/ChristianHolidayType.java:7: warning: no comment
+[WARNING] ASCENSION_DAY,
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/ChristianHolidayType.java:11: warning: no comment
+[WARNING] ASH_WEDNESDAY,
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/ChristianHolidayType.java:17: warning: no comment
+[WARNING] CARNIVAL,
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/ChristianHolidayType.java:14: warning: no comment
+[WARNING] CLEAN_MONDAY,
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/ChristianHolidayType.java:9: warning: no comment
+[WARNING] CORPUS_CHRISTI,
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/ChristianHolidayType.java:21: warning: no comment
+[WARNING] EASTER,
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/ChristianHolidayType.java:6: warning: no comment
+[WARNING] EASTER_MONDAY,
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/ChristianHolidayType.java:18: warning: no comment
+[WARNING] EASTER_SATURDAY,
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/ChristianHolidayType.java:19: warning: no comment
+[WARNING] EASTER_TUESDAY,
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/ChristianHolidayType.java:13: warning: no comment
+[WARNING] GENERAL_PRAYER_DAY,
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/ChristianHolidayType.java:5: warning: no comment
+[WARNING] GOOD_FRIDAY,
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/ChristianHolidayType.java:12: warning: no comment
+[WARNING] MARDI_GRAS,
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/ChristianHolidayType.java:10: warning: no comment
+[WARNING] MAUNDY_THURSDAY,
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/ChristianHolidayType.java:16: warning: no comment
+[WARNING] PENTECOST,
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/ChristianHolidayType.java:22: warning: no comment
+[WARNING] PENTECOST_MONDAY,
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/ChristianHolidayType.java:20: warning: no comment
+[WARNING] SACRED_HEART,
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/ChristianHolidayType.java:15: warning: no comment
+[WARNING] SHROVE_MONDAY,
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/ChristianHolidayType.java:8: warning: no comment
+[WARNING] WHIT_MONDAY,
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/ChristianHolidayType.java:23: warning: no comment
+[WARNING] WHIT_SUNDAY;
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/ChronologyType.java:8: warning: no comment
+[WARNING] public String value() {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/ChronologyType.java:12: warning: no comment
+[WARNING] public static ChronologyType fromValue(String v) {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/ChronologyType.java:3: warning: no comment
+[WARNING] public enum ChronologyType {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/ChronologyType.java:6: warning: no comment
+[WARNING] GREGORIAN;
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/ChronologyType.java:5: warning: no comment
+[WARNING] JULIAN,
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/Configuration.java:85: warning: no @return
+[WARNING] public List<Configuration> getSubConfigurations() {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/Configuration.java:11: warning: no comment
+[WARNING] public class Configuration {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/Configuration.java:23: warning: no comment
+[WARNING] protected String description;
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/Configuration.java:21: warning: no comment
+[WARNING] protected String hierarchy;
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/Configuration.java:14: warning: no comment
+[WARNING] protected Holidays holidays;
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/Configuration.java:16: warning: no comment
+[WARNING] protected Sources sources;
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/Configuration.java:18: warning: no comment
+[WARNING] protected List<Configuration> subConfigurations;
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/EthiopianOrthodoxHoliday.java:5: warning: no comment
+[WARNING] public class EthiopianOrthodoxHoliday extends Holiday {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/EthiopianOrthodoxHoliday.java:8: warning: no comment
+[WARNING] protected EthiopianOrthodoxHolidayType type;
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/EthiopianOrthodoxHolidayType.java:9: warning: no comment
+[WARNING] public String value() {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/EthiopianOrthodoxHolidayType.java:13: warning: no comment
+[WARNING] public static EthiopianOrthodoxHolidayType fromValue(String v) {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/EthiopianOrthodoxHolidayType.java:3: warning: no comment
+[WARNING] public enum EthiopianOrthodoxHolidayType {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/EthiopianOrthodoxHolidayType.java:6: warning: no comment
+[WARNING] ENKUTATASH,
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/EthiopianOrthodoxHolidayType.java:7: warning: no comment
+[WARNING] MESKEL;
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/EthiopianOrthodoxHolidayType.java:5: warning: no comment
+[WARNING] TIMKAT,
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/Fixed.java:5: warning: no comment
+[WARNING] public class Fixed extends MoveableHoliday {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/Fixed.java:10: warning: no comment
+[WARNING] protected Integer day;
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/Fixed.java:8: warning: no comment
+[WARNING] protected Month month;
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/FixedWeekdayBetweenFixed.java:5: warning: no comment
+[WARNING] public class FixedWeekdayBetweenFixed extends Holiday {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/FixedWeekdayBetweenFixed.java:8: warning: no comment
+[WARNING] protected Fixed from;
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/FixedWeekdayBetweenFixed.java:10: warning: no comment
+[WARNING] protected Fixed to;
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/FixedWeekdayBetweenFixed.java:12: warning: no comment
+[WARNING] protected Weekday weekday;
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/FixedWeekdayInMonth.java:5: warning: no comment
+[WARNING] public class FixedWeekdayInMonth extends Holiday {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/FixedWeekdayInMonth.java:12: warning: no comment
+[WARNING] protected Month month;
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/FixedWeekdayInMonth.java:10: warning: no comment
+[WARNING] protected Weekday weekday;
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/FixedWeekdayInMonth.java:8: warning: no comment
+[WARNING] protected Which which;
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/FixedWeekdayRelativeToFixed.java:5: warning: no comment
+[WARNING] public class FixedWeekdayRelativeToFixed extends Holiday {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/FixedWeekdayRelativeToFixed.java:8: warning: no comment
+[WARNING] protected Fixed day;
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/FixedWeekdayRelativeToFixed.java:12: warning: no comment
+[WARNING] protected Weekday weekday;
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/FixedWeekdayRelativeToFixed.java:14: warning: no comment
+[WARNING] protected When when;
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/FixedWeekdayRelativeToFixed.java:10: warning: no comment
+[WARNING] protected Which which;
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/Holiday.java:5: warning: no comment
+[WARNING] public abstract class Holiday {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/Holiday.java:14: warning: no comment
+[WARNING] protected String descriptionPropertiesKey;
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/Holiday.java:12: warning: no comment
+[WARNING] protected HolidayCycleType every;
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/Holiday.java:16: warning: no comment
+[WARNING] protected HolidayType localizedType;
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/Holiday.java:8: warning: no comment
+[WARNING] protected Integer validFrom;
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/Holiday.java:10: warning: no comment
+[WARNING] protected Integer validTo;
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/HolidayCycleType.java:14: warning: no comment
+[WARNING] public String value() {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/HolidayCycleType.java:18: warning: no comment
+[WARNING] public static HolidayCycleType fromValue(String v) {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/HolidayCycleType.java:3: warning: no comment
+[WARNING] public enum HolidayCycleType {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/HolidayCycleType.java:12: warning: no comment
+[WARNING] EVEN_YEARS;
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/HolidayCycleType.java:5: warning: no comment
+[WARNING] EVERY_YEAR,
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/HolidayCycleType.java:9: warning: no comment
+[WARNING] FIVE_YEARS,
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/HolidayCycleType.java:8: warning: no comment
+[WARNING] FOUR_YEARS,
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/HolidayCycleType.java:11: warning: no comment
+[WARNING] ODD_YEARS,
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/HolidayCycleType.java:10: warning: no comment
+[WARNING] SIX_YEARS,
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/HolidayCycleType.java:7: warning: no comment
+[WARNING] THREE_YEARS,
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/HolidayCycleType.java:6: warning: no comment
+[WARNING] TWO_YEARS,
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/Holidays.java:51: warning: no @return
+[WARNING] public List<Fixed> getFixed() {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/Holidays.java:78: warning: no @return
+[WARNING] public List<RelativeToFixed> getRelativeToFixed() {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/Holidays.java:105: warning: no @return
+[WARNING] public List<RelativeToWeekdayInMonth> getRelativeToWeekdayInMonth() {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/Holidays.java:132: warning: no @return
+[WARNING] public List<FixedWeekdayInMonth> getFixedWeekday() {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/Holidays.java:159: warning: no @return
+[WARNING] public List<ChristianHoliday> getChristianHoliday() {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/Holidays.java:186: warning: no @return
+[WARNING] public List<IslamicHoliday> getIslamicHoliday() {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/Holidays.java:213: warning: no @return
+[WARNING] public List<FixedWeekdayBetweenFixed> getFixedWeekdayBetweenFixed() {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/Holidays.java:240: warning: no @return
+[WARNING] public List<FixedWeekdayRelativeToFixed> getFixedWeekdayRelativeToFixed() {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/Holidays.java:267: warning: no @return
+[WARNING] public List<EthiopianOrthodoxHoliday> getEthiopianOrthodoxHoliday() {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/Holidays.java:294: warning: no @return
+[WARNING] public List<RelativeToEasterSunday> getRelativeToEasterSunday() {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/Holidays.java:8: warning: no comment
+[WARNING] public class Holidays {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/Holidays.java:19: warning: no comment
+[WARNING] protected List<ChristianHoliday> christianHoliday;
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/Holidays.java:27: warning: no comment
+[WARNING] protected List<EthiopianOrthodoxHoliday> ethiopianOrthodoxHoliday;
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/Holidays.java:11: warning: no comment
+[WARNING] protected List<Fixed> fixed;
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/Holidays.java:17: warning: no comment
+[WARNING] protected List<FixedWeekdayInMonth> fixedWeekday;
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/Holidays.java:23: warning: no comment
+[WARNING] protected List<FixedWeekdayBetweenFixed> fixedWeekdayBetweenFixed;
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/Holidays.java:25: warning: no comment
+[WARNING] protected List<FixedWeekdayRelativeToFixed> fixedWeekdayRelativeToFixed;
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/Holidays.java:21: warning: no comment
+[WARNING] protected List<IslamicHoliday> islamicHoliday;
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/Holidays.java:29: warning: no comment
+[WARNING] protected List<RelativeToEasterSunday> relativeToEasterSunday;
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/Holidays.java:13: warning: no comment
+[WARNING] protected List<RelativeToFixed> relativeToFixed;
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jackson/src/main/java/de/focus_shift/jollyday/jackson/mapping/Holidays.java:15: warning: no comment
+[WARNING] protected List<RelativeToWeekdayInMonth> relativeToWeekdayInMonth;
+[WARNING] ^
+[WARNING] 100 warnings
+[INFO] Building jar: /home/slee/jollyday/jollyday-jackson/target/jollyday-jackson-0.25.0-SNAPSHOT-javadoc.jar
+[INFO] 
+[INFO] --------------------< de.focus-shift:jollyday-jaxb >--------------------
+[INFO] Building Jollyday with Jakarta XML Binding (JAXB) 0.25.0-SNAPSHOT  [4/5]
+[INFO]   from jollyday-jaxb/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ jollyday-jaxb ---
+[INFO] Deleting /home/slee/jollyday/jollyday-jaxb/target
+[INFO] 
+[INFO] --- enforcer:3.4.1:enforce (enforce-versions) @ jollyday-jaxb ---
+[INFO] Rule 2: org.apache.maven.plugins.enforcer.RestrictImports passed
+[INFO] 
+[INFO] --- dependency:3.6.1:unpack-dependencies (extract-xsd) @ jollyday-jaxb ---
+[INFO] 
+[INFO] --- jaxb2:3.1.0:xjc (generate) @ jollyday-jaxb ---
+[INFO] Created EpisodePath [/home/slee/jollyday/jollyday-jaxb/target/generated-sources/jaxb/META-INF/JAXB]: true
+[INFO] Ignored given or default xjbSources [/home/slee/jollyday/jollyday-jaxb/src/main/xjb], since it is not an existent file or directory.
+[INFO] Created EpisodePath [/home/slee/jollyday/jollyday-jaxb/target/generated-sources/jaxb/META-INF/JAXB]: true
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ jollyday-jaxb ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 1 resource from target/generated-sources/jaxb to target/classes
+[INFO] Copying 1 resource from target/generated-sources/jaxb to target/classes
+[INFO] 
+[INFO] --- compiler:3.12.1:compile (default-compile) @ jollyday-jaxb ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 47 source files with javac [debug target 11 module-path] to target/classes
+[WARNING] system modules path not set in conjunction with -source 11
+[WARNING] /home/slee/jollyday/jollyday-jaxb/src/main/java/module-info.java:[20,33] module not found: de.focus_shift.jollyday.jaxb.test
+[WARNING] /home/slee/jollyday/jollyday-jaxb/src/main/java/module-info.java:[22,33] module not found: de.focus_shift.jollyday.jaxb.test
+[INFO] 
+[INFO] --- bundle:5.1.9:manifest (bundle-manifest) @ jollyday-jaxb ---
+[INFO] No MANIFEST.MF file found, generating manifest.
+[INFO] Writing manifest: /home/slee/jollyday/jollyday-jaxb/target/classes/META-INF/MANIFEST.MF
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ jollyday-jaxb ---
+[INFO] skip non existing resourceDirectory /home/slee/jollyday/jollyday-jaxb/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.12.1:testCompile (default-testCompile) @ jollyday-jaxb ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 11 source files with javac [debug target 11 module-path] to target/test-classes
+[WARNING] system modules path not set in conjunction with -source 11
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ jollyday-jaxb ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running de.focus_shift.jollyday.jaxb.test.FixedWeekdayInMonthParserTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.135 s -- in de.focus_shift.jollyday.jaxb.test.FixedWeekdayInMonthParserTest
+[INFO] Running de.focus_shift.jollyday.jaxb.test.XMLUtilTest
+16:35:40.919 [main] WARN de.focus_shift.jollyday.jaxb.XMLUtil -- Could not create JAXB context using the current threads context classloader. Falling back to ObjectFactory class classloader.
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.787 s -- in de.focus_shift.jollyday.jaxb.test.XMLUtilTest
+[INFO] Running de.focus_shift.jollyday.jaxb.test.EthiopianOrthodoxHolidayParserTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.031 s -- in de.focus_shift.jollyday.jaxb.test.EthiopianOrthodoxHolidayParserTest
+[INFO] Running de.focus_shift.jollyday.jaxb.test.RelativeToEasterSundayParserTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.038 s -- in de.focus_shift.jollyday.jaxb.test.RelativeToEasterSundayParserTest
+[INFO] Running de.focus_shift.jollyday.jaxb.test.FixedWeekdayBetweenFixedParserTest
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.084 s -- in de.focus_shift.jollyday.jaxb.test.FixedWeekdayBetweenFixedParserTest
+[INFO] Running de.focus_shift.jollyday.jaxb.test.FixedWeekdayRelativeToFixedParserTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.043 s -- in de.focus_shift.jollyday.jaxb.test.FixedWeekdayRelativeToFixedParserTest
+[INFO] Running de.focus_shift.jollyday.jaxb.test.ChristianHolidayParserTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.107 s -- in de.focus_shift.jollyday.jaxb.test.ChristianHolidayParserTest
+[INFO] Running de.focus_shift.jollyday.jaxb.test.RelativeToFixedParserTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s -- in de.focus_shift.jollyday.jaxb.test.RelativeToFixedParserTest
+[INFO] Running de.focus_shift.jollyday.jaxb.test.RelativeToWeekdayInMonthParserTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 s -- in de.focus_shift.jollyday.jaxb.test.RelativeToWeekdayInMonthParserTest
+[INFO] Running de.focus_shift.jollyday.jaxb.test.FixedParserTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.030 s -- in de.focus_shift.jollyday.jaxb.test.FixedParserTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 51, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.3.0:jar (default-jar) @ jollyday-jaxb ---
+[INFO] Building jar: /home/slee/jollyday/jollyday-jaxb/target/jollyday-jaxb-0.25.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- source:3.3.0:jar-no-fork (attach-sources) @ jollyday-jaxb ---
+[INFO] Building jar: /home/slee/jollyday/jollyday-jaxb/target/jollyday-jaxb-0.25.0-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] --- javadoc:3.6.3:jar (attach-javadocs) @ jollyday-jaxb ---
+[INFO] No previous run data found, generating javadoc.
+[WARNING] Javadoc Warnings
+[WARNING] /home/slee/jollyday/jollyday-jaxb/src/main/java/de/focus_shift/jollyday/jaxb/JaxbChristianHoliday.java:19: warning: no comment
+[WARNING] public class JaxbChristianHoliday implements ChristianHoliday {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jaxb/src/main/java/de/focus_shift/jollyday/jaxb/JaxbChristianHoliday.java:23: warning: no comment
+[WARNING] public JaxbChristianHoliday(de.focus_shift.jollyday.jaxb.mapping.ChristianHoliday christianHoliday) {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jaxb/src/main/java/de/focus_shift/jollyday/jaxb/JaxbConfiguration.java:9: warning: no comment
+[WARNING] public class JaxbConfiguration implements Configuration {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jaxb/src/main/java/de/focus_shift/jollyday/jaxb/JaxbConfiguration.java:13: warning: no comment
+[WARNING] public JaxbConfiguration(de.focus_shift.jollyday.jaxb.mapping.Configuration xmlConfiguration) {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jaxb/src/main/java/de/focus_shift/jollyday/jaxb/JaxbConfigurationService.java:11: warning: no comment
+[WARNING] public class JaxbConfigurationService implements ConfigurationService {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jaxb/src/main/java/de/focus_shift/jollyday/jaxb/JaxbEthiopianOrthodoxHoliday.java:10: warning: no comment
+[WARNING] public class JaxbEthiopianOrthodoxHoliday implements EthiopianOrthodoxHoliday {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jaxb/src/main/java/de/focus_shift/jollyday/jaxb/JaxbEthiopianOrthodoxHoliday.java:14: warning: no comment
+[WARNING] public JaxbEthiopianOrthodoxHoliday(de.focus_shift.jollyday.jaxb.mapping.EthiopianOrthodoxHoliday ethiopianOrthodoxHoliday) {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jaxb/src/main/java/de/focus_shift/jollyday/jaxb/JaxbFixed.java:15: warning: no comment
+[WARNING] public class JaxbFixed implements Fixed {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jaxb/src/main/java/de/focus_shift/jollyday/jaxb/JaxbFixed.java:21: warning: no comment
+[WARNING] public JaxbFixed(de.focus_shift.jollyday.jaxb.mapping.Fixed fixed) {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jaxb/src/main/java/de/focus_shift/jollyday/jaxb/JaxbFixedWeekdayBetweenFixed.java:12: warning: no comment
+[WARNING] public class JaxbFixedWeekdayBetweenFixed implements FixedWeekdayBetweenFixed {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jaxb/src/main/java/de/focus_shift/jollyday/jaxb/JaxbFixedWeekdayBetweenFixed.java:16: warning: no comment
+[WARNING] public JaxbFixedWeekdayBetweenFixed(de.focus_shift.jollyday.jaxb.mapping.FixedWeekdayBetweenFixed fixedWeekdayInMonth) {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jaxb/src/main/java/de/focus_shift/jollyday/jaxb/JaxbFixedWeekdayInMonth.java:12: warning: no comment
+[WARNING] public class JaxbFixedWeekdayInMonth implements FixedWeekdayInMonth {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jaxb/src/main/java/de/focus_shift/jollyday/jaxb/JaxbFixedWeekdayInMonth.java:16: warning: no comment
+[WARNING] public JaxbFixedWeekdayInMonth(de.focus_shift.jollyday.jaxb.mapping.FixedWeekdayInMonth fixedWeekdayInMonth) {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jaxb/src/main/java/de/focus_shift/jollyday/jaxb/JaxbFixedWeekdayRelativeToFixed.java:14: warning: no comment
+[WARNING] public class JaxbFixedWeekdayRelativeToFixed implements FixedWeekdayRelativeToFixed {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jaxb/src/main/java/de/focus_shift/jollyday/jaxb/JaxbFixedWeekdayRelativeToFixed.java:18: warning: no comment
+[WARNING] public JaxbFixedWeekdayRelativeToFixed(de.focus_shift.jollyday.jaxb.mapping.FixedWeekdayRelativeToFixed fixedWeekdayRelativeToFixed) {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jaxb/src/main/java/de/focus_shift/jollyday/jaxb/JaxbHolidays.java:20: warning: no comment
+[WARNING] public class JaxbHolidays implements Holidays {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jaxb/src/main/java/de/focus_shift/jollyday/jaxb/JaxbHolidays.java:24: warning: no comment
+[WARNING] public JaxbHolidays(de.focus_shift.jollyday.jaxb.mapping.Holidays holidays) {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jaxb/src/main/java/de/focus_shift/jollyday/jaxb/JaxbIslamicHoliday.java:15: warning: no comment
+[WARNING] public class JaxbIslamicHoliday implements IslamicHoliday {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jaxb/src/main/java/de/focus_shift/jollyday/jaxb/JaxbIslamicHoliday.java:19: warning: no comment
+[WARNING] public JaxbIslamicHoliday(de.focus_shift.jollyday.jaxb.mapping.IslamicHoliday christianHoliday) {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jaxb/src/main/java/de/focus_shift/jollyday/jaxb/JaxbMovingCondition.java:9: warning: no comment
+[WARNING] public class JaxbMovingCondition implements MovingCondition {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jaxb/src/main/java/de/focus_shift/jollyday/jaxb/JaxbMovingCondition.java:13: warning: no comment
+[WARNING] public JaxbMovingCondition(de.focus_shift.jollyday.jaxb.mapping.MovingCondition jaxbMovingCondition) {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jaxb/src/main/java/de/focus_shift/jollyday/jaxb/JaxbRelativeToEasterSunday.java:15: warning: no comment
+[WARNING] public class JaxbRelativeToEasterSunday implements RelativeToEasterSunday {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jaxb/src/main/java/de/focus_shift/jollyday/jaxb/JaxbRelativeToEasterSunday.java:19: warning: no comment
+[WARNING] public JaxbRelativeToEasterSunday(de.focus_shift.jollyday.jaxb.mapping.RelativeToEasterSunday relativeToEasterSunday) {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jaxb/src/main/java/de/focus_shift/jollyday/jaxb/JaxbRelativeToFixed.java:13: warning: no comment
+[WARNING] public class JaxbRelativeToFixed implements RelativeToFixed {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jaxb/src/main/java/de/focus_shift/jollyday/jaxb/JaxbRelativeToFixed.java:17: warning: no comment
+[WARNING] public JaxbRelativeToFixed(de.focus_shift.jollyday.jaxb.mapping.RelativeToFixed relativeToFixed) {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jaxb/src/main/java/de/focus_shift/jollyday/jaxb/JaxbRelativeToWeekdayInMonth.java:13: warning: no comment
+[WARNING] public class JaxbRelativeToWeekdayInMonth implements RelativeToWeekdayInMonth {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jaxb/src/main/java/de/focus_shift/jollyday/jaxb/JaxbRelativeToWeekdayInMonth.java:17: warning: no comment
+[WARNING] public JaxbRelativeToWeekdayInMonth(de.focus_shift.jollyday.jaxb.mapping.RelativeToWeekdayInMonth relativeToWeekdayInMonth) {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jaxb/src/main/java/de/focus_shift/jollyday/jaxb/XMLUtil.java:19: warning: no comment
+[WARNING] public class XMLUtil {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jaxb/src/main/java/de/focus_shift/jollyday/jaxb/XMLUtil.java:97: warning: no comment
+[WARNING] public static class JAXBContextCreator {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jaxb/src/main/java/de/focus_shift/jollyday/jaxb/XMLUtil.java:98: warning: no comment
+[WARNING] public JAXBContext create(String packageName, ClassLoader classLoader) throws JAXBException {
+[WARNING] ^
+[WARNING] /home/slee/jollyday/jollyday-jaxb/src/main/java/module-info.java:4: warning: no comment
+[WARNING] module de.focus_shift.jollyday.jaxb {
+[WARNING] ^
+[WARNING] 31 warnings
+[INFO] Building jar: /home/slee/jollyday/jollyday-jaxb/target/jollyday-jaxb-0.25.0-SNAPSHOT-javadoc.jar
+[INFO] 
+[INFO] -------------------< de.focus-shift:jollyday-tests >--------------------
+[INFO] Building Jollyday Tests 0.25.0-SNAPSHOT                            [5/5]
+[INFO]   from jollyday-tests/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ jollyday-tests ---
+[INFO] Deleting /home/slee/jollyday/jollyday-tests/target
+[INFO] 
+[INFO] --- enforcer:3.4.1:enforce (enforce-versions) @ jollyday-tests ---
+[INFO] Rule 2: org.apache.maven.plugins.enforcer.RestrictImports passed
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ jollyday-tests ---
+[INFO] skip non existing resourceDirectory /home/slee/jollyday/jollyday-tests/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.12.1:compile (default-compile) @ jollyday-tests ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ jollyday-tests ---
+[INFO] Copying 170 resources from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.12.1:testCompile (default-testCompile) @ jollyday-tests ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 44 source files with javac [debug target 11] to target/test-classes
+[WARNING] system modules path not set in conjunction with -source 11
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ jollyday-tests ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running de.focus_shift.jollyday.tests.CalendarHierarchyTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.066 s -- in de.focus_shift.jollyday.tests.CalendarHierarchyTest
+[INFO] Running de.focus_shift.jollyday.tests.HolidayManagerTest
+[INFO] Running de.focus_shift.jollyday.tests.HolidayManagerTest$Instantiation
+[INFO] Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.037 s -- in de.focus_shift.jollyday.tests.HolidayManagerTest$Instantiation
+[INFO] Running de.focus_shift.jollyday.tests.HolidayManagerTest$Caching
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.038 s -- in de.focus_shift.jollyday.tests.HolidayManagerTest$Caching
+[INFO] Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.436 s -- in de.focus_shift.jollyday.tests.HolidayManagerTest
+[INFO] Running de.focus_shift.jollyday.tests.country.HolidayBGTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.045 s -- in de.focus_shift.jollyday.tests.country.HolidayBGTest
+[INFO] Running de.focus_shift.jollyday.tests.country.HolidayALTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.038 s -- in de.focus_shift.jollyday.tests.country.HolidayALTest
+[INFO] Running de.focus_shift.jollyday.tests.country.HolidayKYTest
+[INFO] Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.309 s -- in de.focus_shift.jollyday.tests.country.HolidayKYTest
+[INFO] Running de.focus_shift.jollyday.tests.country.HolidayVGTest
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.122 s -- in de.focus_shift.jollyday.tests.country.HolidayVGTest
+[INFO] Running de.focus_shift.jollyday.tests.country.HolidayIMTest
+[INFO] Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.169 s -- in de.focus_shift.jollyday.tests.country.HolidayIMTest
+[INFO] Running de.focus_shift.jollyday.tests.country.HolidayAETest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 s -- in de.focus_shift.jollyday.tests.country.HolidayAETest
+[INFO] Running de.focus_shift.jollyday.tests.country.HolidayESTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.060 s -- in de.focus_shift.jollyday.tests.country.HolidayESTest
+[INFO] Running de.focus_shift.jollyday.tests.country.HolidayAUTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.129 s -- in de.focus_shift.jollyday.tests.country.HolidayAUTest
+[INFO] Running de.focus_shift.jollyday.tests.country.HolidayCHTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.042 s -- in de.focus_shift.jollyday.tests.country.HolidayCHTest
+[INFO] Running de.focus_shift.jollyday.tests.country.HolidayROTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.032 s -- in de.focus_shift.jollyday.tests.country.HolidayROTest
+[INFO] Running de.focus_shift.jollyday.tests.country.HolidaySGTest
+[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.150 s -- in de.focus_shift.jollyday.tests.country.HolidaySGTest
+[INFO] Running de.focus_shift.jollyday.tests.country.HolidayJETest
+[INFO] Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.156 s -- in de.focus_shift.jollyday.tests.country.HolidayJETest
+[INFO] Running de.focus_shift.jollyday.tests.country.HolidayGBTest
+[INFO] Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.215 s -- in de.focus_shift.jollyday.tests.country.HolidayGBTest
+[INFO] Running de.focus_shift.jollyday.tests.country.HolidayMTTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s -- in de.focus_shift.jollyday.tests.country.HolidayMTTest
+[INFO] Running de.focus_shift.jollyday.tests.country.HolidayMUTest
+[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.121 s -- in de.focus_shift.jollyday.tests.country.HolidayMUTest
+[INFO] Running de.focus_shift.jollyday.tests.country.HolidayNZTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.030 s -- in de.focus_shift.jollyday.tests.country.HolidayNZTest
+[INFO] Running de.focus_shift.jollyday.tests.country.HolidayDKTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 s -- in de.focus_shift.jollyday.tests.country.HolidayDKTest
+[INFO] Running de.focus_shift.jollyday.tests.country.HolidayHKTest
+[INFO] Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.226 s -- in de.focus_shift.jollyday.tests.country.HolidayHKTest
+[INFO] Running de.focus_shift.jollyday.tests.country.HolidayGGTest
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.090 s -- in de.focus_shift.jollyday.tests.country.HolidayGGTest
+[INFO] Running de.focus_shift.jollyday.tests.country.HolidayDETest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.106 s -- in de.focus_shift.jollyday.tests.country.HolidayDETest
+[INFO] Running de.focus_shift.jollyday.tests.country.HolidayFRTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 s -- in de.focus_shift.jollyday.tests.country.HolidayFRTest
+[INFO] Running de.focus_shift.jollyday.tests.country.HolidayUATest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.068 s -- in de.focus_shift.jollyday.tests.country.HolidayUATest
+[INFO] Running de.focus_shift.jollyday.tests.country.HolidayNYSETest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s -- in de.focus_shift.jollyday.tests.country.HolidayNYSETest
+[INFO] Running de.focus_shift.jollyday.tests.country.HolidayTRTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 s -- in de.focus_shift.jollyday.tests.country.HolidayTRTest
+[INFO] Running de.focus_shift.jollyday.tests.country.HolidaySETest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 s -- in de.focus_shift.jollyday.tests.country.HolidaySETest
+[INFO] Running de.focus_shift.jollyday.tests.country.HolidayUSTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.109 s -- in de.focus_shift.jollyday.tests.country.HolidayUSTest
+[INFO] Running de.focus_shift.jollyday.tests.country.HolidayEGTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.026 s -- in de.focus_shift.jollyday.tests.country.HolidayEGTest
+[INFO] Running de.focus_shift.jollyday.tests.country.HolidayBMTest
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.162 s -- in de.focus_shift.jollyday.tests.country.HolidayBMTest
+[INFO] Running de.focus_shift.jollyday.tests.country.HolidayUYTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 s -- in de.focus_shift.jollyday.tests.country.HolidayUYTest
+[INFO] Running de.focus_shift.jollyday.tests.country.HolidayFITest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s -- in de.focus_shift.jollyday.tests.country.HolidayFITest
+[INFO] Running de.focus_shift.jollyday.tests.country.HolidayISTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s -- in de.focus_shift.jollyday.tests.country.HolidayISTest
+[INFO] Running de.focus_shift.jollyday.tests.country.HolidayXKTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.044 s -- in de.focus_shift.jollyday.tests.country.HolidayXKTest
+[INFO] Running de.focus_shift.jollyday.tests.HolidayManagerPerformanceTest
+I 16:35:54.564 [.HolidayManagerPerformanceTest] isHoliday took 0.39507299270072993 millis average tested with 1096 calls.
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.205 s -- in de.focus_shift.jollyday.tests.HolidayManagerPerformanceTest
+[INFO] Running de.focus_shift.jollyday.tests.country.HolidayRSTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.410 s -- in de.focus_shift.jollyday.tests.country.HolidayRSTest
+[INFO] Running de.focus_shift.jollyday.tests.country.HolidayCHTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.586 s -- in de.focus_shift.jollyday.tests.country.HolidayCHTest
+[INFO] Running de.focus_shift.jollyday.tests.country.HolidayITTest
+[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.374 s -- in de.focus_shift.jollyday.tests.country.HolidayITTest
+[INFO] Running de.focus_shift.jollyday.tests.country.HolidayROTest
+[INFO] Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.098 s -- in de.focus_shift.jollyday.tests.country.HolidayROTest
+[INFO] Running de.focus_shift.jollyday.tests.country.HolidayNLTest
+[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.818 s -- in de.focus_shift.jollyday.tests.country.HolidayNLTest
+[INFO] Running de.focus_shift.jollyday.tests.country.HolidayMDTest
+[INFO] Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.728 s -- in de.focus_shift.jollyday.tests.country.HolidayMDTest
+[INFO] Running de.focus_shift.jollyday.tests.country.HolidayHRTest
+[INFO] Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.801 s -- in de.focus_shift.jollyday.tests.country.HolidayHRTest
+[INFO] Running de.focus_shift.jollyday.tests.country.HolidayNZTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.089 s -- in de.focus_shift.jollyday.tests.country.HolidayNZTest
+[INFO] Running de.focus_shift.jollyday.tests.country.HolidayDKTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.148 s -- in de.focus_shift.jollyday.tests.country.HolidayDKTest
+[INFO] Running de.focus_shift.jollyday.tests.country.HolidayCZTest
+[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.839 s -- in de.focus_shift.jollyday.tests.country.HolidayCZTest
+[INFO] Running de.focus_shift.jollyday.tests.country.HolidayLUTest
+[INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.793 s -- in de.focus_shift.jollyday.tests.country.HolidayLUTest
+[INFO] Running de.focus_shift.jollyday.tests.country.HolidaySITest
+[INFO] Tests run: 25, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.991 s -- in de.focus_shift.jollyday.tests.country.HolidaySITest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 395, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.3.0:jar (default-jar) @ jollyday-tests ---
+[INFO] Skipping packaging of the jar
+[INFO] 
+[INFO] --- source:3.3.0:jar-no-fork (attach-sources) @ jollyday-tests ---
+[INFO] No sources in project. Archive not created.
+[INFO] 
+[INFO] --- javadoc:3.6.3:jar (attach-javadocs) @ jollyday-tests ---
+[INFO] 
+[INFO] --- jacoco:0.8.11:report-aggregate (report) @ jollyday-tests ---
+[INFO] Analyzed bundle 'jollyday-core' with 58 classes
+[INFO] Analyzed bundle 'jollyday-jackson' with 45 classes
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Jollyday 0.25.0-SNAPSHOT:
+[INFO] 
+[INFO] Jollyday ........................................... SUCCESS [  1.418 s]
+[INFO] Jollyday Core ...................................... SUCCESS [ 19.511 s]
+[INFO] Jollyday with Jackson .............................. SUCCESS [  8.054 s]
+[INFO] Jollyday with Jakarta XML Binding (JAXB) ........... SUCCESS [  9.995 s]
+[INFO] Jollyday Tests ..................................... SUCCESS [ 20.149 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:00 min
+[INFO] Finished at: 2024-01-31T16:36:05-08:00
+[INFO] ------------------------------------------------------------------------
