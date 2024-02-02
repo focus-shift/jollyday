@@ -9,6 +9,10 @@
       <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
+    <Fixed month="JUNE" day="19" validFrom="2022" descriptionPropertiesKey="JUNETEENTH">
+      <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
     <Fixed month="JULY" day="4" descriptionPropertiesKey="INDEPENDENCE_DAY">
       <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
