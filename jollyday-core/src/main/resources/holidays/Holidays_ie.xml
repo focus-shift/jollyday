@@ -17,4 +17,11 @@
     <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
     <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
   </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_the_Republic_of_Ireland</Source>
+    <Source>https://www.citizensinformation.ie/en/employment/employment-rights-and-conditions/leave-and-holidays/public-holidays/</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:IE</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:IE</Source>
+  </Sources>
 </Configuration>
