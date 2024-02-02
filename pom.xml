@@ -57,6 +57,7 @@
     <module>jollyday-core</module>
     <module>jollyday-jackson</module>
     <module>jollyday-jaxb</module>
+    <module>jollyday-pojo</module>
   </modules>
 
   <developers>
