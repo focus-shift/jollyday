@@ -34,7 +34,7 @@ jobs:
       - name: Build
         run: ./mvnw -Pcoverage clean verify
       - name: Analyse with SonarCloud
-        if: ${{ matrix.java == 17 && matrix.os == 'ubuntu-latest' && (github.event_name != 'pull_request' || (github.event.pull_request.head.repo.full_name == github.repository && github.actor != 'dependabot[bot]')) }}
+        if: ${{ github.repository == 'focus-shift/jollyday' && matrix.java == 17 && matrix.os == 'ubuntu-latest' && (github.event_name != 'pull_request' || (github.event.pull_request.head.repo.full_name == github.repository && github.actor != 'dependabot[bot]')) }}
         run: >
           ./mvnw -Pcoverage verify
           sonar:sonar
