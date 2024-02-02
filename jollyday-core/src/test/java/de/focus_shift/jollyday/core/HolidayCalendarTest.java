@@ -1,17 +1,17 @@
 package de.focus_shift.jollyday.core;
 
-import org.junit.jupiter.api.Test;
+import static java.util.Arrays.stream;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.List;
 import java.util.Locale;
 import java.util.Set;
 
-import static java.util.Arrays.stream;
-import static org.assertj.core.api.Assertions.assertThat;
+import org.junit.jupiter.api.Test;
 
 class HolidayCalendarTest {
 
-  private static final List<String> noneIso3166Countries = List.of("DJ_STOXX", "LME", "NYSE", "TARGET", "XK");
+  private static final List<String> noneIso3166Countries = List.of("DJ_STOXX", "LME", "NYSE", "NYSE_EURONEXT", "TARGET", "XK");
 
   @Test
   void ensureThatAllCountryAreISO3166Conform() {
