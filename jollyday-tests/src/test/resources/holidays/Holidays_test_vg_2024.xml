@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration hierarchy="vg" description="Virgin Islands (British)"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="MARCH" day="4" descriptionPropertiesKey="STOUTTS_BIRTHDAY"/>
+    <Fixed month="MARCH" day="29" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+    <Fixed month="APRIL" day="1" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+    <Fixed month="MAY" day="20" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
+    <Fixed month="JUNE" day="14" descriptionPropertiesKey="SOVEREIGNS_BIRTHDAY"/>
+    <Fixed month="JULY" day="1" descriptionPropertiesKey="VIRGIN_ISLANDS_DAY"/>
+    <Fixed month="AUGUST" day="5" descriptionPropertiesKey="EMANCIPATION_MONDAY"/>
+    <Fixed month="AUGUST" day="6" descriptionPropertiesKey="EMANCIPATION_TUESDAY"/>
+    <Fixed month="AUGUST" day="7" descriptionPropertiesKey="EMANCIPATION_WEDNESDAY"/>
+    <Fixed month="OCTOBER" day="21" descriptionPropertiesKey="HEROES_AND_FOREPARENTS_DAY"/>
+    <Fixed month="NOVEMBER" day="25" descriptionPropertiesKey="1949_GREAT_MARCH_AND_RESTORATION"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://bvi.gov.vg/media-centre/cabinet-approves-2024-public-holidays</Source>
+  </Sources>
+</Configuration>
