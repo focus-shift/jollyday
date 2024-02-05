@@ -20,4 +20,12 @@
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
     <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY"/>
   </Holidays>
+
+  <Sources>
+    <Source>https://bvi.gov.vg/media-centre/june-16-public-holiday-lieu-june-9</Source>
+    <Source>https://bvi.gov.vg/media-centre/may-8-and-june-16-declared-public-holidays</Source>
+    <Source>https://bvi.gov.vg/media-centre/monday-may-8-public-holiday</Source>
+    <Source>https://bvi.gov.vg/media-centre/updatedofficialholidays20231</Source>
+    <Source>https://bvi.gov.vg/media-centre/cabinet-approves-2023-public-holidays</Source>
+  </Sources>
 </Configuration>

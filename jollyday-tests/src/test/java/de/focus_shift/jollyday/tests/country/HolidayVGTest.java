@@ -22,7 +22,7 @@ class HolidayVGTest extends AbstractCountryTestBase {
 
 
   @ParameterizedTest
-  @ValueSource(ints = {2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023})
+  @ValueSource(ints = {2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024})
   void testManagerVGStructure(final int year) {
     validateCalendarData(ISO_CODE, year, true);
   }

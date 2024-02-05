@@ -16,4 +16,9 @@
     <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="CHRISTMAS"/>
     <Fixed month="DECEMBER" day="27" descriptionPropertiesKey="BOXING_DAY"/>
   </Holidays>
+
+  <Sources>
+    <Source>https://archives.gov.ky/Archive/view_press_release/3836/2011-public-holidays</Source>
+    <Source>https://archives.gov.ky/Archive/view_press_release/3731/announcing-2011-holidays</Source>
+  </Sources>
 </Configuration>

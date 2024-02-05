@@ -20,4 +20,8 @@
     <Fixed month="OCTOBER" day="27" descriptionPropertiesKey="DIVALI"/>
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
   </Holidays>
+
+  <Sources>
+    <Source>https://pmo.govmu.org/CabinetDecision/2018/Cabinet_Decisions_taken_on_25_MAY_2018____.pdf</Source>
+  </Sources>
 </Configuration>
