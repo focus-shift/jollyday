@@ -1,23 +1,22 @@
 package de.focus_shift.jollyday.tests;
 
-import static de.focus_shift.jollyday.core.HolidayManager.getInstance;
-import static de.focus_shift.jollyday.core.ManagerParameters.create;
-import static java.util.stream.Collectors.toList;
-import static org.assertj.core.api.Assertions.assertThat;
-
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
-
-import org.junit.jupiter.api.Test;
-
 import com.vitorsvieira.iso.CountrySubdivision;
 import com.vitorsvieira.iso.ISOCountry;
 import com.vitorsvieira.iso.ISOCountrySubdivision;
 
 import de.focus_shift.jollyday.core.HolidayCalendar;
 import de.focus_shift.jollyday.core.HolidayManager;
+import org.junit.jupiter.api.Test;
 import scala.collection.JavaConverters;
+
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.List;
+
+import static de.focus_shift.jollyday.core.HolidayManager.getInstance;
+import static de.focus_shift.jollyday.core.ManagerParameters.create;
+import static java.util.stream.Collectors.toList;
+import static org.assertj.core.api.Assertions.assertThat;
 
 class CalendarHierarchyTest {
 
