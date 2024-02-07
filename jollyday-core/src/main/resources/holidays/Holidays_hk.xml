@@ -4,8 +4,6 @@
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
   <Holidays>
-    <!-- https://www.gov.hk/en/about/abouthk/holiday/index.htm -->
-    <!-- https://www.elegislation.gov.hk/hk/cap149!en-zh-Hant-HK.pdf -->
     <!-- all holidays in Hong Kong will be moved to the following weekday, that isn't a holiday, if they fall on a Sunday
     or such other day as the Chief Executive in Council may, by order in the Gazette, appoint in place of that day -->
 
@@ -633,4 +631,12 @@
     <ChristianHoliday type="EASTER_TUESDAY" validFrom="2021" validTo="2021" descriptionPropertiesKey="DAY_FOLLOWING_EASTER_MONDAY"/>
     <ChristianHoliday type="EASTER_MONDAY" validFrom="2022" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
   </Holidays>
+
+  <Sources>
+    <Source>https://www.gov.hk/en/about/abouthk/holiday/</Source>
+    <Source>https://www.elegislation.gov.hk/hk/cap149!en-zh-Hant-HK.pdf</Source>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Hong_Kong</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:HK</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:HK</Source>
+  </Sources>
 </Configuration>

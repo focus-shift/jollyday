@@ -36,9 +36,9 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <java.version>11</java.version>
 
-    <junit.version>5.10.1</junit.version>
+    <junit.version>5.10.2</junit.version>
     <mockito.version>5.10.0</mockito.version>
-    <assertj.version>3.25.2</assertj.version>
+    <assertj.version>3.25.3</assertj.version>
     <jqwik.version>1.8.2</jqwik.version>
 
     <!--suppress UnresolvedMavenProperty - for IDEA-->
@@ -129,7 +129,7 @@
       <dependency>
         <groupId>org.slf4j</groupId>
         <artifactId>slf4j-api</artifactId>
-        <version>2.0.11</version>
+        <version>2.0.12</version>
       </dependency>
 
       <!-- provide a slf4j binding to have logs for jollyday tests -->

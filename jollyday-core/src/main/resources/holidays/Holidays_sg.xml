@@ -239,4 +239,11 @@
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </IslamicHoliday>
   </Holidays>
+
+  <Sources>
+    <Source>https://www.mom.gov.sg/employment-practices/public-holidays</Source>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Singapore</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:SG</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:SG</Source>
+  </Sources>
 </Configuration>
