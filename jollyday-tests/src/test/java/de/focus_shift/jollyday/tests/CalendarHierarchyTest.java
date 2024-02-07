@@ -3,7 +3,6 @@ package de.focus_shift.jollyday.tests;
 import com.vitorsvieira.iso.CountrySubdivision;
 import com.vitorsvieira.iso.ISOCountry;
 import com.vitorsvieira.iso.ISOCountrySubdivision;
-
 import de.focus_shift.jollyday.core.HolidayCalendar;
 import de.focus_shift.jollyday.core.HolidayManager;
 import org.junit.jupiter.api.Test;

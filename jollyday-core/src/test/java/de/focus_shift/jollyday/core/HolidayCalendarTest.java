@@ -1,13 +1,13 @@
 package de.focus_shift.jollyday.core;
 
-import static java.util.Arrays.stream;
-import static org.assertj.core.api.Assertions.assertThat;
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
 import java.util.Locale;
 import java.util.Set;
 
-import org.junit.jupiter.api.Test;
+import static java.util.Arrays.stream;
+import static org.assertj.core.api.Assertions.assertThat;
 
 class HolidayCalendarTest {
 
