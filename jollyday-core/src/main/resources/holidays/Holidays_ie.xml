@@ -9,6 +9,7 @@
     <Fixed month="MARCH" day="17" descriptionPropertiesKey="ST_PATRICK"/>
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
     <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
+    <FixedWeekday which="FIRST" weekday="MONDAY" month="FEBRUARY" validFrom="2023" descriptionPropertiesKey="ST_BRIGID"/>
     <FixedWeekday which="FIRST" weekday="MONDAY" month="MAY" descriptionPropertiesKey="LABOUR_DAY"/>
     <FixedWeekday which="FIRST" weekday="MONDAY" month="JUNE" descriptionPropertiesKey="BANK_HOLIDAY"/>
     <FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="BANK_HOLIDAY"/>
