@@ -11,7 +11,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class HolidayCalendarTest {
 
-  private static final List<String> noneIso3166Countries = List.of("DJ_STOXX", "LME", "NYSE", "TARGET", "XK");
+  private static final List<String> noneIso3166Countries = List.of("DJ_STOXX", "LME", "NYSE", "NYSE_EURONEXT", "TARGET", "XK");
 
   @Test
   void ensureThatAllCountryAreISO3166Conform() {
