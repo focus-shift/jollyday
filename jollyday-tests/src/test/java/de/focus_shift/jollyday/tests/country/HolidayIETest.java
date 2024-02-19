@@ -94,7 +94,7 @@ class HolidayIETest extends AbstractCountryTestBase {
     assertThat(holidays)
       .isNotEmpty()
       .extracting(Holiday::getPropertiesKey)
-      .contains("holiday.description.ST_BRIGID");
+      .contains("ST_BRIGID");
   }
 
   @Test
