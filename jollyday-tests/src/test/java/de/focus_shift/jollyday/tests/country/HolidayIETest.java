@@ -4,6 +4,7 @@ import de.focus_shift.jollyday.core.Holiday;
 import de.focus_shift.jollyday.core.HolidayManager;
 import net.jqwik.api.ForAll;
 import net.jqwik.api.Property;
+import org.junit.jupiter.api.Test;
 import net.jqwik.time.api.constraints.YearRange;
 
 import java.time.LocalDate;
@@ -15,6 +16,7 @@ import static de.focus_shift.jollyday.core.HolidayType.OFFICIAL_HOLIDAY;
 import static de.focus_shift.jollyday.core.ManagerParameters.create;
 import static java.time.Month.DECEMBER;
 import static java.time.Month.JANUARY;
+import static java.time.Month.FEBRUARY;
 import static java.time.Month.MARCH;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -74,5 +76,33 @@ class HolidayIETest extends AbstractCountryTestBase {
       .isNotEmpty()
       .extracting(Holiday::getPropertiesKey)
       .contains("christian.EASTER_MONDAY");
+  }
+  @Property
+  void ensureStBrigidNotConfiguredBefore2023(@ForAll @YearRange(max = 2022) Year year) {
+    final HolidayManager holidayManager = HolidayManager.getInstance(create(IRELAND));
+    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    assertThat(holidays)
+      .isNotEmpty()
+      .extracting(Holiday::getPropertiesKey)
+      .doesNotContain("ST_BRIGID");
+  }
+
+  @Property
+  void ensureStBrigidIsConfiguredFrom2023(@ForAll @YearRange(min = 2023) Year year) {
+    final HolidayManager holidayManager = HolidayManager.getInstance(create(IRELAND));
+    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    assertThat(holidays)
+      .isNotEmpty()
+      .extracting(Holiday::getPropertiesKey)
+      .contains("ST_BRIGID");
+  }
+
+  @Test
+  void testStBrigidsDayOn2023() {
+    final HolidayManager holidayManagerIE = HolidayManager.getInstance(create(IRELAND));
+
+    final Set<Holiday> holidays2023 = holidayManagerIE.getHolidays(2023);
+    assertThat(holidays2023)
+      .contains(new Holiday(LocalDate.of(2023, FEBRUARY, 6), "ST_BRIGID", OFFICIAL_HOLIDAY));
   }
 }
