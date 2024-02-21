@@ -193,6 +193,9 @@
   <xsd:simpleType name="HolidayType">
     <xsd:restriction base="xsd:string">
       <xsd:enumeration value="OFFICIAL_HOLIDAY"/>
+      <xsd:enumeration value="BANK_HOLIDAY"/>
+      <xsd:enumeration value="SCHOOL_HOLIDAY"/>
+      <xsd:enumeration value="AUTHORITIES_HOLIDAY"/>
       <xsd:enumeration value="UNOFFICIAL_HOLIDAY"/>
     </xsd:restriction>
   </xsd:simpleType>
