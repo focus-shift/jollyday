@@ -9,7 +9,17 @@
     <Fixed month="MARCH" day="17" descriptionPropertiesKey="ST_PATRICK"/>
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
     <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
-    <FixedWeekday which="FIRST" weekday="MONDAY" month="FEBRUARY" validFrom="2023" descriptionPropertiesKey="ST_BRIGID"/>
+
+    <!-- The public holiday is the first Monday in February, except where St Brigid’s Day (1 February) happens to fall on a Friday, in which case Friday 1 February will be a public holiday. -->
+    <Fixed month="FEBRUARY" day="1" validFrom="2023" descriptionPropertiesKey="ST_BRIGID">
+      <MovingCondition substitute="TUESDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="WEDNESDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="THURSDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- <FixedWeekday which="FIRST" weekday="MONDAY" month="FEBRUARY" validFrom="2023" descriptionPropertiesKey="ST_BRIGID"/> -->
     <FixedWeekday which="FIRST" weekday="MONDAY" month="MAY" descriptionPropertiesKey="LABOUR_DAY"/>
     <FixedWeekday which="FIRST" weekday="MONDAY" month="JUNE" descriptionPropertiesKey="BANK_HOLIDAY"/>
     <FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="BANK_HOLIDAY"/>

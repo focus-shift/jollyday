@@ -77,6 +77,7 @@ class HolidayIETest extends AbstractCountryTestBase {
       .extracting(Holiday::getPropertiesKey)
       .contains("christian.EASTER_MONDAY");
   }
+
   @Property
   void ensureStBrigidNotConfiguredBefore2023(@ForAll @YearRange(max = 2022) Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(IRELAND));
@@ -105,4 +106,14 @@ class HolidayIETest extends AbstractCountryTestBase {
     assertThat(holidays2023)
       .contains(new Holiday(LocalDate.of(2023, FEBRUARY, 6), "ST_BRIGID", OFFICIAL_HOLIDAY));
   }
+
+  @Test
+  void testStBrigidsDayOn2024() {
+    final HolidayManager holidayManagerIE = HolidayManager.getInstance(create(IRELAND));
+
+    final Set<Holiday> holidays2024 = holidayManagerIE.getHolidays(2024);
+    assertThat(holidays2024)
+      .contains(new Holiday(LocalDate.of(2023, FEBRUARY, 5), "ST_BRIGID", OFFICIAL_HOLIDAY));
+  }
+
 }
