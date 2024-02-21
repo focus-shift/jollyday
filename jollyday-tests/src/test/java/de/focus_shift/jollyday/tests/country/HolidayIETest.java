@@ -113,7 +113,7 @@ class HolidayIETest extends AbstractCountryTestBase {
 
     final Set<Holiday> holidays2024 = holidayManagerIE.getHolidays(2024);
     assertThat(holidays2024)
-      .contains(new Holiday(LocalDate.of(2023, FEBRUARY, 5), "ST_BRIGID", OFFICIAL_HOLIDAY));
+      .contains(new Holiday(LocalDate.of(2024, FEBRUARY, 5), "ST_BRIGID", OFFICIAL_HOLIDAY));
   }
 
 }
