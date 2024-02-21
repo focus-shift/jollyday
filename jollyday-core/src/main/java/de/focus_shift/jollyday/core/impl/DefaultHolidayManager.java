@@ -3,6 +3,7 @@ package de.focus_shift.jollyday.core.impl;
 import de.focus_shift.jollyday.core.CalendarHierarchy;
 import de.focus_shift.jollyday.core.Holiday;
 import de.focus_shift.jollyday.core.HolidayManager;
+import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.parser.HolidayParser;
 import de.focus_shift.jollyday.core.spi.Configuration;
 import de.focus_shift.jollyday.core.spi.Holidays;
@@ -25,6 +26,7 @@ import java.util.Set;
 
 import static java.util.Arrays.copyOfRange;
 import static java.util.stream.Collectors.toCollection;
+import static java.util.stream.Collectors.toSet;
 import static java.util.stream.Collectors.toUnmodifiableSet;
 import static java.util.stream.IntStream.rangeClosed;
 
@@ -81,21 +83,41 @@ public class DefaultHolidayManager extends HolidayManager {
 
   /**
    * {@inheritDoc}
+   */
+  @Override
+  public Set<Holiday> getHolidays(int year, final HolidayType holidayType, final String... args) {
+    return getHolidays(year, args).stream()
+      .filter(holiday -> holiday.getType().equals(holidayType))
+      .collect(toSet());
+  }
+
+  /**
+   * {@inheritDoc}
    * <p>
    * Calls <code>getHolidays(year, args)</code> for each year within the
    * interval and returns a list of holidays which are then contained in the
    * interval.
    */
   @Override
-  public Set<Holiday> getHolidays(LocalDate startDateInclusive, LocalDate endDateInclusive, final String... args) {
+  public Set<Holiday> getHolidays(final LocalDate startDateInclusive, final LocalDate endDateInclusive, final String... args) {
     Objects.requireNonNull(startDateInclusive, "startDateInclusive is null");
-    Objects.requireNonNull(endDateInclusive, "endInclusive is null");
+    Objects.requireNonNull(endDateInclusive, "endDateInclusive is null");
 
     return rangeClosed(startDateInclusive.getYear(), endDateInclusive.getYear())
       .mapToObj(year -> getHolidays(year, args))
       .flatMap(Collection::stream)
       .filter(holiday -> !startDateInclusive.isAfter(holiday.getDate()) && !endDateInclusive.isBefore(holiday.getDate()))
       .collect(toUnmodifiableSet());
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public Set<Holiday> getHolidays(final LocalDate startDateInclusive, final LocalDate endDateInclusive, final HolidayType holidayType, final String... args) {
+    return getHolidays(startDateInclusive, endDateInclusive, args).stream()
+      .filter(holiday -> holiday.getType().equals(holidayType))
+      .collect(toSet());
   }
 
   /**
