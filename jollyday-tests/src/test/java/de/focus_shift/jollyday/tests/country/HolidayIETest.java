@@ -116,4 +116,48 @@ class HolidayIETest extends AbstractCountryTestBase {
       .contains(new Holiday(LocalDate.of(2024, FEBRUARY, 5), "ST_BRIGID", OFFICIAL_HOLIDAY));
   }
 
+  @Test
+  void testStBrigidsDayOn2025() {
+    final HolidayManager holidayManagerIE = HolidayManager.getInstance(create(IRELAND));
+
+    final Set<Holiday> holidays2025 = holidayManagerIE.getHolidays(2025);
+    assertThat(holidays2025)
+      .contains(new Holiday(LocalDate.of(2025, FEBRUARY, 3), "ST_BRIGID", OFFICIAL_HOLIDAY));
+  }
+
+  @Test
+  void testStBrigidsDayOn2026() {
+    final HolidayManager holidayManagerIE = HolidayManager.getInstance(create(IRELAND));
+
+    final Set<Holiday> holidays2026 = holidayManagerIE.getHolidays(2026);
+    assertThat(holidays2026)
+      .contains(new Holiday(LocalDate.of(2026, FEBRUARY, 2), "ST_BRIGID", OFFICIAL_HOLIDAY));
+  }
+
+  @Test
+  void testStBrigidsDayOn2027() {
+    final HolidayManager holidayManagerIE = HolidayManager.getInstance(create(IRELAND));
+
+    final Set<Holiday> holidays2027 = holidayManagerIE.getHolidays(2027);
+    assertThat(holidays2027)
+      .contains(new Holiday(LocalDate.of(2027, FEBRUARY, 1), "ST_BRIGID", OFFICIAL_HOLIDAY));
+  }
+
+  @Test
+  void testStBrigidsDayOn2028() {
+    final HolidayManager holidayManagerIE = HolidayManager.getInstance(create(IRELAND));
+
+    final Set<Holiday> holidays2028 = holidayManagerIE.getHolidays(2028);
+    assertThat(holidays2028)
+      .contains(new Holiday(LocalDate.of(2028, FEBRUARY, 7), "ST_BRIGID", OFFICIAL_HOLIDAY));
+  }
+
+  @Test
+  void testStBrigidsDayOn2030() {
+    final HolidayManager holidayManagerIE = HolidayManager.getInstance(create(IRELAND));
+
+    final Set<Holiday> holidays2030 = holidayManagerIE.getHolidays(2030);
+    assertThat(holidays2030)
+      .contains(new Holiday(LocalDate.of(2030, FEBRUARY, 1), "ST_BRIGID", OFFICIAL_HOLIDAY));
+  }
 }
