@@ -107,7 +107,7 @@ public abstract class Holiday {
    */
   public HolidayType getLocalizedType() {
     if (localizedType == null) {
-      return HolidayType.OFFICIAL_HOLIDAY;
+      return HolidayType.PUBLIC_HOLIDAY;
     } else {
       return localizedType;
     }

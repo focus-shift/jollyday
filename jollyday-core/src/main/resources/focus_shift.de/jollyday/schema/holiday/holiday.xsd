@@ -192,7 +192,9 @@
 
   <xsd:simpleType name="HolidayType">
     <xsd:restriction base="xsd:string">
-      <xsd:enumeration value="OFFICIAL_HOLIDAY"/>
+      <xsd:enumeration value="PUBLIC_HOLIDAY"/>
+      <xsd:enumeration value="BANK_HOLIDAY"/>
+      <xsd:enumeration value="OBSERVANCE"/>
       <xsd:enumeration value="UNOFFICIAL_HOLIDAY"/>
     </xsd:restriction>
   </xsd:simpleType>
@@ -238,7 +240,7 @@
     <xsd:attribute name="validTo" type="xsd:int"/>
     <xsd:attribute name="every" type="HolidayCycleType" default="EVERY_YEAR"/>
     <xsd:attribute name="descriptionPropertiesKey" type="xsd:string"/>
-    <xsd:attribute name="localizedType" type="HolidayType" default="OFFICIAL_HOLIDAY"/>
+    <xsd:attribute name="localizedType" type="HolidayType" default="PUBLIC_HOLIDAY"/>
   </xsd:complexType>
 
   <xsd:simpleType name="Substituted">

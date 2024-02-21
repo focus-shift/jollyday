@@ -12,7 +12,7 @@ import java.time.Year;
 import java.util.Set;
 
 import static de.focus_shift.jollyday.core.HolidayCalendar.NEW_ZEALAND;
-import static de.focus_shift.jollyday.core.HolidayType.OFFICIAL_HOLIDAY;
+import static de.focus_shift.jollyday.core.HolidayType.PUBLIC_HOLIDAY;
 import static de.focus_shift.jollyday.core.ManagerParameters.create;
 import static java.time.Month.SEPTEMBER;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -57,7 +57,7 @@ class HolidayNZTest extends AbstractCountryTestBase {
     final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
-      .doesNotContain(new Holiday(LocalDate.of(year.getValue(), SEPTEMBER, 26), "QUEEN_ELIZABETH_II_MEMORIAL_DAY", OFFICIAL_HOLIDAY));
+      .doesNotContain(new Holiday(LocalDate.of(year.getValue(), SEPTEMBER, 26), "QUEEN_ELIZABETH_II_MEMORIAL_DAY", PUBLIC_HOLIDAY));
   }
 
   @Property
@@ -66,7 +66,7 @@ class HolidayNZTest extends AbstractCountryTestBase {
     final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
-      .contains(new Holiday(LocalDate.of(year.getValue(), SEPTEMBER, 26), "QUEEN_ELIZABETH_II_MEMORIAL_DAY", OFFICIAL_HOLIDAY));
+      .contains(new Holiday(LocalDate.of(year.getValue(), SEPTEMBER, 26), "QUEEN_ELIZABETH_II_MEMORIAL_DAY", PUBLIC_HOLIDAY));
   }
 
   @Property
@@ -75,6 +75,6 @@ class HolidayNZTest extends AbstractCountryTestBase {
     final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
-      .doesNotContain(new Holiday(LocalDate.of(year.getValue(), SEPTEMBER, 26), "QUEEN_ELIZABETH_II_MEMORIAL_DAY", OFFICIAL_HOLIDAY));
+      .doesNotContain(new Holiday(LocalDate.of(year.getValue(), SEPTEMBER, 26), "QUEEN_ELIZABETH_II_MEMORIAL_DAY", PUBLIC_HOLIDAY));
   }
 }
