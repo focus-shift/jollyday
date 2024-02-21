@@ -19,7 +19,6 @@
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
 
-    <!-- <FixedWeekday which="FIRST" weekday="MONDAY" month="FEBRUARY" validFrom="2023" descriptionPropertiesKey="ST_BRIGID"/> -->
     <FixedWeekday which="FIRST" weekday="MONDAY" month="MAY" descriptionPropertiesKey="LABOUR_DAY"/>
     <FixedWeekday which="FIRST" weekday="MONDAY" month="JUNE" descriptionPropertiesKey="BANK_HOLIDAY"/>
     <FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="BANK_HOLIDAY"/>
