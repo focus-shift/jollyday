@@ -199,7 +199,7 @@ public abstract class HolidayManager {
    * @param args        Hierarchy to request the holidays for. i.e. args = {'ny'} -&gt; New York holidays
    * @return if the date is a holiday
    */
-  public boolean isHoliday(final Calendar calendar, HolidayType holidayType, final String... args) {
+  public boolean isHoliday(final Calendar calendar, final HolidayType holidayType, final String... args) {
     return isHoliday(new CalendarToLocalDate().apply(calendar), holidayType, args);
   }
 
@@ -225,7 +225,7 @@ public abstract class HolidayManager {
    * @param args        Hierarchy to request the holidays for. i.e. args = {'ny'} -&gt; New York holidays
    * @return true if the given date is a holiday in the state/region and below, otherwise false
    */
-  public boolean isHoliday(final LocalDate localDate, HolidayType holidayType, final String... args) {
+  public boolean isHoliday(final LocalDate localDate, final HolidayType holidayType, final String... args) {
 
     final StringBuilder keyBuilder = new StringBuilder();
     keyBuilder.append(localDate.getYear());
@@ -297,7 +297,17 @@ public abstract class HolidayManager {
    * @param args i.e. args = {'ny'}. returns US/New York holidays. No args means holidays common to whole country
    * @return a set of holidays for the requested year
    */
-  public abstract Set<Holiday> getHolidays(int year, String... args);
+  public abstract Set<Holiday> getHolidays(final int year, final String... args);
+
+  /**
+   * Returns the holidays for the requested year, the given {@link HolidayType} and the hierarchy structure
+   *
+   * @param year        i.e. 2010
+   * @param holidayType a {@link HolidayType} to be considered
+   * @param args        i.e. args = {'ny'}. returns US/New York holidays. No args means holidays common to whole country
+   * @return a set of holidays of the given {@link HolidayType} for the requested year
+   */
+  public abstract Set<Holiday> getHolidays(final int year, final HolidayType holidayType, final String... args);
 
   /**
    * Returns the holidays for the requested interval and hierarchy structure.
@@ -307,7 +317,18 @@ public abstract class HolidayManager {
    * @param args               i.e. args = {'ny'}. returns US/New York holidays. No args means holidays common to whole country
    * @return set of holidays within the interval
    */
-  public abstract Set<Holiday> getHolidays(LocalDate startDateInclusive, LocalDate endDateInclusive, String... args);
+  public abstract Set<Holiday> getHolidays(final LocalDate startDateInclusive, final LocalDate endDateInclusive, final String... args);
+
+  /**
+   * Returns the holidays for the requested interval, the given {@link HolidayType} and hierarchy structure.
+   *
+   * @param startDateInclusive the start date of the interval in which holidays lie, inclusive
+   * @param endDateInclusive   the end date of the interval in which holidays lie, inclusive
+   * @param holidayType        a {@link HolidayType} to be considered
+   * @param args               i.e. args = {'ny'}. returns US/New York holidays. No args means holidays common to whole country
+   * @return set of holidays of the given {@link HolidayType} within the interval
+   */
+  public abstract Set<Holiday> getHolidays(final LocalDate startDateInclusive, final LocalDate endDateInclusive, final HolidayType holidayType, final String... args);
 
   /**
    * Returns the configured hierarchy structure for the specific manager. This
