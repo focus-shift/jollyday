@@ -8,9 +8,6 @@ import java.util.Map;
 
 /**
  * Bean class for describing the configuration hierarchy.
- *
- * @author Sven Diedrichsen
- * @version $Id: $
  */
 public class CalendarHierarchy {
   private final String id;

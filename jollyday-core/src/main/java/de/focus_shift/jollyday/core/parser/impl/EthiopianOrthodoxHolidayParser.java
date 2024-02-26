@@ -16,9 +16,6 @@ import static java.util.stream.Collectors.toList;
 
 /**
  * Calculates the ethiopian orthodox holidays.
- *
- * @author Sven Diedrichsen
- * @version $Id: $
  */
 public class EthiopianOrthodoxHolidayParser implements HolidayParser {
 

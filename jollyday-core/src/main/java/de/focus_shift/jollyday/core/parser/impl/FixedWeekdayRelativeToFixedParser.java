@@ -14,9 +14,6 @@ import static java.util.stream.Collectors.toList;
 
 /**
  * Parses fixed weekday relative to fixed date.
- *
- * @author Sven Diedrichsen
- * @version $Id: $
  */
 public class FixedWeekdayRelativeToFixedParser implements HolidayParser {
 

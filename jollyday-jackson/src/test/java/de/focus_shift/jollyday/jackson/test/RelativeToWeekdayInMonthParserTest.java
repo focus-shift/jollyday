@@ -17,9 +17,6 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-/**
- * @author svdi1de
- */
 class RelativeToWeekdayInMonthParserTest {
 
   private final RelativeToWeekdayInMonthParser sut = new RelativeToWeekdayInMonthParser();

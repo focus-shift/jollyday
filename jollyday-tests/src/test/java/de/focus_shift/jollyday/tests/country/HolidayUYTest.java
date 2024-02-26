@@ -12,13 +12,6 @@ import java.util.Set;
 import static de.focus_shift.jollyday.core.HolidayCalendar.URUGUAY;
 import static org.assertj.core.api.Assertions.assertThat;
 
-/**
- * Tests for Uruguay holidays agreed with Law N. 17.414
- *
- * @author jmoreno
- * @see <a href="http://www.impo.com.uy/bases/leyes/17414-2001">Ley Nº
- * 17.414<a/>
- */
 class HolidayUYTest extends AbstractCountryTestBase {
 
   private HolidayManager holidayManager;

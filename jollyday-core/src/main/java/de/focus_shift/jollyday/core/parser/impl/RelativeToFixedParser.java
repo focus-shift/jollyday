@@ -16,9 +16,6 @@ import static java.util.stream.Collectors.toList;
 
 /**
  * The Class RelativeToFixedParser.
- *
- * @author tboven
- * @version $Id: $
  */
 public class RelativeToFixedParser implements HolidayParser {
 

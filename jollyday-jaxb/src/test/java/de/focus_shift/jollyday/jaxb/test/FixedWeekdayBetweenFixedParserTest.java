@@ -14,9 +14,6 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-/**
- * @author svdi1de
- */
 class FixedWeekdayBetweenFixedParserTest extends FixedParserTest {
 
   private final FixedWeekdayBetweenFixedParser sut = new FixedWeekdayBetweenFixedParser();

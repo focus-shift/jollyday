@@ -8,9 +8,6 @@ import java.util.Locale;
 /**
  * Represents the holiday and contains the actual date and an localized
  * description.
- *
- * @author Sven Diedrichsen
- * @version $Id: $
  */
 public final class Holiday implements Comparable<Holiday> {
   /**

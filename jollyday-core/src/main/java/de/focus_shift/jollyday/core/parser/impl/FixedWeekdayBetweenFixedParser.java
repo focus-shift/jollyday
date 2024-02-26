@@ -14,9 +14,6 @@ import static java.util.stream.Collectors.toList;
 
 /**
  * Parses the configuration for fixed weekdays between two fixed dates.
- *
- * @author Sven Diedrichsen
- * @version $Id: $
  */
 public class FixedWeekdayBetweenFixedParser implements HolidayParser {
 

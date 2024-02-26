@@ -13,9 +13,6 @@ import static java.util.stream.Collectors.toList;
 
 /**
  * This parser creates holidays relative to easter sunday.
- *
- * @author Sven Diedrichsen
- * @version $Id: $
  */
 public class RelativeToEasterSundayParser implements HolidayParser {
 

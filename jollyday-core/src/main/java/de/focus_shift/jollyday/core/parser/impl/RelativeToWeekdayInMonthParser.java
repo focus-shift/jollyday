@@ -17,9 +17,6 @@ import static java.util.stream.Collectors.toList;
  * <p>
  * RelativeToWeekdayInMonthParser class.
  * </p>
- *
- * @author Sven
- * @version $Id: $
  */
 public class RelativeToWeekdayInMonthParser implements HolidayParser {
 

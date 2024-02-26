@@ -14,9 +14,6 @@ import static java.util.stream.Collectors.toList;
 
 /**
  * The Class FixedParser. Parses a fixed date to create a Holiday.
- *
- * @author tboven
- * @version $Id: $
  */
 public class FixedParser implements HolidayParser {
 

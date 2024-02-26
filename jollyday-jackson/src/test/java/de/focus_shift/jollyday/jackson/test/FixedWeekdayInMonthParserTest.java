@@ -11,9 +11,6 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-/**
- * @author svdi1de
- */
 class FixedWeekdayInMonthParserTest {
 
   private final FixedWeekdayInMonthParser sut = new FixedWeekdayInMonthParser();

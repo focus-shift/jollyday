@@ -13,9 +13,6 @@ import static java.util.stream.Collectors.toList;
 
 /**
  * The Class FixedWeekdayInMonthParser.
- *
- * @author tboven
- * @version $Id: $
  */
 public class FixedWeekdayInMonthParser implements HolidayParser {
 
