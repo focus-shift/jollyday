@@ -31,12 +31,12 @@ class HolidayVGTest extends AbstractCountryTestBase {
   void testManagerVGInterval() {
     try {
       final HolidayManager instance = HolidayManager.getInstance(ManagerParameters.create(HolidayCalendar.BRITISH_VIRGIN_ISLANDS, null));
-      final LocalDate startDateInclusive = CalendarUtil.create(2015, 10, 1);
-      final LocalDate endDateInclusive = CalendarUtil.create(2016, 1, 31);
+      final LocalDate startDateInclusive = LocalDate.of(2015, 10, 1);
+      final LocalDate endDateInclusive = LocalDate.of(2016, 1, 31);
       final Set<Holiday> holidays = instance.getHolidays(startDateInclusive, endDateInclusive);
-      final List<LocalDate> expected = List.of(CalendarUtil.create(2015, 12, 25),
-        CalendarUtil.create(2015, 12, 28), CalendarUtil.create(2015, 10, 19),
-        CalendarUtil.create(2016, 1, 1));
+      final List<LocalDate> expected = List.of(LocalDate.of(2015, 12, 25),
+        LocalDate.of(2015, 12, 28), LocalDate.of(2015, 10, 19),
+        LocalDate.of(2016, 1, 1));
       assertThat(holidays).hasSameSizeAs(expected);
       for (LocalDate d : expected) {
         assertThat(CalendarUtil.contains(holidays, d)).isTrue();

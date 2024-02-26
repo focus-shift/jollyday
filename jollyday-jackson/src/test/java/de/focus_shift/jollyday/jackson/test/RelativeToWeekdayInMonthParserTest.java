@@ -2,7 +2,6 @@ package de.focus_shift.jollyday.jackson.test;
 
 import de.focus_shift.jollyday.core.Holiday;
 import de.focus_shift.jollyday.core.parser.impl.RelativeToWeekdayInMonthParser;
-import de.focus_shift.jollyday.core.util.CalendarUtil;
 import de.focus_shift.jollyday.jackson.JacksonHolidays;
 import de.focus_shift.jollyday.jackson.mapping.FixedWeekdayInMonth;
 import de.focus_shift.jollyday.jackson.mapping.Holidays;
@@ -13,6 +12,7 @@ import de.focus_shift.jollyday.jackson.mapping.When;
 import de.focus_shift.jollyday.jackson.mapping.Which;
 import org.junit.jupiter.api.Test;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -68,7 +68,7 @@ class RelativeToWeekdayInMonthParserTest {
 
     final List<Holiday> holidays = sut.parse(2011, new JacksonHolidays(config));
     assertThat(holidays).hasSize(1);
-    assertThat(holidays.iterator().next().getDate()).isEqualTo(CalendarUtil.create(2011, 7, 12));
+    assertThat(holidays.iterator().next().getDate()).isEqualTo(LocalDate.of(2011, 7, 12));
   }
 
   @Test
@@ -88,6 +88,6 @@ class RelativeToWeekdayInMonthParserTest {
 
     final List<Holiday> holidays = sut.parse(2018, new JacksonHolidays(config));
     assertThat(holidays).hasSize(1);
-    assertThat(holidays.iterator().next().getDate()).isEqualTo(CalendarUtil.create(2018, 10, 29));
+    assertThat(holidays.iterator().next().getDate()).isEqualTo(LocalDate.of(2018, 10, 29));
   }
 }

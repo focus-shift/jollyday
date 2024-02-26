@@ -2,7 +2,6 @@ package de.focus_shift.jollyday.jaxb.test;
 
 import de.focus_shift.jollyday.core.Holiday;
 import de.focus_shift.jollyday.core.parser.impl.RelativeToFixedParser;
-import de.focus_shift.jollyday.core.util.CalendarUtil;
 import de.focus_shift.jollyday.jaxb.JaxbHolidays;
 import de.focus_shift.jollyday.jaxb.mapping.Fixed;
 import de.focus_shift.jollyday.jaxb.mapping.Holidays;
@@ -12,6 +11,7 @@ import de.focus_shift.jollyday.jaxb.mapping.Weekday;
 import de.focus_shift.jollyday.jaxb.mapping.When;
 import org.junit.jupiter.api.Test;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -52,7 +52,7 @@ class RelativeToFixedParserTest {
 
     final List<Holiday> holidays = sut.parse(2011, new JaxbHolidays(config));
     assertThat(holidays).hasSize(1);
-    assertThat(holidays.iterator().next().getDate()).isEqualTo(CalendarUtil.create(2011, 8, 11));
+    assertThat(holidays.iterator().next().getDate()).isEqualTo(LocalDate.of(2011, 8, 11));
   }
 
   @Test
@@ -71,7 +71,7 @@ class RelativeToFixedParserTest {
 
     final List<Holiday> holidays = sut.parse(2016, new JaxbHolidays(config));
     assertThat(holidays).hasSize(1);
-    assertThat(holidays.iterator().next().getDate()).isEqualTo(CalendarUtil.create(2016, 11, 16));
+    assertThat(holidays.iterator().next().getDate()).isEqualTo(LocalDate.of(2016, 11, 16));
   }
 
   @Test
@@ -90,6 +90,6 @@ class RelativeToFixedParserTest {
 
     final List<Holiday> holidays = sut.parse(2011, new JaxbHolidays(config));
     assertThat(holidays).hasSize(1);
-    assertThat(holidays.iterator().next().getDate()).isEqualTo(CalendarUtil.create(2011, 8, 2));
+    assertThat(holidays.iterator().next().getDate()).isEqualTo(LocalDate.of(2011, 8, 2));
   }
 }

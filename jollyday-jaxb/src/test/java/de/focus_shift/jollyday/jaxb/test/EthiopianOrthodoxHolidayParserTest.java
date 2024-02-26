@@ -40,9 +40,9 @@ class EthiopianOrthodoxHolidayParserTest {
 
     final List<Holiday> holidays = sut.parse(2010, new JaxbHolidays(config));
     assertThat(holidays).hasSize(3);
-    assertContains(CalendarUtil.create(2010, 1, 18), Sets.newHashSet(holidays));
-    assertContains(CalendarUtil.create(2010, 9, 11), Sets.newHashSet(holidays));
-    assertContains(CalendarUtil.create(2010, 9, 27), Sets.newHashSet(holidays));
+    assertContains(LocalDate.of(2010, 1, 18), Sets.newHashSet(holidays));
+    assertContains(LocalDate.of(2010, 9, 11), Sets.newHashSet(holidays));
+    assertContains(LocalDate.of(2010, 9, 27), Sets.newHashSet(holidays));
   }
 
   private void assertContains(LocalDate date, Set<Holiday> holidays) {
