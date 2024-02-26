@@ -16,9 +16,6 @@ import java.util.Calendar;
 import java.util.Properties;
 import java.util.Set;
 
-import static java.util.Arrays.stream;
-import static java.util.stream.Collectors.toUnmodifiableSet;
-
 /**
  * Abstract base class for all holiday manager implementations. Upon call of
  * getInstance method the implementing class will be read from the
