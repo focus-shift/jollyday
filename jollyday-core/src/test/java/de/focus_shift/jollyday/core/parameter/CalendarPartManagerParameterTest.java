@@ -45,7 +45,7 @@ class CalendarPartManagerParameterTest {
 
   @Test
   void ensureToGetCorrectToString() {
-    assertThat(sut.toString())
-      .isEqualTo("CalendarPartManagerParameter - de");
+    assertThat(sut)
+      .hasToString("CalendarPartManagerParameter - de");
   }
 }

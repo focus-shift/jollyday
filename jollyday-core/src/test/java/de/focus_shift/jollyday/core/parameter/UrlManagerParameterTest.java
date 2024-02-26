@@ -38,7 +38,7 @@ class UrlManagerParameterTest {
 
   @Test
   void ensureToGetCorrectToString() {
-    assertThat(sut.toString())
-      .isEqualTo("UrlManagerParameter - https://www.example.org");
+    assertThat(sut)
+      .hasToString("UrlManagerParameter - https://www.example.org");
   }
 }
