@@ -1,11 +1,13 @@
 package de.focus_shift.jollyday.core;
 
 import java.util.Locale;
+import java.util.Set;
+
+import static java.util.Arrays.stream;
+import static java.util.stream.Collectors.toUnmodifiableSet;
 
 /**
  * This enum provides a list of all supported holiday calendars.
- *
- * @version $Id$
  */
 public enum HolidayCalendar {
 
@@ -45,5 +47,16 @@ public enum HolidayCalendar {
    */
   public String getId() {
     return id;
+  }
+
+  /**
+   * Returns a set of all currently supported ISO 3166-1 alpha-2 codes.
+   *
+   * @return Set of supported calendar codes.
+   */
+  public static Set<String> getSupportedCalendarCodes() {
+    return stream(HolidayCalendar.values())
+      .map(HolidayCalendar::getId)
+      .collect(toUnmodifiableSet());
   }
 }

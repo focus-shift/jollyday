@@ -256,10 +256,7 @@ public abstract class HolidayManager {
    * @return Set of supported calendar codes.
    */
   public static Set<String> getSupportedCalendarCodes() {
-    // TODO move this into HolidayCalendar class
-    return stream(HolidayCalendar.values())
-      .map(HolidayCalendar::getId)
-      .collect(toUnmodifiableSet());
+    return HolidayCalendar.getSupportedCalendarCodes();
   }
 
   /**
