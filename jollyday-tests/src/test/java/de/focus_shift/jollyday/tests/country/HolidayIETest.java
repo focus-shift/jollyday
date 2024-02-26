@@ -4,8 +4,8 @@ import de.focus_shift.jollyday.core.Holiday;
 import de.focus_shift.jollyday.core.HolidayManager;
 import net.jqwik.api.ForAll;
 import net.jqwik.api.Property;
-import org.junit.jupiter.api.Test;
 import net.jqwik.time.api.constraints.YearRange;
+import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
 import java.time.Year;
@@ -15,8 +15,8 @@ import static de.focus_shift.jollyday.core.HolidayCalendar.IRELAND;
 import static de.focus_shift.jollyday.core.HolidayType.OFFICIAL_HOLIDAY;
 import static de.focus_shift.jollyday.core.ManagerParameters.create;
 import static java.time.Month.DECEMBER;
-import static java.time.Month.JANUARY;
 import static java.time.Month.FEBRUARY;
+import static java.time.Month.JANUARY;
 import static java.time.Month.MARCH;
 import static org.assertj.core.api.Assertions.assertThat;
 

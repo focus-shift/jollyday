@@ -32,7 +32,7 @@ class URLConfigurationProvider implements ConfigurationProvider {
     final String configURLs = System.getProperty(CONFIG_URLS_PROPERTY);
 
     if (configURLs != null) {
-        stream(configURLs.split(","))
+      stream(configURLs.split(","))
         .filter(Objects::nonNull)
         .filter(not(String::isEmpty))
         .map(String::trim)
