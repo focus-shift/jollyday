@@ -31,12 +31,12 @@ class HolidaySGTest extends AbstractCountryTestBase {
   void testManagerSGInterval() {
     try {
       final HolidayManager instance = HolidayManager.getInstance(ManagerParameters.create(HolidayCalendar.SINGAPORE, null));
-      final LocalDate startDateInclusive = CalendarUtil.create(2022, 10, 1);
-      final LocalDate endDateInclusive = CalendarUtil.create(2023, 1, 31);
+      final LocalDate startDateInclusive = LocalDate.of(2022, 10, 1);
+      final LocalDate endDateInclusive = LocalDate.of(2023, 1, 31);
       final Set<Holiday> holidays = instance.getHolidays(startDateInclusive, endDateInclusive);
-      final List<LocalDate> expected = List.of(CalendarUtil.create(2022, 10, 24),
-        CalendarUtil.create(2022, 12, 26), CalendarUtil.create(2023, 1, 2),
-        CalendarUtil.create(2023, 1, 24), CalendarUtil.create(2023, 1, 23));
+      final List<LocalDate> expected = List.of(LocalDate.of(2022, 10, 24),
+        LocalDate.of(2022, 12, 26), LocalDate.of(2023, 1, 2),
+        LocalDate.of(2023, 1, 24), LocalDate.of(2023, 1, 23));
       assertThat(holidays).hasSameSizeAs(expected);
       for (LocalDate d : expected) {
         assertThat(CalendarUtil.contains(holidays, d)).isTrue();

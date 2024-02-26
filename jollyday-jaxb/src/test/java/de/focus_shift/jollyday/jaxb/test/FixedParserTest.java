@@ -2,7 +2,6 @@ package de.focus_shift.jollyday.jaxb.test;
 
 import de.focus_shift.jollyday.core.Holiday;
 import de.focus_shift.jollyday.core.parser.impl.FixedParser;
-import de.focus_shift.jollyday.core.util.CalendarUtil;
 import de.focus_shift.jollyday.jaxb.JaxbHolidays;
 import de.focus_shift.jollyday.jaxb.mapping.Fixed;
 import de.focus_shift.jollyday.jaxb.mapping.HolidayCycleType;
@@ -44,7 +43,7 @@ class FixedParserTest {
     );
 
     final List<Holiday> holidays = sut.parse(2010, new JaxbHolidays(config));
-    containsAll(holidays, CalendarUtil.create(2010, 1, 1), CalendarUtil.create(2010, 3, 3));
+    containsAll(holidays, LocalDate.of(2010, 1, 1), LocalDate.of(2010, 3, 3));
   }
 
   @Test
@@ -55,7 +54,7 @@ class FixedParserTest {
     );
 
     final List<Holiday> holidays = sut.parse(2011, new JaxbHolidays(config));
-    containsAll(holidays, CalendarUtil.create(2011, 1, 7), CalendarUtil.create(2011, 1, 24));
+    containsAll(holidays, LocalDate.of(2011, 1, 7), LocalDate.of(2011, 1, 24));
   }
 
   @Test

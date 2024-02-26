@@ -2,7 +2,6 @@ package de.focus_shift.jollyday.jaxb.test;
 
 import de.focus_shift.jollyday.core.Holiday;
 import de.focus_shift.jollyday.core.parser.impl.FixedWeekdayBetweenFixedParser;
-import de.focus_shift.jollyday.core.util.CalendarUtil;
 import de.focus_shift.jollyday.jaxb.JaxbHolidays;
 import de.focus_shift.jollyday.jaxb.mapping.FixedWeekdayBetweenFixed;
 import de.focus_shift.jollyday.jaxb.mapping.Holidays;
@@ -10,6 +9,7 @@ import de.focus_shift.jollyday.jaxb.mapping.Month;
 import de.focus_shift.jollyday.jaxb.mapping.Weekday;
 import org.junit.jupiter.api.Test;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -50,6 +50,6 @@ class FixedWeekdayBetweenFixedParserTest extends FixedParserTest {
 
     final List<Holiday> holidays = sut.parse(2011, new JaxbHolidays(config));
     assertThat(holidays).hasSize(1);
-    assertThat(holidays.iterator().next().getDate()).isEqualTo(CalendarUtil.create(2011, 1, 19));
+    assertThat(holidays.iterator().next().getDate()).isEqualTo(LocalDate.of(2011, 1, 19));
   }
 }

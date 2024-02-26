@@ -20,18 +20,6 @@ public class CalendarUtil {
   }
 
   /**
-   * Creates the date within the ISO chronology.
-   *
-   * @param year  a int.
-   * @param month a int.
-   * @param day   a int.
-   * @return date
-   */
-  public static LocalDate create(int year, int month, int day) {
-    return LocalDate.of(year, month, day);
-  }
-
-  /**
    * Returns a set of gregorian dates within a gregorian year which equal the
    * islamic month and day. Because the islamic year is about 11 days shorter
    * than the gregorian there may be more than one occurrence of an islamic
