@@ -15,7 +15,7 @@ public class ValidMovingCondition implements Predicate<MovingCondition> {
   }
 
   @Override
-  public boolean test(MovingCondition movingCondition) {
+  public boolean test(final MovingCondition movingCondition) {
     return Objects.equals(date.getDayOfWeek(), movingCondition.substitute());
   }
 }
