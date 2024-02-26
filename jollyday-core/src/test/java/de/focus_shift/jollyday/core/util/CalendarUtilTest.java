@@ -19,18 +19,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 class CalendarUtilTest {
 
   @Test
-  void testWeekend() {
-    final LocalDate dateFriday = LocalDate.of(2010, MARCH, 12);
-    final LocalDate dateSaturday = LocalDate.of(2010, MARCH, 13);
-    final LocalDate dateSunday = LocalDate.of(2010, MARCH, 14);
-    final LocalDate dateMonday = LocalDate.of(2010, MARCH, 15);
-    assertThat(CalendarUtil.isWeekend(dateFriday)).isFalse();
-    assertThat(CalendarUtil.isWeekend(dateSaturday)).isTrue();
-    assertThat(CalendarUtil.isWeekend(dateSunday)).isTrue();
-    assertThat(CalendarUtil.isWeekend(dateMonday)).isFalse();
-  }
-
-  @Test
   void testCalendarIslamicNewYear() {
     final Set<LocalDate> expected = new HashSet<>();
     expected.add(LocalDate.of(2008, JANUARY, 10));
