@@ -11,7 +11,7 @@ import static java.util.Calendar.YEAR;
 public class CalendarToLocalDate implements Function<Calendar, LocalDate> {
 
   @Override
-  public LocalDate apply(Calendar calendar) {
+  public LocalDate apply(final Calendar calendar) {
     return LocalDate.of(calendar.get(YEAR), calendar.get(MONTH) + 1, calendar.get(DAY_OF_MONTH));
   }
 }

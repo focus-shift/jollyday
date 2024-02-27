@@ -14,12 +14,12 @@ public class FindWeekDayInMonth implements Function<FixedWeekdayInMonth, LocalDa
 
   private final int year;
 
-  public FindWeekDayInMonth(int year) {
+  public FindWeekDayInMonth(final int year) {
     this.year = year;
   }
 
   @Override
-  public LocalDate apply(FixedWeekdayInMonth fixedWeekdayInMonth) {
+  public LocalDate apply(final FixedWeekdayInMonth fixedWeekdayInMonth) {
     final LocalDate date = LocalDate.of(year, fixedWeekdayInMonth.month(), 1);
     final DayOfWeek weekday = fixedWeekdayInMonth.weekday();
     if (Occurrance.LAST == fixedWeekdayInMonth.which()) {

@@ -11,6 +11,7 @@ import de.focus_shift.jollyday.core.util.ClassLoadingUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
@@ -75,7 +76,7 @@ public class DefaultHolidayManager extends HolidayManager {
    * with the configuration from initialization.
    */
   @Override
-  public Set<Holiday> getHolidays(int year, final String... args) {
+  public Set<Holiday> getHolidays(final int year, final String... args) {
     Set<Holiday> holidaySet = Collections.synchronizedSet(new HashSet<>());
     getHolidays(year, configuration, holidaySet, args);
     return holidaySet;
@@ -85,7 +86,7 @@ public class DefaultHolidayManager extends HolidayManager {
    * {@inheritDoc}
    */
   @Override
-  public Set<Holiday> getHolidays(int year, final HolidayType holidayType, final String... args) {
+  public Set<Holiday> getHolidays(final int year, final HolidayType holidayType, final String... args) {
     return getHolidays(year, args).stream()
       .filter(holiday -> holiday.getType().equals(holidayType))
       .collect(toSet());
@@ -142,7 +143,7 @@ public class DefaultHolidayManager extends HolidayManager {
    * @param holidaySet    the set of holidays
    * @param args          the arguments to descend down the configuration tree
    */
-  private void getHolidays(int year, final Configuration configuration, Set<Holiday> holidaySet, final String... args) {
+  private void getHolidays(final int year, final Configuration configuration, final Set<Holiday> holidaySet, final String... args) {
     if (LOG.isDebugEnabled()) {
       LOG.debug("Adding holidays for {}", configuration.description());
     }
@@ -203,7 +204,7 @@ public class DefaultHolidayManager extends HolidayManager {
     return parsers;
   }
 
-  private HolidayParser instantiateParser(String className) throws ClassNotFoundException, InstantiationException, IllegalAccessException, java.lang.reflect.InvocationTargetException, NoSuchMethodException {
+  private HolidayParser instantiateParser(final String className) throws ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
     HolidayParser holidayParser = parserCache.get(className);
     if (holidayParser == null) {
       final String propName = PARSER_IMPL_PREFIX + className;
@@ -223,7 +224,7 @@ public class DefaultHolidayManager extends HolidayManager {
    * @param configuration Configuration to log hierarchy for.
    * @param level         an int.
    */
-  protected static void logHierarchy(final Configuration configuration, int level) {
+  protected static void logHierarchy(final Configuration configuration, final int level) {
     if (LOG.isDebugEnabled()) {
       final StringBuilder space = new StringBuilder();
       space.append("-".repeat(level));

@@ -26,7 +26,7 @@ public class ClassLoadingUtil {
    * @return a {@link java.lang.Class} object.
    * @throws java.lang.ClassNotFoundException if any.
    */
-  public static Class<?> loadClass(String className) throws ClassNotFoundException {
+  public static Class<?> loadClass(final String className) throws ClassNotFoundException {
     try {
       return Class.forName(className, true, getClassloader());
     } catch (Exception e) {

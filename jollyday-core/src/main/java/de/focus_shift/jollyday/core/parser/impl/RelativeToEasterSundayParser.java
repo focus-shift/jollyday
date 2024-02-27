@@ -17,7 +17,7 @@ import static java.util.stream.Collectors.toList;
 public class RelativeToEasterSundayParser implements HolidayParser {
 
   @Override
-  public List<Holiday> parse(int year, Holidays holidays) {
+  public List<Holiday> parse(final int year, final Holidays holidays) {
     return holidays.relativeToEasterSunday().stream()
       .filter(new ValidLimitation(year))
       .map(res -> new DescribedDateHolder(res, new CalculateEasterSunday(year).apply(res.chronology()).plus(res.days())))

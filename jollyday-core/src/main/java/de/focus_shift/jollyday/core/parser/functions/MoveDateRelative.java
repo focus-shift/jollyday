@@ -14,12 +14,12 @@ public class MoveDateRelative implements Function<Movable, LocalDate> {
 
   private final LocalDate date;
 
-  public MoveDateRelative(LocalDate date) {
+  public MoveDateRelative(final LocalDate date) {
     this.date = date;
   }
 
   @Override
-  public LocalDate apply(Movable movable) {
+  public LocalDate apply(final Movable movable) {
     return movable.conditions().stream()
       .filter(new ValidMovingCondition(date))
       .map(mc -> date.with(mc.with() == With.NEXT
