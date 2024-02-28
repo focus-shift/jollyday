@@ -1,7 +1,6 @@
 package de.focus_shift.jollyday.core.parser.functions;
 
 import de.focus_shift.jollyday.core.spi.FixedWeekdayInMonth;
-import de.focus_shift.jollyday.core.spi.Occurrance;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;
