@@ -7,6 +7,7 @@ import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.util.function.Function;
 
+import static de.focus_shift.jollyday.core.spi.Occurrance.LAST;
 import static java.time.temporal.TemporalAdjusters.dayOfWeekInMonth;
 import static java.time.temporal.TemporalAdjusters.lastInMonth;
 
@@ -22,9 +23,11 @@ public class FindWeekDayInMonth implements Function<FixedWeekdayInMonth, LocalDa
   public LocalDate apply(final FixedWeekdayInMonth fixedWeekdayInMonth) {
     final LocalDate date = LocalDate.of(year, fixedWeekdayInMonth.month(), 1);
     final DayOfWeek weekday = fixedWeekdayInMonth.weekday();
-    if (Occurrance.LAST == fixedWeekdayInMonth.which()) {
+
+    if (LAST == fixedWeekdayInMonth.which()) {
       return date.with(lastInMonth(weekday));
     }
+
     return date.with(dayOfWeekInMonth(fixedWeekdayInMonth.which().ordinal() + 1, weekday));
   }
 }
