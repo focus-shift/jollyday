@@ -13,7 +13,7 @@ public class ValidCycle implements Predicate<Limited> {
   }
 
   @Override
-  public boolean test(Limited limited) {
+  public boolean test(final Limited limited) {
     switch (limited.cycle()) {
       case EVERY_YEAR:
         return true;

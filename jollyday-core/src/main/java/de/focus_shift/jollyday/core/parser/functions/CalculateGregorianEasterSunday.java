@@ -9,7 +9,7 @@ import static java.time.Month.MARCH;
 public class CalculateGregorianEasterSunday implements IntFunction<LocalDate> {
 
   @Override
-  public LocalDate apply(int year) {
+  public LocalDate apply(final int year) {
     int a, b, c, d, e, f, g, h, i, j, k, l;
     int x, month, day;
     a = year % 19;

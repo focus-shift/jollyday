@@ -36,7 +36,7 @@ public final class Holiday implements Comparable<Holiday> {
    * @param propertiesKey a {@link java.lang.String} object.
    * @param type          a {@link HolidayType} object.
    */
-  public Holiday(LocalDate date, String propertiesKey, HolidayType type) {
+  public Holiday(final LocalDate date, final String propertiesKey, final HolidayType type) {
     super();
     this.type = type;
     this.date = date;
@@ -85,7 +85,7 @@ public final class Holiday implements Comparable<Holiday> {
   }
 
   @Override
-  public boolean equals(Object obj) {
+  public boolean equals(final Object obj) {
     if (obj == this) {
       return true;
     }
@@ -131,7 +131,7 @@ public final class Holiday implements Comparable<Holiday> {
    * @return the comparator value, negative if less, positive if greater
    */
   @Override
-  public int compareTo(Holiday other) {
+  public int compareTo(final Holiday other) {
     return this.getDate().compareTo(other.getDate());
   }
 }

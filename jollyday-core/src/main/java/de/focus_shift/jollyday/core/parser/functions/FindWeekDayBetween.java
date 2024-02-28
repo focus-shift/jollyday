@@ -17,13 +17,13 @@ public class FindWeekDayBetween implements Function<FixedWeekdayBetweenFixed, Lo
   private final LocalDate from;
   private final LocalDate to;
 
-  public FindWeekDayBetween(LocalDate from, LocalDate to) {
+  public FindWeekDayBetween(final LocalDate from, final LocalDate to) {
     this.from = from;
     this.to = to;
   }
 
   @Override
-  public LocalDate apply(FixedWeekdayBetweenFixed fwm) {
+  public LocalDate apply(final FixedWeekdayBetweenFixed fwm) {
     return StreamSupport.stream(spliteratorUnknownSize(iterator(), ORDERED | IMMUTABLE), false)
       .filter(date -> date.getDayOfWeek() == fwm.weekday())
       .findFirst().orElse(null);
@@ -39,7 +39,7 @@ public class FindWeekDayBetween implements Function<FixedWeekdayBetweenFixed, Lo
     private LocalDate cursor;
     private final LocalDate endDate;
 
-    FindWeekDayBetweenIterator(LocalDate startDate, LocalDate endDate) {
+    FindWeekDayBetweenIterator(final LocalDate startDate, final LocalDate endDate) {
       this.cursor = startDate;
       this.endDate = endDate;
     }
@@ -60,5 +60,4 @@ public class FindWeekDayBetween implements Function<FixedWeekdayBetweenFixed, Lo
       return current;
     }
   }
-
 }

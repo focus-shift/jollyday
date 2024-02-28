@@ -10,6 +10,7 @@ import java.util.Map;
  * Bean class for describing the configuration hierarchy.
  */
 public class CalendarHierarchy {
+
   private final String id;
   private Map<String, CalendarHierarchy> children = new HashMap<>();
   private final CalendarHierarchy parent;
@@ -22,7 +23,7 @@ public class CalendarHierarchy {
    * @param parent a {@link CalendarHierarchy} object.
    * @param id     a {@link java.lang.String} object.
    */
-  public CalendarHierarchy(CalendarHierarchy parent, String id) {
+  public CalendarHierarchy(final CalendarHierarchy parent, final String id) {
     this.parent = parent;
     this.id = id;
   }

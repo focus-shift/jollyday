@@ -9,12 +9,12 @@ public class FixedToLocalDate implements Function<Fixed, LocalDate> {
 
   private final int year;
 
-  public FixedToLocalDate(int year) {
+  public FixedToLocalDate(final int year) {
     this.year = year;
   }
 
   @Override
-  public LocalDate apply(Fixed fixed) {
+  public LocalDate apply(final Fixed fixed) {
     return fixed.day().atYear(year);
   }
 }

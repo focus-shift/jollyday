@@ -98,7 +98,7 @@ public abstract class HolidayManager {
    * @param properties the overriding configuration properties.
    * @return an eventually cached HolidayManager instance
    */
-  public static HolidayManager getInstance(Properties properties) {
+  public static HolidayManager getInstance(final Properties properties) {
     return getInstance(ManagerParameters.create((String) null, properties));
   }
 
@@ -109,7 +109,7 @@ public abstract class HolidayManager {
    * @param parameter the {@link ManagerParameters} to create the manager with
    * @return the {@link HolidayManager} instance
    */
-  public static HolidayManager getInstance(ManagerParameter parameter) {
+  public static HolidayManager getInstance(final ManagerParameter parameter) {
     return createManager(parameter);
   }
 
@@ -138,7 +138,7 @@ public abstract class HolidayManager {
    * @param parameter the parameter to read the manager implementation class from
    * @return the manager implementation class name
    */
-  private static String readManagerImplClassName(ManagerParameter parameter) {
+  private static String readManagerImplClassName(final ManagerParameter parameter) {
     final String className = parameter.getManagerImplClassName();
     if (className == null) {
       throw new IllegalStateException("Missing configuration '" + ManagerParameter.MANAGER_IMPL_CLASS_PREFIX + "'. Cannot create manager.");
@@ -332,5 +332,4 @@ public abstract class HolidayManager {
    * @return Current calendars hierarchy
    */
   public abstract CalendarHierarchy getCalendarHierarchy();
-
 }

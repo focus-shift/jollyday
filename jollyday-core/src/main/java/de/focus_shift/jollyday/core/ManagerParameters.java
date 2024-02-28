@@ -21,7 +21,7 @@ public final class ManagerParameters {
    * @param calendarPart The calendar part to create parameters from.
    * @return an {@link CalendarPartManagerParameter} based on {@link ManagerParameter}
    */
-  public static ManagerParameter create(String calendarPart) {
+  public static ManagerParameter create(final String calendarPart) {
     return create(calendarPart, null);
   }
 
@@ -35,7 +35,7 @@ public final class ManagerParameters {
    * @param properties   Additional properties
    * @return an {@link CalendarPartManagerParameter} based on {@link ManagerParameter}
    */
-  public static ManagerParameter create(String calendarPart, Properties properties) {
+  public static ManagerParameter create(final String calendarPart, final Properties properties) {
     return new CalendarPartManagerParameter(prepareCalendarName(calendarPart), properties);
   }
 
@@ -48,7 +48,7 @@ public final class ManagerParameters {
    * @param locale The locale to create parameters from.
    * @return an {@link CalendarPartManagerParameter} based on {@link ManagerParameter}
    */
-  public static ManagerParameter create(Locale locale) {
+  public static ManagerParameter create(final Locale locale) {
     return create(locale, null);
   }
 
@@ -62,7 +62,7 @@ public final class ManagerParameters {
    * @param properties Additional properties
    * @return an {@link CalendarPartManagerParameter} based on {@link ManagerParameter}
    */
-  public static ManagerParameter create(Locale locale, Properties properties) {
+  public static ManagerParameter create(final Locale locale, final Properties properties) {
     final String calendarPart = "".equals(locale.getCountry()) ? locale.getLanguage() : locale.getCountry();
     return create(calendarPart, properties);
   }
@@ -76,7 +76,7 @@ public final class ManagerParameters {
    * @param calendar A specific {@link HolidayCalendar} to create parameters from.
    * @return an {@link CalendarPartManagerParameter} based on {@link ManagerParameter}
    */
-  public static ManagerParameter create(HolidayCalendar calendar) {
+  public static ManagerParameter create(final HolidayCalendar calendar) {
     return create(calendar, null);
   }
 
@@ -91,7 +91,7 @@ public final class ManagerParameters {
    * @param properties Additional properties
    * @return an {@link CalendarPartManagerParameter} based on {@link ManagerParameter}
    */
-  public static ManagerParameter create(HolidayCalendar calendar, Properties properties) {
+  public static ManagerParameter create(final HolidayCalendar calendar, final Properties properties) {
     return create(calendar.getId(), properties);
   }
 
@@ -108,7 +108,7 @@ public final class ManagerParameters {
    * @param calendarFileUrl A specific calendar file {@link URL} to create parameters from.
    * @return an {@link CalendarPartManagerParameter} based on {@link ManagerParameter}
    */
-  public static ManagerParameter create(URL calendarFileUrl) {
+  public static ManagerParameter create(final URL calendarFileUrl) {
     return create(calendarFileUrl, null);
   }
 
@@ -126,11 +126,11 @@ public final class ManagerParameters {
    * @param properties      Additional properties
    * @return an {@link CalendarPartManagerParameter} based on {@link ManagerParameter}
    */
-  public static ManagerParameter create(URL calendarFileUrl, Properties properties) {
+  public static ManagerParameter create(final URL calendarFileUrl, final Properties properties) {
     return new UrlManagerParameter(calendarFileUrl, properties);
   }
 
-  private static String prepareCalendarName(String calendar) {
+  private static String prepareCalendarName(final String calendar) {
     if (calendar == null || calendar.trim().isEmpty()) {
       return Locale.getDefault().getCountry().toLowerCase();
     } else {

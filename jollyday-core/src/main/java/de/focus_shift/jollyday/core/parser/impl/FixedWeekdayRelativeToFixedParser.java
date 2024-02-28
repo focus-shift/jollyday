@@ -18,7 +18,7 @@ import static java.util.stream.Collectors.toList;
 public class FixedWeekdayRelativeToFixedParser implements HolidayParser {
 
   @Override
-  public List<Holiday> parse(int year, Holidays holidays) {
+  public List<Holiday> parse(final int year, final Holidays holidays) {
     return holidays.fixedWeekdayRelativeToFixed().stream()
       .filter(new ValidLimitation(year))
       .map(fwrf -> new DescribedDateHolder(fwrf, new FindWeekDayRelativeToDate(new FixedToLocalDate(year).apply(fwrf.day())).apply(fwrf)))
