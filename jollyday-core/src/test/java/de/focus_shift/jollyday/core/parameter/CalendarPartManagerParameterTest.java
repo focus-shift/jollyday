@@ -38,6 +38,26 @@ class CalendarPartManagerParameterTest {
   }
 
   @Test
+  void ensureToReturnCorrectClassNameWithCalendarPart() {
+
+    final Properties properties = new Properties();
+    properties.setProperty("somebody", "just told me");
+    properties.setProperty("manager.impl", "managerImplClassName");
+    properties.setProperty("manager.impl.de", "managerImplClassNameDE");
+
+    final CalendarPartManagerParameter sut = new CalendarPartManagerParameter("de", properties);
+
+    assertThat(sut.getManagerImplClassName())
+      .isEqualTo("managerImplClassNameDE");
+  }
+
+  @Test
+  void ensureToReturnCorrectClassNameWithoutCalendarPart() {
+    assertThat(sut.getManagerImplClassName())
+      .isEqualTo("managerImplClassName");
+  }
+
+  @Test
   void ensureToConfigurationFileName() {
     assertThat(CalendarPartManagerParameter.getConfigurationFileName("de"))
       .isEqualTo("holidays/Holidays_de.xml");
