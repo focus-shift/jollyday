@@ -20,7 +20,7 @@ import static java.util.stream.Collectors.toList;
 public class ChristianHolidayParser implements HolidayParser {
 
   @Override
-  public List<Holiday> parse(final int year,final Holidays holidays) {
+  public List<Holiday> parse(final int year, final Holidays holidays) {
     return holidays.christianHolidays().stream()
       .filter(new ValidLimitation(year))
       .map(ch -> {
