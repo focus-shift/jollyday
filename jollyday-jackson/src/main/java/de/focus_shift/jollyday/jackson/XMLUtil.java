@@ -49,23 +49,6 @@ public class XMLUtil {
     return month.ordinal() + 1;
   }
 
-  /**
-   * Gets the type.
-   *
-   * @param type the type of holiday in the config
-   * @return the type of holiday
-   */
-  public HolidayType getType(de.focus_shift.jollyday.jackson.mapping.HolidayType type) {
-    switch (type) {
-      case OFFICIAL_HOLIDAY:
-        return HolidayType.OFFICIAL_HOLIDAY;
-      case UNOFFICIAL_HOLIDAY:
-        return HolidayType.UNOFFICIAL_HOLIDAY;
-      default:
-        throw new IllegalArgumentException("Unknown type " + type);
-    }
-  }
-
   public static class JacksonMapperCreator {
     public XmlMapper create() {
       final XmlMapper mapper = new XmlMapper();
