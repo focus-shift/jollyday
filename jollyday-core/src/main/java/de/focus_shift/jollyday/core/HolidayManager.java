@@ -49,17 +49,6 @@ public abstract class HolidayManager {
     new ConfigurationServiceManager(new LazyServiceLoaderCache<>(ConfigurationService.class));
 
   /**
-   * Caches the instance based country specific holidays so that e.g.
-   * the created HolidayManager via
-   * {@code HolidayManager.getInstance(create("de"))} only contains the german holidays.
-   * <p>
-   * This is also the reason this cache is not static.
-   * If it was static all holidays over all holiday manager instances would be cached,
-   * but only the german holidays are important for the german holiday manager, so only save them.
-   */
-  private final Cache<Set<Holiday>> holidayCache = new Cache<>();
-
-  /**
    * The datasource to get the holiday data from.
    */
   private ConfigurationService configurationService;
@@ -223,27 +212,7 @@ public abstract class HolidayManager {
    * @return true if the given date is a holiday in the state/region and below, otherwise false
    */
   public boolean isHoliday(final LocalDate localDate, final HolidayType holidayType, final String... args) {
-
-    final StringBuilder keyBuilder = new StringBuilder();
-    keyBuilder.append(localDate.getYear());
-    for (String arg : args) {
-      keyBuilder.append("_");
-      keyBuilder.append(arg);
-    }
-
-    final Cache.ValueHandler<Set<Holiday>> valueHandler = new Cache.ValueHandler<>() {
-      @Override
-      public String getKey() {
-        return keyBuilder.toString();
-      }
-
-      @Override
-      public Set<Holiday> createValue() {
-        return getHolidays(localDate.getYear(), args);
-      }
-    };
-
-    final Set<Holiday> holidays = holidayCache.get(valueHandler);
+    final Set<Holiday> holidays = getHolidays(localDate.getYear(), args);
     return CalendarUtil.contains(holidays, localDate, holidayType);
   }
 

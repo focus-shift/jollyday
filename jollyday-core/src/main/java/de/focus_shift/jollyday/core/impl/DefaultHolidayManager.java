@@ -4,6 +4,7 @@ import de.focus_shift.jollyday.core.CalendarHierarchy;
 import de.focus_shift.jollyday.core.Holiday;
 import de.focus_shift.jollyday.core.HolidayManager;
 import de.focus_shift.jollyday.core.HolidayType;
+import de.focus_shift.jollyday.core.caching.Cache;
 import de.focus_shift.jollyday.core.parser.HolidayParser;
 import de.focus_shift.jollyday.core.spi.Configuration;
 import de.focus_shift.jollyday.core.spi.Holidays;
@@ -50,6 +51,17 @@ public class DefaultHolidayManager extends HolidayManager {
   private final Map<String, HolidayParser> parserCache = new HashMap<>();
 
   /**
+   * Caches the instance based country specific holidays so that e.g.
+   * the created HolidayManager via
+   * {@code HolidayManager.getInstance(create("de"))} only contains the german holidays.
+   * <p>
+   * This is also the reason this cache is not static.
+   * If it was static all holidays over all holiday manager instances would be cached,
+   * but only the german holidays are important for the german holiday manager, so only save them.
+   */
+  private final Cache<Set<Holiday>> holidayCache = new Cache<>();
+
+  /**
    * Configuration parsed on initialization.
    */
   protected Configuration configuration;
@@ -77,9 +89,29 @@ public class DefaultHolidayManager extends HolidayManager {
    */
   @Override
   public Set<Holiday> getHolidays(final int year, final String... args) {
-    Set<Holiday> holidaySet = Collections.synchronizedSet(new HashSet<>());
-    getHolidays(year, configuration, holidaySet, args);
-    return holidaySet;
+
+    final StringBuilder keyBuilder = new StringBuilder();
+    keyBuilder.append(year);
+    for (String arg : args) {
+      keyBuilder.append("_");
+      keyBuilder.append(arg);
+    }
+
+    final Cache.ValueHandler<Set<Holiday>> valueHandler = new Cache.ValueHandler<>() {
+      @Override
+      public String getKey() {
+        return keyBuilder.toString();
+      }
+
+      @Override
+      public Set<Holiday> createValue() {
+        final Set<Holiday> holidaySet = Collections.synchronizedSet(new HashSet<>());
+        getHolidays(year, configuration, holidaySet, args);
+        return holidaySet;
+      }
+    };
+
+    return holidayCache.get(valueHandler);
   }
 
   /**

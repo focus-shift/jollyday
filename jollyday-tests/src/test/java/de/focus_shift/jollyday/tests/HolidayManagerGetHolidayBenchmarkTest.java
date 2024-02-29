@@ -31,7 +31,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @Measurement(iterations = 5, time = 2000, timeUnit = TimeUnit.MILLISECONDS)
 public class HolidayManagerGetHolidayBenchmarkTest extends Benchmarks {
 
-  private static final double REFERENCE_SCORE = 45_000.00;
+  private static final double REFERENCE_SCORE = 22_000_000.00;
 
   @State(Scope.Thread)
   public static class HolidayManagerState {
