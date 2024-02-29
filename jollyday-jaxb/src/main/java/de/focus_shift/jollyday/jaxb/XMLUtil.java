@@ -38,23 +38,29 @@ public class XMLUtil {
     if (stream == null) {
       throw new IllegalArgumentException("Stream is NULL. Cannot read XML.");
     }
+
     try {
-      JAXBContext ctx;
-      try {
-        ctx = contextCreator.create(XMLUtil.PACKAGE, ClassLoadingUtil.getClassloader());
-      } catch (JAXBException e) {
-        LOG.warn("Could not create JAXB context using the current threads context classloader. Falling back to ObjectFactory class classloader.");
-        ctx = null;
-      }
-      if (ctx == null) {
-        ctx = contextCreator.create(XMLUtil.PACKAGE, ObjectFactory.class.getClassLoader());
-      }
+      final JAXBContext ctx = createJAXBContext();
       final Unmarshaller um = ctx.createUnmarshaller();
-      @SuppressWarnings("unchecked") final JAXBElement<Configuration> el = (JAXBElement<Configuration>) um.unmarshal(stream);
-      return el.getValue();
-    } catch (JAXBException ue) {
-      throw new IllegalStateException("Cannot parse holidays XML file.", ue);
+      @SuppressWarnings("unchecked") final JAXBElement<Configuration> jaxbElement = (JAXBElement<Configuration>) um.unmarshal(stream);
+      return jaxbElement.getValue();
+    } catch (JAXBException exception) {
+      throw new IllegalStateException("Cannot parse holidays XML file.", exception);
     }
+  }
+
+  private JAXBContext createJAXBContext() throws JAXBException {
+    JAXBContext ctx = null;
+    try {
+      ctx = contextCreator.create(XMLUtil.PACKAGE, ClassLoadingUtil.getClassloader());
+    } catch (JAXBException e) {
+      LOG.warn("Could not create JAXB context using the current threads context classloader. Falling back to ObjectFactory class classloader.");
+    }
+
+    if (ctx == null) {
+      ctx = contextCreator.create(XMLUtil.PACKAGE, ObjectFactory.class.getClassLoader());
+    }
+    return ctx;
   }
 
   /**
