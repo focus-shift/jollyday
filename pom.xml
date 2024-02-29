@@ -36,10 +36,13 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <java.version>11</java.version>
 
+    <tests.groups>!BenchmarkTest</tests.groups>
+
     <junit.version>5.10.2</junit.version>
     <mockito.version>5.10.0</mockito.version>
     <assertj.version>3.25.3</assertj.version>
     <jqwik.version>1.8.3</jqwik.version>
+    <jmh.version>1.37</jmh.version>
 
     <!--suppress UnresolvedMavenProperty - for IDEA-->
     <sonar.coverage.jacoco.xmlReportPaths>
@@ -139,6 +142,20 @@
         <version>1.5.0</version>
         <scope>test</scope>
       </dependency>
+
+      <!-- jmh -->
+      <dependency>
+        <groupId>org.openjdk.jmh</groupId>
+        <artifactId>jmh-core</artifactId>
+        <version>${jmh.version}</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.openjdk.jmh</groupId>
+        <artifactId>jmh-generator-annprocess</artifactId>
+        <version>${jmh.version}</version>
+        <scope>test</scope>
+      </dependency>
     </dependencies>
   </dependencyManagement>
 
@@ -155,6 +172,9 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-plugin</artifactId>
           <version>3.2.5</version>
+          <configuration>
+            <groups>${tests.groups}</groups>
+          </configuration>
         </plugin>
 
         <plugin>
