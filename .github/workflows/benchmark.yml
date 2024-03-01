@@ -1,0 +1,29 @@
+name: Benchmark
+
+on:
+  schedule:
+    - cron: "15 0 * * *"
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+env:
+  MAVEN_ARGS: "--no-transfer-progress --errors --fail-at-end --show-version"
+
+jobs:
+  build:
+    name: benchmark
+    runs-on: 'ubuntu-latest'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '11'
+          cache: 'maven'
+      - name: Build
+        run: ./mvnw clean verify -Dtests.groups=BenchmarkTest
