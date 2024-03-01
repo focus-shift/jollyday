@@ -39,7 +39,7 @@
     <tests.groups>!BenchmarkTest</tests.groups>
 
     <junit.version>5.10.2</junit.version>
-    <mockito.version>5.10.0</mockito.version>
+    <mockito.version>5.11.0</mockito.version>
     <assertj.version>3.25.3</assertj.version>
     <jqwik.version>1.8.3</jqwik.version>
     <jmh.version>1.37</jmh.version>
