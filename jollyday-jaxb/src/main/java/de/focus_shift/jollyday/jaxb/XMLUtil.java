@@ -1,6 +1,5 @@
 package de.focus_shift.jollyday.jaxb;
 
-import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.util.ClassLoadingUtil;
 import de.focus_shift.jollyday.jaxb.mapping.Configuration;
 import de.focus_shift.jollyday.jaxb.mapping.Month;
