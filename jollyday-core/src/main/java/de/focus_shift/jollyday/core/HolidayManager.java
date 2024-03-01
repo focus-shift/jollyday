@@ -1,7 +1,6 @@
 package de.focus_shift.jollyday.core;
 
 import de.focus_shift.jollyday.core.caching.Cache;
-import de.focus_shift.jollyday.core.caching.HolidayManagerValueHandler;
 import de.focus_shift.jollyday.core.configuration.ConfigurationProviderManager;
 import de.focus_shift.jollyday.core.datasource.ConfigurationServiceManager;
 import de.focus_shift.jollyday.core.parser.functions.CalendarToLocalDate;
@@ -112,6 +111,7 @@ public abstract class HolidayManager {
   private static HolidayManager createManager(final ManagerParameter parameter) {
     LOG.debug("Creating HolidayManager for calendar '{}'. Caching enabled: {}", parameter, isManagerCachingEnabled());
     CONFIGURATION_MANAGER_PROVIDER.mergeConfigurationProperties(parameter);
+
     final String managerImplClassName = readManagerImplClassName(parameter);
     final HolidayManagerValueHandler holidayManagerValueHandler = new HolidayManagerValueHandler(parameter, managerImplClassName, configurationServiceManager);
     if (isManagerCachingEnabled()) {

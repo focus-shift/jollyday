@@ -1,21 +1,20 @@
-package de.focus_shift.jollyday.core.caching;
+package de.focus_shift.jollyday.core;
 
-import de.focus_shift.jollyday.core.HolidayManager;
-import de.focus_shift.jollyday.core.ManagerParameter;
+import de.focus_shift.jollyday.core.caching.Cache;
 import de.focus_shift.jollyday.core.datasource.ConfigurationServiceManager;
 import de.focus_shift.jollyday.core.spi.ConfigurationService;
 import de.focus_shift.jollyday.core.util.ClassLoadingUtil;
 
 /**
- * Creates the {@link Cache.ValueHandler} which constructs a {@link HolidayManager}.
+ * Creates the {@link Cache.ValueHandler} which constructs and caches a {@link HolidayManager}.
  */
-public class HolidayManagerValueHandler implements Cache.ValueHandler<HolidayManager> {
+class HolidayManagerValueHandler implements Cache.ValueHandler<HolidayManager> {
 
   private final ManagerParameter parameter;
   private final String managerImplClassName;
   private final ConfigurationServiceManager configurationServiceManager;
 
-  public HolidayManagerValueHandler(final ManagerParameter parameter, final String managerImplClassName, final ConfigurationServiceManager configurationServiceManager) {
+  HolidayManagerValueHandler(final ManagerParameter parameter, final String managerImplClassName, final ConfigurationServiceManager configurationServiceManager) {
     this.parameter = parameter;
     this.managerImplClassName = managerImplClassName;
     this.configurationServiceManager = configurationServiceManager;
