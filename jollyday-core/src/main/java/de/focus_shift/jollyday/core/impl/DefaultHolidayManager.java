@@ -97,7 +97,7 @@ public class DefaultHolidayManager extends HolidayManager {
       keyBuilder.append(arg);
     }
 
-    final Cache.ValueHandler<Set<Holiday>> valueHandler = new Cache.ValueHandler<>() {
+    final Cache.ValueHandler<Set<Holiday>> holidayValueHandler = new Cache.ValueHandler<>() {
       @Override
       public String getKey() {
         return keyBuilder.toString();
@@ -111,7 +111,7 @@ public class DefaultHolidayManager extends HolidayManager {
       }
     };
 
-    return holidayCache.get(valueHandler);
+    return holidayCache.get(holidayValueHandler);
   }
 
   /**
