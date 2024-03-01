@@ -8,11 +8,9 @@ import de.focus_shift.jollyday.core.caching.Cache;
 import de.focus_shift.jollyday.core.parser.HolidayParser;
 import de.focus_shift.jollyday.core.spi.Configuration;
 import de.focus_shift.jollyday.core.spi.Holidays;
-import de.focus_shift.jollyday.core.util.ClassLoadingUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
@@ -26,6 +24,7 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
 
+import static de.focus_shift.jollyday.core.util.ClassLoadingUtil.loadClass;
 import static java.util.Arrays.copyOfRange;
 import static java.util.stream.Collectors.toCollection;
 import static java.util.stream.Collectors.toSet;
@@ -46,9 +45,9 @@ public class DefaultHolidayManager extends HolidayManager {
   private static final String PARSER_IMPL_PREFIX = "parser.impl.";
 
   /**
-   * Parser cache by XML class name.
+   * Caches all {@link HolidayParser} instances actually used by the HolidayManager
    */
-  private final Map<String, HolidayParser> parserCache = new HashMap<>();
+  private final Cache<HolidayParser> parserCache = new Cache<>();
 
   /**
    * Caches the instance based country specific holidays so that e.g.
@@ -236,18 +235,31 @@ public class DefaultHolidayManager extends HolidayManager {
     return parsers;
   }
 
-  private HolidayParser instantiateParser(final String className) throws ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-    HolidayParser holidayParser = parserCache.get(className);
-    if (holidayParser == null) {
-      final String propName = PARSER_IMPL_PREFIX + className;
-      final String parserClassName = getManagerParameter().getProperty(propName);
-      if (parserClassName != null) {
-        final Class<?> parserClass = ClassLoadingUtil.loadClass(parserClassName);
-        holidayParser = (HolidayParser) parserClass.getConstructor().newInstance();
-        parserCache.put(className, holidayParser);
+  private HolidayParser instantiateParser(final String className) {
+
+    final Cache.ValueHandler<HolidayParser> parserValueHandler = new Cache.ValueHandler<>() {
+      @Override
+      public String getKey() {
+        return className;
       }
-    }
-    return holidayParser;
+
+      @Override
+      public HolidayParser createValue() {
+        final String parserClassName = getManagerParameter().getProperty(PARSER_IMPL_PREFIX + className);
+        if (parserClassName != null) {
+
+          try {
+            return (HolidayParser) loadClass(parserClassName).getConstructor().newInstance();
+          } catch (ReflectiveOperationException | SecurityException e) {
+            throw new IllegalStateException("Cannot create parsers.", e);
+          }
+        }
+
+        return null;
+      }
+    };
+
+    return parserCache.get(parserValueHandler);
   }
 
   /**
