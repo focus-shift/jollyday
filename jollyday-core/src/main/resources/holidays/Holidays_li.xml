@@ -23,4 +23,9 @@
     <ChristianHoliday type="WHIT_MONDAY" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
     <ChristianHoliday type="CORPUS_CHRISTI" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
   </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Liechtenstein</Source>
+    <Source>https://www.llb.li/de/kontakt/bankfeiertage</Source>
+  </Sources>
 </Configuration>
