@@ -30,9 +30,14 @@
     </FixedWeekdayBetweenFixed>
   </Holidays>
 
-  <SubConfigurations hierarchy="01" description="Aland">
+  <SubConfigurations hierarchy="01" description="Åland">
     <Holidays>
       <Fixed month="JUNE" day="9" descriptionPropertiesKey="SELF_GOVERNANCE"/>
+      <ChristianHoliday type="WHIT_SUNDAY" descriptionPropertiesKey="christian.WHIT_SUNDAY"/>
     </Holidays>
+
+    <Sources>
+      <Source>https://en.wikipedia.org/wiki/Public_holidays_in_%C3%85land</Source>
+    </Sources>
   </SubConfigurations>
 </Configuration>
