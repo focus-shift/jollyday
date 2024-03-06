@@ -210,7 +210,6 @@ The following holiday types are supported:
 |------------|---------------------------------------------------------------------------------------------------------|
 | Public     | Public holiday                                                                                          |
 | Bank       | Bank holiday, banks and offices are closed                                                              |
-| Unofficial | Unofficial holiday that is no <br/>public or bank holiday <br/>(Deprecated, please use the other types) |
 
 ## Development
 

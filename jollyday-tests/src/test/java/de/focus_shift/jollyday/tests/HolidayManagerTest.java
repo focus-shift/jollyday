@@ -23,8 +23,8 @@ import java.util.Set;
 import java.util.stream.Stream;
 
 import static de.focus_shift.jollyday.core.HolidayCalendar.GERMANY;
+import static de.focus_shift.jollyday.core.HolidayType.BANK_HOLIDAY;
 import static de.focus_shift.jollyday.core.HolidayType.PUBLIC_HOLIDAY;
-import static de.focus_shift.jollyday.core.HolidayType.UNOFFICIAL_HOLIDAY;
 import static de.focus_shift.jollyday.core.ManagerParameters.create;
 import static java.time.Month.APRIL;
 import static java.time.Month.AUGUST;
@@ -180,7 +180,7 @@ class HolidayManagerTest {
     calendar.set(YEAR, 2010);
     calendar.set(MONTH, Calendar.JANUARY);
     calendar.set(DAY_OF_MONTH, 4);
-    assertThat(sut.isHoliday(calendar, UNOFFICIAL_HOLIDAY)).isTrue();
+    assertThat(sut.isHoliday(calendar, BANK_HOLIDAY)).isTrue();
     assertThat(sut.isHoliday(calendar, PUBLIC_HOLIDAY)).isFalse();
   }
 
@@ -195,7 +195,7 @@ class HolidayManagerTest {
   void ensureIsHolidayMethodReturnsTrueFalseForLocalDateWithHolidayType() {
     final HolidayManager sut = HolidayManager.getInstance(create("test"));
     assertThat(sut.isHoliday(LocalDate.of(2010, 1, 4), PUBLIC_HOLIDAY)).isFalse();
-    assertThat(sut.isHoliday(LocalDate.of(2010, 1, 4), UNOFFICIAL_HOLIDAY)).isTrue();
+    assertThat(sut.isHoliday(LocalDate.of(2010, 1, 4), BANK_HOLIDAY)).isTrue();
   }
 
   @Test
@@ -247,9 +247,9 @@ class HolidayManagerTest {
   @Test
   void ensureToRetrieveHolidaysByType() {
     final HolidayManager sut = HolidayManager.getInstance(create("test"));
-    final Set<Holiday> holidays = sut.getHolidays(2010, UNOFFICIAL_HOLIDAY);
+    final Set<Holiday> holidays = sut.getHolidays(2010, BANK_HOLIDAY);
     assertThat(holidays)
-      .containsOnly(new Holiday(LocalDate.of(2010, 1, 4), "", UNOFFICIAL_HOLIDAY));
+      .containsOnly(new Holiday(LocalDate.of(2010, 1, 4), "", BANK_HOLIDAY));
   }
 
   private static Stream<Arguments> firstLevel() {
@@ -295,9 +295,9 @@ class HolidayManagerTest {
   @Test
   void ensureToTestIntervalToRetrieveHolidaysByType() {
     final HolidayManager sut = HolidayManager.getInstance(create("test"));
-    final Set<Holiday> holidays = sut.getHolidays(LocalDate.of(2010, 1, 1), LocalDate.of(2010, 1, 31), UNOFFICIAL_HOLIDAY);
+    final Set<Holiday> holidays = sut.getHolidays(LocalDate.of(2010, 1, 1), LocalDate.of(2010, 1, 31), BANK_HOLIDAY);
     assertThat(holidays)
-      .containsOnly(new Holiday(LocalDate.of(2010, 1, 4), "", UNOFFICIAL_HOLIDAY));
+      .containsOnly(new Holiday(LocalDate.of(2010, 1, 4), "", BANK_HOLIDAY));
   }
 
   @Test
