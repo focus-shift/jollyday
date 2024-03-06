@@ -52,7 +52,7 @@ public class JaxbRelativeToFixed implements RelativeToFixed {
   @Override
   public HolidayType officiality() {
     return relativeToFixed.getLocalizedType() == null
-      ? HolidayType.OFFICIAL_HOLIDAY
+      ? HolidayType.PUBLIC_HOLIDAY
       : HolidayType.valueOf(relativeToFixed.getLocalizedType().name());
   }
 

@@ -40,7 +40,7 @@ public class JacksonFixedWeekdayInMonth implements FixedWeekdayInMonth {
   @Override
   public HolidayType officiality() {
     return fixedWeekdayInMonth.getLocalizedType() == null
-      ? HolidayType.OFFICIAL_HOLIDAY
+      ? HolidayType.PUBLIC_HOLIDAY
       : HolidayType.valueOf(fixedWeekdayInMonth.getLocalizedType().name());
   }
 
