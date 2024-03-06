@@ -206,13 +206,11 @@ To access the public holidays of a subdivision of a country, e.g. Baden-Württem
 
 The following holiday types are supported:
 
-| Type        | Description                                                                                                          |
-|-------------|----------------------------------------------------------------------------------------------------------------------|
-| Official    | Official public holiday                                                                                              |
-| Bank        | Bank holiday, banks and offices are closed                                                                           |
-| School      | School holiday, schools are closed                                                                                   |
-| Authorities | Authorities are closed                                                                                               |
-| Unofficial  | Unofficial holiday that is no <br/>Bank, School or Authorities holiday <br/>(Deprecated, please use the other types) |
+| Type       | Description                                                                                             |
+|------------|---------------------------------------------------------------------------------------------------------|
+| Public     | Public holiday                                                                                          |
+| Bank       | Bank holiday, banks and offices are closed                                                              |
+| Unofficial | Unofficial holiday that is no <br/>public or bank holiday <br/>(Deprecated, please use the other types) |
 
 ## Development
 

@@ -23,14 +23,14 @@ class CreateHolidayTest {
 
       @Override
       public HolidayType officiality() {
-        return HolidayType.OFFICIAL_HOLIDAY;
+        return HolidayType.PUBLIC_HOLIDAY;
       }
     };
 
     final Holiday holiday = new CreateHoliday(LocalDate.of(2020, 4, 1)).apply(described);
 
     assertThat(holiday.getDate()).hasYear(2020).hasMonth(APRIL).hasDayOfMonth(1);
-    assertThat(holiday.getType()).isEqualTo(HolidayType.OFFICIAL_HOLIDAY);
+    assertThat(holiday.getType()).isEqualTo(HolidayType.PUBLIC_HOLIDAY);
     assertThat(holiday.getPropertiesKey()).isEqualTo("propertiesKey");
   }
 }
