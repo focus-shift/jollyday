@@ -229,6 +229,7 @@
         <configuration>
           <quiet>true</quiet>
           <excludePackageNames>de.focus_shift.jollyday.jaxb.mapping</excludePackageNames>
+          <excludePackageNames>de.focus_shift.jollyday.jackson.mapping</excludePackageNames>
         </configuration>
         <executions>
           <execution>
