@@ -19,4 +19,10 @@
     <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="CHRISTMAS"/>
     <Fixed month="DECEMBER" day="27" descriptionPropertiesKey="BOXING_DAY"/>
   </Holidays>
+
+  <Sources>
+    <Source>https://bvi.gov.vg/media-centre/bvi-announces-public-holiday-april-21-celebrate-her-majesty-s-birthday</Source>
+    <Source>https://bvi.gov.vg/media-centre/revised-2016-public-holidays</Source>
+    <Source>https://bvi.gov.vg/media-centre/2016-public-holidays</Source>
+  </Sources>
 </Configuration>

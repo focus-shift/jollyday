@@ -27,7 +27,7 @@ public class JapaneseHolidayManager extends DefaultHolidayManager {
    * between each other than this day is also a holiday.
    */
   @Override
-  public Set<Holiday> getHolidays(int year, final String... args) {
+  public Set<Holiday> getHolidays(final int year, final String... args) {
     final Set<Holiday> holidays = super.getHolidays(year, args);
     final Set<Holiday> additionalHolidays = new HashSet<>();
     for (Holiday holiday : holidays) {

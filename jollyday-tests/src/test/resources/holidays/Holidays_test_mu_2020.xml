@@ -20,4 +20,11 @@
     <Fixed month="NOVEMBER" day="14" descriptionPropertiesKey="DIVALI"/>
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
   </Holidays>
+
+  <Sources>
+    <Source>https://pmo.govmu.org/Communique/Public%20holidays%20--%202020.pdf</Source>
+    <Source>https://pmo.govmu.org/CabinetDecision/2019/Cabinet_Decisions_taken_on_07_JUNE_2019.pdf</Source>
+    <Source>https://mauritius-antananarivo.govmu.org/Pages/About%20Us/Public-Holidays-in-Mauritius-for-Year-2020.aspx</Source>
+    <Source>https://mauritius-canberra.govmu.org/Pages/About%20Us/Public-Holidays-in-Australia-for-Year-2020.aspx</Source>
+  </Sources>
 </Configuration>

@@ -30,23 +30,23 @@ class HolidayXKTest extends AbstractCountryTestBase {
   @Test
   void testManagerXKInterval() {
     HolidayManager instance = HolidayManager.getInstance(ManagerParameters.create(KOSOVO));
-    Set<Holiday> holidays = instance.getHolidays(CalendarUtil.create(2010, 6, 1),
-      CalendarUtil.create(2011, 5, 31));
+    Set<Holiday> holidays = instance.getHolidays(LocalDate.of(2010, 6, 1),
+      LocalDate.of(2011, 5, 31));
 
-    List<LocalDate> expected = Arrays.asList(CalendarUtil.create(2010, 6, 12),
-      CalendarUtil.create(2010, 6, 15),
-      CalendarUtil.create(2010, 9, 28),
-      CalendarUtil.create(2010, 11, 28),
-      CalendarUtil.create(2010, 12, 25),
-      CalendarUtil.create(2011, 1, 1),
-      CalendarUtil.create(2011, 2, 15),
-      CalendarUtil.create(2011, 2, 17),
-      CalendarUtil.create(2011, 3, 6),
-      CalendarUtil.create(2011, 3, 8),
-      CalendarUtil.create(2011, 4, 23),
-      CalendarUtil.create(2011, 5, 1),
-      CalendarUtil.create(2011, 5, 6),
-      CalendarUtil.create(2011, 5, 9)
+    List<LocalDate> expected = Arrays.asList(LocalDate.of(2010, 6, 12),
+      LocalDate.of(2010, 6, 15),
+      LocalDate.of(2010, 9, 28),
+      LocalDate.of(2010, 11, 28),
+      LocalDate.of(2010, 12, 25),
+      LocalDate.of(2011, 1, 1),
+      LocalDate.of(2011, 2, 15),
+      LocalDate.of(2011, 2, 17),
+      LocalDate.of(2011, 3, 6),
+      LocalDate.of(2011, 3, 8),
+      LocalDate.of(2011, 4, 23),
+      LocalDate.of(2011, 5, 1),
+      LocalDate.of(2011, 5, 6),
+      LocalDate.of(2011, 5, 9)
     );
 
     assertThat(holidays).hasSameSizeAs(expected);

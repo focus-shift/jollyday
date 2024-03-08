@@ -20,4 +20,10 @@
     <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY"/>
     <Fixed month="DECEMBER" day="27" descriptionPropertiesKey="CHRISTMAS"/>
   </Holidays>
+
+  <Sources>
+    <Source>https://bvi.gov.vg/media-centre/revised-2022-public-holidays</Source>
+    <Source>https://bvi.org.uk/cabinet-approves-2022-public-holidays/</Source>
+    <Source>https://bvi.gov.vg/media-centre/public-holiday-observe-her-majesty-s-platinum-jubilee</Source>
+  </Sources>
 </Configuration>

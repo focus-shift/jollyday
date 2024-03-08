@@ -9,7 +9,7 @@ class DescribedDateHolder {
   private final LocalDate date;
   private final Described described;
 
-  public DescribedDateHolder(Described described, LocalDate date) {
+  public DescribedDateHolder(final Described described, final LocalDate date) {
     this.date = date;
     this.described = described;
   }

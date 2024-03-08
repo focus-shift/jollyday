@@ -20,4 +20,8 @@
     <Fixed month="OCTOBER" day="24" descriptionPropertiesKey="DIVALI"/>
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
   </Holidays>
+
+  <Sources>
+    <Source>https://pmo.govmu.org/Communique/Public%20holidays%20-%202022.pdf</Source>
+  </Sources>
 </Configuration>

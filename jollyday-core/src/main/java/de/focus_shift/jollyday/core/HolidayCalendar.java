@@ -1,11 +1,13 @@
 package de.focus_shift.jollyday.core;
 
 import java.util.Locale;
+import java.util.Set;
+
+import static java.util.Arrays.stream;
+import static java.util.stream.Collectors.toUnmodifiableSet;
 
 /**
  * This enum provides a list of all supported holiday calendars.
- *
- * @version $Id$
  */
 public enum HolidayCalendar {
 
@@ -22,7 +24,7 @@ public enum HolidayCalendar {
   KAZAKHSTAN("KZ"), KOSOVO("XK"),
   LATVIA("LV"), LIECHTENSTEIN("LI"), LITHUANIA("LT"), LONDON_METAL_EXCHANGE("LME"), LUXEMBOURG("LU"),
   MACEDONIA("MK"), MALTA("MT"), MAURITIUS("MU"), MEXICO("MX"), MOLDOVA("MD"), MONTENEGRO("ME"),
-  NETHERLANDS("NL"), NEW_ZEALAND("NZ"), NICARAGUA("NI"), NIGERIA("NG"), NORWAY("NO"), NYSE("NYSE"),
+  NETHERLANDS("NL"), NEW_ZEALAND("NZ"), NICARAGUA("NI"), NIGERIA("NG"), NORWAY("NO"), NYSE("NYSE"), NYSE_EURONEXT("NYSE_EURONEXT"),
   PANAMA("PA"), PARAGUAY("PY"), PERU("PE"), POLAND("PL"), PORTUGAL("PT"),
   ROMANIA("RO"), RUSSIA("RU"),
   SAUDI_ARABIA("SA"), SERBIA("RS"), SINGAPORE("SG"), SLOWAKIA("SK"), SLOWENIA("SI"), SOUTH_AFRICA("ZA"), SPAIN("ES"), SWEDEN("SE"), SWITZERLAND("CH"),
@@ -45,5 +47,16 @@ public enum HolidayCalendar {
    */
   public String getId() {
     return id;
+  }
+
+  /**
+   * Returns a set of all currently supported ISO 3166-1 alpha-2 codes.
+   *
+   * @return Set of supported calendar codes.
+   */
+  public static Set<String> getSupportedCalendarCodes() {
+    return stream(HolidayCalendar.values())
+      .map(HolidayCalendar::getId)
+      .collect(toUnmodifiableSet());
   }
 }

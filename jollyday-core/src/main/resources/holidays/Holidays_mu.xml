@@ -128,4 +128,11 @@
     <IslamicHoliday type="ID_AL_FITR_2" validFrom="2014" every="FOUR_YEARS" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
     <IslamicHoliday type="ID_AL_FITR" validFrom="2016" every="FOUR_YEARS" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
   </Holidays>
+
+  <Sources>
+    <Source>https://attorneygeneral.govmu.org/Documents/Laws%20of%20Mauritius/A-Z%20Acts/P/Pu/PUBLIC%20HOLIDAYS%20ACT,%20No.%2022%20of%201968.pdf</Source>
+    <Source>https://en.wikipedia.org/wiki/Culture_of_Mauritius#Public_holidays_and_festivals</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:MU</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:MU</Source>
+  </Sources>
 </Configuration>

@@ -3,10 +3,11 @@ package de.focus_shift.jollyday.core.impl;
 import de.focus_shift.jollyday.core.CalendarHierarchy;
 import de.focus_shift.jollyday.core.Holiday;
 import de.focus_shift.jollyday.core.HolidayManager;
+import de.focus_shift.jollyday.core.HolidayType;
+import de.focus_shift.jollyday.core.caching.Cache;
 import de.focus_shift.jollyday.core.parser.HolidayParser;
 import de.focus_shift.jollyday.core.spi.Configuration;
 import de.focus_shift.jollyday.core.spi.Holidays;
-import de.focus_shift.jollyday.core.util.ClassLoadingUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -23,8 +24,10 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
 
+import static de.focus_shift.jollyday.core.util.ClassLoadingUtil.loadClass;
 import static java.util.Arrays.copyOfRange;
 import static java.util.stream.Collectors.toCollection;
+import static java.util.stream.Collectors.toSet;
 import static java.util.stream.Collectors.toUnmodifiableSet;
 import static java.util.stream.IntStream.rangeClosed;
 
@@ -42,9 +45,20 @@ public class DefaultHolidayManager extends HolidayManager {
   private static final String PARSER_IMPL_PREFIX = "parser.impl.";
 
   /**
-   * Parser cache by XML class name.
+   * Caches all {@link HolidayParser} instances actually used by the HolidayManager
    */
-  private final Map<String, HolidayParser> parserCache = new HashMap<>();
+  private final Cache<HolidayParser> parserCache = new Cache<>();
+
+  /**
+   * Caches the instance based country specific holidays so that e.g.
+   * the created HolidayManager via
+   * {@code HolidayManager.getInstance(create("de"))} only contains the german holidays.
+   * <p>
+   * This is also the reason this cache is not static.
+   * If it was static all holidays over all holiday manager instances would be cached,
+   * but only the german holidays are important for the german holiday manager, so only save them.
+   */
+  private final Cache<Set<Holiday>> holidayCache = new Cache<>();
 
   /**
    * Configuration parsed on initialization.
@@ -73,10 +87,40 @@ public class DefaultHolidayManager extends HolidayManager {
    * with the configuration from initialization.
    */
   @Override
-  public Set<Holiday> getHolidays(int year, final String... args) {
-    Set<Holiday> holidaySet = Collections.synchronizedSet(new HashSet<>());
-    getHolidays(year, configuration, holidaySet, args);
-    return holidaySet;
+  public Set<Holiday> getHolidays(final int year, final String... args) {
+
+    final StringBuilder keyBuilder = new StringBuilder();
+    keyBuilder.append(year);
+    for (String arg : args) {
+      keyBuilder.append("_");
+      keyBuilder.append(arg);
+    }
+
+    final Cache.ValueHandler<Set<Holiday>> holidayValueHandler = new Cache.ValueHandler<>() {
+      @Override
+      public String getKey() {
+        return keyBuilder.toString();
+      }
+
+      @Override
+      public Set<Holiday> createValue() {
+        final Set<Holiday> holidaySet = Collections.synchronizedSet(new HashSet<>());
+        getHolidays(year, configuration, holidaySet, args);
+        return holidaySet;
+      }
+    };
+
+    return holidayCache.get(holidayValueHandler);
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public Set<Holiday> getHolidays(final int year, final HolidayType holidayType, final String... args) {
+    return getHolidays(year, args).stream()
+      .filter(holiday -> holiday.getType().equals(holidayType))
+      .collect(toSet());
   }
 
   /**
@@ -87,15 +131,25 @@ public class DefaultHolidayManager extends HolidayManager {
    * interval.
    */
   @Override
-  public Set<Holiday> getHolidays(LocalDate startDateInclusive, LocalDate endDateInclusive, final String... args) {
+  public Set<Holiday> getHolidays(final LocalDate startDateInclusive, final LocalDate endDateInclusive, final String... args) {
     Objects.requireNonNull(startDateInclusive, "startDateInclusive is null");
-    Objects.requireNonNull(endDateInclusive, "endInclusive is null");
+    Objects.requireNonNull(endDateInclusive, "endDateInclusive is null");
 
     return rangeClosed(startDateInclusive.getYear(), endDateInclusive.getYear())
       .mapToObj(year -> getHolidays(year, args))
       .flatMap(Collection::stream)
       .filter(holiday -> !startDateInclusive.isAfter(holiday.getDate()) && !endDateInclusive.isBefore(holiday.getDate()))
       .collect(toUnmodifiableSet());
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public Set<Holiday> getHolidays(final LocalDate startDateInclusive, final LocalDate endDateInclusive, final HolidayType holidayType, final String... args) {
+    return getHolidays(startDateInclusive, endDateInclusive, args).stream()
+      .filter(holiday -> holiday.getType().equals(holidayType))
+      .collect(toSet());
   }
 
   /**
@@ -120,7 +174,7 @@ public class DefaultHolidayManager extends HolidayManager {
    * @param holidaySet    the set of holidays
    * @param args          the arguments to descend down the configuration tree
    */
-  private void getHolidays(int year, final Configuration configuration, Set<Holiday> holidaySet, final String... args) {
+  private void getHolidays(final int year, final Configuration configuration, final Set<Holiday> holidaySet, final String... args) {
     if (LOG.isDebugEnabled()) {
       LOG.debug("Adding holidays for {}", configuration.description());
     }
@@ -181,18 +235,31 @@ public class DefaultHolidayManager extends HolidayManager {
     return parsers;
   }
 
-  private HolidayParser instantiateParser(String className) throws ClassNotFoundException, InstantiationException, IllegalAccessException, java.lang.reflect.InvocationTargetException, NoSuchMethodException {
-    HolidayParser holidayParser = parserCache.get(className);
-    if (holidayParser == null) {
-      final String propName = PARSER_IMPL_PREFIX + className;
-      final String parserClassName = getManagerParameter().getProperty(propName);
-      if (parserClassName != null) {
-        final Class<?> parserClass = ClassLoadingUtil.loadClass(parserClassName);
-        holidayParser = (HolidayParser) parserClass.getConstructor().newInstance();
-        parserCache.put(className, holidayParser);
+  private HolidayParser instantiateParser(final String className) {
+
+    final Cache.ValueHandler<HolidayParser> parserValueHandler = new Cache.ValueHandler<>() {
+      @Override
+      public String getKey() {
+        return className;
       }
-    }
-    return holidayParser;
+
+      @Override
+      public HolidayParser createValue() {
+        final String parserClassName = getManagerParameter().getProperty(PARSER_IMPL_PREFIX + className);
+        if (parserClassName != null) {
+
+          try {
+            return (HolidayParser) loadClass(parserClassName).getConstructor().newInstance();
+          } catch (ReflectiveOperationException | SecurityException e) {
+            throw new IllegalStateException("Cannot create parsers.", e);
+          }
+        }
+
+        return null;
+      }
+    };
+
+    return parserCache.get(parserValueHandler);
   }
 
   /**
@@ -201,7 +268,7 @@ public class DefaultHolidayManager extends HolidayManager {
    * @param configuration Configuration to log hierarchy for.
    * @param level         an int.
    */
-  protected static void logHierarchy(final Configuration configuration, int level) {
+  protected static void logHierarchy(final Configuration configuration, final int level) {
     if (LOG.isDebugEnabled()) {
       final StringBuilder space = new StringBuilder();
       space.append("-".repeat(level));

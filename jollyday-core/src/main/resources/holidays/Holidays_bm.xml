@@ -91,4 +91,11 @@
       <to month="AUGUST" day="4"/>
     </FixedWeekdayBetweenFixed>
   </Holidays>
+
+  <Sources>
+    <Source>https://www.gov.bm/public-holidays</Source>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Bermuda</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:BM</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:BM</Source>
+  </Sources>
 </Configuration>

@@ -1,6 +1,5 @@
 package de.focus_shift.jollyday.core.configuration;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.Properties;

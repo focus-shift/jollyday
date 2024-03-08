@@ -8,14 +8,14 @@ public abstract class BaseManagerParameter implements ManagerParameter {
 
   private Properties properties = new Properties();
 
-  BaseManagerParameter(Properties properties) {
+  BaseManagerParameter(final Properties properties) {
     if (properties != null) {
       this.properties.putAll(properties);
     }
   }
 
   @Override
-  public void mergeProperties(Properties properties) {
+  public void mergeProperties(final Properties properties) {
     if (properties != null) {
       final Properties mergedProperties = new Properties();
       mergedProperties.putAll(properties);

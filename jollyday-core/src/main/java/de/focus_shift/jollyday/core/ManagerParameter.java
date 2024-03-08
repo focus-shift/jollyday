@@ -7,11 +7,11 @@ public interface ManagerParameter {
 
   String MANAGER_IMPL_CLASS_PREFIX = "manager.impl";
 
-  void mergeProperties(Properties properties);
+  void mergeProperties(final Properties properties);
 
-  String getProperty(String key);
+  String getProperty(final String key);
 
-  void setProperty(String key, String value);
+  void setProperty(final String key, final String value);
 
   String getManagerImplClassName();
 

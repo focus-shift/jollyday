@@ -23,7 +23,7 @@ public class ValidLimitation implements Predicate<Limited> {
    * @return is valid for the year.
    */
   @Override
-  public boolean test(Limited limited) {
+  public boolean test(final Limited limited) {
     return new ValidFromTo(year).and(new ValidCycle(year)).test(limited);
   }
 

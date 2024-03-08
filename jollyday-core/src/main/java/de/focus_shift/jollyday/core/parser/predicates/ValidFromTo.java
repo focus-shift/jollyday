@@ -13,7 +13,7 @@ public class ValidFromTo implements Predicate<Limited> {
   }
 
   @Override
-  public boolean test(Limited limited) {
+  public boolean test(final Limited limited) {
     return (limited.validFrom() == null || limited.validFrom().getValue() <= year)
       && (limited.validTo() == null || limited.validTo().getValue() >= year);
   }

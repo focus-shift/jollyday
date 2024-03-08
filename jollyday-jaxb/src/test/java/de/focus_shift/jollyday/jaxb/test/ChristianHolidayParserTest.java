@@ -3,7 +3,6 @@ package de.focus_shift.jollyday.jaxb.test;
 import de.focus_shift.jollyday.core.Holiday;
 import de.focus_shift.jollyday.core.parser.impl.ChristianHolidayParser;
 import de.focus_shift.jollyday.core.parser.impl.RelativeToEasterSundayParser;
-import de.focus_shift.jollyday.core.util.CalendarUtil;
 import de.focus_shift.jollyday.jaxb.JaxbHolidays;
 import de.focus_shift.jollyday.jaxb.mapping.ChristianHoliday;
 import de.focus_shift.jollyday.jaxb.mapping.ChristianHolidayType;
@@ -49,7 +48,7 @@ class ChristianHolidayParserTest {
     final List<Holiday> holidays = sut.parse(2011, new JaxbHolidays(config));
     assertThat(holidays).hasSize(1);
     final Holiday easterDate = holidays.iterator().next();
-    final LocalDate ed = CalendarUtil.create(2011, 4, 24);
+    final LocalDate ed = LocalDate.of(2011, 4, 24);
     assertThat(easterDate.getDate()).isEqualTo(ed);
   }
 
@@ -67,7 +66,7 @@ class ChristianHolidayParserTest {
     final RelativeToEasterSundayParser p = new RelativeToEasterSundayParser();
     final List<Holiday> holidays = p.parse(2011, new JaxbHolidays(config));
     final List<LocalDate> expected = new ArrayList<>();
-    expected.add(CalendarUtil.create(2011, 4, 25));
+    expected.add(LocalDate.of(2011, 4, 25));
     assertThat(holidays).hasSameSizeAs(expected);
     assertThat(holidays.iterator().next().getDate()).isEqualTo(expected.get(0));
   }
@@ -78,13 +77,13 @@ class ChristianHolidayParserTest {
       GENERAL_PRAYER_DAY, PENTECOST, SACRED_HEART);
     final List<Holiday> holidays = sut.parse(2011, new JaxbHolidays(config));
     final List<LocalDate> expected = new ArrayList<>();
-    expected.add(CalendarUtil.create(2011, 3, 7));
-    expected.add(CalendarUtil.create(2011, 4, 23));
-    expected.add(CalendarUtil.create(2011, 4, 24));
-    expected.add(CalendarUtil.create(2011, 4, 26));
-    expected.add(CalendarUtil.create(2011, 5, 20));
-    expected.add(CalendarUtil.create(2011, 6, 12));
-    expected.add(CalendarUtil.create(2011, 7, 1));
+    expected.add(LocalDate.of(2011, 3, 7));
+    expected.add(LocalDate.of(2011, 4, 23));
+    expected.add(LocalDate.of(2011, 4, 24));
+    expected.add(LocalDate.of(2011, 4, 26));
+    expected.add(LocalDate.of(2011, 5, 20));
+    expected.add(LocalDate.of(2011, 6, 12));
+    expected.add(LocalDate.of(2011, 7, 1));
 
     assertThat(holidays).hasSameSizeAs(expected);
 
@@ -104,7 +103,7 @@ class ChristianHolidayParserTest {
     final List<Holiday> holidays = sut.parse(2019, new JaxbHolidays(config));
 
     final String expectedPropertiesKey = "CUSTOM_KEY";
-    final LocalDate expectedDate = CalendarUtil.create(2019, 4, 23);
+    final LocalDate expectedDate = LocalDate.of(2019, 4, 23);
 
     assertThat(holidays).hasSize(1);
 

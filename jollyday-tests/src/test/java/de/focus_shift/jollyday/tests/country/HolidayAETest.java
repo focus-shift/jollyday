@@ -3,7 +3,6 @@ package de.focus_shift.jollyday.tests.country;
 import de.focus_shift.jollyday.core.Holiday;
 import de.focus_shift.jollyday.core.HolidayManager;
 import de.focus_shift.jollyday.core.ManagerParameters;
-import de.focus_shift.jollyday.core.util.CalendarUtil;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
@@ -27,7 +26,7 @@ class HolidayAETest extends AbstractCountryTestBase {
 
   @Test
   void testRamadanEnd() {
-    final LocalDate expected = CalendarUtil.create(YEAR, 6, 3);
+    final LocalDate expected = LocalDate.of(YEAR, 6, 3);
     final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(UNITED_ARAB_EMIRATES));
     final Set<Holiday> holidays = holidayManager.getHolidays(YEAR);
     assertThat(holidays).hasSize(13);

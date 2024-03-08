@@ -14,14 +14,11 @@ import static java.util.stream.Collectors.toList;
 
 /**
  * The Class FixedParser. Parses a fixed date to create a Holiday.
- *
- * @author tboven
- * @version $Id: $
  */
 public class FixedParser implements HolidayParser {
 
   @Override
-  public List<Holiday> parse(int year, Holidays holidays) {
+  public List<Holiday> parse(final int year, final Holidays holidays) {
     return holidays.fixed().stream()
       .filter(new ValidLimitation(year))
       .map(fixed -> new DescribedDateHolder(fixed, new MoveDateRelative(new FixedToLocalDate(year).apply(fixed)).apply(fixed)))

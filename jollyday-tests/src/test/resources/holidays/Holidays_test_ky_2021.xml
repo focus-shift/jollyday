@@ -17,4 +17,8 @@
     <Fixed month="DECEMBER" day="27" descriptionPropertiesKey="CHRISTMAS"/>
     <Fixed month="DECEMBER" day="28" descriptionPropertiesKey="BOXING_DAY"/>
   </Holidays>
+
+  <Sources>
+    <Source>https://www.gov.ky/news/press-release-details/public-holidays-for-2021</Source>
+  </Sources>
 </Configuration>

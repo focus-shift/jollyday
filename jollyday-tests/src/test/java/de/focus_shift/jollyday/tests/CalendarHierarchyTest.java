@@ -19,7 +19,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class CalendarHierarchyTest {
 
-  private static final List<String> noneIso3166Countries = List.of("DJ_STOXX", "LME", "NYSE", "TARGET", "XK", "FR");
+  private static final List<String> noneIso3166Countries = List.of("DJ_STOXX", "LME", "NYSE", "NYSE_EURONEXT", "TARGET", "XK", "FR");
   private static final List<String> okSubdivisions = List.of("FI-01", "ES-RI", "IN-DH", "IN-OD", "IN-UK", "IN-CG", "IN-LA", "IN-TS");
 
   @Test

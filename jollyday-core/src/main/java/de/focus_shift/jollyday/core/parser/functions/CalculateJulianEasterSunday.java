@@ -8,7 +8,7 @@ import java.util.function.IntFunction;
 public class CalculateJulianEasterSunday implements IntFunction<LocalDate> {
 
   @Override
-  public LocalDate apply(int year) {
+  public LocalDate apply(final int year) {
     int a, b, c, d, e;
     int x, month, day;
     a = year % 4;

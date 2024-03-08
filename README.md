@@ -212,23 +212,9 @@ If you want to raise an **issue or bug** you can create a [new issue](https://gi
 
 * [JDK 11](https://openjdk.java.net/install/)
 
-### Clone the repository
+### Architecture decision record (ADR)
 
-```bash
-git clone git@github.com:focus-shift/jollyday.git
-```
-
-### Build jollyday
-
-```bash
-./mvnw clean verify
-```
-
-or for Windows user:
-
-```bash
-./mvnw.cmd clean verify
-```
+ * [Document empty subdivision](.adr/001-document-every-subdivision.md)
 
 ## License
 

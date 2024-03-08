@@ -3,7 +3,6 @@ package de.focus_shift.jollyday.tests.country;
 import de.focus_shift.jollyday.core.Holiday;
 import de.focus_shift.jollyday.core.HolidayManager;
 import de.focus_shift.jollyday.core.ManagerParameters;
-import de.focus_shift.jollyday.core.util.CalendarUtil;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
@@ -25,7 +24,7 @@ class HolidayEGTest extends AbstractCountryTestBase {
 
   @Test
   void testEasterMonday2019() {
-    final LocalDate expected = CalendarUtil.create(YEAR, 4, 29);
+    final LocalDate expected = LocalDate.of(YEAR, 4, 29);
     final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(EGYPT));
     final Set<Holiday> holidays = holidayManager.getHolidays(YEAR);
     assertThat(holidays).hasSize(17);
@@ -35,7 +34,7 @@ class HolidayEGTest extends AbstractCountryTestBase {
 
   @Test
   void testEidFitr2019() {
-    final LocalDate expected = CalendarUtil.create(YEAR, 6, 4);
+    final LocalDate expected = LocalDate.of(YEAR, 6, 4);
     final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(EGYPT));
     final Set<Holiday> holidays = holidayManager.getHolidays(YEAR);
     assertThat(holidays).hasSize(17);
@@ -45,7 +44,7 @@ class HolidayEGTest extends AbstractCountryTestBase {
 
   @Test
   void testArafaat2019() {
-    final LocalDate expected = CalendarUtil.create(YEAR, 8, 10);
+    final LocalDate expected = LocalDate.of(YEAR, 8, 10);
     final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(EGYPT));
     final Set<Holiday> holidays = holidayManager.getHolidays(YEAR);
     assertThat(holidays).hasSize(17);

@@ -36,12 +36,12 @@ class HolidayDETest extends AbstractCountryTestBase {
   void testManagerDEInterval() {
     try {
       final HolidayManager instance = HolidayManager.getInstance(ManagerParameters.create(HolidayCalendar.GERMANY, null));
-      final LocalDate startDateInclusive = CalendarUtil.create(2010, 10, 1);
-      final LocalDate endDateInclusive = CalendarUtil.create(2011, 1, 31);
+      final LocalDate startDateInclusive = LocalDate.of(2010, 10, 1);
+      final LocalDate endDateInclusive = LocalDate.of(2011, 1, 31);
       final Set<Holiday> holidays = instance.getHolidays(startDateInclusive, endDateInclusive);
-      final List<LocalDate> expected = List.of(CalendarUtil.create(2010, 12, 25),
-        CalendarUtil.create(2010, 12, 26), CalendarUtil.create(2010, 10, 3),
-        CalendarUtil.create(2011, 1, 1));
+      final List<LocalDate> expected = List.of(LocalDate.of(2010, 12, 25),
+        LocalDate.of(2010, 12, 26), LocalDate.of(2010, 10, 3),
+        LocalDate.of(2011, 1, 1));
       assertThat(holidays).hasSameSizeAs(expected);
       for (LocalDate d : expected) {
         assertThat(CalendarUtil.contains(holidays, d)).isTrue();

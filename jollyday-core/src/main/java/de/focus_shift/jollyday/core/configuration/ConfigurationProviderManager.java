@@ -23,17 +23,17 @@ public class ConfigurationProviderManager {
    *
    * @param parameter the configuration {@link ManagerParameter} to use
    */
-  public void mergeConfigurationProperties(ManagerParameter parameter) {
+  public void mergeConfigurationProperties(final ManagerParameter parameter) {
     addInternalConfigurationProviderProperties(parameter);
     addCustomConfigurationProviderProperties(parameter);
   }
 
-  private void addInternalConfigurationProviderProperties(ManagerParameter parameter) {
+  private void addInternalConfigurationProviderProperties(final ManagerParameter parameter) {
     parameter.mergeProperties(urlConfigurationProvider.getProperties());
     parameter.mergeProperties(classpathConfigurationProvider.getProperties());
   }
 
-  private void addCustomConfigurationProviderProperties(ManagerParameter parameter) {
+  private void addCustomConfigurationProviderProperties(final ManagerParameter parameter) {
     final String providersStrList = System.getProperty(ConfigurationProvider.CONFIG_PROVIDERS_PROPERTY);
     if (providersStrList != null) {
       final String[] providersClassNames = providersStrList.split(",");

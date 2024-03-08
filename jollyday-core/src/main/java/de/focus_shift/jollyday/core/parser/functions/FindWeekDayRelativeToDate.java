@@ -19,12 +19,12 @@ public class FindWeekDayRelativeToDate implements Function<FixedWeekdayRelativeT
 
   private final LocalDate date;
 
-  public FindWeekDayRelativeToDate(LocalDate date) {
+  public FindWeekDayRelativeToDate(final LocalDate date) {
     this.date = date;
   }
 
   @Override
-  public LocalDate apply(FixedWeekdayRelativeToFixed fixedWeekdayRelativeToFixed) {
+  public LocalDate apply(final FixedWeekdayRelativeToFixed fixedWeekdayRelativeToFixed) {
     LocalDate result = moveDateToFirstOccurrenceOfWeekday(fixedWeekdayRelativeToFixed, date);
     final int days = determineNumberOfDays(fixedWeekdayRelativeToFixed);
     result = fixedWeekdayRelativeToFixed.when() == Relation.AFTER ? result.plusDays(days) : result.minusDays(days);
@@ -34,24 +34,24 @@ public class FindWeekDayRelativeToDate implements Function<FixedWeekdayRelativeT
   /**
    * Moves the day to the first/next occurrence of the weekday and direction specified
    *
-   * @param f   the specification of the weekday and direction of movement
-   * @param day the day to move
+   * @param fixedWeekdayRelativeToFixed the specification of the weekday and direction of movement
+   * @param day                         the day to move
    * @return the day moved to the weekday and in the direction as specified
    */
-  private LocalDate moveDateToFirstOccurrenceOfWeekday(FixedWeekdayRelativeToFixed f, LocalDate day) {
+  private LocalDate moveDateToFirstOccurrenceOfWeekday(final FixedWeekdayRelativeToFixed fixedWeekdayRelativeToFixed, final LocalDate day) {
     final TemporalAdjuster adjuster;
-    switch (f.when()) {
+    switch (fixedWeekdayRelativeToFixed.when()) {
       case AFTER:
-        adjuster = next(f.weekday());
+        adjuster = next(fixedWeekdayRelativeToFixed.weekday());
         break;
       case BEFORE:
-        adjuster = previous(f.weekday());
+        adjuster = previous(fixedWeekdayRelativeToFixed.weekday());
         break;
       case CLOSEST:
-        adjuster = closest(f.weekday());
+        adjuster = closest(fixedWeekdayRelativeToFixed.weekday());
         break;
       default:
-        throw new IllegalArgumentException("Unsupported relative adjustment: " + f.when());
+        throw new IllegalArgumentException("Unsupported relative adjustment: " + fixedWeekdayRelativeToFixed.when());
     }
     return day.with(adjuster);
   }
@@ -59,14 +59,14 @@ public class FindWeekDayRelativeToDate implements Function<FixedWeekdayRelativeT
   /**
    * Determines the number of days to move from the XML enumeration.
    *
-   * @param f the enumeration value
+   * @param fixedWeekdayRelativeToFixed the enumeration value
    * @return the number of days
    */
-  private int determineNumberOfDays(FixedWeekdayRelativeToFixed f) {
-    if (f.when() == Relation.CLOSEST) {
+  private int determineNumberOfDays(final FixedWeekdayRelativeToFixed fixedWeekdayRelativeToFixed) {
+    if (fixedWeekdayRelativeToFixed.when() == Relation.CLOSEST) {
       return 0;
     }
-    switch (f.which()) {
+    switch (fixedWeekdayRelativeToFixed.which()) {
       case SECOND:
         return 7;
       case THIRD:
@@ -99,7 +99,7 @@ public class FindWeekDayRelativeToDate implements Function<FixedWeekdayRelativeT
    * @param dayOfWeek the day-of-week to check for or move the date to, not null
    * @return the closest day-of-week adjuster, not null
    */
-  private static TemporalAdjuster closest(DayOfWeek dayOfWeek) {
+  private static TemporalAdjuster closest(final DayOfWeek dayOfWeek) {
     return temporal -> {
       final Temporal previous = temporal.with(previousOrSame(dayOfWeek));
       final Temporal next = temporal.with(nextOrSame(dayOfWeek));

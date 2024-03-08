@@ -56,7 +56,7 @@ public class Configuration {
    * Sets the value of the sources property.
    *
    * @param sources allowed object is
-   *              {@link Sources }
+   *                {@link Sources }
    */
   public void setSources(Sources sources) {
     this.sources = sources;

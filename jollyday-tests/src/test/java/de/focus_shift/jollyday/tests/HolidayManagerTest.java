@@ -4,7 +4,6 @@ import de.focus_shift.jollyday.core.CalendarHierarchy;
 import de.focus_shift.jollyday.core.Holiday;
 import de.focus_shift.jollyday.core.HolidayCalendar;
 import de.focus_shift.jollyday.core.HolidayManager;
-import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.ManagerParameter;
 import de.focus_shift.jollyday.core.ManagerParameters;
 import de.focus_shift.jollyday.core.impl.JapaneseHolidayManager;
@@ -24,6 +23,8 @@ import java.util.Set;
 import java.util.stream.Stream;
 
 import static de.focus_shift.jollyday.core.HolidayCalendar.GERMANY;
+import static de.focus_shift.jollyday.core.HolidayType.OFFICIAL_HOLIDAY;
+import static de.focus_shift.jollyday.core.HolidayType.UNOFFICIAL_HOLIDAY;
 import static de.focus_shift.jollyday.core.ManagerParameters.create;
 import static java.time.Month.APRIL;
 import static java.time.Month.AUGUST;
@@ -179,8 +180,8 @@ class HolidayManagerTest {
     calendar.set(YEAR, 2010);
     calendar.set(MONTH, Calendar.JANUARY);
     calendar.set(DAY_OF_MONTH, 4);
-    assertThat(sut.isHoliday(calendar, HolidayType.UNOFFICIAL_HOLIDAY)).isTrue();
-    assertThat(sut.isHoliday(calendar, HolidayType.OFFICIAL_HOLIDAY)).isFalse();
+    assertThat(sut.isHoliday(calendar, UNOFFICIAL_HOLIDAY)).isTrue();
+    assertThat(sut.isHoliday(calendar, OFFICIAL_HOLIDAY)).isFalse();
   }
 
   @Test
@@ -193,8 +194,8 @@ class HolidayManagerTest {
   @Test
   void ensureIsHolidayMethodReturnsTrueFalseForLocalDateWithHolidayType() {
     final HolidayManager sut = HolidayManager.getInstance(create("test"));
-    assertThat(sut.isHoliday(LocalDate.of(2010, 1, 4), HolidayType.OFFICIAL_HOLIDAY)).isFalse();
-    assertThat(sut.isHoliday(LocalDate.of(2010, 1, 4), HolidayType.UNOFFICIAL_HOLIDAY)).isTrue();
+    assertThat(sut.isHoliday(LocalDate.of(2010, 1, 4), OFFICIAL_HOLIDAY)).isFalse();
+    assertThat(sut.isHoliday(LocalDate.of(2010, 1, 4), UNOFFICIAL_HOLIDAY)).isTrue();
   }
 
   @Test
@@ -243,6 +244,14 @@ class HolidayManagerTest {
     assertDates(test_days_base, holidays);
   }
 
+  @Test
+  void ensureToRetrieveHolidaysByType() {
+    final HolidayManager sut = HolidayManager.getInstance(create("test"));
+    final Set<Holiday> holidays = sut.getHolidays(2010, UNOFFICIAL_HOLIDAY);
+    assertThat(holidays)
+      .containsOnly(new Holiday(LocalDate.of(2010, 1, 4), "", UNOFFICIAL_HOLIDAY));
+  }
+
   private static Stream<Arguments> firstLevel() {
     return Stream.of(
       Arguments.of("level1_1", test_days_l1_1),
@@ -281,6 +290,14 @@ class HolidayManagerTest {
     final Set<Holiday> holidays = sut.getHolidays(LocalDate.of(2010, 1, 1), LocalDate.of(2010, 1, 31), "level1_2");
     assertThat(holidays).isNotNull();
     assertDates(Set.of(LocalDate.of(2010, 1, 4), LocalDate.of(2010, 1, 1), LocalDate.of(2010, 1, 18)), holidays);
+  }
+
+  @Test
+  void ensureToTestIntervalToRetrieveHolidaysByType() {
+    final HolidayManager sut = HolidayManager.getInstance(create("test"));
+    final Set<Holiday> holidays = sut.getHolidays(LocalDate.of(2010, 1, 1), LocalDate.of(2010, 1, 31), UNOFFICIAL_HOLIDAY);
+    assertThat(holidays)
+      .containsOnly(new Holiday(LocalDate.of(2010, 1, 4), "", UNOFFICIAL_HOLIDAY));
   }
 
   @Test

@@ -1,7 +1,6 @@
 package de.focus_shift.jollyday.core;
 
 import de.focus_shift.jollyday.core.caching.Cache;
-import de.focus_shift.jollyday.core.caching.HolidayManagerValueHandler;
 import de.focus_shift.jollyday.core.configuration.ConfigurationProviderManager;
 import de.focus_shift.jollyday.core.datasource.ConfigurationServiceManager;
 import de.focus_shift.jollyday.core.parser.functions.CalendarToLocalDate;
@@ -15,9 +14,6 @@ import java.time.LocalDate;
 import java.util.Calendar;
 import java.util.Properties;
 import java.util.Set;
-
-import static java.util.Arrays.stream;
-import static java.util.stream.Collectors.toUnmodifiableSet;
 
 /**
  * Abstract base class for all holiday manager implementations. Upon call of
@@ -50,17 +46,6 @@ public abstract class HolidayManager {
    */
   private static final ConfigurationServiceManager configurationServiceManager =
     new ConfigurationServiceManager(new LazyServiceLoaderCache<>(ConfigurationService.class));
-
-  /**
-   * Caches the instance based country specific holidays so that e.g.
-   * the created HolidayManager via
-   * {@code HolidayManager.getInstance(create("de"))} only contains the german holidays.
-   * <p>
-   * This is also the reason this cache is not static.
-   * If it was static all holidays over all holiday manager instances would be cached,
-   * but only the german holidays are important for the german holiday manager, so only save them.
-   */
-  private final Cache<Set<Holiday>> holidayCache = new Cache<>();
 
   /**
    * The datasource to get the holiday data from.
@@ -101,7 +86,7 @@ public abstract class HolidayManager {
    * @param properties the overriding configuration properties.
    * @return an eventually cached HolidayManager instance
    */
-  public static HolidayManager getInstance(Properties properties) {
+  public static HolidayManager getInstance(final Properties properties) {
     return getInstance(ManagerParameters.create((String) null, properties));
   }
 
@@ -112,7 +97,7 @@ public abstract class HolidayManager {
    * @param parameter the {@link ManagerParameters} to create the manager with
    * @return the {@link HolidayManager} instance
    */
-  public static HolidayManager getInstance(ManagerParameter parameter) {
+  public static HolidayManager getInstance(final ManagerParameter parameter) {
     return createManager(parameter);
   }
 
@@ -126,6 +111,7 @@ public abstract class HolidayManager {
   private static HolidayManager createManager(final ManagerParameter parameter) {
     LOG.debug("Creating HolidayManager for calendar '{}'. Caching enabled: {}", parameter, isManagerCachingEnabled());
     CONFIGURATION_MANAGER_PROVIDER.mergeConfigurationProperties(parameter);
+
     final String managerImplClassName = readManagerImplClassName(parameter);
     final HolidayManagerValueHandler holidayManagerValueHandler = new HolidayManagerValueHandler(parameter, managerImplClassName, configurationServiceManager);
     if (isManagerCachingEnabled()) {
@@ -141,7 +127,7 @@ public abstract class HolidayManager {
    * @param parameter the parameter to read the manager implementation class from
    * @return the manager implementation class name
    */
-  private static String readManagerImplClassName(ManagerParameter parameter) {
+  private static String readManagerImplClassName(final ManagerParameter parameter) {
     final String className = parameter.getManagerImplClassName();
     if (className == null) {
       throw new IllegalStateException("Missing configuration '" + ManagerParameter.MANAGER_IMPL_CLASS_PREFIX + "'. Cannot create manager.");
@@ -199,7 +185,7 @@ public abstract class HolidayManager {
    * @param args        Hierarchy to request the holidays for. i.e. args = {'ny'} -&gt; New York holidays
    * @return if the date is a holiday
    */
-  public boolean isHoliday(final Calendar calendar, HolidayType holidayType, final String... args) {
+  public boolean isHoliday(final Calendar calendar, final HolidayType holidayType, final String... args) {
     return isHoliday(new CalendarToLocalDate().apply(calendar), holidayType, args);
   }
 
@@ -225,28 +211,8 @@ public abstract class HolidayManager {
    * @param args        Hierarchy to request the holidays for. i.e. args = {'ny'} -&gt; New York holidays
    * @return true if the given date is a holiday in the state/region and below, otherwise false
    */
-  public boolean isHoliday(final LocalDate localDate, HolidayType holidayType, final String... args) {
-
-    final StringBuilder keyBuilder = new StringBuilder();
-    keyBuilder.append(localDate.getYear());
-    for (String arg : args) {
-      keyBuilder.append("_");
-      keyBuilder.append(arg);
-    }
-
-    final Cache.ValueHandler<Set<Holiday>> valueHandler = new Cache.ValueHandler<>() {
-      @Override
-      public String getKey() {
-        return keyBuilder.toString();
-      }
-
-      @Override
-      public Set<Holiday> createValue() {
-        return getHolidays(localDate.getYear(), args);
-      }
-    };
-
-    final Set<Holiday> holidays = holidayCache.get(valueHandler);
+  public boolean isHoliday(final LocalDate localDate, final HolidayType holidayType, final String... args) {
+    final Set<Holiday> holidays = getHolidays(localDate.getYear(), args);
     return CalendarUtil.contains(holidays, localDate, holidayType);
   }
 
@@ -256,10 +222,7 @@ public abstract class HolidayManager {
    * @return Set of supported calendar codes.
    */
   public static Set<String> getSupportedCalendarCodes() {
-    // TODO move this into HolidayCalendar class
-    return stream(HolidayCalendar.values())
-      .map(HolidayCalendar::getId)
-      .collect(toUnmodifiableSet());
+    return HolidayCalendar.getSupportedCalendarCodes();
   }
 
   /**
@@ -297,7 +260,17 @@ public abstract class HolidayManager {
    * @param args i.e. args = {'ny'}. returns US/New York holidays. No args means holidays common to whole country
    * @return a set of holidays for the requested year
    */
-  public abstract Set<Holiday> getHolidays(int year, String... args);
+  public abstract Set<Holiday> getHolidays(final int year, final String... args);
+
+  /**
+   * Returns the holidays for the requested year, the given {@link HolidayType} and the hierarchy structure
+   *
+   * @param year        i.e. 2010
+   * @param holidayType a {@link HolidayType} to be considered
+   * @param args        i.e. args = {'ny'}. returns US/New York holidays. No args means holidays common to whole country
+   * @return a set of holidays of the given {@link HolidayType} for the requested year
+   */
+  public abstract Set<Holiday> getHolidays(final int year, final HolidayType holidayType, final String... args);
 
   /**
    * Returns the holidays for the requested interval and hierarchy structure.
@@ -307,7 +280,18 @@ public abstract class HolidayManager {
    * @param args               i.e. args = {'ny'}. returns US/New York holidays. No args means holidays common to whole country
    * @return set of holidays within the interval
    */
-  public abstract Set<Holiday> getHolidays(LocalDate startDateInclusive, LocalDate endDateInclusive, String... args);
+  public abstract Set<Holiday> getHolidays(final LocalDate startDateInclusive, final LocalDate endDateInclusive, final String... args);
+
+  /**
+   * Returns the holidays for the requested interval, the given {@link HolidayType} and hierarchy structure.
+   *
+   * @param startDateInclusive the start date of the interval in which holidays lie, inclusive
+   * @param endDateInclusive   the end date of the interval in which holidays lie, inclusive
+   * @param holidayType        a {@link HolidayType} to be considered
+   * @param args               i.e. args = {'ny'}. returns US/New York holidays. No args means holidays common to whole country
+   * @return set of holidays of the given {@link HolidayType} within the interval
+   */
+  public abstract Set<Holiday> getHolidays(final LocalDate startDateInclusive, final LocalDate endDateInclusive, final HolidayType holidayType, final String... args);
 
   /**
    * Returns the configured hierarchy structure for the specific manager. This
@@ -317,5 +301,4 @@ public abstract class HolidayManager {
    * @return Current calendars hierarchy
    */
   public abstract CalendarHierarchy getCalendarHierarchy();
-
 }

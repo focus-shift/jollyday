@@ -11,7 +11,7 @@ public class CalculateEasterSunday implements Function<Chronology, LocalDate> {
 
   private final int year;
 
-  public CalculateEasterSunday(int year) {
+  public CalculateEasterSunday(final int year) {
     this.year = year;
   }
 

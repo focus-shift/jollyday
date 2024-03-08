@@ -20,15 +20,15 @@
       <MovingCondition substitute="SUNDAY" with="PREVIOUS" weekday="MONDAY"/>
     </Fixed>
 
-    <!-- http://www.bvi.gov.vg/media-centre/bvi-announces-public-holiday-april-21-celebrate-her-majesty-s-birthday -->
-    <!-- http://www.bvi.gov.vg/media-centre/revised-2016-public-holidays -->
+    <!-- https://bvi.gov.vg/media-centre/bvi-announces-public-holiday-april-21-celebrate-her-majesty-s-birthday -->
+    <!-- https://bvi.gov.vg/media-centre/revised-2016-public-holidays -->
     <!-- 2016 it was moved due to the Queen's 90th birthday -->
     <Fixed month="APRIL" day="21" validFrom="2016" validTo="2016" descriptionPropertiesKey="SOVEREIGNS_BIRTHDAY"/>
 
     <!-- https://bvi.gov.vg/media-centre/updatedofficialholidays20231 -->
     <Fixed month="MAY" day="8" validFrom="2023" validTo="2023" descriptionPropertiesKey="KINGS_CORONATION"/>
 
-    <!-- http://www.bvi.gov.vg/media-centre/revised-2022-public-holidays -->
+    <!-- https://bvi.gov.vg/media-centre/revised-2022-public-holidays -->
     <Fixed month="JUNE" day="3" validFrom="2022" validTo="2022" descriptionPropertiesKey="QUEENS_PLATINUM_JUBILEE"/>
     <!-- 2017 it was moved one week later -->
     <Fixed month="JUNE" day="17" validFrom="2017" validTo="2017" descriptionPropertiesKey="SOVEREIGNS_BIRTHDAY"/>
@@ -146,4 +146,11 @@
 
     <ChristianHoliday type="WHIT_MONDAY" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
   </Holidays>
+
+  <Sources>
+    <Source>https://bvi.gov.vg/tags/public-holidays</Source>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_the_British_Virgin_Islands</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:VG</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:VG</Source>
+  </Sources>
 </Configuration>

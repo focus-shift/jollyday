@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration hierarchy="ky" description="Cayman Islands"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="JANUARY" day="22" descriptionPropertiesKey="NATIONAL_HEROES_DAY"/>
+    <Fixed month="FEBRUARY" day="14" descriptionPropertiesKey="christian.ASH_WEDNESDAY"/>
+    <Fixed month="MARCH" day="29" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+    <Fixed month="APRIL" day="1" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+    <Fixed month="MAY" day="6" descriptionPropertiesKey="EMANCIPATION_DAY"/>
+    <Fixed month="JUNE" day="17" descriptionPropertiesKey="KINGS_DAY"/>
+    <Fixed month="JULY" day="1" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+    <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="REMEMBRANCE"/>
+    <Fixed month="DECEMBER" day="1" descriptionPropertiesKey="CAYMAN_THANKSGIVING"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://www.gov.ky/news/press-release-details/2024-public-holidays-named</Source>
+  </Sources>
+</Configuration>

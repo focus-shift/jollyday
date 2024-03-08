@@ -22,7 +22,7 @@ class HolidayKYTest extends AbstractCountryTestBase {
 
 
   @ParameterizedTest
-  @ValueSource(ints = {2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023})
+  @ValueSource(ints = {2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024})
   void testManagerKYStructure(final int year) {
     validateCalendarData(ISO_CODE, year, true);
   }
@@ -31,12 +31,12 @@ class HolidayKYTest extends AbstractCountryTestBase {
   void testManagerKYInterval() {
     try {
       final HolidayManager instance = HolidayManager.getInstance(ManagerParameters.create(HolidayCalendar.CAYMAN_ISLANDS, null));
-      final LocalDate startDateInclusive = CalendarUtil.create(2022, 10, 1);
-      final LocalDate endDateInclusive = CalendarUtil.create(2023, 1, 31);
+      final LocalDate startDateInclusive = LocalDate.of(2022, 10, 1);
+      final LocalDate endDateInclusive = LocalDate.of(2023, 1, 31);
       final Set<Holiday> holidays = instance.getHolidays(startDateInclusive, endDateInclusive);
-      final List<LocalDate> expected = List.of(CalendarUtil.create(2022, 11, 14),
-        CalendarUtil.create(2022, 12, 26), CalendarUtil.create(2022, 12, 27),
-        CalendarUtil.create(2023, 1, 2), CalendarUtil.create(2023, 1, 23));
+      final List<LocalDate> expected = List.of(LocalDate.of(2022, 11, 14),
+        LocalDate.of(2022, 12, 26), LocalDate.of(2022, 12, 27),
+        LocalDate.of(2023, 1, 2), LocalDate.of(2023, 1, 23));
       assertThat(holidays).hasSameSizeAs(expected);
       for (LocalDate d : expected) {
         assertThat(CalendarUtil.contains(holidays, d)).isTrue();

@@ -16,14 +16,11 @@ import static java.util.stream.Collectors.toList;
 /**
  * This parser creates christian holidays for the given year relative to easter
  * sunday.
- *
- * @author Sven Diedrichsen
- * @version $Id: $
  */
 public class ChristianHolidayParser implements HolidayParser {
 
   @Override
-  public List<Holiday> parse(int year, Holidays holidays) {
+  public List<Holiday> parse(final int year, final Holidays holidays) {
     return holidays.christianHolidays().stream()
       .filter(new ValidLimitation(year))
       .map(ch -> {

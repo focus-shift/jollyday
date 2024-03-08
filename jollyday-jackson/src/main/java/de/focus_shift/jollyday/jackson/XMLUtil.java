@@ -2,7 +2,6 @@ package de.focus_shift.jollyday.jackson;
 
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
-import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.jackson.mapping.Configuration;
 import de.focus_shift.jollyday.jackson.mapping.Month;
 import de.focus_shift.jollyday.jackson.mapping.Weekday;
@@ -47,23 +46,6 @@ public class XMLUtil {
    */
   public int getMonth(Month month) {
     return month.ordinal() + 1;
-  }
-
-  /**
-   * Gets the type.
-   *
-   * @param type the type of holiday in the config
-   * @return the type of holiday
-   */
-  public HolidayType getType(de.focus_shift.jollyday.jackson.mapping.HolidayType type) {
-    switch (type) {
-      case OFFICIAL_HOLIDAY:
-        return HolidayType.OFFICIAL_HOLIDAY;
-      case UNOFFICIAL_HOLIDAY:
-        return HolidayType.UNOFFICIAL_HOLIDAY;
-      default:
-        throw new IllegalArgumentException("Unknown type " + type);
-    }
   }
 
   public static class JacksonMapperCreator {

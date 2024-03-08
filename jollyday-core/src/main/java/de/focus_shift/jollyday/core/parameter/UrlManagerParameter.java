@@ -7,7 +7,7 @@ public class UrlManagerParameter extends BaseManagerParameter {
 
   private final URL calendarFileUrl;
 
-  public UrlManagerParameter(URL calendarFileUrl, Properties properties) {
+  public UrlManagerParameter(final URL calendarFileUrl, final Properties properties) {
     super(properties);
     this.calendarFileUrl = calendarFileUrl;
   }

@@ -18,7 +18,7 @@ public class Cache<V> {
    * @param valueHandler which creates the key and the value if necessary
    * @return the eventually cached value, otherwise the newly created via {@link ValueHandler#createValue}
    */
-  public V get(ValueHandler<V> valueHandler) {
+  public V get(final ValueHandler<V> valueHandler) {
     return cachingMap.computeIfAbsent(valueHandler.getKey(), key -> valueHandler.createValue());
   }
 
@@ -30,6 +30,7 @@ public class Cache<V> {
   }
 
   public interface ValueHandler<V> {
+
     String getKey();
 
     V createValue();

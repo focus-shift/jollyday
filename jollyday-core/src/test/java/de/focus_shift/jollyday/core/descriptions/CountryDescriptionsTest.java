@@ -23,7 +23,7 @@ class CountryDescriptionsTest {
   @Test
   void ensureThatAllISOCodesAreAvailableInResourceBundleGenerally() {
     getResourceBundles("descriptions.country_descriptions").forEach(resourceBundle -> {
-      final Set<String> isoCodes = getISOCodes(resourceBundle);
+        final Set<String> isoCodes = getISOCodes(resourceBundle);
         assertThat(isoCodes)
           .isNotNull()
           .hasSize(NUMBER_OF_ISO_COUNTRIES);
@@ -63,7 +63,7 @@ class CountryDescriptionsTest {
 
     for (Locale locale : Locale.getAvailableLocales()) {
       try {
-          resourceBundles.add(ResourceBundle.getBundle(baseName, locale));
+        resourceBundles.add(ResourceBundle.getBundle(baseName, locale));
       } catch (MissingResourceException ex) {
         // do nothing
       }

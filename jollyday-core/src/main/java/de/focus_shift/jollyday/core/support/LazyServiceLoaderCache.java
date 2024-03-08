@@ -16,7 +16,7 @@ public class LazyServiceLoaderCache<S> {
   private final Class<S> clz;
   private List<S> services;
 
-  public LazyServiceLoaderCache(Class<S> clz) {
+  public LazyServiceLoaderCache(final Class<S> clz) {
     this.clz = clz;
   }
 
