@@ -3,6 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <artifactId>jollyday-core</artifactId>
+
   <name>Jollyday Core</name>
   <description>
     Core module of the jollyday library that contains the API for the developers and

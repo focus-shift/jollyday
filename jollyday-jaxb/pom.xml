@@ -3,8 +3,8 @@
   <modelVersion>4.0.0</modelVersion>
 
   <artifactId>jollyday-jaxb</artifactId>
-  <name>Jollyday with Jakarta XML Binding (JAXB)</name>
 
+  <name>Jollyday with Jakarta XML Binding (JAXB)</name>
   <description>Jakarta XML Binding (JAXB) based jollyday implementation</description>
 
   <parent>
