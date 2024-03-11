@@ -9,14 +9,13 @@ import de.focus_shift.jollyday.core.spi.Relation;
 import de.focus_shift.jollyday.core.spi.RelativeToWeekdayInMonth;
 import de.focus_shift.jollyday.core.spi.YearCycle;
 
-
-public class JavaRelativeToWeekdayInMonth extends DefaultHoliday implements RelativeToWeekdayInMonth {
+public class PojoRelativeToWeekdayInMonth extends DefaultHoliday implements RelativeToWeekdayInMonth {
 
   private FixedWeekdayInMonth weekdayInMonth;
   private DayOfWeek weekday;
   private Relation when;
 
-  public JavaRelativeToWeekdayInMonth(String descriptionPropertiesKey, HolidayType officiality, Year validFrom, Year validTo, YearCycle cycle, FixedWeekdayInMonth weekdayInMonth, DayOfWeek weekday, Relation when) {
+  public PojoRelativeToWeekdayInMonth(String descriptionPropertiesKey, HolidayType officiality, Year validFrom, Year validTo, YearCycle cycle, FixedWeekdayInMonth weekdayInMonth, DayOfWeek weekday, Relation when) {
     super(descriptionPropertiesKey, officiality, validFrom, validTo, cycle);
     this.weekdayInMonth = weekdayInMonth;
     this.weekday = weekday;

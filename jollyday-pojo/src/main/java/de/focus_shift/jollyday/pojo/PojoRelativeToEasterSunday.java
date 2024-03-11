@@ -9,12 +9,12 @@ import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.RelativeToEasterSunday;
 import de.focus_shift.jollyday.core.spi.YearCycle;
 
-public class JavaRelativeToEasterSunday extends DefaultHoliday implements RelativeToEasterSunday {
+public class PojoRelativeToEasterSunday extends DefaultHoliday implements RelativeToEasterSunday {
 
   private Chronology chronology;
   private Days days;
 
-  public JavaRelativeToEasterSunday(String descriptionPropertiesKey, HolidayType officiality, Year validFrom, Year validTo, YearCycle cycle, Chronology chronology, Days days) {
+  public PojoRelativeToEasterSunday(String descriptionPropertiesKey, HolidayType officiality, Year validFrom, Year validTo, YearCycle cycle, Chronology chronology, Days days) {
     super(descriptionPropertiesKey, officiality, validFrom, validTo, cycle);
     this.chronology = chronology;
     this.days = days;

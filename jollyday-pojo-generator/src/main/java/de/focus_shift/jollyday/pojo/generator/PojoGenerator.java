@@ -56,8 +56,7 @@ class PojoGenerator {
     writer.write("import de.focus_shift.jollyday.pojo.*;\n\n");
     writer.write("public class Holiday_" + calendarId + " {\n\n");
 
-
-    writer.write("  public static JavaConfiguration configuration;\n\n");
+    writer.write("  public static PojoConfiguration configuration;\n\n");
     StringBuilder sb = new StringBuilder();
     sb.append("  static {\n");
     sb.append("    configuration = ");
@@ -95,8 +94,7 @@ class PojoGenerator {
 
     writeHeader(writer);
 
-
-    writer.append("  static Map<String,JavaConfiguration> configurations = new HashMap<>();\n");
+    writer.append("  static Map<String,PojoConfiguration> configurations = new HashMap<>();\n");
 
     writer.append("  static {\n");
     for (HolidayCalendar cal : HolidayCalendar.values()) {
@@ -146,7 +144,7 @@ class PojoGenerator {
     writer.write("import de.focus_shift.jollyday.core.spi.ConfigurationService;\n");
     writer.write("import de.focus_shift.jollyday.pojo.holidays.*;\n\n");
 
-    writer.write("public class JavaConfigurationService implements ConfigurationService {\n\n");
+    writer.write("public class PojoConfigurationService implements ConfigurationService {\n\n");
   }
 
   private void writeFooter(Writer writer) throws IOException {
@@ -157,16 +155,17 @@ class PojoGenerator {
     sb.append("  public Configuration getConfiguration(ManagerParameter parameter) {\n");
     sb.append("    final String cacheKey = parameter.createCacheKey();\n");
     sb.append("\n");
-    sb.append("    JavaConfiguration configuration = configurations.get(cacheKey);\n");
+    sb.append("    PojoConfiguration configuration = configurations.get(cacheKey);\n");
     sb.append("    return configuration;\n");
     sb.append("  }\n");
     sb.append("}");
 
     writer.write(sb.toString());
   }
-  // public JavaConfiguration(JavaHolidays javaHolidays, List<Configuration> subConfigurations, String hierarchy, String description)
+
+  // public PojoConfiguration(PojoHolidays javaHolidays, List<Configuration> subConfigurations, String hierarchy, String description)
   private String configuration(Configuration configuration) {
-    return constructor("JavaConfiguration", holidays(configuration.holidays()), configurations(configuration.subConfigurations()), string(configuration.hierarchy()), string(configuration.description()));
+    return constructor("PojoConfiguration", holidays(configuration.holidays()), configurations(configuration.subConfigurations()), string(configuration.hierarchy()), string(configuration.description()));
   }
 
   private String configurations(Stream<Configuration> configurations) {
@@ -183,14 +182,14 @@ class PojoGenerator {
     return result;
   }
 
-  // public JavaHolidays(List<ChristianHoliday> christianHoliday, List<IslamicHoliday> islamicHoliday, List<EthiopianOrthodoxHoliday> ethiopianOrthodoxHoliday, List<Fixed> fixed, List<FixedWeekdayInMonth> fixedWeekday, List<FixedWeekdayBetweenFixed> fixedWeekdayBetweenFixed, List<FixedWeekdayRelativeToFixed> fixedWeekdayRelativeToFixed, List<RelativeToFixed> relativeToFixed, List<RelativeToWeekdayInMonth> relativeToWeekdayInMonth, List<RelativeToEasterSunday> relativeToEasterSunday)
+  // public PojoHolidays(List<ChristianHoliday> christianHoliday, List<IslamicHoliday> islamicHoliday, List<EthiopianOrthodoxHoliday> ethiopianOrthodoxHoliday, List<Fixed> fixed, List<FixedWeekdayInMonth> fixedWeekday, List<FixedWeekdayBetweenFixed> fixedWeekdayBetweenFixed, List<FixedWeekdayRelativeToFixed> fixedWeekdayRelativeToFixed, List<RelativeToFixed> relativeToFixed, List<RelativeToWeekdayInMonth> relativeToWeekdayInMonth, List<RelativeToEasterSunday> relativeToEasterSunday)
   private String holidays(Holidays holidays) {
     if (holidays == null) {
       return "null";
     }
 
     StringBuilder sb = new StringBuilder();
-    sb.append(String.format("new JavaHolidays()\n"));
+    sb.append(String.format("new PojoHolidays()\n"));
     for (de.focus_shift.jollyday.core.spi.Fixed fixed : holidays.fixed()) {
       sb.append(String.format("      .addFixed(%s)\n", fixed(fixed)));
     }
@@ -234,54 +233,54 @@ class PojoGenerator {
     return sb.toString();
   }
 
-  // public JavaFixed(String descriptionPropertiesKey, HolidayType officiality, Year validFrom, Year validTo, YearCycle cycle, List<MovingCondition> conditions, MonthDay day)
+  // public PojoFixed(String descriptionPropertiesKey, HolidayType officiality, Year validFrom, Year validTo, YearCycle cycle, List<MovingCondition> conditions, MonthDay day)
   private String fixed(Fixed fixed) {
-    return constructor("JavaFixed", string(fixed.descriptionPropertiesKey()), enums(fixed.officiality()), year(fixed.validFrom()), year(fixed.validTo()), yearCycle(fixed.cycle()), movingConditions(fixed.conditions()), monthDay(fixed.day()));
+    return constructor("PojoFixed", string(fixed.descriptionPropertiesKey()), enums(fixed.officiality()), year(fixed.validFrom()), year(fixed.validTo()), yearCycle(fixed.cycle()), movingConditions(fixed.conditions()), monthDay(fixed.day()));
   }
 
-  //public JavaChristianHoliday(String descriptionPropertiesKey, HolidayType officiality, Year validFrom, Year validTo, YearCycle cycle, List<MovingCondition> conditions, ChristianHolidayType type, Chronology chronology)
+  //public PojoChristianHoliday(String descriptionPropertiesKey, HolidayType officiality, Year validFrom, Year validTo, YearCycle cycle, List<MovingCondition> conditions, ChristianHolidayType type, Chronology chronology)
   private String christianHoliday(ChristianHoliday christianHoliday) {
-    return constructor("JavaChristianHoliday", string(christianHoliday.descriptionPropertiesKey()), enums(christianHoliday.officiality()), year(christianHoliday.validFrom()), year(christianHoliday.validTo()), yearCycle(christianHoliday.cycle()), movingConditions(christianHoliday.conditions()), enums(christianHoliday.type()), chronology(christianHoliday.chronology()));
+    return constructor("PojoChristianHoliday", string(christianHoliday.descriptionPropertiesKey()), enums(christianHoliday.officiality()), year(christianHoliday.validFrom()), year(christianHoliday.validTo()), yearCycle(christianHoliday.cycle()), movingConditions(christianHoliday.conditions()), enums(christianHoliday.type()), chronology(christianHoliday.chronology()));
   }
 
-  // public JavaEthiopianOrthodoxHoliday(String descriptionPropertiesKey, HolidayType officiality, Year validFrom, Year validTo, YearCycle cycle, EthiopianOrthodoxHolidayType type)
+  // public PojoEthiopianOrthodoxHoliday(String descriptionPropertiesKey, HolidayType officiality, Year validFrom, Year validTo, YearCycle cycle, EthiopianOrthodoxHolidayType type)
   private String ethiopianOrthodoxHoliday(EthiopianOrthodoxHoliday hol) {
-    return constructor("JavaEthiopianOrthodoxHoliday", string(hol.descriptionPropertiesKey()), enums(hol.officiality()), year(hol.validFrom()), year(hol.validTo()), yearCycle(hol.cycle()), enums(hol.type()));
+    return constructor("PojoEthiopianOrthodoxHoliday", string(hol.descriptionPropertiesKey()), enums(hol.officiality()), year(hol.validFrom()), year(hol.validTo()), yearCycle(hol.cycle()), enums(hol.type()));
   }
 
-  // public JavaIslamicHoliday(String descriptionPropertiesKey, HolidayType officiality, Year validFrom, Year validTo, YearCycle cycle, List<MovingCondition> conditions, IslamicHolidayType type)
+  // public PojoIslamicHoliday(String descriptionPropertiesKey, HolidayType officiality, Year validFrom, Year validTo, YearCycle cycle, List<MovingCondition> conditions, IslamicHolidayType type)
   private String islamicHoliday(IslamicHoliday hol) {
-    return constructor("JavaIslamicHoliday", string(hol.descriptionPropertiesKey()), enums(hol.officiality()), year(hol.validFrom()), year(hol.validTo()), yearCycle(hol.cycle()), movingConditions(hol.conditions()), enums(hol.type()));
+    return constructor("PojoIslamicHoliday", string(hol.descriptionPropertiesKey()), enums(hol.officiality()), year(hol.validFrom()), year(hol.validTo()), yearCycle(hol.cycle()), movingConditions(hol.conditions()), enums(hol.type()));
   }
 
-  // public JavaFixedWeekdayBetweenFixed(String descriptionPropertiesKey, HolidayType officiality, Year validFrom, Year validTo, YearCycle cycle, Fixed from, Fixed to, DayOfWeek weekday)
+  // public PojoFixedWeekdayBetweenFixed(String descriptionPropertiesKey, HolidayType officiality, Year validFrom, Year validTo, YearCycle cycle, Fixed from, Fixed to, DayOfWeek weekday)
   private String fixedWeekdayBetweenFixed(FixedWeekdayBetweenFixed hol) {
-    return constructor("JavaFixedWeekdayBetweenFixed", string(hol.descriptionPropertiesKey()), enums(hol.officiality()), year(hol.validFrom()), year(hol.validTo()), yearCycle(hol.cycle()), fixed(hol.from()), fixed(hol.to()), dayOfWeek(hol.weekday()));
+    return constructor("PojoFixedWeekdayBetweenFixed", string(hol.descriptionPropertiesKey()), enums(hol.officiality()), year(hol.validFrom()), year(hol.validTo()), yearCycle(hol.cycle()), fixed(hol.from()), fixed(hol.to()), dayOfWeek(hol.weekday()));
   }
 
-  // public JavaFixedWeekdayInMonth(String descriptionPropertiesKey, HolidayType officiality, Year validFrom, Year validTo, YearCycle cycle, DayOfWeek weekday, Month month, Occurrance which)
+  // public PojoFixedWeekdayInMonth(String descriptionPropertiesKey, HolidayType officiality, Year validFrom, Year validTo, YearCycle cycle, DayOfWeek weekday, Month month, Occurrance which)
   private String fixedWeekdayInMonth(FixedWeekdayInMonth hol) {
-    return constructor("JavaFixedWeekdayInMonth", string(hol.descriptionPropertiesKey()), enums(hol.officiality()), year(hol.validFrom()), year(hol.validTo()), yearCycle(hol.cycle()), dayOfWeek(hol.weekday()), month(hol.month()), enums(hol.which()));
+    return constructor("PojoFixedWeekdayInMonth", string(hol.descriptionPropertiesKey()), enums(hol.officiality()), year(hol.validFrom()), year(hol.validTo()), yearCycle(hol.cycle()), dayOfWeek(hol.weekday()), month(hol.month()), enums(hol.which()));
   }
 
-  // public JavaFixedWeekdayRelativeToFixed(String descriptionPropertiesKey, HolidayType officiality, Year validFrom, Year validTo, YearCycle cycle, DayOfWeek weekday, Relation when, Fixed day, Occurrance which)
+  // public PojoFixedWeekdayRelativeToFixed(String descriptionPropertiesKey, HolidayType officiality, Year validFrom, Year validTo, YearCycle cycle, DayOfWeek weekday, Relation when, Fixed day, Occurrance which)
   private String fixedWeekdayRelativeToFixed(FixedWeekdayRelativeToFixed hol) {
-    return constructor("JavaFixedWeekdayRelativeToFixed", string(hol.descriptionPropertiesKey()), enums(hol.officiality()), year(hol.validFrom()), year(hol.validTo()), yearCycle(hol.cycle()), dayOfWeek(hol.weekday()), enums(hol.when()), fixed(hol.day()), enums(hol.which()));
+    return constructor("PojoFixedWeekdayRelativeToFixed", string(hol.descriptionPropertiesKey()), enums(hol.officiality()), year(hol.validFrom()), year(hol.validTo()), yearCycle(hol.cycle()), dayOfWeek(hol.weekday()), enums(hol.when()), fixed(hol.day()), enums(hol.which()));
   }
 
-  // public JavaRelativeToEasterSunday(String descriptionPropertiesKey, HolidayType officiality, Year validFrom, Year validTo, YearCycle cycle, Chronology chronology, Days days)
+  // public PojoRelativeToEasterSunday(String descriptionPropertiesKey, HolidayType officiality, Year validFrom, Year validTo, YearCycle cycle, Chronology chronology, Days days)
   private String relativeToEasterSunday(RelativeToEasterSunday hol) {
-    return constructor("JavaRelativeToEasterSunday", string(hol.descriptionPropertiesKey()), enums(hol.officiality()), year(hol.validFrom()), year(hol.validTo()), yearCycle(hol.cycle()), chronology(hol.chronology()), days(hol.days()));
+    return constructor("PojoRelativeToEasterSunday", string(hol.descriptionPropertiesKey()), enums(hol.officiality()), year(hol.validFrom()), year(hol.validTo()), yearCycle(hol.cycle()), chronology(hol.chronology()), days(hol.days()));
   }
 
-  // public JavaRelativeToFixed(String descriptionPropertiesKey, HolidayType officiality, Year validFrom, Year validTo, YearCycle cycle, Fixed date, DayOfWeek weekday, Relation when, Days days) {
+  // public PojoRelativeToFixed(String descriptionPropertiesKey, HolidayType officiality, Year validFrom, Year validTo, YearCycle cycle, Fixed date, DayOfWeek weekday, Relation when, Days days) {
   private String relativeToFixed(RelativeToFixed hol) {
-    return constructor("JavaRelativeToFixed", string(hol.descriptionPropertiesKey()), enums(hol.officiality()), year(hol.validFrom()), year(hol.validTo()), yearCycle(hol.cycle()), fixed(hol.date()), dayOfWeek(hol.weekday()), enums(hol.when()), days(hol.days()));
+    return constructor("PojoRelativeToFixed", string(hol.descriptionPropertiesKey()), enums(hol.officiality()), year(hol.validFrom()), year(hol.validTo()), yearCycle(hol.cycle()), fixed(hol.date()), dayOfWeek(hol.weekday()), enums(hol.when()), days(hol.days()));
   }
 
-  // public JavaRelativeToWeekdayInMonth(String descriptionPropertiesKey, HolidayType officiality, Year validFrom, Year validTo, YearCycle cycle, FixedWeekdayInMonth weekdayInMonth, DayOfWeek weekday, Relation when)
+  // public PojoRelativeToWeekdayInMonth(String descriptionPropertiesKey, HolidayType officiality, Year validFrom, Year validTo, YearCycle cycle, FixedWeekdayInMonth weekdayInMonth, DayOfWeek weekday, Relation when)
   private String relativeToWeekdayInMonth(RelativeToWeekdayInMonth hol) {
-    return constructor("JavaRelativeToWeekdayInMonth", string(hol.descriptionPropertiesKey()), enums(hol.officiality()), year(hol.validFrom()), year(hol.validTo()), yearCycle(hol.cycle()), fixedWeekdayInMonth(hol.weekdayInMonth()), dayOfWeek(hol.weekday()), enums(hol.when()));
+    return constructor("PojoRelativeToWeekdayInMonth", string(hol.descriptionPropertiesKey()), enums(hol.officiality()), year(hol.validFrom()), year(hol.validTo()), yearCycle(hol.cycle()), fixedWeekdayInMonth(hol.weekdayInMonth()), dayOfWeek(hol.weekday()), enums(hol.when()));
   }
 
   private String constructor(Object... arguments) {
@@ -370,12 +369,12 @@ class PojoGenerator {
     }
   }
 
-  // public JavaMovingCondition(DayOfWeek substitute, With with, DayOfWeek weekday) {
+  // public PojoMovingCondition(DayOfWeek substitute, With with, DayOfWeek weekday) {
   private String movingCondition(MovingCondition movingCondition) {
     if (movingCondition == null) {
       return "null";
     } else {
-      return constructor("JavaMovingCondition", dayOfWeek(movingCondition.substitute()), enums(movingCondition.with()), dayOfWeek(movingCondition.weekday()));
+      return constructor("PojoMovingCondition", dayOfWeek(movingCondition.substitute()), enums(movingCondition.with()), dayOfWeek(movingCondition.weekday()));
     }
   }
 }

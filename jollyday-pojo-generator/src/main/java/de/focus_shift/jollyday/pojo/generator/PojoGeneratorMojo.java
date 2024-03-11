@@ -34,7 +34,7 @@ public class PojoGeneratorMojo extends AbstractMojo {
           throw new MojoExecutionException("Target directory doesn't exist or cannot be generated: "+ genDir.getAbsolutePath());
       }
 
-      final File configurationService = Paths.get(outputDirectory.getAbsolutePath(), "de/focus_shift/jollyday/pojo/JavaConfigurationService.java").toFile();
+      final File configurationService = Paths.get(outputDirectory.getAbsolutePath(), "de/focus_shift/jollyday/pojo/PojoConfigurationService.java").toFile();
 
       try (FileWriter fileWriter = new FileWriter(configurationService, false)) {
         PojoGenerator generator = new PojoGenerator();

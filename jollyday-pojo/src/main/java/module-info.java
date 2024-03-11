@@ -1,10 +1,10 @@
 import de.focus_shift.jollyday.core.spi.ConfigurationService;
-import de.focus_shift.jollyday.pojo.JavaConfigurationService;
+import de.focus_shift.jollyday.pojo.PojoConfigurationService;
 
 module de.focus_shift.jollyday.pojo {
 
   provides ConfigurationService with
-    JavaConfigurationService;
+    PojoConfigurationService;
 
   requires org.slf4j;
   requires org.threeten.extra;
