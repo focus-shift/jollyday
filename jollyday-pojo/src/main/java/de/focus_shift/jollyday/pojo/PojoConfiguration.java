@@ -6,18 +6,17 @@ import java.util.stream.Stream;
 import de.focus_shift.jollyday.core.spi.Configuration;
 import de.focus_shift.jollyday.core.spi.Holidays;
 
+public class PojoConfiguration implements Configuration {
 
-public class JavaConfiguration implements Configuration {
-
-  private JavaHolidays javaHolidays;
+  private PojoHolidays javaHolidays;
   private List<Configuration> subConfigurations;
   private String hierarchy;
   private String description;
 
-  public JavaConfiguration() {
+  public PojoConfiguration() {
   }
 
-  public JavaConfiguration(JavaHolidays javaHolidays, List<Configuration> subConfigurations, String hierarchy, String description) {
+  public PojoConfiguration(PojoHolidays javaHolidays, List<Configuration> subConfigurations, String hierarchy, String description) {
     this.javaHolidays = javaHolidays;
     this.subConfigurations = subConfigurations;
     this.hierarchy = hierarchy;

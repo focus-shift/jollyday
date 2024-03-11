@@ -10,15 +10,14 @@ import de.focus_shift.jollyday.core.spi.Occurrance;
 import de.focus_shift.jollyday.core.spi.Relation;
 import de.focus_shift.jollyday.core.spi.YearCycle;
 
-
-public class JavaFixedWeekdayRelativeToFixed extends DefaultHoliday implements FixedWeekdayRelativeToFixed {
+public class PojoFixedWeekdayRelativeToFixed extends DefaultHoliday implements FixedWeekdayRelativeToFixed {
 
   private DayOfWeek weekday;
   private Relation when;
   private Fixed day;
   private Occurrance which;
 
-  public JavaFixedWeekdayRelativeToFixed(String descriptionPropertiesKey, HolidayType officiality, Year validFrom, Year validTo, YearCycle cycle, DayOfWeek weekday, Relation when, Fixed day, Occurrance which) {
+  public PojoFixedWeekdayRelativeToFixed(String descriptionPropertiesKey, HolidayType officiality, Year validFrom, Year validTo, YearCycle cycle, DayOfWeek weekday, Relation when, Fixed day, Occurrance which) {
     super(descriptionPropertiesKey, officiality, validFrom, validTo, cycle);
     this.weekday = weekday;
     this.when = when;

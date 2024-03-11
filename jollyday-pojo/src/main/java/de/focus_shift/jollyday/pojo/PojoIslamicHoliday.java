@@ -9,11 +9,11 @@ import de.focus_shift.jollyday.core.spi.IslamicHolidayType;
 import de.focus_shift.jollyday.core.spi.MovingCondition;
 import de.focus_shift.jollyday.core.spi.YearCycle;
 
-public class JavaIslamicHoliday extends DefaultMovingHoliday implements IslamicHoliday {
+public class PojoIslamicHoliday extends DefaultMovingHoliday implements IslamicHoliday {
 
   private IslamicHolidayType type;
 
-  public JavaIslamicHoliday(String descriptionPropertiesKey, HolidayType officiality, Year validFrom, Year validTo, YearCycle cycle, List<MovingCondition> conditions, IslamicHolidayType type) {
+  public PojoIslamicHoliday(String descriptionPropertiesKey, HolidayType officiality, Year validFrom, Year validTo, YearCycle cycle, List<MovingCondition> conditions, IslamicHolidayType type) {
     super(descriptionPropertiesKey, officiality, validFrom, validTo, cycle, conditions);
     this.type = type;
   }

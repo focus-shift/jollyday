@@ -9,13 +9,13 @@ import de.focus_shift.jollyday.core.spi.FixedWeekdayInMonth;
 import de.focus_shift.jollyday.core.spi.Occurrance;
 import de.focus_shift.jollyday.core.spi.YearCycle;
 
-public class JavaFixedWeekdayInMonth extends DefaultHoliday implements FixedWeekdayInMonth {
+public class PojoFixedWeekdayInMonth extends DefaultHoliday implements FixedWeekdayInMonth {
 
   private DayOfWeek weekday;
   private Month month;
   private Occurrance which;
 
-  public JavaFixedWeekdayInMonth(String descriptionPropertiesKey, HolidayType officiality, Year validFrom, Year validTo, YearCycle cycle, DayOfWeek weekday, Month month, Occurrance which) {
+  public PojoFixedWeekdayInMonth(String descriptionPropertiesKey, HolidayType officiality, Year validFrom, Year validTo, YearCycle cycle, DayOfWeek weekday, Month month, Occurrance which) {
     super(descriptionPropertiesKey, officiality, validFrom, validTo, cycle);
     this.weekday = weekday;
     this.month = month;
