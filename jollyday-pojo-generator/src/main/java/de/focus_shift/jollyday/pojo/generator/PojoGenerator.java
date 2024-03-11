@@ -34,7 +34,10 @@ import de.focus_shift.jollyday.jackson.XMLUtil;
 
 class PojoGenerator {
 
-  void generateHolidaySource(HolidayCalendar cal, Writer writer) throws IOException{
+  private static final char[] hexChar = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D',
+    'E', 'F' };
+
+  void generateHolidaySource(HolidayCalendar cal, Writer writer) throws IOException {
     XMLUtil xmlUtil = new XMLUtil();
 
     String calendarId = cal.getId().toLowerCase();
@@ -51,7 +54,7 @@ class PojoGenerator {
     writer.write("package de.focus_shift.jollyday.pojo.holidays;\n\n");
     writeImports(writer);
     writer.write("import de.focus_shift.jollyday.pojo.*;\n\n");
-    writer.write("public class Holiday_"+calendarId+" {\n\n");
+    writer.write("public class Holiday_" + calendarId + " {\n\n");
 
 
     writer.write("  public static JavaConfiguration configuration;\n\n");
@@ -66,7 +69,26 @@ class PojoGenerator {
     writer.write(sb.toString());
   }
 
+  private String unicodeEscape(String value) {
+    if (value == null || value.isBlank()) {
+      return value;
+    }
 
+    StringBuilder sb = new StringBuilder();
+    for (int i = 0; i < value.length(); i++) {
+      char c = value.charAt(i);
+      if ((c >> 7) > 0) {
+        sb.append("\\u");
+        sb.append(hexChar[(c >> 12) & 0xF]); // append the hex character for the left-most 4-bits
+        sb.append(hexChar[(c >> 8) & 0xF]); // hex for the second group of 4-bits from the left
+        sb.append(hexChar[(c >> 4) & 0xF]); // hex for the third group
+        sb.append(hexChar[c & 0xF]); // hex for the last group, e.g., the right most 4-bits
+      } else {
+        sb.append(c);
+      }
+    }
+    return sb.toString();
+  }
 
   void generateConfigurationSource(Writer writer) throws IOException {
 
@@ -87,7 +109,7 @@ class PojoGenerator {
 
 
 
-  private void writeImports(Writer writer) throws IOException{
+  private void writeImports(Writer writer) throws IOException {
     StringBuilder sb = new StringBuilder();
     sb.append("import java.time.DayOfWeek;\n");
     sb.append("import java.time.Month;\n");
@@ -113,7 +135,7 @@ class PojoGenerator {
     writer.write(sb.toString());
   }
 
-  private void writeHeader(Writer writer) throws IOException{
+  private void writeHeader(Writer writer) throws IOException {
     writer.write("package de.focus_shift.jollyday.pojo;\n\n");
 
     writer.write("import java.util.HashMap;\n");
@@ -127,7 +149,7 @@ class PojoGenerator {
     writer.write("public class JavaConfigurationService implements ConfigurationService {\n\n");
   }
 
-  private  void writeFooter(Writer writer) throws IOException{
+  private void writeFooter(Writer writer) throws IOException {
     StringBuilder sb = new StringBuilder();
 
     sb.append("\n");
@@ -275,7 +297,7 @@ class PojoGenerator {
   }
 
   private String string(String string) {
-    return String.format("\"%s\"", string);
+    return String.format("\"%s\"", unicodeEscape(string));
   }
 
   private String year(Year year) {
