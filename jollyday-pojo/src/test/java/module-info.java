@@ -4,7 +4,7 @@ module de.focus_shift.jollyday.pojo.test {
     org.junit.platform.commons;
 
   requires de.focus_shift.jollyday.core;
-  requires de.focus_shift.jollyday.jackson;
+  requires de.focus_shift.jollyday.pojo;
   requires org.assertj.core;
   requires org.junit.jupiter.api;
   requires org.junit.jupiter.params;
