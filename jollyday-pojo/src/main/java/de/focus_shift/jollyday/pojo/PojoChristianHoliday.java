@@ -10,12 +10,12 @@ import de.focus_shift.jollyday.core.spi.ChristianHolidayType;
 import de.focus_shift.jollyday.core.spi.MovingCondition;
 import de.focus_shift.jollyday.core.spi.YearCycle;
 
-public class JavaChristianHoliday extends DefaultMovingHoliday implements ChristianHoliday {
+public class PojoChristianHoliday extends DefaultMovingHoliday implements ChristianHoliday {
 
   private ChristianHolidayType type;
   private Chronology chronology;
 
-  public JavaChristianHoliday(String descriptionPropertiesKey, HolidayType officiality, Year validFrom, Year validTo, YearCycle cycle, List<MovingCondition> conditions, ChristianHolidayType type, Chronology chronology) {
+  public PojoChristianHoliday(String descriptionPropertiesKey, HolidayType officiality, Year validFrom, Year validTo, YearCycle cycle, List<MovingCondition> conditions, ChristianHolidayType type, Chronology chronology) {
     super(descriptionPropertiesKey, officiality, validFrom, validTo, cycle, conditions);
     this.type = type;
     this.chronology = chronology;

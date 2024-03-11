@@ -11,7 +11,7 @@ import de.focus_shift.jollyday.core.spi.Relation;
 import de.focus_shift.jollyday.core.spi.RelativeToFixed;
 import de.focus_shift.jollyday.core.spi.YearCycle;
 
-public class JavaRelativeToFixed extends DefaultHoliday implements RelativeToFixed {
+public class PojoRelativeToFixed extends DefaultHoliday implements RelativeToFixed {
 
   private Fixed date;
 
@@ -19,7 +19,7 @@ public class JavaRelativeToFixed extends DefaultHoliday implements RelativeToFix
   Relation when;
   Days days;
 
-  public JavaRelativeToFixed(String descriptionPropertiesKey, HolidayType officiality, Year validFrom, Year validTo, YearCycle cycle, Fixed date, DayOfWeek weekday, Relation when, Days days) {
+  public PojoRelativeToFixed(String descriptionPropertiesKey, HolidayType officiality, Year validFrom, Year validTo, YearCycle cycle, Fixed date, DayOfWeek weekday, Relation when, Days days) {
     super(descriptionPropertiesKey, officiality, validFrom, validTo, cycle);
     this.date = date;
     this.weekday = weekday;
