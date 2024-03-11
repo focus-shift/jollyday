@@ -14,7 +14,7 @@ import de.focus_shift.jollyday.core.spi.RelativeToEasterSunday;
 import de.focus_shift.jollyday.core.spi.RelativeToFixed;
 import de.focus_shift.jollyday.core.spi.RelativeToWeekdayInMonth;
 
-public class JavaHolidays implements de.focus_shift.jollyday.core.spi.Holidays {
+public class PojoHolidays implements de.focus_shift.jollyday.core.spi.Holidays {
 
   protected List<ChristianHoliday> christianHoliday = new ArrayList<>();
   protected List<IslamicHoliday> islamicHoliday = new ArrayList<>();
@@ -29,11 +29,11 @@ public class JavaHolidays implements de.focus_shift.jollyday.core.spi.Holidays {
   protected List<RelativeToWeekdayInMonth> relativeToWeekdayInMonth = new ArrayList<>();
   protected List<RelativeToEasterSunday> relativeToEasterSunday= new ArrayList<>();
 
-  public JavaHolidays() {
+  public PojoHolidays() {
 
   }
 
-  public JavaHolidays(List<ChristianHoliday> christianHoliday, List<IslamicHoliday> islamicHoliday, List<EthiopianOrthodoxHoliday> ethiopianOrthodoxHoliday, List<Fixed> fixed, List<FixedWeekdayInMonth> fixedWeekday, List<FixedWeekdayBetweenFixed> fixedWeekdayBetweenFixed, List<FixedWeekdayRelativeToFixed> fixedWeekdayRelativeToFixed, List<RelativeToFixed> relativeToFixed, List<RelativeToWeekdayInMonth> relativeToWeekdayInMonth, List<RelativeToEasterSunday> relativeToEasterSunday) {
+  public PojoHolidays(List<ChristianHoliday> christianHoliday, List<IslamicHoliday> islamicHoliday, List<EthiopianOrthodoxHoliday> ethiopianOrthodoxHoliday, List<Fixed> fixed, List<FixedWeekdayInMonth> fixedWeekday, List<FixedWeekdayBetweenFixed> fixedWeekdayBetweenFixed, List<FixedWeekdayRelativeToFixed> fixedWeekdayRelativeToFixed, List<RelativeToFixed> relativeToFixed, List<RelativeToWeekdayInMonth> relativeToWeekdayInMonth, List<RelativeToEasterSunday> relativeToEasterSunday) {
     this.christianHoliday = christianHoliday;
     this.islamicHoliday = islamicHoliday;
     this.ethiopianOrthodoxHoliday = ethiopianOrthodoxHoliday;
@@ -51,7 +51,7 @@ public class JavaHolidays implements de.focus_shift.jollyday.core.spi.Holidays {
     return fixed;
   }
 
-  public JavaHolidays addFixed(Fixed value) {
+  public PojoHolidays addFixed(Fixed value) {
     this.fixed.add(value);
     return this;
   }
@@ -61,7 +61,7 @@ public class JavaHolidays implements de.focus_shift.jollyday.core.spi.Holidays {
     return relativeToFixed;
   }
 
-  public JavaHolidays addRelativeToFixed(RelativeToFixed value) {
+  public PojoHolidays addRelativeToFixed(RelativeToFixed value) {
     this.relativeToFixed.add(value);
     return this;
   }
@@ -71,7 +71,7 @@ public class JavaHolidays implements de.focus_shift.jollyday.core.spi.Holidays {
     return relativeToWeekdayInMonth;
   }
 
-  public JavaHolidays addRelativeToWeekdayInMonth(RelativeToWeekdayInMonth value) {
+  public PojoHolidays addRelativeToWeekdayInMonth(RelativeToWeekdayInMonth value) {
     this.relativeToWeekdayInMonth.add(value);
     return this;
   }
@@ -81,7 +81,7 @@ public class JavaHolidays implements de.focus_shift.jollyday.core.spi.Holidays {
     return fixedWeekday;
   }
 
-  public JavaHolidays addFixedWeekday(FixedWeekdayInMonth value) {
+  public PojoHolidays addFixedWeekday(FixedWeekdayInMonth value) {
     this.fixedWeekday.add(value);
     return this;
   }
@@ -91,7 +91,7 @@ public class JavaHolidays implements de.focus_shift.jollyday.core.spi.Holidays {
     return christianHoliday;
   }
 
-  public JavaHolidays addChristianHoliday(ChristianHoliday value) {
+  public PojoHolidays addChristianHoliday(ChristianHoliday value) {
     this.christianHoliday.add(value);
     return this;
   }
@@ -101,7 +101,7 @@ public class JavaHolidays implements de.focus_shift.jollyday.core.spi.Holidays {
     return islamicHoliday;
   }
 
-  public JavaHolidays addIslamicHoliday(IslamicHoliday value) {
+  public PojoHolidays addIslamicHoliday(IslamicHoliday value) {
     this.islamicHoliday.add(value);
     return this;
   }
@@ -111,7 +111,7 @@ public class JavaHolidays implements de.focus_shift.jollyday.core.spi.Holidays {
     return fixedWeekdayBetweenFixed;
   }
 
-  public JavaHolidays addFixedWeekdayBetweenFixed(FixedWeekdayBetweenFixed value) {
+  public PojoHolidays addFixedWeekdayBetweenFixed(FixedWeekdayBetweenFixed value) {
     this.fixedWeekdayBetweenFixed.add(value);
     return this;
   }
@@ -121,7 +121,7 @@ public class JavaHolidays implements de.focus_shift.jollyday.core.spi.Holidays {
     return fixedWeekdayRelativeToFixed;
   }
 
-  public JavaHolidays addFixedWeekdayRelativeToFixed(FixedWeekdayRelativeToFixed value) {
+  public PojoHolidays addFixedWeekdayRelativeToFixed(FixedWeekdayRelativeToFixed value) {
     this.fixedWeekdayRelativeToFixed.add(value);
     return this;
   }
@@ -131,7 +131,7 @@ public class JavaHolidays implements de.focus_shift.jollyday.core.spi.Holidays {
     return ethiopianOrthodoxHoliday;
   }
 
-  public JavaHolidays addEthiopianOrthodoxHoliday(EthiopianOrthodoxHoliday value) {
+  public PojoHolidays addEthiopianOrthodoxHoliday(EthiopianOrthodoxHoliday value) {
     this.ethiopianOrthodoxHoliday.add(value);
     return this;
   }
@@ -141,7 +141,7 @@ public class JavaHolidays implements de.focus_shift.jollyday.core.spi.Holidays {
     return relativeToEasterSunday;
   }
 
-  public JavaHolidays addRelativeToEasterSunday(RelativeToEasterSunday value) {
+  public PojoHolidays addRelativeToEasterSunday(RelativeToEasterSunday value) {
     this.relativeToEasterSunday.add(value);
     return this;
   }

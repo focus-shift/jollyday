@@ -12,15 +12,15 @@ import de.focus_shift.jollyday.core.ManagerParameter;
 import de.focus_shift.jollyday.core.ManagerParameters;
 import de.focus_shift.jollyday.core.spi.Configuration;
 import de.focus_shift.jollyday.core.spi.YearCycle;
-import de.focus_shift.jollyday.pojo.JavaConfigurationService;
-import de.focus_shift.jollyday.pojo.JavaFixed;
+import de.focus_shift.jollyday.pojo.PojoConfigurationService;
+import de.focus_shift.jollyday.pojo.PojoFixed;
 
-class JavaConfigurationTest {
+class PojoConfigurationServiceTest {
 
   @Test
-  void enhanceJavaConfigurationService() {
+  void enhancePojoConfigurationServiceWithSpecialHoliday() {
 
-    JavaConfigurationService javaConfigurationService = new JavaConfigurationService();
+    PojoConfigurationService javaConfigurationService = new PojoConfigurationService();
     ManagerParameter parameter = ManagerParameters.create("de");
 
     HolidayManager holidayManager = HolidayManager.getInstance(parameter);
@@ -28,7 +28,7 @@ class JavaConfigurationTest {
 
     // add new holiday for 22.3 dynamically via code/api
     Configuration configuration = javaConfigurationService.getConfiguration(parameter);
-    JavaFixed stgandulfholiday = new JavaFixed("st.gandulf's day", HolidayType.UNOFFICIAL_HOLIDAY, null, null, YearCycle.EVERY_YEAR, null, MonthDay.of(3, 22));
+    PojoFixed stgandulfholiday = new PojoFixed("St.Gandulf's Day", HolidayType.UNOFFICIAL_HOLIDAY, null, null, YearCycle.EVERY_YEAR, null, MonthDay.of(3, 22));
     configuration.holidays().fixed().add(stgandulfholiday);
     HolidayManager.clearManagerCache(); // we have to clear the manager cache because otherwise the holidaymanager from above with old configuration would be reused.
 
