@@ -28,14 +28,6 @@
       <artifactId>threeten-extra</artifactId>
     </dependency>
 
-
-    <dependency>
-      <groupId>de.focus-shift</groupId>
-      <artifactId>jollyday-jackson</artifactId>
-      <version>${project.version}</version>
-      <scope>test</scope>
-    </dependency>
-
     <!-- Logging -->
     <dependency>
       <groupId>ch.qos.logback</groupId>
