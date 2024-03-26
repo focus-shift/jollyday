@@ -36,32 +36,12 @@
     <Holidays>
       <Fixed month="JANUARY" day="6" descriptionPropertiesKey="EPIPHANY"/>
       <Fixed month="JUNE" day="3" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
+      <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
       <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
     </Holidays>
-    <SubConfigurations hierarchy="mu" description="München">
-      <Holidays>
-        <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
-      </Holidays>
-    </SubConfigurations>
     <SubConfigurations hierarchy="ag" description="Augsburg">
       <Holidays>
         <Fixed month="AUGUST" day="8" descriptionPropertiesKey="PEACE"/>
-        <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
-      </Holidays>
-    </SubConfigurations>
-    <SubConfigurations hierarchy="wu" description="Würzburg">
-      <Holidays>
-        <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
-      </Holidays>
-    </SubConfigurations>
-    <SubConfigurations hierarchy="re" description="Regensburg">
-      <Holidays>
-        <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
-      </Holidays>
-    </SubConfigurations>
-    <SubConfigurations hierarchy="in" description="Ingolstadt">
-      <Holidays>
-        <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
       </Holidays>
     </SubConfigurations>
   </SubConfigurations>
