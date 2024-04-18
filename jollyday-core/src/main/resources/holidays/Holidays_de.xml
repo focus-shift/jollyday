@@ -121,7 +121,6 @@
         <When>BEFORE</When>
         <Date month="NOVEMBER" day="23"/>
       </RelativeToFixed>
-      <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
       <ChristianHoliday type="CORPUS_CHRISTI" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
       <ChristianHoliday type="PENTECOST" descriptionPropertiesKey="christian.PENTECOST"/>
     </Holidays>

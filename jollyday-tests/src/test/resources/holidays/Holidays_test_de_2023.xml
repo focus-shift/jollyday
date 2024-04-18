@@ -68,7 +68,6 @@
   </SubConfigurations>
   <SubConfigurations hierarchy="he" description="Hessen">
     <Holidays>
-      <Fixed month="APRIL" day="9" descriptionPropertiesKey="christian.EASTER"/>
       <Fixed month="JUNE" day="8" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
       <Fixed month="MAY" day="28" descriptionPropertiesKey="christian.PENTECOST"/>
     </Holidays>
