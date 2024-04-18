@@ -218,7 +218,7 @@ If you want to raise an **issue or bug** you can create a [new issue](https://gi
 
 ## License
 
-[Apache License, Version 2.0](LICENSE.md)
+[Apache License, Version 2.0](LICENSE)
 
 [Discussions]: https://github.com/focus-shift/jollyday/discussions
 [ISO 3166-1 alpha-2]: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
