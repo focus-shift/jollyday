@@ -13,7 +13,7 @@
     stored in XML files (one for each country) and will be read from the classpath. You can provide your own holiday
     calendar XML file or use any of the provided ones.
 
-    Currently, there are over 70 countries supported like the following:
+    Currently, there are over 80 countries supported like the following:
     * United States
     * Germany
     * France
