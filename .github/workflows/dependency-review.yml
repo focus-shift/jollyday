@@ -28,4 +28,4 @@ jobs:
         with:
           comment-summary-in-pr: always
           fail-on-severity: moderate
-          allow-licenses: Apache-2.0, MIT
+          allow-licenses: Apache-2.0, MIT, BSD-3-Clause
