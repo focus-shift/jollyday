@@ -42,6 +42,6 @@ public class ClassLoadingUtil {
    * @see Thread#currentThread()
    */
   public static ClassLoader getClassloader() {
-    return Thread.currentThread().getContextClassLoader();
+    return ClassLoadingUtil.class.getClassLoader();
   }
 }
