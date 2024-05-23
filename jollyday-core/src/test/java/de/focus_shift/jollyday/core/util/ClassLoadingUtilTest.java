@@ -8,17 +8,20 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
 class ClassLoadingUtilTest {
 
   @Test
-  void testGetClassloader() {
-    assertThat(ClassLoadingUtil.getClassloader()).isEqualTo(Thread.currentThread().getContextClassLoader());
+  void ensureThatClassLoaderIsEqualToThreadContextClassLoader() {
+    assertThat(ClassLoadingUtil.getClassloader())
+      .isEqualTo(Thread.currentThread().getContextClassLoader());
   }
 
   @Test
-  void testClassNotFound() {
-    assertThatThrownBy(() -> ClassLoadingUtil.loadClass("")).isInstanceOf(ClassNotFoundException.class);
+  void ensureToThrowClassNotFoundException() {
+    assertThatThrownBy(() -> ClassLoadingUtil.loadClass(""))
+      .isInstanceOf(ClassNotFoundException.class);
   }
 
   @Test
   void testClassloadingCorrect() throws ClassNotFoundException {
-    assertThat(ClassLoadingUtil.loadClass(ClassLoadingUtil.class.getName())).isEqualTo(ClassLoadingUtil.class);
+    assertThat(ClassLoadingUtil.loadClass(ClassLoadingUtil.class.getName()))
+      .isEqualTo(ClassLoadingUtil.class);
   }
 }
