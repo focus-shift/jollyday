@@ -9,7 +9,9 @@
     <Fixed month="JANUARY" day="6" descriptionPropertiesKey="THEOPHANY"/>
     <Fixed month="JANUARY" day="30" descriptionPropertiesKey="THREE_HIERARCHS"/>
     <Fixed month="MARCH" day="25" descriptionPropertiesKey="ANNUNCIATION"/>
-    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="MAY" day="1" validTo="2023" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="MAY" day="7" validFrom="2024" validTo="2024" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="MAY" day="1" validFrom="2025" descriptionPropertiesKey="LABOUR_DAY"/>
     <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
     <Fixed month="OCTOBER" day="28" descriptionPropertiesKey="OCHI"/>
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
