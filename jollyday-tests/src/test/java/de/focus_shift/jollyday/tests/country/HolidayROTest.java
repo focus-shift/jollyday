@@ -46,7 +46,49 @@ class HolidayROTest extends AbstractCountryTestBase {
   }
 
   @Property
-  void ensuresThatUnificationDayIsNotConfiguredBefore2017(@ForAll @YearRange(max = 2016) Year year) {
+  void ensuresThatEpiphanyIsConfiguredSince2024(@ForAll @YearRange(min = 2024) Year year) {
+    final HolidayManager holidayManager = HolidayManager.getInstance(create(ROMANIA));
+    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    assertThat(holidays)
+      .isNotEmpty()
+      .contains(
+        new Holiday(LocalDate.of(year.getValue(), JANUARY, 6), "EPIPHANY", OFFICIAL_HOLIDAY)
+      );
+  }
+
+  @Property
+  void ensuresThatEpiphanyIsNotConfiguredUntil2023(@ForAll @YearRange(max = 2023) Year year) {
+    final HolidayManager holidayManager = HolidayManager.getInstance(create(ROMANIA));
+    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    assertThat(holidays)
+      .isNotEmpty()
+      .extracting(Holiday::getPropertiesKey)
+      .doesNotContain("EPIPHANY");
+  }
+
+  @Property
+  void ensuresThatStJohnIsConfiguredSince2024(@ForAll @YearRange(min = 2024) Year year) {
+    final HolidayManager holidayManager = HolidayManager.getInstance(create(ROMANIA));
+    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    assertThat(holidays)
+      .isNotEmpty()
+      .contains(
+        new Holiday(LocalDate.of(year.getValue(), JANUARY, 7), "ST_JOHN", OFFICIAL_HOLIDAY)
+      );
+  }
+
+  @Property
+  void ensuresThatStJohnIsNotConfiguredUntil2023(@ForAll @YearRange(max = 2023) Year year) {
+    final HolidayManager holidayManager = HolidayManager.getInstance(create(ROMANIA));
+    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    assertThat(holidays)
+      .isNotEmpty()
+      .extracting(Holiday::getPropertiesKey)
+      .doesNotContain("ST_JOHN");
+  }
+
+  @Property
+  void ensuresThatUnificationDayIsNotConfiguredUntil2016(@ForAll @YearRange(max = 2016) Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(ROMANIA));
     final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
     assertThat(holidays)

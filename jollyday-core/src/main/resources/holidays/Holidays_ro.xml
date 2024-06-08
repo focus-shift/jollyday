@@ -7,6 +7,8 @@
   <Holidays>
     <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
     <Fixed month="JANUARY" day="2" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="JANUARY" day="6" validFrom="2024" descriptionPropertiesKey="EPIPHANY"/>
+    <Fixed month="JANUARY" day="7" validFrom="2024" descriptionPropertiesKey="ST_JOHN"/>
     <Fixed month="JANUARY" day="24" validFrom="2017" descriptionPropertiesKey="UNIFICATION"/>
     <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
     <Fixed month="JUNE" day="1" validFrom="2017" descriptionPropertiesKey="CHILDRENS_DAY"/>
