@@ -12,6 +12,7 @@
     <Fixed month="APRIL" day="22" validFrom="2009" validTo="2009" descriptionPropertiesKey="ELECTION_DAY"/>
     <Fixed month="MAY" day="18" validFrom="2011" validTo="2011" descriptionPropertiesKey="ELECTION_DAY"/>
     <Fixed month="MAY" day="7" validFrom="2014" validTo="2014" descriptionPropertiesKey="ELECTION_DAY"/>
+    <Fixed month="MAY" day="29" validFrom="2024" validTo="2024" descriptionPropertiesKey="ELECTION_DAY"/>
     <Fixed month="AUGUST" day="3" validFrom="2016" validTo="2016" descriptionPropertiesKey="ELECTION_DAY"/>
     <Fixed month="MAY" day="8" validFrom="2019" validTo="2019" descriptionPropertiesKey="ELECTION_DAY"/>
 
