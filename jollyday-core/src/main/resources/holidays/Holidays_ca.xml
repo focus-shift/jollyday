@@ -82,7 +82,7 @@
       </RelativeToFixed>
 
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="2018" descriptionPropertiesKey="FAMILY_DAY"/>
-      <FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="CIVIC"/>
+      <FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="NEW_BRUNSWICK_DAY"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="THANKSGIVING"/>
     </Holidays>
   </SubConfigurations>
@@ -176,7 +176,7 @@
       </RelativeToFixed>
 
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="2007" descriptionPropertiesKey="FAMILY_DAY"/>
-      <FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="CIVIC"/>
+      <FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="SASKATCHEWAN_DAY"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="THANKSGIVING"/>
     </Holidays>
   </SubConfigurations>
