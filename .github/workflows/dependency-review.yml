@@ -11,6 +11,8 @@ name: 'Dependency review'
 on:
   pull_request:
     branches: [ "main" ]
+    paths:
+      - '**/pom.xml'
 
 permissions:
   contents: read
