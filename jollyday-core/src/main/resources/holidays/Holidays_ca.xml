@@ -75,9 +75,9 @@
   <SubConfigurations hierarchy="nb" description="New Brunswick">
     <Holidays>
       <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="REMEMBRANCE"/>
-      <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY"/>
+      <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY" localizedType="UNOFFICIAL_HOLIDAY"/>
 
-      <RelativeToFixed descriptionPropertiesKey="VICTORIA_DAY">
+      <RelativeToFixed descriptionPropertiesKey="VICTORIA_DAY" localizedType="UNOFFICIAL_HOLIDAY">
         <Weekday>MONDAY</Weekday>
         <When>BEFORE</When>
         <Date month="MAY" day="25"/>
@@ -85,7 +85,7 @@
 
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="2018" descriptionPropertiesKey="FAMILY_DAY"/>
       <FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="NEW_BRUNSWICK_DAY"/>
-      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="THANKSGIVING"/>
+      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="THANKSGIVING" localizedType="UNOFFICIAL_HOLIDAY"/>
     </Holidays>
   </SubConfigurations>
 
