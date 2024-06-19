@@ -47,7 +47,7 @@ public class JaxbFixedWeekdayRelativeToFixed implements FixedWeekdayRelativeToFi
   @Override
   public HolidayType officiality() {
     return fixedWeekdayRelativeToFixed.getLocalizedType() == null
-      ? HolidayType.OFFICIAL_HOLIDAY
+      ? HolidayType.PUBLIC_HOLIDAY
       : HolidayType.valueOf(fixedWeekdayRelativeToFixed.getLocalizedType().name());
   }
 
