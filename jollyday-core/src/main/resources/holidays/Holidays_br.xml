@@ -12,6 +12,7 @@
     <Fixed month="OCTOBER" day="12" validFrom="1980" descriptionPropertiesKey="APARECIDA"/>
     <Fixed month="NOVEMBER" day="2" descriptionPropertiesKey="ALL_SOULS"/>
     <Fixed month="NOVEMBER" day="15" descriptionPropertiesKey="NATIONAL_DAY"/>
+    <Fixed month="NOVEMBER" day="20" validFrom="2024" descriptionPropertiesKey="CONSCIENCIA_NEGRA"/>
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
     <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
     <ChristianHoliday type="CARNIVAL" descriptionPropertiesKey="christian.CARNIVAL"/>
