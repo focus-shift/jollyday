@@ -19,51 +19,416 @@
     <ChristianHoliday type="WHIT_MONDAY" validFrom="2008" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
   </Holidays>
 
-  <SubConfigurations hierarchy="ges" description="Grand Est">
+  <SubConfigurations hierarchy="ARA" description="Auvergne-Rhône-Alpes">
     <Holidays/>
-
-    <SubConfigurations hierarchy="57" description="Moselle">
-      <Holidays>
-        <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="SECOND_CHRISTMAS_DAY"/>
-      </Holidays>
+    <SubConfigurations hierarchy="01" description="Ain">
+      <Holidays/>
     </SubConfigurations>
+    <SubConfigurations hierarchy="03" description="Allier">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="07" description="Ardèche">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="15" description="Cantal">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="26" description="Drôme">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="43" description="Haute-Loire">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="38" description="Isère">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="74" description="Haute-Savoie">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="42" description="Loire">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="69" description="Métropole de Lyon">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="63" description="Puy-de-Dôme">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="69" description="Rhône">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="73" description="Savoie">
+      <Holidays/>
+    </SubConfigurations>
+  </SubConfigurations>
 
+  <SubConfigurations hierarchy="BFC" description="Bourgogne-Franche-Comté">
+    <Holidays/>
+    <SubConfigurations hierarchy="21" description="Côte-d'Or">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="25" description="Doubs">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="70" description="Haute-Saône">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="39" description="Jura">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="58" description="Nièvre">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="71" description="Saône-et-Loire">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="90" description="Territoire de Belfort">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="89" description="Yonne">
+      <Holidays/>
+    </SubConfigurations>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="BRE" description="Bretagne">
+    <Holidays/>
+    <SubConfigurations hierarchy="22" description="Côtes-d'Armor">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="29" description="Finistère">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="35" description="Ille-et-Vilaine">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="56" description="Morbihan">
+      <Holidays/>
+    </SubConfigurations>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="CVL" description="Centre-Val de Loire">
+    <Holidays/>
+    <SubConfigurations hierarchy="18" description="Cher">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="28" description="Eure-et-Loir">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="36" description="Indre">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="37" description="Indre-et-Loire">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="41" description="Loir-et-Cher">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="45" description="Loiret">
+      <Holidays/>
+    </SubConfigurations>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="CP" description="Clipperton">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="20R" description="Corse">
+    <Holidays/>
+    <SubConfigurations hierarchy="2A" description="Corse-du-Sud">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="2B" description="Haute-Corse">
+      <Holidays/>
+    </SubConfigurations>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="GES" description="Grand-Est">
+    <Holidays/>
     <SubConfigurations hierarchy="67" description="Bas-Rhin">
       <Holidays>
         <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="SECOND_CHRISTMAS_DAY"/>
         <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
       </Holidays>
     </SubConfigurations>
-
     <SubConfigurations hierarchy="68" description="Haut-Rhin">
       <Holidays>
         <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="SECOND_CHRISTMAS_DAY"/>
         <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
       </Holidays>
     </SubConfigurations>
+    <SubConfigurations hierarchy="08" description="Ardennes">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="10" description="Aube">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="52" description="Haute-Marne">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="51" description="Marne">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="54" description="Meurthe-et-Moselle">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="55" description="Meuse">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="57" description="Moselle">
+      <Holidays>
+        <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="ABOLITION_OF_SLAVERY"/>
+      </Holidays>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="88" description="Vosges">
+      <Holidays/>
+    </SubConfigurations>
   </SubConfigurations>
 
-  <SubConfigurations hierarchy="971" description="Guadeloupe">
+  <SubConfigurations hierarchy="971" description="Guadeloupe (see also separate country code entry under GP)">
     <Holidays>
       <Fixed month="MAY" day="27" descriptionPropertiesKey="ABOLITION_OF_SLAVERY"/>
     </Holidays>
   </SubConfigurations>
 
-  <SubConfigurations hierarchy="972" description="Martinique">
-    <Holidays>
-      <Fixed month="MAY" day="22" descriptionPropertiesKey="ABOLITION_OF_SLAVERY"/>
-    </Holidays>
-  </SubConfigurations>
-
-  <SubConfigurations hierarchy="973" description="Guyane">
+  <SubConfigurations hierarchy="973" description="Guyane (française) (see also separate country code entry under GF)">
     <Holidays>
       <Fixed month="JUNE" day="10" descriptionPropertiesKey="ABOLITION_OF_SLAVERY"/>
     </Holidays>
   </SubConfigurations>
 
-  <SubConfigurations hierarchy="974" description="La Reunion">
+  <SubConfigurations hierarchy="HDF" description="Hauts-de-France">
+    <Holidays/>
+    <SubConfigurations hierarchy="02" description="Aisne">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="59" description="Nord">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="60" description="Oise">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="62" description="Pas-de-Calais">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="80" description="Somme">
+      <Holidays/>
+    </SubConfigurations>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="974" description="La Réunion (see also separate country code entry under RE)">
     <Holidays>
       <Fixed month="DECEMBER" day="20" descriptionPropertiesKey="ABOLITION_OF_SLAVERY"/>
     </Holidays>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="972" description="Martinique (see also separate country code entry under MQ)">
+    <Holidays>
+      <Fixed month="MAY" day="22" descriptionPropertiesKey="ABOLITION_OF_SLAVERY"/>
+    </Holidays>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="976" description="Mayotte (see also separate country code entry under YT)">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="NOR" description="Normandie">
+    <Holidays/>
+    <SubConfigurations hierarchy="14" description="Calvados">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="27" description="Eure">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="50" description="Manche">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="61" description="Orne">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="76" description="Seine-Maritime">
+      <Holidays/>
+    </SubConfigurations>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="NAQ" description="Nouvelle-Aquitaine">
+    <Holidays/>
+    <SubConfigurations hierarchy="16" description="Charente">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="17" description="Charente-Maritime">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="19" description="Corrèze">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="23" description="Creuse">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="79" description="Deux-Sèvres">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="24" description="Dordogne">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="33" description="Gironde">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="87" description="Haute-Vienne">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="40" description="Landes">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="47" description="Lot-et-Garonne">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="64" description="Pyrénées-Atlantiques">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="86" description="Vienne">
+      <Holidays/>
+    </SubConfigurations>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="NC" description="Nouvelle-Calédonie (see also separate country code entry under NC)">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="OCC" description="Occitanie">
+    <Holidays/>
+    <SubConfigurations hierarchy="09" description="Ariège">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="11" description="Aude">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="12" description="Aveyron">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="30" description="Gard">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="32" description="Gers">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="31" description="Haute-Garonne">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="65" description="Hautes-Pyrénées">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="34" description="Hérault">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="46" description="Lot">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="48" description="Lozère">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="66" description="Pyrénées-Orientales">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="81" description="Tarn">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="82" description="Tarn-et-Garonne">
+      <Holidays/>
+    </SubConfigurations>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="PDL" description="Pays-de-la-Loire">
+    <Holidays/>
+    <SubConfigurations hierarchy="44" description="Loire-Atlantique">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="49" description="Maine-et-Loire">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="53" description="Mayenne">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="72" description="Sarthe">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="85" description="Vendée">
+      <Holidays/>
+    </SubConfigurations>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="PF" description="Polynésie française (see also separate country code entry under PF)">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="PAC" description="Provence-Alpes-Côte-d’Azur">
+    <Holidays/>
+    <SubConfigurations hierarchy="06" description="Alpes-Maritimes">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="04" description="Alpes-de-Haute-Provence">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="13" description="Bouches-du-Rhône">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="05" description="Hautes-Alpes">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="83" description="Var">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="84" description="Vaucluse">
+      <Holidays/>
+    </SubConfigurations>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="BL" description="Saint-Barthélemy (see also separate country code entry under BL)">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="MF" description="Saint-Martin (see also separate country code entry under MF)">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="PM"
+                     description="Saint-Pierre-et-Miquelon (see also separate country code entry under PM)">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="TF"
+                     description="Terres australes françaises (see also separate country code entry under TF)">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="WF" description="Wallis-et-Futuna (see also separate country code entry under WF)">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="IDF" description="Île-de-France">
+    <Holidays/>
+    <SubConfigurations hierarchy="91" description="Essonne">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="92" description="Hauts-de-Seine">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="75C" description="Paris">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="93" description="Seine-Saint-Denis">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="77" description="Seine-et-Marne">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="95" description="Val-d'Oise">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="94" description="Val-de-Marne">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="78" description="Yvelines">
+      <Holidays/>
+    </SubConfigurations>
   </SubConfigurations>
 </Configuration>
