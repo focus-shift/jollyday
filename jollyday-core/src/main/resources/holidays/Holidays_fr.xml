@@ -24,20 +24,20 @@
 
     <SubConfigurations hierarchy="57" description="Moselle">
       <Holidays>
-        <Fixed month="DECEMBER" day="26"/>
+        <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="SECOND_CHRISTMAS_DAY"/>
       </Holidays>
     </SubConfigurations>
 
     <SubConfigurations hierarchy="67" description="Bas-Rhin">
       <Holidays>
-        <Fixed month="DECEMBER" day="26"/>
+        <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="SECOND_CHRISTMAS_DAY"/>
         <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
       </Holidays>
     </SubConfigurations>
 
     <SubConfigurations hierarchy="68" description="Haut-Rhin">
       <Holidays>
-        <Fixed month="DECEMBER" day="26"/>
+        <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="SECOND_CHRISTMAS_DAY"/>
         <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
       </Holidays>
     </SubConfigurations>
@@ -45,25 +45,25 @@
 
   <SubConfigurations hierarchy="971" description="Guadeloupe">
     <Holidays>
-      <Fixed month="MAY" day="27"/>
+      <Fixed month="MAY" day="27" descriptionPropertiesKey="ABOLITION_OF_SLAVERY"/>
     </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="972" description="Martinique">
     <Holidays>
-      <Fixed month="MAY" day="22"/>
+      <Fixed month="MAY" day="22" descriptionPropertiesKey="ABOLITION_OF_SLAVERY"/>
     </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="973" description="Guyane">
     <Holidays>
-      <Fixed month="JUNE" day="10"/>
+      <Fixed month="JUNE" day="10" descriptionPropertiesKey="ABOLITION_OF_SLAVERY"/>
     </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="974" description="La Reunion">
     <Holidays>
-      <Fixed month="DECEMBER" day="20"/>
+      <Fixed month="DECEMBER" day="20" descriptionPropertiesKey="ABOLITION_OF_SLAVERY"/>
     </Holidays>
   </SubConfigurations>
 </Configuration>
