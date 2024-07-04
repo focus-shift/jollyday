@@ -160,9 +160,9 @@ If you already use one of these libraries in your project than just use the spec
 <details>
   <summary>Override an existing country (click to expand)</summary>
   
-  If you want to override the public holidays of a provided country like **germany**, you need to put a holiday file
-  with the name `Holiday_de.xml` on your classpath. Jollyday will pick up yours at first. The File and the hierarchy needs
-  to be identical to the one you want to override.
+  If you want to override the public holidays of a provided country like **Germany**, you need to put a holiday file
+  under the path `holidays/` and name it `Holidays_de.xml` on your classpath. Jollyday will pick up yours at first.
+  The file and the hierarchy need to be identical to the one you want to override.
 
   The holiday file structure needs to look like the one below. The XML Schema Definition file can be viewed [here](jollyday-core/src/main/resources/focus_shift.de/jollyday/schema/holiday/holiday.xsd)
 
