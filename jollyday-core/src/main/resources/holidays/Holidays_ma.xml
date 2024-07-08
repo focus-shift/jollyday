@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="ma" description="Morocco"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="JANUARY" day="11" descriptionPropertiesKey="PROCLAMATION_OF_INDEPENDENCE"/>
+    <Fixed month="JANUARY" day="14" validFrom="2024" descriptionPropertiesKey="AMAZIGH_NEW_YEAR"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="JULY" day="30" descriptionPropertiesKey="ENTHRONEMENT"/>
+    <Fixed month="AUGUST" day="14" descriptionPropertiesKey="ZIKRA_OUED_ED_DAHAB"/>
+    <Fixed month="AUGUST" day="20" descriptionPropertiesKey="REVOLUTION_OF_THE_KING_AND_THE_PEOPLE"/>
+    <Fixed month="AUGUST" day="21" descriptionPropertiesKey="YOUTH"/>
+    <Fixed month="NOVEMBER" day="6" descriptionPropertiesKey="GREEN_MARCH"/>
+    <Fixed month="NOVEMBER" day="18" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <IslamicHoliday type="NEWYEAR" descriptionPropertiesKey="islamic.NEWYEAR"/>
+    <IslamicHoliday type="ID_AL_FITR" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+    <IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
+    <IslamicHoliday type="MAWLID_AN_NABI" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Morocco</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:MA</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:MA</Source>
+  </Sources>
+
+  <SubConfigurations hierarchy="01" description="Tanger-Tétouan-Al Hoceïma">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="02" description="L'Oriental">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="03" description="Fès-Meknès">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="04" description="Rabat-Salé-Kénitra">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="05" description="Béni Mellal-Khénifra">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="06" description="Casablanca-Settat">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="07" description="Marrakech-Safi">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="08" description="Drâa-Tafilalet">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="09" description="Souss-Massa">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="10" description="Guelmim-Oued Noun (EH-partial)">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="11" description="Laâyoune-Sakia El Hamra (EH-partial)">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="12" description="Dakhla-Oued Ed-Dahab (EH)">
+    <Holidays/>
+  </SubConfigurations>
+</Configuration>
