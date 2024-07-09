@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="ge" description="Georgia"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="JANUARY" day="2" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="JANUARY" day="7" descriptionPropertiesKey="CHRISTMAS"/>
+    <Fixed month="JANUARY" day="19" descriptionPropertiesKey="EPIPHANY"/>
+    <Fixed month="MARCH" day="3" descriptionPropertiesKey="MOTHERS_DAY"/>
+    <Fixed month="MARCH" day="8" descriptionPropertiesKey="INTERNATIONAL_WOMAN"/>
+    <Fixed month="APRIL" day="9" descriptionPropertiesKey="NATIONAL_UNITY_DAY"/>
+    <Fixed month="MAY" day="9" descriptionPropertiesKey="DAY_OF_VICTORY_OVER_FASCISM"/>
+    <Fixed month="MAY" day="12" descriptionPropertiesKey="ST_ANDREW_FIRST_CALLED_DAY"/>
+    <Fixed month="MAY" day="26" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <Fixed month="AUGUST" day="28" descriptionPropertiesKey="ST_MARY"/>
+    <Fixed month="OCTOBER" day="14" descriptionPropertiesKey="DAY_OF_SVETITSKHOVELI_CATHEDRA"/>
+    <Fixed month="NOVEMBER" day="23" descriptionPropertiesKey="ST_GEORGE"/>
+    <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY" chronology="JULIAN"/>
+    <ChristianHoliday type="EASTER_SATURDAY" descriptionPropertiesKey="christian.EASTER_SATURDAY" chronology="JULIAN"/>
+    <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER" chronology="JULIAN"/>
+    <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY" chronology="JULIAN"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Georgia</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:GE</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:GE</Source>
+  </Sources>
+
+  <SubConfigurations hierarchy="AB" description="Abkhazia">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="AJ" description="Ajaria">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="GU" description="Guria">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="IM" description="Imereti">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="KA" description="K'akheti">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="KK" description="Kvemo Kartli">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="MM" description="Mtskheta-Mtianeti">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="RL" description="Rach'a-Lechkhumi-Kvemo Svaneti">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="SZ" description="Samegrelo-Zemo Svaneti">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="SJ" description="Samtskhe-Javakheti">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="SK" description="Shida Kartli">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="TB" description="Tbilisi">
+    <Holidays/>
+  </SubConfigurations>
+</Configuration>
