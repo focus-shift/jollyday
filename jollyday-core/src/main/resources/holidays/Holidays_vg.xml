@@ -141,10 +141,10 @@
     <!-- https://bvi.gov.vg/media-centre/message-dr-honourable-natalio-d-wheatley-1949-great-march-and-restoration-day -->
     <FixedWeekday which="FOURTH" weekday="MONDAY" month="NOVEMBER" validFrom="2021" descriptionPropertiesKey="1949_GREAT_MARCH_AND_RESTORATION"/>
 
-    <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-    <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY"/>
 
-    <ChristianHoliday type="WHIT_MONDAY" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
+    <ChristianHoliday type="WHIT_MONDAY"/>
   </Holidays>
 
   <Sources>

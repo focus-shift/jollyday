@@ -18,7 +18,7 @@
     <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
     <Fixed month="DECEMBER" day="25" validTo="2021" descriptionPropertiesKey="CHRISTMAS"/>
     <Fixed month="DECEMBER" day="25" validFrom="2023" descriptionPropertiesKey="CHRISTMAS"/>
-    <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+    <ChristianHoliday type="GOOD_FRIDAY"/>
   </Holidays>
 
   <Sources>
@@ -32,7 +32,7 @@
       <Fixed month="DECEMBER" day="25" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS">
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
-      <ChristianHoliday type="MAUNDY_THURSDAY" descriptionPropertiesKey="christian.MAUNDY_THURSDAY"/>
+      <ChristianHoliday type="MAUNDY_THURSDAY"/>
     </Holidays>
   </SubConfigurations>
 
@@ -48,7 +48,7 @@
       <Fixed month="DECEMBER" day="25" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS">
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
-      <ChristianHoliday type="MAUNDY_THURSDAY" descriptionPropertiesKey="christian.MAUNDY_THURSDAY"/>
+      <ChristianHoliday type="MAUNDY_THURSDAY"/>
     </Holidays>
   </SubConfigurations>
 
@@ -59,7 +59,7 @@
       <Fixed month="DECEMBER" day="25" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS">
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
-      <ChristianHoliday type="MAUNDY_THURSDAY" descriptionPropertiesKey="christian.MAUNDY_THURSDAY"/>
+      <ChristianHoliday type="MAUNDY_THURSDAY"/>
     </Holidays>
   </SubConfigurations>
 
@@ -70,7 +70,7 @@
       <Fixed month="DECEMBER" day="25" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS">
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
-      <ChristianHoliday type="MAUNDY_THURSDAY" descriptionPropertiesKey="christian.MAUNDY_THURSDAY"/>
+      <ChristianHoliday type="MAUNDY_THURSDAY"/>
     </Holidays>
   </SubConfigurations>
 
@@ -81,7 +81,7 @@
       <Fixed month="DECEMBER" day="25" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS">
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
-      <ChristianHoliday type="MAUNDY_THURSDAY" descriptionPropertiesKey="christian.MAUNDY_THURSDAY"/>
+      <ChristianHoliday type="MAUNDY_THURSDAY"/>
     </Holidays>
   </SubConfigurations>
 
@@ -98,7 +98,7 @@
       <Fixed month="DECEMBER" day="25" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS">
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
-      <ChristianHoliday type="MAUNDY_THURSDAY" descriptionPropertiesKey="christian.MAUNDY_THURSDAY"/>
+      <ChristianHoliday type="MAUNDY_THURSDAY"/>
     </Holidays>
   </SubConfigurations>
 
@@ -114,8 +114,8 @@
       <Fixed month="DECEMBER" day="25" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS">
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
-      <ChristianHoliday type="CORPUS_CHRISTI" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
-      <ChristianHoliday type="MAUNDY_THURSDAY" descriptionPropertiesKey="christian.MAUNDY_THURSDAY"/>
+      <ChristianHoliday type="CORPUS_CHRISTI"/>
+      <ChristianHoliday type="MAUNDY_THURSDAY"/>
     </Holidays>
   </SubConfigurations>
 
@@ -125,13 +125,13 @@
       <Fixed month="SEPTEMBER" day="11" descriptionPropertiesKey="REGIONAL"/> <!--National Day of Catalonia-->
       <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY"/>
       <ChristianHoliday type="WHIT_MONDAY" validFrom="2022" validTo="2022"
-                        descriptionPropertiesKey="christian.WHIT_MONDAY"/>
-      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+                       />
+      <ChristianHoliday type="EASTER_MONDAY"/>
     </Holidays>
 
     <SubConfigurations hierarchy="bcn" description="Barcelona">
       <Holidays>
-        <ChristianHoliday type="WHIT_MONDAY" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
+        <ChristianHoliday type="WHIT_MONDAY"/>
       </Holidays>
     </SubConfigurations>
   </SubConfigurations>
@@ -139,7 +139,7 @@
   <SubConfigurations hierarchy="ce" description="Ceuta">
     <Holidays>
       <Fixed month="SEPTEMBER" day="2" descriptionPropertiesKey="REGIONAL"/>
-      <IslamicHoliday type="ID_UL_ADHA" validFrom="2010" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
+      <IslamicHoliday type="ID_UL_ADHA" validFrom="2010"/>
     </Holidays>
   </SubConfigurations>
 
@@ -160,7 +160,7 @@
       <Fixed month="DECEMBER" day="25" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS">
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
-      <ChristianHoliday type="MAUNDY_THURSDAY" descriptionPropertiesKey="christian.MAUNDY_THURSDAY"/>
+      <ChristianHoliday type="MAUNDY_THURSDAY"/>
     </Holidays>
   </SubConfigurations>
 
@@ -178,7 +178,7 @@
       <Fixed month="DECEMBER" day="25" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS">
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
-      <ChristianHoliday type="MAUNDY_THURSDAY" descriptionPropertiesKey="christian.MAUNDY_THURSDAY"/>
+      <ChristianHoliday type="MAUNDY_THURSDAY"/>
     </Holidays>
   </SubConfigurations>
 
@@ -188,8 +188,8 @@
       <Fixed month="DECEMBER" day="25" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS">
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
-      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-      <ChristianHoliday type="MAUNDY_THURSDAY" descriptionPropertiesKey="christian.MAUNDY_THURSDAY"/>
+      <ChristianHoliday type="EASTER_MONDAY"/>
+      <ChristianHoliday type="MAUNDY_THURSDAY"/>
     </Holidays>
   </SubConfigurations>
 
@@ -199,8 +199,8 @@
       <Fixed month="DECEMBER" day="25" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS">
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
-      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-      <ChristianHoliday type="MAUNDY_THURSDAY" descriptionPropertiesKey="christian.MAUNDY_THURSDAY"/>
+      <ChristianHoliday type="EASTER_MONDAY"/>
+      <ChristianHoliday type="MAUNDY_THURSDAY"/>
     </Holidays>
   </SubConfigurations>
 
@@ -226,7 +226,7 @@
       <Fixed month="DECEMBER" day="25" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS">
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
-      <ChristianHoliday type="MAUNDY_THURSDAY" descriptionPropertiesKey="christian.MAUNDY_THURSDAY"/>
+      <ChristianHoliday type="MAUNDY_THURSDAY"/>
     </Holidays>
 
     <SubConfigurations hierarchy="mad" description="Madrid city">
@@ -239,7 +239,7 @@
 
   <SubConfigurations hierarchy="ml" description="Melilla">
     <Holidays>
-      <IslamicHoliday type="ID_UL_ADHA" validFrom="2010" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
+      <IslamicHoliday type="ID_UL_ADHA" validFrom="2010"/>
     </Holidays>
   </SubConfigurations>
 
@@ -250,7 +250,7 @@
       <Fixed month="DECEMBER" day="25" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS">
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
-      <ChristianHoliday type="MAUNDY_THURSDAY" descriptionPropertiesKey="christian.MAUNDY_THURSDAY"/>
+      <ChristianHoliday type="MAUNDY_THURSDAY"/>
     </Holidays>
   </SubConfigurations>
 
@@ -260,8 +260,8 @@
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
       <Fixed month="JULY" day="25" validFrom="2023" validTo="2023" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
-      <ChristianHoliday type="MAUNDY_THURSDAY" descriptionPropertiesKey="christian.MAUNDY_THURSDAY"/>
-      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+      <ChristianHoliday type="MAUNDY_THURSDAY"/>
+      <ChristianHoliday type="EASTER_MONDAY"/>
     </Holidays>
   </SubConfigurations>
 
@@ -277,8 +277,8 @@
       <Fixed month="JULY" day="25" validFrom="2019" validTo="2020" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
       <Fixed month="JULY" day="25" validFrom="2022" validTo="2027" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
       <Fixed month="OCTOBER" day="25" validFrom="2011" descriptionPropertiesKey="NATIONAL_DAY"/>
-      <ChristianHoliday type="MAUNDY_THURSDAY" descriptionPropertiesKey="christian.MAUNDY_THURSDAY"/>
-      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+      <ChristianHoliday type="MAUNDY_THURSDAY"/>
+      <ChristianHoliday type="EASTER_MONDAY"/>
     </Holidays>
   </SubConfigurations>
 
@@ -291,7 +291,7 @@
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
       <Fixed month="OCTOBER" day="9" descriptionPropertiesKey="REGIONAL"/> <!--Day of the Valencian Community-->
-      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+      <ChristianHoliday type="EASTER_MONDAY"/>
     </Holidays>
   </SubConfigurations>
 

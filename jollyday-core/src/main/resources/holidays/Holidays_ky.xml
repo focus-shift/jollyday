@@ -68,9 +68,9 @@
     <!-- only "Observance (agreed in Cabinet)" and not "Official Public Holiday" -->
     <FixedWeekday which="FIRST" weekday="SUNDAY" month="DECEMBER" validFrom="2023" descriptionPropertiesKey="CAYMAN_THANKSGIVING"/>
 
-    <ChristianHoliday type="ASH_WEDNESDAY" descriptionPropertiesKey="christian.ASH_WEDNESDAY"/>
-    <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-    <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+    <ChristianHoliday type="ASH_WEDNESDAY"/>
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY"/>
 
     <!-- https://archives.gov.ky/Archive/view_press_release/2356/public-holidays-2009 -->
     <!-- The Monday after Remembrance Sunday (the Sunday nearest to 11 November) -->

@@ -120,13 +120,13 @@
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
 
     <!-- assume that it was also moved all not through 4 divisible years before 2013 too -->
-    <IslamicHoliday type="ID_AL_FITR_2" validTo="2010" every="FOUR_YEARS" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
-    <IslamicHoliday type="ID_AL_FITR" validTo="2012" every="FOUR_YEARS" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+    <IslamicHoliday type="ID_AL_FITR_2" validTo="2010" every="FOUR_YEARS"/>
+    <IslamicHoliday type="ID_AL_FITR" validTo="2012" every="FOUR_YEARS"/>
     <!-- at least since 2013 always one day later than in the United Arab Emirates and Saudi Arabia (so on the same day as in India)
     except in every through 4 divisible year (leap year), there it is on the same day as in the United Arab Emirates and Saudi Arabia (so one day earlier than in India) -->
-    <IslamicHoliday type="ID_AL_FITR_2" every="ODD_YEARS" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
-    <IslamicHoliday type="ID_AL_FITR_2" validFrom="2014" every="FOUR_YEARS" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
-    <IslamicHoliday type="ID_AL_FITR" validFrom="2016" every="FOUR_YEARS" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+    <IslamicHoliday type="ID_AL_FITR_2" every="ODD_YEARS"/>
+    <IslamicHoliday type="ID_AL_FITR_2" validFrom="2014" every="FOUR_YEARS"/>
+    <IslamicHoliday type="ID_AL_FITR" validFrom="2016" every="FOUR_YEARS"/>
   </Holidays>
 
   <Sources>

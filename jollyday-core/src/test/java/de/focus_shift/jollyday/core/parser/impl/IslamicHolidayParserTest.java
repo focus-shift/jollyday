@@ -1,6 +1,7 @@
 package de.focus_shift.jollyday.core.parser.impl;
 
 import de.focus_shift.jollyday.core.Holiday;
+import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.Holidays;
 import de.focus_shift.jollyday.core.spi.IslamicHoliday;
 import de.focus_shift.jollyday.core.spi.IslamicHolidayType;
@@ -47,13 +48,15 @@ class IslamicHolidayParserTest {
     };
 
     final IslamicHolidayParser sut = new IslamicHolidayParser();
-    when(holidays.islamicHolidays()).thenReturn(List.of(islamicHoliday));
     when(islamicHoliday.type()).thenReturn(IslamicHolidayType.ID_UL_ADHA_2);
     when(islamicHoliday.conditions()).thenReturn(List.of(movingCondition));
     when(islamicHoliday.cycle()).thenReturn(EVERY_YEAR);
+    when(islamicHoliday.officiality()).thenReturn(HolidayType.OFFICIAL_HOLIDAY);
+    when(holidays.islamicHolidays()).thenReturn(List.of(islamicHoliday));
 
     // ID_UL_ADHA_2 will be on a sunday in 2022
     final List<Holiday> calculatedHoliday = sut.parse(2022, holidays);
     assertThat(calculatedHoliday.get(0).getDate().getDayOfWeek()).isEqualTo(DayOfWeek.MONDAY);
+    assertThat(calculatedHoliday.get(0).getPropertiesKey()).isEqualTo("");
   }
 }

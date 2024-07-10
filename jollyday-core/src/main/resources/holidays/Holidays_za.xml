@@ -76,9 +76,9 @@
                       descriptionPropertiesKey="KINGS_DAY"/>
     <FixedWeekday which="FIRST" weekday="MONDAY" month="SEPTEMBER" validFrom="1952" validTo="1979"
                       descriptionPropertiesKey="SETTLER"/>
-    <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
-    <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-    <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-    <ChristianHoliday type="ASCENSION_DAY" validFrom="1910" validTo="1993" descriptionPropertiesKey="christian.ASCENSION_DAY"/>
+    <ChristianHoliday type="EASTER"/>
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY"/>
+    <ChristianHoliday type="ASCENSION_DAY" validFrom="1910" validTo="1993"/>
   </Holidays>
 </Configuration>

@@ -13,7 +13,7 @@
 
     <FixedWeekday which="FIRST" weekday="MONDAY" month="SEPTEMBER" descriptionPropertiesKey="LABOUR_DAY"/>
 
-    <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+    <ChristianHoliday type="GOOD_FRIDAY"/>
   </Holidays>
 
   <SubConfigurations hierarchy="on" description="Ontario">
@@ -60,7 +60,7 @@
 
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="THANKSGIVING"/>
 
-      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+      <ChristianHoliday type="EASTER_MONDAY"/>
     </Holidays>
   </SubConfigurations>
 

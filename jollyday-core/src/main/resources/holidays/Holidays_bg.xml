@@ -15,8 +15,8 @@
     <Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CHRISTMAS_EVE"/>
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
     <Fixed month="DECEMBER" day="31" descriptionPropertiesKey="NEW_YEARS_EVE"/>
-    <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER" chronology="JULIAN"/>
-    <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY" chronology="JULIAN"/>
-    <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY" chronology="JULIAN"/>
+    <ChristianHoliday type="EASTER" chronology="JULIAN"/>
+    <ChristianHoliday type="GOOD_FRIDAY" chronology="JULIAN"/>
+    <ChristianHoliday type="EASTER_MONDAY" chronology="JULIAN"/>
   </Holidays>
 </Configuration>

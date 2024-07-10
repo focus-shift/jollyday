@@ -32,7 +32,7 @@
     <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" descriptionPropertiesKey="MEMORIAL_DAY"/>
     <FixedWeekday which="FIRST" weekday="MONDAY" month="SEPTEMBER" descriptionPropertiesKey="LABOUR_DAY"/>
     <FixedWeekday which="FOURTH" weekday="THURSDAY" month="NOVEMBER" descriptionPropertiesKey="THANKSGIVING"/>
-    <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+    <ChristianHoliday type="GOOD_FRIDAY"/>
   </Holidays>
 
   <Sources>

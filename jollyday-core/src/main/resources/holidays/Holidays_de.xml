@@ -24,10 +24,10 @@
       <Date month="NOVEMBER" day="23"/>
     </RelativeToFixed>
 
-    <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-    <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-    <ChristianHoliday type="ASCENSION_DAY" descriptionPropertiesKey="christian.ASCENSION_DAY"/>
-    <ChristianHoliday type="WHIT_MONDAY" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY"/>
+    <ChristianHoliday type="ASCENSION_DAY"/>
+    <ChristianHoliday type="WHIT_MONDAY"/>
   </Holidays>
 
   <Sources>
@@ -50,8 +50,8 @@
   <SubConfigurations hierarchy="bb" description="Brandenburg">
     <Holidays>
       <Fixed month="OCTOBER" day="31" descriptionPropertiesKey="REFORMATION_DAY"/>
-      <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
-      <ChristianHoliday type="PENTECOST" descriptionPropertiesKey="christian.PENTECOST"/>
+      <ChristianHoliday type="EASTER"/>
+      <ChristianHoliday type="PENTECOST"/>
     </Holidays>
   </SubConfigurations>
 
@@ -66,7 +66,7 @@
         <Date month="NOVEMBER" day="23"/>
       </RelativeToFixed>
 
-      <ChristianHoliday type="CORPUS_CHRISTI" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
+      <ChristianHoliday type="CORPUS_CHRISTI"/>
     </Holidays>
   </SubConfigurations>
 
@@ -79,7 +79,7 @@
         <When>BEFORE</When>
         <Date month="NOVEMBER" day="23"/>
       </RelativeToFixed>
-      <ChristianHoliday type="CORPUS_CHRISTI" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
+      <ChristianHoliday type="CORPUS_CHRISTI"/>
     </Holidays>
 
     <SubConfigurations hierarchy="mu" description="Munich">
@@ -121,8 +121,8 @@
         <When>BEFORE</When>
         <Date month="NOVEMBER" day="23"/>
       </RelativeToFixed>
-      <ChristianHoliday type="CORPUS_CHRISTI" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
-      <ChristianHoliday type="PENTECOST" descriptionPropertiesKey="christian.PENTECOST"/>
+      <ChristianHoliday type="CORPUS_CHRISTI"/>
+      <ChristianHoliday type="PENTECOST"/>
     </Holidays>
   </SubConfigurations>
 
@@ -141,7 +141,7 @@
         <When>BEFORE</When>
         <Date month="NOVEMBER" day="23"/>
       </RelativeToFixed>
-      <ChristianHoliday type="CORPUS_CHRISTI" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
+      <ChristianHoliday type="CORPUS_CHRISTI"/>
     </Holidays>
   </SubConfigurations>
 
@@ -153,7 +153,7 @@
         <When>BEFORE</When>
         <Date month="NOVEMBER" day="23"/>
       </RelativeToFixed>
-      <ChristianHoliday type="CORPUS_CHRISTI" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
+      <ChristianHoliday type="CORPUS_CHRISTI"/>
     </Holidays>
   </SubConfigurations>
 
@@ -166,7 +166,7 @@
         <When>BEFORE</When>
         <Date month="NOVEMBER" day="23"/>
       </RelativeToFixed>
-      <ChristianHoliday type="CORPUS_CHRISTI" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
+      <ChristianHoliday type="CORPUS_CHRISTI"/>
     </Holidays>
   </SubConfigurations>
 

@@ -13,10 +13,10 @@
     <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
     <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="ARMISTICE"/>
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-    <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-    <ChristianHoliday type="ASCENSION_DAY" descriptionPropertiesKey="christian.ASCENSION_DAY"/>
-    <ChristianHoliday type="WHIT_MONDAY" validTo="2003" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
-    <ChristianHoliday type="WHIT_MONDAY" validFrom="2008" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY"/>
+    <ChristianHoliday type="ASCENSION_DAY"/>
+    <ChristianHoliday type="WHIT_MONDAY" validTo="2003"/>
+    <ChristianHoliday type="WHIT_MONDAY" validFrom="2008"/>
   </Holidays>
 
   <SubConfigurations hierarchy="ges" description="Grand Est">
@@ -31,14 +31,14 @@
     <SubConfigurations hierarchy="67" description="Bas-Rhin">
       <Holidays>
         <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="SECOND_CHRISTMAS_DAY"/>
-        <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+        <ChristianHoliday type="GOOD_FRIDAY"/>
       </Holidays>
     </SubConfigurations>
 
     <SubConfigurations hierarchy="68" description="Haut-Rhin">
       <Holidays>
         <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="SECOND_CHRISTMAS_DAY"/>
-        <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+        <ChristianHoliday type="GOOD_FRIDAY"/>
       </Holidays>
     </SubConfigurations>
   </SubConfigurations>

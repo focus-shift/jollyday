@@ -19,10 +19,10 @@
     <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
     <Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CHRISTMAS_EVE"/>
     <Fixed month="DECEMBER" day="31" descriptionPropertiesKey="NEW_YEARS_EVE"/>
-    <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
-    <ChristianHoliday type="SHROVE_MONDAY" descriptionPropertiesKey="christian.SHROVE_MONDAY"/>
-    <ChristianHoliday type="CARNIVAL" descriptionPropertiesKey="christian.CARNIVAL"/>
-    <ChristianHoliday type="MAUNDY_THURSDAY" descriptionPropertiesKey="christian.MAUNDY_THURSDAY"/>
-    <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER"/>
+    <ChristianHoliday type="SHROVE_MONDAY"/>
+    <ChristianHoliday type="CARNIVAL"/>
+    <ChristianHoliday type="MAUNDY_THURSDAY"/>
+    <ChristianHoliday type="GOOD_FRIDAY"/>
   </Holidays>
 </Configuration>

@@ -20,9 +20,9 @@
     <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
     <Fixed month="DECEMBER" day="31" descriptionPropertiesKey="NEW_YEARS_EVE"/>
-    <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
-    <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-    <ChristianHoliday type="EASTER_SATURDAY" descriptionPropertiesKey="christian.EASTER_SATURDAY"/>
-    <ChristianHoliday type="CORPUS_CHRISTI" descriptionPropertiesKey="christian.CORPUS_CHRISTI" validTo="2006"/>
+    <ChristianHoliday type="EASTER"/>
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_SATURDAY"/>
+    <ChristianHoliday type="CORPUS_CHRISTI"/>
   </Holidays>
 </Configuration>

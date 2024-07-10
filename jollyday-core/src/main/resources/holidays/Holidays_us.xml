@@ -96,7 +96,7 @@
       <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
     </Holidays>
   </SubConfigurations>
 
@@ -105,7 +105,7 @@
       <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
     </Holidays>
   </SubConfigurations>
 
@@ -137,7 +137,7 @@
       <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="THIRD" weekday="FRIDAY" month="AUGUST" descriptionPropertiesKey="STATEHOOD"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
     </Holidays>
   </SubConfigurations>
 
@@ -174,8 +174,8 @@
         <FixedWeekday which="FIRST" weekday="MONDAY" month="NOVEMBER"/>
       </RelativeToWeekdayInMonth>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+      <ChristianHoliday type="EASTER_MONDAY"/>
     </Holidays>
   </SubConfigurations>
 
@@ -198,15 +198,15 @@
       <Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CHRISTMAS_EVE"/>
       <Fixed month="DECEMBER" day="31" descriptionPropertiesKey="NEW_YEARS_EVE"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
     </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="la" description="Louisiana">
     <Holidays>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <ChristianHoliday type="MARDI_GRAS" descriptionPropertiesKey="christian.MARDI_GRAS"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+      <ChristianHoliday type="MARDI_GRAS"/>
     </Holidays>
   </SubConfigurations>
 
@@ -264,7 +264,7 @@
       <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+      <ChristianHoliday type="EASTER_MONDAY"/>
     </Holidays>
   </SubConfigurations>
 
@@ -346,7 +346,7 @@
       <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
     </Holidays>
   </SubConfigurations>
 
@@ -367,7 +367,7 @@
       <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
-      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+      <ChristianHoliday type="EASTER_MONDAY"/>
     </Holidays>
     <SubConfigurations hierarchy="nyc" description="New York City">
       <Holidays>
@@ -381,7 +381,7 @@
       <Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CHRISTMAS_EVE"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
       <FixedWeekday which="FOURTH" weekday="MONDAY" month="APRIL" descriptionPropertiesKey="CONFEDERATE"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
     </Holidays>
     <SubConfigurations hierarchy="ce" description="Charlotte">
       <Holidays>
@@ -401,8 +401,8 @@
       <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+      <ChristianHoliday type="EASTER_MONDAY"/>
     </Holidays>
   </SubConfigurations>
 
@@ -475,7 +475,7 @@
       <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="FOURTH" weekday="MONDAY" month="APRIL" descriptionPropertiesKey="CONFEDERATE"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
     </Holidays>
   </SubConfigurations>
 

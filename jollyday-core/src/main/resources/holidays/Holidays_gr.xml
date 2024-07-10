@@ -16,10 +16,10 @@
     <Fixed month="OCTOBER" day="28" descriptionPropertiesKey="OCHI"/>
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
     <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
-    <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER" chronology="JULIAN"/>
-    <ChristianHoliday type="CLEAN_MONDAY" descriptionPropertiesKey="christian.CLEAN_MONDAY" chronology="JULIAN"/>
-    <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY" chronology="JULIAN"/>
-    <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY" chronology="JULIAN"/>
-    <ChristianHoliday type="WHIT_MONDAY" descriptionPropertiesKey="christian.WHIT_MONDAY" chronology="JULIAN"/>
+    <ChristianHoliday type="EASTER" chronology="JULIAN"/>
+    <ChristianHoliday type="CLEAN_MONDAY"/>
+    <ChristianHoliday type="GOOD_FRIDAY" chronology="JULIAN"/>
+    <ChristianHoliday type="EASTER_MONDAY" chronology="JULIAN"/>
+    <ChristianHoliday type="WHIT_MONDAY"/>
   </Holidays>
 </Configuration>
