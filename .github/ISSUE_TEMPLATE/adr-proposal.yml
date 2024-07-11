@@ -1,0 +1,61 @@
+---
+name: Architecture Decision Record (ADR) Proposal
+description: Architecture Decision Record (ADR) Proposal
+title: "ADR proposal: **short summary**"
+labels: [ "adr: proposal", "type: enhancement" ]
+body:
+
+  - type: markdown
+    attributes:
+      value: |
+        Please fill out the information in this template so that we can efficiently process your ADR proposal
+
+  - type: input
+    id: title
+    attributes:
+      label: Title
+      description: "The title of the ADR"
+      placeholder: "Germany"
+    validations:
+      required: true
+
+  - type: input
+    id: Status
+    attributes:
+      label: Status
+      description: "What is the status, such as proposed, accepted, rejected, deprecated, superseded, etc.?"
+      placeholder: "proposed"
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: "What is the issue that we're seeing that is motivating this decision or change?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: decision
+    attributes:
+      label: Decision
+      description: "What is the change that we're proposing and/or doing?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: consequences
+    attributes:
+      label: Consequences
+      description: "What becomes easier or more difficult to do because of this change?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: further-information
+    attributes:
+      label: Further information
+      description: "Further information that will not appear in the ADR but could be important"
+    validations:
+      required: false
