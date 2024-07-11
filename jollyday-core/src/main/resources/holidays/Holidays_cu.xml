@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="cu" description="Cuba"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="TRIUMPH_OF_THE_REVOLUTION"/>
+    <Fixed month="JANUARY" day="2" descriptionPropertiesKey="VICTORY_OF_FIDEL_CASTRO"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="JULY" day="25" descriptionPropertiesKey="DAY_BEFORE_THE_COMMEMORATION_OF_THE_ASSAULT_OF_THE_MONCADA_GARRISON"/>
+    <Fixed month="JULY" day="26" descriptionPropertiesKey="COMMEMORATION_OF_THE_ASSAULT_OF_THE_MONCADA_GARRISON"/>
+    <Fixed month="JULY" day="27" descriptionPropertiesKey="DAY_AFTER_THE_COMMEMORATION_OF_THE_ASSAULT_OF_THE_MONCADA_GARRISON"/>
+    <Fixed month="OCTOBER" day="10" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+    <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Cuba</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:CU</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:CU</Source>
+  </Sources>
+
+  <SubConfigurations hierarchy="01" description="Pinar del Rio">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="03" description="Havana">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="04" description="Matanzas">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="05" description="Clara City">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="06" description="Cienfuegos">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="07" description="Holy Spirit">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="08" description="Ciego de Avila">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="09" description="Camaguey">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="10" description="Las Tunas">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="11" description="Holguin">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="12" description="Granma">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="13" description="Santiago">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="14" description="Guantanamo">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="15" description="Artemisa">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="16" description="Mayabeque">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="99" description="Isle of Youth">
+    <Holidays/>
+  </SubConfigurations>
+</Configuration>
