@@ -11,7 +11,7 @@ import java.time.LocalDate;
 import java.util.Set;
 
 import static de.focus_shift.jollyday.core.HolidayCalendar.GUERNSEY;
-import static de.focus_shift.jollyday.core.HolidayType.OFFICIAL_HOLIDAY;
+import static de.focus_shift.jollyday.core.HolidayType.PUBLIC_HOLIDAY;
 import static de.focus_shift.jollyday.core.ManagerParameters.create;
 import static java.time.Month.MAY;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -32,7 +32,7 @@ class HolidayGGTest extends AbstractCountryTestBase {
 
     final Set<Holiday> holidays2023 = holidayManager.getHolidays(2023);
     assertThat(holidays2023)
-      .contains(new Holiday(LocalDate.of(2023, MAY, 8), "KINGS_CORONATION", OFFICIAL_HOLIDAY));
+      .contains(new Holiday(LocalDate.of(2023, MAY, 8), "KINGS_CORONATION", PUBLIC_HOLIDAY));
 
     final Set<Holiday> holidays2024 = holidayManager.getHolidays(2024);
     assertThat(holidays2024)

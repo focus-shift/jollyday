@@ -202,6 +202,15 @@ To access the public holidays of a subdivision of a country, e.g. Baden-Württem
 | Subdivisions ([ISO 3166-2])    | Yes       |
 | City Holiday                   | Yes       |
 
+## Holiday types
+
+The following holiday types are supported:
+
+| Type       | Description                                                                                             |
+|------------|---------------------------------------------------------------------------------------------------------|
+| Public     | Public holiday                                                                                          |
+| Bank       | Bank holiday, banks and offices are closed                                                              |
+
 ## Development
 
 If you want to **support** us at the development on **jollyday** than take a look at [Contributing to jollyday](./CONTRIBUTING.md).

@@ -28,7 +28,7 @@ public class JaxbRelativeToEasterSunday implements RelativeToEasterSunday {
   @Override
   public HolidayType officiality() {
     return relativeToEasterSunday.getLocalizedType() == null
-      ? HolidayType.OFFICIAL_HOLIDAY
+      ? HolidayType.PUBLIC_HOLIDAY
       : HolidayType.valueOf(relativeToEasterSunday.getLocalizedType().name());
   }
 

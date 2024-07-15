@@ -1,26 +1,12 @@
 package de.focus_shift.jollyday.core;
 
 /**
- * Type of holiday. Each holiday can be placed in a category and this is
- * represented by this type. The categories can mark a holiday as a official
- * holiday or not.
+ * Type of holiday.
+ * Each holiday can be placed in a category and this is represented by this type.
  */
 public enum HolidayType {
 
-  OFFICIAL_HOLIDAY {
-    @Override
-    public boolean isOfficialHoliday() {
-      return true;
-    }
-  },
+  PUBLIC_HOLIDAY,
 
-  UNOFFICIAL_HOLIDAY {
-    @Override
-    public boolean isOfficialHoliday() {
-      return false;
-    }
-  };
-
-  public abstract boolean isOfficialHoliday();
-
+  BANK_HOLIDAY
 }
