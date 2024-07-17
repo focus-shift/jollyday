@@ -10,7 +10,7 @@ import java.net.URL;
 
 public class JacksonConfigurationService implements ConfigurationService {
 
-  private final XMLUtil xmlUtil = new XMLUtil();
+  private static final XMLUtil xmlUtil = new XMLUtil();
 
   @Override
   public Configuration getConfiguration(ManagerParameter parameter) {

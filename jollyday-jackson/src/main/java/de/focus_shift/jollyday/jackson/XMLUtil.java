@@ -11,7 +11,7 @@ import java.time.DayOfWeek;
 
 public class XMLUtil {
 
-  private final JacksonMapperCreator mapper = new JacksonMapperCreator();
+  private static final XmlMapper mapper = new JacksonMapperCreator().create();
 
   /**
    * Unmarshalls the configuration from the stream. Uses <code>jackson</code> for
@@ -22,7 +22,7 @@ public class XMLUtil {
    */
   public Configuration unmarshallConfiguration(InputStream stream) {
     try {
-      return mapper.create().readValue(stream, Configuration.class);
+      return mapper.readValue(stream, Configuration.class);
     } catch (Exception e) {
       throw new IllegalStateException("Cannot parse holidays XML file.", e);
     }
