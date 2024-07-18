@@ -24,7 +24,8 @@ public class XMLUtil {
 
   private static final Logger LOG = LoggerFactory.getLogger(XMLUtil.class);
 
-  private JAXBContextCreator contextCreator = new JAXBContextCreator();
+  private static final JAXBContextCreator contextCreator = new JAXBContextCreator();
+  private static final JAXBContext jaxbContext = createJAXBContext(contextCreator);
 
   /**
    * Unmarshalls the configuration from the stream. Uses <code>JAXB</code> for
@@ -39,27 +40,12 @@ public class XMLUtil {
     }
 
     try {
-      final JAXBContext ctx = createJAXBContext();
-      final Unmarshaller um = ctx.createUnmarshaller();
+      final Unmarshaller um = jaxbContext.createUnmarshaller();
       @SuppressWarnings("unchecked") final JAXBElement<Configuration> jaxbElement = (JAXBElement<Configuration>) um.unmarshal(stream);
       return jaxbElement.getValue();
     } catch (JAXBException exception) {
       throw new IllegalStateException("Cannot parse holidays XML file.", exception);
     }
-  }
-
-  private JAXBContext createJAXBContext() throws JAXBException {
-    JAXBContext ctx = null;
-    try {
-      ctx = contextCreator.create(XMLUtil.PACKAGE, ClassLoadingUtil.getClassloader());
-    } catch (JAXBException e) {
-      LOG.warn("Could not create JAXB context using the current threads context classloader. Falling back to ObjectFactory class classloader.");
-    }
-
-    if (ctx == null) {
-      ctx = contextCreator.create(XMLUtil.PACKAGE, ObjectFactory.class.getClassLoader());
-    }
-    return ctx;
   }
 
   /**
@@ -86,5 +72,24 @@ public class XMLUtil {
     public JAXBContext create(String packageName, ClassLoader classLoader) throws JAXBException {
       return JAXBContext.newInstance(packageName, classLoader);
     }
+  }
+
+  public static JAXBContext createJAXBContext(final JAXBContextCreator contextCreator) {
+    JAXBContext ctx = null;
+    try {
+      ctx = contextCreator.create(XMLUtil.PACKAGE, ClassLoadingUtil.getClassloader());
+    } catch (JAXBException e) {
+      LOG.warn("Could not create JAXB context using the current classloader from ClassLoadingUtil. Falling back to ObjectFactory class classloader.");
+    }
+
+    if (ctx == null) {
+      try {
+        ctx = contextCreator.create(XMLUtil.PACKAGE, ObjectFactory.class.getClassLoader());
+      } catch (JAXBException exception) {
+        throw new IllegalStateException("Could not create JAXB context using ObjectFactory classloader.", exception);
+      }
+    }
+
+    return ctx;
   }
 }
