@@ -9,6 +9,7 @@ import de.focus_shift.jollyday.core.spi.Holidays;
 import org.threeten.extra.chrono.CopticChronology;
 
 import java.time.LocalDate;
+import java.time.Year;
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -20,7 +21,7 @@ import static java.util.stream.Collectors.toList;
 public class EthiopianOrthodoxHolidayParser implements HolidayParser {
 
   @Override
-  public List<Holiday> parse(final int year, final Holidays holidays) {
+  public List<Holiday> parse(final Year year, final Holidays holidays) {
     return holidays.ethiopianOrthodoxHolidays().stream()
       .filter(new ValidLimitation(year))
       .flatMap(eoh -> {

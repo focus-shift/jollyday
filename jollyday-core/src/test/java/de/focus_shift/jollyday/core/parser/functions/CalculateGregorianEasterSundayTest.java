@@ -18,7 +18,7 @@ class CalculateGregorianEasterSundayTest {
     "2025,2025-04-20",
   })
   void calculateEasterSunday(Year year, LocalDate expectedEasterSunday) {
-    final LocalDate easterSunday = new CalculateGregorianEasterSunday().apply(year.getValue());
+    final LocalDate easterSunday = new CalculateGregorianEasterSunday().apply(year);
     assertThat(easterSunday).isEqualTo(expectedEasterSunday);
   }
 }

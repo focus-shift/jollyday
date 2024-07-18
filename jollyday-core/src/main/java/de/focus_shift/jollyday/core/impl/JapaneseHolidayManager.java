@@ -5,6 +5,7 @@ import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.util.CalendarUtil;
 
 import java.time.LocalDate;
+import java.time.Year;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -25,9 +26,23 @@ public class JapaneseHolidayManager extends DefaultHolidayManager {
    * <p>
    * Implements the rule which requests if two holidays have one non holiday
    * between each other than this day is also a holiday.
+   *
+   * @deprecated in favor of <code>getHolidays(final Year year, final String... args)</code>
    */
+  @Deprecated(forRemoval = true, since = "0.31.0")
   @Override
   public Set<Holiday> getHolidays(final int year, final String... args) {
+    return getHolidays(Year.of(year), args);
+  }
+
+  /**
+   * {@inheritDoc}
+   * <p>
+   * Implements the rule which requests if two holidays have one non holiday
+   * between each other than this day is also a holiday.
+   */
+  @Override
+  public Set<Holiday> getHolidays(final Year year, final String... args) {
     final Set<Holiday> holidays = super.getHolidays(year, args);
     final Set<Holiday> additionalHolidays = new HashSet<>();
     for (Holiday holiday : holidays) {

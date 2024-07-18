@@ -7,6 +7,7 @@ import de.focus_shift.jollyday.jackson.mapping.FixedWeekdayInMonth;
 import de.focus_shift.jollyday.jackson.mapping.Holidays;
 import org.junit.jupiter.api.Test;
 
+import java.time.Year;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -18,7 +19,7 @@ class FixedWeekdayInMonthParserTest {
   @Test
   void testEmpty() {
     final Holidays config = new Holidays();
-    final List<Holiday> holidays = sut.parse(2010, new JacksonHolidays(config));
+    final List<Holiday> holidays = sut.parse(Year.of(2010), new JacksonHolidays(config));
     assertThat(holidays).isEmpty();
   }
 
@@ -29,7 +30,7 @@ class FixedWeekdayInMonthParserTest {
     e.setValidFrom(2011);
     config.getFixedWeekday().add(e);
 
-    final List<Holiday> holidays = sut.parse(2010, new JacksonHolidays(config));
+    final List<Holiday> holidays = sut.parse(Year.of(2010), new JacksonHolidays(config));
     assertThat(holidays).isEmpty();
   }
 }

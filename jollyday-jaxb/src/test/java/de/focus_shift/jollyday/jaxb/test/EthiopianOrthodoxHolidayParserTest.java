@@ -11,6 +11,7 @@ import org.assertj.core.util.Sets;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
+import java.time.Year;
 import java.util.List;
 import java.util.Set;
 
@@ -27,7 +28,7 @@ class EthiopianOrthodoxHolidayParserTest {
   @Test
   void testEmpty() {
     final Holidays config = new Holidays();
-    final List<Holiday> holidays = sut.parse(2010, new JaxbHolidays(config));
+    final List<Holiday> holidays = sut.parse(Year.of(2010), new JaxbHolidays(config));
     assertThat(holidays).isEmpty();
   }
 
@@ -38,7 +39,7 @@ class EthiopianOrthodoxHolidayParserTest {
     config.getEthiopianOrthodoxHoliday().add(createHoliday(MESKEL));
     config.getEthiopianOrthodoxHoliday().add(createHoliday(TIMKAT));
 
-    final List<Holiday> holidays = sut.parse(2010, new JaxbHolidays(config));
+    final List<Holiday> holidays = sut.parse(Year.of(2010), new JaxbHolidays(config));
     assertThat(holidays).hasSize(3);
     assertContains(LocalDate.of(2010, 1, 18), Sets.newHashSet(holidays));
     assertContains(LocalDate.of(2010, 9, 11), Sets.newHashSet(holidays));

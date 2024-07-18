@@ -12,6 +12,7 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.time.DayOfWeek;
+import java.time.Year;
 import java.util.List;
 
 import static de.focus_shift.jollyday.core.spi.YearCycle.EVERY_YEAR;
@@ -53,7 +54,7 @@ class IslamicHolidayParserTest {
     when(islamicHoliday.cycle()).thenReturn(EVERY_YEAR);
 
     // ID_UL_ADHA_2 will be on a sunday in 2022
-    final List<Holiday> calculatedHoliday = sut.parse(2022, holidays);
+    final List<Holiday> calculatedHoliday = sut.parse(Year.of(2022), holidays);
     assertThat(calculatedHoliday.get(0).getDate().getDayOfWeek()).isEqualTo(DayOfWeek.MONDAY);
   }
 }

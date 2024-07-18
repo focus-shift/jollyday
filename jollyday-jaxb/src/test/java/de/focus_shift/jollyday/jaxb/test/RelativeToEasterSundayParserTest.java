@@ -7,6 +7,7 @@ import de.focus_shift.jollyday.jaxb.mapping.Holidays;
 import de.focus_shift.jollyday.jaxb.mapping.RelativeToEasterSunday;
 import org.junit.jupiter.api.Test;
 
+import java.time.Year;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -17,15 +18,15 @@ class RelativeToEasterSundayParserTest {
 
   @Test
   void testForEasterMonday() {
-    doTest(2013, 1);
+    doTest(Year.of(2013), 1);
   }
 
   @Test
   void testForEasterSaturday() {
-    doTest(2013, -1);
+    doTest(Year.of(2013), -1);
   }
 
-  private void doTest(int year, int days) {
+  private void doTest(Year year, int days) {
     final Holidays config = new Holidays();
     addRelativeToEasterHoliday(config, days);
 

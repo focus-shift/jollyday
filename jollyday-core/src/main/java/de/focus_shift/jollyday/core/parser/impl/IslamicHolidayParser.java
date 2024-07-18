@@ -9,6 +9,7 @@ import de.focus_shift.jollyday.core.parser.predicates.ValidLimitation;
 import de.focus_shift.jollyday.core.spi.Holidays;
 
 import java.time.LocalDate;
+import java.time.Year;
 import java.time.chrono.HijrahChronology;
 import java.util.List;
 import java.util.stream.Stream;
@@ -21,7 +22,7 @@ import static java.util.stream.Collectors.toList;
 public class IslamicHolidayParser implements HolidayParser {
 
   @Override
-  public List<Holiday> parse(final int year, final Holidays holidays) {
+  public List<Holiday> parse(final Year year, final Holidays holidays) {
     return holidays.islamicHolidays().stream()
       .filter(new ValidLimitation(year))
       .flatMap(islamicHoliday -> {

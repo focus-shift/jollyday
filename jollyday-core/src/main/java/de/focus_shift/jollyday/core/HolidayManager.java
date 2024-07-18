@@ -11,6 +11,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.time.LocalDate;
+import java.time.Year;
 import java.util.Calendar;
 import java.util.Properties;
 import java.util.Set;
@@ -212,7 +213,7 @@ public abstract class HolidayManager {
    * @return true if the given date is a holiday in the state/region and below, otherwise false
    */
   public boolean isHoliday(final LocalDate localDate, final HolidayType holidayType, final String... args) {
-    final Set<Holiday> holidays = getHolidays(localDate.getYear(), args);
+    final Set<Holiday> holidays = getHolidays(Year.of(localDate.getYear()), args);
     return CalendarUtil.contains(holidays, localDate, holidayType);
   }
 
@@ -259,8 +260,33 @@ public abstract class HolidayManager {
    * @param year i.e. 2010
    * @param args i.e. args = {'ny'}. returns US/New York holidays. No args means holidays common to whole country
    * @return a set of holidays for the requested year
+   *
+   * @deprecated in favor of <code>getHolidays(final Year year, final String... args)</code>
    */
+  @Deprecated(forRemoval = true, since = "0.31.0")
   public abstract Set<Holiday> getHolidays(final int year, final String... args);
+
+  /**
+   * Returns the holidays for the requested year and hierarchy structure.
+   *
+   * @param year i.e. 2010
+   * @param args i.e. args = {'ny'}. returns US/New York holidays. No args means holidays common to whole country
+   * @return a set of holidays for the requested year
+   */
+  public abstract Set<Holiday> getHolidays(final Year year, final String... args);
+
+  /**
+   * Returns the holidays for the requested year, the given {@link HolidayType} and the hierarchy structure
+   *
+   * @param year        i.e. 2010
+   * @param holidayType a {@link HolidayType} to be considered
+   * @param args        i.e. args = {'ny'}. returns US/New York holidays. No args means holidays common to whole country
+   * @return a set of holidays of the given {@link HolidayType} for the requested year
+   *
+   * @deprecated in favor of <code>getHolidays(final Year year, final HolidayType holidayType, final String... args);</code>
+   */
+  @Deprecated(forRemoval = true, since = "0.31.0")
+  public abstract Set<Holiday> getHolidays(final int year, final HolidayType holidayType, final String... args);
 
   /**
    * Returns the holidays for the requested year, the given {@link HolidayType} and the hierarchy structure
@@ -270,7 +296,7 @@ public abstract class HolidayManager {
    * @param args        i.e. args = {'ny'}. returns US/New York holidays. No args means holidays common to whole country
    * @return a set of holidays of the given {@link HolidayType} for the requested year
    */
-  public abstract Set<Holiday> getHolidays(final int year, final HolidayType holidayType, final String... args);
+  public abstract Set<Holiday> getHolidays(final Year year, final HolidayType holidayType, final String... args);
 
   /**
    * Returns the holidays for the requested interval and hierarchy structure.

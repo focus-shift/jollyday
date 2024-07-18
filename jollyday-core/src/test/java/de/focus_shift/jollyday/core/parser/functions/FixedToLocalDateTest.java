@@ -56,7 +56,7 @@ class FixedToLocalDateTest {
       }
     };
 
-    final LocalDate localDate = new FixedToLocalDate(2024).apply(fixed);
+    final LocalDate localDate = new FixedToLocalDate(Year.of(2024)).apply(fixed);
     assertThat(localDate)
       .hasYear(2024)
       .hasMonth(FEBRUARY)

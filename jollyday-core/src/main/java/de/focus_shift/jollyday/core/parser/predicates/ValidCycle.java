@@ -2,13 +2,15 @@ package de.focus_shift.jollyday.core.parser.predicates;
 
 import de.focus_shift.jollyday.core.spi.Limited;
 
+import java.time.Period;
+import java.time.Year;
 import java.util.function.Predicate;
 
 public class ValidCycle implements Predicate<Limited> {
 
-  private final int year;
+  private final Year year;
 
-  public ValidCycle(final int year) {
+  public ValidCycle(final Year year) {
     this.year = year;
   }
 
@@ -18,19 +20,19 @@ public class ValidCycle implements Predicate<Limited> {
       case EVERY_YEAR:
         return true;
       case ODD_YEARS:
-        return year % 2 != 0;
+        return year.getValue() % 2 != 0;
       case EVEN_YEARS:
-        return year % 2 == 0;
+        return year.getValue() % 2 == 0;
       case TWO_YEARS:
-        return isValidWithReferenceYear(limited, 2);
+        return isValidWithReferenceYear(limited, Period.ofYears(2));
       case THREE_YEARS:
-        return isValidWithReferenceYear(limited, 3);
+        return isValidWithReferenceYear(limited, Period.ofYears(3));
       case FOUR_YEARS:
-        return isValidWithReferenceYear(limited, 4);
+        return isValidWithReferenceYear(limited, Period.ofYears(4));
       case FIVE_YEARS:
-        return isValidWithReferenceYear(limited, 5);
+        return isValidWithReferenceYear(limited, Period.ofYears(5));
       case SIX_YEARS:
-        return isValidWithReferenceYear(limited, 6);
+        return isValidWithReferenceYear(limited, Period.ofYears(6));
       default:
         throw new IllegalArgumentException("Cannot handle unknown cycle type '" + limited.cycle() + "'.");
     }
@@ -45,11 +47,11 @@ public class ValidCycle implements Predicate<Limited> {
    * @param cycleYears number of years to start the cycle starting from validFrom/validTo
    * @return true if the given year based on validFrom/validTo and the cycle is valid, otherwise false
    */
-  private boolean isValidWithReferenceYear(Limited limited, int cycleYears) {
+  private boolean isValidWithReferenceYear(Limited limited, Period cycleYears) {
     if (limited.validFrom() != null) {
-      return (year - limited.validFrom().getValue()) % cycleYears == 0;
+      return (year.minusYears(limited.validFrom().getValue())).getValue() % cycleYears.getYears() == 0;
     } else if (limited.validTo() != null) {
-      return (limited.validTo().getValue() - year) % cycleYears == 0;
+      return (limited.validTo().minusYears(year.getValue())).getValue() % cycleYears.getYears() == 0;
     }
 
     throw new IllegalArgumentException("Cannot handle cycle type '" + limited.cycle() + "' without any reference year.");

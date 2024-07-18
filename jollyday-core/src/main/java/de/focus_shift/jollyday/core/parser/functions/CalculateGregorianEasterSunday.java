@@ -1,20 +1,21 @@
 package de.focus_shift.jollyday.core.parser.functions;
 
 import java.time.LocalDate;
-import java.util.function.IntFunction;
+import java.time.Year;
+import java.util.function.Function;
 
 import static java.time.Month.APRIL;
 import static java.time.Month.MARCH;
 
-public class CalculateGregorianEasterSunday implements IntFunction<LocalDate> {
+public class CalculateGregorianEasterSunday implements Function<Year, LocalDate> {
 
   @Override
-  public LocalDate apply(final int year) {
+  public LocalDate apply(final Year year) {
     int a, b, c, d, e, f, g, h, i, j, k, l;
     int x, month, day;
-    a = year % 19;
-    b = year / 100;
-    c = year % 100;
+    a = year.getValue() % 19;
+    b = year.getValue() / 100;
+    c = year.getValue() % 100;
     d = b / 4;
     e = b % 4;
     f = (b + 8) / 25;
@@ -27,6 +28,6 @@ public class CalculateGregorianEasterSunday implements IntFunction<LocalDate> {
     x = h + k - 7 * l + 114;
     month = x / 31;
     day = (x % 31) + 1;
-    return LocalDate.of(year, (month == 3 ? MARCH : APRIL), day);
+    return LocalDate.of(year.getValue(), (month == 3 ? MARCH : APRIL), day);
   }
 }

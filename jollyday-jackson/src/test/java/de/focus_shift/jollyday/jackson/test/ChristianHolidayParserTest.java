@@ -13,6 +13,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
+import java.time.Year;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -39,14 +40,14 @@ class ChristianHolidayParserTest {
   @Test
   void testEmpty() {
     final Holidays config = new Holidays();
-    final List<Holiday> holidays = sut.parse(2010, new JacksonHolidays(config));
+    final List<Holiday> holidays = sut.parse(Year.of(2010), new JacksonHolidays(config));
     assertThat(holidays).isEmpty();
   }
 
   @Test
   void testEaster() {
     final Holidays config = createConfig(EASTER);
-    final List<Holiday> holidays = sut.parse(2011, new JacksonHolidays(config));
+    final List<Holiday> holidays = sut.parse(Year.of(2011), new JacksonHolidays(config));
     assertThat(holidays).hasSize(1);
     final Holiday easterDate = holidays.iterator().next();
     final LocalDate ed = LocalDate.of(2011, 4, 24);
@@ -57,7 +58,7 @@ class ChristianHolidayParserTest {
   void testChristianInvalidDate() {
     final Holidays config = createConfig(EASTER);
     config.getChristianHoliday().get(0).setValidTo(2010);
-    final List<Holiday> holidays = sut.parse(2011, new JacksonHolidays(config));
+    final List<Holiday> holidays = sut.parse(Year.of(2011), new JacksonHolidays(config));
     assertThat(holidays).isEmpty();
   }
 
@@ -65,7 +66,7 @@ class ChristianHolidayParserTest {
   void testRelativeToEasterSunday() {
     final Holidays config = createConfig(1);
     final RelativeToEasterSundayParser p = new RelativeToEasterSundayParser();
-    final List<Holiday> holidays = p.parse(2011, new JacksonHolidays(config));
+    final List<Holiday> holidays = p.parse(Year.of(2011), new JacksonHolidays(config));
     final List<LocalDate> expected = new ArrayList<>();
     expected.add(LocalDate.of(2011, 4, 25));
     assertThat(holidays).hasSameSizeAs(expected);
@@ -76,7 +77,7 @@ class ChristianHolidayParserTest {
   void testChristianDates() {
     final Holidays config = createConfig(EASTER, CLEAN_MONDAY, EASTER_SATURDAY, EASTER_TUESDAY,
       GENERAL_PRAYER_DAY, PENTECOST, SACRED_HEART);
-    final List<Holiday> holidays = sut.parse(2011, new JacksonHolidays(config));
+    final List<Holiday> holidays = sut.parse(Year.of(2011), new JacksonHolidays(config));
     final List<LocalDate> expected = new ArrayList<>();
     expected.add(LocalDate.of(2011, 3, 7));
     expected.add(LocalDate.of(2011, 4, 23));
@@ -101,7 +102,7 @@ class ChristianHolidayParserTest {
   void testCustomPropertiesKey() {
     final Holidays config = createConfig(ChristianHolidayType.EASTER_TUESDAY);
     config.getChristianHoliday().get(0).setDescriptionPropertiesKey("CUSTOM_KEY");
-    final List<Holiday> holidays = sut.parse(2019, new JacksonHolidays(config));
+    final List<Holiday> holidays = sut.parse(Year.of(2019), new JacksonHolidays(config));
 
     final String expectedPropertiesKey = "CUSTOM_KEY";
     final LocalDate expectedDate = LocalDate.of(2019, 4, 23);

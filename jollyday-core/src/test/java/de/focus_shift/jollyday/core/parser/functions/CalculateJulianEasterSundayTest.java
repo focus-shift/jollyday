@@ -18,7 +18,7 @@ class CalculateJulianEasterSundayTest {
     "2025,2025-04-20",
   })
   void calculateEasterSunday(Year year, LocalDate expectedEasterSunday) {
-    final LocalDate easterSunday = new CalculateJulianEasterSunday().apply(year.getValue());
+    final LocalDate easterSunday = new CalculateJulianEasterSunday().apply(year);
     assertThat(easterSunday).isEqualTo(expectedEasterSunday);
   }
 }
