@@ -2,8 +2,6 @@ package de.focus_shift.jollyday.tests;
 
 import org.openjdk.jmh.results.RunResult;
 
-import java.text.DecimalFormat;
-
 import static org.assertj.core.api.Assertions.assertThat;
 
 public abstract class Benchmarks {
