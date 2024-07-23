@@ -1,8 +1,5 @@
 package de.focus_shift.jollyday.core;
 
-import de.focus_shift.jollyday.core.HolidayManager;
-import de.focus_shift.jollyday.core.HolidayManagerValueHandler;
-import de.focus_shift.jollyday.core.ManagerParameter;
 import de.focus_shift.jollyday.core.datasource.ConfigurationServiceManager;
 import de.focus_shift.jollyday.core.impl.DefaultHolidayManager;
 import de.focus_shift.jollyday.core.impl.JapaneseHolidayManager;
