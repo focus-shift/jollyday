@@ -54,7 +54,7 @@ class HolidayNZTest extends AbstractCountryTestBase {
   @Property
   void ensuresThatQueenElisabethIIMemorialDayIsNotConfiguredUntil2021(@ForAll @YearRange(max = 2021) Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(ISO_CODE));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
       .doesNotContain(new Holiday(LocalDate.of(year.getValue(), SEPTEMBER, 26), "QUEEN_ELIZABETH_II_MEMORIAL_DAY", OFFICIAL_HOLIDAY));
@@ -63,7 +63,7 @@ class HolidayNZTest extends AbstractCountryTestBase {
   @Property
   void ensuresThatQueenElisabethIIMemorialDayIsConfiguredIn2022(@ForAll @YearRange(min = 2022, max = 2022) Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(ISO_CODE));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
       .contains(new Holiday(LocalDate.of(year.getValue(), SEPTEMBER, 26), "QUEEN_ELIZABETH_II_MEMORIAL_DAY", OFFICIAL_HOLIDAY));
@@ -72,7 +72,7 @@ class HolidayNZTest extends AbstractCountryTestBase {
   @Property
   void ensuresThatQueenElisabethIIMemorialDayIsConfiguredSince2023(@ForAll @YearRange(min = 2023) Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(ISO_CODE));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
       .doesNotContain(new Holiday(LocalDate.of(year.getValue(), SEPTEMBER, 26), "QUEEN_ELIZABETH_II_MEMORIAL_DAY", OFFICIAL_HOLIDAY));

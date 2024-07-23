@@ -24,7 +24,7 @@ class HolidayDKTest extends AbstractCountryTestBase {
   @Property
   void ensuresThatNewYearIsOnFirstJanuary(@ForAll @YearRange Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(DENMARK));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
       .contains(new Holiday(LocalDate.of(year.getValue(), JANUARY, 1), "NEW_YEAR", OFFICIAL_HOLIDAY));
@@ -33,7 +33,7 @@ class HolidayDKTest extends AbstractCountryTestBase {
   @Property
   void ensuresThatFirstAndSecondChristmasIsCorrect(@ForAll @YearRange Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(DENMARK));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
       .contains(new Holiday(LocalDate.of(year.getValue(), DECEMBER, 25), "CHRISTMAS", OFFICIAL_HOLIDAY))

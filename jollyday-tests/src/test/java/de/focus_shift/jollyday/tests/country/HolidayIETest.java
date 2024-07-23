@@ -25,7 +25,7 @@ class HolidayIETest extends AbstractCountryTestBase {
   @Property
   void ensuresThatNewYearConfigured(@ForAll @YearRange Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(IRELAND));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
       .contains(new Holiday(LocalDate.of(year.getValue(), JANUARY, 1), "NEW_YEAR", OFFICIAL_HOLIDAY));
@@ -34,7 +34,7 @@ class HolidayIETest extends AbstractCountryTestBase {
   @Property
   void ensuresThatStPatrickConfigured(@ForAll @YearRange Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(IRELAND));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
       .contains(new Holiday(LocalDate.of(year.getValue(), MARCH, 17), "ST_PATRICK", OFFICIAL_HOLIDAY));
@@ -43,7 +43,7 @@ class HolidayIETest extends AbstractCountryTestBase {
   @Property
   void ensuresThatChristmasIsConfigured(@ForAll @YearRange Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(IRELAND));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
       .contains(new Holiday(LocalDate.of(year.getValue(), DECEMBER, 25), "CHRISTMAS", OFFICIAL_HOLIDAY));
@@ -52,7 +52,7 @@ class HolidayIETest extends AbstractCountryTestBase {
   @Property
   void ensuresThatStephensIsConfigured(@ForAll @YearRange Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(IRELAND));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
       .contains(new Holiday(LocalDate.of(year.getValue(), DECEMBER, 26), "STEPHENS", OFFICIAL_HOLIDAY));
@@ -61,7 +61,7 @@ class HolidayIETest extends AbstractCountryTestBase {
   @Property
   void ensuresThatEasterIsConfigured(@ForAll @YearRange Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(IRELAND));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
       .extracting(Holiday::getPropertiesKey)
@@ -71,7 +71,7 @@ class HolidayIETest extends AbstractCountryTestBase {
   @Property
   void ensuresThatEasterMondayIsConfigured(@ForAll @YearRange Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(IRELAND));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
       .extracting(Holiday::getPropertiesKey)
@@ -81,7 +81,7 @@ class HolidayIETest extends AbstractCountryTestBase {
   @Property
   void ensureStBrigidNotConfiguredBefore2023(@ForAll @YearRange(max = 2022) Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(IRELAND));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
       .extracting(Holiday::getPropertiesKey)
@@ -91,7 +91,7 @@ class HolidayIETest extends AbstractCountryTestBase {
   @Property
   void ensureStBrigidIsConfiguredFrom2023(@ForAll @YearRange(min = 2023) Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(IRELAND));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
       .extracting(Holiday::getPropertiesKey)

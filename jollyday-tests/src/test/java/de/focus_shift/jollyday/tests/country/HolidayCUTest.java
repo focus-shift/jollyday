@@ -26,7 +26,7 @@ class HolidayCUTest extends AbstractCountryTestBase {
   @Property
   void ensuresThatTriumphOfTheRevolutionIsConfigured(@ForAll @YearRange Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(CUBA));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
       .contains(new Holiday(LocalDate.of(year.getValue(), JANUARY, 1), "TRIUMPH_OF_THE_REVOLUTION", OFFICIAL_HOLIDAY));
@@ -35,7 +35,7 @@ class HolidayCUTest extends AbstractCountryTestBase {
   @Property
   void ensuresThatVictoryOfFidelCastroIsConfigured(@ForAll @YearRange Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(CUBA));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
       .contains(new Holiday(LocalDate.of(year.getValue(), JANUARY, 2), "VICTORY_OF_FIDEL_CASTRO", OFFICIAL_HOLIDAY));
@@ -44,7 +44,7 @@ class HolidayCUTest extends AbstractCountryTestBase {
   @Property
   void ensuresThatLabourDayIsConfigured(@ForAll @YearRange Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(CUBA));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
       .contains(new Holiday(LocalDate.of(year.getValue(), MAY, 1), "LABOUR_DAY", OFFICIAL_HOLIDAY));
@@ -53,7 +53,7 @@ class HolidayCUTest extends AbstractCountryTestBase {
   @Property
   void ensuresThatCommemorationOfTheAssaultOfTheMancadaGarrisonNotConfiguredBefore2016(@ForAll @YearRange(max = 2015) Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(CUBA));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
       .contains(new Holiday(LocalDate.of(year.getValue(), JULY, 25), "DAY_BEFORE_THE_COMMEMORATION_OF_THE_ASSAULT_OF_THE_MONCADA_GARRISON", OFFICIAL_HOLIDAY))
@@ -65,7 +65,7 @@ class HolidayCUTest extends AbstractCountryTestBase {
   @Property
   void ensuresThatIndependenceDayIsConfigured(@ForAll @YearRange Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(CUBA));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
       .contains(new Holiday(LocalDate.of(year.getValue(), OCTOBER, 10), "INDEPENDENCE_DAY", OFFICIAL_HOLIDAY));
@@ -74,7 +74,7 @@ class HolidayCUTest extends AbstractCountryTestBase {
   @Property
   void ensuresThatChristmasIsConfigured(@ForAll @YearRange Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(CUBA));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
       .contains(new Holiday(LocalDate.of(year.getValue(), DECEMBER, 25), "CHRISTMAS", OFFICIAL_HOLIDAY));
@@ -83,7 +83,7 @@ class HolidayCUTest extends AbstractCountryTestBase {
   @Property
   void ensuresThatGoodFridayIsConfigured(@ForAll @YearRange Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(FINLAND));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
       .extracting(Holiday::getPropertiesKey)

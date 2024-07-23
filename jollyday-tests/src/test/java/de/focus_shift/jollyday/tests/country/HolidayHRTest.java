@@ -27,7 +27,7 @@ class HolidayHRTest {
   @Property
   void ensuresThatNewYearIsOnFirstJanuary(@ForAll @YearRange Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(CROATIA));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
       .contains(new Holiday(LocalDate.of(year.getValue(), JANUARY, 1), "NEW_YEAR", OFFICIAL_HOLIDAY));
@@ -36,7 +36,7 @@ class HolidayHRTest {
   @Property
   void ensuresThatLabourDayIsCorrect(@ForAll @YearRange Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(CROATIA));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
       .contains(new Holiday(LocalDate.of(year.getValue(), MAY, 1), "LABOUR_DAY", OFFICIAL_HOLIDAY));
@@ -45,7 +45,7 @@ class HolidayHRTest {
   @Property
   void ensuresThatNationalDayIsConfiguredSince2020(@ForAll @YearRange(min = 2020) Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(CROATIA));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
       .contains(new Holiday(LocalDate.of(year.getValue(), MAY, 30), "NATIONAL_DAY", OFFICIAL_HOLIDAY));
@@ -54,7 +54,7 @@ class HolidayHRTest {
   @Property
   void ensuresThatNationalDayIsNotConfiguredUntil2019(@ForAll @YearRange(max = 2019) Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(CROATIA));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
       .doesNotContain(new Holiday(LocalDate.of(year.getValue(), MAY, 30), "NATIONAL_DAY", OFFICIAL_HOLIDAY));
@@ -63,7 +63,7 @@ class HolidayHRTest {
   @Property
   void ensuresThatAntiFascistIsCorrect(@ForAll @YearRange Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(CROATIA));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
       .contains(new Holiday(LocalDate.of(year.getValue(), JUNE, 22), "ANTI_FASCIST", OFFICIAL_HOLIDAY));
@@ -72,7 +72,7 @@ class HolidayHRTest {
   @Property
   void ensuresThatStatehoodIsNotConfiguredTo2001(@ForAll @YearRange(max = 2001) Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(CROATIA));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
       .doesNotContain(new Holiday(LocalDate.of(year.getValue(), JUNE, 25), "STATEHOOD", OFFICIAL_HOLIDAY));
@@ -81,7 +81,7 @@ class HolidayHRTest {
   @Property
   void ensuresThatStatehoodIsConfiguredFrom2002Until2019(@ForAll @YearRange(min = 2002, max = 2019) Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(CROATIA));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
       .contains(new Holiday(LocalDate.of(year.getValue(), JUNE, 25), "STATEHOOD", OFFICIAL_HOLIDAY));
@@ -90,7 +90,7 @@ class HolidayHRTest {
   @Property
   void ensuresThatStatehoodIsNotConfiguredSince2020(@ForAll @YearRange(min = 2020) Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(CROATIA));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
       .doesNotContain(new Holiday(LocalDate.of(year.getValue(), JUNE, 25), "STATEHOOD", OFFICIAL_HOLIDAY));
@@ -99,7 +99,7 @@ class HolidayHRTest {
   @Property
   void ensuresThatVictoryIsCorrect(@ForAll @YearRange Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(CROATIA));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
       .contains(new Holiday(LocalDate.of(year.getValue(), AUGUST, 5), "VICTORY", OFFICIAL_HOLIDAY));
@@ -108,7 +108,7 @@ class HolidayHRTest {
   @Property
   void ensuresThatAssumptionMaryIsCorrect(@ForAll @YearRange Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(CROATIA));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
       .contains(new Holiday(LocalDate.of(year.getValue(), AUGUST, 15), "ASSUMPTION_MARY", OFFICIAL_HOLIDAY));
@@ -117,7 +117,7 @@ class HolidayHRTest {
   @Property
   void ensuresThatIndependenceDayIsNotConfiguredTo2001(@ForAll @YearRange(max = 2001) Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(CROATIA));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
       .doesNotContain(new Holiday(LocalDate.of(year.getValue(), OCTOBER, 8), "INDEPENDENCE_DAY", OFFICIAL_HOLIDAY));
@@ -126,7 +126,7 @@ class HolidayHRTest {
   @Property
   void ensuresThatIndependenceDayIsConfiguredFrom2002Until2019(@ForAll @YearRange(min = 2002, max = 2019) Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(CROATIA));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
       .contains(new Holiday(LocalDate.of(year.getValue(), OCTOBER, 8), "INDEPENDENCE_DAY", OFFICIAL_HOLIDAY));
@@ -135,7 +135,7 @@ class HolidayHRTest {
   @Property
   void ensuresThatIndependenceDayIsNotConfiguredSince2020(@ForAll @YearRange(min = 2020) Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(CROATIA));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
       .doesNotContain(new Holiday(LocalDate.of(year.getValue(), OCTOBER, 8), "INDEPENDENCE_DAY", OFFICIAL_HOLIDAY));
@@ -144,7 +144,7 @@ class HolidayHRTest {
   @Property
   void ensuresThatAllSaintsIsCorrect(@ForAll @YearRange Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(CROATIA));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
       .contains(new Holiday(LocalDate.of(year.getValue(), NOVEMBER, 1), "ALL_SAINTS", OFFICIAL_HOLIDAY));
@@ -153,7 +153,7 @@ class HolidayHRTest {
   @Property
   void ensuresThatRemembranceIsConfiguredSince2020(@ForAll @YearRange(min = 2020) Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(CROATIA));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
       .contains(new Holiday(LocalDate.of(year.getValue(), NOVEMBER, 18), "REMEMBRANCE", OFFICIAL_HOLIDAY));
@@ -162,7 +162,7 @@ class HolidayHRTest {
   @Property
   void ensuresThatRemembranceIsNotConfiguredUntil2019(@ForAll @YearRange(max = 2019) Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(CROATIA));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
       .doesNotContain(new Holiday(LocalDate.of(year.getValue(), NOVEMBER, 18), "REMEMBRANCE", OFFICIAL_HOLIDAY));
@@ -171,7 +171,7 @@ class HolidayHRTest {
   @Property
   void ensuresThatFirstAndSecondChristmasIsCorrect(@ForAll @YearRange Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(CROATIA));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
       .contains(new Holiday(LocalDate.of(year.getValue(), DECEMBER, 25), "CHRISTMAS", OFFICIAL_HOLIDAY))
@@ -181,7 +181,7 @@ class HolidayHRTest {
   @Property
   void ensuresThatEasterIsConfigured(@ForAll @YearRange Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(CROATIA));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
       .extracting(Holiday::getPropertiesKey)
@@ -191,7 +191,7 @@ class HolidayHRTest {
   @Property
   void ensuresThatEasterMondayIsConfigured(@ForAll @YearRange Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(CROATIA));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
       .extracting(Holiday::getPropertiesKey)
@@ -201,7 +201,7 @@ class HolidayHRTest {
   @Property
   void ensuresThatCorpusChristiIsConfigured(@ForAll @YearRange Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(CROATIA));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
       .extracting(Holiday::getPropertiesKey)

@@ -39,7 +39,7 @@ class HolidayFITest extends AbstractCountryTestBase {
   @Property
   void ensuresThatNewYearIsOnFirstJanuary(@ForAll @YearRange Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(FINLAND));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
       .contains(new Holiday(LocalDate.of(year.getValue(), JANUARY, 1), "NEW_YEAR", OFFICIAL_HOLIDAY));
@@ -48,7 +48,7 @@ class HolidayFITest extends AbstractCountryTestBase {
   @Property
   void ensuresThatEpiphanyConfigured(@ForAll @YearRange Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(FINLAND));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
       .contains(new Holiday(LocalDate.of(year.getValue(), JANUARY, 6), "EPIPHANY", OFFICIAL_HOLIDAY));
@@ -57,7 +57,7 @@ class HolidayFITest extends AbstractCountryTestBase {
   @Property
   void ensuresThatLabourDayIsConfigured(@ForAll @YearRange Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(FINLAND));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
       .contains(new Holiday(LocalDate.of(year.getValue(), MAY, 1), "LABOUR_DAY", OFFICIAL_HOLIDAY));
@@ -66,7 +66,7 @@ class HolidayFITest extends AbstractCountryTestBase {
   @Property
   void ensuresThatDayOfIndependenceIsConfigured(@ForAll @YearRange Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(FINLAND));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
       .contains(new Holiday(LocalDate.of(year.getValue(), DECEMBER, 6), "INDEPENDENCE_DAY", OFFICIAL_HOLIDAY));
@@ -75,7 +75,7 @@ class HolidayFITest extends AbstractCountryTestBase {
   @Property
   void ensuresThatOrthodoxChristmasIsConfigured(@ForAll @YearRange Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(FINLAND));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
       .contains(new Holiday(LocalDate.of(year.getValue(), DECEMBER, 24), "CHRISTMAS_EVE", OFFICIAL_HOLIDAY))
@@ -86,7 +86,7 @@ class HolidayFITest extends AbstractCountryTestBase {
   @Property
   void ensuresThatEasterIsConfigured(@ForAll @YearRange Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(FINLAND));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
       .extracting(Holiday::getPropertiesKey)
@@ -96,7 +96,7 @@ class HolidayFITest extends AbstractCountryTestBase {
   @Property
   void ensuresThatEasterMondayIsConfigured(@ForAll @YearRange Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(FINLAND));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
       .extracting(Holiday::getPropertiesKey)
@@ -106,7 +106,7 @@ class HolidayFITest extends AbstractCountryTestBase {
   @Property
   void ensuresThatGoodFridayIsConfigured(@ForAll @YearRange Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(FINLAND));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
       .extracting(Holiday::getPropertiesKey)
@@ -116,7 +116,7 @@ class HolidayFITest extends AbstractCountryTestBase {
   @Property
   void ensuresThatAscensionDayIsConfigured(@ForAll @YearRange Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(FINLAND));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue());
+    final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
       .extracting(Holiday::getPropertiesKey)
@@ -126,7 +126,7 @@ class HolidayFITest extends AbstractCountryTestBase {
   @Property
   void ensuresThatSelfGovernanceIsConfiguredInAland(@ForAll @YearRange Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(FINLAND));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue(), "01");
+    final Set<Holiday> holidays = holidayManager.getHolidays(year, "01");
     assertThat(holidays)
       .isNotEmpty()
       .contains(new Holiday(LocalDate.of(year.getValue(), JUNE, 9), "SELF_GOVERNANCE", OFFICIAL_HOLIDAY));
@@ -135,7 +135,7 @@ class HolidayFITest extends AbstractCountryTestBase {
   @Property
   void ensuresThatWhitSundayIsConfiguredInAland(@ForAll @YearRange Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(FINLAND));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year.getValue(), "01");
+    final Set<Holiday> holidays = holidayManager.getHolidays(year, "01");
     assertThat(holidays)
       .isNotEmpty()
       .extracting(Holiday::getPropertiesKey)
