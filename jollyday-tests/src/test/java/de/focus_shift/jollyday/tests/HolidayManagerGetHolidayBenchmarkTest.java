@@ -34,9 +34,14 @@ public class HolidayManagerGetHolidayBenchmarkTest extends Benchmarks {
 
   private static final double REFERENCE_SCORE = 22_000_000.00;
 
+  @State(Scope.Thread)
+  public static class YearState {
+    public final Year year = Year.of(2010);
+  }
+
   @Benchmark
-  public static Set<Holiday> benchmarkGetHolidays(final HolidayManagerState holidayManagerState) {
-    return holidayManagerState.holidayManager.getHolidays(Year.of(2010));
+  public static Set<Holiday> benchmarkGetHolidays(final HolidayManagerState holidayManagerState, final YearState yearState) {
+    return holidayManagerState.holidayManager.getHolidays(yearState.year);
   }
 
   @Test

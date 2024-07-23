@@ -37,9 +37,14 @@ public class HolidayManagerIsHolidayBenchmarkTest extends Benchmarks {
     public final HolidayManager holidayManager = HolidayManager.getInstance(create("test"));
   }
 
+  @State(Scope.Thread)
+  public static class LocalDateState {
+    public final LocalDate localDate = LocalDate.of(2010, 1, 1);
+  }
+
   @Benchmark
-  public static boolean benchmarkIsHoliday(final HolidayManagerState holidayManagerState) {
-    return holidayManagerState.holidayManager.isHoliday(LocalDate.of(2010, 1, 1));
+  public static boolean benchmarkIsHoliday(final HolidayManagerState holidayManagerState, final LocalDateState localDateState) {
+    return holidayManagerState.holidayManager.isHoliday(localDateState.localDate);
   }
 
   @Test
