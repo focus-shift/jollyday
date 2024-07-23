@@ -39,10 +39,9 @@ class HolidayTRTest extends AbstractCountryTestBase {
     assertThat(holidays).hasSize(9);
     boolean found = false;
     for (Holiday holiday : holidays) {
-      if (holiday.getPropertiesKey().equals("islamic.ID_AL_FITR")) {
-        if (holiday.getDate().equals(expected)) {
-          found = true;
-        }
+      if (holiday.getPropertiesKey().equals("islamic.ID_AL_FITR") && holiday.getDate().equals(expected)) {
+        found = true;
+        break;
       }
     }
     assertThat(found).isTrue();
@@ -56,10 +55,9 @@ class HolidayTRTest extends AbstractCountryTestBase {
     assertThat(holidays).hasSize(9);
     boolean found = false;
     for (Holiday holiday : holidays) {
-      if (holiday.getPropertiesKey().equals("islamic.ID_UL_ADHA")) {
-        if (holiday.getDate().equals(expected)) {
-          found = true;
-        }
+      if (holiday.getPropertiesKey().equals("islamic.ID_UL_ADHA") && holiday.getDate().equals(expected)) {
+        found = true;
+        break;
       }
     }
     assertThat(found).isTrue();
