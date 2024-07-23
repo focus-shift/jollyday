@@ -5,7 +5,6 @@ import de.focus_shift.jollyday.core.HolidayManager;
 import net.jqwik.api.ForAll;
 import net.jqwik.api.Property;
 import net.jqwik.time.api.constraints.YearRange;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
