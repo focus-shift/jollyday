@@ -18,6 +18,7 @@ import org.openjdk.jmh.runner.RunnerException;
 import org.openjdk.jmh.runner.options.Options;
 import org.openjdk.jmh.runner.options.OptionsBuilder;
 
+import java.time.Year;
 import java.util.Collection;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
@@ -33,14 +34,9 @@ public class HolidayManagerGetHolidayBenchmarkTest extends Benchmarks {
 
   private static final double REFERENCE_SCORE = 22_000_000.00;
 
-  @State(Scope.Thread)
-  public static class HolidayManagerState {
-    public final HolidayManager holidayManager = HolidayManager.getInstance(create("test"));
-  }
-
   @Benchmark
   public static Set<Holiday> benchmarkGetHolidays(final HolidayManagerState holidayManagerState) {
-    return holidayManagerState.holidayManager.getHolidays(2010);
+    return holidayManagerState.holidayManager.getHolidays(Year.of(2010));
   }
 
   @Test
@@ -56,5 +52,10 @@ public class HolidayManagerGetHolidayBenchmarkTest extends Benchmarks {
     for (RunResult runResult : runResults) {
       assertDeviationWithin(runResult, REFERENCE_SCORE, 0.05);
     }
+  }
+
+  @State(Scope.Thread)
+  public static class HolidayManagerState {
+    public final HolidayManager holidayManager = HolidayManager.getInstance(create("test"));
   }
 }

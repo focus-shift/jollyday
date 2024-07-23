@@ -3,17 +3,19 @@ package de.focus_shift.jollyday.tests.country;
 import de.focus_shift.jollyday.core.CalendarHierarchy;
 import de.focus_shift.jollyday.core.HolidayManager;
 import de.focus_shift.jollyday.core.ManagerParameters;
+import net.jqwik.api.ForAll;
+import net.jqwik.api.Property;
+import net.jqwik.time.api.constraints.YearRange;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.ValueSource;
+
+import java.time.Year;
 
 class HolidayAUTest extends AbstractCountryTestBase {
 
   private static final String ISO_CODE = "au";
 
-  @ParameterizedTest
-  @ValueSource(ints = {2019, 2020, 2021, 2022})
-  void testManagerAUStructure(final int year) {
+  @Property
+  void testManagerAUStructure(@ForAll @YearRange(min = 2019, max = 2022) Year year) {
     validateCalendarData(ISO_CODE, year, true);
   }
 
@@ -28,6 +30,6 @@ class HolidayAUTest extends AbstractCountryTestBase {
     final CalendarHierarchy testHierarchy = urlLoaded.getCalendarHierarchy();
 
     compareHierarchies(testHierarchy, dataHierarchy);
-    compareData(urlLoaded, calendarPartLoaded, 2020, true);
+    compareData(urlLoaded, calendarPartLoaded, Year.of(2020), true);
   }
 }

@@ -8,6 +8,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import java.time.LocalDate;
+import java.time.Year;
 import java.util.Set;
 
 import static de.focus_shift.jollyday.core.HolidayCalendar.UNITED_KINGDOM;
@@ -25,17 +26,17 @@ class HolidayGBTest extends AbstractCountryTestBase {
   void ensuresThatKingsCoronationForKingCharlesIIIIn2023() {
     final HolidayManager holidayManagerGB = HolidayManager.getInstance(create(UNITED_KINGDOM));
 
-    final Set<Holiday> holidays2022 = holidayManagerGB.getHolidays(2022);
+    final Set<Holiday> holidays2022 = holidayManagerGB.getHolidays(Year.of(2022));
     assertThat(holidays2022)
       .isNotEmpty()
       .extracting(Holiday::getPropertiesKey)
       .doesNotContain("KINGS_CORONATION");
 
-    final Set<Holiday> holidays2023 = holidayManagerGB.getHolidays(2023);
+    final Set<Holiday> holidays2023 = holidayManagerGB.getHolidays(Year.of(2023));
     assertThat(holidays2023)
       .contains(new Holiday(LocalDate.of(2023, MAY, 8), "KINGS_CORONATION", OFFICIAL_HOLIDAY));
 
-    final Set<Holiday> holidays2024 = holidayManagerGB.getHolidays(2024);
+    final Set<Holiday> holidays2024 = holidayManagerGB.getHolidays(Year.of(2024));
     assertThat(holidays2024)
       .isNotEmpty()
       .extracting(Holiday::getPropertiesKey)
@@ -46,8 +47,8 @@ class HolidayGBTest extends AbstractCountryTestBase {
   // The test data for 2012, 2017 and 2023 exists, but it is not tested, as for New Year's Day and 2nd January in Scotland
   // the official government websites contradict themselves, so it is unclear when the holidays really are.
   // This is to ensure to not enforce wrong holidays.
-  @ValueSource(ints = {2008, 2009, 2010, 2011, 2013, 2014, 2015, 2016, 2018, 2019, 2020, 2021, 2022, 2024, 2025, 2026})
-  void testManagerGBStructure(final int year) {
+  @ValueSource(strings = {"2008", "2009", "2010", "2011", "2013", "2014", "2015", "2016", "2018", "2019", "2020", "2021", "2022", "2024", "2025", "2026"})
+  void testManagerGBStructure(final Year year) {
     validateCalendarData(ISO_CODE, year, true);
   }
 
@@ -70,7 +71,7 @@ class HolidayGBTest extends AbstractCountryTestBase {
     final LocalDate christmas = LocalDate.of(year, 12, dayOfChristmas);
     final LocalDate boxingday = LocalDate.of(year, 12, dayOfBoxingday);
     final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(UNITED_KINGDOM));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year);
+    final Set<Holiday> holidays = holidayManager.getHolidays(Year.of(year));
     assertThat(contains(christmas, holidays)).isTrue();
     assertThat(contains(boxingday, holidays)).isTrue();
   }

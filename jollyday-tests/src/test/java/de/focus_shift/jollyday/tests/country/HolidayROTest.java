@@ -28,8 +28,8 @@ class HolidayROTest extends AbstractCountryTestBase {
   private static final String ISO_CODE = "ro";
 
   @ParameterizedTest
-  @ValueSource(ints = {2016, 2023})
-  void testManagerROStructure(final int year) {
+  @ValueSource(strings = {"2016", "2023"})
+  void testManagerROStructure(final Year year) {
     validateCalendarData(ISO_CODE, year, true);
   }
 

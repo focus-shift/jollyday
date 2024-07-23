@@ -7,6 +7,7 @@ import de.focus_shift.jollyday.core.ManagerParameters;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
+import java.time.Year;
 import java.util.Set;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -14,7 +15,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 class HolidayTRTest extends AbstractCountryTestBase {
 
   private static final String ISO_CODE = "tr";
-  private static final int YEAR = 2019;
+  private static final Year YEAR = Year.of(2019);
 
 
   @Test
@@ -32,7 +33,7 @@ class HolidayTRTest extends AbstractCountryTestBase {
   @Test
   void testRamazan2019() {
     // Actually, in Turkey, Ramadan is one day after Eid Mubarak, for keep the Eid al Fitr for now
-    final LocalDate expected = LocalDate.of(YEAR, 6, 4);
+    final LocalDate expected = LocalDate.of(YEAR.getValue(), 6, 4);
     final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(HolidayCalendar.TURKEY));
     final Set<Holiday> holidays = holidayManager.getHolidays(YEAR);
     assertThat(holidays).hasSize(9);
@@ -49,7 +50,7 @@ class HolidayTRTest extends AbstractCountryTestBase {
 
   @Test
   void testKurban2019() {
-    final LocalDate expected = LocalDate.of(YEAR, 8, 11);
+    final LocalDate expected = LocalDate.of(YEAR.getValue(), 8, 11);
     final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(HolidayCalendar.TURKEY));
     final Set<Holiday> holidays = holidayManager.getHolidays(YEAR);
     assertThat(holidays).hasSize(9);

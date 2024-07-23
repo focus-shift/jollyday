@@ -25,7 +25,7 @@ class HolidayCHTest extends AbstractCountryTestBase {
 
   @Test
   void testManagerCHStructure() {
-    validateCalendarData(ISO_CODE, 2022, true);
+    validateCalendarData(ISO_CODE, Year.of(2022), true);
   }
 
 

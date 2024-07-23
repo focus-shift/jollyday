@@ -10,6 +10,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import java.time.LocalDate;
+import java.time.Year;
 import java.util.List;
 import java.util.Set;
 
@@ -22,8 +23,8 @@ class HolidayVGTest extends AbstractCountryTestBase {
 
 
   @ParameterizedTest
-  @ValueSource(ints = {2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024})
-  void testManagerVGStructure(final int year) {
+  @ValueSource(strings = {"2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024"})
+  void testManagerVGStructure(final Year year) {
     validateCalendarData(ISO_CODE, year, true);
   }
 

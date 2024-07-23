@@ -7,6 +7,7 @@ import de.focus_shift.jollyday.core.HolidayManager;
 import de.focus_shift.jollyday.core.ManagerParameters;
 import de.focus_shift.jollyday.core.util.CalendarUtil;
 
+import java.time.Year;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -22,11 +23,11 @@ import static org.junit.jupiter.api.Assertions.fail;
 public abstract class AbstractCountryTestBase {
 
 
-  protected void validateCalendarData(final String countryCode, int year) {
+  protected void validateCalendarData(final String countryCode, Year year) {
     validateCalendarData(countryCode, year, false);
   }
 
-  protected void validateCalendarData(final String countryCode, int year, boolean assertAllHolidaysChecked) {
+  protected void validateCalendarData(final String countryCode, Year year, boolean assertAllHolidaysChecked) {
     final HolidayManager dataManager = HolidayManager.getInstance(ManagerParameters.create(countryCode));
     final HolidayManager testManager = HolidayManager.getInstance(ManagerParameters.create("test_" + countryCode + "_" + year));
 
@@ -53,7 +54,7 @@ public abstract class AbstractCountryTestBase {
     }
   }
 
-  protected void compareData(HolidayManager expected, HolidayManager found, int year, boolean assertAllHolidaysChecked) {
+  protected void compareData(HolidayManager expected, HolidayManager found, Year year, boolean assertAllHolidaysChecked) {
     compareDates(expected, found, expected.getCalendarHierarchy(), List.of(), year, assertAllHolidaysChecked);
   }
 
@@ -96,7 +97,7 @@ public abstract class AbstractCountryTestBase {
     }
   }
 
-  private void compareDates(final HolidayManager expected, final HolidayManager found, final CalendarHierarchy expectedHierarchy, final List<String> args, int year, boolean assertAllHolidaysChecked) {
+  private void compareDates(final HolidayManager expected, final HolidayManager found, final CalendarHierarchy expectedHierarchy, final List<String> args, Year year, boolean assertAllHolidaysChecked) {
 
     final Set<Holiday> expectedHolidays = expected.getHolidays(year, args.toArray(String[]::new));
     final Set<Holiday> foundHolidays = found.getHolidays(year, args.toArray(String[]::new));

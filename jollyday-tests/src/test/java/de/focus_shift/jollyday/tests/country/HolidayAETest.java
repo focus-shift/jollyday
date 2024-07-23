@@ -6,6 +6,7 @@ import de.focus_shift.jollyday.core.ManagerParameters;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
+import java.time.Year;
 import java.util.Set;
 import java.util.stream.Stream;
 
@@ -14,7 +15,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class HolidayAETest extends AbstractCountryTestBase {
 
-  private static final int YEAR = 2019;
+  private static final Year YEAR = Year.of(2019);
 
 
   @Test
@@ -26,7 +27,7 @@ class HolidayAETest extends AbstractCountryTestBase {
 
   @Test
   void testRamadanEnd() {
-    final LocalDate expected = LocalDate.of(YEAR, 6, 3);
+    final LocalDate expected = LocalDate.of(YEAR.getValue(), 6, 3);
     final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(UNITED_ARAB_EMIRATES));
     final Set<Holiday> holidays = holidayManager.getHolidays(YEAR);
     assertThat(holidays).hasSize(13);

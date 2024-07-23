@@ -15,6 +15,7 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
 import java.time.LocalDate;
+import java.time.Year;
 import java.util.Calendar;
 import java.util.HashSet;
 import java.util.Locale;
@@ -78,70 +79,11 @@ class HolidayManagerTest {
     test_days_l1_2.add(LocalDate.of(2010, DECEMBER, 16));
   }
 
-  @Nested
-  class Caching {
-    @Test
-    void ensureThatCachingIsEnabledByDefault() {
-      assertThat(HolidayManager.isManagerCachingEnabled()).isTrue();
-    }
-
-    @Test
-    void ensureThatTheCachedHolidayManagerWillReturnedOnSecondCall() {
-      HolidayManager.setManagerCachingEnabled(true);
-      final HolidayManager first = HolidayManager.getInstance(create("test"));
-      final HolidayManager second = HolidayManager.getInstance(create("test"));
-      assertThat(second).isSameAs(first);
-    }
-
-    @Test
-    void ensureThatDisablingTheCacheDoesNotReturnCachedHolidayManager() {
-
-      final HolidayManager holidayManagerCached = HolidayManager.getInstance(create("test"));
-
-      HolidayManager.setManagerCachingEnabled(false);
-      assertThat(HolidayManager.getInstance(create("test"))).isNotSameAs(holidayManagerCached);
-      HolidayManager.setManagerCachingEnabled(true);
-    }
-
-    @Test
-    void ensureThatTheCachedHolidayManagerWillBeCleared() {
-      HolidayManager.setManagerCachingEnabled(true);
-      final HolidayManager first = HolidayManager.getInstance(create("test"));
-      final HolidayManager second = HolidayManager.getInstance(create("test"));
-      assertThat(first).isSameAs(second);
-      HolidayManager.clearManagerCache();
-      final HolidayManager third = HolidayManager.getInstance(create("test"));
-      assertThat(third).isNotSameAs(first).isNotSameAs(second);
-    }
-  }
-
-  @Nested
-  class Instantiation {
-
-    @Test
-    void ensureToGetHolidayManagerWithDefaultLocale() {
-      final Locale defaultLocale = Locale.getDefault();
-      Locale.setDefault(Locale.CANADA);
-      final HolidayManager sut = HolidayManager.getInstance();
-      assertThat(sut.getManagerParameter().getDisplayName()).isEqualTo("ca");
-      Locale.setDefault(defaultLocale);
-    }
-
-    @Test
-    void ensureToGetHolidayManagerWithProperties() {
-      HolidayManager.clearManagerCache();
-      Locale.setDefault(Locale.GERMANY);
-      final Properties properties = new Properties();
-      properties.setProperty("prop", "test");
-      final HolidayManager sut = HolidayManager.getInstance(properties);
-      assertThat(sut.getManagerParameter().getProperty("prop")).isEqualTo("test");
-    }
-
-    @Test
-    void ensureToGetHolidayManagerWithManagerParameter() {
-      final HolidayManager sut = HolidayManager.getInstance(ManagerParameters.create(GERMANY));
-      assertThat(sut.getManagerParameter().getDisplayName()).isEqualTo("de");
-    }
+  private static Stream<Arguments> firstLevel() {
+    return Stream.of(
+      Arguments.of("level1_1", test_days_l1_1),
+      Arguments.of("level1_2", test_days_l1_2)
+    );
   }
 
   @Test
@@ -239,7 +181,7 @@ class HolidayManagerTest {
   @Test
   void ensureToRetrieveHolidaysFromBaseLevelHierarchy() {
     final HolidayManager sut = HolidayManager.getInstance(create("test"));
-    final Set<Holiday> holidays = sut.getHolidays(2010);
+    final Set<Holiday> holidays = sut.getHolidays(Year.of(2010));
     assertThat(holidays).isNotNull();
     assertDates(test_days_base, holidays);
   }
@@ -247,23 +189,16 @@ class HolidayManagerTest {
   @Test
   void ensureToRetrieveHolidaysByType() {
     final HolidayManager sut = HolidayManager.getInstance(create("test"));
-    final Set<Holiday> holidays = sut.getHolidays(2010, UNOFFICIAL_HOLIDAY);
+    final Set<Holiday> holidays = sut.getHolidays(Year.of(2010), UNOFFICIAL_HOLIDAY);
     assertThat(holidays)
       .containsOnly(new Holiday(LocalDate.of(2010, 1, 4), "", UNOFFICIAL_HOLIDAY));
-  }
-
-  private static Stream<Arguments> firstLevel() {
-    return Stream.of(
-      Arguments.of("level1_1", test_days_l1_1),
-      Arguments.of("level1_2", test_days_l1_2)
-    );
   }
 
   @ParameterizedTest
   @MethodSource("firstLevel")
   void ensureToRetrieveHolidaysFromFirstLevelHierarchies(final String firstLevelName, final Set<LocalDate> expectedHolidays) {
     final HolidayManager sut = HolidayManager.getInstance(create("test"));
-    final Set<Holiday> actualHolidays = sut.getHolidays(2010, firstLevelName);
+    final Set<Holiday> actualHolidays = sut.getHolidays(Year.of(2010), firstLevelName);
     assertThat(actualHolidays).isNotNull();
     assertDates(expectedHolidays, actualHolidays);
   }
@@ -271,7 +206,7 @@ class HolidayManagerTest {
   @Test
   void ensureToRetrieveHolidaysFromSecondLevelHierarchy() {
     final HolidayManager sut = HolidayManager.getInstance(create("test"));
-    final Set<Holiday> holidays = sut.getHolidays(2010, "level1_1", "level1_1_l2");
+    final Set<Holiday> holidays = sut.getHolidays(Year.of(2010), "level1_1", "level1_1_l2");
     assertThat(holidays).isNotNull();
     assertDates(test_days_l1_1_l2, holidays);
   }
@@ -279,7 +214,7 @@ class HolidayManagerTest {
   @Test
   void testlevel1_2() {
     final HolidayManager sut = HolidayManager.getInstance(create("test"));
-    final Set<Holiday> holidays = sut.getHolidays(2010, "level1_2");
+    final Set<Holiday> holidays = sut.getHolidays(Year.of(2010), "level1_2");
     assertThat(holidays).isNotNull();
     assertDates(test_days_l1_2, holidays);
   }
@@ -323,5 +258,71 @@ class HolidayManagerTest {
       }
     }
     assertThat(holidays).hasSameSizeAs(expectedHolidays);
+  }
+
+  @Nested
+  class Caching {
+    @Test
+    void ensureThatCachingIsEnabledByDefault() {
+      assertThat(HolidayManager.isManagerCachingEnabled()).isTrue();
+    }
+
+    @Test
+    void ensureThatTheCachedHolidayManagerWillReturnedOnSecondCall() {
+      HolidayManager.setManagerCachingEnabled(true);
+      final HolidayManager first = HolidayManager.getInstance(create("test"));
+      final HolidayManager second = HolidayManager.getInstance(create("test"));
+      assertThat(second).isSameAs(first);
+    }
+
+    @Test
+    void ensureThatDisablingTheCacheDoesNotReturnCachedHolidayManager() {
+
+      final HolidayManager holidayManagerCached = HolidayManager.getInstance(create("test"));
+
+      HolidayManager.setManagerCachingEnabled(false);
+      assertThat(HolidayManager.getInstance(create("test"))).isNotSameAs(holidayManagerCached);
+      HolidayManager.setManagerCachingEnabled(true);
+    }
+
+    @Test
+    void ensureThatTheCachedHolidayManagerWillBeCleared() {
+      HolidayManager.setManagerCachingEnabled(true);
+      final HolidayManager first = HolidayManager.getInstance(create("test"));
+      final HolidayManager second = HolidayManager.getInstance(create("test"));
+      assertThat(first).isSameAs(second);
+      HolidayManager.clearManagerCache();
+      final HolidayManager third = HolidayManager.getInstance(create("test"));
+      assertThat(third).isNotSameAs(first).isNotSameAs(second);
+    }
+  }
+
+  @Nested
+  class Instantiation {
+
+    @Test
+    void ensureToGetHolidayManagerWithDefaultLocale() {
+      final Locale defaultLocale = Locale.getDefault();
+      Locale.setDefault(Locale.CANADA);
+      final HolidayManager sut = HolidayManager.getInstance();
+      assertThat(sut.getManagerParameter().getDisplayName()).isEqualTo("ca");
+      Locale.setDefault(defaultLocale);
+    }
+
+    @Test
+    void ensureToGetHolidayManagerWithProperties() {
+      HolidayManager.clearManagerCache();
+      Locale.setDefault(Locale.GERMANY);
+      final Properties properties = new Properties();
+      properties.setProperty("prop", "test");
+      final HolidayManager sut = HolidayManager.getInstance(properties);
+      assertThat(sut.getManagerParameter().getProperty("prop")).isEqualTo("test");
+    }
+
+    @Test
+    void ensureToGetHolidayManagerWithManagerParameter() {
+      final HolidayManager sut = HolidayManager.getInstance(ManagerParameters.create(GERMANY));
+      assertThat(sut.getManagerParameter().getDisplayName()).isEqualTo("de");
+    }
   }
 }

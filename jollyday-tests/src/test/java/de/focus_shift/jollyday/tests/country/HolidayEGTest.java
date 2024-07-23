@@ -6,6 +6,7 @@ import de.focus_shift.jollyday.core.ManagerParameters;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
+import java.time.Year;
 import java.util.Set;
 
 import static de.focus_shift.jollyday.core.HolidayCalendar.EGYPT;
@@ -13,7 +14,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class HolidayEGTest extends AbstractCountryTestBase {
 
-  private static final int YEAR = 2019;
+  private static final Year YEAR = Year.of(2019);
 
   @Test
   void testNumberOfHolidays() {
@@ -24,7 +25,7 @@ class HolidayEGTest extends AbstractCountryTestBase {
 
   @Test
   void testEasterMonday2019() {
-    final LocalDate expected = LocalDate.of(YEAR, 4, 29);
+    final LocalDate expected = LocalDate.of(YEAR.getValue(), 4, 29);
     final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(EGYPT));
     final Set<Holiday> holidays = holidayManager.getHolidays(YEAR);
     assertThat(holidays).hasSize(17);
@@ -34,7 +35,7 @@ class HolidayEGTest extends AbstractCountryTestBase {
 
   @Test
   void testEidFitr2019() {
-    final LocalDate expected = LocalDate.of(YEAR, 6, 4);
+    final LocalDate expected = LocalDate.of(YEAR.getValue(), 6, 4);
     final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(EGYPT));
     final Set<Holiday> holidays = holidayManager.getHolidays(YEAR);
     assertThat(holidays).hasSize(17);
@@ -44,7 +45,7 @@ class HolidayEGTest extends AbstractCountryTestBase {
 
   @Test
   void testArafaat2019() {
-    final LocalDate expected = LocalDate.of(YEAR, 8, 10);
+    final LocalDate expected = LocalDate.of(YEAR.getValue(), 8, 10);
     final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(EGYPT));
     final Set<Holiday> holidays = holidayManager.getHolidays(YEAR);
     assertThat(holidays).hasSize(17);

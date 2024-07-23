@@ -20,7 +20,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 class HolidayNZTest extends AbstractCountryTestBase {
 
   private static final String ISO_CODE = "nz";
-  private static final int YEAR = 2018;
+  private static final Year YEAR = Year.of(2018);
 
   private final HolidayManager holidayManager = HolidayManager.getInstance(create(NEW_ZEALAND));
 
@@ -33,7 +33,7 @@ class HolidayNZTest extends AbstractCountryTestBase {
   void testSouthlandAnniversary2011() {
     // Monday closest to 17 January
     final LocalDate expected = LocalDate.of(2011, 1, 17);
-    final Set<Holiday> holidays = holidayManager.getHolidays(2011, "stl");
+    final Set<Holiday> holidays = holidayManager.getHolidays(Year.of(2011), "stl");
 
     boolean found = holidays.stream()
       .anyMatch(holiday -> holiday.getPropertiesKey().equals("SOUTHLAND_ANNIVERSARY") && holiday.getDate().equals(expected));
@@ -44,7 +44,7 @@ class HolidayNZTest extends AbstractCountryTestBase {
   void testSouthlandAnniversary2012() {
     // Easter Tuesday
     final LocalDate expected = LocalDate.of(2012, 4, 10);
-    final Set<Holiday> holidays = holidayManager.getHolidays(2012, "stl");
+    final Set<Holiday> holidays = holidayManager.getHolidays(Year.of(2012), "stl");
 
     boolean found = holidays.stream()
       .anyMatch(holiday -> holiday.getPropertiesKey().equals("SOUTHLAND_ANNIVERSARY") && holiday.getDate().equals(expected));

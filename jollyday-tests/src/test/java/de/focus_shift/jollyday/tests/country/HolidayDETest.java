@@ -11,6 +11,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import java.time.LocalDate;
+import java.time.Year;
 import java.util.List;
 import java.util.Locale;
 import java.util.Set;
@@ -27,8 +28,8 @@ class HolidayDETest extends AbstractCountryTestBase {
 
 
   @ParameterizedTest
-  @ValueSource(ints = {2010, 2022, 2023})
-  void testManagerDEStructure(final int year) {
+  @ValueSource(strings = {"2010", "2022", "2023"})
+  void testManagerDEStructure(final Year year) {
     validateCalendarData(ISO_CODE, year, true);
   }
 
@@ -74,7 +75,7 @@ class HolidayDETest extends AbstractCountryTestBase {
       Locale.setDefault(systemLocale);
       final ManagerParameter parameters = ManagerParameters.create(GERMAN);
       final HolidayManager mgr = HolidayManager.getInstance(parameters);
-      return mgr.getHolidays(2018);
+      return mgr.getHolidays(Year.of(2018));
     } finally {
       Locale.setDefault(defaultLocale);
     }

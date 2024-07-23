@@ -8,6 +8,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import java.time.LocalDate;
+import java.time.Year;
 import java.util.Set;
 
 import static de.focus_shift.jollyday.core.HolidayCalendar.ISLE_OF_MAN;
@@ -24,17 +25,17 @@ class HolidayIMTest extends AbstractCountryTestBase {
   void ensuresThatKingsCoronationForKingCharlesIIIIn2023() {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(ISLE_OF_MAN));
 
-    final Set<Holiday> holidays2022 = holidayManager.getHolidays(2022);
+    final Set<Holiday> holidays2022 = holidayManager.getHolidays(Year.of(2022));
     assertThat(holidays2022)
       .isNotEmpty()
       .extracting(Holiday::getPropertiesKey)
       .doesNotContain("KINGS_CORONATION");
 
-    final Set<Holiday> holidays2023 = holidayManager.getHolidays(2023);
+    final Set<Holiday> holidays2023 = holidayManager.getHolidays(Year.of(2023));
     assertThat(holidays2023)
       .contains(new Holiday(LocalDate.of(2023, MAY, 8), "KINGS_CORONATION", OFFICIAL_HOLIDAY));
 
-    final Set<Holiday> holidays2024 = holidayManager.getHolidays(2024);
+    final Set<Holiday> holidays2024 = holidayManager.getHolidays(Year.of(2024));
     assertThat(holidays2024)
       .isNotEmpty()
       .extracting(Holiday::getPropertiesKey)
@@ -42,8 +43,8 @@ class HolidayIMTest extends AbstractCountryTestBase {
   }
 
   @ParameterizedTest
-  @ValueSource(ints = {2010, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024})
-  void testManagerIMStructure(final int year) {
+  @ValueSource(strings = {"2010", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024"})
+  void testManagerIMStructure(final Year year) {
     validateCalendarData(ISO_CODE, year, true);
   }
 
@@ -66,7 +67,7 @@ class HolidayIMTest extends AbstractCountryTestBase {
     final LocalDate christmas = LocalDate.of(year, 12, dayOfChristmas);
     final LocalDate boxingday = LocalDate.of(year, 12, dayOfBoxingday);
     final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(ISLE_OF_MAN));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year);
+    final Set<Holiday> holidays = holidayManager.getHolidays(Year.of(year));
     assertThat(contains(christmas, holidays)).isTrue();
     assertThat(contains(boxingday, holidays)).isTrue();
   }

@@ -24,7 +24,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 class HolidayFITest extends AbstractCountryTestBase {
 
   private static final String ISO_CODE = "fi";
-  private static final int YEAR = 2010;
+  private static final Year YEAR = Year.of(2010);
 
   @BeforeEach
   void setUp() {

@@ -44,12 +44,12 @@ class HolidayDKTest extends AbstractCountryTestBase {
   void ensuresThatGeneralPrayersDayIsOnlyUntil2023() {
     final HolidayManager holidayManagerDK = HolidayManager.getInstance(create(DENMARK));
 
-    final Set<Holiday> holidays2023 = holidayManagerDK.getHolidays(2023);
+    final Set<Holiday> holidays2023 = holidayManagerDK.getHolidays(Year.of(2023));
     assertThat(holidays2023)
       .isNotEmpty()
       .contains(new Holiday(LocalDate.of(2023, MAY, 5), "christian.GENERAL_PRAYER_DAY", OFFICIAL_HOLIDAY));
 
-    final Set<Holiday> holidays2024 = holidayManagerDK.getHolidays(2024);
+    final Set<Holiday> holidays2024 = holidayManagerDK.getHolidays(Year.of(2024));
     assertThat(holidays2024)
       .isNotEmpty()
       .extracting(Holiday::getPropertiesKey)
