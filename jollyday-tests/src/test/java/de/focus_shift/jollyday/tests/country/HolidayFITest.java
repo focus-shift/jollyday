@@ -26,11 +26,6 @@ class HolidayFITest extends AbstractCountryTestBase {
   private static final String ISO_CODE = "fi";
   private static final Year YEAR = Year.of(2010);
 
-  @BeforeEach
-  void setUp() {
-    final HolidayManager holidayManager = HolidayManager.getInstance(create(FINLAND));
-  }
-
   @Test
   void testManagerFIStructure() {
     validateCalendarData(ISO_CODE, YEAR);
