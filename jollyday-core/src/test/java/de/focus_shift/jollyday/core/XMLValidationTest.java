@@ -44,7 +44,7 @@ class XMLValidationTest {
   }
 
   private void validateHolidayFile(Path path) {
-    try (final FileInputStream inputStream = new FileInputStream(path.toFile());) {
+    try (final FileInputStream inputStream = new FileInputStream(path.toFile())) {
       final ValidationResult validationResult = validator.validateInstance(new StreamSource(inputStream));
       assertThat(validationResult.isValid()).isTrue();
     } catch (IOException e) {
