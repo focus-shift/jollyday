@@ -4,6 +4,7 @@ import de.focus_shift.jollyday.core.spi.FixedWeekdayInMonth;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;
+import java.time.Year;
 import java.util.function.Function;
 
 import static de.focus_shift.jollyday.core.spi.Occurrance.LAST;
@@ -12,15 +13,15 @@ import static java.time.temporal.TemporalAdjusters.lastInMonth;
 
 public class FindWeekDayInMonth implements Function<FixedWeekdayInMonth, LocalDate> {
 
-  private final int year;
+  private final Year year;
 
-  public FindWeekDayInMonth(final int year) {
+  public FindWeekDayInMonth(final Year year) {
     this.year = year;
   }
 
   @Override
   public LocalDate apply(final FixedWeekdayInMonth fixedWeekdayInMonth) {
-    final LocalDate date = LocalDate.of(year, fixedWeekdayInMonth.month(), 1);
+    final LocalDate date = LocalDate.of(year.getValue(), fixedWeekdayInMonth.month(), 1);
     final DayOfWeek weekday = fixedWeekdayInMonth.weekday();
 
     if (LAST == fixedWeekdayInMonth.which()) {

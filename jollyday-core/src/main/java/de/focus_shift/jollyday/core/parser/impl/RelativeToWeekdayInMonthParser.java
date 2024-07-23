@@ -9,6 +9,7 @@ import de.focus_shift.jollyday.core.spi.Holidays;
 import de.focus_shift.jollyday.core.spi.Relation;
 
 import java.time.LocalDate;
+import java.time.Year;
 import java.util.List;
 
 import static java.util.stream.Collectors.toList;
@@ -21,7 +22,7 @@ import static java.util.stream.Collectors.toList;
 public class RelativeToWeekdayInMonthParser implements HolidayParser {
 
   @Override
-  public List<Holiday> parse(final int year, final Holidays holidays) {
+  public List<Holiday> parse(final Year year, final Holidays holidays) {
     return holidays.relativeToWeekdayInMonth().stream()
       .filter(new ValidLimitation(year))
       .map(rwm -> {

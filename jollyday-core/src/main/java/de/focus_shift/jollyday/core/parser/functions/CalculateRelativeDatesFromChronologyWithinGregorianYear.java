@@ -1,11 +1,12 @@
 package de.focus_shift.jollyday.core.parser.functions;
 
 import java.time.LocalDate;
+import java.time.Year;
 import java.time.chrono.ChronoLocalDate;
 import java.time.chrono.Chronology;
 import java.time.temporal.ChronoField;
 import java.time.temporal.ChronoUnit;
-import java.util.function.IntFunction;
+import java.util.function.Function;
 import java.util.stream.Stream;
 
 import static java.time.Month.DECEMBER;
@@ -20,7 +21,7 @@ import static java.time.Month.JANUARY;
  * date in a gregorian year. i.e.: In the gregorian year 2008 there were
  * two 1/1. They occurred on 1/10 and 12/29.
  */
-public class CalculateRelativeDatesFromChronologyWithinGregorianYear implements IntFunction<Stream<LocalDate>> {
+public class CalculateRelativeDatesFromChronologyWithinGregorianYear implements Function<Year, Stream<LocalDate>> {
 
   private final int targetMonth;
   private final int targetDay;
@@ -35,11 +36,11 @@ public class CalculateRelativeDatesFromChronologyWithinGregorianYear implements 
   }
 
   @Override
-  public Stream<LocalDate> apply(final int gregorianYear) {
+  public Stream<LocalDate> apply(final Year gregorianYear) {
     final int absoluteShift = Math.abs(relativeShift);
 
-    final LocalDate firstGregorianDate = LocalDate.of(gregorianYear, JANUARY, 1);
-    final LocalDate lastGregorianDate = LocalDate.of(gregorianYear, DECEMBER, 31);
+    final LocalDate firstGregorianDate = LocalDate.of(gregorianYear.getValue(), JANUARY, 1);
+    final LocalDate lastGregorianDate = LocalDate.of(gregorianYear.getValue(), DECEMBER, 31);
 
     final ChronoLocalDate firstTargetDate = targetChronology.date(firstGregorianDate.minusDays(absoluteShift));
     final ChronoLocalDate lastTargetDate = targetChronology.date(lastGregorianDate.plusDays(absoluteShift));

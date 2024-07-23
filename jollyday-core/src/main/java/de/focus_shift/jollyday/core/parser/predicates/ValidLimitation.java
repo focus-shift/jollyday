@@ -2,6 +2,7 @@ package de.focus_shift.jollyday.core.parser.predicates;
 
 import de.focus_shift.jollyday.core.spi.Limited;
 
+import java.time.Year;
 import java.util.function.Predicate;
 
 /**
@@ -10,9 +11,9 @@ import java.util.function.Predicate;
  */
 public class ValidLimitation implements Predicate<Limited> {
 
-  private final int year;
+  private final Year year;
 
-  public ValidLimitation(final int year) {
+  public ValidLimitation(final Year year) {
     this.year = year;
   }
 

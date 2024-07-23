@@ -13,6 +13,7 @@ import de.focus_shift.jollyday.jaxb.mapping.Which;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
+import java.time.Year;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -24,7 +25,7 @@ class RelativeToWeekdayInMonthParserTest {
   @Test
   void testEmpty() {
     final Holidays config = new Holidays();
-    final List<Holiday> holidays = sut.parse(2011, new JaxbHolidays(config));
+    final List<Holiday> holidays = sut.parse(Year.of(2011), new JaxbHolidays(config));
     assertThat(holidays).isEmpty();
   }
 
@@ -44,7 +45,7 @@ class RelativeToWeekdayInMonthParserTest {
     config.getRelativeToWeekdayInMonth().add(rule);
     rule.setValidFrom(2012);
 
-    final List<Holiday> holidays = sut.parse(2011, new JaxbHolidays(config));
+    final List<Holiday> holidays = sut.parse(Year.of(2011), new JaxbHolidays(config));
     assertThat(holidays).isEmpty();
   }
 
@@ -63,7 +64,7 @@ class RelativeToWeekdayInMonthParserTest {
     rule.setFixedWeekday(date);
     config.getRelativeToWeekdayInMonth().add(rule);
 
-    final List<Holiday> holidays = sut.parse(2011, new JaxbHolidays(config));
+    final List<Holiday> holidays = sut.parse(Year.of(2011), new JaxbHolidays(config));
     assertThat(holidays).hasSize(1);
     assertThat(holidays.iterator().next().getDate()).isEqualTo(LocalDate.of(2011, 7, 12));
   }
@@ -83,7 +84,7 @@ class RelativeToWeekdayInMonthParserTest {
     rule.setFixedWeekday(date);
     config.getRelativeToWeekdayInMonth().add(rule);
 
-    final List<Holiday> holidays = sut.parse(2018, new JaxbHolidays(config));
+    final List<Holiday> holidays = sut.parse(Year.of(2018), new JaxbHolidays(config));
     assertThat(holidays).hasSize(1);
     assertThat(holidays.iterator().next().getDate()).isEqualTo(LocalDate.of(2018, 10, 29));
   }

@@ -15,6 +15,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.time.LocalDate;
+import java.time.Year;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
@@ -83,11 +84,23 @@ public class DefaultHolidayManager extends HolidayManager {
    * {@inheritDoc}
    * <p>
    * Calls
-   * <code>Set&lt;LocalDate&gt; getHolidays(int year, Configuration c, String... args)</code>
+   * <code>Set&lt;LocalDate&gt; getHolidays(Year year, Configuration c, String... args)</code>
    * with the configuration from initialization.
    */
   @Override
   public Set<Holiday> getHolidays(final int year, final String... args) {
+    return getHolidays(Year.of(year), args);
+  }
+
+  /**
+   * {@inheritDoc}
+   * <p>
+   * Calls
+   * <code>Set&lt;LocalDate&gt; getHolidays(Year year, Configuration c, String... args)</code>
+   * with the configuration from initialization.
+   */
+  @Override
+  public Set<Holiday> getHolidays(final Year year, final String... args) {
 
     final StringBuilder keyBuilder = new StringBuilder();
     keyBuilder.append(year);
@@ -118,6 +131,14 @@ public class DefaultHolidayManager extends HolidayManager {
    */
   @Override
   public Set<Holiday> getHolidays(final int year, final HolidayType holidayType, final String... args) {
+    return getHolidays(Year.of(year), holidayType, args);
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public Set<Holiday> getHolidays(final Year year, final HolidayType holidayType, final String... args) {
     return getHolidays(year, args).stream()
       .filter(holiday -> holiday.getType().equals(holidayType))
       .collect(toSet());
@@ -174,7 +195,7 @@ public class DefaultHolidayManager extends HolidayManager {
    * @param holidaySet    the set of holidays
    * @param args          the arguments to descend down the configuration tree
    */
-  private void getHolidays(final int year, final Configuration configuration, final Set<Holiday> holidaySet, final String... args) {
+  private void getHolidays(final Year year, final Configuration configuration, final Set<Holiday> holidaySet, final String... args) {
     if (LOG.isDebugEnabled()) {
       LOG.debug("Adding holidays for {}", configuration.description());
     }
@@ -198,7 +219,7 @@ public class DefaultHolidayManager extends HolidayManager {
    * @param holidays the set to put the holidays into
    * @param config   the holiday configuration
    */
-  private void parseHolidays(final int year, final Set<Holiday> holidays, final Holidays config) {
+  private void parseHolidays(final Year year, final Set<Holiday> holidays, final Holidays config) {
     getParsers(config).stream()
       .map(holidayParser -> holidayParser.parse(year, config))
       .flatMap(Collection::stream)

@@ -32,7 +32,7 @@ class ValidFromToTest {
       }
     };
 
-    final boolean isValid = new ValidFromTo(2020).test(limited);
+    final boolean isValid = new ValidFromTo(Year.of(2020)).test(limited);
     assertThat(isValid).isTrue();
   }
 
@@ -55,7 +55,7 @@ class ValidFromToTest {
       }
     };
 
-    final boolean isValid = new ValidFromTo(year.getValue()).test(limited);
+    final boolean isValid = new ValidFromTo(year).test(limited);
     assertThat(isValid).isTrue();
   }
 
@@ -78,7 +78,7 @@ class ValidFromToTest {
       }
     };
 
-    final boolean isValid = new ValidFromTo(year.getValue()).test(limited);
+    final boolean isValid = new ValidFromTo(year).test(limited);
     assertThat(isValid).isFalse();
   }
 
@@ -101,7 +101,7 @@ class ValidFromToTest {
       }
     };
 
-    final boolean isValid = new ValidFromTo(year.getValue()).test(limited);
+    final boolean isValid = new ValidFromTo(year).test(limited);
     assertThat(isValid).isTrue();
   }
 
@@ -124,7 +124,7 @@ class ValidFromToTest {
       }
     };
 
-    final boolean isValid = new ValidFromTo(year.getValue()).test(limited);
+    final boolean isValid = new ValidFromTo(year).test(limited);
     assertThat(isValid).isFalse();
   }
 
@@ -147,7 +147,7 @@ class ValidFromToTest {
       }
     };
 
-    final boolean isValid = new ValidFromTo(year.getValue()).test(limited);
+    final boolean isValid = new ValidFromTo(year).test(limited);
     assertThat(isValid).isTrue();
   }
 
@@ -170,7 +170,7 @@ class ValidFromToTest {
       }
     };
 
-    final boolean isValid = new ValidFromTo(year.getValue()).test(limited);
+    final boolean isValid = new ValidFromTo(year).test(limited);
     assertThat(isValid).isFalse();
   }
 
@@ -193,7 +193,7 @@ class ValidFromToTest {
       }
     };
 
-    final boolean isValid = new ValidFromTo(year.getValue()).test(limited);
+    final boolean isValid = new ValidFromTo(year).test(limited);
     assertThat(isValid).isFalse();
   }
 }

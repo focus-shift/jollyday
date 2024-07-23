@@ -12,6 +12,7 @@ import de.focus_shift.jollyday.jackson.mapping.When;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
+import java.time.Year;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -23,7 +24,7 @@ class RelativeToFixedParserTest {
   @Test
   void testEmpty() {
     final Holidays config = new Holidays();
-    final List<Holiday> holidays = sut.parse(2010, new JacksonHolidays(config));
+    final List<Holiday> holidays = sut.parse(Year.of(2010), new JacksonHolidays(config));
     assertThat(holidays).isEmpty();
   }
 
@@ -33,7 +34,7 @@ class RelativeToFixedParserTest {
     final RelativeToFixed rule = new RelativeToFixed();
     rule.setValidFrom(2011);
     config.getRelativeToFixed().add(rule);
-    final List<Holiday> holidays = sut.parse(2010, new JacksonHolidays(config));
+    final List<Holiday> holidays = sut.parse(Year.of(2010), new JacksonHolidays(config));
     assertThat(holidays).isEmpty();
   }
 
@@ -50,7 +51,7 @@ class RelativeToFixedParserTest {
     rule.setDate(date);
     config.getRelativeToFixed().add(rule);
 
-    final List<Holiday> holidays = sut.parse(2011, new JacksonHolidays(config));
+    final List<Holiday> holidays = sut.parse(Year.of(2011), new JacksonHolidays(config));
     assertThat(holidays).hasSize(1);
     assertThat(holidays.iterator().next().getDate()).isEqualTo(LocalDate.of(2011, 8, 11));
   }
@@ -69,7 +70,7 @@ class RelativeToFixedParserTest {
     rule.setDate(date);
     config.getRelativeToFixed().add(rule);
 
-    final List<Holiday> holidays = sut.parse(2016, new JacksonHolidays(config));
+    final List<Holiday> holidays = sut.parse(Year.of(2016), new JacksonHolidays(config));
     assertThat(holidays).hasSize(1);
     assertThat(holidays.iterator().next().getDate()).isEqualTo(LocalDate.of(2016, 11, 16));
   }
@@ -88,7 +89,7 @@ class RelativeToFixedParserTest {
     rule.setDate(date);
     config.getRelativeToFixed().add(rule);
 
-    final List<Holiday> holidays = sut.parse(2011, new JacksonHolidays(config));
+    final List<Holiday> holidays = sut.parse(Year.of(2011), new JacksonHolidays(config));
     assertThat(holidays).hasSize(1);
     assertThat(holidays.iterator().next().getDate()).isEqualTo(LocalDate.of(2011, 8, 2));
   }

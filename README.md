@@ -104,7 +104,7 @@ If you already use one of these libraries in your project than just use the spec
   import static de.focus_shift.jollyday.core.HolidayCalendar.GERMANY;
 
   final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(GERMANY));
-  final Set<Holiday> holidays = holidayManager.getHolidays(2022);
+  final Set<Holiday> holidays = holidayManager.getHolidays(Year.of(2022));
   ```
 </details>
 

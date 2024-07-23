@@ -29,7 +29,7 @@ class ValidLimitationTest {
       }
     };
 
-    final boolean isValid = new ValidLimitation(2001).test(limited);
+    final boolean isValid = new ValidLimitation(Year.of(2001)).test(limited);
     assertThat(isValid).isTrue();
   }
 
@@ -52,7 +52,7 @@ class ValidLimitationTest {
       }
     };
 
-    final boolean isValid = new ValidLimitation(2001).test(limited);
+    final boolean isValid = new ValidLimitation(Year.of(2001)).test(limited);
     assertThat(isValid).isFalse();
   }
 
@@ -75,7 +75,7 @@ class ValidLimitationTest {
       }
     };
 
-    final boolean isValid = new ValidLimitation(1999).test(limited);
+    final boolean isValid = new ValidLimitation(Year.of(1999)).test(limited);
     assertThat(isValid).isFalse();
   }
 }

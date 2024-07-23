@@ -8,6 +8,7 @@ import de.focus_shift.jollyday.core.parser.functions.FixedToLocalDate;
 import de.focus_shift.jollyday.core.parser.predicates.ValidLimitation;
 import de.focus_shift.jollyday.core.spi.Holidays;
 
+import java.time.Year;
 import java.util.List;
 
 import static java.util.stream.Collectors.toList;
@@ -18,7 +19,7 @@ import static java.util.stream.Collectors.toList;
 public class FixedWeekdayRelativeToFixedParser implements HolidayParser {
 
   @Override
-  public List<Holiday> parse(final int year, final Holidays holidays) {
+  public List<Holiday> parse(final Year year, final Holidays holidays) {
     return holidays.fixedWeekdayRelativeToFixed().stream()
       .filter(new ValidLimitation(year))
       .map(fwrf -> new DescribedDateHolder(fwrf, new FindWeekDayRelativeToDate(new FixedToLocalDate(year).apply(fwrf.day())).apply(fwrf)))

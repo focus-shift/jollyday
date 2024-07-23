@@ -10,6 +10,7 @@ import de.focus_shift.jollyday.jackson.mapping.Weekday;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
+import java.time.Year;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -21,7 +22,7 @@ class FixedWeekdayBetweenFixedParserTest extends FixedParserTest {
   @Test
   void testEmpty() {
     final Holidays config = new Holidays();
-    final List<Holiday> holidays = sut.parse(2010, new JacksonHolidays(config));
+    final List<Holiday> holidays = sut.parse(Year.of(2010), new JacksonHolidays(config));
     assertThat(holidays).isEmpty();
   }
 
@@ -32,7 +33,7 @@ class FixedWeekdayBetweenFixedParserTest extends FixedParserTest {
     e.setValidTo(2009);
     config.getFixedWeekdayBetweenFixed().add(e);
 
-    final List<Holiday> holidays = sut.parse(2010, new JacksonHolidays(config));
+    final List<Holiday> holidays = sut.parse(Year.of(2010), new JacksonHolidays(config));
     assertThat(holidays).isEmpty();
   }
 
@@ -45,7 +46,7 @@ class FixedWeekdayBetweenFixedParserTest extends FixedParserTest {
     e.setWeekday(Weekday.WEDNESDAY);
     config.getFixedWeekdayBetweenFixed().add(e);
 
-    final List<Holiday> holidays = sut.parse(2011, new JacksonHolidays(config));
+    final List<Holiday> holidays = sut.parse(Year.of(2011), new JacksonHolidays(config));
     assertThat(holidays).hasSize(1);
     assertThat(holidays.iterator().next().getDate()).isEqualTo(LocalDate.of(2011, 1, 19));
   }

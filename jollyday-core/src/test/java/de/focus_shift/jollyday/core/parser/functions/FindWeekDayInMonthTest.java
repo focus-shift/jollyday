@@ -69,7 +69,7 @@ class FindWeekDayInMonthTest {
       }
     };
 
-    final LocalDate actualLocalDate = new FindWeekDayInMonth(2024).apply(fixedWeekdayInMonth);
+    final LocalDate actualLocalDate = new FindWeekDayInMonth(Year.of(2024)).apply(fixedWeekdayInMonth);
     assertThat(actualLocalDate).isEqualTo(expectedLocalDate);
   }
 }

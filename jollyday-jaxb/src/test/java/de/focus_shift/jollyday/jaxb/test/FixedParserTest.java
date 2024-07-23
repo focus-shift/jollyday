@@ -13,6 +13,7 @@ import de.focus_shift.jollyday.jaxb.mapping.With;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
+import java.time.Year;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -42,7 +43,7 @@ class FixedParserTest {
       createFixed(5, MAY, 2011, null)
     );
 
-    final List<Holiday> holidays = sut.parse(2010, new JaxbHolidays(config));
+    final List<Holiday> holidays = sut.parse(Year.of(2010), new JaxbHolidays(config));
     containsAll(holidays, LocalDate.of(2010, 1, 1), LocalDate.of(2010, 3, 3));
   }
 
@@ -53,7 +54,7 @@ class FixedParserTest {
       createFixed(23, JANUARY, createMoving(SUNDAY, NEXT, MONDAY))
     );
 
-    final List<Holiday> holidays = sut.parse(2011, new JaxbHolidays(config));
+    final List<Holiday> holidays = sut.parse(Year.of(2011), new JaxbHolidays(config));
     containsAll(holidays, LocalDate.of(2011, 1, 7), LocalDate.of(2011, 1, 24));
   }
 
@@ -64,7 +65,7 @@ class FixedParserTest {
     fixed.setEvery(HolidayCycleType.TWO_YEARS);
     final Holidays config = createHolidays(fixed);
 
-    final List<Holiday> holidays = sut.parse(2011, new JaxbHolidays(config));
+    final List<Holiday> holidays = sut.parse(Year.of(2011), new JaxbHolidays(config));
     assertThat(holidays).isEmpty();
   }
 
@@ -75,7 +76,7 @@ class FixedParserTest {
     fixed.setEvery(HolidayCycleType.TWO_YEARS);
     final Holidays config = createHolidays(fixed);
 
-    final List<Holiday> holidays = sut.parse(2009, new JaxbHolidays(config));
+    final List<Holiday> holidays = sut.parse(Year.of(2009), new JaxbHolidays(config));
     assertThat(holidays).isEmpty();
   }
 
@@ -85,7 +86,7 @@ class FixedParserTest {
     fixed.setValidFrom(2010);
     fixed.setEvery(HolidayCycleType.THREE_YEARS);
     final Holidays config = createHolidays(fixed);
-    final List<Holiday> holidays = sut.parse(2013, new JaxbHolidays(config));
+    final List<Holiday> holidays = sut.parse(Year.of(2013), new JaxbHolidays(config));
     assertThat(holidays).hasSize(1);
   }
 
@@ -95,7 +96,7 @@ class FixedParserTest {
     fixed.setValidTo(2010);
     fixed.setEvery(HolidayCycleType.THREE_YEARS);
     final Holidays config = createHolidays(fixed);
-    final List<Holiday> holidays = sut.parse(2007, new JaxbHolidays(config));
+    final List<Holiday> holidays = sut.parse(Year.of(2007), new JaxbHolidays(config));
     assertThat(holidays).hasSize(1);
   }
 
@@ -106,7 +107,7 @@ class FixedParserTest {
     fixed.setEvery(HolidayCycleType.TWO_YEARS);
     final Holidays config = createHolidays(fixed);
 
-    final List<Holiday> holidays = sut.parse(2005, new JaxbHolidays(config));
+    final List<Holiday> holidays = sut.parse(Year.of(2005), new JaxbHolidays(config));
     assertThat(holidays).isEmpty();
   }
 
@@ -117,7 +118,7 @@ class FixedParserTest {
     fixed.setEvery(HolidayCycleType.FIVE_YEARS);
     final Holidays config = createHolidays(fixed);
 
-    final List<Holiday> holidays = sut.parse(2015, new JaxbHolidays(config));
+    final List<Holiday> holidays = sut.parse(Year.of(2015), new JaxbHolidays(config));
     assertThat(holidays).isEmpty();
   }
 

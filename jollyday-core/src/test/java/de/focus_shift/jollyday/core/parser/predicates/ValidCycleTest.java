@@ -37,7 +37,7 @@ class ValidCycleTest {
       }
     };
 
-    final ValidCycle validCycle = new ValidCycle(year.getValue());
+    final ValidCycle validCycle = new ValidCycle(year);
     assertThat(validCycle.test(limited)).isTrue();
   }
 
@@ -61,7 +61,7 @@ class ValidCycleTest {
       }
     };
 
-    final ValidCycle validCycle = new ValidCycle(year.getValue());
+    final ValidCycle validCycle = new ValidCycle(year);
     if (year.getValue() % 2 != 0) {
       assertThat(validCycle.test(limited)).isTrue();
     } else {
@@ -89,7 +89,7 @@ class ValidCycleTest {
       }
     };
 
-    final ValidCycle validCycle = new ValidCycle(year.getValue());
+    final ValidCycle validCycle = new ValidCycle(year);
     if (year.getValue() % 2 == 0) {
       assertThat(validCycle.test(limited)).isTrue();
     } else {
@@ -119,7 +119,7 @@ class ValidCycleTest {
       }
     };
 
-    final ValidCycle validCycle = new ValidCycle(year.getValue());
+    final ValidCycle validCycle = new ValidCycle(year);
     assertThat(validCycle.test(limited)).isEqualTo(((year.getValue() - limited.validFrom().getValue()) % modulo) == 0);
   }
 
@@ -145,7 +145,7 @@ class ValidCycleTest {
       }
     };
 
-    final ValidCycle validCycle = new ValidCycle(year.getValue());
+    final ValidCycle validCycle = new ValidCycle(year);
     assertThat(validCycle.test(limited)).isEqualTo(((limited.validTo().getValue() - year.getValue()) % modulo) == 0);
   }
 
@@ -196,7 +196,7 @@ class ValidCycleTest {
       }
     };
 
-    final ValidCycle validCycle = new ValidCycle(year.getValue());
+    final ValidCycle validCycle = new ValidCycle(year);
     final IllegalArgumentException thrown = assertThrows(IllegalArgumentException.class,
       () -> validCycle.test(limited)
     );

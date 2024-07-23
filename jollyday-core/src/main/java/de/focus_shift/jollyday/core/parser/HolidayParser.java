@@ -3,6 +3,7 @@ package de.focus_shift.jollyday.core.parser;
 import de.focus_shift.jollyday.core.Holiday;
 import de.focus_shift.jollyday.core.spi.Holidays;
 
+import java.time.Year;
 import java.util.List;
 
 public interface HolidayParser {
@@ -15,5 +16,5 @@ public interface HolidayParser {
    * @param config the {@link Holidays} config to use for parsing
    * @return the list of holidays
    */
-  List<Holiday> parse(final int year, final Holidays config);
+  List<Holiday> parse(final Year year, final Holidays config);
 }

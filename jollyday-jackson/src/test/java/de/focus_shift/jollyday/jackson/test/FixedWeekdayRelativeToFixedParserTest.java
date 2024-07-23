@@ -13,6 +13,7 @@ import de.focus_shift.jollyday.jackson.mapping.Which;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
+import java.time.Year;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -24,7 +25,7 @@ class FixedWeekdayRelativeToFixedParserTest {
   @Test
   void testEmpty() {
     final Holidays config = new Holidays();
-    final List<Holiday> holidays = sut.parse(2011, new JacksonHolidays(config));
+    final List<Holiday> holidays = sut.parse(Year.of(2011), new JacksonHolidays(config));
     assertThat(holidays).isEmpty();
   }
 
@@ -43,7 +44,7 @@ class FixedWeekdayRelativeToFixedParserTest {
     config.getFixedWeekdayRelativeToFixed().add(rule);
     rule.setValidTo(2010);
 
-    final List<Holiday> holidays = sut.parse(2011, new JacksonHolidays(config));
+    final List<Holiday> holidays = sut.parse(Year.of(2011), new JacksonHolidays(config));
     assertThat(holidays).isEmpty();
   }
 
@@ -62,7 +63,7 @@ class FixedWeekdayRelativeToFixedParserTest {
     rule.setDay(fixed);
     config.getFixedWeekdayRelativeToFixed().add(rule);
 
-    final List<Holiday> holidays = sut.parse(2011, new JacksonHolidays(config));
+    final List<Holiday> holidays = sut.parse(Year.of(2011), new JacksonHolidays(config));
     assertThat(holidays).hasSize(1);
     assertThat(holidays.iterator().next().getDate()).isEqualTo(LocalDate.of(2011, 1, 24));
   }
@@ -81,7 +82,7 @@ class FixedWeekdayRelativeToFixedParserTest {
     rule.setDay(fixed);
     config.getFixedWeekdayRelativeToFixed().add(rule);
 
-    final List<Holiday> holidays = sut.parse(2011, new JacksonHolidays(config));
+    final List<Holiday> holidays = sut.parse(Year.of(2011), new JacksonHolidays(config));
     assertThat(holidays).hasSize(1);
     assertThat(holidays.iterator().next().getDate()).isEqualTo(LocalDate.of(2011, 1, 17));
   }
@@ -101,7 +102,7 @@ class FixedWeekdayRelativeToFixedParserTest {
     rule.setDay(fixed);
     config.getFixedWeekdayRelativeToFixed().add(rule);
 
-    final List<Holiday> holidays = sut.parse(2011, new JacksonHolidays(config));
+    final List<Holiday> holidays = sut.parse(Year.of(2011), new JacksonHolidays(config));
     assertThat(holidays).hasSize(1);
     assertThat(holidays.iterator().next().getDate()).isEqualTo(LocalDate.of(2011, 2, 14));
   }
@@ -121,7 +122,7 @@ class FixedWeekdayRelativeToFixedParserTest {
     rule.setDay(fixed);
     config.getFixedWeekdayRelativeToFixed().add(rule);
 
-    final List<Holiday> holidays = sut.parse(2011, new JacksonHolidays(config));
+    final List<Holiday> holidays = sut.parse(Year.of(2011), new JacksonHolidays(config));
     assertThat(holidays).hasSize(1);
     assertThat(holidays.iterator().next().getDate()).isEqualTo(LocalDate.of(2011, 4, 12));
   }
@@ -141,7 +142,7 @@ class FixedWeekdayRelativeToFixedParserTest {
     rule.setDay(fixed);
     config.getFixedWeekdayRelativeToFixed().add(rule);
 
-    final List<Holiday> holidays = sut.parse(2019, new JacksonHolidays(config));
+    final List<Holiday> holidays = sut.parse(Year.of(2019), new JacksonHolidays(config));
     assertThat(holidays).hasSize(1);
     assertThat(holidays.iterator().next().getDate()).isEqualTo(LocalDate.of(2019, 6, 11));
   }
@@ -162,7 +163,7 @@ class FixedWeekdayRelativeToFixedParserTest {
     rule.setDay(fixed);
     config.getFixedWeekdayRelativeToFixed().add(rule);
 
-    final List<Holiday> holidays = sut.parse(2019, new JacksonHolidays(config));
+    final List<Holiday> holidays = sut.parse(Year.of(2019), new JacksonHolidays(config));
     assertThat(holidays).hasSize(1);
     assertThat(holidays.iterator().next().getDate()).isEqualTo(LocalDate.of(2019, 6, 11));
   }
