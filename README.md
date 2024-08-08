@@ -214,7 +214,8 @@ If you want to raise an **issue or bug** you can create a [new issue](https://gi
 
 ### Architecture decision record (ADR)
 
- * [Document empty subdivision](.adr/001-document-every-subdivision.md)
+* [Subdivisions with Their Own ISO 3166-1 Alpha-2 Codes as Separate Files](.adr/002-subdivision-with-own-iso-3166-1-alpha-2.md)
+* [Document empty subdivision](.adr/001-document-every-subdivision.md)
 
 ## License
 
