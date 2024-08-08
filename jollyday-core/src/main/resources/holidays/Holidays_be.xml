@@ -5,17 +5,17 @@
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
   <Holidays>
-    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR" localizedType="OFFICIAL_HOLIDAY"/>
-    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY" localizedType="OFFICIAL_HOLIDAY"/>
-    <Fixed month="JULY" day="21" descriptionPropertiesKey="NATIONAL_DAY" localizedType="OFFICIAL_HOLIDAY"/>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="JULY" day="21" descriptionPropertiesKey="NATIONAL_DAY"/>
     <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
-    <Fixed month="NOVEMBER" day="1" localizedType="OFFICIAL_HOLIDAY" descriptionPropertiesKey="ALL_SAINTS"/>
-    <Fixed month="NOVEMBER" day="2" localizedType="UNOFFICIAL_HOLIDAY" descriptionPropertiesKey="ALL_SOULS"/>
-    <Fixed month="NOVEMBER" day="11" localizedType="OFFICIAL_HOLIDAY" descriptionPropertiesKey="ARMISTICE"/>
-    <Fixed month="DECEMBER" day="25" localizedType="OFFICIAL_HOLIDAY" descriptionPropertiesKey="CHRISTMAS"/>
-    <Fixed month="NOVEMBER" day="15" localizedType="UNOFFICIAL_HOLIDAY" descriptionPropertiesKey="KINGS_FEAST"/>
+    <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
+    <Fixed month="NOVEMBER" day="2" descriptionPropertiesKey="ALL_SOULS" localizedType="UNOFFICIAL_HOLIDAY"/>
+    <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="ARMISTICE"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+    <Fixed month="NOVEMBER" day="15" descriptionPropertiesKey="KINGS_FEAST" localizedType="UNOFFICIAL_HOLIDAY" />
     <Fixed month="DECEMBER" day="31" descriptionPropertiesKey="NEW_YEARS_EVE" localizedType="UNOFFICIAL_HOLIDAY"/>
-    <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER" localizedType="OFFICIAL_HOLIDAY"/>
+    <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
     <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     <ChristianHoliday type="ASCENSION_DAY" descriptionPropertiesKey="christian.ASCENSION_DAY"/>
     <ChristianHoliday type="PENTECOST" descriptionPropertiesKey="christian.PENTECOST"/>
