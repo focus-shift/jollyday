@@ -11,7 +11,7 @@ import java.time.Year;
 import java.util.Set;
 
 import static de.focus_shift.jollyday.core.HolidayCalendar.NETHERLANDS;
-import static de.focus_shift.jollyday.core.HolidayType.OFFICIAL_HOLIDAY;
+import static de.focus_shift.jollyday.core.HolidayType.PUBLIC_HOLIDAY;
 import static de.focus_shift.jollyday.core.ManagerParameters.create;
 import static java.time.Month.DECEMBER;
 import static java.time.Month.JANUARY;
@@ -26,7 +26,7 @@ class HolidayNLTest extends AbstractCountryTestBase {
     final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
-      .contains(new Holiday(LocalDate.of(year.getValue(), JANUARY, 1), "NEW_YEAR", OFFICIAL_HOLIDAY));
+      .contains(new Holiday(LocalDate.of(year.getValue(), JANUARY, 1), "NEW_YEAR", PUBLIC_HOLIDAY));
   }
 
   @Property
@@ -35,7 +35,7 @@ class HolidayNLTest extends AbstractCountryTestBase {
     final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
-      .doesNotContain(new Holiday(LocalDate.of(year.getValue(), JANUARY, 1), "NEW_YEAR", OFFICIAL_HOLIDAY));
+      .doesNotContain(new Holiday(LocalDate.of(year.getValue(), JANUARY, 1), "NEW_YEAR", PUBLIC_HOLIDAY));
   }
 
   @Property
@@ -44,7 +44,7 @@ class HolidayNLTest extends AbstractCountryTestBase {
     final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
-      .doesNotContain(new Holiday(LocalDate.of(year.getValue(), MAY, 5), "LIBERATION", OFFICIAL_HOLIDAY));
+      .doesNotContain(new Holiday(LocalDate.of(year.getValue(), MAY, 5), "LIBERATION", PUBLIC_HOLIDAY));
   }
 
   @Property
@@ -54,7 +54,7 @@ class HolidayNLTest extends AbstractCountryTestBase {
     if (year.getValue() % 5 == 0) {
       assertThat(holidays)
         .isNotEmpty()
-        .contains(new Holiday(LocalDate.of(year.getValue(), MAY, 5), "LIBERATION", OFFICIAL_HOLIDAY));
+        .contains(new Holiday(LocalDate.of(year.getValue(), MAY, 5), "LIBERATION", PUBLIC_HOLIDAY));
     }
   }
 
@@ -65,7 +65,7 @@ class HolidayNLTest extends AbstractCountryTestBase {
     if (year.getValue() % 5 != 0) {
       assertThat(holidays)
         .isNotEmpty()
-        .doesNotContain(new Holiday(LocalDate.of(year.getValue(), MAY, 5), "LIBERATION", OFFICIAL_HOLIDAY));
+        .doesNotContain(new Holiday(LocalDate.of(year.getValue(), MAY, 5), "LIBERATION", PUBLIC_HOLIDAY));
     }
   }
 
@@ -75,7 +75,7 @@ class HolidayNLTest extends AbstractCountryTestBase {
     final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
-      .contains(new Holiday(LocalDate.of(year.getValue(), MAY, 5), "LIBERATION", OFFICIAL_HOLIDAY));
+      .contains(new Holiday(LocalDate.of(year.getValue(), MAY, 5), "LIBERATION", PUBLIC_HOLIDAY));
   }
 
   @Property
@@ -84,7 +84,7 @@ class HolidayNLTest extends AbstractCountryTestBase {
     final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
-      .contains(new Holiday(LocalDate.of(year.getValue(), DECEMBER, 25), "FIRST_CHRISTMAS_DAY", OFFICIAL_HOLIDAY));
+      .contains(new Holiday(LocalDate.of(year.getValue(), DECEMBER, 25), "FIRST_CHRISTMAS_DAY", PUBLIC_HOLIDAY));
   }
 
   @Property
@@ -93,7 +93,7 @@ class HolidayNLTest extends AbstractCountryTestBase {
     final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
-      .contains(new Holiday(LocalDate.of(year.getValue(), DECEMBER, 26), "SECOND_CHRISTMAS_DAY", OFFICIAL_HOLIDAY));
+      .contains(new Holiday(LocalDate.of(year.getValue(), DECEMBER, 26), "SECOND_CHRISTMAS_DAY", PUBLIC_HOLIDAY));
   }
 
   @Property

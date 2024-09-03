@@ -24,7 +24,7 @@ import java.util.Set;
 import java.util.stream.Stream;
 
 import static de.focus_shift.jollyday.core.HolidayCalendar.GERMANY;
-import static de.focus_shift.jollyday.core.HolidayType.OFFICIAL_HOLIDAY;
+import static de.focus_shift.jollyday.core.HolidayType.PUBLIC_HOLIDAY;
 import static de.focus_shift.jollyday.core.HolidayType.UNOFFICIAL_HOLIDAY;
 import static de.focus_shift.jollyday.core.ManagerParameters.create;
 import static java.time.Month.APRIL;
@@ -123,7 +123,7 @@ class HolidayManagerTest {
     calendar.set(MONTH, Calendar.JANUARY);
     calendar.set(DAY_OF_MONTH, 4);
     assertThat(sut.isHoliday(calendar, UNOFFICIAL_HOLIDAY)).isTrue();
-    assertThat(sut.isHoliday(calendar, OFFICIAL_HOLIDAY)).isFalse();
+    assertThat(sut.isHoliday(calendar, PUBLIC_HOLIDAY)).isFalse();
   }
 
   @Test
@@ -136,7 +136,7 @@ class HolidayManagerTest {
   @Test
   void ensureIsHolidayMethodReturnsTrueFalseForLocalDateWithHolidayType() {
     final HolidayManager sut = HolidayManager.getInstance(create("test"));
-    assertThat(sut.isHoliday(LocalDate.of(2010, 1, 4), OFFICIAL_HOLIDAY)).isFalse();
+    assertThat(sut.isHoliday(LocalDate.of(2010, 1, 4), PUBLIC_HOLIDAY)).isFalse();
     assertThat(sut.isHoliday(LocalDate.of(2010, 1, 4), UNOFFICIAL_HOLIDAY)).isTrue();
   }
 

@@ -49,7 +49,7 @@ public class JapaneseHolidayManager extends DefaultHolidayManager {
       final LocalDate twoDaysLater = holiday.getDate().plusDays(2);
       if (CalendarUtil.contains(holidays, twoDaysLater)) {
         final LocalDate bridgingDate = twoDaysLater.minusDays(1);
-        additionalHolidays.add(new Holiday(bridgingDate, BRIDGING_HOLIDAY_PROPERTIES_KEY, HolidayType.OFFICIAL_HOLIDAY));
+        additionalHolidays.add(new Holiday(bridgingDate, BRIDGING_HOLIDAY_PROPERTIES_KEY, HolidayType.PUBLIC_HOLIDAY));
       }
     }
     holidays.addAll(additionalHolidays);

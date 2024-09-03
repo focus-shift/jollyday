@@ -13,7 +13,7 @@ import java.time.Year;
 import java.util.Set;
 
 import static de.focus_shift.jollyday.core.HolidayCalendar.ROMANIA;
-import static de.focus_shift.jollyday.core.HolidayType.OFFICIAL_HOLIDAY;
+import static de.focus_shift.jollyday.core.HolidayType.PUBLIC_HOLIDAY;
 import static de.focus_shift.jollyday.core.ManagerParameters.create;
 import static java.time.Month.AUGUST;
 import static java.time.Month.DECEMBER;
@@ -40,8 +40,8 @@ class HolidayROTest extends AbstractCountryTestBase {
     assertThat(holidays)
       .isNotEmpty()
       .contains(
-        new Holiday(LocalDate.of(year.getValue(), JANUARY, 1), "NEW_YEAR", OFFICIAL_HOLIDAY),
-        new Holiday(LocalDate.of(year.getValue(), JANUARY, 2), "NEW_YEAR", OFFICIAL_HOLIDAY)
+        new Holiday(LocalDate.of(year.getValue(), JANUARY, 1), "NEW_YEAR", PUBLIC_HOLIDAY),
+        new Holiday(LocalDate.of(year.getValue(), JANUARY, 2), "NEW_YEAR", PUBLIC_HOLIDAY)
       );
   }
 
@@ -52,7 +52,7 @@ class HolidayROTest extends AbstractCountryTestBase {
     assertThat(holidays)
       .isNotEmpty()
       .contains(
-        new Holiday(LocalDate.of(year.getValue(), JANUARY, 6), "EPIPHANY", OFFICIAL_HOLIDAY)
+        new Holiday(LocalDate.of(year.getValue(), JANUARY, 6), "EPIPHANY", PUBLIC_HOLIDAY)
       );
   }
 
@@ -73,7 +73,7 @@ class HolidayROTest extends AbstractCountryTestBase {
     assertThat(holidays)
       .isNotEmpty()
       .contains(
-        new Holiday(LocalDate.of(year.getValue(), JANUARY, 7), "ST_JOHN", OFFICIAL_HOLIDAY)
+        new Holiday(LocalDate.of(year.getValue(), JANUARY, 7), "ST_JOHN", PUBLIC_HOLIDAY)
       );
   }
 
@@ -103,7 +103,7 @@ class HolidayROTest extends AbstractCountryTestBase {
     final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
-      .contains(new Holiday(LocalDate.of(year.getValue(), JANUARY, 24), "UNIFICATION", OFFICIAL_HOLIDAY));
+      .contains(new Holiday(LocalDate.of(year.getValue(), JANUARY, 24), "UNIFICATION", PUBLIC_HOLIDAY));
   }
 
   @Property
@@ -113,7 +113,7 @@ class HolidayROTest extends AbstractCountryTestBase {
     assertThat(holidays)
       .isNotEmpty()
       .contains(
-        new Holiday(LocalDate.of(year.getValue(), MAY, 1), "LABOUR_DAY", OFFICIAL_HOLIDAY)
+        new Holiday(LocalDate.of(year.getValue(), MAY, 1), "LABOUR_DAY", PUBLIC_HOLIDAY)
       );
   }
 
@@ -134,7 +134,7 @@ class HolidayROTest extends AbstractCountryTestBase {
     assertThat(holidays)
       .isNotEmpty()
       .contains(
-        new Holiday(LocalDate.of(year.getValue(), JUNE, 1), "CHILDRENS_DAY", OFFICIAL_HOLIDAY)
+        new Holiday(LocalDate.of(year.getValue(), JUNE, 1), "CHILDRENS_DAY", PUBLIC_HOLIDAY)
       );
   }
 
@@ -145,7 +145,7 @@ class HolidayROTest extends AbstractCountryTestBase {
     assertThat(holidays)
       .isNotEmpty()
       .contains(
-        new Holiday(LocalDate.of(year.getValue(), AUGUST, 15), "NAVY_DAY", OFFICIAL_HOLIDAY)
+        new Holiday(LocalDate.of(year.getValue(), AUGUST, 15), "NAVY_DAY", PUBLIC_HOLIDAY)
       );
   }
 
@@ -156,7 +156,7 @@ class HolidayROTest extends AbstractCountryTestBase {
     assertThat(holidays)
       .isNotEmpty()
       .contains(
-        new Holiday(LocalDate.of(year.getValue(), NOVEMBER, 30), "ST_ANDREW", OFFICIAL_HOLIDAY)
+        new Holiday(LocalDate.of(year.getValue(), NOVEMBER, 30), "ST_ANDREW", PUBLIC_HOLIDAY)
       );
   }
 
@@ -167,7 +167,7 @@ class HolidayROTest extends AbstractCountryTestBase {
     assertThat(holidays)
       .isNotEmpty()
       .contains(
-        new Holiday(LocalDate.of(year.getValue(), DECEMBER, 1), "NATIONAL_DAY", OFFICIAL_HOLIDAY)
+        new Holiday(LocalDate.of(year.getValue(), DECEMBER, 1), "NATIONAL_DAY", PUBLIC_HOLIDAY)
       );
   }
 
@@ -178,8 +178,8 @@ class HolidayROTest extends AbstractCountryTestBase {
     assertThat(holidays)
       .isNotEmpty()
       .contains(
-        new Holiday(LocalDate.of(year.getValue(), DECEMBER, 25), "CHRISTMAS", OFFICIAL_HOLIDAY),
-        new Holiday(LocalDate.of(year.getValue(), DECEMBER, 26), "CHRISTMAS", OFFICIAL_HOLIDAY)
+        new Holiday(LocalDate.of(year.getValue(), DECEMBER, 25), "CHRISTMAS", PUBLIC_HOLIDAY),
+        new Holiday(LocalDate.of(year.getValue(), DECEMBER, 26), "CHRISTMAS", PUBLIC_HOLIDAY)
       );
   }
 

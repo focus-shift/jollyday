@@ -35,7 +35,7 @@ public class JaxbFixed implements Fixed {
   @Override
   public HolidayType officiality() {
     return fixed.getLocalizedType() == null
-      ? HolidayType.OFFICIAL_HOLIDAY
+      ? HolidayType.PUBLIC_HOLIDAY
       : HolidayType.valueOf(fixed.getLocalizedType().name());
   }
 

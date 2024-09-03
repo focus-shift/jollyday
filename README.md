@@ -202,6 +202,40 @@ To access the public holidays of a subdivision of a country, e.g. Baden-Württem
 | Subdivisions ([ISO 3166-2])    | Yes       |
 | City Holiday                   | Yes       |
 
+## Holiday types
+
+The following holiday types are supported:
+
+**Public Holiday**  
+Public holidays are days when most of the public enjoys a paid non-working days. These days are determined by local laws
+and regulations. Countries use various names for these official non-working days, such as:
+
+| Other Names for Public Holiday | Country          | Businesses |
+|--------------------------------|------------------|------------|
+| Bank Holiday                   | United Kingdom   | Closed     |
+| National Holiday               | Most Countries   | Closed     |
+| Red Days                       | Norway           | Closed     |
+| Regular Holidays               | Philippines      | Closed     |
+| Restricted Holidays            | India            | Closed     |
+| Statutory Holiday              | Canada           | Closed     |
+
+We will declare all of these as **Public Holiday**
+
+**Bank Holiday**  
+Bank holidays are days when financial institutions and government offices (and government-regulated businesses)
+are closed as determined by local laws and regulations. Other businesses, such as offices and retail stores,
+may also be closed on these days, though are not mandated to by local laws and regulations.
+
+**Observance**  
+Observance, is a celebration or commemoration that doesn't include a day off from work. When people celebrate or
+commemorate something, but do not have a day off from work for that reason, we call it an observance.
+There are different types of observance like Religious, Secular, Awareness, International or National observance.
+We will declare all of these as **Observance**
+
+**Unofficial Holidays**  
+Holidays which are not public or bank holidays. Unofficial holidays are deprecated and will be replaced by the other types over time.
+
+
 ## Development
 
 If you want to **support** us at the development on **jollyday** than take a look at [Contributing to jollyday](./CONTRIBUTING.md).

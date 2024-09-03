@@ -33,7 +33,7 @@ public class JaxbIslamicHoliday implements IslamicHoliday {
   @Override
   public HolidayType officiality() {
     return islamicHoliday.getLocalizedType() == null
-      ? HolidayType.OFFICIAL_HOLIDAY
+      ? HolidayType.PUBLIC_HOLIDAY
       : HolidayType.valueOf(islamicHoliday.getLocalizedType().name());
   }
 

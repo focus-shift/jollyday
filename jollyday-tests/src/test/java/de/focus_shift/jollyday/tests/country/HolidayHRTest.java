@@ -11,7 +11,7 @@ import java.time.Year;
 import java.util.Set;
 
 import static de.focus_shift.jollyday.core.HolidayCalendar.CROATIA;
-import static de.focus_shift.jollyday.core.HolidayType.OFFICIAL_HOLIDAY;
+import static de.focus_shift.jollyday.core.HolidayType.PUBLIC_HOLIDAY;
 import static de.focus_shift.jollyday.core.ManagerParameters.create;
 import static java.time.Month.AUGUST;
 import static java.time.Month.DECEMBER;
@@ -30,7 +30,7 @@ class HolidayHRTest {
     final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
-      .contains(new Holiday(LocalDate.of(year.getValue(), JANUARY, 1), "NEW_YEAR", OFFICIAL_HOLIDAY));
+      .contains(new Holiday(LocalDate.of(year.getValue(), JANUARY, 1), "NEW_YEAR", PUBLIC_HOLIDAY));
   }
 
   @Property
@@ -39,7 +39,7 @@ class HolidayHRTest {
     final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
-      .contains(new Holiday(LocalDate.of(year.getValue(), MAY, 1), "LABOUR_DAY", OFFICIAL_HOLIDAY));
+      .contains(new Holiday(LocalDate.of(year.getValue(), MAY, 1), "LABOUR_DAY", PUBLIC_HOLIDAY));
   }
 
   @Property
@@ -48,7 +48,7 @@ class HolidayHRTest {
     final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
-      .contains(new Holiday(LocalDate.of(year.getValue(), MAY, 30), "NATIONAL_DAY", OFFICIAL_HOLIDAY));
+      .contains(new Holiday(LocalDate.of(year.getValue(), MAY, 30), "NATIONAL_DAY", PUBLIC_HOLIDAY));
   }
 
   @Property
@@ -57,7 +57,7 @@ class HolidayHRTest {
     final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
-      .doesNotContain(new Holiday(LocalDate.of(year.getValue(), MAY, 30), "NATIONAL_DAY", OFFICIAL_HOLIDAY));
+      .doesNotContain(new Holiday(LocalDate.of(year.getValue(), MAY, 30), "NATIONAL_DAY", PUBLIC_HOLIDAY));
   }
 
   @Property
@@ -66,7 +66,7 @@ class HolidayHRTest {
     final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
-      .contains(new Holiday(LocalDate.of(year.getValue(), JUNE, 22), "ANTI_FASCIST", OFFICIAL_HOLIDAY));
+      .contains(new Holiday(LocalDate.of(year.getValue(), JUNE, 22), "ANTI_FASCIST", PUBLIC_HOLIDAY));
   }
 
   @Property
@@ -75,7 +75,7 @@ class HolidayHRTest {
     final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
-      .doesNotContain(new Holiday(LocalDate.of(year.getValue(), JUNE, 25), "STATEHOOD", OFFICIAL_HOLIDAY));
+      .doesNotContain(new Holiday(LocalDate.of(year.getValue(), JUNE, 25), "STATEHOOD", PUBLIC_HOLIDAY));
   }
 
   @Property
@@ -84,7 +84,7 @@ class HolidayHRTest {
     final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
-      .contains(new Holiday(LocalDate.of(year.getValue(), JUNE, 25), "STATEHOOD", OFFICIAL_HOLIDAY));
+      .contains(new Holiday(LocalDate.of(year.getValue(), JUNE, 25), "STATEHOOD", PUBLIC_HOLIDAY));
   }
 
   @Property
@@ -93,7 +93,7 @@ class HolidayHRTest {
     final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
-      .doesNotContain(new Holiday(LocalDate.of(year.getValue(), JUNE, 25), "STATEHOOD", OFFICIAL_HOLIDAY));
+      .doesNotContain(new Holiday(LocalDate.of(year.getValue(), JUNE, 25), "STATEHOOD", PUBLIC_HOLIDAY));
   }
 
   @Property
@@ -102,7 +102,7 @@ class HolidayHRTest {
     final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
-      .contains(new Holiday(LocalDate.of(year.getValue(), AUGUST, 5), "VICTORY", OFFICIAL_HOLIDAY));
+      .contains(new Holiday(LocalDate.of(year.getValue(), AUGUST, 5), "VICTORY", PUBLIC_HOLIDAY));
   }
 
   @Property
@@ -111,7 +111,7 @@ class HolidayHRTest {
     final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
-      .contains(new Holiday(LocalDate.of(year.getValue(), AUGUST, 15), "ASSUMPTION_MARY", OFFICIAL_HOLIDAY));
+      .contains(new Holiday(LocalDate.of(year.getValue(), AUGUST, 15), "ASSUMPTION_MARY", PUBLIC_HOLIDAY));
   }
 
   @Property
@@ -120,7 +120,7 @@ class HolidayHRTest {
     final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
-      .doesNotContain(new Holiday(LocalDate.of(year.getValue(), OCTOBER, 8), "INDEPENDENCE_DAY", OFFICIAL_HOLIDAY));
+      .doesNotContain(new Holiday(LocalDate.of(year.getValue(), OCTOBER, 8), "INDEPENDENCE_DAY", PUBLIC_HOLIDAY));
   }
 
   @Property
@@ -129,7 +129,7 @@ class HolidayHRTest {
     final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
-      .contains(new Holiday(LocalDate.of(year.getValue(), OCTOBER, 8), "INDEPENDENCE_DAY", OFFICIAL_HOLIDAY));
+      .contains(new Holiday(LocalDate.of(year.getValue(), OCTOBER, 8), "INDEPENDENCE_DAY", PUBLIC_HOLIDAY));
   }
 
   @Property
@@ -138,7 +138,7 @@ class HolidayHRTest {
     final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
-      .doesNotContain(new Holiday(LocalDate.of(year.getValue(), OCTOBER, 8), "INDEPENDENCE_DAY", OFFICIAL_HOLIDAY));
+      .doesNotContain(new Holiday(LocalDate.of(year.getValue(), OCTOBER, 8), "INDEPENDENCE_DAY", PUBLIC_HOLIDAY));
   }
 
   @Property
@@ -147,7 +147,7 @@ class HolidayHRTest {
     final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
-      .contains(new Holiday(LocalDate.of(year.getValue(), NOVEMBER, 1), "ALL_SAINTS", OFFICIAL_HOLIDAY));
+      .contains(new Holiday(LocalDate.of(year.getValue(), NOVEMBER, 1), "ALL_SAINTS", PUBLIC_HOLIDAY));
   }
 
   @Property
@@ -156,7 +156,7 @@ class HolidayHRTest {
     final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
-      .contains(new Holiday(LocalDate.of(year.getValue(), NOVEMBER, 18), "REMEMBRANCE", OFFICIAL_HOLIDAY));
+      .contains(new Holiday(LocalDate.of(year.getValue(), NOVEMBER, 18), "REMEMBRANCE", PUBLIC_HOLIDAY));
   }
 
   @Property
@@ -165,7 +165,7 @@ class HolidayHRTest {
     final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
-      .doesNotContain(new Holiday(LocalDate.of(year.getValue(), NOVEMBER, 18), "REMEMBRANCE", OFFICIAL_HOLIDAY));
+      .doesNotContain(new Holiday(LocalDate.of(year.getValue(), NOVEMBER, 18), "REMEMBRANCE", PUBLIC_HOLIDAY));
   }
 
   @Property
@@ -174,8 +174,8 @@ class HolidayHRTest {
     final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
-      .contains(new Holiday(LocalDate.of(year.getValue(), DECEMBER, 25), "CHRISTMAS", OFFICIAL_HOLIDAY))
-      .contains(new Holiday(LocalDate.of(year.getValue(), DECEMBER, 26), "STEPHENS", OFFICIAL_HOLIDAY));
+      .contains(new Holiday(LocalDate.of(year.getValue(), DECEMBER, 25), "CHRISTMAS", PUBLIC_HOLIDAY))
+      .contains(new Holiday(LocalDate.of(year.getValue(), DECEMBER, 26), "STEPHENS", PUBLIC_HOLIDAY));
   }
 
   @Property
