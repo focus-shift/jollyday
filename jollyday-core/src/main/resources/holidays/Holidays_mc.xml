@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="mc" description="Monaco"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="JANUARY" day="27" descriptionPropertiesKey="ST_DEVOTA"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="MAY_DAY"/>
+    <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
+    <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="NOVEMBER" day="19" descriptionPropertiesKey="NATIONAL_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+    <ChristianHoliday type="ASCENSION_DAY" descriptionPropertiesKey="christian.ASCENSION_DAY"/>
+    <ChristianHoliday type="WHIT_MONDAY" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
+    <ChristianHoliday type="CORPUS_CHRISTI" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Monaco</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:MC</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:MC</Source>
+  </Sources>
+
+  <SubConfigurations hierarchy="CL" description="La Colle">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="CO" description="La Condamine">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="FO" description="Fontvieille">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="GA" description="La Gare">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="JE" description="Jardin Exotique">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="LA" description="Larvotto">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="MA" description="Malbousquet">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="MC" description="Monte-Carlo">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="MG" description="Moneghetti">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="MO" description="Monaco-Ville">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="MU" description="Moulins">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="PH" description="Port-Hercule">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="SD" description="Sainte-Dévote">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="SO" description="La Source">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="SP" description="Spélugues">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="SR" description="Saint-Roman">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="VR" description="Vallon de la Rousse">
+    <Holidays/>
+  </SubConfigurations>
+</Configuration>

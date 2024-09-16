@@ -1,6 +1,6 @@
 # Jollyday [![Build Status](https://github.com/focus-shift/jollyday/workflows/Build/badge.svg)](https://github.com/focus-shift/jollyday/actions/workflows/build.yml) [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=focus-shift_jollyday&metric=coverage)](https://sonarcloud.io/summary/overall?id=focus-shift_jollyday) [![Maven Central](https://img.shields.io/maven-central/v/de.focus-shift/jollyday-core.svg)](https://maven-badges.herokuapp.com/maven-central/de.focus-shift/jollyday-core) [![Javadocs](https://www.javadoc.io/badge/de.focus-shift/jollyday-core.svg)](https://www.javadoc.io/doc/de.focus-shift/jollyday-core)
 
-Jollyday is a java library to query public holidays. Currently, we support **over 80 countries**.
+Jollyday is a java library to query public holidays. Currently, we support **over 90 countries**.
 
 ## How to use it
 
