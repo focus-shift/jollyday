@@ -71,7 +71,6 @@
   <SubConfigurations hierarchy="mwt" description="Manawatu-Wanganui">
     <Holidays>
       <Fixed month="JANUARY" day="22" descriptionPropertiesKey="WELLINGTON_ANNIVERSARY"/>
-      <Fixed month="JANUARY" day="29" descriptionPropertiesKey="AUCKLAND_ANNIVERSARY"/>
     </Holidays>
   </SubConfigurations>
 
