@@ -28,7 +28,7 @@ public class FixedWeekdayRelativeToFixedParser implements HolidayParser {
           new FindWeekDayRelativeToDate(new FixedToLocalDate(year).apply(weekdayRelativeToFixed.day())).apply(weekdayRelativeToFixed)
         )
       )
-      .map(holder -> new CreateHoliday(holder.getDate()).apply(holder.getDescribed()))
+      .map(holder -> new CreateHoliday(holder.getActualDate()).apply(holder.getDescribed()))
       .collect(toList());
   }
 }
