@@ -10,9 +10,7 @@
           <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-
     <FixedWeekday which="FIRST" weekday="MONDAY" month="SEPTEMBER" descriptionPropertiesKey="LABOUR_DAY"/>
-
     <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
   </Holidays>
 
@@ -274,5 +272,4 @@
       <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY" localizedType="BANK_HOLIDAY"/>
     </Holidays>
   </SubConfigurations>
-
 </Configuration>
