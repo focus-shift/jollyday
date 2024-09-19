@@ -128,10 +128,6 @@
       <RelativeToWeekdayInMonth weekday="FRIDAY" when="BEFORE" descriptionPropertiesKey="HAWKES_BAY_ANNIVERSARY">
         <FixedWeekday which="FOURTH" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="LABOUR_DAY"/>
       </RelativeToWeekdayInMonth>
-
-      <FixedWeekdayRelativeToFixed which="FIRST" weekday="MONDAY" when="CLOSEST" descriptionPropertiesKey="AUCKLAND_ANNIVERSARY">
-        <day month="JANUARY" day="29"/>
-      </FixedWeekdayRelativeToFixed>
     </Holidays>
   </SubConfigurations>
 
@@ -148,9 +144,6 @@
     <Holidays>
       <FixedWeekdayRelativeToFixed which="FIRST" weekday="MONDAY" when="CLOSEST" descriptionPropertiesKey="WELLINGTON_ANNIVERSARY">
         <day month="JANUARY" day="22"/>
-      </FixedWeekdayRelativeToFixed>
-      <FixedWeekdayRelativeToFixed which="FIRST" weekday="MONDAY" when="CLOSEST" descriptionPropertiesKey="AUCKLAND_ANNIVERSARY">
-        <day month="JANUARY" day="29"/>
       </FixedWeekdayRelativeToFixed>
     </Holidays>
   </SubConfigurations>
