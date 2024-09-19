@@ -7,17 +7,18 @@
   <Holidays>
     <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
     <Fixed month="JULY" day="1" descriptionPropertiesKey="CANADA_DAY">
-          <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-
     <FixedWeekday which="FIRST" weekday="MONDAY" month="SEPTEMBER" descriptionPropertiesKey="LABOUR_DAY"/>
-
     <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
   </Holidays>
 
   <SubConfigurations hierarchy="on" description="Ontario">
     <Holidays>
+      <Fixed month="SEPTEMBER" day="30" validFrom="2021" descriptionPropertiesKey="TRUTH_RECONCILIATION_DAY"
+             localizedType="BANK_HOLIDAY"/>
+      <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="REMEMBRANCE" localizedType="BANK_HOLIDAY"/>
       <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY"/>
 
       <RelativeToFixed descriptionPropertiesKey="VICTORIA_DAY">
@@ -26,8 +27,14 @@
         <Date month="MAY" day="25"/>
       </RelativeToFixed>
 
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="2008" descriptionPropertiesKey="FAMILY_DAY"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="2008"
+                    descriptionPropertiesKey="FAMILY_DAY"/>
+      <FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="CIVIC"
+                    localizedType="BANK_HOLIDAY"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="THANKSGIVING"/>
+
+      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"
+                        localizedType="BANK_HOLIDAY"/>
     </Holidays>
   </SubConfigurations>
 
@@ -36,6 +43,7 @@
       <Fixed month="JUNE" day="21" validFrom="2017" descriptionPropertiesKey="INDIGENOUS_PEOPLES_DAY"/>
       <Fixed month="SEPTEMBER" day="30" descriptionPropertiesKey="TRUTH_RECONCILIATION_DAY"/>
       <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="REMEMBRANCE"/>
+      <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY" localizedType="BANK_HOLIDAY"/>
 
       <RelativeToFixed descriptionPropertiesKey="VICTORIA_DAY">
         <Weekday>MONDAY</Weekday>
@@ -45,12 +53,19 @@
 
       <FixedWeekday which="THIRD" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="DISCOVERY_DAY"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="THANKSGIVING"/>
+
+      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"
+                        localizedType="BANK_HOLIDAY"/>
     </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="qc" description="Quebec">
     <Holidays>
+      <Fixed month="SEPTEMBER" day="30" validFrom="2021" descriptionPropertiesKey="TRUTH_RECONCILIATION_DAY"
+             localizedType="BANK_HOLIDAY"/>
       <Fixed month="JUNE" day="24" descriptionPropertiesKey="SAINT_JEAN_BAPTISTE_DAY"/>
+      <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="REMEMBRANCE" localizedType="BANK_HOLIDAY"/>
+      <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY" localizedType="BANK_HOLIDAY"/>
 
       <RelativeToFixed descriptionPropertiesKey="PATRIOT">
         <Weekday>MONDAY</Weekday>
@@ -66,32 +81,57 @@
 
   <SubConfigurations hierarchy="ns" description="Nova Scotia">
     <Holidays>
+      <Fixed month="SEPTEMBER" day="30" validFrom="2021" descriptionPropertiesKey="TRUTH_RECONCILIATION_DAY"
+             localizedType="BANK_HOLIDAY"/>
       <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="REMEMBRANCE"/>
+      <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY" localizedType="BANK_HOLIDAY"/>
 
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="2015" descriptionPropertiesKey="HERITAGE"/>
+      <RelativeToFixed descriptionPropertiesKey="VICTORIA_DAY" localizedType="BANK_HOLIDAY">
+        <Weekday>MONDAY</Weekday>
+        <When>BEFORE</When>
+        <Date month="MAY" day="25"/>
+      </RelativeToFixed>
+
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="2015"
+                    descriptionPropertiesKey="HERITAGE"/>
+      <FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="NATAL_DAY"
+                    localizedType="BANK_HOLIDAY"/>
+      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="THANKSGIVING"
+                    localizedType="BANK_HOLIDAY"/>
+
+      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"
+                        localizedType="BANK_HOLIDAY"/>
     </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="nb" description="New Brunswick">
     <Holidays>
       <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="REMEMBRANCE"/>
-      <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY" localizedType="UNOFFICIAL_HOLIDAY"/>
+      <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY" localizedType="BANK_HOLIDAY"/>
 
-      <RelativeToFixed descriptionPropertiesKey="VICTORIA_DAY" localizedType="UNOFFICIAL_HOLIDAY">
+      <RelativeToFixed descriptionPropertiesKey="VICTORIA_DAY" localizedType="BANK_HOLIDAY">
         <Weekday>MONDAY</Weekday>
         <When>BEFORE</When>
         <Date month="MAY" day="25"/>
       </RelativeToFixed>
 
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="2018" descriptionPropertiesKey="FAMILY_DAY"/>
-      <FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="NEW_BRUNSWICK_DAY"/>
-      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="THANKSGIVING" localizedType="UNOFFICIAL_HOLIDAY"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="2018"
+                    descriptionPropertiesKey="FAMILY_DAY"/>
+      <FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="NEW_BRUNSWICK_DAY"
+                    localizedType="BANK_HOLIDAY"/>
+      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="THANKSGIVING"
+                    localizedType="BANK_HOLIDAY"/>
+
+      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"
+                        localizedType="BANK_HOLIDAY"/>
     </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="mb" description="Manitoba">
     <Holidays>
       <Fixed month="SEPTEMBER" day="30" validFrom="2024" descriptionPropertiesKey="ORANGE_SHIRT_DAY"/>
+      <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="REMEMBRANCE" localizedType="BANK_HOLIDAY"/>
+      <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY" localizedType="BANK_HOLIDAY"/>
 
       <RelativeToFixed descriptionPropertiesKey="VICTORIA_DAY">
         <Weekday>MONDAY</Weekday>
@@ -99,8 +139,14 @@
         <Date month="MAY" day="25"/>
       </RelativeToFixed>
 
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="2008" descriptionPropertiesKey="LOUIS_RIEL"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="2008"
+                    descriptionPropertiesKey="LOUIS_RIEL"/>
+      <FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="TERRY_FOX_DAY"
+                    localizedType="BANK_HOLIDAY"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="THANKSGIVING"/>
+
+      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"
+                        localizedType="BANK_HOLIDAY"/>
     </Holidays>
   </SubConfigurations>
 
@@ -109,6 +155,7 @@
       <Fixed month="JUNE" day="21" validFrom="1996" descriptionPropertiesKey="INDIGENOUS_PEOPLES_DAY"/>
       <Fixed month="SEPTEMBER" day="30" descriptionPropertiesKey="TRUTH_RECONCILIATION_DAY"/>
       <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="REMEMBRANCE"/>
+      <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY" localizedType="BANK_HOLIDAY"/>
 
       <RelativeToFixed descriptionPropertiesKey="VICTORIA_DAY">
         <Weekday>MONDAY</Weekday>
@@ -118,6 +165,9 @@
 
       <FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="CIVIC"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="THANKSGIVING"/>
+
+      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"
+                        localizedType="BANK_HOLIDAY"/>
     </Holidays>
   </SubConfigurations>
 
@@ -127,6 +177,7 @@
       <Fixed month="JULY" day="9" validFrom="2001" descriptionPropertiesKey="NUNAVUT_DAY"/>
       <Fixed month="SEPTEMBER" day="30" descriptionPropertiesKey="TRUTH_RECONCILIATION_DAY"/>
       <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="REMEMBRANCE"/>
+      <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY" localizedType="BANK_HOLIDAY"/>
 
       <RelativeToFixed descriptionPropertiesKey="VICTORIA_DAY">
         <Weekday>MONDAY</Weekday>
@@ -136,6 +187,9 @@
 
       <FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="CIVIC"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="THANKSGIVING"/>
+
+      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"
+                        localizedType="BANK_HOLIDAY"/>
     </Holidays>
   </SubConfigurations>
 
@@ -143,6 +197,7 @@
     <Holidays>
       <Fixed month="SEPTEMBER" day="30" descriptionPropertiesKey="TRUTH_RECONCILIATION_DAY"/>
       <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="REMEMBRANCE"/>
+      <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY" localizedType="BANK_HOLIDAY"/>
 
       <RelativeToFixed descriptionPropertiesKey="VICTORIA_DAY">
         <Weekday>MONDAY</Weekday>
@@ -150,10 +205,15 @@
         <Date month="MAY" day="25"/>
       </RelativeToFixed>
 
-      <FixedWeekday which="SECOND" weekday="MONDAY" month="FEBRUARY" validFrom="2013" validTo="2018" descriptionPropertiesKey="FAMILY_DAY"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="2019" descriptionPropertiesKey="FAMILY_DAY"/>
+      <FixedWeekday which="SECOND" weekday="MONDAY" month="FEBRUARY" validFrom="2013" validTo="2018"
+                    descriptionPropertiesKey="FAMILY_DAY"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="2019"
+                    descriptionPropertiesKey="FAMILY_DAY"/>
       <FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="CIVIC"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="THANKSGIVING"/>
+
+      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"
+                        localizedType="BANK_HOLIDAY"/>
     </Holidays>
   </SubConfigurations>
 
@@ -161,15 +221,34 @@
     <Holidays>
       <Fixed month="SEPTEMBER" day="30" descriptionPropertiesKey="TRUTH_RECONCILIATION_DAY"/>
       <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="REMEMBRANCE"/>
+      <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY" localizedType="BANK_HOLIDAY"/>
 
-      <FixedWeekday which="SECOND" weekday="MONDAY" month="FEBRUARY" validFrom="2009" validTo="2009" descriptionPropertiesKey="ISLANDER_DAY"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="2010" descriptionPropertiesKey="ISLANDER_DAY"/>
+      <RelativeToFixed descriptionPropertiesKey="VICTORIA_DAY" localizedType="BANK_HOLIDAY">
+        <Weekday>MONDAY</Weekday>
+        <When>BEFORE</When>
+        <Date month="MAY" day="25"/>
+      </RelativeToFixed>
+
+      <FixedWeekday which="SECOND" weekday="MONDAY" month="FEBRUARY" validFrom="2009" validTo="2009"
+                    descriptionPropertiesKey="ISLANDER_DAY"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="2010"
+                    descriptionPropertiesKey="ISLANDER_DAY"/>
+      <FixedWeekday which="THIRD" weekday="FRIDAY" month="AUGUST" descriptionPropertiesKey="GOLD_CUP_PARADE"
+                    localizedType="BANK_HOLIDAY"/>
+      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="THANKSGIVING"
+                    localizedType="BANK_HOLIDAY"/>
+
+      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"
+                        localizedType="BANK_HOLIDAY"/>
     </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="sk" description="Saskatchewan">
     <Holidays>
+      <Fixed month="SEPTEMBER" day="30" validFrom="2021" descriptionPropertiesKey="TRUTH_RECONCILIATION_DAY"
+             localizedType="BANK_HOLIDAY"/>
       <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="REMEMBRANCE"/>
+      <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY" localizedType="BANK_HOLIDAY"/>
 
       <RelativeToFixed descriptionPropertiesKey="VICTORIA_DAY">
         <Weekday>MONDAY</Weekday>
@@ -177,15 +256,22 @@
         <Date month="MAY" day="25"/>
       </RelativeToFixed>
 
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="2007" descriptionPropertiesKey="FAMILY_DAY"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="2007"
+                    descriptionPropertiesKey="FAMILY_DAY"/>
       <FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="SASKATCHEWAN_DAY"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="THANKSGIVING"/>
+
+      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"
+                        localizedType="BANK_HOLIDAY"/>
     </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="ab" description="Alberta">
     <Holidays>
+      <Fixed month="SEPTEMBER" day="30" validFrom="2021" descriptionPropertiesKey="TRUTH_RECONCILIATION_DAY"
+             localizedType="BANK_HOLIDAY"/>
       <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="REMEMBRANCE"/>
+      <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY" localizedType="BANK_HOLIDAY"/>
 
       <RelativeToFixed descriptionPropertiesKey="VICTORIA_DAY">
         <Weekday>MONDAY</Weekday>
@@ -193,15 +279,35 @@
         <Date month="MAY" day="25"/>
       </RelativeToFixed>
 
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1990" descriptionPropertiesKey="FAMILY_DAY"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1990"
+                    descriptionPropertiesKey="FAMILY_DAY"/>
+      <FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="HERITAGE"
+                    localizedType="BANK_HOLIDAY"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="THANKSGIVING"/>
+
+      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"
+                        localizedType="BANK_HOLIDAY"/>
     </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="nl" description="Newfoundland and Labrador">
     <Holidays>
+      <Fixed month="SEPTEMBER" day="30" validFrom="2021" descriptionPropertiesKey="TRUTH_RECONCILIATION_DAY"
+             localizedType="BANK_HOLIDAY"/>
       <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="REMEMBRANCE"/>
+      <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY" localizedType="BANK_HOLIDAY"/>
+
+      <RelativeToFixed descriptionPropertiesKey="VICTORIA_DAY" localizedType="BANK_HOLIDAY">
+        <Weekday>MONDAY</Weekday>
+        <When>BEFORE</When>
+        <Date month="MAY" day="25"/>
+      </RelativeToFixed>
+
+      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="THANKSGIVING"
+                    localizedType="BANK_HOLIDAY"/>
+
+      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"
+                        localizedType="BANK_HOLIDAY"/>
     </Holidays>
   </SubConfigurations>
-
 </Configuration>
