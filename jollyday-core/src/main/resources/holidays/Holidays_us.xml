@@ -298,7 +298,7 @@
   <SubConfigurations hierarchy="mt" description="Montana">
     <Holidays>
       <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <RelativeToWeekdayInMonth weekday="TUESDAY" when="AFTER" descriptionPropertiesKey="THANKSGIVING">
+      <RelativeToWeekdayInMonth weekday="TUESDAY" when="AFTER" descriptionPropertiesKey="THANKSGIVING" localizedType="OBSERVANCE">
         <FixedWeekday which="FIRST" weekday="MONDAY" month="NOVEMBER"/>
       </RelativeToWeekdayInMonth>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
