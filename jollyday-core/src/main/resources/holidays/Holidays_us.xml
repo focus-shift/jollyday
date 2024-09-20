@@ -27,7 +27,6 @@
     <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1971" descriptionPropertiesKey="PRESIDENTS_DAY"/>
     <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" validFrom="1968" descriptionPropertiesKey="MEMORIAL_DAY"/>
     <FixedWeekday which="FIRST" weekday="MONDAY" month="SEPTEMBER" validFrom="1895" descriptionPropertiesKey="LABOUR_DAY"/>
-    <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1937" descriptionPropertiesKey="COLUMBUS_DAY"/>
     <FixedWeekday which="FOURTH" weekday="THURSDAY" month="NOVEMBER" validFrom="1863" descriptionPropertiesKey="THANKSGIVING"/>
   </Holidays>
 
@@ -111,7 +110,6 @@
     <Holidays>
       <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
       <FixedWeekday which="FOURTH" weekday="MONDAY" month="APRIL" descriptionPropertiesKey="CONFEDERATE"/>
     </Holidays>
   </SubConfigurations>
@@ -166,6 +164,7 @@
       <RelativeToWeekdayInMonth weekday="TUESDAY" when="AFTER" descriptionPropertiesKey="ELECTION_DAY">
         <FixedWeekday which="FIRST" weekday="MONDAY" month="NOVEMBER"/>
       </RelativeToWeekdayInMonth>
+      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
       <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
       <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     </Holidays>
@@ -175,23 +174,28 @@
     <Holidays>
       <Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CHRISTMAS_EVE"/>
       <Fixed month="DECEMBER" day="31" descriptionPropertiesKey="NEW_YEARS_EVE"/>
+      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
     </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="ks" description="Kansas">
-    <Holidays/>
+    <Holidays>
+      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
+    </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="ky" description="Kentucky">
     <Holidays>
       <Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CHRISTMAS_EVE"/>
       <Fixed month="DECEMBER" day="31" descriptionPropertiesKey="NEW_YEARS_EVE"/>
+      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
       <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
     </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="la" description="Louisiana">
     <Holidays>
+      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
       <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
       <ChristianHoliday type="MARDI_GRAS" descriptionPropertiesKey="christian.MARDI_GRAS"/>
     </Holidays>
@@ -263,6 +267,7 @@
       <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="FOURTH" weekday="MONDAY" month="APRIL" descriptionPropertiesKey="CONFEDERATE"/>
+      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
     </Holidays>
   </SubConfigurations>
 
@@ -285,6 +290,7 @@
         <FixedWeekday which="FIRST" weekday="MONDAY" month="NOVEMBER"/>
       </RelativeToWeekdayInMonth>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
     </Holidays>
   </SubConfigurations>
 
@@ -309,6 +315,7 @@
     <Holidays>
       <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
     </Holidays>
   </SubConfigurations>
 
@@ -388,6 +395,7 @@
     <Holidays>
       <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
     </Holidays>
   </SubConfigurations>
 
@@ -421,6 +429,7 @@
         <FixedWeekday which="FIRST" weekday="MONDAY" month="NOVEMBER"/>
       </RelativeToWeekdayInMonth>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
     </Holidays>
   </SubConfigurations>
 
@@ -428,7 +437,6 @@
     <Holidays>
       <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
     </Holidays>
   </SubConfigurations>
 
@@ -438,6 +446,7 @@
       <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="FOURTH" weekday="MONDAY" month="APRIL" descriptionPropertiesKey="CONFEDERATE"/>
+      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
       <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
     </Holidays>
   </SubConfigurations>
@@ -465,7 +474,6 @@
       <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="BENNINGTON"/>
-      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
     </Holidays>
   </SubConfigurations>
 
@@ -491,7 +499,6 @@
     <Holidays>
       <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
     </Holidays>
   </SubConfigurations>
 
@@ -512,7 +519,6 @@
       </RelativeToWeekdayInMonth>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="SECOND" weekday="TUESDAY" month="SEPTEMBER" descriptionPropertiesKey="ELECTION_DAY"/>
-      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
     </Holidays>
   </SubConfigurations>
 
