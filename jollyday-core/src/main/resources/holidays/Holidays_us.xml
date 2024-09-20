@@ -111,6 +111,10 @@
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
       <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
     </Holidays>
+
+    <Sources>
+      <Source>https://portal.ct.gov/about/legal-state-holidays</Source>
+    </Sources>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="de" description="Delaware">
@@ -119,6 +123,10 @@
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
     </Holidays>
+
+    <Sources>
+      <Source>https://delcode.delaware.gov/title1/c005/index.html</Source>
+    </Sources>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="fl" description="Florida">
@@ -256,6 +264,10 @@
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
     </Holidays>
+
+    <Sources>
+      <Source>https://www.michigan.gov/som/government/state-holidays</Source>
+    </Sources>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="mn" description="Minnesota">
