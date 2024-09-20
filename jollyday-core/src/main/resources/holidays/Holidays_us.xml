@@ -75,8 +75,12 @@
 
   <SubConfigurations hierarchy="ca" description="California">
     <Holidays>
-      <Fixed month="FEBRUARY" day="12" descriptionPropertiesKey="LINCOLN"/>
-      <Fixed month="MARCH" day="31" descriptionPropertiesKey="CESAR_CHAVEZ"/>
+      <Fixed month="FEBRUARY" day="12" descriptionPropertiesKey="LINCOLN">
+        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+      </Fixed>
+      <Fixed month="MARCH" day="31" descriptionPropertiesKey="CESAR_CHAVEZ">
+        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+      </Fixed>
       <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
     </Holidays>
@@ -99,6 +103,9 @@
   <SubConfigurations hierarchy="ct" description="Connecticut">
     <Holidays>
       <Fixed month="FEBRUARY" day="12" descriptionPropertiesKey="LINCOLN">
+        <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+      </Fixed>
       <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
