@@ -5,7 +5,10 @@
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
   <Holidays>
-    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
+      <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
     <Fixed month="MAY" day="30" validFrom="1869" validTo="1967" descriptionPropertiesKey="MEMORIAL_DAY"/>
     <Fixed month="JUNE" day="19" validFrom="2021" descriptionPropertiesKey="JUNETEENTH">
       <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
