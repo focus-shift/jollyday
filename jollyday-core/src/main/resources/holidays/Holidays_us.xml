@@ -52,8 +52,8 @@
 
   <SubConfigurations hierarchy="ak" description="Alaska">
     <Holidays>
-      <Fixed month="OCTOBER" day="18" descriptionPropertiesKey="ALASKA"/>
-      <FixedWeekday which="LAST" weekday="MONDAY" month="MARCH" descriptionPropertiesKey="SEWARD"/>
+      <Fixed month="OCTOBER" day="18" descriptionPropertiesKey="ALASKA" localizedType="OBSERVANCE"/>
+      <FixedWeekday which="LAST" weekday="MONDAY" month="MARCH" descriptionPropertiesKey="SEWARD" localizedType="OBSERVANCE"/>
     </Holidays>
   </SubConfigurations>
 
