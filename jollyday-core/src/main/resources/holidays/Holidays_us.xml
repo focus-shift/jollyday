@@ -507,7 +507,7 @@
     </Holidays>
   </SubConfigurations>
 
-  <SubConfigurations hierarchy="dc" description="District of Columbia">
+  <SubConfigurations hierarchy="dc" description="Washington, D.C.">
     <Holidays>
       <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
