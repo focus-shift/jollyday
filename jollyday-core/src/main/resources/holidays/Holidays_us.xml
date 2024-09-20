@@ -36,6 +36,7 @@
   <Sources>
     <Source>https://en.wikipedia.org/wiki/Federal_holidays_in_the_United_States</Source>
     <Source>https://en.wikipedia.org/wiki/Indigenous_Peoples%27_Day_(United_States)#Indigenous_Peoples_Day_observers</Source>
+    <Source>https://en.wikipedia.org/wiki/Confederate_Memorial_Day</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:US</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:US</Source>
   </Sources>
@@ -118,7 +119,7 @@
     <Holidays>
       <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="FOURTH" weekday="MONDAY" month="APRIL" descriptionPropertiesKey="CONFEDERATE"/>
+      <FixedWeekday which="FOURTH" weekday="MONDAY" month="APRIL" descriptionPropertiesKey="CONFEDERATE" localizedType="OBSERVANCE"/>
     </Holidays>
   </SubConfigurations>
 
@@ -127,7 +128,7 @@
       <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
-      <FixedWeekday which="FOURTH" weekday="MONDAY" month="APRIL" descriptionPropertiesKey="CONFEDERATE"/>
+      <FixedWeekday which="FOURTH" weekday="MONDAY" month="APRIL" validFrom="1874" validTo="2016" descriptionPropertiesKey="CONFEDERATE"/>
     </Holidays>
   </SubConfigurations>
 
@@ -194,6 +195,7 @@
 
   <SubConfigurations hierarchy="la" description="Louisiana">
     <Holidays>
+      <Fixed month="APRIL" day="26" validFrom="1925" validTo="2022" descriptionPropertiesKey="CONFEDERATE"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
       <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
       <ChristianHoliday type="MARDI_GRAS" descriptionPropertiesKey="christian.MARDI_GRAS"/>
@@ -348,7 +350,7 @@
   <SubConfigurations hierarchy="nc" description="North Carolina">
     <Holidays>
       <Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CHRISTMAS_EVE"/>
-      <FixedWeekday which="FOURTH" weekday="MONDAY" month="APRIL" descriptionPropertiesKey="CONFEDERATE"/>
+      <FixedWeekday which="FOURTH" weekday="MONDAY" month="APRIL" descriptionPropertiesKey="CONFEDERATE" localizedType="OBSERVANCE"/>
       <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
     </Holidays>
     <SubConfigurations hierarchy="ce" description="Charlotte">
@@ -412,7 +414,7 @@
 
   <SubConfigurations hierarchy="sc" description="South Carolina">
     <Holidays>
-      <Fixed month="MAY" day="10" descriptionPropertiesKey="CONFEDERATE"/>
+      <Fixed month="MAY" day="10" validFrom="2000" descriptionPropertiesKey="CONFEDERATE"/>
       <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
@@ -431,7 +433,7 @@
       <Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CHRISTMAS_EVE"/>
       <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="FOURTH" weekday="MONDAY" month="APRIL" descriptionPropertiesKey="CONFEDERATE"/>
+      <FixedWeekday which="FOURTH" weekday="MONDAY" month="APRIL" descriptionPropertiesKey="CONFEDERATE" localizedType="OBSERVANCE"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
       <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
     </Holidays>
@@ -442,7 +444,7 @@
       <Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CHRISTMAS_EVE"/>
       <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="FOURTH" weekday="MONDAY" month="APRIL" descriptionPropertiesKey="CONFEDERATE"/>
+      <FixedWeekday which="FOURTH" weekday="MONDAY" month="APRIL" validFrom="1973" descriptionPropertiesKey="CONFEDERATE"/>
       <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY" localizedType="OBSERVANCE"/>
     </Holidays>
   </SubConfigurations>
