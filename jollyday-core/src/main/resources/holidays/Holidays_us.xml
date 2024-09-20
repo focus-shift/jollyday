@@ -44,8 +44,8 @@
   <SubConfigurations hierarchy="al" description="Alabama">
     <Holidays>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="FOURTH" weekday="MONDAY" month="APRIL" descriptionPropertiesKey="CONFEDERATE"/>
-      <FixedWeekday which="FIRST" weekday="MONDAY" month="JUNE" descriptionPropertiesKey="JEFFERSON_DAVIS"/>
+      <FixedWeekday which="FOURTH" weekday="MONDAY" month="APRIL" descriptionPropertiesKey="CONFEDERATE" localizedType="OBSERVANCE"/>
+      <FixedWeekday which="FIRST" weekday="MONDAY" month="JUNE" descriptionPropertiesKey="JEFFERSON_DAVIS" localizedType="OBSERVANCE"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
     </Holidays>
   </SubConfigurations>
