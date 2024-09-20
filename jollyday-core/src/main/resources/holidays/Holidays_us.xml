@@ -75,7 +75,7 @@
 
   <SubConfigurations hierarchy="ca" description="California">
     <Holidays>
-      <Fixed month="FEBRUARY" day="12" descriptionPropertiesKey="LINCOLN">
+      <Fixed month="FEBRUARY" day="12" descriptionPropertiesKey="LINCOLN" localizedType="OBSERVANCE">
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
       <Fixed month="MARCH" day="31" descriptionPropertiesKey="CESAR_CHAVEZ">
