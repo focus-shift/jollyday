@@ -297,8 +297,6 @@
 
   <SubConfigurations hierarchy="mt" description="Montana">
     <Holidays>
-      <Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CHRISTMAS_EVE"/>
-      <Fixed month="DECEMBER" day="31" descriptionPropertiesKey="NEW_YEARS_EVE"/>
       <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <RelativeToWeekdayInMonth weekday="TUESDAY" when="AFTER" descriptionPropertiesKey="THANKSGIVING">
         <FixedWeekday which="FIRST" weekday="MONDAY" month="NOVEMBER"/>
