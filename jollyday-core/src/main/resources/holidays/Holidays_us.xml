@@ -53,7 +53,6 @@
   <SubConfigurations hierarchy="ak" description="Alaska">
     <Holidays>
       <Fixed month="OCTOBER" day="18" descriptionPropertiesKey="ALASKA"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="LAST" weekday="MONDAY" month="MARCH" descriptionPropertiesKey="SEWARD"/>
     </Holidays>
   </SubConfigurations>
