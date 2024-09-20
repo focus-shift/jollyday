@@ -9,13 +9,20 @@ import java.util.function.Function;
 public class CreateHoliday implements Function<Described, Holiday> {
 
   private final LocalDate localDate;
+  private final LocalDate observedLocalDate;
 
   public CreateHoliday(LocalDate localDate) {
-    this.localDate = localDate;
+    this(localDate, localDate);
   }
+
+  public CreateHoliday(LocalDate localDate, LocalDate observedLocalDate) {
+    this.localDate = localDate;
+    this.observedLocalDate = observedLocalDate;
+  }
+
 
   @Override
   public Holiday apply(final Described described) {
-    return new Holiday(localDate, described.descriptionPropertiesKey(), described.officiality());
+    return new Holiday(localDate, observedLocalDate, described.descriptionPropertiesKey(), described.officiality());
   }
 }

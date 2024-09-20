@@ -19,6 +19,10 @@ public final class Holiday implements Comparable<Holiday> {
    */
   private final LocalDate date;
   /**
+   * The observed date of the holiday.
+   */
+  private final LocalDate observedDate;
+  /**
    * The properties key to retrieve the description with.
    */
   private final String propertiesKey;
@@ -37,9 +41,23 @@ public final class Holiday implements Comparable<Holiday> {
    * @param type          a {@link HolidayType} object.
    */
   public Holiday(final LocalDate date, final String propertiesKey, final HolidayType type) {
+    this(date, date, propertiesKey, type);
+  }
+
+  /**
+   * Constructs a holiday for a date using the provided properties key to
+   * retrieve the description with.
+   *
+   * @param date          a {@link LocalDate} object.
+   * @param observedDate  a {@link LocalDate} object.
+   * @param propertiesKey a {@link java.lang.String} object.
+   * @param type          a {@link HolidayType} object.
+   */
+  public Holiday(final LocalDate date, final LocalDate observedDate, final String propertiesKey, final HolidayType type) {
     super();
     this.type = type;
     this.date = date;
+    this.observedDate = observedDate;
     this.propertiesKey = propertiesKey == null ? "" : propertiesKey;
   }
 
@@ -52,6 +70,17 @@ public final class Holiday implements Comparable<Holiday> {
    */
   public LocalDate getDate() {
     return date;
+  }
+
+  /**
+   * <p>
+   * Getter for the field <code>observedDate</code>.
+   * </p>
+   *
+   * @return the observed holiday date
+   */
+  public LocalDate getObservedDate() {
+    return observedDate;
   }
 
   /**
@@ -91,7 +120,7 @@ public final class Holiday implements Comparable<Holiday> {
     }
     if (obj instanceof Holiday) {
       final Holiday other = (Holiday) obj;
-      return other.date.equals(this.date) && other.propertiesKey.equals(this.propertiesKey) && type.equals(other.type);
+      return other.date.equals(this.date) && other.observedDate.equals(this.observedDate) && other.propertiesKey.equals(this.propertiesKey) && type.equals(other.type);
     }
     return false;
   }
@@ -101,6 +130,7 @@ public final class Holiday implements Comparable<Holiday> {
     if (hashCode == 0) {
       int hash = 1;
       hash = hash * 31 + date.hashCode();
+      hash = hash * 31 + observedDate.hashCode();
       hash = hash * 31 + propertiesKey.hashCode();
       hash = hash * 31 + type.hashCode();
       hashCode = hash;
