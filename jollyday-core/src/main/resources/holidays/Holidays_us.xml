@@ -257,7 +257,6 @@
 
   <SubConfigurations hierarchy="mi" description="Michigan">
     <Holidays>
-      <Fixed month="OCTOBER" day="30"/>
       <Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CHRISTMAS_EVE"/>
       <Fixed month="DECEMBER" day="31" descriptionPropertiesKey="NEW_YEARS_EVE"/>
       <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
