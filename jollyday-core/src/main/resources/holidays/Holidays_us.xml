@@ -33,6 +33,13 @@
     <FixedWeekday which="FOURTH" weekday="THURSDAY" month="NOVEMBER" validFrom="1863" descriptionPropertiesKey="THANKSGIVING"/>
   </Holidays>
 
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Federal_holidays_in_the_United_States</Source>
+    <Source>https://en.wikipedia.org/wiki/Indigenous_Peoples%27_Day_(United_States)#Indigenous_Peoples_Day_observers</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:US</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:US</Source>
+  </Sources>
+
   <SubConfigurations hierarchy="al" description="Alabama">
     <Holidays>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
