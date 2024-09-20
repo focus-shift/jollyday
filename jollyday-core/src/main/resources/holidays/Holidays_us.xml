@@ -98,7 +98,7 @@
 
   <SubConfigurations hierarchy="ct" description="Connecticut">
     <Holidays>
-      <Fixed month="FEBRUARY" day="12" descriptionPropertiesKey="LINCOLN"/>
+      <Fixed month="FEBRUARY" day="12" descriptionPropertiesKey="LINCOLN">
       <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
@@ -269,8 +269,8 @@
 
   <SubConfigurations hierarchy="mo" description="Missouri">
     <Holidays>
-      <Fixed month="FEBRUARY" day="12" descriptionPropertiesKey="LINCOLN"/>
-      <Fixed month="MAY" day="8" descriptionPropertiesKey="TRUMAN"/>
+      <Fixed month="FEBRUARY" day="12" descriptionPropertiesKey="LINCOLN" localizedType="OBSERVANCE"/>
+      <Fixed month="MAY" day="8" descriptionPropertiesKey="TRUMAN" localizedType="OBSERVANCE"/>
       <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
@@ -317,7 +317,7 @@
 
   <SubConfigurations hierarchy="nj" description="New Jersey">
     <Holidays>
-      <Fixed month="FEBRUARY" day="12" descriptionPropertiesKey="LINCOLN"/>
+      <Fixed month="FEBRUARY" day="12" descriptionPropertiesKey="LINCOLN" localizedType="OBSERVANCE"/>
       <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
@@ -334,7 +334,7 @@
   <SubConfigurations hierarchy="ny" description="New York">
     <Holidays>
       <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <Fixed month="FEBRUARY" day="12" descriptionPropertiesKey="LINCOLN"/>
+      <Fixed month="FEBRUARY" day="12" descriptionPropertiesKey="LINCOLN" localizedType="OBSERVANCE"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
       <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
