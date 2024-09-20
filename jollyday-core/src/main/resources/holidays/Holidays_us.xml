@@ -80,14 +80,12 @@
       <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
     </Holidays>
-
     <SubConfigurations hierarchy="be" description="Berkeley">
       <Holidays>
         <Fixed month="MARCH" day="8"/>
         <Fixed month="OCTOBER" day="21"/>
       </Holidays>
     </SubConfigurations>
-
   </SubConfigurations>
 
   <SubConfigurations hierarchy="co" description="Colorado">
@@ -234,7 +232,6 @@
         <Fixed month="JUNE" day="17" descriptionPropertiesKey="BUNKER_HILL"/>
       </Holidays>
     </SubConfigurations>
-
     <SubConfigurations hierarchy="ca" description="Cambridge">
       <Holidays>
         <Fixed month="MARCH" day="17" descriptionPropertiesKey="EVACUATION"/>
@@ -485,13 +482,6 @@
     </Holidays>
   </SubConfigurations>
 
-  <SubConfigurations hierarchy="dc" description="District of Columbia">
-    <Holidays>
-      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-    </Holidays>
-  </SubConfigurations>
-
   <SubConfigurations hierarchy="wv" description="West Virginia">
     <Holidays>
       <Fixed month="JUNE" day="20" descriptionPropertiesKey="WEST_VIRGINIA"/>
@@ -509,6 +499,13 @@
   </SubConfigurations>
 
   <SubConfigurations hierarchy="wy" description="Wyoming">
+    <Holidays>
+      <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+    </Holidays>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="dc" description="District of Columbia">
     <Holidays>
       <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
