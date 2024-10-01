@@ -364,7 +364,7 @@
     <Holidays>
       <Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CHRISTMAS_EVE"/>
       <FixedWeekday which="FOURTH" weekday="MONDAY" month="APRIL" descriptionPropertiesKey="CONFEDERATE" localizedType="OBSERVANCE"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY" localizedType="OBSERVANCE"/>
     </Holidays>
     <SubConfigurations hierarchy="ce" description="Charlotte">
       <Holidays>
