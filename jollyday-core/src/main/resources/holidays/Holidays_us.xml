@@ -194,10 +194,10 @@
 
   <SubConfigurations hierarchy="ky" description="Kentucky">
     <Holidays>
-      <Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CHRISTMAS_EVE"/>
-      <Fixed month="DECEMBER" day="31" descriptionPropertiesKey="NEW_YEARS_EVE"/>
+      <Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CHRISTMAS_EVE" localizedType="OBSERVANCE"/>
+      <Fixed month="DECEMBER" day="31" descriptionPropertiesKey="NEW_YEARS_EVE" localizedType="OBSERVANCE"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY" localizedType="OBSERVANCE"/>
     </Holidays>
   </SubConfigurations>
 
