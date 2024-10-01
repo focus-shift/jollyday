@@ -488,6 +488,10 @@
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
     </Holidays>
+
+    <Sources>
+      <Source>https://law.lis.virginia.gov/vacode/title2.2/chapter33/section2.2-3300/</Source>
+    </Sources>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="wa" description="Washington">
