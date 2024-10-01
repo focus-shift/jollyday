@@ -277,6 +277,10 @@
       <FixedWeekday which="FOURTH" weekday="MONDAY" month="APRIL" descriptionPropertiesKey="CONFEDERATE"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
     </Holidays>
+
+    <Sources>
+      <Source>https://www.sos.ms.gov/communications-publications/state-holidays</Source>
+    </Sources>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="mo" description="Missouri">
