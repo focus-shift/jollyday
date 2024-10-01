@@ -142,12 +142,12 @@
 
   <SubConfigurations hierarchy="hi" description="Hawaii">
     <Holidays>
-      <Fixed month="MARCH" day="26" descriptionPropertiesKey="KALANIANAOLE"/>
-      <Fixed month="JUNE" day="11" descriptionPropertiesKey="KAMEHAMEHA"/>
+      <Fixed month="MARCH" day="26" descriptionPropertiesKey="KALANIANAOLE" localizedType="OBSERVANCE"/>
+      <Fixed month="JUNE" day="11" descriptionPropertiesKey="KAMEHAMEHA" localizedType="OBSERVANCE"/>
       <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="THIRD" weekday="FRIDAY" month="AUGUST" descriptionPropertiesKey="STATEHOOD"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+      <FixedWeekday which="THIRD" weekday="FRIDAY" month="AUGUST" descriptionPropertiesKey="STATEHOOD" localizedType="OBSERVANCE"/>
+      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY" localizedType="OBSERVANCE"/>
     </Holidays>
   </SubConfigurations>
 
