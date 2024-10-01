@@ -205,8 +205,8 @@
     <Holidays>
       <Fixed month="APRIL" day="26" validFrom="1925" validTo="2022" descriptionPropertiesKey="CONFEDERATE"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <ChristianHoliday type="MARDI_GRAS" descriptionPropertiesKey="christian.MARDI_GRAS"/>
+      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY" localizedType="OBSERVANCE"/>
+      <ChristianHoliday type="MARDI_GRAS" descriptionPropertiesKey="christian.MARDI_GRAS" localizedType="OBSERVANCE"/>
     </Holidays>
   </SubConfigurations>
 
