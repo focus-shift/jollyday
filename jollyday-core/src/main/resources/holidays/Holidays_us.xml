@@ -161,11 +161,11 @@
 
   <SubConfigurations hierarchy="il" description="Illinois">
     <Holidays>
-      <Fixed month="FEBRUARY" day="12" descriptionPropertiesKey="LINCOLN"/>
+      <Fixed month="FEBRUARY" day="12" descriptionPropertiesKey="LINCOLN" localizedType="OBSERVANCE"/>
       <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
-      <FixedWeekday which="FIRST" weekday="MONDAY" month="MARCH" descriptionPropertiesKey="PULASKI"/>
+      <FixedWeekday which="FIRST" weekday="MONDAY" month="MARCH" descriptionPropertiesKey="PULASKI" localizedType="OBSERVANCE"/>
     </Holidays>
   </SubConfigurations>
 
