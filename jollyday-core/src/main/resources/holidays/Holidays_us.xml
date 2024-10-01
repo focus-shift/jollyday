@@ -441,7 +441,7 @@
     </Holidays>
   </SubConfigurations>
 
-  <SubConfigurations hierarchy="tn" description="Tennesee">
+  <SubConfigurations hierarchy="tn" description="Tennessee">
     <Holidays>
       <Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CHRISTMAS_EVE"/>
       <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
