@@ -251,6 +251,20 @@ If you want to raise an **issue or bug** you can create a [new issue](https://gi
 * [Subdivisions with Their Own ISO 3166-1 Alpha-2 Codes as Separate Files](.adr/002-subdivision-with-own-iso-3166-1-alpha-2.md)
 * [Document empty subdivision](.adr/001-document-every-subdivision.md)
 
+### git hooks (optional)
+
+There are some app specific git hooks to automate stuff like:
+
+* Add 'closes #issue-number' to the commit message
+
+If you want to take advantage of this automation you can run:
+
+```bash
+git config core.hooksPath '.githooks' 
+```
+
+The git hooks can be found in the [.githooks](./.githooks/) directory.
+
 ## License
 
 [Apache License, Version 2.0](LICENSE)
