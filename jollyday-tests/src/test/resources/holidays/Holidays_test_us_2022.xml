@@ -4,14 +4,12 @@
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
   <Holidays>
-    <Fixed month="JANUARY" day="1"/>
     <Fixed month="MAY" day="30" descriptionPropertiesKey="MEMORIAL_DAY"/>
     <Fixed month="JUNE" day="20" descriptionPropertiesKey="JUNETEENTH"/>
     <Fixed month="JULY" day="4"/>
     <Fixed month="SEPTEMBER" day="5" descriptionPropertiesKey="LABOR_DAY"/>
     <Fixed month="NOVEMBER" day="11"/>
     <Fixed month="NOVEMBER" day="24" descriptionPropertiesKey="THANKSGIVING"/>
-    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
   </Holidays>
   <SubConfigurations hierarchy="al" description="Alabama">
     <Holidays>
@@ -51,12 +49,6 @@
       <Fixed month="JANUARY" day="17"/>
       <Fixed month="FEBRUARY" day="21"/>
     </Holidays>
-    <SubConfigurations hierarchy="be" description="Berkeley">
-      <Holidays>
-        <Fixed month="MARCH" day="8"/>
-        <Fixed month="OCTOBER" day="21"/>
-      </Holidays>
-    </SubConfigurations>
   </SubConfigurations>
   <SubConfigurations hierarchy="co" description="Colorado">
     <Holidays>
@@ -67,7 +59,6 @@
   </SubConfigurations>
   <SubConfigurations hierarchy="ct" description="Connecticut">
     <Holidays>
-      <Fixed month="FEBRUARY" day="12"/>
       <Fixed month="JANUARY" day="17"/>
       <Fixed month="FEBRUARY" day="21"/>
       <Fixed month="OCTOBER" day="10"/>
@@ -85,14 +76,12 @@
     <Holidays>
       <Fixed month="JANUARY" day="17"/>
       <Fixed month="FEBRUARY" day="21"/>
-      <Fixed month="OCTOBER" day="10"/>
     </Holidays>
   </SubConfigurations>
   <SubConfigurations hierarchy="fl" description="Florida">
     <Holidays>
       <Fixed month="JANUARY" day="17"/>
       <Fixed month="FEBRUARY" day="21"/>
-      <Fixed month="OCTOBER" day="10"/>
     </Holidays>
   </SubConfigurations>
   <SubConfigurations hierarchy="ga" description="Georgia">
@@ -100,7 +89,6 @@
       <Fixed month="JANUARY" day="17"/>
       <Fixed month="FEBRUARY" day="21"/>
       <Fixed month="OCTOBER" day="10"/>
-      <Fixed month="APRIL" day="25"/>
     </Holidays>
   </SubConfigurations>
   <SubConfigurations hierarchy="hi" description="Hawaii">
@@ -122,7 +110,6 @@
   <SubConfigurations hierarchy="il" description="Illinois">
     <Holidays>
       <Fixed month="FEBRUARY" day="12"/>
-      <Fixed month="NOVEMBER" day="8"/>
       <Fixed month="JANUARY" day="17"/>
       <Fixed month="FEBRUARY" day="21"/>
       <Fixed month="OCTOBER" day="10"/>
@@ -132,8 +119,6 @@
   <SubConfigurations hierarchy="in" description="Indiana">
     <Holidays>
       <Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CHRISTMAS_EVE"/>
-      <Fixed month="MAY" day="3"/>
-      <Fixed month="NOVEMBER" day="8"/>
       <Fixed month="JANUARY" day="17"/>
       <Fixed month="APRIL" day="15"/>
       <Fixed month="APRIL" day="18"/>
@@ -179,7 +164,6 @@
       <Fixed month="FEBRUARY" day="21"/>
       <Fixed month="OCTOBER" day="10"/>
       <Fixed month="MAY" day="30" descriptionPropertiesKey="MEMORIAL_DAY"/>
-      <Fixed month="NOVEMBER" day="8"/>
     </Holidays>
   </SubConfigurations>
   <SubConfigurations hierarchy="ma" description="Massachusetts">
@@ -203,7 +187,6 @@
   </SubConfigurations>
   <SubConfigurations hierarchy="mi" description="Michigan">
     <Holidays>
-      <Fixed month="OCTOBER" day="30"/>
       <Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CHRISTMAS_EVE"/>
       <Fixed month="DECEMBER" day="31"/>
       <Fixed month="JANUARY" day="17"/>
@@ -235,8 +218,6 @@
   </SubConfigurations>
   <SubConfigurations hierarchy="mt" description="Montana">
     <Holidays>
-      <Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CHRISTMAS_EVE"/>
-      <Fixed month="DECEMBER" day="31"/>
       <Fixed month="JANUARY" day="17"/>
       <Fixed month="FEBRUARY" day="21"/>
       <Fixed month="NOVEMBER" day="8"/>
@@ -270,7 +251,6 @@
       <Fixed month="FEBRUARY" day="21"/>
       <Fixed month="OCTOBER" day="10"/>
       <Fixed month="APRIL" day="15"/>
-      <Fixed month="NOVEMBER" day="8"/>
     </Holidays>
   </SubConfigurations>
   <SubConfigurations hierarchy="nm" description="New Mexico">
@@ -282,7 +262,6 @@
   <SubConfigurations hierarchy="ny" description="New York">
     <Holidays>
       <Fixed month="FEBRUARY" day="12"/>
-      <Fixed month="NOVEMBER" day="8"/>
       <Fixed month="JANUARY" day="17"/>
       <Fixed month="FEBRUARY" day="21"/>
       <Fixed month="OCTOBER" day="10"/>
@@ -362,7 +341,6 @@
     <Holidays>
       <Fixed month="JANUARY" day="17"/>
       <Fixed month="FEBRUARY" day="21"/>
-      <Fixed month="OCTOBER" day="10"/>
     </Holidays>
   </SubConfigurations>
   <SubConfigurations hierarchy="tn" description="Tennesee">
@@ -392,7 +370,6 @@
     <Holidays>
       <Fixed month="JANUARY" day="17"/>
       <Fixed month="FEBRUARY" day="21"/>
-      <Fixed month="OCTOBER" day="10"/>
       <Fixed month="AUGUST" day="15"/>
     </Holidays>
   </SubConfigurations>
@@ -422,9 +399,6 @@
     <Holidays>
       <Fixed month="JANUARY" day="17"/>
       <Fixed month="FEBRUARY" day="21"/>
-      <Fixed month="OCTOBER" day="10"/>
-      <Fixed month="NOVEMBER" day="8"/>
-      <Fixed month="SEPTEMBER" day="13"/>
     </Holidays>
   </SubConfigurations>
   <SubConfigurations hierarchy="wy" description="Wyoming">
