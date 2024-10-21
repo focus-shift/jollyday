@@ -47,7 +47,11 @@ public abstract class AbstractCountryTestBase {
   protected void compareHierarchies(CalendarHierarchy expected, CalendarHierarchy found) {
     assertThat(found.getDescription()).isNotNull();
     assertThat(found.getId()).isEqualTo(expected.getId());
-    assertThat(found.getChildren()).hasSize(expected.getChildren().size());
+
+    assertThat(found.getChildren())
+      .withFailMessage("Number of %s children should be %s but are %s", found.getDescription(), expected.getChildren().size(), found.getChildren().size())
+      .hasSameSizeAs(expected.getChildren());
+
     for (String id : expected.getChildren().keySet()) {
       assertThat(found.getChildren()).containsKey(id);
       compareHierarchies(expected.getChildren().get(id), found.getChildren().get(id));
@@ -105,7 +109,7 @@ public abstract class AbstractCountryTestBase {
     for (final Holiday expectedHoliday : expectedHolidays) {
       assertThat(expectedHoliday.getDescription()).isNotNull();
       if (!CalendarUtil.contains(foundHolidays, expectedHoliday.getDate())) {
-        fail("Could not find " + expectedHoliday + " in " + expectedHierarchy.getDescription() + " - " + foundHolidays);
+        fail("Could not find " + expectedHoliday + " in " + expectedHierarchy.getDescription() + " -  " + foundHolidays);
       }
     }
 
