@@ -242,7 +242,7 @@
       </RelativeToWeekdayInMonth>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
-      <!-- American Indian Heritage Day missing -->
+      <FixedWeekday which="FOURTH" weekday="FRIDAY" month="NOVEMBER" validFrom="1863" descriptionPropertiesKey="AMERICAN_INDIAN_HERITAGE_DAY"/>
     </Holidays>
   </SubConfigurations>
 
@@ -428,10 +428,10 @@
   <SubConfigurations hierarchy="ok" description="Oklahoma">
     <Holidays>
       <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CHRISTMAS_EVE" localizedType="OBSERVANCE"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="2019" descriptionPropertiesKey="INDIGENOUS_PEOPLES_DAY"/>
-      <!-- Christmas Eve is missing -->
       <FixedWeekday which="FOURTH" weekday="FRIDAY" month="NOVEMBER" validFrom="1863" descriptionPropertiesKey="DAY_AFTER_THANKSGIVING"/>
     </Holidays>
   </SubConfigurations>
@@ -541,7 +541,7 @@
     <Holidays>
       <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <!-- Native American Heritage Day - Day after 4th Thursday in November missing -->
+      <FixedWeekday which="FOURTH" weekday="FRIDAY" month="NOVEMBER" validFrom="1863" descriptionPropertiesKey="NATIVE_AMERICAN_HERITAGE_DAY"/>
     </Holidays>
   </SubConfigurations>
 
