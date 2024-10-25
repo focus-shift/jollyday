@@ -28,7 +28,6 @@ class HolidayCHTest extends AbstractCountryTestBase {
     validateCalendarData(ISO_CODE, Year.of(2022), true);
   }
 
-
   @Property
   void ensuresThatStNicholasIsNotConfiguredInObwaldenUntil1946(@ForAll @YearRange(max = 1946) Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(SWITZERLAND));
