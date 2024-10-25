@@ -54,7 +54,7 @@
     <Holidays>
       <Fixed month="JANUARY" day="17"/>
       <Fixed month="FEBRUARY" day="21"/>
-      <Fixed month="OCTOBER" day="10"/>
+      <Fixed month="OCTOBER" day="3" descriptionPropertiesKey="CABRINI_DAY"/>
     </Holidays>
   </SubConfigurations>
   <SubConfigurations hierarchy="ct" description="Connecticut">

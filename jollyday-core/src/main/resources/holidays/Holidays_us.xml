@@ -94,9 +94,14 @@
     <Holidays>
       <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1906" descriptionPropertiesKey="COLUMBUS_DAY"/>
-      <!-- Cabrini Day is missing on first monday in october -->
+      <FixedWeekday which="FIRST" weekday="MONDAY" month="OCTOBER" validFrom="2020" descriptionPropertiesKey="CABRINI_DAY"/>
+      <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1906" validTo="2019" descriptionPropertiesKey="COLUMBUS_DAY"/>
     </Holidays>
+
+    <Sources>
+      <Source>https://leg.colorado.gov/bills/hb19-1185</Source>
+      <Source>https://www.cpr.org/2020/10/03/monday-is-colorados-1st-mother-cabrini-day-heres-why-the-state-chose-her-to-replace-columbus-day/</Source>
+    </Sources>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="ct" description="Connecticut">
