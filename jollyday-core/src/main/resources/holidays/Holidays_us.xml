@@ -83,7 +83,7 @@
       </Fixed>
       <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <!-- DAY after Thanksgiving missing -->
+      <FixedWeekday which="FOURTH" weekday="FRIDAY" month="NOVEMBER" validFrom="1863" descriptionPropertiesKey="DAY_AFTER_THANKSGIVING"/>
     </Holidays>
   </SubConfigurations>
 
@@ -117,8 +117,8 @@
     <Holidays>
       <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="FOURTH" weekday="FRIDAY" month="NOVEMBER" validFrom="1863" descriptionPropertiesKey="DAY_AFTER_THANKSGIVING"/>
       <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <!-- DAY after Thanksgiving missing -->
     </Holidays>
 
     <Sources>
@@ -131,7 +131,7 @@
       <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="FOURTH" weekday="MONDAY" month="APRIL" descriptionPropertiesKey="CONFEDERATE" localizedType="OBSERVANCE"/>
-      <!-- DAY after Thanksgiving missing -->
+      <FixedWeekday which="FOURTH" weekday="FRIDAY" month="NOVEMBER" validFrom="1863" descriptionPropertiesKey="DAY_AFTER_THANKSGIVING"/>
     </Holidays>
   </SubConfigurations>
 
@@ -141,7 +141,7 @@
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
       <FixedWeekday which="FOURTH" weekday="MONDAY" month="APRIL" validFrom="1874" validTo="2016" descriptionPropertiesKey="CONFEDERATE"/>
-      <!-- state holiday - Day after 4th Thursday in November missing -->
+      <FixedWeekday which="FOURTH" weekday="FRIDAY" month="NOVEMBER" validFrom="1863" descriptionPropertiesKey="DAY_AFTER_THANKSGIVING"/>
     </Holidays>
   </SubConfigurations>
 
@@ -188,14 +188,14 @@
       <Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CHRISTMAS_EVE" localizedType="OBSERVANCE"/>
       <Fixed month="DECEMBER" day="31" descriptionPropertiesKey="NEW_YEARS_EVE" localizedType="OBSERVANCE"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
-      <!-- DAY after Thanksgiving missing -->
+      <FixedWeekday which="FOURTH" weekday="FRIDAY" month="NOVEMBER" validFrom="1863" descriptionPropertiesKey="DAY_AFTER_THANKSGIVING"/>
     </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="ks" description="Kansas">
     <Holidays>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
-      <!-- DAY after Thanksgiving missing -->
+      <FixedWeekday which="FOURTH" weekday="FRIDAY" month="NOVEMBER" validFrom="1863" descriptionPropertiesKey="DAY_AFTER_THANKSGIVING"/>
     </Holidays>
   </SubConfigurations>
 
@@ -204,8 +204,8 @@
       <Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CHRISTMAS_EVE" localizedType="OBSERVANCE"/>
       <Fixed month="DECEMBER" day="31" descriptionPropertiesKey="NEW_YEARS_EVE" localizedType="OBSERVANCE"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
+      <FixedWeekday which="FOURTH" weekday="FRIDAY" month="NOVEMBER" validFrom="1863" descriptionPropertiesKey="DAY_AFTER_THANKSGIVING"/>
       <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY" localizedType="OBSERVANCE"/>
-      <!-- DAY after Thanksgiving missing -->
     </Holidays>
   </SubConfigurations>
 
@@ -223,7 +223,7 @@
       <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
-      <!-- DAY after Thanksgiving missing -->
+      <FixedWeekday which="FOURTH" weekday="FRIDAY" month="NOVEMBER" validFrom="1863" descriptionPropertiesKey="DAY_AFTER_THANKSGIVING"/>
     </Holidays>
   </SubConfigurations>
 
@@ -265,8 +265,8 @@
       <Fixed month="DECEMBER" day="31" descriptionPropertiesKey="NEW_YEARS_EVE"/>
       <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+      <FixedWeekday which="FOURTH" weekday="FRIDAY" month="NOVEMBER" validFrom="1863" descriptionPropertiesKey="DAY_AFTER_THANKSGIVING"/>
       <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY" localizedType="OBSERVANCE"/>
-      <!-- DAY after Thanksgiving missing -->
     </Holidays>
 
     <Sources>
@@ -278,7 +278,7 @@
     <Holidays>
       <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <!-- DAY after Thanksgiving missing -->
+      <FixedWeekday which="FOURTH" weekday="FRIDAY" month="NOVEMBER" validFrom="1863" descriptionPropertiesKey="DAY_AFTER_THANKSGIVING"/>
     </Holidays>
   </SubConfigurations>
 
@@ -322,7 +322,7 @@
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="LAST" weekday="FRIDAY" month="APRIL" descriptionPropertiesKey="ARBOR"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
-      <!-- DAY after Thanksgiving missing -->
+      <FixedWeekday which="FOURTH" weekday="FRIDAY" month="NOVEMBER" validFrom="1863" descriptionPropertiesKey="DAY_AFTER_THANKSGIVING"/>
       <!-- US Indigenous People's Day missing -->
     </Holidays>
   </SubConfigurations>
@@ -332,7 +332,7 @@
       <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="LAST" weekday="FRIDAY" month="OCTOBER" descriptionPropertiesKey="NEVADA" localizedType="OBSERVANCE"/>
-      <!-- DAY after Thanksgiving missing -->
+      <FixedWeekday which="FOURTH" weekday="FRIDAY" month="NOVEMBER" validFrom="1863" descriptionPropertiesKey="DAY_AFTER_THANKSGIVING"/>
     </Holidays>
   </SubConfigurations>
 
@@ -341,7 +341,7 @@
       <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
-      <!-- DAY after Thanksgiving missing -->
+      <FixedWeekday which="FOURTH" weekday="FRIDAY" month="NOVEMBER" validFrom="1863" descriptionPropertiesKey="DAY_AFTER_THANKSGIVING"/>
     </Holidays>
   </SubConfigurations>
 
@@ -359,7 +359,7 @@
     <Holidays>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
       <!-- US Indigenous People's Day missing -->
-      <!-- DAY after Thanksgiving missing -->
+      <FixedWeekday which="FOURTH" weekday="FRIDAY" month="NOVEMBER" validFrom="1863" descriptionPropertiesKey="DAY_AFTER_THANKSGIVING"/>
     </Holidays>
   </SubConfigurations>
 
@@ -382,8 +382,8 @@
     <Holidays>
       <Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CHRISTMAS_EVE"/>
       <FixedWeekday which="FOURTH" weekday="MONDAY" month="APRIL" descriptionPropertiesKey="CONFEDERATE" localizedType="OBSERVANCE"/>
+      <FixedWeekday which="FOURTH" weekday="FRIDAY" month="NOVEMBER" validFrom="1863" descriptionPropertiesKey="DAY_AFTER_THANKSGIVING"/>
       <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY" localizedType="OBSERVANCE"/>
-      <!-- DAY after Thanksgiving missing -->
     </Holidays>
     <SubConfigurations hierarchy="ce" description="Charlotte">
       <Holidays>
@@ -421,7 +421,7 @@
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
       <!-- Christmas Eve is missing -->
-      <!-- DAY after Thanksgiving missing -->
+      <FixedWeekday which="FOURTH" weekday="FRIDAY" month="NOVEMBER" validFrom="1863" descriptionPropertiesKey="DAY_AFTER_THANKSGIVING"/>
     </Holidays>
   </SubConfigurations>
 
@@ -429,7 +429,7 @@
     <Holidays>
       <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <!-- DAY after Thanksgiving missing -->
+      <FixedWeekday which="FOURTH" weekday="FRIDAY" month="NOVEMBER" validFrom="1863" descriptionPropertiesKey="DAY_AFTER_THANKSGIVING"/>
     </Holidays>
   </SubConfigurations>
 
@@ -438,7 +438,7 @@
       <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
-      <!-- DAY after Thanksgiving missing -->
+      <FixedWeekday which="FOURTH" weekday="FRIDAY" month="NOVEMBER" validFrom="1863" descriptionPropertiesKey="DAY_AFTER_THANKSGIVING"/>
     </Holidays>
   </SubConfigurations>
 
@@ -455,7 +455,7 @@
       <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
-      <!-- DAY after Thanksgiving missing -->
+      <FixedWeekday which="FOURTH" weekday="FRIDAY" month="NOVEMBER" validFrom="1863" descriptionPropertiesKey="DAY_AFTER_THANKSGIVING"/>
     </Holidays>
   </SubConfigurations>
 
@@ -474,8 +474,8 @@
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="FOURTH" weekday="MONDAY" month="APRIL" descriptionPropertiesKey="CONFEDERATE" localizedType="OBSERVANCE"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
+      <FixedWeekday which="FOURTH" weekday="FRIDAY" month="NOVEMBER" validFrom="1863" descriptionPropertiesKey="DAY_AFTER_THANKSGIVING"/>
       <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY" localizedType="OBSERVANCE"/>
-      <!-- Friday after Thanksgiving missing -->
     </Holidays>
   </SubConfigurations>
 
@@ -485,8 +485,8 @@
       <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="FOURTH" weekday="MONDAY" month="APRIL" validFrom="1973" descriptionPropertiesKey="CONFEDERATE"/>
+      <FixedWeekday which="FOURTH" weekday="FRIDAY" month="NOVEMBER" validFrom="1863" descriptionPropertiesKey="DAY_AFTER_THANKSGIVING"/>
       <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY" localizedType="OBSERVANCE"/>
-      <!-- DAY after Thanksgiving missing -->
     </Holidays>
   </SubConfigurations>
 
@@ -536,7 +536,7 @@
       <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
-      <!-- DAY after Thanksgiving missing -->
+      <FixedWeekday which="FOURTH" weekday="FRIDAY" month="NOVEMBER" validFrom="1863" descriptionPropertiesKey="DAY_AFTER_THANKSGIVING"/>
     </Holidays>
   </SubConfigurations>
 
