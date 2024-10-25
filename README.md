@@ -190,7 +190,7 @@ If you already use one of these libraries in your project than just use the spec
 
 ## ISO 3166
 
-To retrieve the public holidays of a country the [ISO 3166-1 alpha-2] standard is used. An [list of current ISO 3166-1 alpha-2 codes] is available at wikipedia.
+To retrieve the public holidays of a country the [ISO 3166-1 alpha-2] standard is used. A [list of current ISO 3166-1 alpha-2 codes] is available at wikipedia.
 
 To access the public holidays of a subdivision of a country, e.g. Baden-Württemberg of Germany the [ISO 3166-2] standard is used. A [list of current ISO 3166-2 codes] is available at wikipedia.
 
