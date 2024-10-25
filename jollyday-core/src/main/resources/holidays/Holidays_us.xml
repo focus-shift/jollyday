@@ -533,8 +533,8 @@
   <SubConfigurations hierarchy="va" description="Virginia">
     <Holidays>
       <Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
-      <RelativeToWeekdayInMonth weekday="FRIDAY" when="BEFORE" descriptionPropertiesKey="LEE_JACKSON">
-        <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+      <RelativeToWeekdayInMonth weekday="FRIDAY" when="BEFORE" validTo="2019" descriptionPropertiesKey="LEE_JACKSON" localizedType="OBSERVANCE">
+        <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
       </RelativeToWeekdayInMonth>
       <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>
@@ -542,6 +542,7 @@
     </Holidays>
 
     <Sources>
+      <Source>https://en.wikipedia.org/wiki/Lee%E2%80%93Jackson_Day</Source>
       <Source>https://law.lis.virginia.gov/vacode/title2.2/chapter33/section2.2-3300/</Source>
     </Sources>
   </SubConfigurations>
