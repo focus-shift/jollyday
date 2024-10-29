@@ -107,7 +107,6 @@
 
   <SubConfigurations hierarchy="gl" description="Glarus">
     <Holidays>
-      <Fixed month="JANUARY" day="2" descriptionPropertiesKey="ST_BERCHTHOLD"/>
       <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
       <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
       <FixedWeekday which="FIRST" weekday="THURSDAY" month="APRIL" descriptionPropertiesKey="NAEFELS_TRIP"/>
@@ -128,7 +127,6 @@
 
   <SubConfigurations hierarchy="ju" description="Jura">
     <Holidays>
-      <Fixed month="JANUARY" day="2" descriptionPropertiesKey="ST_BERCHTHOLD"/>
       <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
       <Fixed month="JUNE" day="23" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
       <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
@@ -143,7 +141,6 @@
 
   <SubConfigurations hierarchy="lu" description="Luzern">
     <Holidays>
-      <Fixed month="JANUARY" day="2" descriptionPropertiesKey="ST_BERCHTHOLD"/>
       <Fixed month="MARCH" day="19" descriptionPropertiesKey="ST_JOSEPH" localizedType="OBSERVANCE"/>
       <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
       <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
@@ -157,7 +154,6 @@
 
   <SubConfigurations hierarchy="ne" description="Neuchâtel">
     <Holidays>
-      <Fixed month="JANUARY" day="2" descriptionPropertiesKey="ST_BERCHTHOLD"/>
       <Fixed month="MARCH" day="1" descriptionPropertiesKey="REPUBLIC_DAY"/>
       <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
       <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
@@ -181,7 +177,6 @@
 
   <SubConfigurations hierarchy="ow" description="Obwalden">
     <Holidays>
-      <Fixed month="JANUARY" day="2" descriptionPropertiesKey="ST_BERCHTHOLD"/>
       <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
       <Fixed month="SEPTEMBER" day="25" validFrom="1947" descriptionPropertiesKey="ST_NICHOLAS"/>
       <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
@@ -217,7 +212,6 @@
 
   <SubConfigurations hierarchy="so" description="Solothurn">
     <Holidays>
-      <Fixed month="JANUARY" day="2" descriptionPropertiesKey="ST_BERCHTHOLD"/>
       <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
       <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
       <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
@@ -306,7 +300,6 @@
 
   <SubConfigurations hierarchy="zg" description="Zug">
     <Holidays>
-      <Fixed month="JANUARY" day="2" descriptionPropertiesKey="ST_BERCHTHOLD"/>
       <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
       <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
       <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
@@ -319,7 +312,6 @@
 
   <SubConfigurations hierarchy="zh" description="Zürich">
     <Holidays>
-      <Fixed month="JANUARY" day="2" descriptionPropertiesKey="ST_BERCHTHOLD"/>
       <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
       <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
       <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
