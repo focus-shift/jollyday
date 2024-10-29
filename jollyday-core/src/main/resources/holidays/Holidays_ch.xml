@@ -224,7 +224,7 @@
 
   <SubConfigurations hierarchy="sz" description="Schwyz">
     <Holidays>
-      <Fixed month="JANUARY" day="6" descriptionPropertiesKey="EPIPHANY"/>
+      <Fixed month="JANUARY" day="6" descriptionPropertiesKey="EPIPHANY" localizedType="OBSERVANCE"/>
       <Fixed month="MARCH" day="19" descriptionPropertiesKey="ST_JOSEPH"/>
       <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
       <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
@@ -266,7 +266,7 @@
 
   <SubConfigurations hierarchy="ur" description="Uri">
     <Holidays>
-      <Fixed month="JANUARY" day="6" descriptionPropertiesKey="EPIPHANY"/>
+      <Fixed month="JANUARY" day="6" descriptionPropertiesKey="EPIPHANY" localizedType="OBSERVANCE"/>
       <Fixed month="MARCH" day="19" descriptionPropertiesKey="ST_JOSEPH"/>
       <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
       <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
