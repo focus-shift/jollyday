@@ -282,8 +282,7 @@
   <SubConfigurations hierarchy="vd" description="Vaud">
     <Holidays>
       <Fixed month="JANUARY" day="2" descriptionPropertiesKey="ST_BERCHTHOLD"/>
-      <RelativeToWeekdayInMonth weekday="MONDAY" when="AFTER"
-                                    descriptionPropertiesKey="FEDERAL_DAY_THANKSGIVING_MON">
+      <RelativeToWeekdayInMonth weekday="MONDAY" when="AFTER" descriptionPropertiesKey="FEDERAL_DAY_THANKSGIVING_MON" localizedType="OBSERVANCE">
         <FixedWeekday which="THIRD" weekday="SUNDAY" month="SEPTEMBER"/>
       </RelativeToWeekdayInMonth>
       <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
