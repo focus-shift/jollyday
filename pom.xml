@@ -4,7 +4,7 @@
 
   <groupId>de.focus-shift</groupId>
   <artifactId>jollyday</artifactId>
-  <version>0.34.0-SNAPSHOT</version>
+  <version>0.34.0</version>
   <packaging>pom</packaging>
 
   <name>Jollyday</name>
