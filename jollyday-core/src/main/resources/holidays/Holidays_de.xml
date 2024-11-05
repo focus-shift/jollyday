@@ -39,6 +39,7 @@
     <Holidays>
       <Fixed month="MARCH" day="8" descriptionPropertiesKey="INTERNATIONAL_WOMAN" validFrom="2019"/>
       <Fixed month="MAY" day="8" descriptionPropertiesKey="LIBERATION" validFrom="2020" validTo="2020"/>
+      <Fixed month="MAY" day="8" descriptionPropertiesKey="LIBERATION" validFrom="2025" validTo="2025"/>
       <RelativeToFixed validFrom="1945" validTo="1989" descriptionPropertiesKey="REPENTANCE_PRAYER">
         <Weekday>WEDNESDAY</Weekday>
         <When>BEFORE</When>
