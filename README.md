@@ -88,6 +88,77 @@ If you already use one of these libraries in your project than just use the spec
 ```
 </details>
 
+### Configuration
+
+<details>
+  <summary>via jollyday.properties (click to expand)</summary>
+
+  ### Providing own properties
+
+  The configuration resides within the `jollyday.properties` and can be overridden by:
+
+  **URLs**  
+  Specifying a comma separated list of **URLs** with the system property `de.focus_shift.jollyday.config.urls` which point
+  to properties files to overload the basic properties.
+
+  ```bash
+  -Dde.focus_shift.jollyday.config.urls=file:/some/path/new.properties,http://myserver/some/path/further.properties,jar:file:myLibrary.jar!/my.properties
+  ```
+
+  **Classes**  
+  Specifying a comma separated list of **classes** which implement the `ConfigurationProvider` interface with the
+  system property `de.focus_shift.jollyday.config.providers`. This will overload the basic and the URL specified properties.
+
+  ```bash
+  -Dde.focus_shift.jollyday.config.providers=some.package.name.MyConfigurationProvider,some.other.package.AnotherConfigurationProvider
+  ```
+
+  **URLs and Classes**  
+  The order of loading properties is Base -> URLs -> ConfigurationProvider.
+
+
+  ### Providing own implementations
+
+  **Manager implementation**  
+  A manager implementation extends the abstract `HolidayManager` class and does the actual holiday parsing.
+  The basic API properties are used to define the manager implementation class used for the specific
+  country the manager is created for.
+  
+  ```properties
+  manager.impl=de.focus_shift.jollyday.core.impl.DefaultHolidayManager
+  ```
+  
+  This configuration defines a manager implementation class used as a default for every country. You can define a
+  manager implementation on a per country base.
+  
+  ```properties
+  manager.impl=de.focus_shift.jollyday.core.impl.XMLManager
+  manager.impl.us=de.focus_shift.jollyday.core.impl.MyXMLManager
+  ```
+  
+  This will let the `MyXMLManager` class be used for calculating US holidays and the `XMLManager` for all other countries.
+
+  **Parser implementation**  
+  A parser implementation is used for parsing the XML file content. There are several parsers configured depending on the class to parse the info from.
+  
+  ```properties
+  parser.impl.de.focus_shift.jollyday.core.spi.Fixed                       = de.focus_shift.jollyday.core.parser.impl.FixedParser
+  parser.impl.de.focus_shift.jollyday.core.spi.FixedWeekdayInMonth         = de.focus_shift.jollyday.core.parser.impl.FixedWeekdayInMonthParser
+  parser.impl.de.focus_shift.jollyday.core.spi.IslamicHoliday              = de.focus_shift.jollyday.core.parser.impl.IslamicHolidayParser
+  parser.impl.de.focus_shift.jollyday.core.spi.ChristianHoliday            = de.focus_shift.jollyday.core.parser.impl.ChristianHolidayParser
+  parser.impl.de.focus_shift.jollyday.core.spi.RelativeToFixed             = de.focus_shift.jollyday.core.parser.impl.RelativeToFixedParser
+  parser.impl.de.focus_shift.jollyday.core.spi.RelativeToWeekdayInMonth    = de.focus_shift.jollyday.core.parser.impl.RelativeToWeekdayInMonthParser
+  parser.impl.de.focus_shift.jollyday.core.spi.FixedWeekdayBetweenFixed    = de.focus_shift.jollyday.core.parser.impl.FixedWeekdayBetweenFixedParser
+  parser.impl.de.focus_shift.jollyday.core.spi.FixedWeekdayRelativeToFixed = de.focus_shift.jollyday.core.parser.impl.FixedWeekdayRelativeToFixedParser
+  parser.impl.de.focus_shift.jollyday.core.spi.EthiopianOrthodoxHoliday    = de.focus_shift.jollyday.core.parser.impl.EthiopianOrthodoxHolidayParser
+  parser.impl.de.focus_shift.jollyday.core.spi.RelativeToEasterSunday      = de.focus_shift.jollyday.core.parser.impl.RelativeToEasterSundayParser
+  ```
+
+  The configuration property name starts with `parser.impl` and finishes with the XML class name.
+  The value is the parser implementation class name which implements the `HolidayParser` interface. 
+
+</details>
+
 ### Examples
 
 <details>
