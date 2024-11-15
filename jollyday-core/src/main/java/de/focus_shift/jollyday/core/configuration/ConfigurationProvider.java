@@ -12,13 +12,13 @@ public interface ConfigurationProvider {
    * {@link ConfigurationProvider} implementations to use for jollyday
    * configuration.
    */
-  String CONFIG_PROVIDERS_PROPERTY = "config.providers";
+  String CONFIG_PROVIDERS_PROPERTY = "de.focus_shift.jollyday.config.providers";
 
   /**
    * System property to define URLs to overriding jollyday configuration
    * files.
    */
-  String CONFIG_URLS_PROPERTY = "config.urls";
+  String CONFIG_URLS_PROPERTY = "de.focus_shift.jollyday.config.urls";
 
   /**
    * @return the configuration properties for jollyday.

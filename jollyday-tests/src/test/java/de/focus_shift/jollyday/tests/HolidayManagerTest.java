@@ -88,13 +88,13 @@ class HolidayManagerTest {
 
   @Test
   void ensureToInstantiateHolidayManagerImplementationBasedOnCountry() {
-    System.setProperty("config.urls", "file:./src/test/resources/test.app.properties");
+    System.setProperty("de.focus_shift.jollyday.config.urls", "file:./src/test/resources/test.app.properties");
 
     HolidayManager.setManagerCachingEnabled(false);
     assertThat(HolidayManager.getInstance(create("test"))).isInstanceOf(JapaneseHolidayManager.class);
     HolidayManager.setManagerCachingEnabled(true);
 
-    System.clearProperty("config.urls");
+    System.clearProperty("de.focus_shift.jollyday.config.urls");
   }
 
   @Test
