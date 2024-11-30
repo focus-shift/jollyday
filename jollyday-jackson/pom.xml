@@ -72,6 +72,7 @@
         <configuration>
           <instructions>
             <Bundle-SymbolicName>de.focus_shift.jollyday-jackson</Bundle-SymbolicName>
+            <Import-Package>com.fasterxml.jackson.*;version="[2.17,3)",*</Import-Package>
             <Export-Package>de.focus_shift.jollyday.jackson.*</Export-Package>
             <Require-Capability>osgi.extender;filter:="(osgi.extender=osgi.serviceloader.registrar)"</Require-Capability>
             <Provide-Capability>osgi.serviceloader;osgi.serviceloader=de.focus_shift.jollyday.core.spi.ConfigurationService</Provide-Capability>
