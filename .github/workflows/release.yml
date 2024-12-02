@@ -27,7 +27,6 @@ jobs:
 
       - name: Tests with Maven
         run: ./mvnw verify
-
       - name: Build with Maven
         run: ./mvnw -Prelease -Drelease deploy
         env:
