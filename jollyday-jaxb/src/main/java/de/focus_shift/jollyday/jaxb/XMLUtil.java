@@ -56,13 +56,13 @@ public class XMLUtil {
     return month.ordinal() + 1;
   }
 
-  public static class JAXBContextCreator {
-    public JAXBContext create(String packageName, ClassLoader classLoader) throws JAXBException {
+  private static class JAXBContextCreator {
+    private JAXBContext create(String packageName, ClassLoader classLoader) throws JAXBException {
       return JAXBContext.newInstance(packageName, classLoader);
     }
   }
 
-  public static JAXBContext createJAXBContext(final JAXBContextCreator contextCreator) {
+  private static JAXBContext createJAXBContext(final JAXBContextCreator contextCreator) {
     JAXBContext ctx = null;
     try {
       ctx = contextCreator.create(XMLUtil.PACKAGE, ClassLoadingUtil.getClassloader());

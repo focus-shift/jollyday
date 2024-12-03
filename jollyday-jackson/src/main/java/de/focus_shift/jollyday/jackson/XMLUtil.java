@@ -36,8 +36,8 @@ public class XMLUtil {
     return month.ordinal() + 1;
   }
 
-  public static class JacksonMapperCreator {
-    public XmlMapper create() {
+  private static class JacksonMapperCreator {
+    private XmlMapper create() {
       final XmlMapper mapper = new XmlMapper();
       mapper.setPropertyNamingStrategy(PropertyNamingStrategies.UPPER_CAMEL_CASE);
       return mapper;
