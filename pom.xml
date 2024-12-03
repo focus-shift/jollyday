@@ -264,7 +264,7 @@
                   <version>3.8.5</version>
                 </requireMavenVersion>
                 <requireJavaVersion>
-                  <version>${java.version}</version>
+                  <version>11</version>
                 </requireJavaVersion>
                 <RestrictImports>
                   <reason>Use SLF4j for logging</reason>
