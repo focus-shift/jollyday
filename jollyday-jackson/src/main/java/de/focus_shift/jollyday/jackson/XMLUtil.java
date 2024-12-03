@@ -4,10 +4,8 @@ import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import de.focus_shift.jollyday.jackson.mapping.Configuration;
 import de.focus_shift.jollyday.jackson.mapping.Month;
-import de.focus_shift.jollyday.jackson.mapping.Weekday;
 
 import java.io.InputStream;
-import java.time.DayOfWeek;
 
 public class XMLUtil {
 
@@ -26,16 +24,6 @@ public class XMLUtil {
     } catch (Exception e) {
       throw new IllegalStateException("Cannot parse holidays XML file.", e);
     }
-  }
-
-  /**
-   * Returns the {@link DayOfWeek} equivalent for the given weekday.
-   *
-   * @param weekday a {@link Weekday} object.
-   * @return a DayOfWeek instance.
-   */
-  public final DayOfWeek getWeekday(Weekday weekday) {
-    return DayOfWeek.valueOf(weekday.value());
   }
 
   /**

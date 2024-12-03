@@ -4,7 +4,6 @@ import de.focus_shift.jollyday.core.util.ClassLoadingUtil;
 import de.focus_shift.jollyday.jaxb.mapping.Configuration;
 import de.focus_shift.jollyday.jaxb.mapping.Month;
 import de.focus_shift.jollyday.jaxb.mapping.ObjectFactory;
-import de.focus_shift.jollyday.jaxb.mapping.Weekday;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBElement;
 import jakarta.xml.bind.JAXBException;
@@ -13,7 +12,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.InputStream;
-import java.time.DayOfWeek;
 
 public class XMLUtil {
 
@@ -46,16 +44,6 @@ public class XMLUtil {
     } catch (JAXBException exception) {
       throw new IllegalStateException("Cannot parse holidays XML file.", exception);
     }
-  }
-
-  /**
-   * Returns the {@link DayOfWeek} equivalent for the given weekday.
-   *
-   * @param weekday a {@link Weekday} object.
-   * @return a DayOfWeek instance.
-   */
-  public final DayOfWeek getWeekday(Weekday weekday) {
-    return DayOfWeek.valueOf(weekday.value());
   }
 
   /**
