@@ -22,8 +22,7 @@ public class XMLUtil {
 
   private static final Logger LOG = LoggerFactory.getLogger(XMLUtil.class);
 
-  private static final JAXBContextCreator contextCreator = new JAXBContextCreator();
-  private static final JAXBContext jaxbContext = createJAXBContext(contextCreator);
+  private static final JAXBContext jaxbContext = new JAXBContextCreator().create();
 
   /**
    * Unmarshalls the configuration from the stream. Uses <code>JAXB</code> for
@@ -57,27 +56,27 @@ public class XMLUtil {
   }
 
   private static class JAXBContextCreator {
-    private JAXBContext create(String packageName, ClassLoader classLoader) throws JAXBException {
-      return JAXBContext.newInstance(packageName, classLoader);
-    }
-  }
-
-  private static JAXBContext createJAXBContext(final JAXBContextCreator contextCreator) {
-    JAXBContext ctx = null;
-    try {
-      ctx = contextCreator.create(XMLUtil.PACKAGE, ClassLoadingUtil.getClassloader());
-    } catch (JAXBException e) {
-      LOG.warn("Could not create JAXB context using the current classloader from ClassLoadingUtil. Falling back to ObjectFactory class classloader.");
+    private JAXBContext create() {
+      return createJAXBContext();
     }
 
-    if (ctx == null) {
+    private static JAXBContext createJAXBContext() {
+      JAXBContext ctx = null;
       try {
-        ctx = contextCreator.create(XMLUtil.PACKAGE, ObjectFactory.class.getClassLoader());
-      } catch (JAXBException exception) {
-        throw new IllegalStateException("Could not create JAXB context using ObjectFactory classloader.", exception);
+        ctx = JAXBContext.newInstance(XMLUtil.PACKAGE, ClassLoadingUtil.getClassloader());
+      } catch (JAXBException e) {
+        LOG.warn("Could not create JAXB context using the current classloader from ClassLoadingUtil. Falling back to ObjectFactory class classloader.");
       }
-    }
 
-    return ctx;
+      if (ctx == null) {
+        try {
+          ctx = JAXBContext.newInstance(XMLUtil.PACKAGE, ObjectFactory.class.getClassLoader());
+        } catch (JAXBException exception) {
+          throw new IllegalStateException("Could not create JAXB context using ObjectFactory classloader.", exception);
+        }
+      }
+
+      return ctx;
+    }
   }
 }
