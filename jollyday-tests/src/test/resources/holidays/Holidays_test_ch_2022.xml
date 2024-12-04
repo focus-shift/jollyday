@@ -32,7 +32,7 @@
       <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION" localizedType="OBSERVANCE"/>
       <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
       <Fixed month="APRIL" day="15" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <Fixed month="APRIL" day="18" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+      <Fixed month="APRIL" day="18" descriptionPropertiesKey="christian.EASTER_MONDAY" localizedType="OBSERVANCE"/>
       <Fixed month="JUNE" day="6" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
       <Fixed month="JUNE" day="16" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
     </Holidays>
@@ -42,7 +42,6 @@
     <Holidays>
       <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
       <Fixed month="APRIL" day="15" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <Fixed month="APRIL" day="18" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
       <Fixed month="JUNE" day="6" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
     </Holidays>
   </SubConfigurations>
@@ -51,7 +50,6 @@
     <Holidays>
       <Fixed month="JANUARY" day="2" descriptionPropertiesKey="ST_BERCHTHOLD"/>
       <Fixed month="APRIL" day="15" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <Fixed month="APRIL" day="18" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
       <Fixed month="JUNE" day="6" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
       <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
     </Holidays>
@@ -62,7 +60,6 @@
       <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
       <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
       <Fixed month="APRIL" day="15" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <Fixed month="APRIL" day="18" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
       <Fixed month="JUNE" day="6" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
     </Holidays>
   </SubConfigurations>
@@ -72,7 +69,6 @@
       <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
       <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
       <Fixed month="APRIL" day="15" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <Fixed month="APRIL" day="18" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
       <Fixed month="JUNE" day="6" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
     </Holidays>
   </SubConfigurations>
@@ -96,7 +92,6 @@
       <Fixed month="SEPTEMBER" day="8" descriptionPropertiesKey="GENEVAN_FAST"/>
       <Fixed month="DECEMBER" day="31" descriptionPropertiesKey="RESTORATION_OF_THE_REPUBLIC"/>
       <Fixed month="APRIL" day="15" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <Fixed month="APRIL" day="18" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
       <Fixed month="JUNE" day="6" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
     </Holidays>
   </SubConfigurations>
@@ -107,7 +102,6 @@
       <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
       <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
       <Fixed month="APRIL" day="15" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <Fixed month="APRIL" day="18" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
       <Fixed month="JUNE" day="6" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
     </Holidays>
   </SubConfigurations>
@@ -117,7 +111,6 @@
       <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
       <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
       <Fixed month="APRIL" day="15" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <Fixed month="APRIL" day="18" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
       <Fixed month="JUNE" day="6" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
     </Holidays>
   </SubConfigurations>
@@ -130,7 +123,7 @@
       <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS" localizedType="OBSERVANCE"/>
       <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION" localizedType="OBSERVANCE"/>
       <Fixed month="APRIL" day="15" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <Fixed month="APRIL" day="18" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+      <Fixed month="APRIL" day="18" descriptionPropertiesKey="christian.EASTER_MONDAY" localizedType="OBSERVANCE"/>
       <Fixed month="JUNE" day="6" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
       <Fixed month="JUNE" day="16" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
     </Holidays>
@@ -144,6 +137,7 @@
       <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
       <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
       <Fixed month="APRIL" day="15" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+      <Fixed month="APRIL" day="18" descriptionPropertiesKey="christian.EASTER_MONDAY" localizedType="OBSERVANCE"/>
       <Fixed month="JUNE" day="16" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
     </Holidays>
   </SubConfigurations>
@@ -164,6 +158,7 @@
       <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
       <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
       <Fixed month="APRIL" day="15" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+      <Fixed month="APRIL" day="18" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
       <Fixed month="JUNE" day="16" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
     </Holidays>
   </SubConfigurations>
@@ -176,7 +171,7 @@
       <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
       <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
       <Fixed month="APRIL" day="15" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <Fixed month="APRIL" day="18" descriptionPropertiesKey="christian.EASTER_MONDAY" localizedType="OBSERVANCE"/>
+      <Fixed month="APRIL" day="18" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
       <Fixed month="JUNE" day="6" descriptionPropertiesKey="christian.WHIT_MONDAY" localizedType="OBSERVANCE"/>
       <Fixed month="JUNE" day="16" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
     </Holidays>
@@ -187,7 +182,6 @@
       <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
       <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
       <Fixed month="APRIL" day="15" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <Fixed month="APRIL" day="18" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
       <Fixed month="JUNE" day="6" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
     </Holidays>
   </SubConfigurations>
@@ -198,7 +192,6 @@
       <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
       <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
       <Fixed month="APRIL" day="15" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <Fixed month="APRIL" day="18" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
       <Fixed month="JUNE" day="6" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
     </Holidays>
   </SubConfigurations>
@@ -235,7 +228,6 @@
       <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY" localizedType="OBSERVANCE"/>
       <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
       <Fixed month="APRIL" day="15" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <Fixed month="APRIL" day="18" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
       <Fixed month="JUNE" day="6" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
     </Holidays>
   </SubConfigurations>
@@ -250,7 +242,7 @@
       <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
       <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
       <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
-      <Fixed month="APRIL" day="18" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+      <Fixed month="APRIL" day="18" descriptionPropertiesKey="christian.EASTER_MONDAY" localizedType="OBSERVANCE"/>
       <Fixed month="JUNE" day="6" descriptionPropertiesKey="christian.WHIT_MONDAY" localizedType="OBSERVANCE"/>
       <Fixed month="JUNE" day="16" descriptionPropertiesKey="christian.CORPUS_CHRISTI" localizedType="OBSERVANCE"/>
     </Holidays>
@@ -265,7 +257,7 @@
       <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
       <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
       <Fixed month="APRIL" day="15" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <Fixed month="APRIL" day="18" descriptionPropertiesKey="christian.EASTER_MONDAY" localizedType="OBSERVANCE"/>
+      <Fixed month="APRIL" day="18" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
       <Fixed month="JUNE" day="6" descriptionPropertiesKey="christian.WHIT_MONDAY" localizedType="OBSERVANCE"/>
       <Fixed month="JUNE" day="16" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
     </Holidays>
@@ -275,7 +267,6 @@
     <Holidays>
       <Fixed month="JANUARY" day="2" descriptionPropertiesKey="ST_BERCHTHOLD"/>
       <Fixed month="APRIL" day="15" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <Fixed month="APRIL" day="18" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
       <Fixed month="JUNE" day="6" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
       <Fixed month="SEPTEMBER" day="19" descriptionPropertiesKey="FEDERAL_DAY_THANKSGIVING_MON" localizedType="OBSERVANCE"/>
     </Holidays>
@@ -287,6 +278,7 @@
       <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
       <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
       <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+      <Fixed month="APRIL" day="18" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
       <Fixed month="JUNE" day="16" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
     </Holidays>
   </SubConfigurations>
@@ -298,6 +290,7 @@
       <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
       <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
       <Fixed month="APRIL" day="15" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+      <Fixed month="APRIL" day="18" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
       <Fixed month="JUNE" day="16" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
     </Holidays>
   </SubConfigurations>
@@ -307,7 +300,6 @@
       <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
       <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
       <Fixed month="APRIL" day="15" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <Fixed month="APRIL" day="18" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
       <Fixed month="JUNE" day="6" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
     </Holidays>
   </SubConfigurations>
