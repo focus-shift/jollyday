@@ -80,8 +80,8 @@ public class IslamicHolidayParser implements HolidayParser {
         }
 
         return islamicHolidays
-          .map(date -> new MoveDateRelative(date).apply(islamicHoliday))
-          .map(date -> new CreateHoliday(date).apply(islamicHoliday));
+          .map(date -> new DescribedDateHolder(islamicHoliday, date, new MoveDateRelative(date).apply(islamicHoliday)))
+          .map(describedDateHolder -> new CreateHoliday(describedDateHolder.getDate(), describedDateHolder.getObservedDate()).apply(islamicHoliday));
 
       })
       .collect(toList());

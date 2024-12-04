@@ -24,9 +24,11 @@ public class ChristianHolidayParser implements HolidayParser {
   public List<Holiday> parse(final Year year, final Holidays holidays) {
     return holidays.christianHolidays().stream()
       .filter(new ValidLimitation(year))
-      .map(ch -> {
-        LocalDate easterSunday = new CalculateEasterSunday(year).apply(ch.chronology());
-        switch (ch.type()) {
+      .map(christianHoliday -> {
+
+        LocalDate easterSunday = new CalculateEasterSunday(year).apply(christianHoliday.chronology());
+
+        switch (christianHoliday.type()) {
           case EASTER:
             break;
           case CLEAN_MONDAY:
@@ -76,10 +78,10 @@ public class ChristianHolidayParser implements HolidayParser {
             easterSunday = easterSunday.plusDays(68);
             break;
           default:
-            throw new IllegalArgumentException("Unknown christian holiday type " + ch.type());
+            throw new IllegalArgumentException("Unknown christian holiday type " + christianHoliday.type());
         }
-        easterSunday = new MoveDateRelative(easterSunday).apply(ch);
-        return new CreateHoliday(easterSunday).apply(ch);
+        final LocalDate movedChristianHoliday = new MoveDateRelative(easterSunday).apply(christianHoliday);
+        return new CreateHoliday(easterSunday, movedChristianHoliday).apply(christianHoliday);
       })
       .collect(toList());
   }
