@@ -88,18 +88,6 @@ public class DefaultHolidayManager extends HolidayManager {
    * with the configuration from initialization.
    */
   @Override
-  public Set<Holiday> getHolidays(final int year, final String... args) {
-    return getHolidays(Year.of(year), args);
-  }
-
-  /**
-   * {@inheritDoc}
-   * <p>
-   * Calls
-   * <code>Set&lt;LocalDate&gt; getHolidays(Year year, Configuration c, String... args)</code>
-   * with the configuration from initialization.
-   */
-  @Override
   public Set<Holiday> getHolidays(final Year year, final String... args) {
 
     final StringBuilder keyBuilder = new StringBuilder();
@@ -130,14 +118,6 @@ public class DefaultHolidayManager extends HolidayManager {
    * {@inheritDoc}
    */
   @Override
-  public Set<Holiday> getHolidays(final int year, final HolidayType holidayType, final String... args) {
-    return getHolidays(Year.of(year), holidayType, args);
-  }
-
-  /**
-   * {@inheritDoc}
-   */
-  @Override
   public Set<Holiday> getHolidays(final Year year, final HolidayType holidayType, final String... args) {
     return getHolidays(year, args).stream()
       .filter(holiday -> holiday.getType().equals(holidayType))
@@ -157,7 +137,8 @@ public class DefaultHolidayManager extends HolidayManager {
     Objects.requireNonNull(endDateInclusive, "endDateInclusive is null");
 
     return rangeClosed(startDateInclusive.getYear(), endDateInclusive.getYear())
-      .mapToObj(year -> getHolidays(year, args))
+      .mapToObj(Year::of)
+      .map(year -> getHolidays(year, args))
       .flatMap(Collection::stream)
       .filter(holiday -> !startDateInclusive.isAfter(holiday.getDate()) && !endDateInclusive.isBefore(holiday.getDate()))
       .collect(toUnmodifiableSet());
