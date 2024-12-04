@@ -184,18 +184,6 @@
     </SubConfigurations>
   </SubConfigurations>
 
-  <SubConfigurations hierarchy="971" description="Guadeloupe (see also separate country code entry under GP)">
-    <Holidays>
-      <Fixed month="MAY" day="27" descriptionPropertiesKey="ABOLITION_OF_SLAVERY"/>
-    </Holidays>
-  </SubConfigurations>
-
-  <SubConfigurations hierarchy="973" description="Guyane (française) (see also separate country code entry under GF)">
-    <Holidays>
-      <Fixed month="JUNE" day="10" descriptionPropertiesKey="ABOLITION_OF_SLAVERY"/>
-    </Holidays>
-  </SubConfigurations>
-
   <SubConfigurations hierarchy="HDF" description="Hauts-de-France">
     <Holidays/>
     <SubConfigurations hierarchy="02" description="Aisne">
@@ -213,22 +201,6 @@
     <SubConfigurations hierarchy="80" description="Somme">
       <Holidays/>
     </SubConfigurations>
-  </SubConfigurations>
-
-  <SubConfigurations hierarchy="974" description="La Réunion (see also separate country code entry under RE)">
-    <Holidays>
-      <Fixed month="DECEMBER" day="20" descriptionPropertiesKey="ABOLITION_OF_SLAVERY"/>
-    </Holidays>
-  </SubConfigurations>
-
-  <SubConfigurations hierarchy="972" description="Martinique (see also separate country code entry under MQ)">
-    <Holidays>
-      <Fixed month="MAY" day="22" descriptionPropertiesKey="ABOLITION_OF_SLAVERY"/>
-    </Holidays>
-  </SubConfigurations>
-
-  <SubConfigurations hierarchy="976" description="Mayotte (see also separate country code entry under YT)">
-    <Holidays/>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="NOR" description="Normandie">
@@ -288,10 +260,6 @@
     <SubConfigurations hierarchy="86" description="Vienne">
       <Holidays/>
     </SubConfigurations>
-  </SubConfigurations>
-
-  <SubConfigurations hierarchy="NC" description="Nouvelle-Calédonie (see also separate country code entry under NC)">
-    <Holidays/>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="OCC" description="Occitanie">
@@ -356,10 +324,6 @@
     </SubConfigurations>
   </SubConfigurations>
 
-  <SubConfigurations hierarchy="PF" description="Polynésie française (see also separate country code entry under PF)">
-    <Holidays/>
-  </SubConfigurations>
-
   <SubConfigurations hierarchy="PAC" description="Provence-Alpes-Côte-d’Azur">
     <Holidays/>
     <SubConfigurations hierarchy="06" description="Alpes-Maritimes">
@@ -380,28 +344,6 @@
     <SubConfigurations hierarchy="84" description="Vaucluse">
       <Holidays/>
     </SubConfigurations>
-  </SubConfigurations>
-
-  <SubConfigurations hierarchy="BL" description="Saint-Barthélemy (see also separate country code entry under BL)">
-    <Holidays/>
-  </SubConfigurations>
-
-  <SubConfigurations hierarchy="MF" description="Saint-Martin (see also separate country code entry under MF)">
-    <Holidays/>
-  </SubConfigurations>
-
-  <SubConfigurations hierarchy="PM"
-                     description="Saint-Pierre-et-Miquelon (see also separate country code entry under PM)">
-    <Holidays/>
-  </SubConfigurations>
-
-  <SubConfigurations hierarchy="TF"
-                     description="Terres australes françaises (see also separate country code entry under TF)">
-    <Holidays/>
-  </SubConfigurations>
-
-  <SubConfigurations hierarchy="WF" description="Wallis-et-Futuna (see also separate country code entry under WF)">
-    <Holidays/>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="IDF" description="Île-de-France">
