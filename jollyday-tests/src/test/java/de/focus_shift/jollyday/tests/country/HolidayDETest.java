@@ -26,7 +26,6 @@ class HolidayDETest extends AbstractCountryTestBase {
 
   private static final String ISO_CODE = "de";
 
-
   @ParameterizedTest
   @ValueSource(strings = {"2010", "2022", "2023"})
   void testManagerDEStructure(final Year year) {
