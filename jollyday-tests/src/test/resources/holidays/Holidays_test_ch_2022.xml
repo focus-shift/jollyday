@@ -16,6 +16,7 @@
       <Fixed month="JANUARY" day="2" descriptionPropertiesKey="ST_BERCHTHOLD"/>
       <Fixed month="APRIL" day="15" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
       <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+      <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
       <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
       <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
       <Fixed month="APRIL" day="18" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
@@ -26,7 +27,7 @@
 
   <SubConfigurations hierarchy="ai" description="Appenzell Innerrhoden">
     <Holidays>
-      <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
+      <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY" localizedType="OBSERVANCE"/>
       <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
       <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION" localizedType="OBSERVANCE"/>
       <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
@@ -79,6 +80,7 @@
   <SubConfigurations hierarchy="fr" description="Freiburg">
     <Holidays>
       <Fixed month="JANUARY" day="2" descriptionPropertiesKey="ST_BERCHTHOLD"/>
+      <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
       <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
       <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
       <Fixed month="APRIL" day="15" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
@@ -122,7 +124,7 @@
     <Holidays>
       <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
       <Fixed month="JUNE" day="23" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
-      <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
+      <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY" localizedType="OBSERVANCE"/>
       <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
       <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION" localizedType="OBSERVANCE"/>
       <Fixed month="APRIL" day="15" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
@@ -148,7 +150,6 @@
     <Holidays>
       <Fixed month="MARCH" day="1" descriptionPropertiesKey="REPUBLIC_DAY"/>
       <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
-      <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
       <Fixed month="APRIL" day="15" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
     </Holidays>
   </SubConfigurations>
@@ -203,6 +204,7 @@
   <SubConfigurations hierarchy="so" description="Solothurn">
     <Holidays>
       <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+      <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
       <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
       <Fixed month="APRIL" day="15" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
       <Fixed month="JUNE" day="16" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
