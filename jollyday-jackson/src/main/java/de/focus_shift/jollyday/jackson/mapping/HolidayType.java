@@ -4,8 +4,7 @@ public enum HolidayType {
 
   PUBLIC_HOLIDAY,
   BANK_HOLIDAY,
-  OBSERVANCE,
-  UNOFFICIAL_HOLIDAY;
+  OBSERVANCE;
 
   public String value() {
     return name();

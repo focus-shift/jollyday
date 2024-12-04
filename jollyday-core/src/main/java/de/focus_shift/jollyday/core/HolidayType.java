@@ -10,8 +10,5 @@ public enum HolidayType {
 
   BANK_HOLIDAY,
 
-  OBSERVANCE,
-
-  @Deprecated(since = "0.31.0", forRemoval = true)
-  UNOFFICIAL_HOLIDAY;
+  OBSERVANCE
 }
