@@ -5,12 +5,10 @@
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
   <Holidays>
-    <Fixed month="FEBRUARY" day="19" localizedType="UNOFFICIAL_HOLIDAY" descriptionPropertiesKey="ARMY_DAY"/>
-    <Fixed month="FEBRUARY" day="24" validFrom="1937" localizedType="UNOFFICIAL_HOLIDAY"
-               descriptionPropertiesKey="FLAG_DAY"/>
-    <Fixed month="MARCH" day="18" validFrom="1938" localizedType="UNOFFICIAL_HOLIDAY"
-               descriptionPropertiesKey="OIL_EXPROPRIATION_DAY"/>
-    <Fixed month="OCTOBER" day="12" localizedType="UNOFFICIAL_HOLIDAY" descriptionPropertiesKey="COLUMBUS_DAY"/>
+    <Fixed month="FEBRUARY" day="19" descriptionPropertiesKey="ARMY_DAY" localizedType="OBSERVANCE"/>
+    <Fixed month="FEBRUARY" day="24" validFrom="1937" descriptionPropertiesKey="FLAG_DAY" localizedType="OBSERVANCE"/>
+    <Fixed month="MARCH" day="18" validFrom="1938" descriptionPropertiesKey="OIL_EXPROPRIATION_DAY" localizedType="OBSERVANCE"/>
+    <Fixed month="OCTOBER" day="12" descriptionPropertiesKey="COLUMBUS_DAY" localizedType="OBSERVANCE"/>
     <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
       <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
@@ -38,7 +36,7 @@
 
   <SubConfigurations hierarchy="pue" description="Puebla">
     <Holidays>
-      <Fixed month="MAY" day="5" descriptionPropertiesKey="MAY_DAY" localizedType="UNOFFICIAL_HOLIDAY"/>
+      <Fixed month="MAY" day="5" descriptionPropertiesKey="MAY_DAY" localizedType="OBSERVANCE"/>
     </Holidays>
   </SubConfigurations>
 </Configuration>

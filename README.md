@@ -303,10 +303,6 @@ commemorate something, but do not have a day off from work for that reason, we c
 There are different types of observance like Religious, Secular, Awareness, International or National observance.
 We will declare all of these as **Observance**
 
-**Unofficial Holidays**  
-Holidays which are not public or bank holidays. Unofficial holidays are deprecated and will be replaced by the other types over time.
-
-
 ## Development
 
 If you want to **support** us at the development on **jollyday** than take a look at [Contributing to jollyday](./CONTRIBUTING.md).

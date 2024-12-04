@@ -5,8 +5,8 @@ import org.junit.jupiter.api.Test;
 import java.time.LocalDate;
 import java.util.Locale;
 
+import static de.focus_shift.jollyday.core.HolidayType.OBSERVANCE;
 import static de.focus_shift.jollyday.core.HolidayType.PUBLIC_HOLIDAY;
-import static de.focus_shift.jollyday.core.HolidayType.UNOFFICIAL_HOLIDAY;
 import static java.util.Locale.ENGLISH;
 import static java.util.Locale.GERMAN;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -64,7 +64,7 @@ class HolidayTest {
     final Holiday h3 = new Holiday(LocalDate.of(2011, 2, 2), "NEW_YEAR", PUBLIC_HOLIDAY);
     assertThat(h1).isNotEqualTo(h3);
 
-    final Holiday h4 = new Holiday(LocalDate.of(2011, 2, 2), "CHRISTMAS", UNOFFICIAL_HOLIDAY);
+    final Holiday h4 = new Holiday(LocalDate.of(2011, 2, 2), "CHRISTMAS", OBSERVANCE);
     assertThat(h1).isNotEqualTo(h4);
   }
 }

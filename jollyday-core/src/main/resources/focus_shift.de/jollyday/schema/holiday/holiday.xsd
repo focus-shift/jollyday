@@ -195,7 +195,6 @@
       <xsd:enumeration value="PUBLIC_HOLIDAY"/>
       <xsd:enumeration value="BANK_HOLIDAY"/>
       <xsd:enumeration value="OBSERVANCE"/>
-      <xsd:enumeration value="UNOFFICIAL_HOLIDAY"/>
     </xsd:restriction>
   </xsd:simpleType>
 

@@ -5,7 +5,7 @@
                xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
   <Holidays>
     <Fixed month="JANUARY" day="1"/>
-    <Fixed month="JANUARY" day="4" localizedType="UNOFFICIAL_HOLIDAY"/>
+    <Fixed month="JANUARY" day="4" localizedType="OBSERVANCE"/>
     <Fixed month="JANUARY" day="16">
       <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
