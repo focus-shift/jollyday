@@ -240,7 +240,7 @@
       <Fixed month="JANUARY" day="6" descriptionPropertiesKey="EPIPHANY"/>
       <Fixed month="MARCH" day="19" descriptionPropertiesKey="ST_JOSEPH" localizedType="OBSERVANCE"/>
       <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY" localizedType="OBSERVANCE"/>
-      <Fixed month="JUNE" day="29" descriptionPropertiesKey="ST_PETER_PAUL"/>
+      <Fixed month="JUNE" day="29" descriptionPropertiesKey="ST_PETER_PAUL" localizedType="OBSERVANCE"/>
       <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
       <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
       <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
