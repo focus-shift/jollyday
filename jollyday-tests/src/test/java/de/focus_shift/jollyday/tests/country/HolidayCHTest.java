@@ -12,6 +12,7 @@ import java.time.Year;
 import java.util.Set;
 
 import static de.focus_shift.jollyday.core.HolidayCalendar.SWITZERLAND;
+import static de.focus_shift.jollyday.core.HolidayType.OBSERVANCE;
 import static de.focus_shift.jollyday.core.HolidayType.PUBLIC_HOLIDAY;
 import static de.focus_shift.jollyday.core.ManagerParameters.create;
 import static java.time.Month.DECEMBER;
@@ -47,12 +48,21 @@ class HolidayCHTest extends AbstractCountryTestBase {
   }
 
   @Property
-  void ensuresThatStPeterAndPaulIsConfiguredInTicino(@ForAll @YearRange Year year) {
+  void ensuresThatStPeterAndPaulIsConfiguredInTicinoAsPublicHolidayUntil2020(@ForAll @YearRange(max = 2020) Year year) {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(SWITZERLAND));
     final Set<Holiday> holidays = holidayManager.getHolidays(year, "ti");
     assertThat(holidays)
       .isNotEmpty()
       .contains(new Holiday(LocalDate.of(year.getValue(), JUNE, 29), "ST_PETER_PAUL", PUBLIC_HOLIDAY));
+  }
+
+  @Property
+  void ensuresThatStPeterAndPaulIsConfiguredInTicinoAsObservanceSince2021(@ForAll @YearRange(min = 2021) Year year) {
+    final HolidayManager holidayManager = HolidayManager.getInstance(create(SWITZERLAND));
+    final Set<Holiday> holidays = holidayManager.getHolidays(year, "ti");
+    assertThat(holidays)
+      .isNotEmpty()
+      .contains(new Holiday(LocalDate.of(year.getValue(), JUNE, 29), "ST_PETER_PAUL", OBSERVANCE));
   }
 
   @Property
