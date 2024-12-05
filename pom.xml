@@ -48,6 +48,9 @@
     <sonar.coverage.jacoco.xmlReportPaths>
       ${maven.multiModuleProjectDirectory}/jollyday-tests/target/site/jacoco-aggregate/jacoco.xml
     </sonar.coverage.jacoco.xmlReportPaths>
+    <sonar.java.source>
+      ${java.version}
+    </sonar.java.source>
   </properties>
 
   <modules>
