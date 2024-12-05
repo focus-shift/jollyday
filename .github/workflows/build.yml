@@ -29,11 +29,14 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: ${{ matrix.java }}
+          java-version: |
+            11
+            ${{ matrix.java }}
           cache: 'maven'
       - name: Build
         run: ./mvnw -Pcoverage clean verify
-      - name: Analyse with SonarCloud
+
+      - name: SonarQube Cloud - Analyse
         if: ${{ github.repository == 'focus-shift/jollyday' && matrix.java == 21 && matrix.os == 'ubuntu-24.04' && (github.event_name != 'pull_request' || (github.event.pull_request.head.repo.full_name == github.repository && github.actor != 'dependabot[bot]')) }}
         run: >
           ./mvnw -Pcoverage verify
@@ -41,6 +44,7 @@ jobs:
           -Dsonar.host.url=https://sonarcloud.io
           -Dsonar.organization=focus-shift
           -Dsonar.projectKey=focus-shift_jollyday
+          -Dsonar.java.jdkHome=${{ env.JAVA_HOME_11_X64 }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
