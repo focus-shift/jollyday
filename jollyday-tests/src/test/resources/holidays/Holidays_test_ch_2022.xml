@@ -28,6 +28,7 @@
   <SubConfigurations hierarchy="ai" description="Appenzell Innerrhoden">
     <Holidays>
       <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY" localizedType="OBSERVANCE"/>
+      <Fixed month="SEPTEMBER" day="22" descriptionPropertiesKey="MAURITIUS_DAY"/>
       <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS" localizedType="OBSERVANCE"/>
       <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION" localizedType="OBSERVANCE"/>
       <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
