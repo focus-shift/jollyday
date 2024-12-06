@@ -172,6 +172,8 @@ class ValidCycleTest {
       case SIX_YEARS:
         modulo = 6;
         break;
+      default:
+        throw new IllegalStateException("Unexpected value: " + cycle);
     }
     return modulo;
   }
