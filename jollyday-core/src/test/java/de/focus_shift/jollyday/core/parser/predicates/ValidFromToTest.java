@@ -15,22 +15,7 @@ class ValidFromToTest {
 
   @Test
   void ensureFromAndToCanBothBeNullAndWillBeValidForever() {
-    final Limited limited = new Limited() {
-      @Override
-      public Year validFrom() {
-        return null;
-      }
-
-      @Override
-      public Year validTo() {
-        return null;
-      }
-
-      @Override
-      public YearCycle cycle() {
-        return YearCycle.EVERY_YEAR;
-      }
-    };
+    final Limited limited = getLimited(null, null);
 
     final boolean isValid = new ValidFromTo(Year.of(2020)).test(limited);
     assertThat(isValid).isTrue();
@@ -38,22 +23,7 @@ class ValidFromToTest {
 
   @Property
   void ensureFromCanBeNullAndToIsAYearAndWillBeValidUntilTo(@ForAll @YearRange(max = 2020) final Year year) {
-    final Limited limited = new Limited() {
-      @Override
-      public Year validFrom() {
-        return null;
-      }
-
-      @Override
-      public Year validTo() {
-        return Year.of(2020);
-      }
-
-      @Override
-      public YearCycle cycle() {
-        return YearCycle.EVERY_YEAR;
-      }
-    };
+    final Limited limited = getLimited(null, Year.of(2020));
 
     final boolean isValid = new ValidFromTo(year).test(limited);
     assertThat(isValid).isTrue();
@@ -61,22 +31,7 @@ class ValidFromToTest {
 
   @Property
   void ensureFromBothBeNullAndToIsAYearAfter2020AndWillNotBeValid(@ForAll @YearRange(min = 2021) final Year year) {
-    final Limited limited = new Limited() {
-      @Override
-      public Year validFrom() {
-        return null;
-      }
-
-      @Override
-      public Year validTo() {
-        return Year.of(2020);
-      }
-
-      @Override
-      public YearCycle cycle() {
-        return YearCycle.EVERY_YEAR;
-      }
-    };
+    final Limited limited = getLimited(null, Year.of(2020));
 
     final boolean isValid = new ValidFromTo(year).test(limited);
     assertThat(isValid).isFalse();
@@ -84,22 +39,7 @@ class ValidFromToTest {
 
   @Property
   void ensureToCanBeNullAndFromIsSetAndLimitedWillBeValidUntilThisYear(@ForAll @YearRange(min = 1900) final Year year) {
-    final Limited limited = new Limited() {
-      @Override
-      public Year validFrom() {
-        return Year.of(1900);
-      }
-
-      @Override
-      public Year validTo() {
-        return null;
-      }
-
-      @Override
-      public YearCycle cycle() {
-        return YearCycle.EVERY_YEAR;
-      }
-    };
+    final Limited limited = getLimited(Year.of(1900), null);
 
     final boolean isValid = new ValidFromTo(year).test(limited);
     assertThat(isValid).isTrue();
@@ -107,22 +47,7 @@ class ValidFromToTest {
 
   @Property
   void ensureToCanBeNullAndFromIsSetAndLimitedWillBeNotValidAfterThisYear(@ForAll @YearRange(min = 1800, max = 1899) final Year year) {
-    final Limited limited = new Limited() {
-      @Override
-      public Year validFrom() {
-        return Year.of(1900);
-      }
-
-      @Override
-      public Year validTo() {
-        return null;
-      }
-
-      @Override
-      public YearCycle cycle() {
-        return YearCycle.EVERY_YEAR;
-      }
-    };
+    final Limited limited = getLimited(Year.of(1900), null);
 
     final boolean isValid = new ValidFromTo(year).test(limited);
     assertThat(isValid).isFalse();
@@ -130,22 +55,7 @@ class ValidFromToTest {
 
   @Property
   void ensureIsOnlyValidInTheIntervalFromAndTo(@ForAll @YearRange(min = 1920, max = 2080) final Year year) {
-    final Limited limited = new Limited() {
-      @Override
-      public Year validFrom() {
-        return Year.of(1920);
-      }
-
-      @Override
-      public Year validTo() {
-        return Year.of(2080);
-      }
-
-      @Override
-      public YearCycle cycle() {
-        return YearCycle.EVERY_YEAR;
-      }
-    };
+    final Limited limited = getLimited(Year.of(1920), Year.of(2080));
 
     final boolean isValid = new ValidFromTo(year).test(limited);
     assertThat(isValid).isTrue();
@@ -153,22 +63,7 @@ class ValidFromToTest {
 
   @Property
   void ensureIsNotValidBeforeTheIntervalFromAndTo(@ForAll @YearRange(min = 1700, max = 1919) final Year year) {
-    final Limited limited = new Limited() {
-      @Override
-      public Year validFrom() {
-        return Year.of(1920);
-      }
-
-      @Override
-      public Year validTo() {
-        return Year.of(2080);
-      }
-
-      @Override
-      public YearCycle cycle() {
-        return YearCycle.EVERY_YEAR;
-      }
-    };
+    final Limited limited = getLimited(Year.of(1920), Year.of(2080));
 
     final boolean isValid = new ValidFromTo(year).test(limited);
     assertThat(isValid).isFalse();
@@ -176,15 +71,22 @@ class ValidFromToTest {
 
   @Property
   void ensureIsNotValidAfterTheIntervalFromAndTo(@ForAll @YearRange(min = 2081, max = 2150) final Year year) {
-    final Limited limited = new Limited() {
+    final Limited limited = getLimited(Year.of(1900), Year.of(2080));
+
+    final boolean isValid = new ValidFromTo(year).test(limited);
+    assertThat(isValid).isFalse();
+  }
+
+  private static Limited getLimited(Year fromYear, Year toYear) {
+    return new Limited() {
       @Override
       public Year validFrom() {
-        return Year.of(1920);
+        return fromYear;
       }
 
       @Override
       public Year validTo() {
-        return Year.of(2080);
+        return toYear;
       }
 
       @Override
@@ -192,8 +94,5 @@ class ValidFromToTest {
         return YearCycle.EVERY_YEAR;
       }
     };
-
-    final boolean isValid = new ValidFromTo(year).test(limited);
-    assertThat(isValid).isFalse();
   }
 }
