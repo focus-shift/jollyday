@@ -45,9 +45,7 @@ class CalendarPartManagerParameterTest {
     properties.setProperty("manager.impl", "managerImplClassName");
     properties.setProperty("manager.impl.de", "managerImplClassNameDE");
 
-    final CalendarPartManagerParameter sut = new CalendarPartManagerParameter("de", properties);
-
-    assertThat(sut.getManagerImplClassName())
+    assertThat(new CalendarPartManagerParameter("de", properties).getManagerImplClassName())
       .isEqualTo("managerImplClassNameDE");
   }
 

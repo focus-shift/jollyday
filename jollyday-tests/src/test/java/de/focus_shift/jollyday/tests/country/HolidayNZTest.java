@@ -19,18 +19,16 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class HolidayNZTest extends AbstractCountryTestBase {
 
-  private static final String ISO_CODE = "nz";
-  private static final Year YEAR = Year.of(2018);
-
-  private final HolidayManager holidayManager = HolidayManager.getInstance(create(NEW_ZEALAND));
-
   @Test
   void testManagerNZStructure() {
-    validateCalendarData(ISO_CODE, YEAR);
+    validateCalendarData("nz", Year.of(2018));
   }
 
   @Test
   void testSouthlandAnniversary2011() {
+
+    final HolidayManager holidayManager = HolidayManager.getInstance(create(NEW_ZEALAND));
+
     // Monday closest to 17 January
     final LocalDate expected = LocalDate.of(2011, 1, 17);
     final Set<Holiday> holidays = holidayManager.getHolidays(Year.of(2011), "stl");
@@ -42,6 +40,9 @@ class HolidayNZTest extends AbstractCountryTestBase {
 
   @Test
   void testSouthlandAnniversary2012() {
+
+    final HolidayManager holidayManager = HolidayManager.getInstance(create(NEW_ZEALAND));
+
     // Easter Tuesday
     final LocalDate expected = LocalDate.of(2012, 4, 10);
     final Set<Holiday> holidays = holidayManager.getHolidays(Year.of(2012), "stl");
@@ -53,7 +54,7 @@ class HolidayNZTest extends AbstractCountryTestBase {
 
   @Property
   void ensuresThatQueenElisabethIIMemorialDayIsNotConfiguredUntil2021(@ForAll @YearRange(max = 2021) Year year) {
-    final HolidayManager holidayManager = HolidayManager.getInstance(create(ISO_CODE));
+    final HolidayManager holidayManager = HolidayManager.getInstance(create(NEW_ZEALAND));
     final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
@@ -62,7 +63,7 @@ class HolidayNZTest extends AbstractCountryTestBase {
 
   @Property
   void ensuresThatQueenElisabethIIMemorialDayIsConfiguredIn2022(@ForAll @YearRange(min = 2022, max = 2022) Year year) {
-    final HolidayManager holidayManager = HolidayManager.getInstance(create(ISO_CODE));
+    final HolidayManager holidayManager = HolidayManager.getInstance(create(NEW_ZEALAND));
     final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
@@ -71,7 +72,7 @@ class HolidayNZTest extends AbstractCountryTestBase {
 
   @Property
   void ensuresThatQueenElisabethIIMemorialDayIsConfiguredSince2023(@ForAll @YearRange(min = 2023) Year year) {
-    final HolidayManager holidayManager = HolidayManager.getInstance(create(ISO_CODE));
+    final HolidayManager holidayManager = HolidayManager.getInstance(create(NEW_ZEALAND));
     final Set<Holiday> holidays = holidayManager.getHolidays(year);
     assertThat(holidays)
       .isNotEmpty()
