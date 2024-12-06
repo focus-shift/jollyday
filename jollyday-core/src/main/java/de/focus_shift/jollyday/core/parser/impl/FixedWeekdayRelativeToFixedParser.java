@@ -22,7 +22,12 @@ public class FixedWeekdayRelativeToFixedParser implements HolidayParser {
   public List<Holiday> parse(final Year year, final Holidays holidays) {
     return holidays.fixedWeekdayRelativeToFixed().stream()
       .filter(new ValidLimitation(year))
-      .map(fwrf -> new DescribedDateHolder(fwrf, new FindWeekDayRelativeToDate(new FixedToLocalDate(year).apply(fwrf.day())).apply(fwrf)))
+      .map(weekdayRelativeToFixed ->
+        new DescribedDateHolder(
+          weekdayRelativeToFixed,
+          new FindWeekDayRelativeToDate(new FixedToLocalDate(year).apply(weekdayRelativeToFixed.day())).apply(weekdayRelativeToFixed)
+        )
+      )
       .map(holder -> new CreateHoliday(holder.getDate()).apply(holder.getDescribed()))
       .collect(toList());
   }
