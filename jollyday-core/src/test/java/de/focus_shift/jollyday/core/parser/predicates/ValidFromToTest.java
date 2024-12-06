@@ -71,7 +71,7 @@ class ValidFromToTest {
 
   @Property
   void ensureIsNotValidAfterTheIntervalFromAndTo(@ForAll @YearRange(min = 2081, max = 2150) final Year year) {
-    final Limited limited = getLimited(Year.of(1920), Year.of(2080));
+    final Limited limited = getLimited(Year.of(1900), Year.of(2080));
 
     final boolean isValid = new ValidFromTo(year).test(limited);
     assertThat(isValid).isFalse();
