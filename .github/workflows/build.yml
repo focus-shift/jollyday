@@ -35,6 +35,7 @@ jobs:
   sonarqube:
     name: SonarQube Cloud
     runs-on: ubuntu-24.04
+    if: ${{ github.repository == 'focus-shift/jollyday' && (github.event_name != 'pull_request' || (github.event.pull_request.head.repo.full_name == github.repository && github.actor != 'dependabot[bot]')) }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
