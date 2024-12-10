@@ -6,5 +6,6 @@ import de.focus_shift.jollyday.core.ManagerParameter;
  * Service to provide the serialised configuration from XML files.
  */
 public interface ConfigurationService {
+
   Configuration getConfiguration(ManagerParameter parameter);
 }

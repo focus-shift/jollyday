@@ -12,11 +12,16 @@ class HolidayManagerValueHandler implements Cache.ValueHandler<HolidayManager> {
 
   private final ManagerParameter parameter;
   private final String managerImplClassName;
+  private final String configurationServiceImplClassName;
   private final ConfigurationServiceManager configurationServiceManager;
 
-  HolidayManagerValueHandler(final ManagerParameter parameter, final String managerImplClassName, final ConfigurationServiceManager configurationServiceManager) {
+  HolidayManagerValueHandler(final ManagerParameter parameter,
+                             final String managerImplClassName,
+                             final String configurationServiceImplClassName,
+                             final ConfigurationServiceManager configurationServiceManager) {
     this.parameter = parameter;
     this.managerImplClassName = managerImplClassName;
+    this.configurationServiceImplClassName = configurationServiceImplClassName;
     this.configurationServiceManager = configurationServiceManager;
   }
 
@@ -29,7 +34,7 @@ class HolidayManagerValueHandler implements Cache.ValueHandler<HolidayManager> {
   public HolidayManager createValue() {
     final HolidayManager manager = instantiateManagerImpl(managerImplClassName);
 
-    final ConfigurationService configurationService = configurationServiceManager.getConfigurationService();
+    final ConfigurationService configurationService = configurationServiceManager.getConfigurationService(configurationServiceImplClassName);
     manager.setConfigurationService(configurationService);
 
     manager.init(parameter);

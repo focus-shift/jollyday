@@ -7,6 +7,8 @@ public interface ManagerParameter {
 
   String MANAGER_IMPL_CLASS_PREFIX = "manager.impl";
 
+  String CONFIGURATION_SERVICE_IMPL = "configuration.service.impl";
+
   void mergeProperties(final Properties properties);
 
   String getProperty(final String key);
@@ -14,6 +16,8 @@ public interface ManagerParameter {
   void setProperty(final String key, final String value);
 
   String getManagerImplClassName();
+
+  String getConfigurationServiceImplClassName();
 
   String createCacheKey();
 

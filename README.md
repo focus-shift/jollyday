@@ -157,6 +157,21 @@ If you already use one of these libraries in your project than just use the spec
   The configuration property name starts with `parser.impl` and finishes with the XML class name.
   The value is the parser implementation class name which implements the `HolidayParser` interface. 
 
+
+  **Configuration Service implementation**  
+  A configuration service implementation is used to define which xml unmarshalling implementation should be used
+
+  ```properties
+  configuration.service.impl = de.focus_shift.jollyday.jackson.JacksonConfigurationService
+  ```
+
+  The configuration property `configuration.service.impl` contains the class name as string.
+  The value is the configuration service implementation class name which implements the `ConfigurationService` interface.
+
+  Values are:
+  * `de.focus_shift.jollyday.jackson.JacksonConfigurationService` (default)
+  * `de.focus_shift.jollyday.jaxb.JaxbConfigurationService`
+
 </details>
 
 ### Examples
