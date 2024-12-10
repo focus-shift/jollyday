@@ -95,7 +95,9 @@
           <instructions>
             <Bundle-SymbolicName>de.focus_shift.jollyday-core</Bundle-SymbolicName>
             <Export-Package>de.focus_shift.jollyday.core.*</Export-Package>
-            <Require-Capability>osgi.serviceloader;filter:="(osgi.serviceloader=de.focus_shift.jollyday.core.spi.ConfigurationService)";cardinality:=multiple,osgi.extender;filter:="(osgi.extender=osgi.serviceloader.processor)"</Require-Capability>
+            <Require-Capability>
+              osgi.serviceloader;filter:="(osgi.serviceloader=de.focus_shift.jollyday.core.spi.ConfigurationService)";cardinality:=multiple,osgi.extender;filter:="(osgi.extender=osgi.serviceloader.processor)"
+            </Require-Capability>
           </instructions>
         </configuration>
       </plugin>
