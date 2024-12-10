@@ -36,7 +36,7 @@ class ConfigurationServiceManagerTest {
 
     when(configurationServiceCache.getServices()).thenReturn(List.of());
 
-    final IllegalStateException exception = assertThrows(IllegalStateException.class, () -> sut.getConfigurationService());
+    final IllegalStateException exception = assertThrows(IllegalStateException.class, () -> sut.getConfigurationService("configurationServiceImplClassName"));
     assertThat(exception.getMessage()).contains("Cannot instantiate datasource instance because there is no implementations");
   }
 
@@ -44,20 +44,58 @@ class ConfigurationServiceManagerTest {
   void ensuresToProvideConfigurationServiceIfExactlyOneIsAvailable() {
     when(configurationServiceCache.getServices()).thenReturn(List.of(new MockConfigurationService()));
 
-    final ConfigurationService configurationService = sut.getConfigurationService();
+    final ConfigurationService configurationService = sut.getConfigurationService("configurationServiceImplClassName");
     assertThat(configurationService).isInstanceOf(MockConfigurationService.class);
   }
 
   @Test
-  void ensuresToThrowExceptionIfMultipleImplementationsAreAvailable() {
+  void ensuresToThrowExceptionIfMultipleImplementationsAreAvailableButNoneOfThatAreConfigured() {
 
     when(configurationServiceCache.getServices()).thenReturn(List.of(new MockConfigurationService(), new MockConfigurationService()));
 
-    final IllegalStateException exception = assertThrows(IllegalStateException.class, () -> sut.getConfigurationService());
+    final IllegalStateException exception = assertThrows(IllegalStateException.class, () -> sut.getConfigurationService("configurationServiceImplClassName"));
     assertThat(exception.getMessage()).contains("Cannot instantiate datasource instance because there are two or more implementations available");
   }
 
+  @Test
+  void ensuresToUseTheConfiguredConfigurationServiceIfMultipleAreOnTheClasspath() {
+
+    final MockConfigurationServiceOther mockConfigurationServiceOther = new MockConfigurationServiceOther();
+    when(configurationServiceCache.getServices()).thenReturn(List.of(new MockConfigurationService(), mockConfigurationServiceOther));
+
+    final ConfigurationService configurationService = sut.getConfigurationService(mockConfigurationServiceOther.getClass().getName());
+    assertThat(configurationService).isInstanceOf(MockConfigurationServiceOther.class);
+  }
+
   private static class MockConfigurationService implements ConfigurationService {
+
+    @Override
+    public Configuration getConfiguration(ManagerParameter parameter) {
+      return new Configuration() {
+        @Override
+        public Holidays holidays() {
+          return null;
+        }
+
+        @Override
+        public Stream<Configuration> subConfigurations() {
+          return null;
+        }
+
+        @Override
+        public String hierarchy() {
+          return null;
+        }
+
+        @Override
+        public String description() {
+          return null;
+        }
+      };
+    }
+  }
+
+  private static class MockConfigurationServiceOther implements ConfigurationService {
 
     @Override
     public Configuration getConfiguration(ManagerParameter parameter) {

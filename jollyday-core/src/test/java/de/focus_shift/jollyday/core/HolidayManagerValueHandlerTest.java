@@ -27,8 +27,9 @@ class HolidayManagerValueHandlerTest {
   @Test
   void ensureToGetCorrectKey() {
     final String managerImplClassName = "de.focus_shift.jollyday.core.impl.DefaultHolidayManager";
+    final String configurationServiceImplClassName = "de.focus_shift.jollyday.jackson.JacksonConfigurationService";
     final ConfigurationServiceManager configurationServiceManager = mock(ConfigurationServiceManager.class);
-    final HolidayManagerValueHandler sut = new HolidayManagerValueHandler(create("de"), managerImplClassName, configurationServiceManager);
+    final HolidayManagerValueHandler sut = new HolidayManagerValueHandler(create("de"), managerImplClassName, configurationServiceImplClassName, configurationServiceManager);
 
     final String key = sut.getKey();
     assertThat(key).isEqualTo("de");
@@ -49,10 +50,10 @@ class HolidayManagerValueHandlerTest {
     final ConfigurationService configurationService = mock(ConfigurationService.class);
     final Configuration configuration = mock(Configuration.class);
 
-    when(configurationServiceManager.getConfigurationService()).thenReturn(configurationService);
+    when(configurationServiceManager.getConfigurationService(any(String.class))).thenReturn(configurationService);
     when(configurationService.getConfiguration(any(ManagerParameter.class))).thenReturn(configuration);
 
-    final HolidayManagerValueHandler sut = new HolidayManagerValueHandler(create("de"), managerImplClass, configurationServiceManager);
+    final HolidayManagerValueHandler sut = new HolidayManagerValueHandler(create("de"), managerImplClass, "configurationServiceImplClassName", configurationServiceManager);
 
     final HolidayManager holidayManager = sut.createValue();
     assertThat(holidayManager).isInstanceOf(clazz);
@@ -62,7 +63,7 @@ class HolidayManagerValueHandlerTest {
   void ensureToThrowIllegalStateExceptionIfHolidayManagerIsWrong() {
 
     final String wrongManagerImplClassName = "de.focus_shift.jollyday.core.impl.WrongHolidayManager";
-    final HolidayManagerValueHandler sut = new HolidayManagerValueHandler(create("de"), wrongManagerImplClassName, mock(ConfigurationServiceManager.class));
+    final HolidayManagerValueHandler sut = new HolidayManagerValueHandler(create("de"), wrongManagerImplClassName, "configurationServiceImplClassName", mock(ConfigurationServiceManager.class));
 
     assertThatThrownBy(sut::createValue)
       .isInstanceOf(IllegalStateException.class)
