@@ -231,8 +231,7 @@
         <version>3.11.2</version>
         <configuration>
           <quiet>true</quiet>
-          <excludePackageNames>de.focus_shift.jollyday.jaxb.mapping</excludePackageNames>
-          <excludePackageNames>de.focus_shift.jollyday.jackson.mapping</excludePackageNames>
+          <excludePackageNames>de.focus_shift.jollyday.jaxb.mapping:de.focus_shift.jollyday.jackson.mapping</excludePackageNames>
         </configuration>
         <executions>
           <execution>
