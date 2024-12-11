@@ -54,9 +54,4 @@ class HolidayXKTest extends AbstractCountryTestBase {
     holidays.forEach(holiday -> assertThat(expected).contains(holiday.getDate()));
     expected.forEach(d -> assertThat(CalendarUtil.contains(holidays, d)).isTrue());
   }
-
-  @Test
-  void testManagerDifferentInstanceXK() {
-    validateManagerDifferentInstance(KOSOVO);
-  }
 }

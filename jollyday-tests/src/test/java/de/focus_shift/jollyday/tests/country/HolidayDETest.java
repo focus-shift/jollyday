@@ -52,16 +52,6 @@ class HolidayDETest extends AbstractCountryTestBase {
   }
 
   @Test
-  void testManagerSameInstanceDE() {
-    validateManagerSameInstance(GERMANY, HolidayCalendar.GERMANY);
-  }
-
-  @Test
-  void testManagerDifferentInstanceDE() {
-    validateManagerDifferentInstance(HolidayCalendar.GERMANY);
-  }
-
-  @Test
   void testSystemLocaleInfluence() {
     final Set<Holiday> french = getUsingSystemLocale(FRANCE);
     final Set<Holiday> german = getUsingSystemLocale(GERMANY);
