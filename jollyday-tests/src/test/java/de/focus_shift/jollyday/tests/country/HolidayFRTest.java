@@ -4,13 +4,34 @@ import org.junit.jupiter.api.Test;
 
 import java.time.Year;
 
-class HolidayFRTest extends AbstractCountryTestBase {
+import static de.focus_shift.jollyday.core.HolidayCalendar.FRANCE;
+import static de.focus_shift.jollyday.tests.CalendarCheckerApi.assertFor;
+import static java.time.Month.AUGUST;
+import static java.time.Month.DECEMBER;
+import static java.time.Month.JANUARY;
+import static java.time.Month.JULY;
+import static java.time.Month.MAY;
+import static java.time.Month.NOVEMBER;
 
-  private static final String ISO_CODE = "fr";
-  private static final Year YEAR = Year.of(2010);
+class HolidayFRTest {
 
   @Test
-  void testManagerFRStructure() {
-    validateCalendarData(ISO_CODE, YEAR, true);
+  void ensuresHolidays() {
+    assertFor(FRANCE)
+      .hasFixedHoliday("NEW_YEAR", JANUARY, 1).and()
+      .hasFixedHoliday("LABOUR_DAY", MAY, 1).and()
+      .hasFixedHoliday("VICTORY_DAY", MAY, 8).and()
+      .hasFixedHoliday("NATIONAL_DAY", JULY, 14).and()
+      .hasFixedHoliday("ASSUMPTION_MARY", AUGUST, 15).and()
+      .hasFixedHoliday("ALL_SAINTS", NOVEMBER, 1).and()
+      .hasFixedHoliday("ARMISTICE", NOVEMBER, 11).and()
+      .hasFixedHoliday("CHRISTMAS", DECEMBER, 25).and()
+      .hasChristianHoliday("EASTER_MONDAY").and()
+      .hasChristianHoliday("ASCENSION_DAY").and()
+      .hasChristianHoliday("WHIT_MONDAY")
+        .between(Year.of(1900), Year.of(2003))
+        .notBetween(Year.of(2004), Year.of(2007))
+        .between(Year.of(2008), Year.of(2500))
+      .check();
   }
 }

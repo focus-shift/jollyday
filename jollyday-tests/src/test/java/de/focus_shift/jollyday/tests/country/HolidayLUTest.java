@@ -22,7 +22,7 @@ import static java.time.Month.MAY;
 import static java.time.Month.NOVEMBER;
 import static org.assertj.core.api.Assertions.assertThat;
 
-class HolidayLUTest extends AbstractCountryTestBase {
+class HolidayLUTest {
 
   @Property
   void ensuresThatNewYearConfigured(@ForAll @YearRange Year year) {
