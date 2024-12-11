@@ -1,38 +1,34 @@
 package de.focus_shift.jollyday.tests.country;
 
-import de.focus_shift.jollyday.core.Holiday;
-import de.focus_shift.jollyday.core.HolidayManager;
-import de.focus_shift.jollyday.core.ManagerParameters;
 import org.junit.jupiter.api.Test;
 
-import java.time.LocalDate;
 import java.time.Year;
-import java.util.Set;
-import java.util.stream.Stream;
 
 import static de.focus_shift.jollyday.core.HolidayCalendar.UNITED_ARAB_EMIRATES;
-import static org.assertj.core.api.Assertions.assertThat;
+import static de.focus_shift.jollyday.tests.HolidayChecker.assertFixed;
+import static de.focus_shift.jollyday.tests.HolidayChecker.assertIslamic;
+import static java.time.Month.DECEMBER;
+import static java.time.Month.JANUARY;
 
-class HolidayAETest extends AbstractCountryTestBase {
+class HolidayAETest {
 
-  private static final Year YEAR = Year.of(2019);
-
-
-  @Test
-  void testNumberOfHolidays() {
-    final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(UNITED_ARAB_EMIRATES));
-    final Set<Holiday> holidays = holidayManager.getHolidays(YEAR);
-    assertThat(holidays).hasSize(13);
-  }
+  private static final Year YEAR_FROM = Year.of(1900);
+  private static final Year YEAR_TO = Year.of(2173);
 
   @Test
-  void testRamadanEnd() {
-    final LocalDate expected = LocalDate.of(YEAR.getValue(), 6, 3);
-    final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(UNITED_ARAB_EMIRATES));
-    final Set<Holiday> holidays = holidayManager.getHolidays(YEAR);
-    assertThat(holidays).hasSize(13);
-    final Stream<Holiday> holidayStream = holidays.stream()
-      .filter(holiday -> holiday.getPropertiesKey().equals("islamic.RAMADAN_END") && holiday.getDate().equals(expected));
-    assertThat(holidayStream).hasSize(1);
+  void ensuresHolidays() {
+    assertFixed(UNITED_ARAB_EMIRATES, YEAR_FROM, YEAR_TO, JANUARY, 1, "NEW_YEAR");
+    assertFixed(UNITED_ARAB_EMIRATES, YEAR_FROM, YEAR_TO, DECEMBER, 1, "AE_COMMEMORATION_DAY");
+    assertFixed(UNITED_ARAB_EMIRATES, YEAR_FROM, YEAR_TO, DECEMBER, 2, "NATIONAL_DAY");
+    assertFixed(UNITED_ARAB_EMIRATES, YEAR_FROM, YEAR_TO, DECEMBER, 3, "NATIONAL_DAY");
+    assertIslamic(UNITED_ARAB_EMIRATES, YEAR_FROM, YEAR_TO, "RAMADAN_END");
+    assertIslamic(UNITED_ARAB_EMIRATES, YEAR_FROM, YEAR_TO, "ID_AL_FITR");
+    assertIslamic(UNITED_ARAB_EMIRATES, YEAR_FROM, YEAR_TO, "ID_AL_FITR_2");
+    assertIslamic(UNITED_ARAB_EMIRATES, YEAR_FROM, YEAR_TO, "ID_AL_FITR_3");
+    assertIslamic(UNITED_ARAB_EMIRATES, YEAR_FROM, YEAR_TO, "ARAFAAT");
+    assertIslamic(UNITED_ARAB_EMIRATES, YEAR_FROM, YEAR_TO, "ID_UL_ADHA");
+    assertIslamic(UNITED_ARAB_EMIRATES, YEAR_FROM, YEAR_TO, "ID_UL_ADHA_2");
+    assertIslamic(UNITED_ARAB_EMIRATES, YEAR_FROM, YEAR_TO, "ID_UL_ADHA_3");
+    assertIslamic(UNITED_ARAB_EMIRATES, YEAR_FROM, YEAR_TO, "NEWYEAR");
   }
 }
