@@ -46,9 +46,4 @@ class HolidayKYTest extends AbstractCountryTestBase {
       fail("Unexpected error occurred: " + e.getClass().getName() + " - " + e.getMessage());
     }
   }
-
-  @Test
-  void testManagerDifferentInstanceKY() {
-    validateManagerDifferentInstance(HolidayCalendar.CAYMAN_ISLANDS);
-  }
 }

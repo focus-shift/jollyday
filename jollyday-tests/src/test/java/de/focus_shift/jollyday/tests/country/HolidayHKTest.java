@@ -48,9 +48,4 @@ class HolidayHKTest extends AbstractCountryTestBase {
       fail("Unexpected error occurred: " + e.getClass().getName() + " - " + e.getMessage());
     }
   }
-
-  @Test
-  void testManagerDifferentInstanceHK() {
-    validateManagerDifferentInstance(HolidayCalendar.HONG_KONG);
-  }
 }

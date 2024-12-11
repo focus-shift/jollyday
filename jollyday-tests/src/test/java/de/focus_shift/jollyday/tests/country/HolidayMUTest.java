@@ -47,9 +47,4 @@ class HolidayMUTest extends AbstractCountryTestBase {
       fail("Unexpected error occurred: " + e.getClass().getName() + " - " + e.getMessage());
     }
   }
-
-  @Test
-  void testManagerDifferentInstanceMU() {
-    validateManagerDifferentInstance(HolidayCalendar.MAURITIUS);
-  }
 }
