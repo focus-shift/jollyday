@@ -1,18 +1,10 @@
 package de.focus_shift.jollyday.tests.country;
 
-import de.focus_shift.jollyday.core.Holiday;
-import de.focus_shift.jollyday.core.HolidayManager;
-import net.jqwik.api.ForAll;
-import net.jqwik.api.Property;
-import net.jqwik.time.api.constraints.YearRange;
-
-import java.time.LocalDate;
-import java.time.Year;
-import java.util.Set;
+import org.junit.jupiter.api.Test;
 
 import static de.focus_shift.jollyday.core.HolidayCalendar.ANDORRA;
-import static de.focus_shift.jollyday.core.HolidayType.PUBLIC_HOLIDAY;
-import static de.focus_shift.jollyday.core.ManagerParameters.create;
+import static de.focus_shift.jollyday.tests.HolidayChecker.assertChristian;
+import static de.focus_shift.jollyday.tests.HolidayChecker.assertFixed;
 import static java.time.Month.AUGUST;
 import static java.time.Month.DECEMBER;
 import static java.time.Month.JANUARY;
@@ -20,129 +12,72 @@ import static java.time.Month.MARCH;
 import static java.time.Month.MAY;
 import static java.time.Month.NOVEMBER;
 import static java.time.Month.SEPTEMBER;
-import static org.assertj.core.api.Assertions.assertThat;
 
 class HolidayADTest {
 
-  @Property
-  void ensuresThatNewYearIsOnFirstJanuary(@ForAll @YearRange Year year) {
-    final HolidayManager holidayManager = HolidayManager.getInstance(create(ANDORRA));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year);
-    assertThat(holidays)
-      .isNotEmpty()
-      .contains(new Holiday(LocalDate.of(year.getValue(), JANUARY, 1), "NEW_YEAR", PUBLIC_HOLIDAY));
+  @Test
+  void ensuresThatNewYearIsOnFirstJanuary() {
+    assertFixed(ANDORRA, JANUARY, 1, "NEW_YEAR");
   }
 
-  @Property
-  void ensuresThatEpiphanyConfigured(@ForAll @YearRange Year year) {
-    final HolidayManager holidayManager = HolidayManager.getInstance(create(ANDORRA));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year);
-    assertThat(holidays)
-      .isNotEmpty()
-      .contains(new Holiday(LocalDate.of(year.getValue(), JANUARY, 6), "EPIPHANY", PUBLIC_HOLIDAY));
+  @Test
+  void ensuresThatEpiphanyConfigured() {
+    assertFixed(ANDORRA, JANUARY, 6, "EPIPHANY");
   }
 
-  @Property
-  void ensuresThatConstitutionDayIsConfigured(@ForAll @YearRange Year year) {
-    final HolidayManager holidayManager = HolidayManager.getInstance(create(ANDORRA));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year);
-    assertThat(holidays)
-      .isNotEmpty()
-      .contains(new Holiday(LocalDate.of(year.getValue(), MARCH, 14), "CONSTITUTION_DAY", PUBLIC_HOLIDAY));
+  @Test
+  void ensuresThatConstitutionDayIsConfigured() {
+    assertFixed(ANDORRA, MARCH, 14, "CONSTITUTION_DAY");
   }
 
-  @Property
-  void ensuresThatLabourDayIsConfigured(@ForAll @YearRange Year year) {
-    final HolidayManager holidayManager = HolidayManager.getInstance(create(ANDORRA));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year);
-    assertThat(holidays)
-      .isNotEmpty()
-      .contains(new Holiday(LocalDate.of(year.getValue(), MAY, 1), "LABOUR_DAY", PUBLIC_HOLIDAY));
+  @Test
+  void ensuresThatLabourDayIsConfigured() {
+    assertFixed(ANDORRA, MAY, 1, "LABOUR_DAY");
   }
 
-  @Property
-  void ensuresThatAssumptionDayIsConfigured(@ForAll @YearRange Year year) {
-    final HolidayManager holidayManager = HolidayManager.getInstance(create(ANDORRA));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year);
-    assertThat(holidays)
-      .isNotEmpty()
-      .contains(new Holiday(LocalDate.of(year.getValue(), AUGUST, 15), "ASSUMPTION_DAY", PUBLIC_HOLIDAY));
+  @Test
+  void ensuresThatAssumptionDayIsConfigured() {
+    assertFixed(ANDORRA, AUGUST, 15, "ASSUMPTION_DAY");
   }
 
-  @Property
-  void ensuresThatNationalDayIsConfigured(@ForAll @YearRange Year year) {
-    final HolidayManager holidayManager = HolidayManager.getInstance(create(ANDORRA));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year);
-    assertThat(holidays)
-      .isNotEmpty()
-      .contains(new Holiday(LocalDate.of(year.getValue(), SEPTEMBER, 8), "NATIONAL_DAY", PUBLIC_HOLIDAY));
+  @Test
+  void ensuresThatNationalDayIsConfigured() {
+    assertFixed(ANDORRA, SEPTEMBER, 8, "NATIONAL_DAY");
   }
 
-  @Property
-  void ensuresThatAllSaintsIsConfigured(@ForAll @YearRange Year year) {
-    final HolidayManager holidayManager = HolidayManager.getInstance(create(ANDORRA));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year);
-    assertThat(holidays)
-      .isNotEmpty()
-      .contains(new Holiday(LocalDate.of(year.getValue(), NOVEMBER, 1), "ALL_SAINTS", PUBLIC_HOLIDAY));
+  @Test
+  void ensuresThatAllSaintsIsConfigured() {
+    assertFixed(ANDORRA, NOVEMBER, 1, "ALL_SAINTS");
   }
 
-  @Property
-  void ensuresThatImmaculateConceptionIsConfigured(@ForAll @YearRange Year year) {
-    final HolidayManager holidayManager = HolidayManager.getInstance(create(ANDORRA));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year);
-    assertThat(holidays)
-      .isNotEmpty()
-      .contains(new Holiday(LocalDate.of(year.getValue(), DECEMBER, 8), "IMMACULATE_CONCEPTION", PUBLIC_HOLIDAY));
+  @Test
+  void ensuresThatImmaculateConceptionIsConfigured() {
+    assertFixed(ANDORRA, DECEMBER, 8, "IMMACULATE_CONCEPTION");
   }
 
-  @Property
-  void ensuresThatChristmasIsConfigured(@ForAll @YearRange Year year) {
-    final HolidayManager holidayManager = HolidayManager.getInstance(create(ANDORRA));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year);
-    assertThat(holidays)
-      .isNotEmpty()
-      .contains(new Holiday(LocalDate.of(year.getValue(), DECEMBER, 25), "CHRISTMAS", PUBLIC_HOLIDAY))
-      .contains(new Holiday(LocalDate.of(year.getValue(), DECEMBER, 26), "STEPHENS", PUBLIC_HOLIDAY));
+  @Test
+  void ensuresThatChristmasIsConfigured() {
+    assertFixed(ANDORRA, DECEMBER, 25, "CHRISTMAS");
+    assertFixed(ANDORRA, DECEMBER, 26, "STEPHENS");
   }
 
-  @Property
-  void ensuresThatCarnivalIsConfigured(@ForAll @YearRange Year year) {
-    final HolidayManager holidayManager = HolidayManager.getInstance(create(ANDORRA));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year);
-    assertThat(holidays)
-      .isNotEmpty()
-      .extracting(Holiday::getPropertiesKey)
-      .contains("christian.CARNIVAL");
+  @Test
+  void ensuresThatCarnivalIsConfigured() {
+    assertChristian(ANDORRA, "CARNIVAL");
   }
 
-  @Property
-  void ensuresThatGoodFridayIsConfigured(@ForAll @YearRange Year year) {
-    final HolidayManager holidayManager = HolidayManager.getInstance(create(ANDORRA));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year);
-    assertThat(holidays)
-      .isNotEmpty()
-      .extracting(Holiday::getPropertiesKey)
-      .contains("christian.GOOD_FRIDAY");
+  @Test
+  void ensuresThatGoodFridayIsConfigured() {
+    assertChristian(ANDORRA, "GOOD_FRIDAY");
   }
 
-  @Property
-  void ensuresThatEasterMondayIsConfigured(@ForAll @YearRange Year year) {
-    final HolidayManager holidayManager = HolidayManager.getInstance(create(ANDORRA));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year);
-    assertThat(holidays)
-      .isNotEmpty()
-      .extracting(Holiday::getPropertiesKey)
-      .contains("christian.EASTER_MONDAY");
+  @Test
+  void ensuresThatEasterMondayIsConfigured() {
+    assertChristian(ANDORRA, "EASTER_MONDAY");
   }
 
-  @Property
-  void ensuresThatWhitMondayIsConfigured(@ForAll @YearRange Year year) {
-    final HolidayManager holidayManager = HolidayManager.getInstance(create(ANDORRA));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year);
-    assertThat(holidays)
-      .isNotEmpty()
-      .extracting(Holiday::getPropertiesKey)
-      .contains("christian.WHIT_MONDAY");
+  @Test
+  void ensuresThatWhitMondayIsConfigured() {
+    assertChristian(ANDORRA, "WHIT_MONDAY");
   }
 }
