@@ -43,13 +43,19 @@ public class HolidayChecker {
 
 
   public static void assertFixed(final HolidayCalendar calendar, final Month month, final int day, final String propertiesKey) {
-    checkByDate(calendar, YEAR_FROM_DEFAULT, YEAR_TO_DEFAULT, month, day, propertiesKey, PUBLIC_HOLIDAY);
+    checkByDate(calendar, "", YEAR_FROM_DEFAULT, YEAR_TO_DEFAULT, month, day, propertiesKey, PUBLIC_HOLIDAY);
+  }
+  public static void assertFixed(final HolidayCalendar calendar, final String hierarchy, final Month month, final int day, final String propertiesKey) {
+    checkByDate(calendar, hierarchy, YEAR_FROM_DEFAULT, YEAR_TO_DEFAULT, month, day, propertiesKey, PUBLIC_HOLIDAY);
+  }
+  public static void assertFixed(final HolidayCalendar calendar, final Month month, final int day, final String propertiesKey, final HolidayType holidayType) {
+    checkByDate(calendar, "", YEAR_FROM_DEFAULT, YEAR_TO_DEFAULT, month, day, propertiesKey, holidayType);
   }
   public static void assertFixed(final HolidayCalendar calendar, final Year from, final Year to, final Month month, final int day, final String propertiesKey) {
-    checkByDate(calendar, from, to, month, day, propertiesKey, PUBLIC_HOLIDAY);
+    checkByDate(calendar, "", from, to, month, day, propertiesKey, PUBLIC_HOLIDAY);
   }
   public static void assertFixed(final HolidayCalendar calendar, final Year from, final Year to , final Month month, final int day, final String propertiesKey, final HolidayType holidayType) {
-    checkByDate(calendar, from, to, month, day, propertiesKey, holidayType);
+    checkByDate(calendar, "", from, to, month, day, propertiesKey, holidayType);
   }
 
   private static void checkByKey(final HolidayCalendar calendar, final Year from, final Year to, final String propertiesKey, final HolidayType holidayType) {
@@ -66,11 +72,11 @@ public class HolidayChecker {
       );
   }
 
-  private static void checkByDate(final HolidayCalendar calendar, final Year from, final Year to, final Month month, final int day, final String propertiesKey, final HolidayType holidayType) {
+  private static void checkByDate(final HolidayCalendar calendar, final String hierarchy, final Year from, final Year to, final Month month, final int day, final String propertiesKey, final HolidayType holidayType) {
     ((YearArbitrary) Arbitraries.defaultFor(Year.class))
       .between(from.getValue(), to.getValue())
       .forEachValue(year -> {
-          final Set<Holiday> holidays = HolidayManager.getInstance(create(calendar)).getHolidays(year);
+          final Set<Holiday> holidays = HolidayManager.getInstance(create(calendar)).getHolidays(year, hierarchy);
           assertThat(holidays)
             .isNotEmpty()
             .contains(new Holiday(LocalDate.of(year.getValue(), month, day), propertiesKey, holidayType));
