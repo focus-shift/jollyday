@@ -22,7 +22,6 @@ import static org.junit.jupiter.api.Assertions.fail;
 
 public abstract class AbstractCountryTestBase {
 
-
   protected void validateCalendarData(final String countryCode, Year year) {
     validateCalendarData(countryCode, year, false);
   }
