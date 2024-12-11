@@ -46,9 +46,4 @@ class HolidayVGTest extends AbstractCountryTestBase {
       fail("Unexpected error occurred: " + e.getClass().getName() + " - " + e.getMessage());
     }
   }
-
-  @Test
-  void testManagerDifferentInstanceVG() {
-    validateManagerDifferentInstance(HolidayCalendar.BRITISH_VIRGIN_ISLANDS);
-  }
 }

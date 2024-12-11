@@ -10,8 +10,10 @@ import de.focus_shift.jollyday.core.impl.JapaneseHolidayManager;
 import de.focus_shift.jollyday.core.util.CalendarUtil;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.EnumSource;
 import org.junit.jupiter.params.provider.MethodSource;
 
 import java.time.LocalDate;
@@ -24,6 +26,7 @@ import java.util.Set;
 import java.util.stream.Stream;
 
 import static de.focus_shift.jollyday.core.HolidayCalendar.GERMANY;
+import static de.focus_shift.jollyday.core.HolidayCalendar.UNITED_STATES;
 import static de.focus_shift.jollyday.core.HolidayType.OBSERVANCE;
 import static de.focus_shift.jollyday.core.HolidayType.PUBLIC_HOLIDAY;
 import static de.focus_shift.jollyday.core.ManagerParameters.create;
@@ -38,6 +41,8 @@ import static java.time.Month.SEPTEMBER;
 import static java.util.Calendar.DAY_OF_MONTH;
 import static java.util.Calendar.MONTH;
 import static java.util.Calendar.YEAR;
+import static java.util.Locale.FRANCE;
+import static java.util.Locale.US;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.junit.jupiter.api.Assertions.fail;
@@ -297,6 +302,7 @@ class HolidayManagerTest {
     }
   }
 
+  @TestInstance(TestInstance.Lifecycle.PER_CLASS)
   @Nested
   class Instantiation {
 
@@ -306,6 +312,39 @@ class HolidayManagerTest {
       Locale.setDefault(Locale.CANADA);
       final HolidayManager sut = HolidayManager.getInstance();
       assertThat(sut.getManagerParameter().getDisplayName()).isEqualTo("ca");
+      Locale.setDefault(defaultLocale);
+    }
+
+    private Stream<Arguments> provideLocaleAndHolidayCalendar() {
+      return Stream.of(
+        Arguments.of(Locale.GERMANY, HolidayCalendar.GERMANY),
+        Arguments.of(Locale.FRANCE, HolidayCalendar.FRANCE)
+      );
+    }
+
+    @ParameterizedTest
+    @MethodSource("provideLocaleAndHolidayCalendar")
+    void ensureManagerAreEqualWithLocaleAndHolidayCalendarInstance(final Locale locale, final HolidayCalendar holidayCalendar) {
+      final Locale defaultLocale = Locale.getDefault();
+      Locale.setDefault(locale);
+      final HolidayManager defaultManager = HolidayManager.getInstance();
+      final HolidayManager countryManager = HolidayManager.getInstance(ManagerParameters.create(holidayCalendar));
+      assertThat(countryManager).isEqualTo(defaultManager);
+      Locale.setDefault(defaultLocale);
+    }
+
+    @ParameterizedTest
+    @EnumSource(HolidayCalendar.class)
+    void ensuresManagerIsDifferentWithDifferentDefaultLocales(final HolidayCalendar countryCalendar) {
+      final Locale defaultLocale = Locale.getDefault();
+      if (countryCalendar == UNITED_STATES) {
+        Locale.setDefault(FRANCE);
+      } else {
+        Locale.setDefault(US);
+      }
+      final HolidayManager defaultManager = HolidayManager.getInstance();
+      final HolidayManager countryManager = HolidayManager.getInstance(ManagerParameters.create(countryCalendar, null));
+      assertThat(countryManager).isNotEqualTo(defaultManager);
       Locale.setDefault(defaultLocale);
     }
 

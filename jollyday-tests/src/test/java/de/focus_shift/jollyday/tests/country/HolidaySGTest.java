@@ -46,9 +46,4 @@ class HolidaySGTest extends AbstractCountryTestBase {
       fail("Unexpected error occurred: " + e.getClass().getName() + " - " + e.getMessage());
     }
   }
-
-  @Test
-  void testManagerDifferentInstanceSG() {
-    validateManagerDifferentInstance(HolidayCalendar.SINGAPORE);
-  }
 }
