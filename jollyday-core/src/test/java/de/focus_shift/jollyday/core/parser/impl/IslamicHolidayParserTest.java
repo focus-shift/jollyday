@@ -55,6 +55,7 @@ class IslamicHolidayParserTest {
 
     // ID_UL_ADHA_2 will be on a sunday in 2022
     final List<Holiday> calculatedHoliday = sut.parse(Year.of(2022), holidays);
-    assertThat(calculatedHoliday.get(0).getDate().getDayOfWeek()).isEqualTo(DayOfWeek.MONDAY);
+    assertThat(calculatedHoliday.get(0).getDate().getDayOfWeek()).isEqualTo(DayOfWeek.SUNDAY);
+    assertThat(calculatedHoliday.get(0).getObservedDate().getDayOfWeek()).isEqualTo(DayOfWeek.MONDAY);
   }
 }

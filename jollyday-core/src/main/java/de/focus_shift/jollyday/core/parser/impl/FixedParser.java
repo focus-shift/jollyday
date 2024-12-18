@@ -22,8 +22,8 @@ public class FixedParser implements HolidayParser {
   public List<Holiday> parse(final Year year, final Holidays holidays) {
     return holidays.fixed().stream()
       .filter(new ValidLimitation(year))
-      .map(fixed -> new DescribedDateHolder(fixed, new MoveDateRelative(new FixedToLocalDate(year).apply(fixed)).apply(fixed)))
-      .map(describedDateHolder -> new CreateHoliday(describedDateHolder.getDate()).apply(describedDateHolder.getDescribed()))
+      .map(fixed -> new DescribedDateHolder(fixed, new FixedToLocalDate(year).apply(fixed), new MoveDateRelative(new FixedToLocalDate(year).apply(fixed)).apply(fixed)))
+      .map(describedDateHolder -> new CreateHoliday(describedDateHolder.getDate(), describedDateHolder.getObservedDate()).apply(describedDateHolder.getDescribed()))
       .collect(toList());
   }
 }
