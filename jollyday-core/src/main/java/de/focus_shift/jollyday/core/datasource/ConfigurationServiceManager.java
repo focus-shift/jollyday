@@ -18,21 +18,25 @@ public class ConfigurationServiceManager {
     this.configurationServiceCache = configurationServiceCache;
   }
 
-  public ConfigurationService getConfigurationService() {
-    return instantiateDataSource();
+  public ConfigurationService getConfigurationService(final String configurationServiceImplClassName) {
+    return instantiateDataSource(configurationServiceImplClassName);
   }
 
-  private ConfigurationService instantiateDataSource() {
+  private ConfigurationService instantiateDataSource(final String configurationServiceImplClassName) {
 
     final List<ConfigurationService> services = configurationServiceCache.getServices();
 
-    if (services.size() > 1) {
-      throw new IllegalStateException("Cannot instantiate datasource instance because there are two or more implementations available " + services);
-    }
-    if (services.isEmpty()) {
-      throw new IllegalStateException("Cannot instantiate datasource instance because there is no implementations");
+    if (services.size() == 1) {
+      return services.get(0);
     }
 
-    return services.get(0);
+    if (services.size() > 1) {
+      return services.stream()
+        .filter(configurationService -> configurationServiceImplClassName.equals(configurationService.getClass().getName()))
+        .findFirst()
+        .orElseThrow(() -> new IllegalStateException("Cannot instantiate datasource instance because there are two or more implementations available " + configurationServiceImplClassName));
+    }
+
+    throw new IllegalStateException("Cannot instantiate datasource instance because there is no implementations");
   }
 }

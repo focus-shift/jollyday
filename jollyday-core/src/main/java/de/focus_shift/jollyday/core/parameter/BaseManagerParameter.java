@@ -38,4 +38,9 @@ public abstract class BaseManagerParameter implements ManagerParameter {
   public String getManagerImplClassName() {
     return getProperty(MANAGER_IMPL_CLASS_PREFIX);
   }
+
+  @Override
+  public String getConfigurationServiceImplClassName() {
+    return getProperty(CONFIGURATION_SERVICE_IMPL);
+  }
 }

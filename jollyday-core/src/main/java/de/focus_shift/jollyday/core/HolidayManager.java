@@ -114,7 +114,8 @@ public abstract class HolidayManager {
     CONFIGURATION_MANAGER_PROVIDER.mergeConfigurationProperties(parameter);
 
     final String managerImplClassName = readManagerImplClassName(parameter);
-    final HolidayManagerValueHandler holidayManagerValueHandler = new HolidayManagerValueHandler(parameter, managerImplClassName, configurationServiceManager);
+    final String configurationServiceImplClassName = readConfigurationServiceImplClassName(parameter);
+    final HolidayManagerValueHandler holidayManagerValueHandler = new HolidayManagerValueHandler(parameter, managerImplClassName, configurationServiceImplClassName, configurationServiceManager);
     if (isManagerCachingEnabled()) {
       return HOLIDAY_MANAGER_CACHE.get(holidayManagerValueHandler);
     } else {
@@ -132,6 +133,20 @@ public abstract class HolidayManager {
     final String className = parameter.getManagerImplClassName();
     if (className == null) {
       throw new IllegalStateException("Missing configuration '" + ManagerParameter.MANAGER_IMPL_CLASS_PREFIX + "'. Cannot create manager.");
+    }
+    return className;
+  }
+
+  /**
+   * Reads the managers implementation class from the properties config file.
+   *
+   * @param parameter the parameter to read the manager implementation class from
+   * @return the manager implementation class name
+   */
+  private static String readConfigurationServiceImplClassName(final ManagerParameter parameter) {
+    final String className = parameter.getConfigurationServiceImplClassName();
+    if (className == null) {
+      throw new IllegalStateException("Missing configuration '" + ManagerParameter.CONFIGURATION_SERVICE_IMPL + "'. Cannot create configuration service.");
     }
     return className;
   }
