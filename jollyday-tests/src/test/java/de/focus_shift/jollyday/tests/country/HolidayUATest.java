@@ -1,18 +1,83 @@
 package de.focus_shift.jollyday.tests.country;
 
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.ValueSource;
+import org.junit.jupiter.api.Test;
 
 import java.time.Year;
 
-class HolidayUATest extends AbstractCountryTestBase {
+import static de.focus_shift.jollyday.core.HolidayCalendar.UKRAINE;
+import static de.focus_shift.jollyday.tests.CalendarCheckerApi.assertFor;
+import static java.time.DayOfWeek.MONDAY;
+import static java.time.DayOfWeek.SATURDAY;
+import static java.time.DayOfWeek.SUNDAY;
+import static java.time.Month.AUGUST;
+import static java.time.Month.DECEMBER;
+import static java.time.Month.JANUARY;
+import static java.time.Month.JUNE;
+import static java.time.Month.MARCH;
+import static java.time.Month.MAY;
+import static java.time.Month.OCTOBER;
 
-  private static final String ISO_CODE = "ua";
+class HolidayUATest {
 
-  @ParameterizedTest
-  @ValueSource(strings = {"2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020"})
-  void testManagerUAStructure(final Year year) {
-    validateCalendarData(ISO_CODE, year);
+  @Test
+  void ensuresHolidays() {
+
+    assertFor(UKRAINE)
+      .hasFixedHoliday("NEW_YEAR", JANUARY, 1)
+        .canBeenShiftedFrom(SATURDAY, MONDAY)
+        .canBeenShiftedFrom(SUNDAY, MONDAY)
+      .and()
+      .hasFixedHoliday("CHRISTMAS", JANUARY, 7)
+        .canBeenShiftedFrom(SATURDAY, MONDAY)
+        .canBeenShiftedFrom(SUNDAY, MONDAY)
+      .and()
+      .hasFixedHoliday("INTERNATIONAL_WOMAN", MARCH, 8)
+        .canBeenShiftedFrom(SATURDAY, MONDAY)
+        .canBeenShiftedFrom(SUNDAY, MONDAY)
+      .and()
+      .hasFixedHoliday("LABOUR_DAY", MAY, 1)
+        .canBeenShiftedFrom(SATURDAY, MONDAY)
+        .canBeenShiftedFrom(SUNDAY, MONDAY)
+      .and()
+      .hasFixedHoliday("LABOUR_DAY", MAY, 2)
+        .between(Year.of(1900), Year.of(2017))
+        .canBeenShiftedFrom(SATURDAY, MONDAY)
+        .canBeenShiftedFrom(SUNDAY, MONDAY)
+      .and()
+      .hasFixedHoliday("LABOUR_DAY", MAY, 3)
+        .between(Year.of(2016), Year.of(2016))
+      .and()
+      .hasFixedHoliday("VICTORY", MAY, 9)
+        .canBeenShiftedFrom(SATURDAY, MONDAY)
+        .canBeenShiftedFrom(SUNDAY, MONDAY)
+      .and()
+      .hasFixedHoliday("CONSTITUTION_DAY", JUNE, 28)
+        .canBeenShiftedFrom(SATURDAY, MONDAY)
+        .canBeenShiftedFrom(SUNDAY, MONDAY)
+      .and()
+      .hasFixedHoliday("INDEPENDENCE_DAY", AUGUST, 24)
+        .canBeenShiftedFrom(SATURDAY, MONDAY)
+        .canBeenShiftedFrom(SUNDAY, MONDAY)
+      .and()
+      .hasFixedHoliday("DEFENDER_OF_UKRAINE", OCTOBER, 14)
+        .notBetween(Year.of(1900), Year.of(2014))
+        .between(Year.of(2015), Year.of(2050))
+        .canBeenShiftedFrom(SATURDAY, MONDAY)
+        .canBeenShiftedFrom(SUNDAY, MONDAY)
+      .and()
+      .hasFixedHoliday("CHRISTMAS", DECEMBER, 25)
+        .notBetween(Year.of(1900), Year.of(2016))
+        .between(Year.of(2017), Year.of(2050))
+        .canBeenShiftedFrom(SATURDAY, MONDAY)
+        .canBeenShiftedFrom(SUNDAY, MONDAY)
+      .and()
+      .hasChristianHoliday("EASTER")
+        .canBeenShiftedFrom(SATURDAY, MONDAY)
+        .canBeenShiftedFrom(SUNDAY, MONDAY)
+      .and()
+      .hasChristianHoliday("PENTECOST")
+        .canBeenShiftedFrom(SATURDAY, MONDAY)
+        .canBeenShiftedFrom(SUNDAY, MONDAY)
+      .check();
   }
-
 }

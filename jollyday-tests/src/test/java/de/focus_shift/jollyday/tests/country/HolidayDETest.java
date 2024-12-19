@@ -1,82 +1,42 @@
 package de.focus_shift.jollyday.tests.country;
 
-import de.focus_shift.jollyday.core.Holiday;
-import de.focus_shift.jollyday.core.HolidayCalendar;
-import de.focus_shift.jollyday.core.HolidayManager;
-import de.focus_shift.jollyday.core.ManagerParameter;
-import de.focus_shift.jollyday.core.ManagerParameters;
-import de.focus_shift.jollyday.core.util.CalendarUtil;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.ValueSource;
 
-import java.time.LocalDate;
 import java.time.Year;
-import java.util.List;
-import java.util.Locale;
-import java.util.Set;
 
-import static java.util.Locale.FRANCE;
-import static java.util.Locale.GERMAN;
-import static java.util.Locale.GERMANY;
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.fail;
+import static de.focus_shift.jollyday.core.HolidayCalendar.GERMANY;
+import static de.focus_shift.jollyday.tests.CalendarCheckerApi.assertFor;
+import static java.time.Month.DECEMBER;
+import static java.time.Month.JANUARY;
+import static java.time.Month.JUNE;
+import static java.time.Month.MAY;
+import static java.time.Month.OCTOBER;
 
-class HolidayDETest extends AbstractCountryTestBase {
-
-  private static final String ISO_CODE = "de";
-
-  @ParameterizedTest
-  @ValueSource(strings = {"2010", "2022", "2023"})
-  void testManagerDEStructure(final Year year) {
-    validateCalendarData(ISO_CODE, year, true);
-  }
+class HolidayDETest {
 
   @Test
-  void testManagerDEInterval() {
-    try {
-      final HolidayManager instance = HolidayManager.getInstance(ManagerParameters.create(HolidayCalendar.GERMANY, null));
-      final LocalDate startDateInclusive = LocalDate.of(2010, 10, 1);
-      final LocalDate endDateInclusive = LocalDate.of(2011, 1, 31);
-      final Set<Holiday> holidays = instance.getHolidays(startDateInclusive, endDateInclusive);
-      final List<LocalDate> expected = List.of(LocalDate.of(2010, 12, 25),
-        LocalDate.of(2010, 12, 26), LocalDate.of(2010, 10, 3),
-        LocalDate.of(2011, 1, 1));
-      assertThat(holidays).hasSameSizeAs(expected);
-      for (LocalDate d : expected) {
-        assertThat(CalendarUtil.contains(holidays, d)).isTrue();
-      }
-    } catch (Exception e) {
-      fail("Unexpected error occurred: " + e.getClass().getName() + " - " + e.getMessage());
-    }
-  }
-
-  @Test
-  void testManagerSameInstanceDE() {
-    validateManagerSameInstance(GERMANY, HolidayCalendar.GERMANY);
-  }
-
-  @Test
-  void testManagerDifferentInstanceDE() {
-    validateManagerDifferentInstance(HolidayCalendar.GERMANY);
-  }
-
-  @Test
-  void testSystemLocaleInfluence() {
-    final Set<Holiday> french = getUsingSystemLocale(FRANCE);
-    final Set<Holiday> german = getUsingSystemLocale(GERMANY);
-    assertThat(german).isEqualTo(french);
-  }
-
-  private Set<Holiday> getUsingSystemLocale(Locale systemLocale) {
-    final Locale defaultLocale = Locale.getDefault();
-    try {
-      Locale.setDefault(systemLocale);
-      final ManagerParameter parameters = ManagerParameters.create(GERMAN);
-      final HolidayManager mgr = HolidayManager.getInstance(parameters);
-      return mgr.getHolidays(Year.of(2018));
-    } finally {
-      Locale.setDefault(defaultLocale);
-    }
+  void ensuresHolidays() {
+    assertFor(GERMANY)
+      .hasFixedHoliday("NEW_YEAR", JANUARY, 1).and()
+      .hasFixedHoliday("LABOUR_DAY", MAY, 1).and()
+      .hasFixedHoliday("UNIFICATION", JUNE, 17)
+        .notBetween(Year.of(1900), Year.of(1953))
+        .between(Year.of(1954), Year.of(1990))
+        .notBetween(Year.of(1991), Year.of(2500))
+      .and()
+      .hasFixedHoliday("UNIFICATION_GERMANY", OCTOBER, 3)
+        .notBetween(Year.of(1900), Year.of(1989))
+        .between(Year.of(1990), Year.of(2500))
+      .and()
+      .hasFixedHoliday("REFORMATION_DAY", OCTOBER, 31)
+        .between(Year.of(2017), Year.of(2017))
+      .and()
+      .hasFixedHoliday("FIRST_CHRISTMAS_DAY", DECEMBER, 25).and()
+      .hasFixedHoliday("SECOND_CHRISTMAS_DAY", DECEMBER, 26).and()
+      .hasChristianHoliday("GOOD_FRIDAY").and()
+      .hasChristianHoliday("EASTER_MONDAY").and()
+      .hasChristianHoliday("ASCENSION_DAY").and()
+      .hasChristianHoliday("WHIT_MONDAY")
+      .check();
   }
 }

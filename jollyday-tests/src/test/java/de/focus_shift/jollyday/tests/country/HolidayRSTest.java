@@ -23,7 +23,7 @@ import static java.time.Month.NOVEMBER;
 import static java.time.temporal.ChronoField.DAY_OF_WEEK;
 import static org.assertj.core.api.Assertions.assertThat;
 
-class HolidayRSTest extends AbstractCountryTestBase {
+class HolidayRSTest {
 
   @Property
   void ensuresThatNewYearFirstIsConfiguredAndIfOnSundayMovesToMondayAndTuesday(@ForAll @YearRange Year year) {

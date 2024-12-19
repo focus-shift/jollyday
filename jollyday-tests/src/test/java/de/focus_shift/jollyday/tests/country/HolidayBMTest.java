@@ -46,9 +46,4 @@ class HolidayBMTest extends AbstractCountryTestBase {
       fail("Unexpected error occurred: " + e.getClass().getName() + " - " + e.getMessage());
     }
   }
-
-  @Test
-  void testManagerDifferentInstanceBM() {
-    validateManagerDifferentInstance(HolidayCalendar.BERMUDA);
-  }
 }

@@ -1,133 +1,43 @@
 package de.focus_shift.jollyday.tests.country;
 
-import de.focus_shift.jollyday.core.Holiday;
-import de.focus_shift.jollyday.core.HolidayManager;
-import net.jqwik.api.ForAll;
-import net.jqwik.api.Property;
-import net.jqwik.time.api.constraints.YearRange;
+import org.junit.jupiter.api.Test;
 
-import java.time.LocalDate;
 import java.time.Year;
-import java.util.Set;
 
 import static de.focus_shift.jollyday.core.HolidayCalendar.MOROCCO;
-import static de.focus_shift.jollyday.core.HolidayType.PUBLIC_HOLIDAY;
-import static de.focus_shift.jollyday.core.ManagerParameters.create;
+import static de.focus_shift.jollyday.tests.CalendarCheckerApi.assertFor;
 import static java.time.Month.AUGUST;
 import static java.time.Month.JANUARY;
 import static java.time.Month.JULY;
 import static java.time.Month.MAY;
 import static java.time.Month.NOVEMBER;
-import static org.assertj.core.api.Assertions.assertThat;
 
-class HolidayMATest extends AbstractCountryTestBase {
+class HolidayMATest {
 
-  @Property
-  void ensuresThatNewYearIsConfigured(@ForAll @YearRange(max = 2150) Year year) {
-    final HolidayManager holidayManager = HolidayManager.getInstance(create(MOROCCO));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year);
-    assertThat(holidays)
-      .isNotEmpty()
-      .contains(new Holiday(LocalDate.of(year.getValue(), JANUARY, 1), "NEW_YEAR", PUBLIC_HOLIDAY));
-  }
+  private static final Year YEAR_FROM = Year.of(1900);
+  private static final Year YEAR_TO = Year.of(2173);
 
-  @Property
-  void ensuresThatProclamationOfIndependenceIsConfigured(@ForAll @YearRange(max = 2150) Year year) {
-    final HolidayManager holidayManager = HolidayManager.getInstance(create(MOROCCO));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year);
-    assertThat(holidays)
-      .isNotEmpty()
-      .contains(new Holiday(LocalDate.of(year.getValue(), JANUARY, 11), "PROCLAMATION_OF_INDEPENDENCE", PUBLIC_HOLIDAY));
-  }
+  @Test
+  void ensuresHolidays() {
 
-  @Property
-  void ensuresThatAmazighNewYearIsConfigured(@ForAll @YearRange(min = 2024, max = 2150) Year year) {
-    final HolidayManager holidayManager = HolidayManager.getInstance(create(MOROCCO));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year);
-    assertThat(holidays)
-      .isNotEmpty()
-      .contains(new Holiday(LocalDate.of(year.getValue(), JANUARY, 14), "AMAZIGH_NEW_YEAR", PUBLIC_HOLIDAY));
-  }
-
-  @Property
-  void ensuresThatAmazighNewYearIsNotConfiguredUntil2023(@ForAll @YearRange(max = 2023) Year year) {
-    final HolidayManager holidayManager = HolidayManager.getInstance(create(MOROCCO));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year);
-    assertThat(holidays)
-      .isNotEmpty()
-      .doesNotContain(new Holiday(LocalDate.of(year.getValue(), JANUARY, 14), "AMAZIGH_NEW_YEAR", PUBLIC_HOLIDAY));
-  }
-
-  @Property
-  void ensuresThatLabourDayIsConfigured(@ForAll @YearRange(max = 2150) Year year) {
-    final HolidayManager holidayManager = HolidayManager.getInstance(create(MOROCCO));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year);
-    assertThat(holidays)
-      .isNotEmpty()
-      .contains(new Holiday(LocalDate.of(year.getValue(), MAY, 1), "LABOUR_DAY", PUBLIC_HOLIDAY));
-  }
-
-  @Property
-  void ensuresThatEnthronementIsConfigured(@ForAll @YearRange(max = 2150) Year year) {
-    final HolidayManager holidayManager = HolidayManager.getInstance(create(MOROCCO));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year);
-    assertThat(holidays)
-      .isNotEmpty()
-      .contains(new Holiday(LocalDate.of(year.getValue(), JULY, 30), "ENTHRONEMENT", PUBLIC_HOLIDAY));
-  }
-
-  @Property
-  void ensuresThatZikraQuedEdDahanIsConfigured(@ForAll @YearRange(max = 2150) Year year) {
-    final HolidayManager holidayManager = HolidayManager.getInstance(create(MOROCCO));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year);
-    assertThat(holidays)
-      .isNotEmpty()
-      .contains(new Holiday(LocalDate.of(year.getValue(), AUGUST, 14), "ZIKRA_OUED_ED_DAHAB", PUBLIC_HOLIDAY));
-  }
-
-  @Property
-  void ensuresThatRevolutionOfTheKingAndThePeopleIsConfigured(@ForAll @YearRange(max = 2150) Year year) {
-    final HolidayManager holidayManager = HolidayManager.getInstance(create(MOROCCO));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year);
-    assertThat(holidays)
-      .isNotEmpty()
-      .contains(new Holiday(LocalDate.of(year.getValue(), AUGUST, 20), "REVOLUTION_OF_THE_KING_AND_THE_PEOPLE", PUBLIC_HOLIDAY));
-  }
-
-  @Property
-  void ensuresThatYouthIsConfigured(@ForAll @YearRange(max = 2150) Year year) {
-    final HolidayManager holidayManager = HolidayManager.getInstance(create(MOROCCO));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year);
-    assertThat(holidays)
-      .isNotEmpty()
-      .contains(new Holiday(LocalDate.of(year.getValue(), AUGUST, 21), "YOUTH", PUBLIC_HOLIDAY));
-  }
-
-  @Property
-  void ensuresThatGreenMarchIsConfigured(@ForAll @YearRange(max = 2150) Year year) {
-    final HolidayManager holidayManager = HolidayManager.getInstance(create(MOROCCO));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year);
-    assertThat(holidays)
-      .isNotEmpty()
-      .contains(new Holiday(LocalDate.of(year.getValue(), NOVEMBER, 6), "GREEN_MARCH", PUBLIC_HOLIDAY));
-  }
-
-  @Property
-  void ensuresThatIndependenceDayIsConfigured(@ForAll @YearRange(max = 2150) Year year) {
-    final HolidayManager holidayManager = HolidayManager.getInstance(create(MOROCCO));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year);
-    assertThat(holidays)
-      .isNotEmpty()
-      .contains(new Holiday(LocalDate.of(year.getValue(), NOVEMBER, 18), "INDEPENDENCE_DAY", PUBLIC_HOLIDAY));
-  }
-
-  @Property
-  void ensuresThatIslamicHolidaysAreConfigured(@ForAll @YearRange(max = 2150) Year year) {
-    final HolidayManager holidayManager = HolidayManager.getInstance(create(MOROCCO));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year);
-    assertThat(holidays)
-      .isNotEmpty()
-      .extracting(Holiday::getPropertiesKey)
-      .contains("islamic.NEWYEAR", "islamic.ID_AL_FITR", "islamic.ID_UL_ADHA", "islamic.MAWLID_AN_NABI");
+    assertFor(MOROCCO)
+      .hasFixedHoliday("NEW_YEAR", JANUARY, 1).between(YEAR_FROM, YEAR_TO).and()
+      .hasFixedHoliday("PROCLAMATION_OF_INDEPENDENCE", JANUARY, 11).between(YEAR_FROM, YEAR_TO).and()
+      .hasFixedHoliday("AMAZIGH_NEW_YEAR", JANUARY, 14)
+        .notBetween(YEAR_FROM, Year.of(2023))
+        .between(Year.of(2024), YEAR_TO)
+      .and()
+      .hasFixedHoliday("LABOUR_DAY", MAY, 1).between(YEAR_FROM, YEAR_TO).and()
+      .hasFixedHoliday("ENTHRONEMENT", JULY, 30).between(YEAR_FROM, YEAR_TO).and()
+      .hasFixedHoliday("ZIKRA_OUED_ED_DAHAB", AUGUST, 14).between(YEAR_FROM, YEAR_TO).and()
+      .hasFixedHoliday("REVOLUTION_OF_THE_KING_AND_THE_PEOPLE", AUGUST, 20).between(YEAR_FROM, YEAR_TO).and()
+      .hasFixedHoliday("YOUTH", AUGUST, 21).between(YEAR_FROM, YEAR_TO).and()
+      .hasFixedHoliday("GREEN_MARCH", NOVEMBER, 6).between(YEAR_FROM, YEAR_TO).and()
+      .hasFixedHoliday("INDEPENDENCE_DAY", NOVEMBER, 18).between(YEAR_FROM, YEAR_TO).and()
+      .hasIslamicHoliday("NEWYEAR").between(YEAR_FROM, YEAR_TO).and()
+      .hasIslamicHoliday("ID_AL_FITR").between(YEAR_FROM, YEAR_TO).and()
+      .hasIslamicHoliday("ID_UL_ADHA").between(YEAR_FROM, YEAR_TO).and()
+      .hasIslamicHoliday("MAWLID_AN_NABI").between(YEAR_FROM, YEAR_TO)
+      .check();
   }
 }

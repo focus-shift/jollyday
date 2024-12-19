@@ -21,7 +21,7 @@ import static java.time.Month.MARCH;
 import static java.time.Month.MAY;
 import static org.assertj.core.api.Assertions.assertThat;
 
-class HolidayMDTest extends AbstractCountryTestBase {
+class HolidayMDTest {
 
   @Property
   void ensuresThatNewYearIsConfigured(@ForAll @YearRange Year year) {
