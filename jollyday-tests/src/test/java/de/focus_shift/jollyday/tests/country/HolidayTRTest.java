@@ -1,65 +1,52 @@
 package de.focus_shift.jollyday.tests.country;
 
-import de.focus_shift.jollyday.core.Holiday;
-import de.focus_shift.jollyday.core.HolidayCalendar;
-import de.focus_shift.jollyday.core.HolidayManager;
-import de.focus_shift.jollyday.core.ManagerParameters;
 import org.junit.jupiter.api.Test;
 
-import java.time.LocalDate;
 import java.time.Year;
-import java.util.Set;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static de.focus_shift.jollyday.core.HolidayCalendar.TURKEY;
+import static de.focus_shift.jollyday.tests.CalendarCheckerApi.assertFor;
+import static java.time.Month.APRIL;
+import static java.time.Month.AUGUST;
+import static java.time.Month.JANUARY;
+import static java.time.Month.JULY;
+import static java.time.Month.MAY;
+import static java.time.Month.OCTOBER;
 
-class HolidayTRTest extends AbstractCountryTestBase {
+class HolidayTRTest {
 
-  private static final String ISO_CODE = "tr";
-  private static final Year YEAR = Year.of(2019);
-
-
-  @Test
-  void testManagerTRStructure() {
-    validateCalendarData(ISO_CODE, YEAR);
-  }
-
-  @Test
-  void testNumberOfHolidays() {
-    final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(HolidayCalendar.TURKEY));
-    final Set<Holiday> holidays = holidayManager.getHolidays(YEAR);
-    assertThat(holidays).hasSize(9);
-  }
+  private static final Year YEAR_FROM = Year.of(1900);
+  private static final Year YEAR_TO = Year.of(2173);
 
   @Test
-  void testRamazan2019() {
-    // Actually, in Turkey, Ramadan is one day after Eid Mubarak, for keep the Eid al Fitr for now
-    final LocalDate expected = LocalDate.of(YEAR.getValue(), 6, 4);
-    final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(HolidayCalendar.TURKEY));
-    final Set<Holiday> holidays = holidayManager.getHolidays(YEAR);
-    assertThat(holidays).hasSize(9);
-    boolean found = false;
-    for (Holiday holiday : holidays) {
-      if (holiday.getPropertiesKey().equals("islamic.ID_AL_FITR") && holiday.getDate().equals(expected)) {
-        found = true;
-        break;
-      }
-    }
-    assertThat(found).isTrue();
-  }
+  void ensuresHolidays() {
 
-  @Test
-  void testKurban2019() {
-    final LocalDate expected = LocalDate.of(YEAR.getValue(), 8, 11);
-    final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(HolidayCalendar.TURKEY));
-    final Set<Holiday> holidays = holidayManager.getHolidays(YEAR);
-    assertThat(holidays).hasSize(9);
-    boolean found = false;
-    for (Holiday holiday : holidays) {
-      if (holiday.getPropertiesKey().equals("islamic.ID_UL_ADHA") && holiday.getDate().equals(expected)) {
-        found = true;
-        break;
-      }
-    }
-    assertThat(found).isTrue();
+    assertFor(TURKEY)
+      .hasFixedHoliday("NEW_YEAR", JANUARY, 1)
+        .between(YEAR_FROM, YEAR_TO)
+      .and()
+      .hasFixedHoliday("TURKEY_CHILDRENS_DAY", APRIL, 23)
+        .between(YEAR_FROM, YEAR_TO)
+      .and()
+      .hasFixedHoliday("LABOUR_DAY", MAY, 1)
+        .between(YEAR_FROM, YEAR_TO)
+      .and()
+      .hasFixedHoliday("TURKEY_COMMEMORATION_OF_ATATURK", MAY, 19)
+        .between(Year.of(2004), YEAR_TO)
+      .and()
+      .hasFixedHoliday("TURKEY_DEMOCRATIC_UNITY_DAY", JULY, 15)
+        .between(YEAR_FROM, YEAR_TO).and()
+      .hasFixedHoliday("TURKEY_VICTORY_DAY", AUGUST, 30)
+        .between(Year.of(2003), YEAR_TO)
+      .and()
+      .hasFixedHoliday("TURKEY_REPUBLIC_DAY", OCTOBER, 29)
+        .between(Year.of(2003), YEAR_TO)
+      .and()
+      .hasIslamicHoliday("ID_AL_FITR")
+        .between(YEAR_FROM, YEAR_TO)
+      .and()
+      .hasIslamicHoliday("ID_UL_ADHA")
+        .between(YEAR_FROM, YEAR_TO)
+      .check();
   }
 }
