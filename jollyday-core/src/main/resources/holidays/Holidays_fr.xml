@@ -48,7 +48,7 @@
     <SubConfigurations hierarchy="42" description="Loire">
       <Holidays/>
     </SubConfigurations>
-    <SubConfigurations hierarchy="69" description="Métropole de Lyon">
+    <SubConfigurations hierarchy="69M" description="Métropole de Lyon">
       <Holidays/>
     </SubConfigurations>
     <SubConfigurations hierarchy="63" description="Puy-de-Dôme">
@@ -128,10 +128,6 @@
     </SubConfigurations>
   </SubConfigurations>
 
-  <SubConfigurations hierarchy="CP" description="Clipperton">
-    <Holidays/>
-  </SubConfigurations>
-
   <SubConfigurations hierarchy="20R" description="Corse">
     <Holidays/>
     <SubConfigurations hierarchy="2A" description="Corse-du-Sud">
@@ -199,6 +195,34 @@
       <Holidays/>
     </SubConfigurations>
     <SubConfigurations hierarchy="80" description="Somme">
+      <Holidays/>
+    </SubConfigurations>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="IDF" description="Île-de-France">
+    <Holidays/>
+    <SubConfigurations hierarchy="91" description="Essonne">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="92" description="Hauts-de-Seine">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="75C" description="Paris">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="93" description="Seine-Saint-Denis">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="77" description="Seine-et-Marne">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="95" description="Val-d'Oise">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="94" description="Val-de-Marne">
+      <Holidays/>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="78" description="Yvelines">
       <Holidays/>
     </SubConfigurations>
   </SubConfigurations>
@@ -342,34 +366,6 @@
       <Holidays/>
     </SubConfigurations>
     <SubConfigurations hierarchy="84" description="Vaucluse">
-      <Holidays/>
-    </SubConfigurations>
-  </SubConfigurations>
-
-  <SubConfigurations hierarchy="IDF" description="Île-de-France">
-    <Holidays/>
-    <SubConfigurations hierarchy="91" description="Essonne">
-      <Holidays/>
-    </SubConfigurations>
-    <SubConfigurations hierarchy="92" description="Hauts-de-Seine">
-      <Holidays/>
-    </SubConfigurations>
-    <SubConfigurations hierarchy="75C" description="Paris">
-      <Holidays/>
-    </SubConfigurations>
-    <SubConfigurations hierarchy="93" description="Seine-Saint-Denis">
-      <Holidays/>
-    </SubConfigurations>
-    <SubConfigurations hierarchy="77" description="Seine-et-Marne">
-      <Holidays/>
-    </SubConfigurations>
-    <SubConfigurations hierarchy="95" description="Val-d'Oise">
-      <Holidays/>
-    </SubConfigurations>
-    <SubConfigurations hierarchy="94" description="Val-de-Marne">
-      <Holidays/>
-    </SubConfigurations>
-    <SubConfigurations hierarchy="78" description="Yvelines">
       <Holidays/>
     </SubConfigurations>
   </SubConfigurations>
