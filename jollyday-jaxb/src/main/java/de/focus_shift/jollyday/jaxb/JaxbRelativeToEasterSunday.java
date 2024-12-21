@@ -11,20 +11,32 @@ import java.time.Year;
 import java.time.chrono.Chronology;
 import java.time.chrono.IsoChronology;
 
-
-public class JaxbRelativeToEasterSunday implements RelativeToEasterSunday {
+/**
+ * {@inheritDoc}
+ */
+class JaxbRelativeToEasterSunday implements RelativeToEasterSunday {
 
   private final de.focus_shift.jollyday.jaxb.mapping.RelativeToEasterSunday relativeToEasterSunday;
 
-  public JaxbRelativeToEasterSunday(de.focus_shift.jollyday.jaxb.mapping.RelativeToEasterSunday relativeToEasterSunday) {
+  JaxbRelativeToEasterSunday(de.focus_shift.jollyday.jaxb.mapping.RelativeToEasterSunday relativeToEasterSunday) {
     this.relativeToEasterSunday = relativeToEasterSunday;
   }
 
+  /**
+   * {@inheritDoc}
+   *
+   * @return {@inheritDoc}
+   */
   @Override
   public String descriptionPropertiesKey() {
     return relativeToEasterSunday.getDescriptionPropertiesKey();
   }
 
+  /**
+   * {@inheritDoc}
+   *
+   * @return {@inheritDoc}
+   */
   @Override
   public HolidayType officiality() {
     return relativeToEasterSunday.getLocalizedType() == null
@@ -32,6 +44,11 @@ public class JaxbRelativeToEasterSunday implements RelativeToEasterSunday {
       : HolidayType.valueOf(relativeToEasterSunday.getLocalizedType().name());
   }
 
+  /**
+   * {@inheritDoc}
+   *
+   * @return {@inheritDoc}
+   */
   @Override
   public Year validFrom() {
     return relativeToEasterSunday.getValidFrom() == null
@@ -39,6 +56,11 @@ public class JaxbRelativeToEasterSunday implements RelativeToEasterSunday {
       : Year.of(relativeToEasterSunday.getValidFrom());
   }
 
+  /**
+   * {@inheritDoc}
+   *
+   * @return {@inheritDoc}
+   */
   @Override
   public Year validTo() {
     return relativeToEasterSunday.getValidTo() == null
@@ -46,6 +68,11 @@ public class JaxbRelativeToEasterSunday implements RelativeToEasterSunday {
       : Year.of(relativeToEasterSunday.getValidTo());
   }
 
+  /**
+   * {@inheritDoc}
+   *
+   * @return {@inheritDoc}
+   */
   @Override
   public YearCycle cycle() {
     return relativeToEasterSunday.getEvery() == null
@@ -53,11 +80,21 @@ public class JaxbRelativeToEasterSunday implements RelativeToEasterSunday {
       : YearCycle.valueOf(relativeToEasterSunday.getEvery().name());
   }
 
+  /**
+   * {@inheritDoc}
+   *
+   * @return {@inheritDoc}
+   */
   @Override
   public Chronology chronology() {
     return relativeToEasterSunday.getChronology() == ChronologyType.JULIAN ? JulianChronology.INSTANCE : IsoChronology.INSTANCE;
   }
 
+  /**
+   * {@inheritDoc}
+   *
+   * @return {@inheritDoc}
+   */
   @Override
   public Days days() {
     return Days.of(relativeToEasterSunday.getDays());

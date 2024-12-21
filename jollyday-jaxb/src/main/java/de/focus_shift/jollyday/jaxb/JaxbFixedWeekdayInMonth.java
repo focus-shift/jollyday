@@ -9,11 +9,14 @@ import java.time.DayOfWeek;
 import java.time.Month;
 import java.time.Year;
 
-public class JaxbFixedWeekdayInMonth implements FixedWeekdayInMonth {
+/**
+ * {@inheritDoc}
+ */
+class JaxbFixedWeekdayInMonth implements FixedWeekdayInMonth {
 
   private final de.focus_shift.jollyday.jaxb.mapping.FixedWeekdayInMonth fixedWeekdayInMonth;
 
-  public JaxbFixedWeekdayInMonth(de.focus_shift.jollyday.jaxb.mapping.FixedWeekdayInMonth fixedWeekdayInMonth) {
+  JaxbFixedWeekdayInMonth(de.focus_shift.jollyday.jaxb.mapping.FixedWeekdayInMonth fixedWeekdayInMonth) {
     this.fixedWeekdayInMonth = fixedWeekdayInMonth;
   }
 

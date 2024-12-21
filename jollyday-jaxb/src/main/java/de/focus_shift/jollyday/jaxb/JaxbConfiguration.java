@@ -5,12 +5,14 @@ import de.focus_shift.jollyday.core.spi.Holidays;
 
 import java.util.stream.Stream;
 
-
-public class JaxbConfiguration implements Configuration {
+/**
+ * {@inheritDoc}
+ */
+class JaxbConfiguration implements Configuration {
 
   private final de.focus_shift.jollyday.jaxb.mapping.Configuration xmlConfiguration;
 
-  public JaxbConfiguration(de.focus_shift.jollyday.jaxb.mapping.Configuration xmlConfiguration) {
+  JaxbConfiguration(de.focus_shift.jollyday.jaxb.mapping.Configuration xmlConfiguration) {
     this.xmlConfiguration = xmlConfiguration;
   }
 
