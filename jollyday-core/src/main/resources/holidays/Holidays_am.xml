@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="am" description="Armenia"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="JANUARY" day="2" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="JANUARY" day="5" descriptionPropertiesKey="CHRISTMAS"/>
+    <Fixed month="JANUARY" day="6" descriptionPropertiesKey="CHRISTMAS"/>
+    <Fixed month="JANUARY" day="28" descriptionPropertiesKey="ARMY_DAY"/>
+    <Fixed month="MARCH" day="8" descriptionPropertiesKey="INTERNATIONAL_WOMAN"/>
+    <Fixed month="APRIL" day="24" descriptionPropertiesKey="ARMENIAN_GENOCIDE_REMEMBRANCE_DAY"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="MAY" day="9" descriptionPropertiesKey="VICTORY_AND_PEACE_DAY"/>
+    <Fixed month="MAY" day="28" descriptionPropertiesKey="REPUBLIC_DAY"/>
+    <Fixed month="JULY" day="5" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+    <Fixed month="SEPTEMBER" day="21" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <Fixed month="DECEMBER" day="31" descriptionPropertiesKey="NEW_YEARS_EVE"/>
+
+    <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Armenia</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:AM</Source>
+  </Sources>
+
+  <SubConfigurations hierarchy="ag" description="Aragatsotn">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ar" description="Ararat">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="av" description="Armavir">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="er" description="Yerevan">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="gr" description="Gegharkunik">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="kt" description="Kotayk">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="lo" description="Lori">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="sh" description="Shirak">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="su" description="Syunik">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="tv" description="Tavush">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="vd" description="Vayots Dzor">
+    <Holidays/>
+  </SubConfigurations>
+</Configuration>
