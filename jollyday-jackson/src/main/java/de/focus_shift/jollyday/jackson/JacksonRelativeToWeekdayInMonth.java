@@ -10,34 +10,62 @@ import java.time.DayOfWeek;
 import java.time.Year;
 
 
-public class JacksonRelativeToWeekdayInMonth implements RelativeToWeekdayInMonth {
+/**
+ * {@inheritDoc}
+ */
+class JacksonRelativeToWeekdayInMonth implements RelativeToWeekdayInMonth {
 
   private final de.focus_shift.jollyday.jackson.mapping.RelativeToWeekdayInMonth relativeToWeekdayInMonth;
 
-  public JacksonRelativeToWeekdayInMonth(de.focus_shift.jollyday.jackson.mapping.RelativeToWeekdayInMonth relativeToWeekdayInMonth) {
+  JacksonRelativeToWeekdayInMonth(de.focus_shift.jollyday.jackson.mapping.RelativeToWeekdayInMonth relativeToWeekdayInMonth) {
     this.relativeToWeekdayInMonth = relativeToWeekdayInMonth;
   }
 
+  /**
+   * {@inheritDoc}
+   *
+   * @return {@inheritDoc}
+   */
   @Override
   public FixedWeekdayInMonth weekdayInMonth() {
     return new JacksonFixedWeekdayInMonth(relativeToWeekdayInMonth.getFixedWeekday());
   }
 
+  /**
+   * {@inheritDoc}
+   *
+   * @return {@inheritDoc}
+   */
   @Override
   public DayOfWeek weekday() {
     return DayOfWeek.valueOf(relativeToWeekdayInMonth.getWeekday().name());
   }
 
+  /**
+   * {@inheritDoc}
+   *
+   * @return {@inheritDoc}
+   */
   @Override
   public Relation when() {
     return Relation.valueOf(relativeToWeekdayInMonth.getWhen().name());
   }
 
+  /**
+   * {@inheritDoc}
+   *
+   * @return {@inheritDoc}
+   */
   @Override
   public String descriptionPropertiesKey() {
     return relativeToWeekdayInMonth.getDescriptionPropertiesKey();
   }
 
+  /**
+   * {@inheritDoc}
+   *
+   * @return {@inheritDoc}
+   */
   @Override
   public HolidayType officiality() {
     return relativeToWeekdayInMonth.getLocalizedType() == null
@@ -45,6 +73,11 @@ public class JacksonRelativeToWeekdayInMonth implements RelativeToWeekdayInMonth
       : HolidayType.valueOf(relativeToWeekdayInMonth.getLocalizedType().name());
   }
 
+  /**
+   * {@inheritDoc}
+   *
+   * @return {@inheritDoc}
+   */
   @Override
   public Year validFrom() {
     return relativeToWeekdayInMonth.getValidFrom() == null
@@ -52,6 +85,11 @@ public class JacksonRelativeToWeekdayInMonth implements RelativeToWeekdayInMonth
       : Year.of(relativeToWeekdayInMonth.getValidFrom());
   }
 
+  /**
+   * {@inheritDoc}
+   *
+   * @return {@inheritDoc}
+   */
   @Override
   public Year validTo() {
     return relativeToWeekdayInMonth.getValidTo() == null
@@ -59,6 +97,11 @@ public class JacksonRelativeToWeekdayInMonth implements RelativeToWeekdayInMonth
       : Year.of(relativeToWeekdayInMonth.getValidTo());
   }
 
+  /**
+   * {@inheritDoc}
+   *
+   * @return {@inheritDoc}
+   */
   @Override
   public YearCycle cycle() {
     return relativeToWeekdayInMonth.getEvery() == null

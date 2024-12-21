@@ -9,34 +9,59 @@ import java.time.DayOfWeek;
 import java.time.Month;
 import java.time.Year;
 
-public class JacksonFixedWeekdayInMonth implements FixedWeekdayInMonth {
+class JacksonFixedWeekdayInMonth implements FixedWeekdayInMonth {
 
   private final de.focus_shift.jollyday.jackson.mapping.FixedWeekdayInMonth fixedWeekdayInMonth;
 
-  public JacksonFixedWeekdayInMonth(de.focus_shift.jollyday.jackson.mapping.FixedWeekdayInMonth fixedWeekdayInMonth) {
+  JacksonFixedWeekdayInMonth(de.focus_shift.jollyday.jackson.mapping.FixedWeekdayInMonth fixedWeekdayInMonth) {
     this.fixedWeekdayInMonth = fixedWeekdayInMonth;
   }
 
+  /**
+   * {@inheritDoc}
+   *
+   * @return {@inheritDoc}
+   */
   @Override
   public DayOfWeek weekday() {
     return DayOfWeek.valueOf(fixedWeekdayInMonth.getWeekday().name());
   }
 
+  /**
+   * {@inheritDoc}
+   *
+   * @return {@inheritDoc}
+   */
   @Override
   public Month month() {
     return Month.valueOf(fixedWeekdayInMonth.getMonth().name());
   }
 
+  /**
+   * {@inheritDoc}
+   *
+   * @return {@inheritDoc}
+   */
   @Override
   public Occurrance which() {
     return Occurrance.valueOf(fixedWeekdayInMonth.getWhich().name());
   }
 
+  /**
+   * {@inheritDoc}
+   *
+   * @return {@inheritDoc}
+   */
   @Override
   public String descriptionPropertiesKey() {
     return fixedWeekdayInMonth.getDescriptionPropertiesKey();
   }
 
+  /**
+   * {@inheritDoc}
+   *
+   * @return {@inheritDoc}
+   */
   @Override
   public HolidayType officiality() {
     return fixedWeekdayInMonth.getLocalizedType() == null
@@ -44,6 +69,11 @@ public class JacksonFixedWeekdayInMonth implements FixedWeekdayInMonth {
       : HolidayType.valueOf(fixedWeekdayInMonth.getLocalizedType().name());
   }
 
+  /**
+   * {@inheritDoc}
+   *
+   * @return {@inheritDoc}
+   */
   @Override
   public Year validFrom() {
     return fixedWeekdayInMonth.getValidFrom() == null
@@ -51,6 +81,11 @@ public class JacksonFixedWeekdayInMonth implements FixedWeekdayInMonth {
       : Year.of(fixedWeekdayInMonth.getValidFrom());
   }
 
+  /**
+   * {@inheritDoc}
+   *
+   * @return {@inheritDoc}
+   */
   @Override
   public Year validTo() {
     return fixedWeekdayInMonth.getValidTo() == null
@@ -58,6 +93,11 @@ public class JacksonFixedWeekdayInMonth implements FixedWeekdayInMonth {
       : Year.of(fixedWeekdayInMonth.getValidTo());
   }
 
+  /**
+   * {@inheritDoc}
+   *
+   * @return {@inheritDoc}
+   */
   @Override
   public YearCycle cycle() {
     return fixedWeekdayInMonth.getEvery() == null

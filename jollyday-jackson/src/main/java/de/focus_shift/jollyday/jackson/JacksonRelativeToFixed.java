@@ -10,19 +10,29 @@ import org.threeten.extra.Days;
 import java.time.DayOfWeek;
 import java.time.Year;
 
-public class JacksonRelativeToFixed implements RelativeToFixed {
+class JacksonRelativeToFixed implements RelativeToFixed {
 
   private final de.focus_shift.jollyday.jackson.mapping.RelativeToFixed relativeToFixed;
 
-  public JacksonRelativeToFixed(de.focus_shift.jollyday.jackson.mapping.RelativeToFixed relativeToFixed) {
+  JacksonRelativeToFixed(de.focus_shift.jollyday.jackson.mapping.RelativeToFixed relativeToFixed) {
     this.relativeToFixed = relativeToFixed;
   }
 
+  /**
+   * {@inheritDoc}
+   *
+   * @return {@inheritDoc}
+   */
   @Override
   public Fixed date() {
     return new JacksonFixed(relativeToFixed.getDate());
   }
 
+  /**
+   * {@inheritDoc}
+   *
+   * @return {@inheritDoc}
+   */
   @Override
   public DayOfWeek weekday() {
     return relativeToFixed.getWeekday() == null
@@ -30,6 +40,11 @@ public class JacksonRelativeToFixed implements RelativeToFixed {
       : DayOfWeek.valueOf(relativeToFixed.getWeekday().name());
   }
 
+  /**
+   * {@inheritDoc}
+   *
+   * @return {@inheritDoc}
+   */
   @Override
   public Relation when() {
     return relativeToFixed.getWhen() == null
@@ -37,6 +52,11 @@ public class JacksonRelativeToFixed implements RelativeToFixed {
       : Relation.valueOf(relativeToFixed.getWhen().name());
   }
 
+  /**
+   * {@inheritDoc}
+   *
+   * @return {@inheritDoc}
+   */
   @Override
   public Days days() {
     return relativeToFixed.getDays() == null
@@ -44,11 +64,21 @@ public class JacksonRelativeToFixed implements RelativeToFixed {
       : Days.of(relativeToFixed.getDays());
   }
 
+  /**
+   * {@inheritDoc}
+   *
+   * @return {@inheritDoc}
+   */
   @Override
   public String descriptionPropertiesKey() {
     return relativeToFixed.getDescriptionPropertiesKey();
   }
 
+  /**
+   * {@inheritDoc}
+   *
+   * @return {@inheritDoc}
+   */
   @Override
   public HolidayType officiality() {
     return relativeToFixed.getLocalizedType() == null
@@ -56,6 +86,11 @@ public class JacksonRelativeToFixed implements RelativeToFixed {
       : HolidayType.valueOf(relativeToFixed.getLocalizedType().name());
   }
 
+  /**
+   * {@inheritDoc}
+   *
+   * @return {@inheritDoc}
+   */
   @Override
   public Year validFrom() {
     return relativeToFixed.getValidFrom() == null
@@ -63,6 +98,11 @@ public class JacksonRelativeToFixed implements RelativeToFixed {
       : Year.of(relativeToFixed.getValidFrom());
   }
 
+  /**
+   * {@inheritDoc}
+   *
+   * @return {@inheritDoc}
+   */
   @Override
   public Year validTo() {
     return relativeToFixed.getValidTo() == null
@@ -70,6 +110,11 @@ public class JacksonRelativeToFixed implements RelativeToFixed {
       : Year.of(relativeToFixed.getValidTo());
   }
 
+  /**
+   * {@inheritDoc}
+   *
+   * @return {@inheritDoc}
+   */
   @Override
   public YearCycle cycle() {
     return relativeToFixed.getEvery() == null

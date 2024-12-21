@@ -7,19 +7,32 @@ import de.focus_shift.jollyday.core.spi.YearCycle;
 
 import java.time.Year;
 
-public class JacksonEthiopianOrthodoxHoliday implements EthiopianOrthodoxHoliday {
+/**
+ * {@inheritDoc}
+ */
+class JacksonEthiopianOrthodoxHoliday implements EthiopianOrthodoxHoliday {
 
   private final de.focus_shift.jollyday.jackson.mapping.EthiopianOrthodoxHoliday ethiopianOrthodoxHoliday;
 
-  public JacksonEthiopianOrthodoxHoliday(de.focus_shift.jollyday.jackson.mapping.EthiopianOrthodoxHoliday ethiopianOrthodoxHoliday) {
+  JacksonEthiopianOrthodoxHoliday(de.focus_shift.jollyday.jackson.mapping.EthiopianOrthodoxHoliday ethiopianOrthodoxHoliday) {
     this.ethiopianOrthodoxHoliday = ethiopianOrthodoxHoliday;
   }
 
+  /**
+   * {@inheritDoc}
+   *
+   * @return {@inheritDoc}
+   */
   @Override
   public String descriptionPropertiesKey() {
     return ethiopianOrthodoxHoliday.getDescriptionPropertiesKey();
   }
 
+  /**
+   * {@inheritDoc}
+   *
+   * @return {@inheritDoc}
+   */
   @Override
   public HolidayType officiality() {
     return ethiopianOrthodoxHoliday.getLocalizedType() == null
@@ -27,11 +40,21 @@ public class JacksonEthiopianOrthodoxHoliday implements EthiopianOrthodoxHoliday
       : HolidayType.valueOf(ethiopianOrthodoxHoliday.getLocalizedType().name());
   }
 
+  /**
+   * {@inheritDoc}
+   *
+   * @return {@inheritDoc}
+   */
   @Override
   public EthiopianOrthodoxHolidayType type() {
     return EthiopianOrthodoxHolidayType.valueOf(ethiopianOrthodoxHoliday.getType().name());
   }
 
+  /**
+   * {@inheritDoc}
+   *
+   * @return {@inheritDoc}
+   */
   @Override
   public Year validFrom() {
     return ethiopianOrthodoxHoliday.getValidFrom() == null
@@ -39,6 +62,11 @@ public class JacksonEthiopianOrthodoxHoliday implements EthiopianOrthodoxHoliday
       : Year.of(ethiopianOrthodoxHoliday.getValidFrom());
   }
 
+  /**
+   * {@inheritDoc}
+   *
+   * @return {@inheritDoc}
+   */
   @Override
   public Year validTo() {
     return ethiopianOrthodoxHoliday.getValidTo() == null
@@ -46,6 +74,11 @@ public class JacksonEthiopianOrthodoxHoliday implements EthiopianOrthodoxHoliday
       : Year.of(ethiopianOrthodoxHoliday.getValidTo());
   }
 
+  /**
+   * {@inheritDoc}
+   *
+   * @return {@inheritDoc}
+   */
   @Override
   public YearCycle cycle() {
     return ethiopianOrthodoxHoliday.getEvery() == null
