@@ -32,6 +32,25 @@ class HolidayFRTest {
         .between(Year.of(1900), Year.of(2003))
         .notBetween(Year.of(2004), Year.of(2007))
         .between(Year.of(2008), Year.of(2500))
+      .and()
+
+      .hasFixedHoliday("ABOLITION_OF_SLAVERY", DECEMBER, 26)
+        .inSubdivision("57")
+      .and()
+
+      .hasFixedHoliday("SECOND_CHRISTMAS_DAY", DECEMBER, 26)
+        .inSubdivision("67")
+      .and()
+      .hasChristianHoliday("GOOD_FRIDAY")
+        .inSubdivision("67")
+      .and()
+
+      .hasFixedHoliday("SECOND_CHRISTMAS_DAY", DECEMBER, 26)
+        .inSubdivision("68")
+      .and()
+      .hasChristianHoliday("GOOD_FRIDAY")
+        .inSubdivision("68")
+
       .check();
   }
 }
