@@ -1,80 +1,58 @@
 package de.focus_shift.jollyday.tests.country;
 
-import de.focus_shift.jollyday.core.Holiday;
-import de.focus_shift.jollyday.core.HolidayManager;
-import de.focus_shift.jollyday.core.ManagerParameters;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.time.LocalDate;
-import java.time.Year;
-import java.util.Set;
+import java.time.DayOfWeek;
 
 import static de.focus_shift.jollyday.core.HolidayCalendar.URUGUAY;
-import static org.assertj.core.api.Assertions.assertThat;
+import static de.focus_shift.jollyday.tests.CalendarChecker.Adjuster.PREVIOUS;
+import static de.focus_shift.jollyday.tests.CalendarCheckerApi.assertFor;
+import static java.time.Month.APRIL;
+import static java.time.Month.AUGUST;
+import static java.time.Month.DECEMBER;
+import static java.time.Month.JANUARY;
+import static java.time.Month.JULY;
+import static java.time.Month.JUNE;
+import static java.time.Month.MAY;
+import static java.time.Month.NOVEMBER;
+import static java.time.Month.OCTOBER;
 
-class HolidayUYTest extends AbstractCountryTestBase {
-
-  private HolidayManager holidayManager;
-
-  @BeforeEach
-  void init() {
-    holidayManager = HolidayManager.getInstance(ManagerParameters.create(URUGUAY));
-  }
-
-  @Test
-  void testManagerUYStructure() {
-    validateCalendarData("uy", Year.of(2016));
-  }
+class HolidayUYTest {
 
   @Test
-  void testManagerUYLanding33EasternersMovingDaysWhenLanding33EasternersOnTuesday() {
-    final int year = 2016;
-    final LocalDate landing33Easterners = LocalDate.of(year, 4, 18);
-    assertThat(contains(landing33Easterners, holidayManager.getHolidays(Year.of(year)))).isTrue();
-  }
-
-  @Test
-  void testManagerUYLanding33EasternersMovingDaysWhenLanding33EasternersOnThursday() {
-    final int year = 2007;
-    final LocalDate landing33Easterners = LocalDate.of(year, 4, 23);
-    assertThat(contains(landing33Easterners, holidayManager.getHolidays(Year.of(year)))).isTrue();
-  }
-
-  @Test
-  void testManagerUYRaceMovingDaysWhenRaceOnWednesday() {
-    final int year = 2016;
-    final LocalDate race = LocalDate.of(year, 10, 10);
-    assertThat(contains(race, holidayManager.getHolidays(Year.of(year)))).isTrue();
-  }
-
-  @Test
-  void testManagerUYRaceMovingDaysWhenRaceOnFriday() {
-    final int year = 2007;
-    final LocalDate race = LocalDate.of(year, 10, 15);
-    assertThat(contains(race, holidayManager.getHolidays(Year.of(year)))).isTrue();
-  }
-
-  @Test
-  void testManagerUYLasPiedrasMovingDaysWhenLasPiedrasOnTuesday() {
-    final int year = 2016;
-    final LocalDate lasPiedras = LocalDate.of(year, 5, 16);
-    assertThat(contains(lasPiedras, holidayManager.getHolidays(Year.of(year)))).isTrue();
-  }
-
-  @Test
-  void testManagerUYLasPiedrasMovingDaysWhenLasPiedrasOnFriday() {
-    final int year = 2007;
-    final LocalDate lasPiedras = LocalDate.of(year, 5, 21);
-    assertThat(contains(lasPiedras, holidayManager.getHolidays(Year.of(year)))).isTrue();
-  }
-
-  private boolean contains(LocalDate localDate, Set<Holiday> holidays) {
-    for (Holiday h : holidays) {
-      if (localDate.equals(h.getDate())) {
-        return true;
-      }
-    }
-    return false;
+  void ensuresHolidays() {
+    assertFor(URUGUAY)
+      .hasFixedHoliday("NEW_YEAR", JANUARY, 1).and()
+      .hasFixedHoliday("EPIPHANY", JANUARY, 6).and()
+      .hasFixedHoliday("LANDING_33_EASTERNERS", APRIL, 19)
+        .canBeenShiftedFrom(DayOfWeek.TUESDAY, PREVIOUS, DayOfWeek.MONDAY)
+        .canBeenShiftedFrom(DayOfWeek.WEDNESDAY, PREVIOUS, DayOfWeek.MONDAY)
+        .canBeenShiftedFrom(DayOfWeek.THURSDAY, DayOfWeek.MONDAY)
+        .canBeenShiftedFrom(DayOfWeek.FRIDAY, DayOfWeek.MONDAY)
+      .and()
+      .hasFixedHoliday("LABOUR_DAY", MAY, 1).and()
+      .hasFixedHoliday("LAS_PIEDRAS", MAY, 18)
+        .canBeenShiftedFrom(DayOfWeek.TUESDAY, PREVIOUS, DayOfWeek.MONDAY)
+        .canBeenShiftedFrom(DayOfWeek.WEDNESDAY, PREVIOUS, DayOfWeek.MONDAY)
+        .canBeenShiftedFrom(DayOfWeek.THURSDAY, DayOfWeek.MONDAY)
+        .canBeenShiftedFrom(DayOfWeek.FRIDAY, DayOfWeek.MONDAY)
+      .and()
+      .hasFixedHoliday("ARTIGAS", JUNE, 19).and()
+      .hasFixedHoliday("CONSTITUTION_DAY", JULY, 18).and()
+      .hasFixedHoliday("INDEPENDENCE_DAY", AUGUST, 25).and()
+      .hasFixedHoliday("ALL_SOULS", NOVEMBER, 2).and()
+      .hasFixedHoliday("CHRISTMAS", DECEMBER, 25).and()
+      .hasFixedHoliday("RACE", OCTOBER, 12)
+        .canBeenShiftedFrom(DayOfWeek.TUESDAY, PREVIOUS, DayOfWeek.MONDAY)
+        .canBeenShiftedFrom(DayOfWeek.WEDNESDAY, PREVIOUS, DayOfWeek.MONDAY)
+        .canBeenShiftedFrom(DayOfWeek.THURSDAY, DayOfWeek.MONDAY)
+        .canBeenShiftedFrom(DayOfWeek.FRIDAY, DayOfWeek.MONDAY)
+      .and()
+      .hasChristianHoliday("EASTER").and()
+      .hasChristianHoliday("SHROVE_MONDAY").and()
+      .hasChristianHoliday("CARNIVAL").and()
+      .hasChristianHoliday("MAUNDY_THURSDAY").and()
+      .hasChristianHoliday("GOOD_FRIDAY")
+      .check();
   }
 }
