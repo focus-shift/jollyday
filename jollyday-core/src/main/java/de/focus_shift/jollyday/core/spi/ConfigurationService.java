@@ -8,4 +8,5 @@ import de.focus_shift.jollyday.core.ManagerParameter;
 public interface ConfigurationService {
 
   Configuration getConfiguration(ManagerParameter parameter);
+
 }

@@ -15,7 +15,7 @@ public interface CalendarCheckerApi {
    * <p>
    * Calling multiple methods on the returned {@link CalendarChecker} is safe as it only interacts with the {@link CalendarCheckerApi}
    * <p>
-   * Examples:
+   * Example:
    * <pre><code class='java'> // you can chain multiple holiday checks
    * assertFor(GERMANY)
    *   .hasFixedHoliday("NEW_YEAR", JANUARY, 1).and()
