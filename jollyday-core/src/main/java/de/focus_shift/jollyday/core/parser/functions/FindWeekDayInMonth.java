@@ -7,7 +7,7 @@ import java.time.LocalDate;
 import java.time.Year;
 import java.util.function.Function;
 
-import static de.focus_shift.jollyday.core.spi.Occurrance.LAST;
+import static de.focus_shift.jollyday.core.spi.Occurrence.LAST;
 import static java.time.temporal.TemporalAdjusters.dayOfWeekInMonth;
 import static java.time.temporal.TemporalAdjusters.lastInMonth;
 

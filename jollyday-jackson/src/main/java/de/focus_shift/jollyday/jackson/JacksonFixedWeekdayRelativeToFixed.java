@@ -3,7 +3,7 @@ package de.focus_shift.jollyday.jackson;
 import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.Fixed;
 import de.focus_shift.jollyday.core.spi.FixedWeekdayRelativeToFixed;
-import de.focus_shift.jollyday.core.spi.Occurrance;
+import de.focus_shift.jollyday.core.spi.Occurrence;
 import de.focus_shift.jollyday.core.spi.Relation;
 
 import java.time.DayOfWeek;
@@ -54,8 +54,8 @@ class JacksonFixedWeekdayRelativeToFixed implements FixedWeekdayRelativeToFixed 
    * @return {@inheritDoc}
    */
   @Override
-  public Occurrance which() {
-    return Occurrance.valueOf(fixedWeekdayRelativeToFixed.getWhich().name());
+  public Occurrence which() {
+    return Occurrence.valueOf(fixedWeekdayRelativeToFixed.getWhich().name());
   }
 
   /**

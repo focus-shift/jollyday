@@ -2,7 +2,7 @@ package de.focus_shift.jollyday.jackson;
 
 import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.FixedWeekdayInMonth;
-import de.focus_shift.jollyday.core.spi.Occurrance;
+import de.focus_shift.jollyday.core.spi.Occurrence;
 
 import java.time.DayOfWeek;
 import java.time.Month;
@@ -42,8 +42,8 @@ class JacksonFixedWeekdayInMonth implements FixedWeekdayInMonth {
    * @return {@inheritDoc}
    */
   @Override
-  public Occurrance which() {
-    return Occurrance.valueOf(fixedWeekdayInMonth.getWhich().name());
+  public Occurrence which() {
+    return Occurrence.valueOf(fixedWeekdayInMonth.getWhich().name());
   }
 
   /**

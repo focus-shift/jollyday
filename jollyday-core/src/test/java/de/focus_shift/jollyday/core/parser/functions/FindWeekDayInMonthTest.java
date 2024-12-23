@@ -2,7 +2,7 @@ package de.focus_shift.jollyday.core.parser.functions;
 
 import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.FixedWeekdayInMonth;
-import de.focus_shift.jollyday.core.spi.Occurrance;
+import de.focus_shift.jollyday.core.spi.Occurrence;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
@@ -24,7 +24,7 @@ class FindWeekDayInMonthTest {
     "FOURTH,2024-03-25",
     "LAST,2024-03-25",
   })
-  void ensureToFindFixedWeekdayInMonth(final Occurrance occurrance, final LocalDate expectedLocalDate) {
+  void ensureToFindFixedWeekdayInMonth(final Occurrence occurrance, final LocalDate expectedLocalDate) {
 
     final FixedWeekdayInMonth fixedWeekdayInMonth = new FixedWeekdayInMonth() {
       @Override
@@ -53,7 +53,7 @@ class FindWeekDayInMonthTest {
       }
 
       @Override
-      public Occurrance which() {
+      public Occurrence which() {
         return occurrance;
       }
 

@@ -6,7 +6,7 @@ public interface FixedWeekdayRelativeToFixed extends Described, Limited {
 
   Fixed day();
 
-  Occurrance which();
+  Occurrence which();
 
   DayOfWeek weekday();
 

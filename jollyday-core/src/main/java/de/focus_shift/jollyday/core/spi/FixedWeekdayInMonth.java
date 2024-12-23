@@ -9,6 +9,6 @@ public interface FixedWeekdayInMonth extends Described, Limited {
 
   Month month();
 
-  Occurrance which();
+  Occurrence which();
 
 }
