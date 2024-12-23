@@ -3,21 +3,24 @@ package de.focus_shift.jollyday.core.spi;
 import java.time.chrono.Chronology;
 
 /**
- * Represents a christian holiday that can be
+ * Represents the configuration of a christian holiday that can be
  *
  * <ul>
  *   <li>Movable</li>
  *   <li>Limited</li>
  *   <li>Described</li>
  * </ul>
- *
+ * <p>
  * and has a special {@link ChristianHolidayType} and a chronology based on {@link Chronology}.
+ * <p>
  * Two chronologies are supported:
  * <ul>
  *   <li>ISO</li>
  *   <li>Julian</li>
  * </ul>
- *
+ * <p>
+ * Example: All christian holidays are relative to Easter Sunday e.g. carnival is 47 days after Easter Sunday.
+ * <p>
  * The {@link de.focus_shift.jollyday.core.parser.impl.ChristianHolidayParser} is used.
  */
 public interface ChristianHoliday extends Limited, Described, Movable {

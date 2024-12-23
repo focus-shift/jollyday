@@ -28,13 +28,15 @@ public class RelativeToFixedParser implements HolidayParser {
         LocalDate fixed = new FixedToLocalDate(year).apply(rf.date());
         if (rf.weekday() != null) {
           // if weekday is set -> move to weekday
-          DayOfWeek day = rf.weekday();
-          int direction = (rf.when() == Relation.BEFORE ? -1 : 1);
+          final DayOfWeek day = rf.weekday();
+          final int direction = (rf.when() == Relation.BEFORE ? -1 : 1);
           // don't test start day
           fixed = fixed.plusDays(direction);
+
           while (fixed.getDayOfWeek() != day) {
             fixed = fixed.plusDays(direction);
           }
+
         } else if (rf.days() != null) {
           // if number of days set -> move number of days
           fixed = fixed.plus(rf.when() == Relation.BEFORE ? rf.days().negated() : rf.days());
