@@ -6,7 +6,7 @@ import de.focus_shift.jollyday.core.spi.Movable;
 import java.time.LocalDate;
 import java.util.function.Function;
 
-import static de.focus_shift.jollyday.core.spi.With.NEXT;
+import static de.focus_shift.jollyday.core.spi.Movable.MovingCondition.With.NEXT;
 import static java.time.temporal.TemporalAdjusters.nextOrSame;
 import static java.time.temporal.TemporalAdjusters.previousOrSame;
 

@@ -1,7 +1,6 @@
 package de.focus_shift.jollyday.jaxb;
 
 import de.focus_shift.jollyday.core.spi.Movable;
-import de.focus_shift.jollyday.core.spi.With;
 
 import java.time.DayOfWeek;
 

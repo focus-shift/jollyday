@@ -29,6 +29,15 @@ public interface Movable {
    */
   interface MovingCondition {
 
+    enum With {
+
+      /* Moves the holiday to the next weekday */
+      NEXT,
+
+      /* Moves the holiday to the previous weekday */
+      PREVIOUS
+    }
+
     /**
      * Represents the day of the week as trigger to move the holiday if the holiday would
      * occur oh this weekday.
@@ -50,6 +59,5 @@ public interface Movable {
      * @return the weekday the holiday will be moved to
      */
     DayOfWeek substitute();
-
   }
 }
