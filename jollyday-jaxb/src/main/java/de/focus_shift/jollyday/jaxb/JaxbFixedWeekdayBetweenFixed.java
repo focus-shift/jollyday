@@ -64,7 +64,7 @@ class JaxbFixedWeekdayBetweenFixed implements FixedWeekdayBetweenFixed {
    * @return {@inheritDoc}
    */
   @Override
-  public HolidayType officiality() {
+  public HolidayType holidayType() {
     return fixedWeekdayBetweenFixed.getLocalizedType() == null
       ? HolidayType.PUBLIC_HOLIDAY
       : HolidayType.valueOf(fixedWeekdayBetweenFixed.getLocalizedType().name());

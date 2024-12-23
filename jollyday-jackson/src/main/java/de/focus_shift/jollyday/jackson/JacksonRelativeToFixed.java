@@ -79,7 +79,7 @@ class JacksonRelativeToFixed implements RelativeToFixed {
    * @return {@inheritDoc}
    */
   @Override
-  public HolidayType officiality() {
+  public HolidayType holidayType() {
     return relativeToFixed.getLocalizedType() == null
       ? HolidayType.PUBLIC_HOLIDAY
       : HolidayType.valueOf(relativeToFixed.getLocalizedType().name());

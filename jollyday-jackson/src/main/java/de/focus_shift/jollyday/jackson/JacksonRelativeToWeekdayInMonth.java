@@ -66,7 +66,7 @@ class JacksonRelativeToWeekdayInMonth implements RelativeToWeekdayInMonth {
    * @return {@inheritDoc}
    */
   @Override
-  public HolidayType officiality() {
+  public HolidayType holidayType() {
     return relativeToWeekdayInMonth.getLocalizedType() == null
       ? HolidayType.PUBLIC_HOLIDAY
       : HolidayType.valueOf(relativeToWeekdayInMonth.getLocalizedType().name());

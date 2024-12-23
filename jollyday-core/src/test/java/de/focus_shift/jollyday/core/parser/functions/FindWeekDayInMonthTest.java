@@ -63,7 +63,7 @@ class FindWeekDayInMonthTest {
       }
 
       @Override
-      public HolidayType officiality() {
+      public HolidayType holidayType() {
         return null;
       }
     };

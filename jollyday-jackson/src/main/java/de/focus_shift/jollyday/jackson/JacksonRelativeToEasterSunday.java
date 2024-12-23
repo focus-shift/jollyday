@@ -37,7 +37,7 @@ class JacksonRelativeToEasterSunday implements RelativeToEasterSunday {
    * @return {@inheritDoc}
    */
   @Override
-  public HolidayType officiality() {
+  public HolidayType holidayType() {
     return relativeToEasterSunday.getLocalizedType() == null
       ? HolidayType.PUBLIC_HOLIDAY
       : HolidayType.valueOf(relativeToEasterSunday.getLocalizedType().name());

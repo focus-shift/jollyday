@@ -56,7 +56,7 @@ class JaxbChristianHoliday implements ChristianHoliday {
    * @return {@inheritDoc}
    */
   @Override
-  public HolidayType officiality() {
+  public HolidayType holidayType() {
     return christianHoliday.getLocalizedType() == null
       ? HolidayType.PUBLIC_HOLIDAY
       : HolidayType.valueOf(christianHoliday.getLocalizedType().name());

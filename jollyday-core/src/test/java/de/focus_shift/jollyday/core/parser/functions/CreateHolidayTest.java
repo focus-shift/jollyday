@@ -22,7 +22,7 @@ class CreateHolidayTest {
       }
 
       @Override
-      public HolidayType officiality() {
+      public HolidayType holidayType() {
         return HolidayType.PUBLIC_HOLIDAY;
       }
     };

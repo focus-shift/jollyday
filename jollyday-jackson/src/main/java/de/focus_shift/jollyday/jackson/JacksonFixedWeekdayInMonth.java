@@ -62,7 +62,7 @@ class JacksonFixedWeekdayInMonth implements FixedWeekdayInMonth {
    * @return {@inheritDoc}
    */
   @Override
-  public HolidayType officiality() {
+  public HolidayType holidayType() {
     return fixedWeekdayInMonth.getLocalizedType() == null
       ? HolidayType.PUBLIC_HOLIDAY
       : HolidayType.valueOf(fixedWeekdayInMonth.getLocalizedType().name());

@@ -48,7 +48,7 @@ class JacksonFixed implements Fixed {
    * @return {@inheritDoc}
    */
   @Override
-  public HolidayType officiality() {
+  public HolidayType holidayType() {
     return fixed.getLocalizedType() == null
       ? HolidayType.PUBLIC_HOLIDAY
       : HolidayType.valueOf(fixed.getLocalizedType().name());

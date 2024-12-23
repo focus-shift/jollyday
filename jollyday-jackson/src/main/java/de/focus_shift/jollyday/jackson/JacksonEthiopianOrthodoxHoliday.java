@@ -32,7 +32,7 @@ class JacksonEthiopianOrthodoxHoliday implements EthiopianOrthodoxHoliday {
    * @return {@inheritDoc}
    */
   @Override
-  public HolidayType officiality() {
+  public HolidayType holidayType() {
     return ethiopianOrthodoxHoliday.getLocalizedType() == null
       ? HolidayType.PUBLIC_HOLIDAY
       : HolidayType.valueOf(ethiopianOrthodoxHoliday.getLocalizedType().name());

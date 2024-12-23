@@ -74,7 +74,7 @@ class JacksonFixedWeekdayRelativeToFixed implements FixedWeekdayRelativeToFixed 
    * @return {@inheritDoc}
    */
   @Override
-  public HolidayType officiality() {
+  public HolidayType holidayType() {
     return fixedWeekdayRelativeToFixed.getLocalizedType() == null
       ? HolidayType.PUBLIC_HOLIDAY
       : HolidayType.valueOf(fixedWeekdayRelativeToFixed.getLocalizedType().name());
