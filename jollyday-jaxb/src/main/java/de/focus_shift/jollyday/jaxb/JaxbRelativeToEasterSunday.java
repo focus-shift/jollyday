@@ -2,7 +2,6 @@ package de.focus_shift.jollyday.jaxb;
 
 import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.RelativeToEasterSunday;
-import de.focus_shift.jollyday.core.spi.YearCycle;
 import de.focus_shift.jollyday.jaxb.mapping.ChronologyType;
 import org.threeten.extra.Days;
 import org.threeten.extra.chrono.JulianChronology;

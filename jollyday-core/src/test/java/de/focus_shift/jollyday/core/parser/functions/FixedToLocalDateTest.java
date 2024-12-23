@@ -3,7 +3,6 @@ package de.focus_shift.jollyday.core.parser.functions;
 import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.Fixed;
 import de.focus_shift.jollyday.core.spi.MovingCondition;
-import de.focus_shift.jollyday.core.spi.YearCycle;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;

@@ -2,9 +2,7 @@ package de.focus_shift.jollyday.jackson;
 
 import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.ChristianHoliday;
-import de.focus_shift.jollyday.core.spi.ChristianHolidayType;
 import de.focus_shift.jollyday.core.spi.MovingCondition;
-import de.focus_shift.jollyday.core.spi.YearCycle;
 import de.focus_shift.jollyday.jackson.mapping.ChronologyType;
 import org.threeten.extra.chrono.JulianChronology;
 

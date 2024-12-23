@@ -3,7 +3,6 @@ package de.focus_shift.jollyday.core.parser.functions;
 import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.FixedWeekdayInMonth;
 import de.focus_shift.jollyday.core.spi.Occurrance;
-import de.focus_shift.jollyday.core.spi.YearCycle;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 

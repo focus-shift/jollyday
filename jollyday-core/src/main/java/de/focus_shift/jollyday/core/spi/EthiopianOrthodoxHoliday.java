@@ -14,11 +14,16 @@ package de.focus_shift.jollyday.core.spi;
  */
 public interface EthiopianOrthodoxHoliday extends Described, Limited {
 
+  enum EthiopianOrthodoxHolidayType {
+    TIMKAT,
+    ENKUTATASH,
+    MESKEL
+  }
+
   /**
    * Describes the {@link EthiopianOrthodoxHolidayType}
    *
    * @return the type of the ethiopian orthodox holiday
    */
   EthiopianOrthodoxHolidayType type();
-
 }

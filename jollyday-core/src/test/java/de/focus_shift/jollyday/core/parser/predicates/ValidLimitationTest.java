@@ -1,7 +1,6 @@
 package de.focus_shift.jollyday.core.parser.predicates;
 
 import de.focus_shift.jollyday.core.spi.Limited;
-import de.focus_shift.jollyday.core.spi.YearCycle;
 import org.junit.jupiter.api.Test;
 
 import java.time.Year;
