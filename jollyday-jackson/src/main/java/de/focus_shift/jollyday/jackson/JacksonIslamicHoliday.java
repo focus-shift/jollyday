@@ -2,7 +2,6 @@ package de.focus_shift.jollyday.jackson;
 
 import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.IslamicHoliday;
-import de.focus_shift.jollyday.core.spi.MovingCondition;
 
 import java.time.Year;
 import java.util.List;

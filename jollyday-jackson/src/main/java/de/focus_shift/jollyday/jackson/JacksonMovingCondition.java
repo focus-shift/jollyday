@@ -1,6 +1,6 @@
 package de.focus_shift.jollyday.jackson;
 
-import de.focus_shift.jollyday.core.spi.MovingCondition;
+import de.focus_shift.jollyday.core.spi.Movable;
 import de.focus_shift.jollyday.core.spi.With;
 
 import java.time.DayOfWeek;
@@ -8,7 +8,7 @@ import java.time.DayOfWeek;
 /**
  * {@inheritDoc}
  */
-class JacksonMovingCondition implements MovingCondition {
+class JacksonMovingCondition implements Movable.MovingCondition {
 
   private final de.focus_shift.jollyday.jackson.mapping.MovingCondition movingCondition;
 

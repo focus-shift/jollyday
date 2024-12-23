@@ -3,7 +3,7 @@ package de.focus_shift.jollyday.core.parser.impl;
 import de.focus_shift.jollyday.core.Holiday;
 import de.focus_shift.jollyday.core.spi.Holidays;
 import de.focus_shift.jollyday.core.spi.IslamicHoliday;
-import de.focus_shift.jollyday.core.spi.MovingCondition;
+import de.focus_shift.jollyday.core.spi.Movable;
 import de.focus_shift.jollyday.core.spi.With;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -29,7 +29,7 @@ class IslamicHolidayParserTest {
   @Test
   void ensureThatIslamicHolidaysAreMovable() {
 
-    final MovingCondition movingCondition = new MovingCondition() {
+    final Movable.MovingCondition movingCondition = new Movable.MovingCondition() {
       @Override
       public DayOfWeek substitute() {
         return DayOfWeek.SUNDAY;

@@ -1,7 +1,6 @@
 package de.focus_shift.jollyday.core.parser.functions;
 
 import de.focus_shift.jollyday.core.spi.Movable;
-import de.focus_shift.jollyday.core.spi.MovingCondition;
 import de.focus_shift.jollyday.core.spi.With;
 import org.junit.jupiter.api.Test;
 
@@ -18,7 +17,7 @@ class MoveDateRelativeTest {
   @Test
   void ensureToConvertMovableToNextLocalDate() {
 
-    final MovingCondition movingCondition = new MovingCondition() {
+    final Movable.MovingCondition movingCondition = new Movable.MovingCondition() {
       @Override
       public DayOfWeek substitute() {
         return DayOfWeek.WEDNESDAY;
@@ -47,7 +46,7 @@ class MoveDateRelativeTest {
   @Test
   void ensureToConvertMovableToPreviousLocalDate() {
 
-    final MovingCondition movingCondition = new MovingCondition() {
+    final Movable.MovingCondition movingCondition = new Movable.MovingCondition() {
       @Override
       public DayOfWeek substitute() {
         return DayOfWeek.WEDNESDAY;
@@ -76,7 +75,7 @@ class MoveDateRelativeTest {
   @Test
   void ensureToReturnProvidedLocalDateIfMovingConditionIsFalse() {
 
-    final MovingCondition movingCondition = new MovingCondition() {
+    final Movable.MovingCondition movingCondition = new Movable.MovingCondition() {
       @Override
       public DayOfWeek substitute() {
         return null;
