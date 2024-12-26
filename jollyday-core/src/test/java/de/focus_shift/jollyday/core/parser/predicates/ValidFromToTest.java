@@ -1,7 +1,6 @@
 package de.focus_shift.jollyday.core.parser.predicates;
 
 import de.focus_shift.jollyday.core.spi.Limited;
-import de.focus_shift.jollyday.core.spi.YearCycle;
 import net.jqwik.api.ForAll;
 import net.jqwik.api.Property;
 import net.jqwik.time.api.constraints.YearRange;

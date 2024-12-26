@@ -2,7 +2,6 @@ package de.focus_shift.jollyday.core.parser.predicates;
 
 
 import de.focus_shift.jollyday.core.spi.Limited;
-import de.focus_shift.jollyday.core.spi.YearCycle;
 import net.jqwik.api.Arbitraries;
 import net.jqwik.api.Arbitrary;
 import net.jqwik.api.ForAll;
@@ -98,7 +97,7 @@ class ValidCycleTest {
   }
 
   @Property
-  void ensureLimitedWithCycleYearsWithValidFrom(@ForAll @YearRange(min = 1901) Year year, @ForAll("onlyYearBased") YearCycle cycle) {
+  void ensureLimitedWithCycleYearsWithValidFrom(@ForAll @YearRange(min = 1901) Year year, @ForAll("onlyYearBased") Limited.YearCycle cycle) {
 
     final int modulo = getModulo(cycle);
 
@@ -124,7 +123,7 @@ class ValidCycleTest {
   }
 
   @Property
-  void ensureLimitedForTwoYearReturnsTrueWithValidTo(@ForAll @YearRange(max = 2013) Year year, @ForAll("onlyYearBased") YearCycle cycle) {
+  void ensureLimitedForTwoYearReturnsTrueWithValidTo(@ForAll @YearRange(max = 2013) Year year, @ForAll("onlyYearBased") Limited.YearCycle cycle) {
 
     final int modulo = getModulo(cycle);
 
@@ -150,11 +149,11 @@ class ValidCycleTest {
   }
 
   @Provide
-  Arbitrary<YearCycle> onlyYearBased() {
-    return Arbitraries.of(YearCycle.TWO_YEARS, YearCycle.THREE_YEARS, YearCycle.FOUR_YEARS, YearCycle.FIVE_YEARS, YearCycle.SIX_YEARS);
+  Arbitrary<Limited.YearCycle> onlyYearBased() {
+    return Arbitraries.of(Limited.YearCycle.TWO_YEARS, Limited.YearCycle.THREE_YEARS, Limited.YearCycle.FOUR_YEARS, Limited.YearCycle.FIVE_YEARS, Limited.YearCycle.SIX_YEARS);
   }
 
-  private static int getModulo(YearCycle cycle) {
+  private static int getModulo(Limited.YearCycle cycle) {
     int modulo = 0;
     switch (cycle) {
       case TWO_YEARS:

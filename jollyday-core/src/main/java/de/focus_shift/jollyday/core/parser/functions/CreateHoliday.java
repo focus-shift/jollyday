@@ -16,6 +16,6 @@ public class CreateHoliday implements Function<Described, Holiday> {
 
   @Override
   public Holiday apply(final Described described) {
-    return new Holiday(localDate, described.descriptionPropertiesKey(), described.officiality());
+    return new Holiday(localDate, described.descriptionPropertiesKey(), described.holidayType());
   }
 }

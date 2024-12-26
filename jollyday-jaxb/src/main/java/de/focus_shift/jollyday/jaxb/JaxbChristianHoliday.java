@@ -2,9 +2,6 @@ package de.focus_shift.jollyday.jaxb;
 
 import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.ChristianHoliday;
-import de.focus_shift.jollyday.core.spi.ChristianHolidayType;
-import de.focus_shift.jollyday.core.spi.MovingCondition;
-import de.focus_shift.jollyday.core.spi.YearCycle;
 import org.threeten.extra.chrono.JulianChronology;
 
 import java.time.Year;
@@ -15,12 +12,14 @@ import java.util.List;
 import static de.focus_shift.jollyday.jaxb.mapping.ChronologyType.JULIAN;
 import static java.util.stream.Collectors.toList;
 
-
-public class JaxbChristianHoliday implements ChristianHoliday {
+/**
+ * see {@link ChristianHoliday}
+ */
+class JaxbChristianHoliday implements ChristianHoliday {
 
   private final de.focus_shift.jollyday.jaxb.mapping.ChristianHoliday christianHoliday;
 
-  public JaxbChristianHoliday(de.focus_shift.jollyday.jaxb.mapping.ChristianHoliday christianHoliday) {
+  JaxbChristianHoliday(de.focus_shift.jollyday.jaxb.mapping.ChristianHoliday christianHoliday) {
     this.christianHoliday = christianHoliday;
   }
 
@@ -29,6 +28,11 @@ public class JaxbChristianHoliday implements ChristianHoliday {
     return ChristianHolidayType.valueOf(christianHoliday.getType().name());
   }
 
+  /**
+   * {@inheritDoc}
+   *
+   * @return {@inheritDoc}
+   */
   @Override
   public Chronology chronology() {
     return christianHoliday.getChronology() == JULIAN
@@ -36,18 +40,33 @@ public class JaxbChristianHoliday implements ChristianHoliday {
       : IsoChronology.INSTANCE;
   }
 
+  /**
+   * {@inheritDoc}
+   *
+   * @return {@inheritDoc}
+   */
   @Override
   public String descriptionPropertiesKey() {
     return christianHoliday.getDescriptionPropertiesKey();
   }
 
+  /**
+   * {@inheritDoc}
+   *
+   * @return {@inheritDoc}
+   */
   @Override
-  public HolidayType officiality() {
+  public HolidayType holidayType() {
     return christianHoliday.getLocalizedType() == null
       ? HolidayType.PUBLIC_HOLIDAY
       : HolidayType.valueOf(christianHoliday.getLocalizedType().name());
   }
 
+  /**
+   * {@inheritDoc}
+   *
+   * @return {@inheritDoc}
+   */
   @Override
   public Year validFrom() {
     return christianHoliday.getValidFrom() == null
@@ -55,6 +74,11 @@ public class JaxbChristianHoliday implements ChristianHoliday {
       : Year.of(christianHoliday.getValidFrom());
   }
 
+  /**
+   * {@inheritDoc}
+   *
+   * @return {@inheritDoc}
+   */
   @Override
   public Year validTo() {
     return christianHoliday.getValidTo() == null
@@ -62,6 +86,11 @@ public class JaxbChristianHoliday implements ChristianHoliday {
       : Year.of(christianHoliday.getValidTo());
   }
 
+  /**
+   * {@inheritDoc}
+   *
+   * @return {@inheritDoc}
+   */
   @Override
   public YearCycle cycle() {
     return christianHoliday.getEvery() == null
@@ -69,6 +98,11 @@ public class JaxbChristianHoliday implements ChristianHoliday {
       : YearCycle.valueOf(christianHoliday.getEvery().name());
   }
 
+  /**
+   * {@inheritDoc}
+   *
+   * @return {@inheritDoc}
+   */
   @Override
   public List<MovingCondition> conditions() {
     return christianHoliday.getMovingCondition().stream()

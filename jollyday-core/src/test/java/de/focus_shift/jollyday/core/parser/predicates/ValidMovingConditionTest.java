@@ -1,7 +1,6 @@
 package de.focus_shift.jollyday.core.parser.predicates;
 
-import de.focus_shift.jollyday.core.spi.MovingCondition;
-import de.focus_shift.jollyday.core.spi.With;
+import de.focus_shift.jollyday.core.spi.Movable;
 import org.junit.jupiter.api.Test;
 
 import java.time.DayOfWeek;
@@ -14,7 +13,7 @@ class ValidMovingConditionTest {
   @Test
   void ensureValidMovingConditionOnlyOnSameSubstitution() {
 
-    final MovingCondition movingCondition = new MovingCondition() {
+    final Movable.MovingCondition movingCondition = new Movable.MovingCondition() {
       @Override
       public DayOfWeek substitute() {
         return DayOfWeek.MONDAY;
@@ -38,7 +37,7 @@ class ValidMovingConditionTest {
   @Test
   void ensureNotValidMovingConditionOnDifferentSubstitution() {
 
-    final MovingCondition movingCondition = new MovingCondition() {
+    final Movable.MovingCondition movingCondition = new Movable.MovingCondition() {
       @Override
       public DayOfWeek substitute() {
         return DayOfWeek.TUESDAY;

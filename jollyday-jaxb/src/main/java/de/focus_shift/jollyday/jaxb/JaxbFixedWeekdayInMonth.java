@@ -2,18 +2,20 @@ package de.focus_shift.jollyday.jaxb;
 
 import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.FixedWeekdayInMonth;
-import de.focus_shift.jollyday.core.spi.Occurrance;
-import de.focus_shift.jollyday.core.spi.YearCycle;
+import de.focus_shift.jollyday.core.spi.Occurrence;
 
 import java.time.DayOfWeek;
 import java.time.Month;
 import java.time.Year;
 
-public class JaxbFixedWeekdayInMonth implements FixedWeekdayInMonth {
+/**
+ * see {@link FixedWeekdayInMonth}
+ */
+class JaxbFixedWeekdayInMonth implements FixedWeekdayInMonth {
 
   private final de.focus_shift.jollyday.jaxb.mapping.FixedWeekdayInMonth fixedWeekdayInMonth;
 
-  public JaxbFixedWeekdayInMonth(de.focus_shift.jollyday.jaxb.mapping.FixedWeekdayInMonth fixedWeekdayInMonth) {
+  JaxbFixedWeekdayInMonth(de.focus_shift.jollyday.jaxb.mapping.FixedWeekdayInMonth fixedWeekdayInMonth) {
     this.fixedWeekdayInMonth = fixedWeekdayInMonth;
   }
 
@@ -28,8 +30,8 @@ public class JaxbFixedWeekdayInMonth implements FixedWeekdayInMonth {
   }
 
   @Override
-  public Occurrance which() {
-    return Occurrance.valueOf(fixedWeekdayInMonth.getWhich().name());
+  public Occurrence which() {
+    return Occurrence.valueOf(fixedWeekdayInMonth.getWhich().name());
   }
 
   @Override
@@ -38,7 +40,7 @@ public class JaxbFixedWeekdayInMonth implements FixedWeekdayInMonth {
   }
 
   @Override
-  public HolidayType officiality() {
+  public HolidayType holidayType() {
     return fixedWeekdayInMonth.getLocalizedType() == null
       ? HolidayType.PUBLIC_HOLIDAY
       : HolidayType.valueOf(fixedWeekdayInMonth.getLocalizedType().name());
