@@ -11,6 +11,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import static java.lang.String.format;
 
 public class LazyServiceLoaderCache<S> {
+
   private static final Logger LOG = LoggerFactory.getLogger(LazyServiceLoaderCache.class.getName());
 
   private final Class<S> clz;
