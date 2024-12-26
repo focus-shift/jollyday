@@ -1,6 +1,6 @@
 package de.focus_shift.jollyday.jaxb.test;
 
-import de.focus_shift.jollyday.jaxb.XMLUtil;
+import de.focus_shift.jollyday.jaxb.JaxbXMLMapper;
 import de.focus_shift.jollyday.jaxb.mapping.Configuration;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -13,7 +13,7 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 class XMLUtilTest {
 
-  private final XMLUtil sut = new XMLUtil();
+  private final JaxbXMLMapper sut = new JaxbXMLMapper();
 
   @Test
   void testUnmarshallConfigurationNullCheck() {
