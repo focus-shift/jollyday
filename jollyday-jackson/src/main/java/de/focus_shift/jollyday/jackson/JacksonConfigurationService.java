@@ -12,7 +12,7 @@ import java.net.URL;
  */
 public class JacksonConfigurationService implements ConfigurationService {
 
-  private static final XMLUtil xmlUtil = new XMLUtil();
+  private static final JacksonXMLMapper xmlUtil = new JacksonXMLMapper();
 
   /**
    * {@inheritDoc}

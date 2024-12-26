@@ -12,7 +12,7 @@ import java.net.URL;
  */
 public class JaxbConfigurationService implements ConfigurationService {
 
-  private static final XMLUtil xmlUtil = new XMLUtil();
+  private static final JaxbXMLMapper xmlUtil = new JaxbXMLMapper();
 
   /**
    * {@inheritDoc}

@@ -12,14 +12,14 @@ import org.slf4j.LoggerFactory;
 
 import java.io.InputStream;
 
-public class XMLUtil {
+public class JaxbXMLMapper {
 
   /**
    * the package name to search for the generated java classes.
    */
   private static final String PACKAGE = "de.focus_shift.jollyday.jaxb.mapping";
 
-  private static final Logger LOG = LoggerFactory.getLogger(XMLUtil.class);
+  private static final Logger LOG = LoggerFactory.getLogger(JaxbXMLMapper.class);
 
   private static final JAXBContext jaxbContext = new JAXBContextCreator().create();
 
@@ -52,14 +52,14 @@ public class XMLUtil {
     private static JAXBContext createJAXBContext() {
       JAXBContext ctx = null;
       try {
-        ctx = JAXBContext.newInstance(XMLUtil.PACKAGE, ClassLoadingUtil.getClassloader());
+        ctx = JAXBContext.newInstance(JaxbXMLMapper.PACKAGE, ClassLoadingUtil.getClassloader());
       } catch (JAXBException e) {
         LOG.warn("Could not create JAXB context using the current classloader from ClassLoadingUtil. Falling back to ObjectFactory class classloader.");
       }
 
       if (ctx == null) {
         try {
-          ctx = JAXBContext.newInstance(XMLUtil.PACKAGE, ObjectFactory.class.getClassLoader());
+          ctx = JAXBContext.newInstance(JaxbXMLMapper.PACKAGE, ObjectFactory.class.getClassLoader());
         } catch (JAXBException exception) {
           throw new IllegalStateException("Could not create JAXB context using ObjectFactory classloader.", exception);
         }
