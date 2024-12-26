@@ -33,7 +33,6 @@ class URLConfigurationProvider implements ConfigurationProvider {
 
     if (configURLs != null) {
       stream(configURLs.split(","))
-        .filter(Objects::nonNull)
         .filter(not(String::isEmpty))
         .map(String::trim)
         .map(this::createUrl)
