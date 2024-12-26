@@ -3,6 +3,7 @@ package de.focus_shift.jollyday.jackson;
 import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.Fixed;
 
+import java.time.Month;
 import java.time.MonthDay;
 import java.time.Year;
 import java.util.List;
@@ -13,8 +14,6 @@ import static java.util.stream.Collectors.toList;
  * see {@link Fixed}
  */
 class JacksonFixed implements Fixed {
-
-  private final XMLUtil xmlUtil = new XMLUtil();
 
   private final de.focus_shift.jollyday.jackson.mapping.Fixed fixed;
 
@@ -29,7 +28,7 @@ class JacksonFixed implements Fixed {
    */
   @Override
   public MonthDay day() {
-    return MonthDay.of(xmlUtil.getMonth(fixed.getMonth()), fixed.getDay());
+    return MonthDay.of(Month.valueOf(fixed.getMonth().value()), fixed.getDay());
   }
 
   /**
