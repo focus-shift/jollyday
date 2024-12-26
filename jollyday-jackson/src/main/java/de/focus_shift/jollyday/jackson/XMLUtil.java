@@ -3,7 +3,6 @@ package de.focus_shift.jollyday.jackson;
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import de.focus_shift.jollyday.jackson.mapping.Configuration;
-import de.focus_shift.jollyday.jackson.mapping.Month;
 
 import java.io.InputStream;
 
@@ -24,16 +23,6 @@ public class XMLUtil {
     } catch (Exception e) {
       throw new IllegalStateException("Cannot parse holidays XML file.", e);
     }
-  }
-
-  /**
-   * Returns the value for the given month.
-   *
-   * @param month a {@link Month} object.
-   * @return a 1-12 value.
-   */
-  public int getMonth(Month month) {
-    return month.ordinal() + 1;
   }
 
   private static class JacksonMapperCreator {

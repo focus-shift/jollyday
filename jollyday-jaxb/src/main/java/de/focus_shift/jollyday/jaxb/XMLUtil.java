@@ -2,7 +2,6 @@ package de.focus_shift.jollyday.jaxb;
 
 import de.focus_shift.jollyday.core.util.ClassLoadingUtil;
 import de.focus_shift.jollyday.jaxb.mapping.Configuration;
-import de.focus_shift.jollyday.jaxb.mapping.Month;
 import de.focus_shift.jollyday.jaxb.mapping.ObjectFactory;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBElement;
@@ -43,16 +42,6 @@ public class XMLUtil {
     } catch (JAXBException exception) {
       throw new IllegalStateException("Cannot parse holidays XML file.", exception);
     }
-  }
-
-  /**
-   * Returns the value for the given month.
-   *
-   * @param month a {@link Month} object.
-   * @return a 1-12 value.
-   */
-  public int getMonth(Month month) {
-    return month.ordinal() + 1;
   }
 
   private static class JAXBContextCreator {
