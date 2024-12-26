@@ -6,24 +6,24 @@ import de.focus_shift.jollyday.core.spi.Fixed;
 import de.focus_shift.jollyday.core.spi.FixedWeekdayBetweenFixed;
 import de.focus_shift.jollyday.core.spi.FixedWeekdayInMonth;
 import de.focus_shift.jollyday.core.spi.FixedWeekdayRelativeToFixed;
+import de.focus_shift.jollyday.core.spi.Holidays;
 import de.focus_shift.jollyday.core.spi.IslamicHoliday;
 import de.focus_shift.jollyday.core.spi.RelativeToEasterSunday;
 import de.focus_shift.jollyday.core.spi.RelativeToFixed;
 import de.focus_shift.jollyday.core.spi.RelativeToWeekdayInMonth;
-import de.focus_shift.jollyday.jackson.mapping.Holidays;
 
 import java.util.List;
 
 import static java.util.stream.Collectors.toList;
 
 /**
- * {@inheritDoc}
+ * see {@link }
  */
-public class JacksonHolidays implements de.focus_shift.jollyday.core.spi.Holidays {
+public class JacksonHolidays implements Holidays {
 
-  private final Holidays holidays;
+  private final de.focus_shift.jollyday.jackson.mapping.Holidays holidays;
 
-  public JacksonHolidays(Holidays holidays) {
+  public JacksonHolidays(de.focus_shift.jollyday.jackson.mapping.Holidays holidays) {
     this.holidays = holidays;
   }
 

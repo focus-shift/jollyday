@@ -8,6 +8,9 @@ import java.time.DayOfWeek;
 import java.time.Month;
 import java.time.Year;
 
+/**
+ * see {@link FixedWeekdayInMonth}
+ */
 class JacksonFixedWeekdayInMonth implements FixedWeekdayInMonth {
 
   private final de.focus_shift.jollyday.jackson.mapping.FixedWeekdayInMonth fixedWeekdayInMonth;

@@ -8,7 +8,7 @@ import java.time.DayOfWeek;
 import java.time.Year;
 
 /**
- * {@inheritDoc}
+ * see {@link FixedWeekdayBetweenFixed}
  */
 class JaxbFixedWeekdayBetweenFixed implements FixedWeekdayBetweenFixed {
 

@@ -9,6 +9,9 @@ import org.threeten.extra.Days;
 import java.time.DayOfWeek;
 import java.time.Year;
 
+/**
+ * see {@link RelativeToFixed}
+ */
 class JacksonRelativeToFixed implements RelativeToFixed {
 
   private final de.focus_shift.jollyday.jackson.mapping.RelativeToFixed relativeToFixed;

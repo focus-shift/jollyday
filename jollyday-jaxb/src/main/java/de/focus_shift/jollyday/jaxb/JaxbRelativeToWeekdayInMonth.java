@@ -9,7 +9,7 @@ import java.time.DayOfWeek;
 import java.time.Year;
 
 /**
- * {@inheritDoc}
+ * see {@link RelativeToWeekdayInMonth}
  */
 class JaxbRelativeToWeekdayInMonth implements RelativeToWeekdayInMonth {
 

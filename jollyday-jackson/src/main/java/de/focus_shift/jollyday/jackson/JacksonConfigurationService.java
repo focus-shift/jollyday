@@ -8,7 +8,7 @@ import java.io.InputStream;
 import java.net.URL;
 
 /**
- * {@inheritDoc}
+ * see {@link ConfigurationService}
  */
 public class JacksonConfigurationService implements ConfigurationService {
 

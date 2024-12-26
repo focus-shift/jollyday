@@ -5,7 +5,7 @@ import de.focus_shift.jollyday.core.spi.Movable;
 import java.time.DayOfWeek;
 
 /**
- * {@inheritDoc}
+ * see {@link de.focus_shift.jollyday.core.spi.Movable.MovingCondition}
  */
 class JaxbMovingCondition implements Movable.MovingCondition {
 

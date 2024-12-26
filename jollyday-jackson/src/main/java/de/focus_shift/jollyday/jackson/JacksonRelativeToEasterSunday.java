@@ -11,7 +11,7 @@ import java.time.chrono.Chronology;
 import java.time.chrono.IsoChronology;
 
 /**
- * {@inheritDoc}
+ * see {@link RelativeToEasterSunday}
  */
 class JacksonRelativeToEasterSunday implements RelativeToEasterSunday {
 

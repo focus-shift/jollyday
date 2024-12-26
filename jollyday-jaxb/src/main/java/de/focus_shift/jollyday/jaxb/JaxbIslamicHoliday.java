@@ -9,7 +9,7 @@ import java.util.List;
 import static java.util.stream.Collectors.toList;
 
 /**
- * {@inheritDoc}
+ * see {@link IslamicHoliday}
  */
 class JaxbIslamicHoliday implements IslamicHoliday {
 

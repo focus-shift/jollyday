@@ -17,7 +17,7 @@ import java.util.List;
 import static java.util.stream.Collectors.toList;
 
 /**
- * {@inheritDoc}
+ * see {@link Holidays}
  */
 public class JaxbHolidays implements Holidays {
 

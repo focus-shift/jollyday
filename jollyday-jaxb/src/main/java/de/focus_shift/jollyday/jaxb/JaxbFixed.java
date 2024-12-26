@@ -10,7 +10,7 @@ import java.util.List;
 import static java.util.stream.Collectors.toList;
 
 /**
- * {@inheritDoc}
+ * see {@link Fixed}
  */
 class JaxbFixed implements Fixed {
 

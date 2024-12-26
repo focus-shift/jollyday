@@ -10,7 +10,7 @@ import java.time.DayOfWeek;
 import java.time.Year;
 
 /**
- * {@inheritDoc}
+ * see {@link FixedWeekdayRelativeToFixed}
  */
 class JaxbFixedWeekdayRelativeToFixed implements FixedWeekdayRelativeToFixed {
 

@@ -6,7 +6,7 @@ import de.focus_shift.jollyday.core.spi.EthiopianOrthodoxHoliday;
 import java.time.Year;
 
 /**
- * {@inheritDoc}
+ * see {@link EthiopianOrthodoxHoliday}
  */
 class JaxbEthiopianOrthodoxHoliday implements EthiopianOrthodoxHoliday {
 

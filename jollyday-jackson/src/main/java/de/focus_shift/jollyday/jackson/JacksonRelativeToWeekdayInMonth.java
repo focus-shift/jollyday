@@ -8,9 +8,8 @@ import de.focus_shift.jollyday.core.spi.RelativeToWeekdayInMonth;
 import java.time.DayOfWeek;
 import java.time.Year;
 
-
 /**
- * {@inheritDoc}
+ * see {@link RelativeToWeekdayInMonth}
  */
 class JacksonRelativeToWeekdayInMonth implements RelativeToWeekdayInMonth {
 

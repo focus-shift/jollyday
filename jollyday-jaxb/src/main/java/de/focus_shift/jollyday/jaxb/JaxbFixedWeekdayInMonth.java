@@ -9,7 +9,7 @@ import java.time.Month;
 import java.time.Year;
 
 /**
- * {@inheritDoc}
+ * see {@link FixedWeekdayInMonth}
  */
 class JaxbFixedWeekdayInMonth implements FixedWeekdayInMonth {
 

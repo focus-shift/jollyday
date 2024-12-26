@@ -9,7 +9,9 @@ import de.focus_shift.jollyday.core.spi.Relation;
 import java.time.DayOfWeek;
 import java.time.Year;
 
-
+/**
+ * see {@link FixedWeekdayRelativeToFixed}
+ */
 class JacksonFixedWeekdayRelativeToFixed implements FixedWeekdayRelativeToFixed {
 
   private final de.focus_shift.jollyday.jackson.mapping.FixedWeekdayRelativeToFixed fixedWeekdayRelativeToFixed;

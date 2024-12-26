@@ -6,7 +6,7 @@ import de.focus_shift.jollyday.core.spi.Holidays;
 import java.util.stream.Stream;
 
 /**
- * {@inheritDoc}
+ * see {@link Configuration}
  */
 class JaxbConfiguration implements Configuration {
 

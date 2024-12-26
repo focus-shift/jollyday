@@ -13,7 +13,7 @@ import static de.focus_shift.jollyday.jaxb.mapping.ChronologyType.JULIAN;
 import static java.util.stream.Collectors.toList;
 
 /**
- * {@inheritDoc}
+ * see {@link ChristianHoliday}
  */
 class JaxbChristianHoliday implements ChristianHoliday {
 
