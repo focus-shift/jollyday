@@ -63,7 +63,7 @@ public final class ManagerParameters {
    * @return an {@link CalendarPartManagerParameter} based on {@link ManagerParameter}
    */
   public static ManagerParameter create(final Locale locale, final Properties properties) {
-    final String calendarPart = "".equals(locale.getCountry()) ? locale.getLanguage() : locale.getCountry();
+    final String calendarPart = locale.getCountry().isEmpty() ? locale.getLanguage() : locale.getCountry();
     return create(calendarPart, properties);
   }
 
