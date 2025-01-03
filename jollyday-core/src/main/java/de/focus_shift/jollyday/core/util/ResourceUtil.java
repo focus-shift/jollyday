@@ -8,9 +8,6 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import static java.util.ResourceBundle.getBundle;
 
-/**
- * ResourceUtil class.
- */
 public class ResourceUtil {
 
   private ResourceUtil() {
@@ -22,30 +19,32 @@ public class ResourceUtil {
    */
   private static final String COUNTRY_PROPERTY_PREFIX = "country.description";
   /**
-   * Property prefix for holiday descriptions.
-   */
-  private static final String HOLIDAY_PROPERTY_PREFIX = "holiday.description";
-  /**
    * The prefix of the country description file.
    */
   private static final String COUNTRY_DESCRIPTIONS_FILE_PREFIX = "descriptions.country_descriptions";
+  /**
+   * Cache for the country descriptions resource bundles.
+   */
+  private static final Map<Locale, ResourceBundle> COUNTRY_DESCRIPTIONS_CACHE = new ConcurrentHashMap<>();
+
+  /**
+   * Property prefix for holiday descriptions.
+   */
+  private static final String HOLIDAY_PROPERTY_PREFIX = "holiday.description";
   /**
    * The prefix of the holiday descriptions file.
    */
   private static final String HOLIDAY_DESCRIPTIONS_FILE_PREFIX = "descriptions.holiday_descriptions";
   /**
+   * Cache for the holiday descriptions resource bundles.
+   */
+  private static final Map<Locale, ResourceBundle> HOLIDAY_DESCRIPTION_CACHE = new ConcurrentHashMap<>();
+
+  /**
    * Unknown constant will be returned when there is no description
    * configured.
    */
   public static final String UNDEFINED = "undefined";
-  /**
-   * Cache for the holiday descriptions resource bundles.
-   */
-  private static final Map<Locale, ResourceBundle> HOLIDAY_DESCRIPTION_CACHE = new ConcurrentHashMap<>();
-  /**
-   * Cache for the country descriptions resource bundles.
-   */
-  private static final Map<Locale, ResourceBundle> COUNTRY_DESCRIPTIONS_CACHE = new ConcurrentHashMap<>();
 
   /**
    * The description read with the default locale.
@@ -91,7 +90,7 @@ public class ResourceUtil {
     if (key != null) {
       return getDescription(COUNTRY_PROPERTY_PREFIX + "." + key.toLowerCase(), getCountryDescriptions(locale));
     }
-    return ResourceUtil.UNDEFINED;
+    return UNDEFINED;
   }
 
   /**
