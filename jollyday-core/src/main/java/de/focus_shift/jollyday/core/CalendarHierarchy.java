@@ -1,10 +1,11 @@
 package de.focus_shift.jollyday.core;
 
-import de.focus_shift.jollyday.core.util.ResourceUtil;
-
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
+
+import static de.focus_shift.jollyday.core.util.ResourceUtil.UNDEFINED;
+import static de.focus_shift.jollyday.core.util.ResourceUtil.getCountryDescription;
 
 /**
  * Bean class for describing the configuration hierarchy.
@@ -45,18 +46,18 @@ public class CalendarHierarchy {
    * @return the description
    */
   public String getDescription() {
-    return getDescription(Locale.getDefault());
+    return getCountryDescription(getPropertiesKey());
   }
 
   /**
    * Returns the hierarchies description text from the resource bundle.
    *
-   * @param l Locale to return the description text for.
+   * @param locale Locale to return the description text for.
    * @return Description text
    */
-  public String getDescription(Locale l) {
-    String descr = ResourceUtil.getCountryDescription(l, getPropertiesKey());
-    if (ResourceUtil.UNDEFINED.equals(descr) && fallbackDescription != null) {
+  public String getDescription(Locale locale) {
+    String descr = getCountryDescription(locale, getPropertiesKey());
+    if (UNDEFINED.equals(descr) && fallbackDescription != null) {
       descr = fallbackDescription;
     }
     return descr;
