@@ -24,62 +24,70 @@ public class ChristianHolidayParser implements HolidayParser {
   public List<Holiday> parse(final Year year, final Holidays holidays) {
     return holidays.christianHolidays().stream()
       .filter(new ValidLimitation(year))
-      .map(ch -> {
-        LocalDate easterSunday = new CalculateEasterSunday(year).apply(ch.chronology());
-        switch (ch.type()) {
+      .map(christianHolidayConfiguration -> {
+
+        final LocalDate easterSunday = new CalculateEasterSunday(year).apply(christianHolidayConfiguration.chronology());
+
+        final LocalDate actualDate;
+        switch (christianHolidayConfiguration.type()) {
           case EASTER:
+            actualDate = easterSunday;
             break;
           case CLEAN_MONDAY:
           case SHROVE_MONDAY:
-            easterSunday = easterSunday.minusDays(48);
+            actualDate = easterSunday.minusDays(48);
             break;
           case MARDI_GRAS:
           case CARNIVAL:
-            easterSunday = easterSunday.minusDays(47);
+            actualDate = easterSunday.minusDays(47);
             break;
           case ASH_WEDNESDAY:
-            easterSunday = easterSunday.minusDays(46);
+            actualDate = easterSunday.minusDays(46);
             break;
           case MAUNDY_THURSDAY:
-            easterSunday = easterSunday.minusDays(3);
+            actualDate = easterSunday.minusDays(3);
             break;
           case GOOD_FRIDAY:
-            easterSunday = easterSunday.minusDays(2);
+            actualDate = easterSunday.minusDays(2);
             break;
           case EASTER_SATURDAY:
-            easterSunday = easterSunday.minusDays(1);
+            actualDate = easterSunday.minusDays(1);
             break;
           case EASTER_MONDAY:
-            easterSunday = easterSunday.plusDays(1);
+            actualDate = easterSunday.plusDays(1);
             break;
           case EASTER_TUESDAY:
-            easterSunday = easterSunday.plusDays(2);
+            actualDate = easterSunday.plusDays(2);
             break;
           case GENERAL_PRAYER_DAY:
-            easterSunday = easterSunday.plusDays(26);
+            actualDate = easterSunday.plusDays(26);
             break;
           case ASCENSION_DAY:
-            easterSunday = easterSunday.plusDays(39);
+            actualDate = easterSunday.plusDays(39);
             break;
           case PENTECOST:
           case WHIT_SUNDAY:
-            easterSunday = easterSunday.plusDays(49);
+            actualDate = easterSunday.plusDays(49);
             break;
           case WHIT_MONDAY:
           case PENTECOST_MONDAY:
-            easterSunday = easterSunday.plusDays(50);
+            actualDate = easterSunday.plusDays(50);
             break;
           case CORPUS_CHRISTI:
-            easterSunday = easterSunday.plusDays(60);
+            actualDate = easterSunday.plusDays(60);
             break;
           case SACRED_HEART:
-            easterSunday = easterSunday.plusDays(68);
+            actualDate = easterSunday.plusDays(68);
             break;
           default:
-            throw new IllegalArgumentException("Unknown christian holiday type " + ch.type());
+            throw new IllegalArgumentException("Unknown christian holiday type " + christianHolidayConfiguration.type());
         }
-        easterSunday = new MoveDateRelative(easterSunday).apply(ch);
-        return new CreateHoliday(easterSunday).apply(ch);
+
+        return new MoveDateRelative(actualDate).apply(christianHolidayConfiguration)
+          .map(observedDate -> new CreateHoliday(actualDate, observedDate))
+          .orElseGet(() -> new CreateHoliday(actualDate))
+          .apply(christianHolidayConfiguration);
+
       })
       .collect(toList());
   }

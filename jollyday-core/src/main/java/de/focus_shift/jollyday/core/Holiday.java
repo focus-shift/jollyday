@@ -4,6 +4,8 @@ import de.focus_shift.jollyday.core.util.ResourceUtil;
 
 import java.time.LocalDate;
 import java.util.Locale;
+import java.util.Objects;
+import java.util.Optional;
 
 /**
  * Represents the holiday and contains the actual date and an localized
@@ -14,15 +16,19 @@ public final class Holiday implements Comparable<Holiday> {
    * The calculated hashcode cached for performance.
    */
   private int hashCode = 0;
+
   /**
    * The date the holiday occurs.
    */
-  private final LocalDate date;
+  private final LocalDate actualDate;
+  /**
+   * The observed date of the holiday.
+   */
+  private final LocalDate observedDate;
   /**
    * The properties key to retrieve the description with.
    */
   private final String propertiesKey;
-
   /**
    * The type of holiday. e.g. official holiday or not.
    */
@@ -32,26 +38,67 @@ public final class Holiday implements Comparable<Holiday> {
    * Constructs a holiday for a date using the provided properties key to
    * retrieve the description with.
    *
-   * @param date          a {@link LocalDate} object.
+   * @param actualDate    a {@link LocalDate} object.
    * @param propertiesKey a {@link java.lang.String} object.
    * @param type          a {@link HolidayType} object.
    */
-  public Holiday(final LocalDate date, final String propertiesKey, final HolidayType type) {
+  public Holiday(final LocalDate actualDate, final String propertiesKey, final HolidayType type) {
+    this(actualDate, null, propertiesKey, type);
+  }
+
+  /**
+   * Constructs a holiday for a date using the provided properties key to
+   * retrieve the description with.
+   *
+   * @param actualDate    a {@link LocalDate} object.
+   * @param observedDate  a {@link LocalDate} object.
+   * @param propertiesKey a {@link java.lang.String} object.
+   * @param type          a {@link HolidayType} object.
+   */
+  public Holiday(final LocalDate actualDate, final LocalDate observedDate, final String propertiesKey, final HolidayType type) {
     super();
     this.type = type;
-    this.date = date;
+    this.actualDate = actualDate;
+    this.observedDate = observedDate;
     this.propertiesKey = propertiesKey == null ? "" : propertiesKey;
   }
 
   /**
+   * Returns the calculated holiday date.
    * <p>
-   * Getter for the field <code>date</code>.
-   * </p>
-   *
-   * @return the holiday date
+   * If the holiday is {@link de.focus_shift.jollyday.core.spi.Movable} and the holiday was moved, then:
+   * <ul>
+   *  <li>the observed holiday date is given</li>
+   *  <li>otherwise, the actual holiday date</li>
+   * </ul>
+   *  @return if holiday was moved the observed date, otherwise the actual date
    */
   public LocalDate getDate() {
-    return date;
+    return Optional.ofNullable(observedDate).orElse(actualDate);
+  }
+
+  /**
+   * <p>
+   * Returns the actual date.
+   * <p>
+   * If you want the observed holiday date then use {@link #getObservedDate()}
+   * </p>
+   *
+   * @return the actual holiday date
+   */
+  public LocalDate getActualDate() {
+    return actualDate;
+  }
+
+  /**
+   * <p>
+   * Getter for the field <code>observedDate</code>.
+   * </p>
+   *
+   * @return the observed holiday date as optional
+   */
+  public Optional<LocalDate> getObservedDate() {
+    return Optional.ofNullable(observedDate);
   }
 
   /**
@@ -86,31 +133,27 @@ public final class Holiday implements Comparable<Holiday> {
 
   @Override
   public boolean equals(final Object obj) {
-    if (obj == this) {
-      return true;
+    if (obj == null || getClass() != obj.getClass()) {
+      return false;
     }
-    if (obj instanceof Holiday) {
-      final Holiday other = (Holiday) obj;
-      return other.date.equals(this.date) && other.propertiesKey.equals(this.propertiesKey) && type.equals(other.type);
-    }
-    return false;
+
+    final Holiday holiday = (Holiday) obj;
+    return Objects.equals(getDate(), holiday.getDate()) &&
+      Objects.equals(propertiesKey, holiday.propertiesKey) &&
+      type == holiday.type;
   }
 
   @Override
   public int hashCode() {
     if (hashCode == 0) {
-      int hash = 1;
-      hash = hash * 31 + date.hashCode();
-      hash = hash * 31 + propertiesKey.hashCode();
-      hash = hash * 31 + type.hashCode();
-      hashCode = hash;
+      hashCode = Objects.hash(getDate(), propertiesKey, type);
     }
     return hashCode;
   }
 
   @Override
   public String toString() {
-    return date.toString() + " (" + getDescription() + ")";
+    return getDate().toString() + " (" + getDescription() + ")";
   }
 
   /**

@@ -22,7 +22,7 @@ public class RelativeToEasterSundayParser implements HolidayParser {
     return holidays.relativeToEasterSunday().stream()
       .filter(new ValidLimitation(year))
       .map(res -> new DescribedDateHolder(res, new CalculateEasterSunday(year).apply(res.chronology()).plus(res.days())))
-      .map(holder -> new CreateHoliday(holder.getDate()).apply(holder.getDescribed()))
+      .map(holder -> new CreateHoliday(holder.getActualDate()).apply(holder.getDescribed()))
       .collect(toList());
   }
 }

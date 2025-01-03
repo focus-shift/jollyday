@@ -51,12 +51,34 @@ class HolidayTest {
   }
 
   @Test
-  void testHolidayEquals() {
+  void ensureToReturnObservedDateIfPresent() {
+    final LocalDate observedDate = LocalDate.of(2011, 2, 10);
+    final Holiday holiday = new Holiday(LocalDate.of(2011, 2, 2), observedDate, "CHRISTMAS", PUBLIC_HOLIDAY);
+    assertThat(holiday.getDate()).isEqualTo(observedDate);
+  }
+
+  @Test
+  void ensureToReturnActualDateIfObservedDateIsNotPresent() {
+    final LocalDate date = LocalDate.of(2011, 2, 2);
+    final Holiday holiday = new Holiday(date, "CHRISTMAS", PUBLIC_HOLIDAY);
+    assertThat(holiday.getDate()).isEqualTo(date);
+  }
+
+  @Test
+  void ensuresHolidayAreEqual() {
     final Holiday h1 = new Holiday(LocalDate.of(2011, 2, 2), "CHRISTMAS", PUBLIC_HOLIDAY);
     assertThat(h1).isEqualTo(h1);
 
     final Holiday h2b = new Holiday(LocalDate.of(2011, 2, 2), "CHRISTMAS", PUBLIC_HOLIDAY);
     assertThat(h1).isEqualTo(h2b);
+  }
+
+  @Test
+  void ensuresHolidayAreNotEqual() {
+    final Holiday h1 = new Holiday(LocalDate.of(2011, 2, 2), "CHRISTMAS", PUBLIC_HOLIDAY);
+    assertThat(h1)
+      .isNotEqualTo(null)
+      .isNotEqualTo(new Object());
 
     final Holiday h2 = new Holiday(LocalDate.of(2011, 2, 1), "CHRISTMAS", PUBLIC_HOLIDAY);
     assertThat(h1).isNotEqualTo(h2);

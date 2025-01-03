@@ -11,7 +11,7 @@ public interface Holidays {
   /**
    * see {@link Fixed}
    *
-   * @return list of all fixed holidays
+   * @return list of all fixed holidays configurations
    */
   List<Fixed> fixed();
 
