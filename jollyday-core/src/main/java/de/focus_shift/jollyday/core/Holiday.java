@@ -1,11 +1,11 @@
 package de.focus_shift.jollyday.core;
 
-import de.focus_shift.jollyday.core.util.ResourceUtil;
-
 import java.time.LocalDate;
 import java.util.Locale;
 import java.util.Objects;
 import java.util.Optional;
+
+import static de.focus_shift.jollyday.core.util.ResourceUtil.getHolidayDescription;
 
 /**
  * Represents the holiday and contains the actual date and an localized
@@ -118,7 +118,7 @@ public final class Holiday implements Comparable<Holiday> {
    * @return Description for this holiday
    */
   public String getDescription() {
-    return ResourceUtil.getHolidayDescription(Locale.getDefault(), getPropertiesKey());
+    return getHolidayDescription(getPropertiesKey());
   }
 
   /**
@@ -128,7 +128,7 @@ public final class Holiday implements Comparable<Holiday> {
    * @return Description for this holiday
    */
   public String getDescription(Locale locale) {
-    return ResourceUtil.getHolidayDescription(locale, getPropertiesKey());
+    return getHolidayDescription(locale, getPropertiesKey());
   }
 
   @Override
