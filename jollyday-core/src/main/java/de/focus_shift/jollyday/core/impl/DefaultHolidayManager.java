@@ -164,7 +164,7 @@ public class DefaultHolidayManager extends HolidayManager {
    */
   @Override
   public CalendarHierarchy getCalendarHierarchy() {
-    return createConfigurationHierarchy(configuration, null);
+    return createConfigurationHierarchy(configuration, null, null);
   }
 
   /**
@@ -329,15 +329,15 @@ public class DefaultHolidayManager extends HolidayManager {
    * @param calendarHierarchy the calendars hierarchy
    * @return configuration hierarchy
    */
-  private static CalendarHierarchy createConfigurationHierarchy(final Configuration configuration, final CalendarHierarchy calendarHierarchy) {
-    final CalendarHierarchy hierarchy = new CalendarHierarchy(calendarHierarchy, configuration.hierarchy());
-    hierarchy.setFallbackDescription(configuration.description());
-    configuration.subConfigurations()
-      .forEach(subConfiguration -> {
-          final CalendarHierarchy subHierarchy = createConfigurationHierarchy(subConfiguration, hierarchy);
-          hierarchy.getChildren().put(subHierarchy.getId(), subHierarchy);
-        }
-      );
+  private static CalendarHierarchy createConfigurationHierarchy(final Configuration configuration, final CalendarHierarchy calendarHierarchy, final String fallbackDescription) {
+    final String description = configuration.description() != null ? configuration.description() : fallbackDescription;
+    final CalendarHierarchy hierarchy = new CalendarHierarchy(configuration.hierarchy(), description, calendarHierarchy);
+
+    configuration.subConfigurations().forEach(subConfiguration -> {
+      final CalendarHierarchy subHierarchy = createConfigurationHierarchy(subConfiguration, hierarchy, subConfiguration.description());
+      hierarchy.getChildren().put(subHierarchy.getId(), subHierarchy);
+    });
+
     return hierarchy;
   }
 }
