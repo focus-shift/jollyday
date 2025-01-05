@@ -44,9 +44,8 @@
     <jqwik.version>1.9.2</jqwik.version>
     <jmh.version>1.37</jmh.version>
 
-    <!--suppress UnresolvedMavenProperty - for IDEA-->
     <sonar.coverage.jacoco.xmlReportPaths>
-      ${maven.multiModuleProjectDirectory}/jollyday-tests/target/site/jacoco-aggregate/jacoco.xml
+      ${maven.multiModuleProjectDirectory}/report-aggregate/target/site/jacoco-aggregate/jacoco.xml
     </sonar.coverage.jacoco.xmlReportPaths>
     <sonar.java.source>
       ${java.version}
@@ -190,6 +189,14 @@
           <groupId>org.jacoco</groupId>
           <artifactId>jacoco-maven-plugin</artifactId>
           <version>0.8.12</version>
+          <executions>
+            <execution>
+              <id>prepare-agent</id>
+              <goals>
+                <goal>prepare-agent</goal>
+              </goals>
+            </execution>
+          </executions>
         </plugin>
 
         <plugin>
@@ -305,6 +312,17 @@
                   <goal>prepare-agent</goal>
                 </goals>
               </execution>
+              <execution>
+                <id>report</id>
+                <goals>
+                  <goal>report</goal>
+                </goals>
+                <configuration>
+                  <formats>
+                    <format>XML</format>
+                  </formats>
+                </configuration>
+              </execution>
             </executions>
           </plugin>
         </plugins>
@@ -372,6 +390,7 @@
       </activation>
       <modules>
         <module>jollyday-tests</module>
+        <module>report-aggregate</module>
       </modules>
     </profile>
 
