@@ -17,7 +17,7 @@ class ClasspathConfigurationProvider implements ConfigurationProvider {
   private static final String DEFAULT_CONFIGURATION_FILE_NAME = "jollyday.properties";
   private URL configurationFile;
 
-  public ClasspathConfigurationProvider() {
+  ClasspathConfigurationProvider() {
     this.configurationFile = getConfigurationFile(DEFAULT_CONFIGURATION_FILE_NAME);
   }
 

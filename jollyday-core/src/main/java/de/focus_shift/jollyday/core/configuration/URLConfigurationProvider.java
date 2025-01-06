@@ -22,6 +22,10 @@ class URLConfigurationProvider implements ConfigurationProvider {
 
   private static final Logger LOG = LoggerFactory.getLogger(URLConfigurationProvider.class);
 
+  URLConfigurationProvider() {
+    // ok
+  }
+
   /**
    * Returns the properties by reading from the URLs provided by the system
    * property 'config.urls'.
