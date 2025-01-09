@@ -15,7 +15,8 @@ import java.util.Properties;
 class ClasspathConfigurationProvider implements ConfigurationProvider {
 
   private static final String DEFAULT_CONFIGURATION_FILE_NAME = "jollyday.properties";
-  private URL configurationFile;
+
+  private final URL configurationFile;
 
   ClasspathConfigurationProvider() {
     this.configurationFile = getConfigurationFile(DEFAULT_CONFIGURATION_FILE_NAME);
@@ -24,10 +25,6 @@ class ClasspathConfigurationProvider implements ConfigurationProvider {
   @Override
   public Properties getProperties() {
     return mapConfigurationFromUrl(configurationFile);
-  }
-
-  public void overrideConfigurationFileName(final String configurationFile) {
-    this.configurationFile = getConfigurationFile(configurationFile);
   }
 
   private Properties mapConfigurationFromUrl(final URL url) {
