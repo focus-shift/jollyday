@@ -20,6 +20,11 @@ import static java.util.function.Predicate.not;
  */
 class URLConfigurationProvider implements ConfigurationProvider {
 
+  /**
+   * System property to define URLs to overriding jollyday configuration files.
+   */
+  static final String CONFIG_URLS_PROPERTY = "de.focus_shift.jollyday.config.urls";
+
   private static final Logger LOG = LoggerFactory.getLogger(URLConfigurationProvider.class);
 
   URLConfigurationProvider() {

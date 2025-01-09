@@ -8,12 +8,6 @@ import java.util.Properties;
 public interface ConfigurationProvider {
 
   /**
-   * System property to define URLs to overriding jollyday configuration
-   * files.
-   */
-  String CONFIG_URLS_PROPERTY = "de.focus_shift.jollyday.config.urls";
-
-  /**
    * @return the configuration properties for jollyday.
    */
   Properties getProperties();

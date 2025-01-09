@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Properties;
 
-import static de.focus_shift.jollyday.core.configuration.ConfigurationProvider.CONFIG_URLS_PROPERTY;
+import static de.focus_shift.jollyday.core.configuration.URLConfigurationProvider.CONFIG_URLS_PROPERTY;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class URLConfigurationProviderTest {
