@@ -24,7 +24,8 @@ class ClasspathConfigurationProviderContentTest {
       "parser.impl.de.focus_shift.jollyday.core.spi.FixedWeekdayBetweenFixed",
       "parser.impl.de.focus_shift.jollyday.core.spi.FixedWeekdayRelativeToFixed",
       "parser.impl.de.focus_shift.jollyday.core.spi.EthiopianOrthodoxHoliday",
-      "parser.impl.de.focus_shift.jollyday.core.spi.RelativeToEasterSunday"
+      "parser.impl.de.focus_shift.jollyday.core.spi.RelativeToEasterSunday",
+      "configuration.service.impl"
     );
   }
 }
