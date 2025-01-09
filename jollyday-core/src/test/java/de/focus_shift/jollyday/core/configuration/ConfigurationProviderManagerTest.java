@@ -27,26 +27,26 @@ class ConfigurationProviderManagerTest {
 
   @AfterEach
   void teardown() {
-    System.clearProperty(ConfigurationProvider.CONFIG_PROVIDERS_PROPERTY);
+    System.clearProperty(CustomConfigurationProvider.CONFIG_PROVIDERS_PROPERTY);
   }
 
   @Test
   void testGetPropertiesWithEmptyProvidersList() {
-    System.setProperty(ConfigurationProvider.CONFIG_PROVIDERS_PROPERTY, "");
+    System.setProperty(CustomConfigurationProvider.CONFIG_PROVIDERS_PROPERTY, "");
     sut.mergeConfigurationProperties(managerParameter);
     assertResult(managerParameter);
   }
 
   @Test
   void testGetPropertiesWithWrongClass() {
-    System.setProperty(ConfigurationProvider.CONFIG_PROVIDERS_PROPERTY, "java.lang.String");
+    System.setProperty(CustomConfigurationProvider.CONFIG_PROVIDERS_PROPERTY, "java.lang.String");
     sut.mergeConfigurationProperties(managerParameter);
     assertResult(managerParameter);
   }
 
   @Test
   void testGetPropertiesWithCorrectClass() {
-    System.setProperty(ConfigurationProvider.CONFIG_PROVIDERS_PROPERTY, "de.focus_shift.jollyday.core.configuration.TestProvider");
+    System.setProperty(CustomConfigurationProvider.CONFIG_PROVIDERS_PROPERTY, "de.focus_shift.jollyday.core.configuration.TestProvider");
     sut.mergeConfigurationProperties(managerParameter);
     assertResult(managerParameter);
     assertThat(managerParameter.getProperty("key")).isEqualTo("value");
@@ -54,7 +54,7 @@ class ConfigurationProviderManagerTest {
 
   @Test
   void testGetPropertiesWithWrongAndCorrectClass() {
-    System.setProperty(ConfigurationProvider.CONFIG_PROVIDERS_PROPERTY, "de.focus_shift.jollyday.core.configuration.TestProvider, java.lang.String");
+    System.setProperty(CustomConfigurationProvider.CONFIG_PROVIDERS_PROPERTY, "de.focus_shift.jollyday.core.configuration.TestProvider, java.lang.String");
     sut.mergeConfigurationProperties(managerParameter);
     assertResult(managerParameter);
     assertThat(managerParameter.getProperty("key")).isEqualTo("value");
