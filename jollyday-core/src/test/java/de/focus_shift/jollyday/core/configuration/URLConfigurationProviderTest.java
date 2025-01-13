@@ -53,8 +53,8 @@ class URLConfigurationProviderTest {
   void testPutConfigurationWithPropertyWithCorrectURL() {
     System.setProperty(CONFIG_URLS_PROPERTY, "file:./src/test/resources/URLConfigurationProviderTest.properties");
     final Properties props = sut.getProperties();
-    assertThat(props.getProperty("manager.impl.test")).isEqualTo("de.focus_shift.jollyday.impl.DefaultHolidayManager");
-    assertThat(props.getProperty("manager.impl")).isEqualTo("ManagerOverloaded");
+    assertThat(props.getProperty("manager.impl.url")).isEqualTo("UrlConfigurationProviderOverloaded.url");
+    assertThat(props.getProperty("manager.impl")).isEqualTo("UrlConfigurationProviderOverloaded");
     System.clearProperty(CONFIG_URLS_PROPERTY);
   }
 }
