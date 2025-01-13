@@ -38,8 +38,8 @@ class URLConfigurationProvider implements ConfigurationProvider {
   @Override
   public Properties getProperties() {
     final Properties properties = new Properties();
-    final String configURLs = System.getProperty(CONFIG_URLS_PROPERTY);
 
+    final String configURLs = System.getProperty(CONFIG_URLS_PROPERTY);
     if (configURLs != null) {
       stream(configURLs.split(","))
         .filter(not(String::isEmpty))
@@ -56,7 +56,7 @@ class URLConfigurationProvider implements ConfigurationProvider {
     try (final InputStream inputStream = url.openStream()) {
       properties.load(inputStream);
     } catch (IOException e) {
-      throw new IllegalStateException("Could not load default properties from classpath.", e);
+      throw new IllegalStateException("Could not load property from '" + url + "'.", e);
     }
   }
 

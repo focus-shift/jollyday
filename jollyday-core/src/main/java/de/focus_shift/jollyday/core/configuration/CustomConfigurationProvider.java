@@ -34,7 +34,7 @@ class CustomConfigurationProvider implements ConfigurationProvider {
     final Properties properties = new Properties();
 
     final String providerClassNames = System.getProperty(CONFIG_PROVIDERS_PROPERTY);
-    if(providerClassNames != null) {
+    if (providerClassNames != null) {
       stream(providerClassNames.split(","))
         .filter(not(String::isEmpty))
         .map(String::trim)
