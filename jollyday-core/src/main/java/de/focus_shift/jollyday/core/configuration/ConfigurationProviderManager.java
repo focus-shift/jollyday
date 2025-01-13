@@ -7,9 +7,10 @@ import de.focus_shift.jollyday.core.ManagerParameter;
  */
 public class ConfigurationProviderManager {
 
-  private final URLConfigurationProvider urlConfigurationProvider = new URLConfigurationProvider();
-  private final ClasspathConfigurationProvider classpathConfigurationProvider = new ClasspathConfigurationProvider();
   private final CustomConfigurationProvider customConfigurationProvider = new CustomConfigurationProvider();
+  private final URLConfigurationProvider urlConfigurationProvider = new URLConfigurationProvider();
+  private final ApplicationClasspathConfigurationProvider applicationClasspathConfigurationProvider = new ApplicationClasspathConfigurationProvider();
+  private final BaseClasspathConfigurationProvider baseClasspathConfigurationProvider = new BaseClasspathConfigurationProvider();
 
   /**
    * Reads the configuration and provides them in the following hierarchy
@@ -17,7 +18,8 @@ public class ConfigurationProviderManager {
    * <li>provided from {@link ManagerParameter}</li>
    * <li>{@link CustomConfigurationProvider}</li>
    * <li>{@link URLConfigurationProvider}</li>
-   * <li>{@link ClasspathConfigurationProvider}</li>
+   * <li>{@link ApplicationClasspathConfigurationProvider}</li>
+   * <li>{@link BaseClasspathConfigurationProvider}</li>
    * </ol>
    * <p>
    * the providers with the highest hierarchy overrides.
@@ -29,6 +31,7 @@ public class ConfigurationProviderManager {
   public void mergeConfigurationProperties(final ManagerParameter parameter) {
     parameter.mergeProperties(customConfigurationProvider.getProperties());
     parameter.mergeProperties(urlConfigurationProvider.getProperties());
-    parameter.mergeProperties(classpathConfigurationProvider.getProperties());
+    parameter.mergeProperties(applicationClasspathConfigurationProvider.getProperties());
+    parameter.mergeProperties(baseClasspathConfigurationProvider.getProperties());
   }
 }

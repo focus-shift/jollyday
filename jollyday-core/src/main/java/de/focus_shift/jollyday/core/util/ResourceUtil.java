@@ -1,10 +1,15 @@
 package de.focus_shift.jollyday.core.util;
 
 import java.net.URL;
+import java.util.Collections;
+import java.util.Enumeration;
+import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.stream.Stream;
 
 import static java.util.ResourceBundle.getBundle;
 
@@ -146,11 +151,32 @@ public class ResourceUtil {
    * @param resourceName the name/path of the resource to load
    * @return the URL to the resource
    */
-  public static URL getResource(final String resourceName) {
+  public static Optional<URL> getResource(final String resourceName) {
+    return getResource(resourceName, false);
+  }
+
+  /**
+   * Returns the resource by URL.
+   *
+   * @param resourceName    the name/path of the resource to load
+   * @param searchOnlyInJar if true searches for the given resourceName only in resource with the protocol 'jar'
+   *                        otherwise the protocol is irrelevant
+   * @return the optional URL to the resource
+   */
+  public static Optional<URL> getResource(final String resourceName, final boolean searchOnlyInJar) {
+    final Stream<URL> stream = getResources(resourceName).stream();
+    return searchOnlyInJar ? stream.filter(resource -> resource.getProtocol().equals("jar")).findFirst() : stream.findFirst();
+  }
+
+  private static List<URL> getResources(final String resourceName) {
+    final Enumeration<URL> resourcesEnum;
+
     try {
-      return ClassLoadingUtil.getClassloader().getResource(resourceName);
+      resourcesEnum = ClassLoadingUtil.getClassloader().getResources(resourceName);
     } catch (Exception e) {
       throw new IllegalStateException("Cannot load resource: " + resourceName, e);
     }
+
+    return Collections.list(resourcesEnum);
   }
 }
