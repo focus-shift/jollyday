@@ -6,6 +6,9 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Properties;
 
+import static java.util.Arrays.stream;
+import static java.util.function.Predicate.not;
+
 class CustomConfigurationProvider implements ConfigurationProvider {
 
   /**
@@ -30,23 +33,20 @@ class CustomConfigurationProvider implements ConfigurationProvider {
 
     final Properties properties = new Properties();
 
-    final String providersStrList = System.getProperty(CONFIG_PROVIDERS_PROPERTY);
-    if (providersStrList != null) {
-      final String[] providersClassNames = providersStrList.split(",");
-      for (String providerClassName : providersClassNames) {
-
-        if (providerClassName == null || providerClassName.isEmpty()) {
-          continue;
-        }
-
-        try {
-          final Class<?> providerClass = Class.forName(providerClassName.trim(), true, ClassLoadingUtil.getClassloader());
-          final ConfigurationProvider configurationProvider = (ConfigurationProvider) providerClass.getDeclaredConstructor().newInstance();
-          properties.putAll(configurationProvider.getProperties());
-        } catch (Exception e) {
-          LOG.warn("Cannot load configuration from provider class '{}'. {} ({}).", providerClassName, e.getClass().getSimpleName(), e.getMessage());
-        }
-      }
+    final String providerClassNames = System.getProperty(CONFIG_PROVIDERS_PROPERTY);
+    if(providerClassNames != null) {
+      stream(providerClassNames.split(","))
+        .filter(not(String::isEmpty))
+        .map(String::trim)
+        .forEach(providerClassName -> {
+          try {
+            final Class<?> providerClass = Class.forName(providerClassName, true, ClassLoadingUtil.getClassloader());
+            final ConfigurationProvider configurationProvider = (ConfigurationProvider) providerClass.getDeclaredConstructor().newInstance();
+            properties.putAll(configurationProvider.getProperties());
+          } catch (Exception e) {
+            LOG.warn("Cannot load configuration from provider class '{}'. {} ({}).", providerClassName, e.getClass().getSimpleName(), e.getMessage());
+          }
+        });
     }
 
     return properties;

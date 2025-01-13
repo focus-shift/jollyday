@@ -7,9 +7,9 @@ import de.focus_shift.jollyday.core.ManagerParameter;
  */
 public class ConfigurationProviderManager {
 
-  private ConfigurationProvider urlConfigurationProvider = new URLConfigurationProvider();
-  private ConfigurationProvider classpathConfigurationProvider = new ClasspathConfigurationProvider();
-  private ConfigurationProvider customConfigurationProvider = new CustomConfigurationProvider();
+  private final ConfigurationProvider urlConfigurationProvider = new URLConfigurationProvider();
+  private final ConfigurationProvider classpathConfigurationProvider = new ClasspathConfigurationProvider();
+  private final ConfigurationProvider customConfigurationProvider = new CustomConfigurationProvider();
 
   /**
    * Reads the jollyday configuration from the
