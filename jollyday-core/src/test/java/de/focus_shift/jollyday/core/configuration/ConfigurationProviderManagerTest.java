@@ -21,7 +21,7 @@ class ConfigurationProviderManagerTest {
   }
 
   @Test
-  void ensuresUrlConfigurationProviderOverridesClasspathConfigurationProvider() {
+  void ensuresUrlConfigurationProviderOverridesBaseClasspathConfigurationProvider() {
     System.setProperty(CONFIG_URLS_PROPERTY, "file:./src/test/resources/URLConfigurationProviderTest.properties");
     System.clearProperty(CONFIG_PROVIDERS_PROPERTY);
 
@@ -56,13 +56,13 @@ class ConfigurationProviderManagerTest {
     System.setProperty(CONFIG_PROVIDERS_PROPERTY, "de.focus_shift.jollyday.core.configuration.ConfigurationProviderManagerTest$CustomConfigurationProvider");
 
     final ManagerParameter managerParameter = ManagerParameters.create((String) null);
-    managerParameter.setProperty("MANUAL_KEY", "MANUAL_VALUE");
-    managerParameter.setProperty("manager.impl", "NewImpl");
+    managerParameter.setProperty("manager.impl", "ManagerParameterOverloaded");
+    managerParameter.setProperty("manager.impl.manager", "ManagerParameterOverloaded.manager");
 
     sut.mergeConfigurationProperties(managerParameter);
 
-    assertThat(managerParameter.getProperty("MANUAL_KEY")).isEqualTo("MANUAL_VALUE");
-    assertThat(managerParameter.getProperty("manager.impl")).isEqualTo("NewImpl");
+    assertThat(managerParameter.getProperty("manager.impl")).isEqualTo("ManagerParameterOverloaded");
+    assertThat(managerParameter.getProperty("manager.impl.manager")).isEqualTo("ManagerParameterOverloaded.manager");
 
     System.clearProperty(CONFIG_URLS_PROPERTY);
     System.clearProperty(CONFIG_PROVIDERS_PROPERTY);
