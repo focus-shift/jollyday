@@ -7,29 +7,29 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 import java.util.Properties;
 
-import static de.focus_shift.jollyday.core.configuration.CustomConfigurationProvider.CONFIG_PROVIDERS_PROPERTY;
+import static de.focus_shift.jollyday.core.configuration.ProviderClassesConfigurationProvider.CONFIG_PROVIDERS_PROPERTY;
 import static org.assertj.core.api.Assertions.assertThat;
 
-class CustomConfigurationProviderTest {
+class ProviderClassesConfigurationProviderTest {
 
-  private CustomConfigurationProvider sut;
+  private ProviderClassesConfigurationProvider sut;
 
   @BeforeEach
   void setUp() {
-    sut = new CustomConfigurationProvider();
+    sut = new ProviderClassesConfigurationProvider();
   }
 
   @ParameterizedTest
   @CsvSource(value = {
-    "de.focus_shift.jollyday.core.configuration.CustomConfigurationProviderTest$TestProvider:value",
-    "de.focus_shift.jollyday.core.configuration.CustomConfigurationProviderTest$TestProvider,de.focus_shift.jollyday.core.configuration.CustomConfigurationProviderTest$SecondTestProvider:second-value",
-    "de.focus_shift.jollyday.core.configuration.CustomConfigurationProviderTest$TestProvider, java.lang.String: value",
+    "de.focus_shift.jollyday.core.configuration.ProviderClassesConfigurationProviderTest$TestProvider:value",
+    "de.focus_shift.jollyday.core.configuration.ProviderClassesConfigurationProviderTest$TestProvider,de.focus_shift.jollyday.core.configuration.ProviderClassesConfigurationProviderTest$SecondTestProvider:second-value",
+    "de.focus_shift.jollyday.core.configuration.ProviderClassesConfigurationProviderTest$TestProvider,java.lang.String:value",
   }, delimiter = ':')
-  void ensuresToOverridePropertiesAndIgnoreExceptions(final String classList, final String property) {
+  void ensuresToOverridePropertiesAndIgnoreExceptions(final String classList, final String propertyValue) {
     System.setProperty(CONFIG_PROVIDERS_PROPERTY, classList);
 
     final Properties properties = sut.getProperties();
-    assertThat(properties.getProperty("key")).isEqualTo(property);
+    assertThat(properties.getProperty("key")).isEqualTo(propertyValue);
 
     System.clearProperty(CONFIG_PROVIDERS_PROPERTY);
   }

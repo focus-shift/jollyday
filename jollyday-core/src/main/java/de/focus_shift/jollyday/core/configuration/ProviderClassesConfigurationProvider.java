@@ -9,7 +9,7 @@ import java.util.Properties;
 import static java.util.Arrays.stream;
 import static java.util.function.Predicate.not;
 
-class CustomConfigurationProvider implements ConfigurationProvider {
+class ProviderClassesConfigurationProvider implements ConfigurationProvider {
 
   /**
    * System property to define a comma separated list of custom
@@ -18,9 +18,9 @@ class CustomConfigurationProvider implements ConfigurationProvider {
    */
   static final String CONFIG_PROVIDERS_PROPERTY = "de.focus_shift.jollyday.config.providers";
 
-  private static final Logger LOG = LoggerFactory.getLogger(CustomConfigurationProvider.class);
+  private static final Logger LOG = LoggerFactory.getLogger(ProviderClassesConfigurationProvider.class);
 
-  CustomConfigurationProvider() {
+  ProviderClassesConfigurationProvider() {
     // ok
   }
 
