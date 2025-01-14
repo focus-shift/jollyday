@@ -23,6 +23,11 @@
       <artifactId>jollyday-jackson</artifactId>
       <version>${project.version}</version>
     </dependency>
+    <dependency>
+      <groupId>de.focus-shift</groupId>
+      <artifactId>jollyday-jaxb</artifactId>
+      <version>${project.version}</version>
+    </dependency>
 
     <!-- Test -->
     <dependency>
