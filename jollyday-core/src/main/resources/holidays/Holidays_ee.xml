@@ -7,6 +7,7 @@
   <Holidays>
     <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
     <Fixed month="FEBRUARY" day="24" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="SPRING_DAY"/>
     <Fixed month="JUNE" day="23" descriptionPropertiesKey="VICTORY"/>
     <Fixed month="JUNE" day="24" descriptionPropertiesKey="MIDSUMMER"/>
     <Fixed month="AUGUST" day="20" validFrom="1991" descriptionPropertiesKey="REST_INDEP"/>
