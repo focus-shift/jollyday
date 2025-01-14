@@ -93,33 +93,54 @@ If you already use one of these libraries in your project than just use the spec
 <details>
   <summary>via jollyday.properties (click to expand)</summary>
 
-  ### Providing own properties
+  ### Providing own configuration
 
-  The configuration resides within the `jollyday.properties` and can be overridden by:
+  The configuration resides within the `jollyday.properties` and can be overridden or added:
 
-  **URLs**  
-  Specifying a comma separated list of **URLs** with the system property `de.focus_shift.jollyday.config.urls` which point
-  to properties files to overload the basic properties.
-
-  ```bash
-  -Dde.focus_shift.jollyday.config.urls=file:/some/path/new.properties,http://myserver/some/path/further.properties,jar:file:myLibrary.jar!/my.properties
+  **via ManagerParameter**  
+  ```java
+    import de.focus_shift.jollyday.core.Holiday;
+    import de.focus_shift.jollyday.core.HolidayManager;
+    import de.focus_shift.jollyday.core.ManagerParameters;
+    import static de.focus_shift.jollyday.core.HolidayCalendar.GERMANY;
+    
+    final ManagerParameter managerParameter = ManagerParameters.create(GERMANY);
+    managerParameter.setProperty("manager.impl", "de.focus_shift.jollyday.core.impl.SpecialHolidayManager");
   ```
+  
+  The `ManagerParameters` can be used to add new or override existing configuration.
 
-  **Classes**  
-  Specifying a comma separated list of **classes** which implement the `ConfigurationProvider` interface with the
-  system property `de.focus_shift.jollyday.config.providers`. This will overload the basic and the URL specified properties.
+  This will override the **via Own configuration Provider Classes**, **via classpath** and the **via url** specified configurations.
+
+  **via Own configuration Provider Classes**  
+  Providing a comma separated list of **classes** through the system property `de.focus_shift.jollyday.config.providers`
+  which implement the `ConfigurationProvider` interface.
+
+  This will override the **via classpath** and the **via url** specified configurations.
 
   ```bash
   -Dde.focus_shift.jollyday.config.providers=some.package.name.MyConfigurationProvider,some.other.package.AnotherConfigurationProvider
   ```
 
-  **URLs and Classes**  
-  The order of loading properties is Base -> URLs -> ConfigurationProvider.
+  **via url**  
+  Providing a comma separated list of **urls** through the system property `de.focus_shift.jollyday.config.urls` which point
+  to configuration files.
+
+  This will override the **via classpath** specified configurations.
+
+  ```bash
+  -Dde.focus_shift.jollyday.config.urls=file:/some/path/new.properties,http://myserver/some/path/further.properties,jar:file:myLibrary.jar!/my.properties
+  ```
+
+  **via classpath**  
+  You can define your own `jollyday.properties` in your classpath, e.g. in a spring boot application in the ressource directory.
+
+  This will override the base `jollyday.properties` provided by jollyday itself.
 
 
   ### Providing own implementations
 
-  **Manager implementation**  
+  **Holiday Manager**  
   A manager implementation extends the abstract `HolidayManager` class and does the actual holiday parsing.
   The basic API properties are used to define the manager implementation class used for the specific
   country the manager is created for.
@@ -138,7 +159,7 @@ If you already use one of these libraries in your project than just use the spec
   
   This will let the `MyXMLManager` class be used for calculating US holidays and the `XMLManager` for all other countries.
 
-  **Parser implementation**  
+  **Holiday Parser**  
   A parser implementation is used for parsing the XML file content. There are several parsers configured depending on the class to parse the info from.
   
   ```properties
@@ -158,7 +179,7 @@ If you already use one of these libraries in your project than just use the spec
   The value is the parser implementation class name which implements the `HolidayParser` interface. 
 
 
-  **Configuration Service implementation**  
+  **Configuration Service**  
   A configuration service implementation is used to define which xml unmarshalling implementation should be used
 
   ```properties
