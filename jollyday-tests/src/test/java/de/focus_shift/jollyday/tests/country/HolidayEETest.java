@@ -30,8 +30,9 @@ class HolidayEETest {
       .hasFixedHoliday("CHRISTMAS_EVE", DECEMBER, 24).and()
       .hasFixedHoliday("CHRISTMAS", DECEMBER, 25).and()
       .hasFixedHoliday("BOXING_DAY", DECEMBER, 26).and()
+      .hasChristianHoliday("GOOD_FRIDAY").and()
       .hasChristianHoliday("EASTER").and()
-      .hasChristianHoliday("GOOD_FRIDAY")
+      .hasChristianHoliday("PENTECOST")
       .check();
   }
 }
