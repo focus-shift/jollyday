@@ -168,13 +168,15 @@ public class CalendarChecker implements CalendarCheckerApi.Holiday, CalendarChec
 
     clearProperties();
 
+    final HolidayManager holidayManager = HolidayManager.getInstance(create(checks.get(0).getCalendar()));
+
     for (HolidayCalendarCheck check : checks) {
       switch (check.category) {
         case BY_DAY:
-          checkByDate(check);
+          checkByDate(check, holidayManager);
           break;
         case BY_KEY:
-          checkByKey(check);
+          checkByKey(check, holidayManager);
           break;
         default:
           throw new IllegalStateException("Unexpected value: " + check.category);
@@ -184,8 +186,7 @@ public class CalendarChecker implements CalendarCheckerApi.Holiday, CalendarChec
     this.checks.clear();
   }
 
-  private void checkByDate(HolidayCalendarCheck check) {
-    final HolidayManager holidayManager = HolidayManager.getInstance(create(check.calendar));
+  private void checkByDate(HolidayCalendarCheck check, HolidayManager holidayManager) {
     final YearArbitrary yearArbitrary = createYearArbitrary();
 
     for (final YearRange invalidRange : check.getInvalidRanges()) {
@@ -236,8 +237,7 @@ public class CalendarChecker implements CalendarCheckerApi.Holiday, CalendarChec
     return date;
   }
 
-  private void checkByKey(HolidayCalendarCheck check) {
-    final HolidayManager holidayManager = HolidayManager.getInstance(create(check.calendar));
+  private void checkByKey(HolidayCalendarCheck check, HolidayManager holidayManager) {
     final YearArbitrary yearArbitrary = createYearArbitrary();
 
     for (final YearRange invalidRange : check.getInvalidRanges()) {
