@@ -61,6 +61,7 @@ jobs:
         run: >
           ./mvnw -Pcoverage
           sonar:sonar
+          -Dsonar.coverage.exclusions=**/jackson/mapping/*,**/jaxb/mapping/*
           -Dsonar.host.url=https://sonarcloud.io
           -Dsonar.organization=focus-shift
           -Dsonar.projectKey=focus-shift_jollyday
