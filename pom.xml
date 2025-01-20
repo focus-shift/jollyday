@@ -40,7 +40,7 @@
 
     <junit.version>5.11.4</junit.version>
     <mockito.version>5.15.2</mockito.version>
-    <assertj.version>3.27.2</assertj.version>
+    <assertj.version>3.27.3</assertj.version>
     <jqwik.version>1.9.2</jqwik.version>
     <jmh.version>1.37</jmh.version>
 
