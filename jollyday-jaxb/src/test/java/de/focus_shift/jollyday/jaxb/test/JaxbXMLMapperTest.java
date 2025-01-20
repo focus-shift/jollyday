@@ -11,7 +11,7 @@ import java.io.InputStream;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
-class XMLUtilTest {
+class JaxbXMLMapperTest {
 
   private final JaxbXMLMapper sut = new JaxbXMLMapper();
 
