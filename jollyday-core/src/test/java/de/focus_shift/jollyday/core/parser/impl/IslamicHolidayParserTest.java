@@ -4,13 +4,14 @@ import de.focus_shift.jollyday.core.Holiday;
 import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.Holidays;
 import de.focus_shift.jollyday.core.spi.IslamicHoliday;
-import de.focus_shift.jollyday.core.spi.Limited;
 import de.focus_shift.jollyday.core.spi.Movable;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.EnumSource;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
@@ -18,6 +19,8 @@ import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.Year;
 import java.util.List;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 import static de.focus_shift.jollyday.core.spi.IslamicHoliday.IslamicHolidayType.ID_UL_ADHA_2;
 import static de.focus_shift.jollyday.core.spi.IslamicHoliday.IslamicHolidayType.MAWLID_AN_NABI;
@@ -32,11 +35,36 @@ class IslamicHolidayParserTest {
   private Holidays holidays;
 
   @Nested
-  class DescribedTests {
+  @TestInstance(TestInstance.Lifecycle.PER_CLASS)
+  class IslamicHolidayTypeTests {
+
+    private Stream<Arguments> islamicHolidaysWithLocalDates() {
+      final IslamicHoliday.IslamicHolidayType[] islamicHolidayTypes = IslamicHoliday.IslamicHolidayType.values();
+      final String[] islamicHolidayDates = {
+        "2022-07-30",
+        "2022-08-08",
+        "2022-10-08",
+        "2022-02-28",
+        "2022-03-18",
+        "2022-04-02",
+        "2022-04-28",
+        "2022-05-01",
+        "2022-05-02",
+        "2022-05-03",
+        "2022-05-04",
+        "2022-07-08",
+        "2022-07-09",
+        "2022-07-10",
+        "2022-07-11"
+      };
+
+      return IntStream.range(0, islamicHolidayTypes.length)
+        .mapToObj(i -> Arguments.of(islamicHolidayTypes[i], islamicHolidayDates[i]));
+    }
 
     @ParameterizedTest
-    @EnumSource(IslamicHoliday.IslamicHolidayType.class)
-    void ensureThatAllIslamicHolidayTypesProvideAHoliday(final IslamicHoliday.IslamicHolidayType type) {
+    @MethodSource("islamicHolidaysWithLocalDates")
+    void ensureThatAllIslamicHolidayTypesProvideAHoliday(final IslamicHoliday.IslamicHolidayType type, final LocalDate expected) {
 
       final IslamicHoliday islamicHoliday = getIslamicHoliday(type);
 
@@ -45,6 +73,7 @@ class IslamicHolidayParserTest {
 
       final List<Holiday> calculatedHoliday = sut.parse(Year.of(2022), holidays);
       assertThat(calculatedHoliday.get(0).getPropertiesKey()).isEqualTo(type.name());
+      assertThat(calculatedHoliday.get(0).getDate()).isEqualTo(expected);
     }
   }
 
@@ -54,7 +83,7 @@ class IslamicHolidayParserTest {
     @Test
     void ensureThatIslamicHolidaysAreLimitedAndIsValid() {
 
-      final IslamicHoliday islamicHoliday = getIslamicHoliday(MAWLID_AN_NABI, Year.of(2022), Year.of(2022), EVERY_YEAR);
+      final IslamicHoliday islamicHoliday = getIslamicHoliday(MAWLID_AN_NABI, Year.of(2022), Year.of(2022));
 
       final IslamicHolidayParser sut = new IslamicHolidayParser();
       when(holidays.islamicHolidays()).thenReturn(List.of(islamicHoliday));
@@ -66,7 +95,7 @@ class IslamicHolidayParserTest {
     @Test
     void ensureThatIslamicHolidaysAreLimitedAndIsInvalid() {
 
-      final IslamicHoliday islamicHoliday = getIslamicHoliday(MAWLID_AN_NABI, Year.of(2023), Year.of(2023), EVERY_YEAR);
+      final IslamicHoliday islamicHoliday = getIslamicHoliday(MAWLID_AN_NABI, Year.of(2023), Year.of(2023));
 
       final IslamicHolidayParser sut = new IslamicHolidayParser();
       when(holidays.islamicHolidays()).thenReturn(List.of(islamicHoliday));
@@ -113,20 +142,23 @@ class IslamicHolidayParserTest {
   }
 
   private static IslamicHoliday getIslamicHoliday(final IslamicHoliday.IslamicHolidayType type) {
-    return getIslamicHoliday(type, null, null, null, EVERY_YEAR);
+    return getIslamicHoliday(type, null, null, null);
   }
 
   private static IslamicHoliday getIslamicHoliday(final IslamicHoliday.IslamicHolidayType type, final Movable.MovingCondition movingCondition) {
-    return getIslamicHoliday(type, movingCondition, null, null, EVERY_YEAR);
+    return getIslamicHoliday(type, movingCondition, null, null);
   }
 
-  private static IslamicHoliday getIslamicHoliday(final IslamicHoliday.IslamicHolidayType type, final Year validFrom, final Year validTo, final Limited.YearCycle yearCycle) {
-    return getIslamicHoliday(type, null, validFrom, validTo, yearCycle);
+  private static IslamicHoliday getIslamicHoliday(final IslamicHoliday.IslamicHolidayType type, final Year validFrom, final Year validTo) {
+    return getIslamicHoliday(type, null, validFrom, validTo);
   }
 
-  private static IslamicHoliday getIslamicHoliday(final IslamicHoliday.IslamicHolidayType type,
-                                                  final Movable.MovingCondition movingCondition,
-                                                  final Year validFrom, final Year validTo, final Limited.YearCycle yearCycle) {
+  private static IslamicHoliday getIslamicHoliday(
+    final IslamicHoliday.IslamicHolidayType type,
+    final Movable.MovingCondition movingCondition,
+    final Year validFrom,
+    final Year validTo
+  ) {
     return new IslamicHoliday() {
 
       @Override
@@ -161,7 +193,7 @@ class IslamicHolidayParserTest {
 
       @Override
       public YearCycle cycle() {
-        return yearCycle;
+        return EVERY_YEAR;
       }
     };
   }

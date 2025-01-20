@@ -26,6 +26,7 @@ import static de.focus_shift.jollyday.core.HolidayType.PUBLIC_HOLIDAY;
 import static de.focus_shift.jollyday.core.spi.Limited.YearCycle.EVERY_YEAR;
 import static de.focus_shift.jollyday.core.spi.Occurrence.LAST;
 import static java.time.DayOfWeek.MONDAY;
+import static java.time.DayOfWeek.TUESDAY;
 import static java.time.DayOfWeek.WEDNESDAY;
 import static java.time.Month.APRIL;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -43,7 +44,7 @@ class RelativeToWeekdayInMonthParserTest {
 
     final Year year = Year.of(2025);
     final FixedWeekdayInMonth fixedWeekdayInMonth = getFixedWeekdayInMonth(APRIL, MONDAY, LAST);
-    final RelativeToWeekdayInMonth relativeToWeekdayInMonth = getRelativeToWeekdayInMonth(WEDNESDAY, relation, fixedWeekdayInMonth, year, year, EVERY_YEAR);
+    final RelativeToWeekdayInMonth relativeToWeekdayInMonth = getRelativeToWeekdayInMonth(WEDNESDAY, relation, fixedWeekdayInMonth, year, year);
 
     final RelativeToWeekdayInMonthParser sut = new RelativeToWeekdayInMonthParser();
     when(holidays.relativeToWeekdayInMonth()).thenReturn(List.of(relativeToWeekdayInMonth));
@@ -60,7 +61,7 @@ class RelativeToWeekdayInMonthParserTest {
 
       final Year year = Year.of(2025);
       final FixedWeekdayInMonth fixedWeekdayInMonth = getFixedWeekdayInMonth(APRIL, MONDAY, LAST);
-      final RelativeToWeekdayInMonth relativeToWeekdayInMonth = getRelativeToWeekdayInMonth(WEDNESDAY, Relation.BEFORE, fixedWeekdayInMonth, year, year, EVERY_YEAR);
+      final RelativeToWeekdayInMonth relativeToWeekdayInMonth = getRelativeToWeekdayInMonth(WEDNESDAY, Relation.BEFORE, fixedWeekdayInMonth, year, year);
 
       final RelativeToWeekdayInMonthParser sut = new RelativeToWeekdayInMonthParser();
       when(holidays.relativeToWeekdayInMonth()).thenReturn(List.of(relativeToWeekdayInMonth));
@@ -73,7 +74,7 @@ class RelativeToWeekdayInMonthParserTest {
     void ensureThatRelativeToWeekdayInMonthAreLimitedAndIsInvalid() {
 
       final FixedWeekdayInMonth fixedWeekdayInMonth = getFixedWeekdayInMonth(APRIL, MONDAY, LAST);
-      final RelativeToWeekdayInMonth relativeToWeekdayInMonth = getRelativeToWeekdayInMonth(WEDNESDAY, Relation.BEFORE, fixedWeekdayInMonth, Year.of(2023), Year.of(2023), EVERY_YEAR);
+      final RelativeToWeekdayInMonth relativeToWeekdayInMonth = getRelativeToWeekdayInMonth(TUESDAY, Relation.BEFORE, fixedWeekdayInMonth, Year.of(2023), Year.of(2023));
 
       final RelativeToWeekdayInMonthParser sut = new RelativeToWeekdayInMonthParser();
       when(holidays.relativeToWeekdayInMonth()).thenReturn(List.of(relativeToWeekdayInMonth));
@@ -88,8 +89,7 @@ class RelativeToWeekdayInMonthParserTest {
     final Relation relation,
     final FixedWeekdayInMonth fixedWeekdayInMonth,
     final Year validFrom,
-    final Year validTo,
-    final Limited.YearCycle yearCycle
+    final Year validTo
   ) {
     return new RelativeToWeekdayInMonth() {
 
@@ -130,7 +130,7 @@ class RelativeToWeekdayInMonthParserTest {
 
       @Override
       public YearCycle cycle() {
-        return yearCycle;
+        return EVERY_YEAR;
       }
     };
   }

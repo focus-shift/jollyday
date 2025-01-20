@@ -104,9 +104,13 @@ class FixedParserTest {
     return getFixed(day, null, validFrom, validTo, yearCycle);
   }
 
-  private static Fixed getFixed(final MonthDay day,
-                                final Movable.MovingCondition movingCondition,
-                                final Year validFrom, final Year validTo, final Limited.YearCycle yearCycle) {
+  private static Fixed getFixed(
+    final MonthDay day,
+    final Movable.MovingCondition movingCondition,
+    final Year validFrom,
+    final Year validTo,
+    final Limited.YearCycle yearCycle
+  ) {
     return new Fixed() {
 
       @Override

@@ -4,7 +4,6 @@ import de.focus_shift.jollyday.core.Holiday;
 import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.FixedWeekdayInMonth;
 import de.focus_shift.jollyday.core.spi.Holidays;
-import de.focus_shift.jollyday.core.spi.Limited;
 import de.focus_shift.jollyday.core.spi.Occurrence;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
@@ -38,7 +37,7 @@ class FixedWeekdayInMonthParserTest {
     void ensureThatFixedWeekdayInMonthAreLimitedAndIsValid() {
 
       final Year year = Year.of(2025);
-      final FixedWeekdayInMonth fixedWeekdayInMonth = getFixedWeekdayInMonth(WEDNESDAY, JANUARY, Occurrence.LAST, year, year, EVERY_YEAR);
+      final FixedWeekdayInMonth fixedWeekdayInMonth = getFixedWeekdayInMonth(WEDNESDAY, JANUARY, Occurrence.LAST, year, year);
 
       final FixedWeekdayInMonthParser sut = new FixedWeekdayInMonthParser();
       when(holidays.fixedWeekdays()).thenReturn(List.of(fixedWeekdayInMonth));
@@ -50,7 +49,7 @@ class FixedWeekdayInMonthParserTest {
     @Test
     void ensureThatFixedWeekdayInMonthAreLimitedAndIsInvalid() {
 
-      final FixedWeekdayInMonth fixedWeekdayInMonth = getFixedWeekdayInMonth(WEDNESDAY, JANUARY, Occurrence.LAST, Year.of(2023), Year.of(2023), EVERY_YEAR);
+      final FixedWeekdayInMonth fixedWeekdayInMonth = getFixedWeekdayInMonth(WEDNESDAY, JANUARY, Occurrence.LAST, Year.of(2023), Year.of(2023));
 
       final FixedWeekdayInMonthParser sut = new FixedWeekdayInMonthParser();
       when(holidays.fixedWeekdays()).thenReturn(List.of(fixedWeekdayInMonth));
@@ -60,8 +59,13 @@ class FixedWeekdayInMonthParserTest {
     }
   }
 
-  private static FixedWeekdayInMonth getFixedWeekdayInMonth(final DayOfWeek dayOfWeek, final Month month, final Occurrence occurrence,
-                                                            final Year validFrom, final Year validTo, final Limited.YearCycle yearCycle) {
+  private static FixedWeekdayInMonth getFixedWeekdayInMonth(
+    final DayOfWeek dayOfWeek,
+    final Month month,
+    final Occurrence occurrence,
+    final Year validFrom,
+    final Year validTo
+  ) {
     return new FixedWeekdayInMonth() {
 
       @Override
@@ -101,7 +105,7 @@ class FixedWeekdayInMonthParserTest {
 
       @Override
       public YearCycle cycle() {
-        return yearCycle;
+        return EVERY_YEAR;
       }
     };
   }
