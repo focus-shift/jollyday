@@ -150,18 +150,6 @@ public class CalendarChecker implements CalendarCheckerApi.Holiday, CalendarChec
     return this;
   }
 
-  private void clearProperties() {
-    this.propertyKey = null;
-    this.month = null;
-    this.day = 0;
-    this.type = null;
-    this.category = null;
-    this.subdivisions = new String[]{};
-    this.validRanges = new ArrayList<>();
-    this.invalidRanges = new ArrayList<>();
-    this.validShifts = new ArrayList<>();
-  }
-
   @Override
   public void check() {
     checks.add(new HolidayCalendarCheck(calendar, propertyKey, month, day, type, validRanges, invalidRanges, validShifts, subdivisions, category));
@@ -274,6 +262,18 @@ public class CalendarChecker implements CalendarCheckerApi.Holiday, CalendarChec
 
   private static YearArbitrary createYearArbitrary() {
     return (YearArbitrary) Arbitraries.defaultFor(Year.class);
+  }
+
+  private void clearProperties() {
+    this.propertyKey = null;
+    this.month = null;
+    this.day = 0;
+    this.type = null;
+    this.category = null;
+    this.subdivisions = new String[]{};
+    this.validRanges = new ArrayList<>();
+    this.invalidRanges = new ArrayList<>();
+    this.validShifts = new ArrayList<>();
   }
 
   private static final class HolidayCalendarCheck {
