@@ -88,6 +88,106 @@ If you already use one of these libraries in your project than just use the spec
 ```
 </details>
 
+### Examples
+
+<details>
+  <summary>Retrieve public holidays for a year (click to expand)</summary>
+
+Returns all **german** public holidays in **2022**
+  ```java
+  import de.focus_shift.jollyday.core.Holiday;
+  import de.focus_shift.jollyday.core.HolidayManager;
+  import de.focus_shift.jollyday.core.ManagerParameters;
+
+  import java.util.Set;
+
+  import static de.focus_shift.jollyday.core.HolidayCalendar.GERMANY;
+
+  final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(GERMANY));
+  final Set<Holiday> holidays = holidayManager.getHolidays(Year.of(2022));
+  ```
+</details>
+
+<details>
+  <summary>Retrieve public holidays for a period of days (click to expand)</summary>
+
+Returns all german public holidays from the **15th of april in 2022** until the **31st of may in 2023**
+  ```java
+  import de.focus_shift.jollyday.core.Holiday;
+  import de.focus_shift.jollyday.core.HolidayManager;
+  import de.focus_shift.jollyday.core.ManagerParameters;
+
+  import java.time.LocalDate;
+  import java.util.Set;
+
+  import static de.focus_shift.jollyday.core.HolidayCalendar.GERMANY;
+
+  final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(GERMANY));
+  final Set<Holiday> holidays = holidayManager.getHolidays(LocalDate.of(2022, 4, 15), LocalDate.of(2023, 5, 31));
+  ```
+</details>
+
+<details>
+  <summary>Check if a specific date is a public holiday (click to expand)</summary>
+
+Returns true or false if a date is a public holidays in germany.
+  ```java
+  import de.focus_shift.jollyday.core.HolidayManager;
+  import de.focus_shift.jollyday.core.ManagerParameters;
+
+  import java.time.LocalDate;
+
+  import static de.focus_shift.jollyday.core.HolidayCalendar.GERMANY;
+
+  final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(GERMANY));
+  final boolean isHoliday = holidayManager.isHoliday(LocalDate.of(2022, 6, 6));
+  ```
+
+Returns true or false if a date is a public holidays in Baden-Württemberg in germany.
+  ```java
+  import de.focus_shift.jollyday.core.HolidayManager;
+  import de.focus_shift.jollyday.core.ManagerParameters;
+
+  import java.time.LocalDate;
+
+  import static de.focus_shift.jollyday.core.HolidayCalendar.GERMANY;
+
+  final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(GERMANY));
+  final boolean isHoliday = holidayManager.isHoliday(LocalDate.of(2022, 6, 6), "bw");
+  ```
+</details>
+
+<details>
+  <summary>Override an existing country (click to expand)</summary>
+
+If you want to override the public holidays of a provided country like **Germany**, you need to put a holiday file
+under the path `holidays/` and name it `Holidays_de.xml` on your classpath. Jollyday will pick up yours at first.
+The file and the hierarchy need to be identical to the one you want to override.
+
+The holiday file structure needs to look like the one below. The XML Schema Definition file can be viewed [here](jollyday-core/src/main/resources/focus_shift.de/jollyday/schema/holiday/holiday.xsd)
+
+  ```xml
+  <?xml version="1.0" encoding="UTF-8"?>
+  
+  <Configuration hierarchy="de" description="Germany"
+                 xmlns="https://focus_shift.de/jollyday/schema/holiday"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+    <Holidays>
+      <!-- Add the holidays here-->
+    </Holidays>
+  
+    ...
+    
+    <SubConfigurations hierarchy="bw" description="Baden-Württemberg">
+      <Holidays>
+      ...
+      </Holidays>
+    </SubConfigurations>
+  </Configuration>
+  ```
+</details>
+
 ### Configuration
 
 #### Providing own configuration
@@ -206,106 +306,6 @@ The configuration resides within the `jollyday.properties` and can be overridden
   * `de.focus_shift.jollyday.jackson.JacksonConfigurationService` (default)
   * `de.focus_shift.jollyday.jaxb.JaxbConfigurationService`
 
-</details>
-
-### Examples
-
-<details>
-  <summary>Retrieve public holidays for a year (click to expand)</summary>
-
-  Returns all **german** public holidays in **2022**
-  ```java
-  import de.focus_shift.jollyday.core.Holiday;
-  import de.focus_shift.jollyday.core.HolidayManager;
-  import de.focus_shift.jollyday.core.ManagerParameters;
-
-  import java.util.Set;
-
-  import static de.focus_shift.jollyday.core.HolidayCalendar.GERMANY;
-
-  final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(GERMANY));
-  final Set<Holiday> holidays = holidayManager.getHolidays(Year.of(2022));
-  ```
-</details>
-
-<details>
-  <summary>Retrieve public holidays for a period of days (click to expand)</summary>
-
-  Returns all german public holidays from the **15th of april in 2022** until the **31st of may in 2023**
-  ```java
-  import de.focus_shift.jollyday.core.Holiday;
-  import de.focus_shift.jollyday.core.HolidayManager;
-  import de.focus_shift.jollyday.core.ManagerParameters;
-
-  import java.time.LocalDate;
-  import java.util.Set;
-
-  import static de.focus_shift.jollyday.core.HolidayCalendar.GERMANY;
-
-  final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(GERMANY));
-  final Set<Holiday> holidays = holidayManager.getHolidays(LocalDate.of(2022, 4, 15), LocalDate.of(2023, 5, 31));
-  ```
-</details>
-
-<details>
-  <summary>Check if a specific date is a public holiday (click to expand)</summary>
-
-  Returns true or false if a date is a public holidays in germany.
-  ```java
-  import de.focus_shift.jollyday.core.HolidayManager;
-  import de.focus_shift.jollyday.core.ManagerParameters;
-
-  import java.time.LocalDate;
-
-  import static de.focus_shift.jollyday.core.HolidayCalendar.GERMANY;
-
-  final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(GERMANY));
-  final boolean isHoliday = holidayManager.isHoliday(LocalDate.of(2022, 6, 6));
-  ```
-
-  Returns true or false if a date is a public holidays in Baden-Württemberg in germany.
-  ```java
-  import de.focus_shift.jollyday.core.HolidayManager;
-  import de.focus_shift.jollyday.core.ManagerParameters;
-
-  import java.time.LocalDate;
-
-  import static de.focus_shift.jollyday.core.HolidayCalendar.GERMANY;
-
-  final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(GERMANY));
-  final boolean isHoliday = holidayManager.isHoliday(LocalDate.of(2022, 6, 6), "bw");
-  ```
-</details>
-
-<details>
-  <summary>Override an existing country (click to expand)</summary>
-  
-  If you want to override the public holidays of a provided country like **Germany**, you need to put a holiday file
-  under the path `holidays/` and name it `Holidays_de.xml` on your classpath. Jollyday will pick up yours at first.
-  The file and the hierarchy need to be identical to the one you want to override.
-
-  The holiday file structure needs to look like the one below. The XML Schema Definition file can be viewed [here](jollyday-core/src/main/resources/focus_shift.de/jollyday/schema/holiday/holiday.xsd)
-
-  ```xml
-  <?xml version="1.0" encoding="UTF-8"?>
-  
-  <Configuration hierarchy="de" description="Germany"
-                 xmlns="https://focus_shift.de/jollyday/schema/holiday"
-                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                 xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
-    <Holidays>
-      <!-- Add the holidays here-->
-    </Holidays>
-  
-    ...
-    
-    <SubConfigurations hierarchy="bw" description="Baden-Württemberg">
-      <Holidays>
-      ...
-      </Holidays>
-    </SubConfigurations>
-  </Configuration>
-  ```
 </details>
 
 ## ISO 3166
