@@ -27,7 +27,7 @@ public class RelativeToWeekdayInMonthParser implements HolidayParser {
       .filter(new ValidLimitation(year))
       .map(rwm -> {
         LocalDate date = new FindWeekDayInMonth(year).apply(rwm.weekdayInMonth()).plusDays(1);
-        int direction = (rwm.when() == Relation.BEFORE ? -1 : 1);
+        int direction = rwm.when() == Relation.BEFORE ? -1 : 1;
         while (date.getDayOfWeek() != rwm.weekday()) {
           date = date.plusDays(direction);
         }

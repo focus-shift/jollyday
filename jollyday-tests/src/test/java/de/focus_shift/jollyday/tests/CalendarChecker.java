@@ -33,7 +33,7 @@ public class CalendarChecker implements CalendarCheckerApi.Holiday, CalendarChec
 
   public enum Adjuster {
     NEXT,
-    PREVIOUS;
+    PREVIOUS
   }
 
   private final HolidayCalendar calendar;
@@ -348,7 +348,7 @@ public class CalendarChecker implements CalendarCheckerApi.Holiday, CalendarChec
     }
   }
 
-  private static class YearRange {
+  private static final class YearRange {
 
     private final Year from;
     private final Year to;
@@ -370,7 +370,7 @@ public class CalendarChecker implements CalendarCheckerApi.Holiday, CalendarChec
     }
   }
 
-  private static class WeekDayFromTo {
+  private static final class WeekDayFromTo {
 
     private final DayOfWeek from;
     private final DayOfWeek to;

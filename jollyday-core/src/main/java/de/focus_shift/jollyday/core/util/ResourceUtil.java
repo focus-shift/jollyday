@@ -13,7 +13,7 @@ import java.util.stream.Stream;
 
 import static java.util.ResourceBundle.getBundle;
 
-public class ResourceUtil {
+public final class ResourceUtil {
 
   private ResourceUtil() {
     // ok

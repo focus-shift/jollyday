@@ -15,8 +15,7 @@ public final class Holiday implements Comparable<Holiday> {
   /**
    * The calculated hashcode cached for performance.
    */
-  private int hashCode = 0;
-
+  private int hashCode;
   /**
    * The date the holiday occurs.
    */

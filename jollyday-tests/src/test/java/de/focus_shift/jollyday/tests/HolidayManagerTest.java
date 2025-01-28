@@ -160,9 +160,9 @@ class HolidayManagerTest {
     assertThat(calendarHierarchy.getChildren()).hasSize(2);
 
     for (CalendarHierarchy calendarHierarchyChild : calendarHierarchy.getChildren().values()) {
-      if (calendarHierarchyChild.getId().equalsIgnoreCase("level1_1")) {
+      if ("level1_1".equalsIgnoreCase(calendarHierarchyChild.getId())) {
         assertThat(calendarHierarchyChild.getChildren()).hasSize(1);
-      } else if (calendarHierarchyChild.getId().equalsIgnoreCase("level1_2")) {
+      } else if ("level1_2".equalsIgnoreCase(calendarHierarchyChild.getId())) {
         assertThat(calendarHierarchyChild.getChildren()).isEmpty();
       }
     }
