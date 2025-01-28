@@ -186,7 +186,7 @@ public class CalendarChecker implements CalendarCheckerApi.Holiday, CalendarChec
     this.checks.clear();
   }
 
-  private void checkByDate(HolidayCalendarCheck check, HolidayManager holidayManager) {
+  private void checkByDate(final HolidayCalendarCheck check, final HolidayManager holidayManager) {
     final YearArbitrary yearArbitrary = createYearArbitrary();
 
     for (final YearRange invalidRange : check.getInvalidRanges()) {
@@ -222,7 +222,8 @@ public class CalendarChecker implements CalendarCheckerApi.Holiday, CalendarChec
     }
   }
 
-  private static LocalDate shiftLocalDate(HolidayCalendarCheck check, LocalDate date) {
+  private static LocalDate shiftLocalDate(final HolidayCalendarCheck check, LocalDate date) {
+
     if (!check.validShifts.isEmpty()) {
       for (WeekDayFromTo shift : check.validShifts) {
         if (date.getDayOfWeek().equals(shift.getFrom())) {
@@ -237,7 +238,7 @@ public class CalendarChecker implements CalendarCheckerApi.Holiday, CalendarChec
     return date;
   }
 
-  private void checkByKey(HolidayCalendarCheck check, HolidayManager holidayManager) {
+  private void checkByKey(final HolidayCalendarCheck check, final HolidayManager holidayManager) {
     final YearArbitrary yearArbitrary = createYearArbitrary();
 
     for (final YearRange invalidRange : check.getInvalidRanges()) {
