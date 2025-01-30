@@ -34,7 +34,7 @@ class HolidayNZTest extends AbstractCountryTestBase {
     final Set<Holiday> holidays = holidayManager.getHolidays(Year.of(2011), "stl");
 
     boolean found = holidays.stream()
-      .anyMatch(holiday -> holiday.getPropertiesKey().equals("SOUTHLAND_ANNIVERSARY") && holiday.getDate().equals(expected));
+      .anyMatch(holiday -> "SOUTHLAND_ANNIVERSARY".equals(holiday.getPropertiesKey()) && holiday.getDate().equals(expected));
     assertThat(found).isTrue();
   }
 
@@ -48,7 +48,7 @@ class HolidayNZTest extends AbstractCountryTestBase {
     final Set<Holiday> holidays = holidayManager.getHolidays(Year.of(2012), "stl");
 
     boolean found = holidays.stream()
-      .anyMatch(holiday -> holiday.getPropertiesKey().equals("SOUTHLAND_ANNIVERSARY") && holiday.getDate().equals(expected));
+      .anyMatch(holiday -> "SOUTHLAND_ANNIVERSARY".equals(holiday.getPropertiesKey()) && holiday.getDate().equals(expected));
     assertThat(found).isTrue();
   }
 

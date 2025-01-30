@@ -2,79 +2,84 @@ package de.focus_shift.jollyday.core.configuration;
 
 import de.focus_shift.jollyday.core.ManagerParameter;
 import de.focus_shift.jollyday.core.ManagerParameters;
-import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.junit.jupiter.MockitoExtension;
 
+import java.util.Properties;
+
+import static de.focus_shift.jollyday.core.configuration.ProviderClassesConfigurationProvider.CONFIG_PROVIDERS_PROPERTY;
+import static de.focus_shift.jollyday.core.configuration.URLConfigurationProvider.CONFIG_URLS_PROPERTY;
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.Mockito.verify;
 
-@ExtendWith(MockitoExtension.class)
 class ConfigurationProviderManagerTest {
 
-  @Mock
-  private ClasspathConfigurationProvider classpathConfigurationProvider;
-  @Mock
-  private URLConfigurationProvider urlConfigurationProvider;
+  private ConfigurationProviderManager sut;
 
-  @InjectMocks
-  private final ConfigurationProviderManager sut = new ConfigurationProviderManager();
-
-  private final ManagerParameter managerParameter = ManagerParameters.create((String) null);
-
-  @AfterEach
-  void teardown() {
-    System.clearProperty(ConfigurationProvider.CONFIG_PROVIDERS_PROPERTY);
+  @BeforeEach
+  void setUp() {
+    sut = new ConfigurationProviderManager();
   }
 
   @Test
-  void testGetPropertiesWithEmptyProvidersList() {
-    System.setProperty(ConfigurationProvider.CONFIG_PROVIDERS_PROPERTY, "");
+  void ensuresUrlConfigurationProviderOverridesBaseClasspathConfigurationProvider() {
+    System.setProperty(CONFIG_URLS_PROPERTY, "file:./src/test/resources/URLConfigurationProviderTest.properties");
+    System.clearProperty(CONFIG_PROVIDERS_PROPERTY);
+
+    final ManagerParameter managerParameter = ManagerParameters.create((String) null);
     sut.mergeConfigurationProperties(managerParameter);
-    assertResult(managerParameter);
+
+    assertThat(managerParameter.getProperty("manager.impl")).isEqualTo("UrlConfigurationProviderOverloaded");
+    assertThat(managerParameter.getProperty("manager.impl.url")).isEqualTo("UrlConfigurationProviderOverloaded.url");
+    System.clearProperty(CONFIG_URLS_PROPERTY);
   }
 
   @Test
-  void testGetPropertiesWithWrongClass() {
-    System.setProperty(ConfigurationProvider.CONFIG_PROVIDERS_PROPERTY, "java.lang.String");
+  void ensuresProviderClassesConfigurationProviderOverridesUrlConfigurationProvider() {
+    System.setProperty(CONFIG_URLS_PROPERTY, "file:./src/test/resources/URLConfigurationProviderTest.properties");
+    System.setProperty(CONFIG_PROVIDERS_PROPERTY, "de.focus_shift.jollyday.core.configuration.ConfigurationProviderManagerTest$ProviderClassConfigurationProvider");
+
+    final ManagerParameter managerParameter = ManagerParameters.create((String) null);
     sut.mergeConfigurationProperties(managerParameter);
-    assertResult(managerParameter);
+
+    assertThat(managerParameter.getProperty("manager.impl")).isEqualTo("ProviderClassesConfigurationProviderOverloaded");
+    assertThat(managerParameter.getProperty("manager.impl.url")).isEqualTo("UrlConfigurationProviderOverloaded.url");
+    assertThat(managerParameter.getProperty("manager.impl.custom")).isEqualTo("ProviderClassesConfigurationProviderOverloaded.custom");
+
+    System.clearProperty(CONFIG_URLS_PROPERTY);
+    System.clearProperty(CONFIG_PROVIDERS_PROPERTY);
   }
 
   @Test
-  void testGetPropertiesWithCorrectClass() {
-    System.setProperty(ConfigurationProvider.CONFIG_PROVIDERS_PROPERTY, "de.focus_shift.jollyday.core.configuration.TestProvider");
-    sut.mergeConfigurationProperties(managerParameter);
-    assertResult(managerParameter);
-    assertThat(managerParameter.getProperty("key")).isEqualTo("value");
-  }
+  void ensuresManagerParametersOverridesProviderClassConfigurationProvider() {
 
-  @Test
-  void testGetPropertiesWithWrongAndCorrectClass() {
-    System.setProperty(ConfigurationProvider.CONFIG_PROVIDERS_PROPERTY, "de.focus_shift.jollyday.core.configuration.TestProvider, java.lang.String");
-    sut.mergeConfigurationProperties(managerParameter);
-    assertResult(managerParameter);
-    assertThat(managerParameter.getProperty("key")).isEqualTo("value");
-  }
+    System.setProperty(CONFIG_URLS_PROPERTY, "file:./src/test/resources/URLConfigurationProviderTest.properties");
+    System.setProperty(CONFIG_PROVIDERS_PROPERTY, "de.focus_shift.jollyday.core.configuration.ConfigurationProviderManagerTest$ProviderClassConfigurationProvider");
 
-  @Test
-  void testGetPropertiesWithManualOverride() {
-    managerParameter.setProperty("MANUAL_KEY", "MANUAL_VALUE");
-    managerParameter.setProperty("manager.impl", "NewImpl");
+    final ManagerParameter managerParameter = ManagerParameters.create((String) null);
+    managerParameter.setProperty("manager.impl", "ManagerParameterOverloaded");
+    managerParameter.setProperty("manager.impl.manager", "ManagerParameterOverloaded.manager");
 
     sut.mergeConfigurationProperties(managerParameter);
 
-    assertResult(managerParameter);
-    assertThat(managerParameter.getProperty("MANUAL_KEY")).isEqualTo("MANUAL_VALUE");
-    assertThat(managerParameter.getProperty("manager.impl")).isEqualTo("NewImpl");
+    assertThat(managerParameter.getProperty("manager.impl")).isEqualTo("ManagerParameterOverloaded");
+    assertThat(managerParameter.getProperty("manager.impl.manager")).isEqualTo("ManagerParameterOverloaded.manager");
+
+    System.clearProperty(CONFIG_URLS_PROPERTY);
+    System.clearProperty(CONFIG_PROVIDERS_PROPERTY);
   }
 
-  private void assertResult(ManagerParameter parameter) {
-    assertThat(parameter).isNotNull();
-    verify(classpathConfigurationProvider).getProperties();
-    verify(urlConfigurationProvider).getProperties();
+  static class ProviderClassConfigurationProvider implements ConfigurationProvider {
+
+    private final Properties properties = new Properties();
+
+    ProviderClassConfigurationProvider() {
+      properties.setProperty("manager.impl", "ProviderClassesConfigurationProviderOverloaded");
+      properties.setProperty("manager.impl.custom", "ProviderClassesConfigurationProviderOverloaded.custom");
+    }
+
+    @Override
+    public Properties getProperties() {
+      return properties;
+    }
   }
 }

@@ -5,6 +5,9 @@ changelog:
     - title: "⚠️ Security Issues"
       labels: [ "type: security" ]
       sort: "title"
+    - title: "⭐ Holidays"
+      labels: [ "topic: public holiday" ]
+      sort: "title"
     - title: "⭐ Enhancements"
       labels: [ "type: enhancement" ]
       sort: "title"

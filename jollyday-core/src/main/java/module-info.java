@@ -16,8 +16,10 @@ module de.focus_shift.jollyday.core {
     de.focus_shift.jollyday.jaxb,
     de.focus_shift.jollyday.jackson,
     de.focus_shift.jollyday.jackson.test,
-    de.focus_shift.jollyday.jaxb.test;
+    de.focus_shift.jollyday.jaxb.test,
+    de.focus_shift.jollyday.java.test;
   exports de.focus_shift.jollyday.core.parser.impl to
     de.focus_shift.jollyday.jackson.test,
-    de.focus_shift.jollyday.jaxb.test;
+    de.focus_shift.jollyday.jaxb.test,
+    de.focus_shift.jollyday.java.test;
 }

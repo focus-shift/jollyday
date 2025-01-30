@@ -105,7 +105,7 @@ public class FindWeekDayRelativeToDate implements Function<FixedWeekdayRelativeT
       final Temporal next = temporal.with(nextOrSame(dayOfWeek));
       final int previousDays = Days.between(temporal, previous).abs().getAmount();
       final int nextDays = Days.between(temporal, next).abs().getAmount();
-      return (previousDays <= nextDays ? previous : next);
+      return previousDays <= nextDays ? previous : next;
     };
   }
 }

@@ -4,7 +4,7 @@
 
   <groupId>de.focus-shift</groupId>
   <artifactId>jollyday</artifactId>
-  <version>1.3.0-SNAPSHOT</version>
+  <version>1.5.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Jollyday</name>
@@ -39,8 +39,8 @@
     <tests.groups>!BenchmarkTest</tests.groups>
 
     <junit.version>5.11.4</junit.version>
-    <mockito.version>5.14.2</mockito.version>
-    <assertj.version>3.27.0</assertj.version>
+    <mockito.version>5.15.2</mockito.version>
+    <assertj.version>3.27.3</assertj.version>
     <jqwik.version>1.9.2</jqwik.version>
     <jmh.version>1.37</jmh.version>
 
@@ -57,6 +57,8 @@
     <module>jollyday-core</module>
     <module>jollyday-jackson</module>
     <module>jollyday-jaxb</module>
+    <module>jollyday-pojo</module>
+    <module>jollyday-pojo-generator</module>
   </modules>
 
   <developers>
@@ -142,7 +144,7 @@
       <dependency>
         <groupId>ch.qos.logback</groupId>
         <artifactId>logback-classic</artifactId>
-        <version>1.5.15</version>
+        <version>1.5.16</version>
         <scope>test</scope>
       </dependency>
 

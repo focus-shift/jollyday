@@ -33,7 +33,7 @@ public class CalendarChecker implements CalendarCheckerApi.Holiday, CalendarChec
 
   public enum Adjuster {
     NEXT,
-    PREVIOUS;
+    PREVIOUS
   }
 
   private final HolidayCalendar calendar;
@@ -150,31 +150,21 @@ public class CalendarChecker implements CalendarCheckerApi.Holiday, CalendarChec
     return this;
   }
 
-  private void clearProperties() {
-    this.propertyKey = null;
-    this.month = null;
-    this.day = 0;
-    this.type = null;
-    this.category = null;
-    this.subdivisions = new String[]{};
-    this.validRanges = new ArrayList<>();
-    this.invalidRanges = new ArrayList<>();
-    this.validShifts = new ArrayList<>();
-  }
-
   @Override
   public void check() {
     checks.add(new HolidayCalendarCheck(calendar, propertyKey, month, day, type, validRanges, invalidRanges, validShifts, subdivisions, category));
 
     clearProperties();
 
+    final HolidayManager holidayManager = HolidayManager.getInstance(create(checks.get(0).getCalendar()));
+
     for (HolidayCalendarCheck check : checks) {
       switch (check.category) {
         case BY_DAY:
-          checkByDate(check);
+          checkByDate(check, holidayManager);
           break;
         case BY_KEY:
-          checkByKey(check);
+          checkByKey(check, holidayManager);
           break;
         default:
           throw new IllegalStateException("Unexpected value: " + check.category);
@@ -184,8 +174,7 @@ public class CalendarChecker implements CalendarCheckerApi.Holiday, CalendarChec
     this.checks.clear();
   }
 
-  private void checkByDate(HolidayCalendarCheck check) {
-    final HolidayManager holidayManager = HolidayManager.getInstance(create(check.calendar));
+  private void checkByDate(final HolidayCalendarCheck check, final HolidayManager holidayManager) {
     final YearArbitrary yearArbitrary = createYearArbitrary();
 
     for (final YearRange invalidRange : check.getInvalidRanges()) {
@@ -221,7 +210,8 @@ public class CalendarChecker implements CalendarCheckerApi.Holiday, CalendarChec
     }
   }
 
-  private static LocalDate shiftLocalDate(HolidayCalendarCheck check, LocalDate date) {
+  private static LocalDate shiftLocalDate(final HolidayCalendarCheck check, LocalDate date) {
+
     if (!check.validShifts.isEmpty()) {
       for (WeekDayFromTo shift : check.validShifts) {
         if (date.getDayOfWeek().equals(shift.getFrom())) {
@@ -236,8 +226,7 @@ public class CalendarChecker implements CalendarCheckerApi.Holiday, CalendarChec
     return date;
   }
 
-  private void checkByKey(HolidayCalendarCheck check) {
-    final HolidayManager holidayManager = HolidayManager.getInstance(create(check.calendar));
+  private void checkByKey(final HolidayCalendarCheck check, final HolidayManager holidayManager) {
     final YearArbitrary yearArbitrary = createYearArbitrary();
 
     for (final YearRange invalidRange : check.getInvalidRanges()) {
@@ -273,6 +262,18 @@ public class CalendarChecker implements CalendarCheckerApi.Holiday, CalendarChec
 
   private static YearArbitrary createYearArbitrary() {
     return (YearArbitrary) Arbitraries.defaultFor(Year.class);
+  }
+
+  private void clearProperties() {
+    this.propertyKey = null;
+    this.month = null;
+    this.day = 0;
+    this.type = null;
+    this.category = null;
+    this.subdivisions = new String[]{};
+    this.validRanges = new ArrayList<>();
+    this.invalidRanges = new ArrayList<>();
+    this.validShifts = new ArrayList<>();
   }
 
   private static final class HolidayCalendarCheck {
@@ -348,7 +349,7 @@ public class CalendarChecker implements CalendarCheckerApi.Holiday, CalendarChec
     }
   }
 
-  private static class YearRange {
+  private static final class YearRange {
 
     private final Year from;
     private final Year to;
@@ -370,7 +371,7 @@ public class CalendarChecker implements CalendarCheckerApi.Holiday, CalendarChec
     }
   }
 
-  private static class WeekDayFromTo {
+  private static final class WeekDayFromTo {
 
     private final DayOfWeek from;
     private final DayOfWeek to;

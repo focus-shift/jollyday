@@ -1,56 +1,37 @@
 package de.focus_shift.jollyday.core.configuration;
 
 import de.focus_shift.jollyday.core.ManagerParameter;
-import de.focus_shift.jollyday.core.util.ClassLoadingUtil;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * Manages the configuration provider implementations and thus delivering the jollyday configuration.
  */
 public class ConfigurationProviderManager {
 
-  private static final Logger LOG = LoggerFactory.getLogger(ConfigurationProviderManager.class);
-
-  private ConfigurationProvider classpathConfigurationProvider = new ClasspathConfigurationProvider();
-  private ConfigurationProvider urlConfigurationProvider = new URLConfigurationProvider();
+  private final ProviderClassesConfigurationProvider providerClassesConfigurationProvider = new ProviderClassesConfigurationProvider();
+  private final URLConfigurationProvider urlConfigurationProvider = new URLConfigurationProvider();
+  private final ApplicationClasspathConfigurationProvider applicationClasspathConfigurationProvider = new ApplicationClasspathConfigurationProvider();
+  private final BaseClasspathConfigurationProvider baseClasspathConfigurationProvider = new BaseClasspathConfigurationProvider();
 
   /**
-   * Reads the jollyday configuration from the
-   * {@link ClasspathConfigurationProvider}, the
-   * {@link URLConfigurationProvider} and any configuration provider specified
-   * by the system property 'config.providers'.
+   * Reads the configuration and provides them in the following hierarchy
+   * <ol>
+   * <li>provided from {@link ManagerParameter}</li>
+   * <li>{@link ProviderClassesConfigurationProvider}</li>
+   * <li>{@link URLConfigurationProvider}</li>
+   * <li>{@link ApplicationClasspathConfigurationProvider}</li>
+   * <li>{@link BaseClasspathConfigurationProvider}</li>
+   * </ol>
+   * <p>
+   * the providers with the highest hierarchy overrides.
+   * <p>
+   * For example, the {@link ManagerParameter} has the highest hierarchy and overrides all other configuration providers.
    *
    * @param parameter the configuration {@link ManagerParameter} to use
    */
   public void mergeConfigurationProperties(final ManagerParameter parameter) {
-    addInternalConfigurationProviderProperties(parameter);
-    addCustomConfigurationProviderProperties(parameter);
-  }
-
-  private void addInternalConfigurationProviderProperties(final ManagerParameter parameter) {
+    parameter.mergeProperties(providerClassesConfigurationProvider.getProperties());
     parameter.mergeProperties(urlConfigurationProvider.getProperties());
-    parameter.mergeProperties(classpathConfigurationProvider.getProperties());
-  }
-
-  private void addCustomConfigurationProviderProperties(final ManagerParameter parameter) {
-    final String providersStrList = System.getProperty(ConfigurationProvider.CONFIG_PROVIDERS_PROPERTY);
-    if (providersStrList != null) {
-      final String[] providersClassNames = providersStrList.split(",");
-      for (String providerClassName : providersClassNames) {
-
-        if (providerClassName == null || providerClassName.isEmpty()) {
-          continue;
-        }
-
-        try {
-          final Class<?> providerClass = Class.forName(providerClassName.trim(), true, ClassLoadingUtil.getClassloader());
-          final ConfigurationProvider configurationProvider = (ConfigurationProvider) providerClass.getDeclaredConstructor().newInstance();
-          parameter.mergeProperties(configurationProvider.getProperties());
-        } catch (Exception e) {
-          LOG.warn("Cannot load configuration from provider class '{}'. {} ({}).", providerClassName, e.getClass().getSimpleName(), e.getMessage());
-        }
-      }
-    }
+    parameter.mergeProperties(applicationClasspathConfigurationProvider.getProperties());
+    parameter.mergeProperties(baseClasspathConfigurationProvider.getProperties());
   }
 }
