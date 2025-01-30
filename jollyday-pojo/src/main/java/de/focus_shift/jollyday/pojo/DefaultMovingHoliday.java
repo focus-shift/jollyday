@@ -5,8 +5,8 @@ import java.util.Collections;
 import java.util.List;
 
 import de.focus_shift.jollyday.core.HolidayType;
-import de.focus_shift.jollyday.core.spi.MovingCondition;
-import de.focus_shift.jollyday.core.spi.YearCycle;
+import de.focus_shift.jollyday.core.spi.Limited.YearCycle;
+import de.focus_shift.jollyday.core.spi.Movable.MovingCondition;
 
 public abstract class DefaultMovingHoliday extends DefaultHoliday {
 

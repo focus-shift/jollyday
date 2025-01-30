@@ -6,7 +6,6 @@ import java.time.Year;
 import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.Fixed;
 import de.focus_shift.jollyday.core.spi.FixedWeekdayBetweenFixed;
-import de.focus_shift.jollyday.core.spi.YearCycle;
 
 public class PojoFixedWeekdayBetweenFixed extends DefaultHoliday implements FixedWeekdayBetweenFixed {
 

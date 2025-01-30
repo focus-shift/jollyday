@@ -15,6 +15,9 @@ import org.apache.maven.plugins.annotations.Parameter;
 
 import de.focus_shift.jollyday.core.HolidayCalendar;
 
+/**
+ * Generate PojoConfiguration
+ */
 @Mojo(name = "generate", defaultPhase = LifecyclePhase.GENERATE_SOURCES)
 public class PojoGeneratorMojo extends AbstractMojo {
 
@@ -23,8 +26,6 @@ public class PojoGeneratorMojo extends AbstractMojo {
      */
     @Parameter(defaultValue = "${project.build.directory}/generated-sources/pojo", property = "outputDir", required = true)
     private File outputDirectory;
-
-    public PojoGeneratorMojo() { }
 
     public void execute() throws MojoExecutionException {
       final Log log = getLog();

@@ -6,18 +6,17 @@ import java.time.Year;
 import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.Fixed;
 import de.focus_shift.jollyday.core.spi.FixedWeekdayRelativeToFixed;
-import de.focus_shift.jollyday.core.spi.Occurrance;
+import de.focus_shift.jollyday.core.spi.Occurrence;
 import de.focus_shift.jollyday.core.spi.Relation;
-import de.focus_shift.jollyday.core.spi.YearCycle;
 
 public class PojoFixedWeekdayRelativeToFixed extends DefaultHoliday implements FixedWeekdayRelativeToFixed {
 
   private DayOfWeek weekday;
   private Relation when;
   private Fixed day;
-  private Occurrance which;
+  private Occurrence which;
 
-  public PojoFixedWeekdayRelativeToFixed(String descriptionPropertiesKey, HolidayType officiality, Year validFrom, Year validTo, YearCycle cycle, DayOfWeek weekday, Relation when, Fixed day, Occurrance which) {
+  public PojoFixedWeekdayRelativeToFixed(String descriptionPropertiesKey, HolidayType officiality, Year validFrom, Year validTo, YearCycle cycle, DayOfWeek weekday, Relation when, Fixed day, Occurrence which) {
     super(descriptionPropertiesKey, officiality, validFrom, validTo, cycle);
     this.weekday = weekday;
     this.when = when;
@@ -41,9 +40,8 @@ public class PojoFixedWeekdayRelativeToFixed extends DefaultHoliday implements F
   }
 
   @Override
-  public Occurrance which() {
+  public Occurrence which() {
     return which;
   }
-
 
 }

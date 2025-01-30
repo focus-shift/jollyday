@@ -3,7 +3,7 @@ package de.focus_shift.jollyday.pojo;
 import java.time.Year;
 
 import de.focus_shift.jollyday.core.HolidayType;
-import de.focus_shift.jollyday.core.spi.YearCycle;
+import de.focus_shift.jollyday.core.spi.Limited.YearCycle;
 
 public abstract class DefaultHoliday {
 
@@ -25,7 +25,7 @@ public abstract class DefaultHoliday {
     return descriptionPropertiesKey;
   }
 
-  public HolidayType officiality() {
+  public HolidayType holidayType() {
     return officiality;
   }
 

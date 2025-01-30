@@ -2,8 +2,7 @@ package de.focus_shift.jollyday.pojo;
 
 import java.time.DayOfWeek;
 
-import de.focus_shift.jollyday.core.spi.MovingCondition;
-import de.focus_shift.jollyday.core.spi.With;
+import de.focus_shift.jollyday.core.spi.Movable.MovingCondition;
 
 public class PojoMovingCondition implements MovingCondition {
 

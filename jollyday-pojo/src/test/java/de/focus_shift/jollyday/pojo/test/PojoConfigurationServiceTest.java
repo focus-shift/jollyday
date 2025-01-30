@@ -10,7 +10,7 @@ import de.focus_shift.jollyday.core.HolidayManager;
 import de.focus_shift.jollyday.core.ManagerParameter;
 import de.focus_shift.jollyday.core.ManagerParameters;
 import de.focus_shift.jollyday.core.spi.Configuration;
-import de.focus_shift.jollyday.core.spi.YearCycle;
+import de.focus_shift.jollyday.core.spi.Limited.YearCycle;
 import de.focus_shift.jollyday.pojo.PojoConfigurationService;
 import de.focus_shift.jollyday.pojo.PojoFixed;
 

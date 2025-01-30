@@ -4,8 +4,6 @@ import java.time.Year;
 
 import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.EthiopianOrthodoxHoliday;
-import de.focus_shift.jollyday.core.spi.EthiopianOrthodoxHolidayType;
-import de.focus_shift.jollyday.core.spi.YearCycle;
 
 public class PojoEthiopianOrthodoxHoliday extends DefaultHoliday implements EthiopianOrthodoxHoliday {
 

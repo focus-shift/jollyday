@@ -5,9 +5,6 @@ import java.util.List;
 
 import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.IslamicHoliday;
-import de.focus_shift.jollyday.core.spi.IslamicHolidayType;
-import de.focus_shift.jollyday.core.spi.MovingCondition;
-import de.focus_shift.jollyday.core.spi.YearCycle;
 
 public class PojoIslamicHoliday extends DefaultMovingHoliday implements IslamicHoliday {
 

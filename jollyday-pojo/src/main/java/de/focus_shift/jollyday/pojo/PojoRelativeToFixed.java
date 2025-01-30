@@ -9,7 +9,6 @@ import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.Fixed;
 import de.focus_shift.jollyday.core.spi.Relation;
 import de.focus_shift.jollyday.core.spi.RelativeToFixed;
-import de.focus_shift.jollyday.core.spi.YearCycle;
 
 public class PojoRelativeToFixed extends DefaultHoliday implements RelativeToFixed {
 

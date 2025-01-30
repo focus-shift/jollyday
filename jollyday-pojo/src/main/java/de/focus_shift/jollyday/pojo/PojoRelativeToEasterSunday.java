@@ -7,7 +7,6 @@ import org.threeten.extra.Days;
 
 import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.RelativeToEasterSunday;
-import de.focus_shift.jollyday.core.spi.YearCycle;
 
 public class PojoRelativeToEasterSunday extends DefaultHoliday implements RelativeToEasterSunday {
 
