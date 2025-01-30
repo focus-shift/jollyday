@@ -29,7 +29,7 @@ public class RelativeToFixedParser implements HolidayParser {
         if (rf.weekday() != null) {
           // if weekday is set -> move to weekday
           final DayOfWeek day = rf.weekday();
-          final int direction = (rf.when() == Relation.BEFORE ? -1 : 1);
+          final int direction = rf.when() == Relation.BEFORE ? -1 : 1;
           // don't test start day
           fixed = fixed.plusDays(direction);
 

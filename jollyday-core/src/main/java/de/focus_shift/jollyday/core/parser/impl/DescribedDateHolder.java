@@ -6,16 +6,26 @@ import java.time.LocalDate;
 
 class DescribedDateHolder {
 
-  private final LocalDate date;
+  private final LocalDate actualDate;
+  private final LocalDate observedDate;
   private final Described described;
 
-  public DescribedDateHolder(final Described described, final LocalDate date) {
-    this.date = date;
+  DescribedDateHolder(final Described described, final LocalDate actualDate) {
+    this(described, actualDate, null);
+  }
+
+  DescribedDateHolder(final Described described, final LocalDate actualDate, final LocalDate observedDate) {
+    this.actualDate = actualDate;
+    this.observedDate = observedDate;
     this.described = described;
   }
 
-  public LocalDate getDate() {
-    return date;
+  public LocalDate getActualDate() {
+    return actualDate;
+  }
+
+  public LocalDate getObservedDate() {
+    return observedDate;
   }
 
   public Described getDescribed() {

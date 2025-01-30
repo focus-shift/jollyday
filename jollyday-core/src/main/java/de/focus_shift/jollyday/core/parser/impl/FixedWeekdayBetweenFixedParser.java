@@ -29,7 +29,7 @@ public class FixedWeekdayBetweenFixedParser implements HolidayParser {
           ).apply(fwm)
         )
       )
-      .map(holder -> new CreateHoliday(holder.getDate()).apply(holder.getDescribed()))
+      .map(holder -> new CreateHoliday(holder.getActualDate()).apply(holder.getDescribed()))
       .collect(toList());
   }
 }

@@ -9,7 +9,7 @@ import java.util.Set;
 /**
  * Utility class for date operations.
  */
-public class CalendarUtil {
+public final class CalendarUtil {
 
   private CalendarUtil() {
     // ok

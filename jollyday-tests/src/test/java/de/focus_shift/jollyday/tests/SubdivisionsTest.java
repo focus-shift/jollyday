@@ -4,7 +4,6 @@ import com.vitorsvieira.iso.CountrySubdivision;
 import com.vitorsvieira.iso.ISOCountry;
 import com.vitorsvieira.iso.ISOCountrySubdivision;
 import de.focus_shift.jollyday.core.HolidayCalendar;
-import de.focus_shift.jollyday.core.HolidayManager;
 import org.junit.jupiter.api.Test;
 import scala.collection.JavaConverters;
 
@@ -17,7 +16,7 @@ import static de.focus_shift.jollyday.core.ManagerParameters.create;
 import static java.util.stream.Collectors.toList;
 import static org.assertj.core.api.Assertions.assertThat;
 
-class CalendarHierarchyTest {
+class SubdivisionsTest {
 
   private static final List<String> noneIso3166Countries = List.of("DJ_STOXX", "LME", "NYSE", "NYSE_EURONEXT", "TARGET", "XK", "FR", "MC");
   private static final List<String> okSubdivisions = List.of("FI-01", "ES-RI", "IN-DH", "IN-OD", "IN-UK", "IN-CG", "IN-LA", "IN-TS", "SM-03", "SM-04", "SM-05", "SM-06", "SM-08");
@@ -34,8 +33,8 @@ class CalendarHierarchyTest {
           .map(CountrySubdivision.EnumVal::toString)
           .collect(toList());
 
-        final HolidayManager holidayManager = getInstance(create(holidayCalendar));
-        holidayManager.getCalendarHierarchy().getChildren().keySet()
+        getInstance(create(holidayCalendar))
+          .getCalendarHierarchy().getChildren().keySet()
           .forEach(subdivision -> {
             final String subdivisionWithCountry = holidayCalendar.getId() + "-" + subdivision.toUpperCase();
             if (!okSubdivisions.contains(subdivisionWithCountry)) {

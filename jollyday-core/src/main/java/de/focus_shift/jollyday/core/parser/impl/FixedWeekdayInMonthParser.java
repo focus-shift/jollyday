@@ -22,7 +22,7 @@ public class FixedWeekdayInMonthParser implements HolidayParser {
     return holidays.fixedWeekdays().stream()
       .filter(new ValidLimitation(year))
       .map(fwm -> new DescribedDateHolder(fwm, new FindWeekDayInMonth(year).apply(fwm)))
-      .map(holder -> new CreateHoliday(holder.getDate()).apply(holder.getDescribed()))
+      .map(holder -> new CreateHoliday(holder.getActualDate()).apply(holder.getDescribed()))
       .collect(toList());
   }
 }

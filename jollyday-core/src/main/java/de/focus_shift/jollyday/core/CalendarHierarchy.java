@@ -1,10 +1,11 @@
 package de.focus_shift.jollyday.core;
 
-import de.focus_shift.jollyday.core.util.ResourceUtil;
-
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
+
+import static de.focus_shift.jollyday.core.util.ResourceUtil.UNDEFINED;
+import static de.focus_shift.jollyday.core.util.ResourceUtil.getCountryDescription;
 
 /**
  * Bean class for describing the configuration hierarchy.
@@ -45,21 +46,17 @@ public class CalendarHierarchy {
    * @return the description
    */
   public String getDescription() {
-    return getDescription(Locale.getDefault());
+    return receiveFallbackDescription(getCountryDescription(getPropertiesKey()));
   }
 
   /**
    * Returns the hierarchies description text from the resource bundle.
    *
-   * @param l Locale to return the description text for.
+   * @param locale Locale to return the description text for.
    * @return Description text
    */
-  public String getDescription(Locale l) {
-    String descr = ResourceUtil.getCountryDescription(l, getPropertiesKey());
-    if (ResourceUtil.UNDEFINED.equals(descr) && fallbackDescription != null) {
-      descr = fallbackDescription;
-    }
-    return descr;
+  public String getDescription(Locale locale) {
+    return receiveFallbackDescription(getCountryDescription(locale, getPropertiesKey()));
   }
 
   /**
@@ -81,7 +78,7 @@ public class CalendarHierarchy {
    * Compares Hierarchies by id.
    */
   @Override
-  public boolean equals(Object obj) {
+  public boolean equals(final Object obj) {
     if (obj instanceof CalendarHierarchy) {
       return ((CalendarHierarchy) obj).getId().equals(this.getId());
     }
@@ -118,8 +115,14 @@ public class CalendarHierarchy {
   /**
    * @param description the fallback description
    */
-  public void setFallbackDescription(String description) {
+  public void setFallbackDescription(final String description) {
     this.fallbackDescription = description;
   }
 
+  private String receiveFallbackDescription(final String description) {
+    if (UNDEFINED.equals(description) && fallbackDescription != null) {
+      return fallbackDescription;
+    }
+    return description;
+  }
 }
