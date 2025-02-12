@@ -11,7 +11,8 @@
     <Fixed month="MAY" day="8" descriptionPropertiesKey="VICTORY"/>
     <Fixed month="JULY" day="5" descriptionPropertiesKey="CYRUS_METHODIUS"/>
     <Fixed month="AUGUST" day="29" descriptionPropertiesKey="NATIONAL_UPRISING"/>
-    <Fixed month="SEPTEMBER" day="1" descriptionPropertiesKey="CONSTITUTION_DAY" localizedType="OBSERVANCE"/>
+    <Fixed month="SEPTEMBER" day="1" validTo="2024" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+    <Fixed month="SEPTEMBER" day="1" validFrom="2025" descriptionPropertiesKey="CONSTITUTION_DAY" localizedType="OBSERVANCE"/>
     <Fixed month="SEPTEMBER" day="15" descriptionPropertiesKey="VIRGIN_MARY"/>
     <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
     <Fixed month="NOVEMBER" day="17" descriptionPropertiesKey="FREEDOM_DEMOCRACY"/>
