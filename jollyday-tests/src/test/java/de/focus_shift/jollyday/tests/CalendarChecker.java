@@ -14,6 +14,7 @@ import java.time.Month;
 import java.time.Year;
 import java.time.temporal.TemporalAdjusters;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 import java.util.Set;
@@ -188,6 +189,7 @@ public class CalendarChecker implements CalendarCheckerApi.Holiday, CalendarChec
 
             assertThat(holidays)
               .isNotEmpty()
+              .as(() -> "Failure in a holiday for " + holidayManager.getManagerParameter().getDisplayName() + " " + Arrays.toString(check.getSubdivisions()))
               .doesNotContain(new Holiday(date, check.getPropertiesKey(), check.getHolidayType()));
           }
         );
@@ -204,6 +206,7 @@ public class CalendarChecker implements CalendarCheckerApi.Holiday, CalendarChec
 
             assertThat(holidays)
               .isNotEmpty()
+              .as(() -> "Failure in a holiday for " + holidayManager.getManagerParameter().getDisplayName() + " " + Arrays.toString(check.getSubdivisions()))
               .contains(new Holiday(date, check.getPropertiesKey(), check.getHolidayType()));
           }
         );
