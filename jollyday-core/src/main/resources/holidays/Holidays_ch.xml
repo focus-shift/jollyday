@@ -6,6 +6,7 @@
                xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
   <Holidays>
     <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="JANUARY" day="2" descriptionPropertiesKey="ST_BERCHTHOLD" localizedType="BANK_HOLIDAY"/>
     <Fixed month="AUGUST" day="1" descriptionPropertiesKey="NATIONAL_DAY"/>
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
     <ChristianHoliday type="ASCENSION_DAY" descriptionPropertiesKey="christian.ASCENSION_DAY"/>
@@ -15,6 +16,7 @@
   <Sources>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:CH</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:CH</Source>
+    <Source of="ST Berchthold as bank holiday">https://www.six-group.com/de/market-data/news-tools/trading-currency-holiday-calendar.html</Source>
   </Sources>
 
   <SubConfigurations hierarchy="ag" description="Aargau">
