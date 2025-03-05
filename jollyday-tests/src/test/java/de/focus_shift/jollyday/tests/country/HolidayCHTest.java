@@ -54,9 +54,28 @@ class HolidayCHTest {
       .hasFixedHoliday("IMMACULATE_CONCEPTION", DECEMBER, 8).inSubdivision("vs").and()
       .hasChristianHoliday("CORPUS_CHRISTI").inSubdivision("vs").and()
 
-
       /*Aargau*/
+      .hasFixedHoliday("ST_BERCHTHOLD", JANUARY, 2).inSubdivision("ag").and()
+      .hasFixedHoliday("ASSUMPTION_DAY", AUGUST, 15).inSubdivision("ag").and()
+      .hasFixedHoliday("ALL_SAINTS", NOVEMBER, 1).inSubdivision("ag").and()
+      .hasFixedHoliday("IMMACULATE_CONCEPTION", DECEMBER, 8).inSubdivision("ag").and()
+      .hasFixedHoliday("STEPHENS", DECEMBER, 26).inSubdivision("ag").and()
+      .hasChristianHoliday("GOOD_FRIDAY").inSubdivision("ag").and()
+      .hasChristianHoliday("EASTER_MONDAY").inSubdivision("ag").and()
+      .hasChristianHoliday("WHIT_MONDAY").inSubdivision("ag").and()
+      .hasChristianHoliday("CORPUS_CHRISTI").inSubdivision("ag").and()
+
       /*Innerrhoden*/
+      .hasFixedHoliday("ASSUMPTION_DAY", AUGUST, 15, OBSERVANCE).inSubdivision("ai").and()
+      .hasFixedHoliday("MAURITIUS_DAY", SEPTEMBER, 22).inSubdivision("ai").and()
+      .hasFixedHoliday("ALL_SAINTS", NOVEMBER, 1, OBSERVANCE).inSubdivision("ai").and()
+      .hasFixedHoliday("IMMACULATE_CONCEPTION", DECEMBER, 8, OBSERVANCE).inSubdivision("ai").and()
+      .hasFixedHoliday("STEPHENS", DECEMBER, 26).inSubdivision("ai").and()
+      .hasChristianHoliday("GOOD_FRIDAY").inSubdivision("ai").and()
+      .hasChristianHoliday("EASTER_MONDAY", OBSERVANCE).inSubdivision("ai").and()
+      .hasChristianHoliday("WHIT_MONDAY").inSubdivision("ai").and()
+      .hasChristianHoliday("CORPUS_CHRISTI").inSubdivision("ai").and()
+
       /*Ausserrhoden*/
       .hasFixedHoliday("STEPHENS", DECEMBER, 26).inSubdivision("ar").and()
       .hasChristianHoliday("GOOD_FRIDAY").inSubdivision("ar").and()
@@ -126,6 +145,15 @@ class HolidayCHTest {
       .hasChristianHoliday("CORPUS_CHRISTI").inSubdivision("ju").and()
 
       /*Luzern*/
+      .hasFixedHoliday("ST_JOSEPH", MARCH, 19, OBSERVANCE).inSubdivision("lu").and()
+      .hasFixedHoliday("ASSUMPTION_DAY", AUGUST, 15).inSubdivision("lu").and()
+      .hasFixedHoliday("ALL_SAINTS", NOVEMBER, 1).inSubdivision("lu").and()
+      .hasFixedHoliday("IMMACULATE_CONCEPTION", DECEMBER, 8).inSubdivision("lu").and()
+      .hasFixedHoliday("STEPHENS", DECEMBER, 26).inSubdivision("lu").and()
+      .hasChristianHoliday("GOOD_FRIDAY").inSubdivision("lu").and()
+      .hasChristianHoliday("EASTER_MONDAY", OBSERVANCE).inSubdivision("lu").and()
+      .hasChristianHoliday("CORPUS_CHRISTI").inSubdivision("lu").and()
+
       /*Neuchâtel*/
       .hasFixedHoliday("REPUBLIC_DAY", MARCH, 1).inSubdivision("ne").and()
       .hasFixedHoliday("LABOUR_DAY", MAY, 1).inSubdivision("ne").and()
@@ -169,7 +197,24 @@ class HolidayCHTest {
       .hasChristianHoliday("WHIT_MONDAY").inSubdivision("sh").and()
 
       /*Solothurn*/
+      .hasFixedHoliday("LABOUR_DAY", MAY, 1).inSubdivision("so").and()
+      .hasFixedHoliday("ASSUMPTION_DAY", AUGUST, 15).inSubdivision("so").and()
+      .hasFixedHoliday("ALL_SAINTS", NOVEMBER, 1).inSubdivision("so").and()
+      .hasFixedHoliday("IMMACULATE_CONCEPTION", DECEMBER, 8).inSubdivision("so").and()
+      .hasChristianHoliday("GOOD_FRIDAY").inSubdivision("so").and()
+      .hasChristianHoliday("CORPUS_CHRISTI").inSubdivision("so").and()
+
       /*Schwyz*/
+      .hasFixedHoliday("EPIPHANY", JANUARY, 6, OBSERVANCE).inSubdivision("sz").and()
+      .hasFixedHoliday("ST_JOSEPH", MARCH, 19).inSubdivision("sz").and()
+      .hasFixedHoliday("ASSUMPTION_DAY", AUGUST, 15).inSubdivision("sz").and()
+      .hasFixedHoliday("ALL_SAINTS", NOVEMBER, 1).inSubdivision("sz").and()
+      .hasFixedHoliday("IMMACULATE_CONCEPTION", DECEMBER, 8).inSubdivision("sz").and()
+      .hasFixedHoliday("STEPHENS", DECEMBER, 26).inSubdivision("sz").and()
+      .hasChristianHoliday("GOOD_FRIDAY").inSubdivision("sz").and()
+      .hasChristianHoliday("EASTER_MONDAY", OBSERVANCE).inSubdivision("sz").and()
+      .hasChristianHoliday("WHIT_MONDAY", OBSERVANCE).inSubdivision("sz").and()
+      .hasChristianHoliday("CORPUS_CHRISTI").inSubdivision("sz").and()
 
       /*Thurgau*/
       .hasFixedHoliday("ST_BERCHTHOLD", JANUARY, 2).inSubdivision("tg").and()
@@ -210,6 +255,11 @@ class HolidayCHTest {
       .hasChristianHoliday("WHIT_MONDAY").inSubdivision("vd").and()
 
       /*Valais*/
+      .hasFixedHoliday("ST_JOSEPH", MARCH, 19).inSubdivision("vs").and()
+      .hasFixedHoliday("ASSUMPTION_DAY", AUGUST, 15).inSubdivision("vs").and()
+      .hasFixedHoliday("ALL_SAINTS", NOVEMBER, 1).inSubdivision("vs").and()
+      .hasFixedHoliday("IMMACULATE_CONCEPTION", DECEMBER, 8).inSubdivision("vs").and()
+      .hasChristianHoliday("CORPUS_CHRISTI").inSubdivision("vs").and()
 
       /*Zug*/
       .hasFixedHoliday("ASSUMPTION_DAY", AUGUST, 15).inSubdivision("zg").and()
