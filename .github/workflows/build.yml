@@ -17,7 +17,7 @@ jobs:
     name: Build
     strategy:
       matrix:
-        java: [ '11', '17', '21', '22', '23' ]
+        java: [ '11', '17', '21', '24' ]
         os: [ 'ubuntu-24.04', 'macos-14', 'windows-2022' ]
     runs-on: ${{ matrix.os }}
     steps:
