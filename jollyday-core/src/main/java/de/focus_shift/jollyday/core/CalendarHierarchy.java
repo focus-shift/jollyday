@@ -3,6 +3,8 @@ package de.focus_shift.jollyday.core;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
+import java.util.Objects;
+import java.util.StringJoiner;
 
 import static de.focus_shift.jollyday.core.util.ResourceUtil.UNDEFINED;
 import static de.focus_shift.jollyday.core.util.ResourceUtil.getCountryDescription;
@@ -10,23 +12,24 @@ import static de.focus_shift.jollyday.core.util.ResourceUtil.getCountryDescripti
 /**
  * Bean class for describing the configuration hierarchy.
  */
-public class CalendarHierarchy {
+public final class CalendarHierarchy {
 
   private final String id;
-  private Map<String, CalendarHierarchy> children = new HashMap<>();
   private final CalendarHierarchy parent;
-  private String fallbackDescription;
+  private final String fallbackDescription;
+  private final Map<String, CalendarHierarchy> children = new HashMap<>();
 
   /**
    * Constructor which takes a eventually existing parent hierarchy node and
    * the ID of this hierarchy.
    *
+   * @param id     a {@link String} object.
    * @param parent a {@link CalendarHierarchy} object.
-   * @param id     a {@link java.lang.String} object.
    */
-  public CalendarHierarchy(final CalendarHierarchy parent, final String id) {
-    this.parent = parent;
+  public CalendarHierarchy(final String id, final String fallbackDescription, final CalendarHierarchy parent) {
     this.id = id;
+    this.parent = parent;
+    this.fallbackDescription = fallbackDescription;
   }
 
   /**
@@ -60,48 +63,6 @@ public class CalendarHierarchy {
   }
 
   /**
-   * Recursively returns the properties key to retrieve the description from
-   * the localized resource bundle.
-   *
-   * @return
-   */
-  private String getPropertiesKey() {
-    if (parent != null) {
-      return parent.getPropertiesKey() + "." + getId();
-    }
-    return getId();
-  }
-
-  /**
-   * {@inheritDoc}
-   * <p>
-   * Compares Hierarchies by id.
-   */
-  @Override
-  public boolean equals(final Object obj) {
-    if (obj instanceof CalendarHierarchy) {
-      return ((CalendarHierarchy) obj).getId().equals(this.getId());
-    }
-    return super.equals(obj);
-  }
-
-  @Override
-  public int hashCode() {
-    return getId().hashCode();
-  }
-
-  /**
-   * <p>
-   * Setter for the field <code>children</code>.
-   * </p>
-   *
-   * @param children the children to set
-   */
-  public void setChildren(final Map<String, CalendarHierarchy> children) {
-    this.children = children;
-  }
-
-  /**
    * <p>
    * Getter for the field <code>children</code>.
    * </p>
@@ -112,11 +73,40 @@ public class CalendarHierarchy {
     return children;
   }
 
+  @Override
+  public boolean equals(Object obj) {
+    if (!(obj instanceof CalendarHierarchy)) {
+      return false;
+    }
+
+    final CalendarHierarchy that = (CalendarHierarchy) obj;
+    return Objects.equals(id, that.id);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hashCode(id);
+  }
+
+  @Override
+  public String toString() {
+    return new StringJoiner(", ", CalendarHierarchy.class.getSimpleName() + "[", "]")
+      .add("id='" + id + "'")
+      .add("parentId='" + (parent != null ? parent.getId() : "") + "'")
+      .add("description='" + getDescription() + "'")
+      .add("children=" + children)
+      .toString();
+  }
+
   /**
-   * @param description the fallback description
+   * Recursively returns the properties key to retrieve the description from
+   * the localized resource bundle.
    */
-  public void setFallbackDescription(final String description) {
-    this.fallbackDescription = description;
+  private String getPropertiesKey() {
+    if (parent != null) {
+      return parent.getPropertiesKey() + "." + getId();
+    }
+    return getId();
   }
 
   private String receiveFallbackDescription(final String description) {
