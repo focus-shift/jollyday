@@ -23,58 +23,65 @@
     <ChristianHoliday type="CORPUS_CHRISTI" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
   </Holidays>
 
+  <Sources>
+    <Source>https://www.wien.gv.at/amtshelfer/feiertage/</Source>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Austria</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:AT</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:AT</Source>
+  </Sources>
+
   <SubConfigurations hierarchy="1" description="Burgenland">
     <Holidays>
-      <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="MARTINS_DAY"/>
+      <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="MARTINS_DAY" localizedType="OBSERVANCE"/>
     </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="2" description="Kärnten">
     <Holidays>
-      <Fixed month="MARCH" day="19" descriptionPropertiesKey="JOSEFS_DAY"/>
-      <Fixed month="OCTOBER" day="10" descriptionPropertiesKey="PLEBISCITE"/>
+      <Fixed month="MARCH" day="19" descriptionPropertiesKey="JOSEFS_DAY" localizedType="OBSERVANCE"/>
+      <Fixed month="OCTOBER" day="10" descriptionPropertiesKey="PLEBISCITE" localizedType="OBSERVANCE"/>
     </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="3" description="Niederösterreich">
     <Holidays>
-      <Fixed month="NOVEMBER" day="15" descriptionPropertiesKey="LEOPOLD"/>
+      <Fixed month="NOVEMBER" day="15" descriptionPropertiesKey="LEOPOLD" localizedType="OBSERVANCE"/>
     </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="4" description="Oberösterreich">
     <Holidays>
-      <Fixed month="MAY" day="4" descriptionPropertiesKey="FLORIAN"/>
+      <Fixed month="MAY" day="4" descriptionPropertiesKey="FLORIAN" validFrom="2004" localizedType="OBSERVANCE"/>
     </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="5" description="Salzburg">
     <Holidays>
-      <Fixed month="SEPTEMBER" day="24" descriptionPropertiesKey="RUPERT"/>
+      <Fixed month="SEPTEMBER" day="24" descriptionPropertiesKey="RUPERT" localizedType="OBSERVANCE"/>
     </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="6" description="Steiermark">
     <Holidays>
-      <Fixed month="MARCH" day="19" descriptionPropertiesKey="JOSEFS_DAY"/>
+      <Fixed month="MARCH" day="19" descriptionPropertiesKey="JOSEFS_DAY" localizedType="OBSERVANCE"/>
     </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="7" description="Tirol">
     <Holidays>
-      <Fixed month="MARCH" day="19" descriptionPropertiesKey="JOSEFS_DAY"/>
+      <Fixed month="MARCH" day="19" descriptionPropertiesKey="JOSEFS_DAY" localizedType="OBSERVANCE"/>
     </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="8" description="Vorarlberg">
     <Holidays>
-      <Fixed month="MARCH" day="19" descriptionPropertiesKey="JOSEFS_DAY"/>
+      <Fixed month="MARCH" day="19" descriptionPropertiesKey="JOSEFS_DAY" localizedType="OBSERVANCE"/>
     </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="9" description="Wien">
     <Holidays>
-      <Fixed month="NOVEMBER" day="15" descriptionPropertiesKey="LEOPOLD"/>
+      <Fixed month="NOVEMBER" day="15" descriptionPropertiesKey="LEOPOLD" localizedType="OBSERVANCE"/>
     </Holidays>
   </SubConfigurations>
 </Configuration>
