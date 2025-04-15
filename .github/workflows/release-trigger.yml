@@ -33,7 +33,7 @@ jobs:
           java-version: 11
           cache: 'maven'
       - name: Build
-        run: ./mvnw clean verify
+        run: ./mvnw verify
       - name: Create Release Notes
         uses: docker://decathlon/release-notes-generator-action:3.1.5
         env:

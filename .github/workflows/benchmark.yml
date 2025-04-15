@@ -26,4 +26,4 @@ jobs:
           java-version: '11'
           cache: 'maven'
       - name: Build
-        run: ./mvnw clean verify -Dtests.groups=BenchmarkTest
+        run: ./mvnw verify -Dtests.groups=BenchmarkTest
