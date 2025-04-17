@@ -1,6 +1,4 @@
 changelog:
-  repository: focus-shift/jollyday
-  milestone-reference: id
   sections:
     - title: "⚠️ Security Issues"
       labels: [ "type: security" ]
