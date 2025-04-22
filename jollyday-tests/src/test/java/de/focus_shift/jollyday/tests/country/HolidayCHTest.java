@@ -58,8 +58,8 @@ class HolidayCHTest {
       .hasFixedHoliday("ST_BERCHTHOLD", JANUARY, 2).inSubdivision("ag").and()
       .hasFixedHoliday("ASSUMPTION_DAY", AUGUST, 15).inSubdivision("ag").and()
       .hasFixedHoliday("ALL_SAINTS", NOVEMBER, 1).inSubdivision("ag").and()
-      .hasFixedHoliday("IMMACULATE_CONCEPTION", DECEMBER, 8).inSubdivision("ag").and()
       .hasFixedHoliday("STEPHENS", DECEMBER, 26).inSubdivision("ag").and()
+      .hasFixedHoliday("IMMACULATE_CONCEPTION", DECEMBER, 8).inSubdivision("ag").and()
       .hasChristianHoliday("GOOD_FRIDAY").inSubdivision("ag").and()
       .hasChristianHoliday("EASTER_MONDAY").inSubdivision("ag").and()
       .hasChristianHoliday("WHIT_MONDAY").inSubdivision("ag").and()
@@ -72,7 +72,7 @@ class HolidayCHTest {
       .hasFixedHoliday("IMMACULATE_CONCEPTION", DECEMBER, 8, OBSERVANCE).inSubdivision("ai").and()
       .hasFixedHoliday("STEPHENS", DECEMBER, 26).inSubdivision("ai").and()
       .hasChristianHoliday("GOOD_FRIDAY").inSubdivision("ai").and()
-      .hasChristianHoliday("EASTER_MONDAY", OBSERVANCE).inSubdivision("ai").and()
+      .hasChristianHoliday("EASTER_MONDAY").inSubdivision("ai").and()
       .hasChristianHoliday("WHIT_MONDAY").inSubdivision("ai").and()
       .hasChristianHoliday("CORPUS_CHRISTI").inSubdivision("ai").and()
 
@@ -212,7 +212,7 @@ class HolidayCHTest {
       .hasFixedHoliday("IMMACULATE_CONCEPTION", DECEMBER, 8).inSubdivision("sz").and()
       .hasFixedHoliday("STEPHENS", DECEMBER, 26).inSubdivision("sz").and()
       .hasChristianHoliday("GOOD_FRIDAY").inSubdivision("sz").and()
-      .hasChristianHoliday("EASTER_MONDAY", OBSERVANCE).inSubdivision("sz").and()
+      .hasChristianHoliday("EASTER_MONDAY").inSubdivision("sz").and()
       .hasChristianHoliday("WHIT_MONDAY", OBSERVANCE).inSubdivision("sz").and()
       .hasChristianHoliday("CORPUS_CHRISTI").inSubdivision("sz").and()
 
@@ -244,7 +244,7 @@ class HolidayCHTest {
       .hasFixedHoliday("IMMACULATE_CONCEPTION", DECEMBER, 8).inSubdivision("ur").and()
       .hasFixedHoliday("STEPHENS", DECEMBER, 26).inSubdivision("ur").and()
       .hasChristianHoliday("GOOD_FRIDAY").inSubdivision("ur").and()
-      .hasChristianHoliday("EASTER_MONDAY", OBSERVANCE).inSubdivision("ur").and()
+      .hasChristianHoliday("EASTER_MONDAY").inSubdivision("ur").and()
       .hasChristianHoliday("WHIT_MONDAY", OBSERVANCE).inSubdivision("ur").and()
       .hasChristianHoliday("CORPUS_CHRISTI").inSubdivision("ur").and()
 
