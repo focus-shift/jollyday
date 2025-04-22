@@ -12,6 +12,7 @@ import java.time.Year;
 import java.util.Set;
 
 import static de.focus_shift.jollyday.core.HolidayCalendar.NETHERLANDS;
+import static de.focus_shift.jollyday.core.HolidayType.OBSERVANCE;
 import static de.focus_shift.jollyday.core.HolidayType.PUBLIC_HOLIDAY;
 import static de.focus_shift.jollyday.core.ManagerParameters.create;
 import static de.focus_shift.jollyday.tests.CalendarCheckerApi.assertFor;
@@ -57,7 +58,7 @@ class HolidayNLTest {
       .and()
       .hasFixedHoliday("FIRST_CHRISTMAS_DAY", DECEMBER, 25).and()
       .hasFixedHoliday("SECOND_CHRISTMAS_DAY", DECEMBER, 26).and()
-      .hasChristianHoliday("GOOD_FRIDAY").and()
+      .hasChristianHoliday("GOOD_FRIDAY", OBSERVANCE).and()
       .hasChristianHoliday("EASTER").and()
       .hasChristianHoliday("EASTER_MONDAY").and()
       .hasChristianHoliday("ASCENSION_DAY").and()
