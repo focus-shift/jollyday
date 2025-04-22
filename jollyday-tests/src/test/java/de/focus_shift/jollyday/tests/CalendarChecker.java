@@ -256,7 +256,7 @@ public class CalendarChecker implements CalendarCheckerApi.Holiday, CalendarChec
               .isNotEmpty()
               .filteredOn(holiday -> holiday.getPropertiesKey().equals(check.getPropertiesKey()))
               .extracting(Holiday::getType)
-              .withFailMessage("Holiday '" + check.getPropertiesKey() + "' with holiday type '" + check.holidayType + "' in year '" + year + "' not found.")
+              .withFailMessage("Holiday '" + check.getPropertiesKey() + "' with holiday type '" + check.holidayType + "' in year '" + year + "' and in subdivision '" + Arrays.toString(check.getSubdivisions()) +  "' not found.")
               .contains(check.getHolidayType());
           }
         );
