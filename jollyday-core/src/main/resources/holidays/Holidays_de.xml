@@ -124,8 +124,11 @@
         <Date month="NOVEMBER" day="23"/>
       </RelativeToFixed>
       <ChristianHoliday type="CORPUS_CHRISTI" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
-      <ChristianHoliday type="PENTECOST" descriptionPropertiesKey="christian.PENTECOST"/>
     </Holidays>
+
+    <Sources>
+      <Source of="pentecost">https://innen.hessen.de/buerger-staat/feiertage</Source>
+    </Sources>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="mv" description="Mecklenburg-Vorpommern">
@@ -161,8 +164,8 @@
 
   <SubConfigurations hierarchy="sl" description="Saarland">
     <Holidays>
-      <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
       <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
+      <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
       <RelativeToFixed validFrom="1945" validTo="1989" descriptionPropertiesKey="REPENTANCE_PRAYER">
         <Weekday>WEDNESDAY</Weekday>
         <When>BEFORE</When>
@@ -185,8 +188,8 @@
 
   <SubConfigurations hierarchy="st" description="Saxony-Anhalt">
     <Holidays>
-      <Fixed month="OCTOBER" day="31" descriptionPropertiesKey="REFORMATION_DAY"/>
       <Fixed month="JANUARY" day="6" descriptionPropertiesKey="EPIPHANY"/>
+      <Fixed month="OCTOBER" day="31" descriptionPropertiesKey="REFORMATION_DAY"/>
     </Holidays>
   </SubConfigurations>
 
