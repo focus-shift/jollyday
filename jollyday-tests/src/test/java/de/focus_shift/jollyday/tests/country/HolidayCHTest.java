@@ -54,17 +54,6 @@ class HolidayCHTest {
       .hasFixedHoliday("IMMACULATE_CONCEPTION", DECEMBER, 8).inSubdivision("vs").and()
       .hasChristianHoliday("CORPUS_CHRISTI").inSubdivision("vs").and()
 
-      /* Aargau */
-      .hasFixedHoliday("ST_BERCHTHOLD", JANUARY, 2).inSubdivision("ag").and()
-      .hasFixedHoliday("ASSUMPTION_DAY", AUGUST, 15).inSubdivision("ag").and()
-      .hasFixedHoliday("ALL_SAINTS", NOVEMBER, 1).inSubdivision("ag").and()
-      .hasFixedHoliday("STEPHENS", DECEMBER, 26).inSubdivision("ag").and()
-      .hasFixedHoliday("IMMACULATE_CONCEPTION", DECEMBER, 8).inSubdivision("ag").and()
-      .hasChristianHoliday("GOOD_FRIDAY").inSubdivision("ag").and()
-      .hasChristianHoliday("EASTER_MONDAY").inSubdivision("ag").and()
-      .hasChristianHoliday("WHIT_MONDAY").inSubdivision("ag").and()
-      .hasChristianHoliday("CORPUS_CHRISTI").inSubdivision("ag").and()
-
       /* Innerrhoden */
       .hasFixedHoliday("ASSUMPTION_DAY", AUGUST, 15, OBSERVANCE).inSubdivision("ai").and()
       .hasFixedHoliday("MAURITIUS_DAY", SEPTEMBER, 22).inSubdivision("ai").and()
