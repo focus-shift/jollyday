@@ -19,11 +19,11 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      - name: JDK
+      - name: Set up JDK from .tool-versions
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: '11'
+          java-version-file: ".tool-versions"
           cache: 'maven'
       - name: Build
         run: ./mvnw verify -Dtests.groups=BenchmarkTest
