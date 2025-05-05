@@ -26,14 +26,17 @@ jobs:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
-      - name: Set up JDK 11
+
+      - name: Set up JDK from .tool-versions
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: 11
+          java-version-file: ".tool-versions"
           cache: 'maven'
+
       - name: Build
         run: ./mvnw verify
+
       - name: Create Release Notes
         uses: spring-io/github-changelog-generator@v0.0.12
         with:
@@ -52,10 +55,12 @@ jobs:
         with:
           github_token: ${{ secrets.AM_PAT }}
           branch: ${{ github.ref }}
+
       - name: Set release version
         run: ./mvnw versions:set -DnewVersion=${{ github.event.inputs.releaseVersion }}
       - name: Commit release version
         run: git add ./\*pom.xml && git commit -m "New Release Version ${{ github.event.inputs.releaseVersion }}"
+
       - name: Add release tag
         run: git tag -a -m "v${{ github.event.inputs.releaseVersion }}" v${{ github.event.inputs.releaseVersion }}
       - name: Push release version
@@ -63,6 +68,7 @@ jobs:
         with:
           github_token: ${{ secrets.AM_PAT }}
           branch: ${{ github.ref }}
+
       - name: Set new snapshot version
         run: ./mvnw versions:set -DnewVersion=${{ github.event.inputs.nextVersion }}
       - name: Commit new snapshot version
