@@ -205,14 +205,10 @@ public class CalendarChecker implements CalendarCheckerApi.Holiday, CalendarChec
         .between(invalidRange.getFrom().getValue(), invalidRange.getTo().getValue())
         .forEachValue(year -> {
             final Set<Holiday> holidays = holidayManager.getHolidays(year, check.getSubdivisions());
-
-            LocalDate date = LocalDate.of(year.getValue(), check.getMonth(), check.getDay());
-            date = shiftLocalDate(check, date);
-
-            assertThat(holidays)
-              .isNotEmpty()
-              .as(() -> "Failure in a holiday for " + holidayManager.getManagerParameter().getDisplayName() + " " + Arrays.toString(check.getSubdivisions()))
-              .doesNotContain(new Holiday(date, check.getPropertiesKey(), check.getHolidayType()));
+            final LocalDate dateToCheck = LocalDate.of(year.getValue(), check.getMonth(), check.getDay());
+            final LocalDate shiftLocalDate = shiftLocalDate(check, dateToCheck);
+            final Holiday holiday = new Holiday(shiftLocalDate, check.getPropertiesKey(), check.getHolidayType());
+            assertHolidayNotPresent(holidays, holiday, holidayManager, check.getSubdivisions());
           }
         );
     }
@@ -222,24 +218,42 @@ public class CalendarChecker implements CalendarCheckerApi.Holiday, CalendarChec
         .between(validRange.getFrom().getValue(), validRange.getTo().getValue())
         .forEachValue(year -> {
             final Set<Holiday> holidays = holidayManager.getHolidays(year, check.getSubdivisions());
-
-            LocalDate date = LocalDate.of(year.getValue(), check.getMonth(), check.getDay());
-            date = shiftLocalDate(check, date);
-
-            assertThat(holidays)
-              .isNotEmpty()
-              .as(() -> "Failure in a holiday for " + holidayManager.getManagerParameter().getDisplayName() + " " + Arrays.toString(check.getSubdivisions()))
-              .contains(new Holiday(date, check.getPropertiesKey(), check.getHolidayType()));
+            final LocalDate dateToCheck = LocalDate.of(year.getValue(), check.getMonth(), check.getDay());
+            final LocalDate shiftLocalDate = shiftLocalDate(check, dateToCheck);
+            Holiday holiday = new Holiday(shiftLocalDate, check.getPropertiesKey(), check.getHolidayType());
+            assertHolidayPresent(holidays, holiday, holidayManager, check.getSubdivisions());
           }
         );
     }
   }
 
-  private static LocalDate shiftLocalDate(final HolidayCalendarCheck check, LocalDate date) {
+  private void assertHolidayNotPresent(Set<Holiday> holidays, Holiday holiday, HolidayManager holidayManager, String[] subdivisions) {
+    assertThat(holidays)
+      .isNotEmpty()
+      .as(() -> buildAssertionMessage(holidayManager, subdivisions))
+      .doesNotContain(holiday);
+  }
 
-    if (!check.validShifts.isEmpty()) {
+  private void assertHolidayPresent(Set<Holiday> holidays, Holiday holiday, HolidayManager holidayManager, String[] subdivisions) {
+    assertThat(holidays)
+      .isNotEmpty()
+      .as(() -> buildAssertionMessage(holidayManager, subdivisions))
+      .contains(holiday);
+  }
+
+  private String buildAssertionMessage(HolidayManager holidayManager, String[] subdivisions) {
+    final String displayName = holidayManager != null && holidayManager.getManagerParameter() != null ? holidayManager.getManagerParameter().getDisplayName() : "UnknownManager";
+    final String subdivisionsStr = subdivisions != null ? Arrays.toString(subdivisions) : "[]";
+    return "Failure in a holiday for " + displayName + " " + subdivisionsStr;
+  }
+
+  private static LocalDate shiftLocalDate(final HolidayCalendarCheck check, LocalDate date) {
+    if (check == null || date == null) {
+      return date;
+    }
+    if (check.validShifts != null && !check.validShifts.isEmpty()) {
       for (WeekDayFromTo shift : check.validShifts) {
-        if (date.getDayOfWeek().equals(shift.getFrom())) {
+        if (shift != null && date.getDayOfWeek().equals(shift.getFrom())) {
           if (shift.adjuster == Adjuster.NEXT) {
             date = date.with(TemporalAdjusters.nextOrSame(shift.getTo()));
           } else {
@@ -278,7 +292,7 @@ public class CalendarChecker implements CalendarCheckerApi.Holiday, CalendarChec
               .isNotEmpty()
               .filteredOn(holiday -> holiday.getPropertiesKey().equals(check.getPropertiesKey()))
               .extracting(Holiday::getType)
-              .withFailMessage("Holiday '" + check.getPropertiesKey() + "' with holiday type '" + check.holidayType + "' in year '" + year + "' and in subdivision '" + Arrays.toString(check.getSubdivisions()) +  "' not found.")
+              .withFailMessage("Holiday '" + check.getPropertiesKey() + "' with holiday type '" + check.holidayType + "' in year '" + year + "' and in subdivision '" + Arrays.toString(check.getSubdivisions()) + "' not found.")
               .contains(check.getHolidayType());
           }
         );
@@ -316,10 +330,11 @@ public class CalendarChecker implements CalendarCheckerApi.Holiday, CalendarChec
     private final String[] subdivisions;
     private final Category category;
 
-    private HolidayCalendarCheck(HolidayCalendar calendar,
-                                 String propertiesKey, Month month, int day, HolidayType holidayType,
-                                 List<YearRange> validRanges, List<YearRange> invalidRanges,
-                                 List<WeekDayFromTo> validShifts, String[] subdivisions, Category category
+    private HolidayCalendarCheck(
+      HolidayCalendar calendar,
+      String propertiesKey, Month month, int day, HolidayType holidayType,
+      List<YearRange> validRanges, List<YearRange> invalidRanges,
+      List<WeekDayFromTo> validShifts, String[] subdivisions, Category category
     ) {
       this.calendar = calendar;
       this.propertiesKey = propertiesKey;
