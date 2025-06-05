@@ -7,6 +7,7 @@ import de.focus_shift.jollyday.jaxb.mapping.Fixed;
 import de.focus_shift.jollyday.jaxb.mapping.HolidayCycleType;
 import de.focus_shift.jollyday.jaxb.mapping.Month;
 import de.focus_shift.jollyday.jaxb.mapping.RelativeToFixed;
+import de.focus_shift.jollyday.jaxb.mapping.Weekday;
 import de.focus_shift.jollyday.jaxb.mapping.When;
 import org.junit.jupiter.api.Test;
 import org.threeten.extra.Days;
@@ -14,6 +15,7 @@ import org.threeten.extra.Days;
 import java.time.MonthDay;
 import java.time.Year;
 
+import static java.time.DayOfWeek.MONDAY;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class JaxbRelativeToFixedTest {
@@ -27,6 +29,7 @@ class JaxbRelativeToFixedTest {
         final RelativeToFixed relativeToFixed = new RelativeToFixed();
         relativeToFixed.setDate(fixed);
         relativeToFixed.setDays(3);
+        relativeToFixed.setWeekday(Weekday.MONDAY);
         relativeToFixed.setWhen(When.AFTER);
         relativeToFixed.setEvery(HolidayCycleType.ODD_YEARS);
         relativeToFixed.setDescriptionPropertiesKey("relative.fixed.description");
@@ -37,6 +40,7 @@ class JaxbRelativeToFixedTest {
         final JaxbRelativeToFixed jaxbRelativeToFixed = new JaxbRelativeToFixed(relativeToFixed);
         assertThat(jaxbRelativeToFixed.date().day()).isEqualTo(MonthDay.of(java.time.Month.JANUARY, 1));
         assertThat(jaxbRelativeToFixed.days()).isEqualTo(Days.of(3));
+        assertThat(jaxbRelativeToFixed.weekday()).isEqualTo(MONDAY);
         assertThat(jaxbRelativeToFixed.when()).isEqualTo(Relation.AFTER);
         assertThat(jaxbRelativeToFixed.cycle()).isEqualTo(YearCycle.ODD_YEARS);
         assertThat(jaxbRelativeToFixed.descriptionPropertiesKey()).isEqualTo("relative.fixed.description");
