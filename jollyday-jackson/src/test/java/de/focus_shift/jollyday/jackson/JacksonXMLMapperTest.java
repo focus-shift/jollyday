@@ -1,6 +1,5 @@
-package de.focus_shift.jollyday.jackson.test;
+package de.focus_shift.jollyday.jackson;
 
-import de.focus_shift.jollyday.jackson.JacksonXMLMapper;
 import de.focus_shift.jollyday.jackson.mapping.Configuration;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;

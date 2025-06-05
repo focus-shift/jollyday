@@ -1,6 +1,5 @@
-package de.focus_shift.jollyday.jaxb.test;
+package de.focus_shift.jollyday.jaxb;
 
-import de.focus_shift.jollyday.jaxb.JaxbXMLMapper;
 import de.focus_shift.jollyday.jaxb.mapping.Configuration;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
