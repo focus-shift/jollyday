@@ -36,6 +36,7 @@ class HolidayATTest {
       .hasChristianHoliday("EASTER").and()
       .hasChristianHoliday("EASTER_MONDAY").and()
       .hasChristianHoliday("ASCENSION_DAY").and()
+      .hasChristianHoliday("PENTECOST").and()
       .hasChristianHoliday("WHIT_MONDAY").and()
       .hasChristianHoliday("CORPUS_CHRISTI").and()
       .hasFixedHoliday("MARTINS_DAY", NOVEMBER, 11, OBSERVANCE).inSubdivision("1").and()
