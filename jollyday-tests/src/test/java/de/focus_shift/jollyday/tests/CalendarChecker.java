@@ -131,13 +131,13 @@ public class CalendarChecker implements CalendarCheckerApi.Holiday, CalendarChec
   }
 
   @Override
-  public CalendarCheckerApi.Properties canBeenShiftedFrom(DayOfWeek from, DayOfWeek to) {
+  public CalendarCheckerApi.Properties canBeShiftedFrom(DayOfWeek from, DayOfWeek to) {
     this.validShifts.add(new WeekDayFromTo(from, to, Adjuster.NEXT));
     return this;
   }
 
   @Override
-  public CalendarCheckerApi.Properties canBeenShiftedFrom(DayOfWeek from, Adjuster adjuster, DayOfWeek to) {
+  public CalendarCheckerApi.Properties canBeShiftedFrom(DayOfWeek from, Adjuster adjuster, DayOfWeek to) {
     this.validShifts.add(new WeekDayFromTo(from, to, adjuster));
     return this;
   }
