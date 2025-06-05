@@ -37,4 +37,7 @@ public abstract class MoveableHoliday extends Holiday {
     return this.movingCondition;
   }
 
+  public void setMovingCondition(List<MovingCondition> movingCondition) {
+    this.movingCondition = movingCondition;
+  }
 }
