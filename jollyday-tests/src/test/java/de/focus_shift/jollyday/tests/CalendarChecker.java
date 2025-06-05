@@ -153,7 +153,7 @@ public class CalendarChecker implements CalendarCheckerApi.Holiday, CalendarChec
       new ArrayList<>(this.validRanges),
       new ArrayList<>(this.invalidRanges),
       new ArrayList<>(this.validShifts),
-      this.subdivisions,
+      this.subdivisions.clone(),
       this.category
     ));
 
@@ -173,7 +173,7 @@ public class CalendarChecker implements CalendarCheckerApi.Holiday, CalendarChec
       new ArrayList<>(validRanges),
       new ArrayList<>(invalidRanges),
       new ArrayList<>(validShifts),
-      subdivisions,
+      this.subdivisions.clone(),
       category
     ));
 
