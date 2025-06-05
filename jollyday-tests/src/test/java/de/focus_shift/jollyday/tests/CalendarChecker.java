@@ -144,7 +144,18 @@ public class CalendarChecker implements CalendarCheckerApi.Holiday, CalendarChec
 
   @Override
   public CalendarCheckerApi.Holiday and() {
-    checks.add(new HolidayCalendarCheck(this.calendar, this.propertyKey, this.month, this.day, this.type, this.validRanges, this.invalidRanges, this.validShifts, this.subdivisions, this.category));
+    checks.add(new HolidayCalendarCheck(
+      this.calendar,
+      this.propertyKey,
+      this.month,
+      this.day,
+      this.type,
+      new ArrayList<>(this.validRanges),
+      new ArrayList<>(this.invalidRanges),
+      new ArrayList<>(this.validShifts),
+      this.subdivisions,
+      this.category
+    ));
 
     clearProperties();
 
@@ -153,7 +164,18 @@ public class CalendarChecker implements CalendarCheckerApi.Holiday, CalendarChec
 
   @Override
   public void check() {
-    checks.add(new HolidayCalendarCheck(calendar, propertyKey, month, day, type, validRanges, invalidRanges, validShifts, subdivisions, category));
+    checks.add(new HolidayCalendarCheck(
+      calendar,
+      propertyKey,
+      month,
+      day,
+      type,
+      new ArrayList<>(validRanges),
+      new ArrayList<>(invalidRanges),
+      new ArrayList<>(validShifts),
+      subdivisions,
+      category
+    ));
 
     clearProperties();
 
