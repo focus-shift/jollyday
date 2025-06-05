@@ -6,7 +6,6 @@ import java.time.DayOfWeek;
 
 /**
  * Represents the configuration of a holiday that is in relation to a {@link Fixed} date.
- * <p>
  * <ul>
  *   <li>If only weekday is set it will use the weekday.</li>
  *   <li>If only days is set is not set it will use days.</li>
