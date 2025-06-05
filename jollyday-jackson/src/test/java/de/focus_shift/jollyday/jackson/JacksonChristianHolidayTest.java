@@ -1,69 +1,69 @@
 package de.focus_shift.jollyday.jackson;
 
-import de.focus_shift.jollyday.core.spi.Limited;
-import de.focus_shift.jollyday.core.spi.Relation;
-import de.focus_shift.jollyday.jackson.mapping.Fixed;
+import de.focus_shift.jollyday.core.HolidayType;
+import de.focus_shift.jollyday.core.spi.ChristianHoliday.ChristianHolidayType;
+import de.focus_shift.jollyday.core.spi.Limited.YearCycle;
+import de.focus_shift.jollyday.core.spi.Movable;
+import de.focus_shift.jollyday.jackson.mapping.ChristianHoliday;
+import de.focus_shift.jollyday.jackson.mapping.ChronologyType;
 import de.focus_shift.jollyday.jackson.mapping.HolidayCycleType;
-import de.focus_shift.jollyday.jackson.mapping.HolidayType;
-import de.focus_shift.jollyday.jackson.mapping.Month;
-import de.focus_shift.jollyday.jackson.mapping.RelativeToFixed;
+import de.focus_shift.jollyday.jackson.mapping.MovingCondition;
 import de.focus_shift.jollyday.jackson.mapping.Weekday;
-import de.focus_shift.jollyday.jackson.mapping.When;
 import org.junit.jupiter.api.Test;
+import org.threeten.extra.chrono.JulianChronology;
 
 import java.time.DayOfWeek;
 import java.time.Year;
+import java.time.chrono.IsoChronology;
+import java.util.Collections;
+import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 class JacksonChristianHolidayTest {
 
-  @Test
-  void ensureDateIsSetAndMappedCorrectly() {
+    @Test
+    void ensureFieldsAreSetAndMappedCorrectly() {
+        final ChristianHoliday christianHoliday = new ChristianHoliday();
+        christianHoliday.setType(de.focus_shift.jollyday.jackson.mapping.ChristianHolidayType.EASTER);
+        christianHoliday.setChronology(ChronologyType.JULIAN);
+        christianHoliday.setDescriptionPropertiesKey("easter.description");
+        christianHoliday.setLocalizedType(de.focus_shift.jollyday.jackson.mapping.HolidayType.BANK_HOLIDAY);
+        christianHoliday.setValidFrom(2010);
+        christianHoliday.setValidTo(2020);
+        christianHoliday.setEvery(HolidayCycleType.ODD_YEARS);
 
-    final Fixed firstJanuary = new Fixed();
-    firstJanuary.setDay(1);
-    firstJanuary.setMonth(Month.JANUARY);
+        final MovingCondition movingCondition = new MovingCondition();
+        movingCondition.setSubstitute(Weekday.SATURDAY);
+        christianHoliday.setMovingCondition(Collections.singletonList(movingCondition));
 
-    final RelativeToFixed relativeToFixed = new RelativeToFixed();
-    relativeToFixed.setWeekday(Weekday.MONDAY);
-    relativeToFixed.setWhen(When.AFTER);
-    relativeToFixed.setDate(firstJanuary);
-    relativeToFixed.setEvery(HolidayCycleType.EVEN_YEARS);
-    relativeToFixed.setDescriptionPropertiesKey("description");
-    relativeToFixed.setLocalizedType(HolidayType.BANK_HOLIDAY);
-    relativeToFixed.setValidFrom(2000);
-    relativeToFixed.setValidTo(2001);
-    final JacksonRelativeToFixed jacksonRelativeToFixed = new JacksonRelativeToFixed(relativeToFixed);
+        final JacksonChristianHoliday holiday = new JacksonChristianHoliday(christianHoliday);
+        assertThat(holiday.type()).isEqualTo(ChristianHolidayType.EASTER);
+        assertThat(holiday.chronology()).isEqualTo(JulianChronology.INSTANCE);
+        assertThat(holiday.descriptionPropertiesKey()).isEqualTo("easter.description");
+        assertThat(holiday.holidayType()).isEqualTo(HolidayType.BANK_HOLIDAY);
+        assertThat(holiday.validFrom()).isEqualTo(Year.of(2010));
+        assertThat(holiday.validTo()).isEqualTo(Year.of(2020));
+        assertThat(holiday.cycle()).isEqualTo(YearCycle.ODD_YEARS);
 
-    assertThat(jacksonRelativeToFixed.date().day()).isEqualTo(new JacksonFixed(firstJanuary).day());
-    assertThat(jacksonRelativeToFixed.weekday()).isEqualTo(DayOfWeek.MONDAY);
-    assertThat(jacksonRelativeToFixed.when()).isEqualTo(Relation.AFTER);
-    assertThat(jacksonRelativeToFixed.cycle()).isEqualTo(Limited.YearCycle.EVEN_YEARS);
-    assertThat(jacksonRelativeToFixed.descriptionPropertiesKey()).isEqualTo("description");
-    assertThat(jacksonRelativeToFixed.holidayType()).isEqualTo(de.focus_shift.jollyday.core.HolidayType.BANK_HOLIDAY);
-    assertThat(jacksonRelativeToFixed.validFrom()).isEqualTo(Year.of(2000));
-    assertThat(jacksonRelativeToFixed.validTo()).isEqualTo(Year.of(2001));
-  }
+        final List<Movable.MovingCondition> conditions = holiday.conditions();
+        assertThat(conditions).hasSize(1);
+        assertThat(conditions.get(0).substitute()).isEqualTo(DayOfWeek.SATURDAY);
+    }
 
-  @Test
-  void ensureToReturnNullOrDefaultValuesOnNotSetValues() {
+    @Test
+    void ensureToReturnNullOrDefaultValuesOnNotSetValues() {
+        final ChristianHoliday christianHoliday = new ChristianHoliday();
+        christianHoliday.setType(de.focus_shift.jollyday.jackson.mapping.ChristianHolidayType.GOOD_FRIDAY);
 
-    final Fixed firstJanuary = new Fixed();
-    firstJanuary.setDay(1);
-    firstJanuary.setMonth(Month.JANUARY);
-
-    final RelativeToFixed relativeToFixed = new RelativeToFixed();
-    relativeToFixed.setDate(firstJanuary);
-    final JacksonRelativeToFixed jacksonRelativeToFixed = new JacksonRelativeToFixed(relativeToFixed);
-
-    assertThat(jacksonRelativeToFixed.date().day()).isEqualTo(new JacksonFixed(firstJanuary).day());
-    assertThat(jacksonRelativeToFixed.weekday()).isNull();
-    assertThat(jacksonRelativeToFixed.when()).isNull();
-    assertThat(jacksonRelativeToFixed.cycle()).isEqualTo(Limited.YearCycle.EVERY_YEAR);
-    assertThat(jacksonRelativeToFixed.descriptionPropertiesKey()).isNull();
-    assertThat(jacksonRelativeToFixed.holidayType()).isEqualTo(de.focus_shift.jollyday.core.HolidayType.PUBLIC_HOLIDAY);
-    assertThat(jacksonRelativeToFixed.validFrom()).isNull();
-    assertThat(jacksonRelativeToFixed.validTo()).isNull();
-  }
+        final JacksonChristianHoliday jacksonChristianHoliday = new JacksonChristianHoliday(christianHoliday);
+        assertThat(jacksonChristianHoliday.type()).isEqualTo(ChristianHolidayType.GOOD_FRIDAY);
+        assertThat(jacksonChristianHoliday.chronology()).isEqualTo(IsoChronology.INSTANCE);
+        assertThat(jacksonChristianHoliday.descriptionPropertiesKey()).isNull();
+        assertThat(jacksonChristianHoliday.holidayType()).isEqualTo(HolidayType.PUBLIC_HOLIDAY);
+        assertThat(jacksonChristianHoliday.validFrom()).isNull();
+        assertThat(jacksonChristianHoliday.validTo()).isNull();
+        assertThat(jacksonChristianHoliday.cycle()).isEqualTo(YearCycle.EVERY_YEAR);
+        assertThat(jacksonChristianHoliday.conditions()).isEmpty();
+    }
 }
