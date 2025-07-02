@@ -6,7 +6,6 @@ import de.focus_shift.jollyday.core.HolidayCalendar;
 import de.focus_shift.jollyday.core.HolidayManager;
 import de.focus_shift.jollyday.core.ManagerParameter;
 import de.focus_shift.jollyday.core.ManagerParameters;
-import de.focus_shift.jollyday.core.impl.JapaneseHolidayManager;
 import de.focus_shift.jollyday.core.util.CalendarUtil;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
@@ -47,7 +46,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.junit.jupiter.api.Assertions.fail;
 
-class HolidayManagerTest {
+class DefaultHolidayManagerTest {
 
   private static final Set<LocalDate> test_days_base = new HashSet<>();
   private static final Set<LocalDate> test_days_l1_1 = new HashSet<>();
@@ -82,24 +81,6 @@ class HolidayManagerTest {
     test_days_l1_2.add(LocalDate.of(2010, NOVEMBER, 17));
     test_days_l1_2.add(LocalDate.of(2010, DECEMBER, 7));
     test_days_l1_2.add(LocalDate.of(2010, DECEMBER, 16));
-  }
-
-  private static Stream<Arguments> firstLevel() {
-    return Stream.of(
-      Arguments.of("level1_1", test_days_l1_1),
-      Arguments.of("level1_2", test_days_l1_2)
-    );
-  }
-
-  @Test
-  void ensureToInstantiateHolidayManagerImplementationBasedOnCountry() {
-    System.setProperty("de.focus_shift.jollyday.config.urls", "file:./src/test/resources/test.app.properties");
-
-    HolidayManager.setManagerCachingEnabled(false);
-    assertThat(HolidayManager.getInstance(create("test"))).isInstanceOf(JapaneseHolidayManager.class);
-    HolidayManager.setManagerCachingEnabled(true);
-
-    System.clearProperty("de.focus_shift.jollyday.config.urls");
   }
 
   @Test
@@ -199,6 +180,13 @@ class HolidayManagerTest {
       .containsOnly(new Holiday(LocalDate.of(2010, 1, 4), "", OBSERVANCE));
   }
 
+  private static Stream<Arguments> firstLevel() {
+    return Stream.of(
+      Arguments.of("level1_1", test_days_l1_1),
+      Arguments.of("level1_2", test_days_l1_2)
+    );
+  }
+
   @ParameterizedTest
   @MethodSource("firstLevel")
   void ensureToRetrieveHolidaysFromFirstLevelHierarchies(final String firstLevelName, final Set<LocalDate> expectedHolidays) {
@@ -274,7 +262,6 @@ class HolidayManagerTest {
 
     @Test
     void ensureThatTheCachedHolidayManagerWillReturnedOnSecondCall() {
-      HolidayManager.setManagerCachingEnabled(true);
       final HolidayManager first = HolidayManager.getInstance(create("test"));
       final HolidayManager second = HolidayManager.getInstance(create("test"));
       assertThat(second).isSameAs(first);
@@ -292,7 +279,6 @@ class HolidayManagerTest {
 
     @Test
     void ensureThatTheCachedHolidayManagerWillBeCleared() {
-      HolidayManager.setManagerCachingEnabled(true);
       final HolidayManager first = HolidayManager.getInstance(create("test"));
       final HolidayManager second = HolidayManager.getInstance(create("test"));
       assertThat(first).isSameAs(second);

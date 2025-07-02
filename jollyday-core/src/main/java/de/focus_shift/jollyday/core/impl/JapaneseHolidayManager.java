@@ -1,13 +1,14 @@
 package de.focus_shift.jollyday.core.impl;
 
 import de.focus_shift.jollyday.core.Holiday;
-import de.focus_shift.jollyday.core.HolidayType;
-import de.focus_shift.jollyday.core.util.CalendarUtil;
 
 import java.time.LocalDate;
 import java.time.Year;
 import java.util.HashSet;
 import java.util.Set;
+
+import static de.focus_shift.jollyday.core.HolidayType.PUBLIC_HOLIDAY;
+import static de.focus_shift.jollyday.core.util.CalendarUtil.contains;
 
 /**
  * <p>
@@ -30,15 +31,17 @@ public class JapaneseHolidayManager extends DefaultHolidayManager {
   @Override
   public Set<Holiday> getHolidays(final Year year, final String... args) {
     final Set<Holiday> holidays = super.getHolidays(year, args);
-    final Set<Holiday> additionalHolidays = new HashSet<>();
-    for (Holiday holiday : holidays) {
+
+    final Set<Holiday> bridgingHolidays = new HashSet<>();
+    for (final Holiday holiday : holidays) {
       final LocalDate twoDaysLater = holiday.getDate().plusDays(2);
-      if (CalendarUtil.contains(holidays, twoDaysLater)) {
-        final LocalDate bridgingDate = twoDaysLater.minusDays(1);
-        additionalHolidays.add(new Holiday(bridgingDate, BRIDGING_HOLIDAY_PROPERTIES_KEY, HolidayType.PUBLIC_HOLIDAY));
+      final LocalDate bridgingDate = twoDaysLater.minusDays(1);
+      if (contains(holidays, twoDaysLater) && !contains(holidays, bridgingDate)) {
+        bridgingHolidays.add(new Holiday(bridgingDate, BRIDGING_HOLIDAY_PROPERTIES_KEY, PUBLIC_HOLIDAY));
       }
     }
-    holidays.addAll(additionalHolidays);
+
+    holidays.addAll(bridgingHolidays);
     return holidays;
   }
 }
