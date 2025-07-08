@@ -16,9 +16,16 @@ import static de.focus_shift.jollyday.core.spi.Relation.BEFORE;
 import static java.util.stream.Collectors.toList;
 
 /**
- * <p>
  * RelativeToWeekdayInMonthParser class.
- * </p>
+ * <p>
+ * Resolves the holiday date for a given relative-to-weekday-in-month configuration.
+ * <p>
+ * This method works as follows:
+ * <ul>
+ *   <li>Finds the base date in the month using the weekdayInMonth configuration.</li>
+ *   <li>Calculates the difference in days to the target weekday, considering the direction (BEFORE or AFTER).</li>
+ *   <li>Returns a Holiday for the resulting date.</li>
+ * </ul>
  */
 public class RelativeToWeekdayInMonthParser implements HolidayParser {
 
