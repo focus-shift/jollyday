@@ -24,6 +24,7 @@ import java.util.List;
 
 import static de.focus_shift.jollyday.core.HolidayType.PUBLIC_HOLIDAY;
 import static de.focus_shift.jollyday.core.spi.Limited.YearCycle.EVERY_YEAR;
+import static de.focus_shift.jollyday.core.spi.Occurrence.FIRST;
 import static de.focus_shift.jollyday.core.spi.Occurrence.LAST;
 import static java.time.DayOfWeek.MONDAY;
 import static java.time.DayOfWeek.TUESDAY;
@@ -45,6 +46,21 @@ class RelativeToWeekdayInMonthParserTest {
     final Year year = Year.of(2025);
     final FixedWeekdayInMonth fixedWeekdayInMonth = getFixedWeekdayInMonth(APRIL, MONDAY, LAST);
     final RelativeToWeekdayInMonth relativeToWeekdayInMonth = getRelativeToWeekdayInMonth(WEDNESDAY, relation, fixedWeekdayInMonth, year, year);
+
+    final RelativeToWeekdayInMonthParser sut = new RelativeToWeekdayInMonthParser();
+    when(holidays.relativeToWeekdayInMonth()).thenReturn(List.of(relativeToWeekdayInMonth));
+
+    final List<Holiday> calculatedHoliday = sut.parse(year, holidays);
+    assertThat(calculatedHoliday.get(0).getDate()).isEqualTo(expectedLocalDate);
+  }
+
+  @ParameterizedTest
+  @CsvSource({"BEFORE,2025-03-31", "AFTER,2025-04-14"})
+  void ensureThatRelativeToWeekdayInMonthWithRelationBeforeIsValidAndIsOnSameWeekday(final Relation relation, final LocalDate expectedLocalDate) {
+
+    final Year year = Year.of(2025);
+    final FixedWeekdayInMonth fixedWeekdayInMonth = getFixedWeekdayInMonth(APRIL, MONDAY, FIRST);
+    final RelativeToWeekdayInMonth relativeToWeekdayInMonth = getRelativeToWeekdayInMonth(MONDAY, relation, fixedWeekdayInMonth, year, year);
 
     final RelativeToWeekdayInMonthParser sut = new RelativeToWeekdayInMonthParser();
     when(holidays.relativeToWeekdayInMonth()).thenReturn(List.of(relativeToWeekdayInMonth));
