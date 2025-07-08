@@ -6,12 +6,13 @@ import de.focus_shift.jollyday.core.parser.functions.CreateHoliday;
 import de.focus_shift.jollyday.core.parser.functions.FindWeekDayInMonth;
 import de.focus_shift.jollyday.core.parser.predicates.ValidLimitation;
 import de.focus_shift.jollyday.core.spi.Holidays;
-import de.focus_shift.jollyday.core.spi.Relation;
+import de.focus_shift.jollyday.core.spi.RelativeToWeekdayInMonth;
 
 import java.time.LocalDate;
 import java.time.Year;
 import java.util.List;
 
+import static de.focus_shift.jollyday.core.spi.Relation.BEFORE;
 import static java.util.stream.Collectors.toList;
 
 /**
@@ -25,14 +26,25 @@ public class RelativeToWeekdayInMonthParser implements HolidayParser {
   public List<Holiday> parse(final Year year, final Holidays holidays) {
     return holidays.relativeToWeekdayInMonth().stream()
       .filter(new ValidLimitation(year))
-      .map(rwm -> {
-        LocalDate date = new FindWeekDayInMonth(year).apply(rwm.weekdayInMonth()).plusDays(1);
-        int direction = rwm.when() == Relation.BEFORE ? -1 : 1;
-        while (date.getDayOfWeek() != rwm.weekday()) {
-          date = date.plusDays(direction);
-        }
-        return new CreateHoliday(date).apply(rwm);
-      })
+      .map(relativeToWeekdayInMonth -> resolveHolidayForRelativeToWeekdayInMonth(year, relativeToWeekdayInMonth))
       .collect(toList());
+  }
+
+  private Holiday resolveHolidayForRelativeToWeekdayInMonth(final Year year, final RelativeToWeekdayInMonth rwm) {
+    LocalDate date = new FindWeekDayInMonth(year).apply(rwm.weekdayInMonth());
+
+    final int direction = (rwm.when() == BEFORE ? -1 : 1);
+    final int currentDayValue = date.getDayOfWeek().getValue();
+    final int targetDayValue = rwm.weekday().getValue();
+
+    int daysDifference = targetDayValue - currentDayValue;
+    if (direction < 0 && daysDifference >= 0) {
+      daysDifference -= 7;
+    } else if (direction > 0 && daysDifference <= 0) {
+      daysDifference += 7;
+    }
+    date = date.plusDays(daysDifference);
+
+    return new CreateHoliday(date).apply(rwm);
   }
 }
