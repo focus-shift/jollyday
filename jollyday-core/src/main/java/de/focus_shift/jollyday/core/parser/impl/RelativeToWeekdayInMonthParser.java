@@ -31,11 +31,11 @@ public class RelativeToWeekdayInMonthParser implements HolidayParser {
   }
 
   private Holiday resolveHolidayForRelativeToWeekdayInMonth(final Year year, final RelativeToWeekdayInMonth rwm) {
-    LocalDate date = new FindWeekDayInMonth(year).apply(rwm.weekdayInMonth());
+    final LocalDate baseDate = new FindWeekDayInMonth(year).apply(rwm.weekdayInMonth());
 
-    final int direction = (rwm.when() == BEFORE ? -1 : 1);
-    final int currentDayValue = date.getDayOfWeek().getValue();
+    final int currentDayValue = baseDate.getDayOfWeek().getValue();
     final int targetDayValue = rwm.weekday().getValue();
+    final int direction = (rwm.when() == BEFORE ? -1 : 1);
 
     int daysDifference = targetDayValue - currentDayValue;
     if (direction < 0 && daysDifference >= 0) {
@@ -43,8 +43,8 @@ public class RelativeToWeekdayInMonthParser implements HolidayParser {
     } else if (direction > 0 && daysDifference <= 0) {
       daysDifference += 7;
     }
-    date = date.plusDays(daysDifference);
 
-    return new CreateHoliday(date).apply(rwm);
+    final LocalDate resultDate = baseDate.plusDays(daysDifference);
+    return new CreateHoliday(resultDate).apply(rwm);
   }
 }
