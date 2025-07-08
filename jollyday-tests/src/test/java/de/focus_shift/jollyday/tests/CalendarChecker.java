@@ -19,6 +19,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 
+import static de.focus_shift.jollyday.core.HolidayType.PUBLIC_HOLIDAY;
 import static de.focus_shift.jollyday.core.ManagerParameters.create;
 import static de.focus_shift.jollyday.tests.CalendarChecker.Category.BY_DAY;
 import static de.focus_shift.jollyday.tests.CalendarChecker.Category.BY_KEY;
@@ -56,7 +57,7 @@ public class CalendarChecker implements CalendarCheckerApi.Holiday, CalendarChec
 
   @Override
   public CalendarCheckerApi.Properties hasChristianHoliday(final String propertyKey) {
-    return hasChristianHoliday(propertyKey, HolidayType.PUBLIC_HOLIDAY);
+    return hasChristianHoliday(propertyKey, PUBLIC_HOLIDAY);
   }
 
   @Override
@@ -73,7 +74,7 @@ public class CalendarChecker implements CalendarCheckerApi.Holiday, CalendarChec
 
   @Override
   public CalendarCheckerApi.Properties hasIslamicHoliday(final String propertyKey) {
-    return hasIslamicHoliday(propertyKey, HolidayType.PUBLIC_HOLIDAY);
+    return hasIslamicHoliday(propertyKey, PUBLIC_HOLIDAY);
   }
 
   @Override
@@ -89,8 +90,25 @@ public class CalendarChecker implements CalendarCheckerApi.Holiday, CalendarChec
   }
 
   @Override
+  public CalendarCheckerApi.Properties hasEthiopianOrthodoxHoliday(final String propertyKey) {
+    return hasEthiopianOrthodoxHoliday(propertyKey, PUBLIC_HOLIDAY);
+  }
+
+  @Override
+  public CalendarCheckerApi.Properties hasEthiopianOrthodoxHoliday(final String propertyKey, final HolidayType type) {
+    Objects.requireNonNull(propertyKey, "propertyKey is required");
+    Objects.requireNonNull(type, "holiday type is required");
+
+    this.category = BY_KEY;
+    this.propertyKey = "ethiopian.orthodox." + propertyKey;
+    this.type = type;
+
+    return this;
+  }
+
+  @Override
   public CalendarCheckerApi.Properties hasFixedHoliday(final String propertyKey, final Month month, final int day) {
-    return hasFixedHoliday(propertyKey, month, day, HolidayType.PUBLIC_HOLIDAY);
+    return hasFixedHoliday(propertyKey, month, day, PUBLIC_HOLIDAY);
   }
 
   @Override
