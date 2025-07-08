@@ -19,6 +19,19 @@ import static java.util.stream.Collectors.toList;
 
 /**
  * The Class RelativeToFixedParser.
+ * <p>
+ * Calculates the holiday date relative to a fixed date, either by moving to a specific weekday
+ * or by adding/subtracting a number of days.
+ * <p>
+ * There are two ways this method adjusts the date:
+ * <ul>
+ *   <li>If a weekday is given, it moves the fixed date to the next or previous occurrence
+ *       of the specified weekday, depending on the relation.</li>
+ *   <li>If a number of days but no weekday is given, it adds or subtracts the specified period to/from the fixed date,
+ *       depending on the relation.</li>
+ * </ul>
+ * <p>
+ * The resulting date is then used to create the holiday.
  */
 public class RelativeToFixedParser implements HolidayParser {
 
