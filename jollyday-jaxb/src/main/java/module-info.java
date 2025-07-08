@@ -16,8 +16,5 @@ module de.focus_shift.jollyday.jaxb {
   requires org.threeten.extra;
 
   exports de.focus_shift.jollyday.jaxb to
-    de.focus_shift.jollyday.core,
-    de.focus_shift.jollyday.jaxb.test;
-  exports de.focus_shift.jollyday.jaxb.mapping to
-    de.focus_shift.jollyday.jaxb.test;
+    de.focus_shift.jollyday.core;
 }
