@@ -7,6 +7,7 @@ import de.focus_shift.jollyday.core.parser.functions.FixedToLocalDate;
 import de.focus_shift.jollyday.core.parser.predicates.ValidLimitation;
 import de.focus_shift.jollyday.core.spi.Holidays;
 import de.focus_shift.jollyday.core.spi.Relation;
+import de.focus_shift.jollyday.core.spi.RelativeToFixed;
 import org.threeten.extra.Days;
 
 import java.time.DayOfWeek;
@@ -39,16 +40,18 @@ public class RelativeToFixedParser implements HolidayParser {
   public List<Holiday> parse(final Year year, final Holidays holidays) {
     return holidays.relativeToFixed().stream()
       .filter(new ValidLimitation(year))
-      .map(rf -> {
-        LocalDate fixed = new FixedToLocalDate(year).apply(rf.date());
-        if (rf.weekday() != null) {
-          fixed = moveToWeekday(fixed, rf.weekday(), rf.when());
-        } else if (rf.days() != null) {
-          fixed = moveByDays(fixed, rf.days(), rf.when());
-        }
-        return new CreateHoliday(fixed).apply(rf);
-      })
+      .map(relativeToFixed -> moveToRelativeDate(year, relativeToFixed))
       .collect(toList());
+  }
+
+  private Holiday moveToRelativeDate(final Year year, final RelativeToFixed rf) {
+    LocalDate fixed = new FixedToLocalDate(year).apply(rf.date());
+    if (rf.weekday() != null) {
+      fixed = moveToWeekday(fixed, rf.weekday(), rf.when());
+    } else if (rf.days() != null) {
+      fixed = moveByDays(fixed, rf.days(), rf.when());
+    }
+    return new CreateHoliday(fixed).apply(rf);
   }
 
   private LocalDate moveToWeekday(LocalDate date, DayOfWeek targetDay, Relation relation) {
@@ -67,9 +70,6 @@ public class RelativeToFixedParser implements HolidayParser {
     return date.plusDays(daysDifference);
   }
 
-  /**
-   * Moves the given date by the specified number of days in the given direction.
-   */
   private LocalDate moveByDays(LocalDate date, Days days, Relation relation) {
     return relation == BEFORE ? date.minus(days) : date.plus(days);
   }
