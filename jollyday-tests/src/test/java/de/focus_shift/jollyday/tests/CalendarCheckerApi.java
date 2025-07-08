@@ -44,6 +44,9 @@ public interface CalendarCheckerApi {
 
     Properties hasIslamicHoliday(final String propertyKey);
     Properties hasIslamicHoliday(final String propertyKey, final HolidayType type);
+
+    Properties hasEthiopianOrthodoxHoliday(final String propertyKey);
+    Properties hasEthiopianOrthodoxHoliday(final String propertyKey, final HolidayType type);
   }
 
   interface Properties extends Subdivision, Between, Shift, Check {

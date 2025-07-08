@@ -42,6 +42,7 @@ class HolidayROTest {
       .hasFixedHoliday("ST_ANDREW", NOVEMBER, 30).and()
       .hasFixedHoliday("NATIONAL_DAY", DECEMBER, 1).and()
       .hasFixedHoliday("CHRISTMAS", DECEMBER, 25).and()
+      .hasFixedHoliday("CHRISTMAS", DECEMBER, 26).and()
       .hasChristianHoliday("GOOD_FRIDAY")
         .notBetween(Year.of(1900), Year.of(2017))
         .between(Year.of(2018), Year.of(2500))
