@@ -8,7 +8,7 @@
   <Holidays>
     <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
     <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
-    <Fixed month="MAY" day="9" descriptionPropertiesKey="EUROPE_DAY" validFrom="2019"/>
+    <Fixed month="MAY" day="9" validFrom="2019" descriptionPropertiesKey="EUROPE_DAY"/>
     <Fixed month="JUNE" day="23" descriptionPropertiesKey="NATIONAL_DAY"/>
     <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
     <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
