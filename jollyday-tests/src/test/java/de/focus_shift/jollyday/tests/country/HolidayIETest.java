@@ -39,5 +39,4 @@ class HolidayIETest {
       .hasChristianHoliday("EASTER_MONDAY")
       .check();
   }
-
 }

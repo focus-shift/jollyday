@@ -12,7 +12,6 @@ import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.Month;
 import java.time.Year;
-import java.time.temporal.TemporalAdjusters;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -21,8 +20,11 @@ import java.util.Set;
 
 import static de.focus_shift.jollyday.core.HolidayType.PUBLIC_HOLIDAY;
 import static de.focus_shift.jollyday.core.ManagerParameters.create;
+import static de.focus_shift.jollyday.tests.CalendarChecker.Adjuster.NEXT;
 import static de.focus_shift.jollyday.tests.CalendarChecker.Category.BY_DAY;
 import static de.focus_shift.jollyday.tests.CalendarChecker.Category.BY_KEY;
+import static java.time.temporal.TemporalAdjusters.nextOrSame;
+import static java.time.temporal.TemporalAdjusters.previousOrSame;
 import static java.util.Collections.unmodifiableList;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -150,7 +152,7 @@ public class CalendarChecker implements CalendarCheckerApi.Holiday, CalendarChec
 
   @Override
   public CalendarCheckerApi.Properties canBeShiftedFrom(DayOfWeek from, DayOfWeek to) {
-    this.validShifts.add(new WeekDayFromTo(from, to, Adjuster.NEXT));
+    this.validShifts.add(new WeekDayFromTo(from, to, NEXT));
     return this;
   }
 
@@ -238,7 +240,7 @@ public class CalendarChecker implements CalendarCheckerApi.Holiday, CalendarChec
             final Set<Holiday> holidays = holidayManager.getHolidays(year, check.getSubdivisions());
             final LocalDate dateToCheck = LocalDate.of(year.getValue(), check.getMonth(), check.getDay());
             final LocalDate shiftLocalDate = shiftLocalDate(check, dateToCheck);
-            Holiday holiday = new Holiday(shiftLocalDate, check.getPropertiesKey(), check.getHolidayType());
+            final Holiday holiday = new Holiday(shiftLocalDate, check.getPropertiesKey(), check.getHolidayType());
             assertHolidayPresent(holidays, holiday, holidayManager, check.getSubdivisions());
           }
         );
@@ -269,18 +271,19 @@ public class CalendarChecker implements CalendarCheckerApi.Holiday, CalendarChec
     if (check == null || date == null) {
       return date;
     }
-    if (check.validShifts != null && !check.validShifts.isEmpty()) {
-      for (WeekDayFromTo shift : check.validShifts) {
-        if (shift != null && date.getDayOfWeek().equals(shift.getFrom())) {
-          if (shift.adjuster == Adjuster.NEXT) {
-            date = date.with(TemporalAdjusters.nextOrSame(shift.getTo()));
-          } else {
-            date = date.with(TemporalAdjusters.previousOrSame(shift.getTo()));
-          }
+
+    LocalDate shiftedDate = date;
+    for (WeekDayFromTo shift : check.validShifts) {
+      if (shift != null && date.getDayOfWeek().equals(shift.getFrom())) {
+        if (shift.adjuster == NEXT) {
+          shiftedDate = date.with(nextOrSame(shift.getTo()));
+        } else {
+          shiftedDate = date.with(previousOrSame(shift.getTo()));
         }
       }
     }
-    return date;
+
+    return shiftedDate;
   }
 
   private void checkByKey(final HolidayCalendarCheck check, final HolidayManager holidayManager) {
