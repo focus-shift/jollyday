@@ -39,20 +39,11 @@ public class FindWeekDayRelativeToDate implements Function<FixedWeekdayRelativeT
    * @return the day moved to the weekday and in the direction as specified
    */
   private LocalDate moveDateToFirstOccurrenceOfWeekday(final FixedWeekdayRelativeToFixed fixedWeekdayRelativeToFixed, final LocalDate day) {
-    final TemporalAdjuster adjuster;
-    switch (fixedWeekdayRelativeToFixed.when()) {
-      case AFTER:
-        adjuster = next(fixedWeekdayRelativeToFixed.weekday());
-        break;
-      case BEFORE:
-        adjuster = previous(fixedWeekdayRelativeToFixed.weekday());
-        break;
-      case CLOSEST:
-        adjuster = closest(fixedWeekdayRelativeToFixed.weekday());
-        break;
-      default:
-        throw new IllegalArgumentException("Unsupported relative adjustment: " + fixedWeekdayRelativeToFixed.when());
-    }
+    final TemporalAdjuster adjuster = switch (fixedWeekdayRelativeToFixed.when()) {
+      case AFTER -> next(fixedWeekdayRelativeToFixed.weekday());
+      case BEFORE -> previous(fixedWeekdayRelativeToFixed.weekday());
+      case CLOSEST -> closest(fixedWeekdayRelativeToFixed.weekday());
+    };
     return day.with(adjuster);
   }
 
@@ -66,16 +57,12 @@ public class FindWeekDayRelativeToDate implements Function<FixedWeekdayRelativeT
     if (fixedWeekdayRelativeToFixed.when() == Relation.CLOSEST) {
       return 0;
     }
-    switch (fixedWeekdayRelativeToFixed.which()) {
-      case SECOND:
-        return 7;
-      case THIRD:
-        return 14;
-      case FOURTH:
-        return 21;
-      default:
-        return 0;
-    }
+    return switch (fixedWeekdayRelativeToFixed.which()) {
+      case SECOND -> 7;
+      case THIRD -> 14;
+      case FOURTH -> 21;
+      default -> 0;
+    };
   }
 
   /**
