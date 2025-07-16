@@ -53,7 +53,7 @@ class CountryDescriptionsTest {
         misses.append(locale).append(" misses ").append(propertyName).append('\n');
       }
     }
-    if (misses.length() > 0) {
+    if (!misses.isEmpty()) {
       fail(misses.toString());
     }
   }
