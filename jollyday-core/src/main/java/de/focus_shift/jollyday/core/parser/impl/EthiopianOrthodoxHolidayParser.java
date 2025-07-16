@@ -25,20 +25,14 @@ public class EthiopianOrthodoxHolidayParser implements HolidayParser {
     return holidays.ethiopianOrthodoxHolidays().stream()
       .filter(new ValidLimitation(year))
       .flatMap(eoh -> {
-        final Stream<LocalDate> ethiopianHolidays;
-        switch (eoh.type()) {
-          case TIMKAT:
-            ethiopianHolidays = new CalculateRelativeDatesFromChronologyWithinGregorianYear(5, 10, CopticChronology.INSTANCE, 0).apply(year);
-            break;
-          case ENKUTATASH:
-            ethiopianHolidays = new CalculateRelativeDatesFromChronologyWithinGregorianYear(1, 1, CopticChronology.INSTANCE, 0).apply(year);
-            break;
-          case MESKEL:
-            ethiopianHolidays = new CalculateRelativeDatesFromChronologyWithinGregorianYear(1, 17, CopticChronology.INSTANCE, 0).apply(year);
-            break;
-          default:
-            throw new IllegalArgumentException("Unknown ethiopian orthodox holiday type " + eoh.type());
-        }
+        final Stream<LocalDate> ethiopianHolidays = switch (eoh.type()) {
+          case TIMKAT ->
+            new CalculateRelativeDatesFromChronologyWithinGregorianYear(5, 10, CopticChronology.INSTANCE, 0).apply(year);
+          case ENKUTATASH ->
+            new CalculateRelativeDatesFromChronologyWithinGregorianYear(1, 1, CopticChronology.INSTANCE, 0).apply(year);
+          case MESKEL ->
+            new CalculateRelativeDatesFromChronologyWithinGregorianYear(1, 17, CopticChronology.INSTANCE, 0).apply(year);
+        };
         return ethiopianHolidays.map(date -> new CreateHoliday(date).apply(eoh));
       })
       .collect(toList());
