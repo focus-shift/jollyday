@@ -43,7 +43,7 @@ class CountryDescriptionsTest {
   }
 
   private void compareL1WithL2(ResourceBundle l1, ResourceBundle l2) {
-    final Locale locale = "".equals(l2.getLocale().getCountry()) ? Locale.ENGLISH : l2.getLocale();
+    final Locale locale = l2.getLocale().getCountry().isEmpty() ? Locale.ENGLISH : l2.getLocale();
     final Enumeration<String> keys = l1.getKeys();
     final Set<String> l2KeySet = new HashSet<>(list(l2.getKeys()));
     final StringBuilder misses = new StringBuilder();
@@ -53,7 +53,7 @@ class CountryDescriptionsTest {
         misses.append(locale).append(" misses ").append(propertyName).append('\n');
       }
     }
-    if (misses.length() > 0) {
+    if (!misses.isEmpty()) {
       fail(misses.toString());
     }
   }
