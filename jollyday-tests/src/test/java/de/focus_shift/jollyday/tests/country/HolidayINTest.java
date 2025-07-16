@@ -20,13 +20,8 @@ class HolidayINTest {
     assertFor(INDIA)
       .hasFixedHoliday("REPUBLIC_DAY", JANUARY, 26).between(YEAR_FROM, YEAR_TO).and()
       .hasFixedHoliday("INDEPENDENCE_DAY", AUGUST, 15).between(YEAR_FROM, YEAR_TO).and()
-      .hasFixedHoliday("GHANDIS_BIRTHDAY", OCTOBER, 2).between(YEAR_FROM, YEAR_TO)
-
-      /*
-      .and()
-      .hasIslamicHoliday("ID_UL_FITR").between(YEAR_FROM, YEAR_TO)
-      */
-
+      .hasFixedHoliday("GHANDIS_BIRTHDAY", OCTOBER, 2).between(YEAR_FROM, YEAR_TO).and()
+      .hasIslamicHoliday("ID_AL_FITR_2").between(YEAR_FROM, YEAR_TO)
       .check();
   }
 }
