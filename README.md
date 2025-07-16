@@ -4,7 +4,7 @@ Jollyday is a java library to query public holidays. Currently, we support **ove
 
 ## How to use it
 
-**Jollyday** is based on **Java 11** and can be used directly as dependency via maven or gradle e.g.
+**Jollyday** is based on **Java 17** and can be used directly as dependency via maven or gradle e.g.
 The calculation basis of the public holidays for each country is based on a xml file and will be mapped via Jakarta XML Binding or Jackson.
 If you already use one of these libraries in your project than just use the specific jollyday dependency.
 
@@ -360,7 +360,7 @@ If you want to raise an **issue or bug** you can create a [new issue](https://gi
 
 ### Requirements
 
-* [JDK 11](https://openjdk.java.net/install/)
+* [JDK 17](https://openjdk.java.net/install/)
 
 ### Architecture decision record (ADR)
 
