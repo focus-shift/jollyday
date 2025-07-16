@@ -16,26 +16,16 @@ public class ValidCycle implements Predicate<Limited> {
 
   @Override
   public boolean test(final Limited limited) {
-    switch (limited.cycle()) {
-      case EVERY_YEAR:
-        return true;
-      case ODD_YEARS:
-        return year.getValue() % 2 != 0;
-      case EVEN_YEARS:
-        return year.getValue() % 2 == 0;
-      case TWO_YEARS:
-        return isValidWithReferenceYear(limited, Period.ofYears(2));
-      case THREE_YEARS:
-        return isValidWithReferenceYear(limited, Period.ofYears(3));
-      case FOUR_YEARS:
-        return isValidWithReferenceYear(limited, Period.ofYears(4));
-      case FIVE_YEARS:
-        return isValidWithReferenceYear(limited, Period.ofYears(5));
-      case SIX_YEARS:
-        return isValidWithReferenceYear(limited, Period.ofYears(6));
-      default:
-        throw new IllegalArgumentException("Cannot handle unknown cycle type '" + limited.cycle() + "'.");
-    }
+    return switch (limited.cycle()) {
+      case EVERY_YEAR -> true;
+      case ODD_YEARS -> year.getValue() % 2 != 0;
+      case EVEN_YEARS -> year.getValue() % 2 == 0;
+      case TWO_YEARS -> isValidWithReferenceYear(limited, Period.ofYears(2));
+      case THREE_YEARS -> isValidWithReferenceYear(limited, Period.ofYears(3));
+      case FOUR_YEARS -> isValidWithReferenceYear(limited, Period.ofYears(4));
+      case FIVE_YEARS -> isValidWithReferenceYear(limited, Period.ofYears(5));
+      case SIX_YEARS -> isValidWithReferenceYear(limited, Period.ofYears(6));
+    };
   }
 
   /**
