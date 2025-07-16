@@ -62,8 +62,8 @@ public interface CalendarCheckerApi {
   }
 
   interface Shift extends Check  {
-    Properties canBeShiftedFrom(DayOfWeek from, DayOfWeek to);
-    Properties canBeShiftedFrom(DayOfWeek from, Adjuster adjuster, DayOfWeek to);
+    Properties canBeMovedFrom(DayOfWeek from, DayOfWeek to);
+    Properties canBeMovedFrom(DayOfWeek from, Adjuster adjuster, DayOfWeek to);
   }
 
   interface Check {
