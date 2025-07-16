@@ -8,7 +8,7 @@
     <Fixed month="JANUARY" day="26" descriptionPropertiesKey="REPUBLIC_DAY"/>
     <Fixed month="AUGUST" day="15" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
     <Fixed month="OCTOBER" day="2" descriptionPropertiesKey="GHANDIS_BIRTHDAY"/>
-    <IslamicHoliday type="ID_AL_FITR_2" descriptionPropertiesKey="ID_UL_FITR"/> <!-- FIXME -->
+    <IslamicHoliday type="ID_AL_FITR_2" descriptionPropertiesKey="islamic.ID_AL_FITR_2"/>
   </Holidays>
 
   <Sources>
