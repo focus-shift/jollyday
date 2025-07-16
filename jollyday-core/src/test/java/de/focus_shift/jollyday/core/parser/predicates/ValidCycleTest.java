@@ -154,27 +154,14 @@ class ValidCycleTest {
   }
 
   private static int getModulo(Limited.YearCycle cycle) {
-    int modulo = 0;
-    switch (cycle) {
-      case TWO_YEARS:
-        modulo = 2;
-        break;
-      case THREE_YEARS:
-        modulo = 3;
-        break;
-      case FOUR_YEARS:
-        modulo = 4;
-        break;
-      case FIVE_YEARS:
-        modulo = 5;
-        break;
-      case SIX_YEARS:
-        modulo = 6;
-        break;
-      default:
-        throw new IllegalStateException("Unexpected value: " + cycle);
-    }
-    return modulo;
+    return switch (cycle) {
+      case TWO_YEARS -> 2;
+      case THREE_YEARS -> 3;
+      case FOUR_YEARS -> 4;
+      case FIVE_YEARS -> 5;
+      case SIX_YEARS -> 6;
+      default -> throw new IllegalStateException("Unexpected value: " + cycle);
+    };
   }
 
   @Property
