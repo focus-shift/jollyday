@@ -219,8 +219,7 @@ public class DefaultHolidayManager extends HolidayManager {
     try {
       final Method[] declaredMethods = config.getClass().getDeclaredMethods();
       for (Method declaredMethod : declaredMethods) {
-        if (declaredMethod.getGenericReturnType() instanceof ParameterizedType) {
-          final ParameterizedType parameterizedType = (ParameterizedType) declaredMethod.getGenericReturnType();
+        if (declaredMethod.getGenericReturnType() instanceof ParameterizedType parameterizedType) {
           final Type actualTypeArgument = parameterizedType.getActualTypeArguments()[0];
           final List<?> holidays = (List<?>) declaredMethod.invoke(config);
           if (!holidays.isEmpty()) {
