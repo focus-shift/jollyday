@@ -22,7 +22,7 @@ class HolidayITTest {
     assertFor(ITALY)
       .hasFixedHoliday("NEW_YEAR", JANUARY, 1)
         .notBetween(Year.of(1900), Year.of(1966))
-        .between(Year.of(1967), Year.of(2500))
+        .from(Year.of(1967))
       .and()
       .hasFixedHoliday("EPIPHANY", JANUARY, 6).and()
       .hasFixedHoliday("LIBERATION", APRIL, 25).and()
@@ -39,7 +39,7 @@ class HolidayITTest {
       .hasFixedHoliday("STEPHENS", DECEMBER, 26).and()
       .hasChristianHoliday("EASTER").and()
       .hasChristianHoliday("EASTER_MONDAY")
-        .between(Year.of(1642), Year.of(2500))
+        .from(Year.of(1642))
       .and()
       .hasChristianHoliday("WHIT_MONDAY").inSubdivision("32")
       .check();

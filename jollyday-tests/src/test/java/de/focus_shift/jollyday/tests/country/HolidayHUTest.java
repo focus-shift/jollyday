@@ -32,7 +32,7 @@ class HolidayHUTest {
       .hasChristianHoliday("EASTER").and()
       .hasChristianHoliday("GOOD_FRIDAY")
         .notBetween(Year.of(1900), Year.of(2016))
-        .between(Year.of(2017), Year.of(2500))
+        .from(Year.of(2017))
       .and()
       .hasChristianHoliday("EASTER_MONDAY").and()
       .hasChristianHoliday("WHIT_MONDAY")

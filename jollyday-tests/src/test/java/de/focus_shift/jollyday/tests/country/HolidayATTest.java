@@ -45,7 +45,7 @@ class HolidayATTest {
       .hasFixedHoliday("LEOPOLD", NOVEMBER, 15, OBSERVANCE).inSubdivision("3").and()
       .hasFixedHoliday("FLORIAN", MAY, 4, OBSERVANCE).inSubdivision("4")
         .notBetween(Year.of(1900), Year.of(2003))
-        .between(Year.of(2004), Year.of(2500))
+        .from(Year.of(2004))
       .and()
       .hasFixedHoliday("RUPERT", SEPTEMBER, 24, OBSERVANCE).inSubdivision("5").and()
       .hasFixedHoliday("JOSEFS_DAY", MARCH, 19, OBSERVANCE).inSubdivision("6").and()

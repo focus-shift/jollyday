@@ -40,7 +40,7 @@ class HolidayUATest {
         .canBeMovedFrom(SUNDAY, MONDAY)
       .and()
       .hasFixedHoliday("LABOUR_DAY", MAY, 2)
-        .between(Year.of(1900), Year.of(2017))
+        .to(Year.of(2017))
         .canBeMovedFrom(SATURDAY, MONDAY)
         .canBeMovedFrom(SUNDAY, MONDAY)
       .and()

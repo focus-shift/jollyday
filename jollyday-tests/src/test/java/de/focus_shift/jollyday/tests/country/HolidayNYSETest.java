@@ -29,7 +29,7 @@ class HolidayNYSETest {
       .and()
       .hasFixedHoliday("JUNETEENTH", JUNE, 19)
         .notBetween(Year.of(1900), Year.of(2021))
-        .between(Year.of(2022), Year.of(2500))
+        .from(Year.of(2022))
         .canBeMovedFrom(SATURDAY, PREVIOUS, FRIDAY)
         .canBeMovedFrom(SUNDAY, MONDAY)
       .and()

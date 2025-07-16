@@ -31,7 +31,7 @@ class HolidayVETest {
       .hasFixedHoliday("NAVY_DAY", JULY, 24).and()
       .hasFixedHoliday("FLAG_DAY", AUGUST, 3)
         .notBetween(Year.of(1900), Year.of(2005))
-        .between(Year.of(2006), Year.of(2500))
+        .from(Year.of(2006))
       .and()
       .hasFixedHoliday("INDIGENOUS_RESISTANCE", OCTOBER, 12).and()
       .hasFixedHoliday("ALL_SAINTS", NOVEMBER, 1).and()
