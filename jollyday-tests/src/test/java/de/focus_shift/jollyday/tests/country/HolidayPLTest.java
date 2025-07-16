@@ -26,7 +26,7 @@ class HolidayPLTest {
       .hasFixedHoliday("INDEPENDENCE_DAY", NOVEMBER,11).and()
       .hasFixedHoliday("CHRISTMAS_EVE", DECEMBER,24)
         .notBetween(Year.of(1900), Year.of(2024))
-        .between(Year.of(2025), Year.of(2500))
+        .from(Year.of(2025))
       .and()
       .hasFixedHoliday("CHRISTMAS", DECEMBER,25).and()
       .hasFixedHoliday("STEPHENS", DECEMBER,26).and()

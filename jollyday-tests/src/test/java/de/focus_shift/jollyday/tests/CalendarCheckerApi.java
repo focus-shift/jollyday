@@ -57,6 +57,8 @@ public interface CalendarCheckerApi {
   }
 
   interface Between extends Check  {
+    Properties to(Year to);
+    Properties from(Year from);
     Properties between(Year from, Year to);
     Properties notBetween(Year from, Year to);
   }

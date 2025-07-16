@@ -30,7 +30,7 @@ class HolidayDETest {
       .and()
       .hasFixedHoliday("UNIFICATION_GERMANY", OCTOBER, 3)
         .notBetween(Year.of(1900), Year.of(1989))
-        .between(Year.of(1990), Year.of(2500))
+        .from(Year.of(1990))
       .and()
       .hasFixedHoliday("REFORMATION_DAY", OCTOBER, 31)
         .between(Year.of(2017), Year.of(2017))
@@ -75,7 +75,7 @@ class HolidayDETest {
       .hasChristianHoliday("CORPUS_CHRISTI").inSubdivision("he").and()
 
       /* Mecklenburg-Vorpommern */
-      .hasFixedHoliday("INTERNATIONAL_WOMAN", MARCH, 8).between(Year.of(2023), Year.of(2500)).inSubdivision("mv").and()
+      .hasFixedHoliday("INTERNATIONAL_WOMAN", MARCH, 8).from(Year.of(2023)).inSubdivision("mv").and()
       .hasFixedHoliday("REFORMATION_DAY", OCTOBER, 31).inSubdivision("mv").and()
 
       /* North Rhine-Westphalia */
@@ -100,19 +100,19 @@ class HolidayDETest {
 
       /* Thuringia */
       .hasFixedHoliday("REFORMATION_DAY", OCTOBER, 31).inSubdivision("th").and()
-      .hasFixedHoliday("CHILDRENS_DAY", SEPTEMBER, 20).between(Year.of(2019), Year.of(2500)).inSubdivision("th").and()
+      .hasFixedHoliday("CHILDRENS_DAY", SEPTEMBER, 20).from(Year.of(2019)).inSubdivision("th").and()
 
       /* Schleswig-Holstein */
-      .hasFixedHoliday("REFORMATION_DAY", OCTOBER, 31).between(Year.of(2018), Year.of(2500)).inSubdivision("sh").and()
+      .hasFixedHoliday("REFORMATION_DAY", OCTOBER, 31).from(Year.of(2018)).inSubdivision("sh").and()
 
       /* Hamburg */
-      .hasFixedHoliday("REFORMATION_DAY", OCTOBER, 31).between(Year.of(2018), Year.of(2500)).inSubdivision("hh").and()
+      .hasFixedHoliday("REFORMATION_DAY", OCTOBER, 31).from(Year.of(2018)).inSubdivision("hh").and()
 
       /* Bremen */
-      .hasFixedHoliday("REFORMATION_DAY", OCTOBER, 31).between(Year.of(2018), Year.of(2500)).inSubdivision("hb").and()
+      .hasFixedHoliday("REFORMATION_DAY", OCTOBER, 31).from(Year.of(2018)).inSubdivision("hb").and()
 
       /* Lower-Saxony */
-      .hasFixedHoliday("REFORMATION_DAY", OCTOBER, 31).between(Year.of(2018), Year.of(2500)).inSubdivision("ni")
+      .hasFixedHoliday("REFORMATION_DAY", OCTOBER, 31).from(Year.of(2018)).inSubdivision("ni")
 
       .check();
   }

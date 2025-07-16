@@ -161,7 +161,7 @@ class HolidayCHTest {
 
       /* Obwalden */
       .hasFixedHoliday("ASSUMPTION_DAY", AUGUST, 15).inSubdivision("ow").and()
-      .hasFixedHoliday("ST_NICHOLAS", SEPTEMBER, 25).between(Year.of(1947), Year.of(2500)).inSubdivision("ow").and()
+      .hasFixedHoliday("ST_NICHOLAS", SEPTEMBER, 25).from(Year.of(1947)).inSubdivision("ow").and()
       .hasFixedHoliday("ALL_SAINTS", NOVEMBER, 1).inSubdivision("ow").and()
       .hasFixedHoliday("IMMACULATE_CONCEPTION", DECEMBER, 8).inSubdivision("ow").and()
       .hasFixedHoliday("STEPHENS", DECEMBER, 26).inSubdivision("ow").and()

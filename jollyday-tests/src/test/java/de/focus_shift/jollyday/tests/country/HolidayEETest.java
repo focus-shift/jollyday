@@ -25,7 +25,7 @@ class HolidayEETest {
       .hasFixedHoliday("MIDSUMMER", JUNE, 24).and()
       .hasFixedHoliday("REST_INDEP", AUGUST, 20)
         .notBetween(Year.of(1900), Year.of(1990))
-        .between(Year.of(1991), Year.of(2500))
+        .from(Year.of(1991))
       .and()
       .hasFixedHoliday("CHRISTMAS_EVE", DECEMBER, 24).and()
       .hasFixedHoliday("CHRISTMAS", DECEMBER, 25).and()

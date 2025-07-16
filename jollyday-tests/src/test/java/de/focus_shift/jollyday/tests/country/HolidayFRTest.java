@@ -29,9 +29,9 @@ class HolidayFRTest {
       .hasChristianHoliday("EASTER_MONDAY").and()
       .hasChristianHoliday("ASCENSION_DAY").and()
       .hasChristianHoliday("WHIT_MONDAY")
-        .between(Year.of(1900), Year.of(2003))
+        .to(Year.of(2003))
         .notBetween(Year.of(2004), Year.of(2007))
-        .between(Year.of(2008), Year.of(2500))
+        .from(Year.of(2008))
       .and()
 
       .hasFixedHoliday("ABOLITION_OF_SLAVERY", DECEMBER, 26)
