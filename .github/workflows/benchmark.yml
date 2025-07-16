@@ -2,7 +2,7 @@ name: Benchmark
 
 on:
   schedule:
-    - cron: "15 0 * * *"
+    - cron: '15 0 * * *'
   push:
     branches:
       - main
@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 env:
-  MAVEN_ARGS: "--no-transfer-progress --errors --fail-at-end --show-version"
+  MAVEN_ARGS: '--no-transfer-progress --errors --fail-at-end --show-version'
 
 jobs:
   build:
@@ -23,7 +23,7 @@ jobs:
         uses: actions/setup-java@v5
         with:
           distribution: 'temurin'
-          java-version-file: ".tool-versions"
+          java-version-file: '.tool-versions'
           cache: 'maven'
       - name: Build
         run: ./mvnw verify -Dtests.groups=BenchmarkTest
