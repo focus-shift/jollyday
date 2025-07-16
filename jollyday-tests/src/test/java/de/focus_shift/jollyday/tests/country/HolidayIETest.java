@@ -28,7 +28,7 @@ class HolidayIETest {
       .hasFixedHoliday("CHRISTMAS", DECEMBER, 25).and()
       .hasFixedHoliday("STEPHENS", DECEMBER, 26).and()
       .hasFixedHoliday("ST_BRIGID", FEBRUARY, 1)
-        .between(Year.of(2023), Year.of(2500))
+        .from(Year.of(2023))
         .canBeMovedFrom(TUESDAY, MONDAY)
         .canBeMovedFrom(WEDNESDAY, MONDAY)
         .canBeMovedFrom(THURSDAY, MONDAY)

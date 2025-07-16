@@ -137,6 +137,18 @@ public class CalendarChecker implements
   }
 
   @Override
+  public CalendarCheckerApi.Properties from(final Year from) {
+    this.validRanges.add(new YearRange(from, Year.of(2500)));
+    return this;
+  }
+
+  @Override
+  public CalendarCheckerApi.Properties to(Year to) {
+    this.validRanges.add(new YearRange(Year.of(1900), to));
+    return this;
+  }
+
+  @Override
   public CalendarCheckerApi.Properties between(final Year from, Year to) {
     this.validRanges.add(new YearRange(from, to));
     return this;

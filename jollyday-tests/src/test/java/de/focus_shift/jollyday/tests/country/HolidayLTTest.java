@@ -29,7 +29,7 @@ class HolidayLTTest {
       .hasFixedHoliday("ASSUMPTION_DAY", AUGUST, 15).and()
       .hasFixedHoliday("ALL_SAINTS", NOVEMBER, 1).and()
       .hasFixedHoliday("ALL_SOULS", NOVEMBER, 2)
-        .between(Year.of(2020), Year.of(2500)).and()
+        .from(Year.of(2020)).and()
       .hasFixedHoliday("CHRISTMAS_EVE", DECEMBER, 25).and()
       .hasFixedHoliday("CHRISTMAS", DECEMBER, 26).and()
       .hasChristianHoliday("EASTER").and()
