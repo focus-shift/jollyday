@@ -28,7 +28,11 @@ import static java.time.temporal.TemporalAdjusters.previousOrSame;
 import static java.util.Collections.unmodifiableList;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class CalendarChecker implements CalendarCheckerApi.Holiday, CalendarCheckerApi.Between, CalendarCheckerApi.Properties {
+public class CalendarChecker implements
+  CalendarCheckerApi.Holiday,
+  CalendarCheckerApi.Between,
+  CalendarCheckerApi.Properties
+{
 
   enum Category {
     BY_DAY,
@@ -184,20 +188,7 @@ public class CalendarChecker implements CalendarCheckerApi.Holiday, CalendarChec
 
   @Override
   public void check() {
-    checks.add(new HolidayCalendarCheck(
-      calendar,
-      propertyKey,
-      month,
-      day,
-      type,
-      new ArrayList<>(validRanges),
-      new ArrayList<>(invalidRanges),
-      new ArrayList<>(validShifts),
-      this.subdivisions.clone(),
-      category
-    ));
-
-    clearProperties();
+    and();
 
     final HolidayManager holidayManager = HolidayManager.getInstance(create(checks.get(0).getCalendar()));
 
