@@ -44,7 +44,7 @@ class HolidayJPTest {
       .hasFixedHoliday("HEALTH_SPORTS", OCTOBER, 10)
         .between(Year.of(1966), Year.of(1999)).and()
       .hasFixedHoliday("CULTURE_DAY", NOVEMBER, 3)
-        .canBeShiftedFrom(DayOfWeek.SUNDAY, DayOfWeek.MONDAY)
+        .canBeMovedFrom(DayOfWeek.SUNDAY, DayOfWeek.MONDAY)
         .between(Year.of(1948), Year.of(2500))
       .and()
       .hasFixedHoliday("LABOUR_DAY", NOVEMBER, 23)
