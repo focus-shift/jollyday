@@ -17,7 +17,7 @@ on:
         default: 'x.xx.x-SNAPSHOT'
 
 env:
-  MAVEN_ARGS: "--no-transfer-progress --errors --fail-at-end --show-version"
+  MAVEN_ARGS: '--no-transfer-progress --errors --fail-at-end --show-version'
 
 jobs:
   trigger-release:
@@ -31,12 +31,11 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version-file: ".tool-versions"
+          java-version-file: '.tool-versions'
           cache: 'maven'
 
       - name: Build
         run: ./mvnw verify
-
       - name: Create Release Notes
         uses: spring-io/github-changelog-generator@v0.0.12
         with:
@@ -49,7 +48,7 @@ jobs:
       - name: Commit Release Notes
         run: |
           git add .chglog/*.md
-          git commit -m "[skip ci] Add release notes for version ${{ github.event.inputs.releaseVersion }}"
+          git commit -m '[skip ci] Add release notes for version ${{ github.event.inputs.releaseVersion }}'
       - name: Push Release Notes
         uses: ad-m/github-push-action@v0.8.0
         with:
@@ -59,10 +58,10 @@ jobs:
       - name: Set release version
         run: ./mvnw versions:set -DnewVersion=${{ github.event.inputs.releaseVersion }}
       - name: Commit release version
-        run: git add ./\*pom.xml && git commit -m "New Release Version ${{ github.event.inputs.releaseVersion }}"
+        run: git add ./\*pom.xml && git commit -m 'New Release Version ${{ github.event.inputs.releaseVersion }}'
 
       - name: Add release tag
-        run: git tag -a -m "v${{ github.event.inputs.releaseVersion }}" v${{ github.event.inputs.releaseVersion }}
+        run: git tag -a -m 'v${{ github.event.inputs.releaseVersion }}' v${{ github.event.inputs.releaseVersion }}
       - name: Push release version
         uses: ad-m/github-push-action@v0.8.0
         with:
@@ -72,7 +71,7 @@ jobs:
       - name: Set new snapshot version
         run: ./mvnw versions:set -DnewVersion=${{ github.event.inputs.nextVersion }}
       - name: Commit new snapshot version
-        run: git add ./\*pom.xml && git commit -m "Prepare Next Snapshot Version ${{ github.event.inputs.nextVersion }}"
+        run: git add ./\*pom.xml && git commit -m 'Prepare Next Snapshot Version ${{ github.event.inputs.nextVersion }}'
       - name: Push snapshot commit
         uses: ad-m/github-push-action@v0.8.0
         with:
