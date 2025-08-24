@@ -2,7 +2,7 @@ name: Build
 
 on:
   schedule:
-    - cron: "15 0 * * *"
+    - cron: '15 0 * * *'
   push:
     branches:
       - main
@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 env:
-  MAVEN_ARGS: "--no-transfer-progress --errors --fail-at-end --show-version"
+  MAVEN_ARGS: '--no-transfer-progress --errors --fail-at-end --show-version'
 
 jobs:
   build:
@@ -41,11 +41,11 @@ jobs:
         uses: actions/checkout@v5
         with:
           fetch-depth: 0
-      - name: Set up JDK 17
+      - name: Set up JDK from .tool-versions
         uses: actions/setup-java@v5
         with:
           distribution: 'temurin'
-          java-version-file: ".tool-versions"
+          java-version-file: '.tool-versions'
           cache: 'maven'
       - name: Run tests with JaxB
         run: >
@@ -63,7 +63,6 @@ jobs:
           -Dsonar.host.url=https://sonarcloud.io
           -Dsonar.organization=focus-shift
           -Dsonar.projectKey=focus-shift_jollyday
-          -Dsonar.java.jdkHome=${{ env.JAVA_HOME_11_X64 }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
