@@ -10,7 +10,9 @@
 name: 'Dependency review'
 on:
   pull_request:
-    branches: [ "main" ]
+    branches:
+      - main
+      - 2.x
     paths:
       - '**/pom.xml'
 
