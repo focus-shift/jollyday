@@ -1,6 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.1.0 https://maven.apache.org/xsd/maven-4.1.0.xsd">
+  <modelVersion>4.1.0</modelVersion>
 
   <groupId>de.focus-shift</groupId>
   <artifactId>jollyday</artifactId>
@@ -53,11 +52,11 @@
     </sonar.java.source>
   </properties>
 
-  <modules>
-    <module>jollyday-core</module>
-    <module>jollyday-jackson</module>
-    <module>jollyday-jaxb</module>
-  </modules>
+  <subprojects>
+    <subproject>jollyday-core</subproject>
+    <subproject>jollyday-jackson</subproject>
+    <subproject>jollyday-jaxb</subproject>
+  </subprojects>
 
   <developers>
     <developer>
@@ -367,9 +366,9 @@
           <name>!release</name>
         </property>
       </activation>
-      <modules>
-        <module>jollyday-tests</module>
-      </modules>
+      <subprojects>
+        <subproject>jollyday-tests</subproject>
+      </subprojects>
     </profile>
 
   </profiles>

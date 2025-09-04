@@ -36,7 +36,6 @@ jobs:
 
       - name: Build
         run: ./mvnw verify
-
       - name: Create Release Notes
         uses: spring-io/github-changelog-generator@v0.0.12
         with:
