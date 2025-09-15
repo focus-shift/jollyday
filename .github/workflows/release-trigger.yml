@@ -51,7 +51,7 @@ jobs:
           git add .chglog/*.md
           git commit -m "[skip ci] Add release notes for version ${{ github.event.inputs.releaseVersion }}"
       - name: Push Release Notes
-        uses: ad-m/github-push-action@v0.8.0
+        uses: ad-m/github-push-action@v1.0.0
         with:
           github_token: ${{ secrets.AM_PAT }}
           branch: ${{ github.ref }}
@@ -64,7 +64,7 @@ jobs:
       - name: Add release tag
         run: git tag -a -m "v${{ github.event.inputs.releaseVersion }}" v${{ github.event.inputs.releaseVersion }}
       - name: Push release version
-        uses: ad-m/github-push-action@v0.8.0
+        uses: ad-m/github-push-action@v1.0.0
         with:
           github_token: ${{ secrets.AM_PAT }}
           branch: ${{ github.ref }}
@@ -74,7 +74,7 @@ jobs:
       - name: Commit new snapshot version
         run: git add ./\*pom.xml && git commit -m "Prepare Next Snapshot Version ${{ github.event.inputs.nextVersion }}"
       - name: Push snapshot commit
-        uses: ad-m/github-push-action@v0.8.0
+        uses: ad-m/github-push-action@v1.0.0
         with:
           github_token: ${{ secrets.AM_PAT }}
           branch: ${{ github.ref }}
