@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="gi" description="Gibraltar"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+
+  <Holidays>
+    <Fixed month="JANUARY" day="1" validFrom="1974" descriptionPropertiesKey="NEW_YEAR">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <Fixed month="FEBRUARY" day="15" validFrom="2021" validTo="2021" descriptionPropertiesKey="COMMONWEALTH_DAY"/>
+    <Fixed month="MAY" day="24" validFrom="1958" validTo="1976" descriptionPropertiesKey="COMMONWEALTH_DAY"/>
+
+    <Fixed month="APRIL" day="28" validFrom="2021" descriptionPropertiesKey="MEMORIAL_DAY"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="MAY_DAY"/>
+    <Fixed month="MAY" day="8" validFrom="2020" validTo="2020" descriptionPropertiesKey="VICTORY_DAY"/>
+
+    <Fixed month="SEPTEMBER" day="10" validFrom="1967" descriptionPropertiesKey="NATIONAL_DAY_OF_GIBRALTAR">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+
+    <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="2022" descriptionPropertiesKey="WINTER_MID_TERM_BANK_HOLIDAY"/>
+    <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" validFrom="1971" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
+    <FixedWeekday which="LAST" weekday="MONDAY" month="AUGUST" validFrom="1971" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
+
+    <FixedWeekday which="SECOND" weekday="MONDAY" month="MARCH" validFrom="1977" validTo="2020" descriptionPropertiesKey="COMMONWEALTH_DAY"/>
+    <FixedWeekday which="THIRD" weekday="MONDAY" month="JUNE" validFrom="2022" descriptionPropertiesKey="KINGS_BIRTHDAY"/>
+
+    <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+  </Holidays>
+
+  <Sources>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:GI</Source>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Gibraltar</Source>
+    <Source>https://www.gibraltar.gov.gi/press-releases/bank-and-public-holidays-2024-9356</Source>
+  </Sources>
+</Configuration>

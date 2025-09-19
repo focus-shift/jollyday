@@ -1,0 +1,61 @@
+package de.focus_shift.jollyday.tests.country;
+
+import org.junit.jupiter.api.Test;
+
+import java.time.Year;
+
+import static de.focus_shift.jollyday.core.HolidayCalendar.GIBRALTAR;
+import static de.focus_shift.jollyday.tests.CalendarCheckerApi.assertFor;
+import static java.time.DayOfWeek.MONDAY;
+import static java.time.DayOfWeek.SATURDAY;
+import static java.time.DayOfWeek.SUNDAY;
+import static java.time.DayOfWeek.TUESDAY;
+import static java.time.Month.APRIL;
+import static java.time.Month.DECEMBER;
+import static java.time.Month.FEBRUARY;
+import static java.time.Month.JANUARY;
+import static java.time.Month.MAY;
+import static java.time.Month.SEPTEMBER;
+
+class HolidayGITest {
+
+  @Test
+  void ensuresHolidays() {
+
+    assertFor(GIBRALTAR)
+      .hasFixedHoliday("NEW_YEAR", JANUARY, 1)
+        .notBetween(Year.of(1900), Year.of(1973))
+        .between(Year.of(1974), Year.of(2500))
+        .canBeShiftedFrom(SATURDAY, MONDAY)
+        .canBeShiftedFrom(SUNDAY, MONDAY)
+      .and()
+      .hasFixedHoliday("COMMONWEALTH_DAY", FEBRUARY, 15)
+      . between(Year.of(2021), Year.of(2021))
+      .and()
+      .hasFixedHoliday("MEMORIAL_DAY", APRIL, 28)
+        .notBetween(Year.of(1900), Year.of(2020))
+        .between(Year.of(2021), Year.of(2500))
+      .and()
+      .hasFixedHoliday("MAY_DAY", MAY, 1).and()
+      .hasFixedHoliday("VICTORY_DAY", MAY, 8)
+        .between(Year.of(2020), Year.of(2020))
+      .and()
+      .hasFixedHoliday("NATIONAL_DAY_OF_GIBRALTAR", SEPTEMBER, 10)
+        .notBetween(Year.of(1900), Year.of(1966))
+        .between(Year.of(1967), Year.of(2500))
+        .canBeShiftedFrom(SATURDAY, MONDAY)
+        .canBeShiftedFrom(SUNDAY, MONDAY)
+      .and()
+      .hasFixedHoliday("CHRISTMAS", DECEMBER, 25)
+        .canBeShiftedFrom(SATURDAY, MONDAY)
+        .canBeShiftedFrom(SUNDAY, TUESDAY)
+      .and()
+      .hasFixedHoliday("BOXING_DAY", DECEMBER, 26)
+        .canBeShiftedFrom(SATURDAY, MONDAY)
+        .canBeShiftedFrom(SUNDAY, TUESDAY)
+      .and()
+      .hasChristianHoliday("EASTER_MONDAY").and()
+      .hasChristianHoliday("GOOD_FRIDAY")
+      .check();
+  }
+}
