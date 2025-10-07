@@ -28,7 +28,11 @@ import static java.time.temporal.TemporalAdjusters.previousOrSame;
 import static java.util.Collections.unmodifiableList;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class CalendarChecker implements CalendarCheckerApi.Holiday, CalendarCheckerApi.Between, CalendarCheckerApi.Properties {
+public class CalendarChecker implements
+  CalendarCheckerApi.Holiday,
+  CalendarCheckerApi.Between,
+  CalendarCheckerApi.Properties
+{
 
   enum Category {
     BY_DAY,
@@ -133,13 +137,25 @@ public class CalendarChecker implements CalendarCheckerApi.Holiday, CalendarChec
   }
 
   @Override
-  public CalendarCheckerApi.Properties between(final Year from, Year to) {
+  public CalendarCheckerApi.Properties validFrom(final Year from) {
+    this.validRanges.add(new YearRange(from, Year.of(2500)));
+    return this;
+  }
+
+  @Override
+  public CalendarCheckerApi.Properties validTo(final Year to) {
+    this.validRanges.add(new YearRange(Year.of(1900), to));
+    return this;
+  }
+
+  @Override
+  public CalendarCheckerApi.Properties validBetween(final Year from, final Year to) {
     this.validRanges.add(new YearRange(from, to));
     return this;
   }
 
   @Override
-  public CalendarCheckerApi.Properties notBetween(final Year from, Year to) {
+  public CalendarCheckerApi.Properties notValidBetween(final Year from, final Year to) {
     this.invalidRanges.add(new YearRange(from, to));
     return this;
   }
@@ -151,13 +167,13 @@ public class CalendarChecker implements CalendarCheckerApi.Holiday, CalendarChec
   }
 
   @Override
-  public CalendarCheckerApi.Properties canBeShiftedFrom(DayOfWeek from, DayOfWeek to) {
+  public CalendarCheckerApi.Properties canBeMovedFrom(DayOfWeek from, DayOfWeek to) {
     this.validShifts.add(new WeekDayFromTo(from, to, NEXT));
     return this;
   }
 
   @Override
-  public CalendarCheckerApi.Properties canBeShiftedFrom(DayOfWeek from, Adjuster adjuster, DayOfWeek to) {
+  public CalendarCheckerApi.Properties canBeMovedFrom(DayOfWeek from, Adjuster adjuster, DayOfWeek to) {
     this.validShifts.add(new WeekDayFromTo(from, to, adjuster));
     return this;
   }
@@ -184,20 +200,7 @@ public class CalendarChecker implements CalendarCheckerApi.Holiday, CalendarChec
 
   @Override
   public void check() {
-    checks.add(new HolidayCalendarCheck(
-      calendar,
-      propertyKey,
-      month,
-      day,
-      type,
-      new ArrayList<>(validRanges),
-      new ArrayList<>(invalidRanges),
-      new ArrayList<>(validShifts),
-      this.subdivisions.clone(),
-      category
-    ));
-
-    clearProperties();
+    and();
 
     final HolidayManager holidayManager = HolidayManager.getInstance(create(checks.get(0).getCalendar()));
 

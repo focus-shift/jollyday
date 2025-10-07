@@ -17,7 +17,7 @@ class HolidayCATest {
     assertFor(CANADA)
       .hasFixedHoliday("NEW_YEAR", JANUARY, 1).and()
       .hasFixedHoliday("CANADA_DAY", JULY, 1)
-        .canBeShiftedFrom(DayOfWeek.SUNDAY, DayOfWeek.MONDAY)
+        .canBeMovedFrom(DayOfWeek.SUNDAY, DayOfWeek.MONDAY)
       .and()
       .hasFixedHoliday("CHRISTMAS", DECEMBER, 25).and()
       .hasChristianHoliday("GOOD_FRIDAY")

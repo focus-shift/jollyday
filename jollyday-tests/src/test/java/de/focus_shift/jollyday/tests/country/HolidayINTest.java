@@ -18,10 +18,10 @@ class HolidayINTest {
   @Test
   void ensuresHolidays() {
     assertFor(INDIA)
-      .hasFixedHoliday("REPUBLIC_DAY", JANUARY, 26).between(YEAR_FROM, YEAR_TO).and()
-      .hasFixedHoliday("INDEPENDENCE_DAY", AUGUST, 15).between(YEAR_FROM, YEAR_TO).and()
-      .hasFixedHoliday("GHANDIS_BIRTHDAY", OCTOBER, 2).between(YEAR_FROM, YEAR_TO).and()
-      .hasIslamicHoliday("ID_AL_FITR_2").between(YEAR_FROM, YEAR_TO)
+      .hasFixedHoliday("REPUBLIC_DAY", JANUARY, 26).validBetween(YEAR_FROM, YEAR_TO).and()
+      .hasFixedHoliday("INDEPENDENCE_DAY", AUGUST, 15).validBetween(YEAR_FROM, YEAR_TO).and()
+      .hasFixedHoliday("GHANDIS_BIRTHDAY", OCTOBER, 2).validBetween(YEAR_FROM, YEAR_TO).and()
+      .hasIslamicHoliday("ID_AL_FITR_2").validBetween(YEAR_FROM, YEAR_TO)
       .check();
   }
 }

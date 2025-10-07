@@ -17,19 +17,19 @@ class HolidayAETest {
   @Test
   void ensuresHolidays() {
     assertFor(UNITED_ARAB_EMIRATES)
-      .hasFixedHoliday("NEW_YEAR", JANUARY, 1).between(YEAR_FROM, YEAR_TO).and()
-      .hasFixedHoliday("AE_COMMEMORATION_DAY", DECEMBER, 1).between(YEAR_FROM, YEAR_TO).and()
-      .hasFixedHoliday("NATIONAL_DAY", DECEMBER, 2).between(YEAR_FROM, YEAR_TO).and()
-      .hasFixedHoliday("NATIONAL_DAY", DECEMBER, 3).between(YEAR_FROM, YEAR_TO).and()
-      .hasIslamicHoliday("RAMADAN_END").between(YEAR_FROM, YEAR_TO).and()
-      .hasIslamicHoliday("ID_AL_FITR").between(YEAR_FROM, YEAR_TO).and()
-      .hasIslamicHoliday("ID_AL_FITR_2").between(YEAR_FROM, YEAR_TO).and()
-      .hasIslamicHoliday("ID_AL_FITR_3").between(YEAR_FROM, YEAR_TO).and()
-      .hasIslamicHoliday("ARAFAAT").between(YEAR_FROM, YEAR_TO).and()
-      .hasIslamicHoliday("ID_UL_ADHA").between(YEAR_FROM, YEAR_TO).and()
-      .hasIslamicHoliday("ID_UL_ADHA_2").between(YEAR_FROM, YEAR_TO).and()
-      .hasIslamicHoliday("ID_UL_ADHA_3").between(YEAR_FROM, YEAR_TO).and()
-      .hasIslamicHoliday("NEWYEAR").between(YEAR_FROM, YEAR_TO)
+      .hasFixedHoliday("NEW_YEAR", JANUARY, 1).validBetween(YEAR_FROM, YEAR_TO).and()
+      .hasFixedHoliday("AE_COMMEMORATION_DAY", DECEMBER, 1).validBetween(YEAR_FROM, YEAR_TO).and()
+      .hasFixedHoliday("NATIONAL_DAY", DECEMBER, 2).validBetween(YEAR_FROM, YEAR_TO).and()
+      .hasFixedHoliday("NATIONAL_DAY", DECEMBER, 3).validBetween(YEAR_FROM, YEAR_TO).and()
+      .hasIslamicHoliday("RAMADAN_END").validBetween(YEAR_FROM, YEAR_TO).and()
+      .hasIslamicHoliday("ID_AL_FITR").validBetween(YEAR_FROM, YEAR_TO).and()
+      .hasIslamicHoliday("ID_AL_FITR_2").validBetween(YEAR_FROM, YEAR_TO).and()
+      .hasIslamicHoliday("ID_AL_FITR_3").validBetween(YEAR_FROM, YEAR_TO).and()
+      .hasIslamicHoliday("ARAFAAT").validBetween(YEAR_FROM, YEAR_TO).and()
+      .hasIslamicHoliday("ID_UL_ADHA").validBetween(YEAR_FROM, YEAR_TO).and()
+      .hasIslamicHoliday("ID_UL_ADHA_2").validBetween(YEAR_FROM, YEAR_TO).and()
+      .hasIslamicHoliday("ID_UL_ADHA_3").validBetween(YEAR_FROM, YEAR_TO).and()
+      .hasIslamicHoliday("NEWYEAR").validBetween(YEAR_FROM, YEAR_TO)
       .check();
   }
 }

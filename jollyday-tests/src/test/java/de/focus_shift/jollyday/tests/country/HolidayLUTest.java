@@ -20,7 +20,7 @@ class HolidayLUTest {
       .hasFixedHoliday("NEW_YEAR", JANUARY, 1).and()
       .hasFixedHoliday("LABOUR_DAY", MAY, 1).and()
       .hasFixedHoliday("EUROPE_DAY", MAY, 9)
-        .between(of(2019), of(2500)).and()
+        .validBetween(of(2019), of(2500)).and()
       .hasFixedHoliday("NATIONAL_DAY", JUNE, 23).and()
       .hasFixedHoliday("ASSUMPTION_DAY", AUGUST, 15).and()
       .hasFixedHoliday("ALL_SAINTS", NOVEMBER, 1).and()
