@@ -13,6 +13,7 @@ import static java.time.Month.JANUARY;
 import static java.time.Month.JUNE;
 import static java.time.Month.MAY;
 import static java.time.Month.NOVEMBER;
+import static java.time.Month.OCTOBER;
 
 class HolidayITTest {
 
@@ -28,6 +29,10 @@ class HolidayITTest {
       .hasFixedHoliday("LABOUR_DAY", MAY, 1).and()
       .hasFixedHoliday("REPUBLIC_DAY", JUNE, 2).and()
       .hasFixedHoliday("ASSUMPTION_DAY", AUGUST, 15).and()
+      .hasFixedHoliday("ST_FRANCIS_OF_ASSISI", OCTOBER, 4)
+        .notBetween(Year.of(1900), Year.of(2025))
+        .between(Year.of(2026), Year.of(2500))
+      .and()
       .hasFixedHoliday("ALL_SAINTS", NOVEMBER, 1).and()
       .hasFixedHoliday("IMMACULATE_CONCEPTION", DECEMBER, 8).and()
       .hasFixedHoliday("CHRISTMAS", DECEMBER, 25).and()
