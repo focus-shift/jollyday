@@ -57,10 +57,10 @@ public interface CalendarCheckerApi {
   }
 
   interface Between extends Check  {
-    Properties to(Year to);
-    Properties from(Year from);
-    Properties between(Year from, Year to);
-    Properties notBetween(Year from, Year to);
+    Properties validTo(Year to);
+    Properties validFrom(Year from);
+    Properties validBetween(Year from, Year to);
+    Properties notValidBetween(Year from, Year to);
   }
 
   interface Shift extends Check  {
