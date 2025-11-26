@@ -9,6 +9,7 @@
       <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
+    <Fixed month="JANUARY" day="2" validFrom="2026" validTo="2026" descriptionPropertiesKey="CURRENCY_CHANGE_DAY"/>
     <Fixed month="MARCH" day="3" descriptionPropertiesKey="LIBERATION">
       <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
@@ -46,6 +47,7 @@
     <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="SECOND_CHRISTMAS_DAY">
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
+    <Fixed month="DECEMBER" day="31" validFrom="2025" validTo="2025" descriptionPropertiesKey="CURRENCY_CHANGE_DAY"/>
     <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY" chronology="JULIAN"/>
     <ChristianHoliday type="EASTER_SATURDAY" descriptionPropertiesKey="christian.EASTER_SATURDAY" chronology="JULIAN"/>
     <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER" chronology="JULIAN"/>
