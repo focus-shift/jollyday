@@ -2,6 +2,8 @@ package de.focus_shift.jollyday.tests.country;
 
 import org.junit.jupiter.api.Test;
 
+import java.time.Year;
+
 import static de.focus_shift.jollyday.core.HolidayCalendar.BULGARIA;
 import static de.focus_shift.jollyday.tests.CalendarCheckerApi.assertFor;
 import static java.time.DayOfWeek.MONDAY;
@@ -24,6 +26,9 @@ class HolidayBGTest {
       .hasFixedHoliday("NEW_YEAR", JANUARY, 1)
         .canBeMovedFrom(SATURDAY, MONDAY)
         .canBeMovedFrom(SUNDAY, MONDAY)
+      .and()
+      .hasFixedHoliday("CURRENCY_CHANGE_DAY", JANUARY, 2)
+        .validBetween(Year.of(2026), Year.of(2026))
       .and()
       .hasFixedHoliday("LIBERATION", MARCH, 3)
         .canBeMovedFrom(SATURDAY, MONDAY)
@@ -61,6 +66,9 @@ class HolidayBGTest {
       .and()
       .hasFixedHoliday("SECOND_CHRISTMAS_DAY", DECEMBER, 26)
         .canBeMovedFrom(SUNDAY, MONDAY)
+      .and()
+      .hasFixedHoliday("CURRENCY_CHANGE_DAY", DECEMBER, 31)
+        .validBetween(Year.of(2025), Year.of(2025))
       .and()
       .hasChristianHoliday("GOOD_FRIDAY").and()
       .hasChristianHoliday("EASTER_SATURDAY").and()
