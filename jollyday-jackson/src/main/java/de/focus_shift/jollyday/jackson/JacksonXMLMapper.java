@@ -1,11 +1,11 @@
 package de.focus_shift.jollyday.jackson;
 
-import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import de.focus_shift.jollyday.jackson.mapping.Configuration;
+import tools.jackson.dataformat.xml.XmlMapper;
 
 import java.io.InputStream;
 
-import static com.fasterxml.jackson.databind.PropertyNamingStrategies.UPPER_CAMEL_CASE;
+import static tools.jackson.databind.PropertyNamingStrategies.UPPER_CAMEL_CASE;
 
 public class JacksonXMLMapper {
 
@@ -28,9 +28,9 @@ public class JacksonXMLMapper {
 
   private static class JacksonMapperCreator {
     private XmlMapper create() {
-      final XmlMapper mapper = new XmlMapper();
-      mapper.setPropertyNamingStrategy(UPPER_CAMEL_CASE);
-      return mapper;
+      return XmlMapper.builder()
+        .propertyNamingStrategy(UPPER_CAMEL_CASE)
+        .build();
     }
   }
 }

@@ -8,11 +8,10 @@ module de.focus_shift.jollyday.jackson {
 
   opens de.focus_shift.jollyday.jackson.mapping to
     com.fasterxml.jackson.annotation,
-    com.fasterxml.jackson.databind;
+    tools.jackson.databind;
 
-  requires com.fasterxml.jackson.annotation;
-  requires com.fasterxml.jackson.databind;
-  requires com.fasterxml.jackson.dataformat.xml;
+  requires tools.jackson.databind;
+  requires tools.jackson.dataformat.xml;
   requires de.focus_shift.jollyday.core;
   requires java.xml;
   requires org.slf4j;
@@ -21,5 +20,5 @@ module de.focus_shift.jollyday.jackson {
   exports de.focus_shift.jollyday.jackson to
     de.focus_shift.jollyday.core;
   exports de.focus_shift.jollyday.jackson.mapping to
-    com.fasterxml.jackson.databind;
+    tools.jackson.databind;
 }
