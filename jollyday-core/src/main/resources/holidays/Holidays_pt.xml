@@ -15,10 +15,10 @@
     <Fixed month="DECEMBER" day="1" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
     <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-    <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
-    <ChristianHoliday type="CARNIVAL" descriptionPropertiesKey="christian.CARNIVAL"/>
-    <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-    <ChristianHoliday type="CORPUS_CHRISTI" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
+    <ChristianHoliday type="EASTER"/>
+    <ChristianHoliday type="CARNIVAL"/>
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="CORPUS_CHRISTI"/>
   </Holidays>
 
   <SubConfigurations hierarchy="01" description="Aveiro">
@@ -26,7 +26,7 @@
 
     <SubConfigurations hierarchy="AGD" description="Águeda">
       <Holidays>
-        <ChristianHoliday type="PENTECOST_MONDAY" descriptionPropertiesKey="christian.PENTECOST_MONDAY"/>
+        <ChristianHoliday type="PENTECOST_MONDAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -74,7 +74,7 @@
 
     <SubConfigurations hierarchy="ILH" description="Ílhavo">
       <Holidays>
-        <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+        <ChristianHoliday type="EASTER_MONDAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -104,7 +104,7 @@
 
     <SubConfigurations hierarchy="VGS" description="Vagos">
       <Holidays>
-        <ChristianHoliday type="PENTECOST_MONDAY" descriptionPropertiesKey="christian.PENTECOST_MONDAY"/>
+        <ChristianHoliday type="PENTECOST_MONDAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -304,7 +304,7 @@
 
     <SubConfigurations hierarchy="CBA" description="Cuba">
       <Holidays>
-        <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+        <ChristianHoliday type="EASTER_MONDAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -468,7 +468,7 @@
 
     <SubConfigurations hierarchy="FEC" description="Freixo de Espada à Cinta">
       <Holidays>
-        <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+        <ChristianHoliday type="EASTER_MONDAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -563,7 +563,7 @@
 
     <SubConfigurations hierarchy="PNC" description="Penamacor">
       <Holidays>
-        <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+        <ChristianHoliday type="EASTER_MONDAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -715,7 +715,7 @@
 
     <SubConfigurations hierarchy="BRB" description="Borba">
       <Holidays>
-        <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+        <ChristianHoliday type="EASTER_MONDAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -739,7 +739,7 @@
 
     <SubConfigurations hierarchy="MOR" description="Mora">
       <Holidays>
-        <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+        <ChristianHoliday type="EASTER_MONDAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -751,13 +751,13 @@
 
     <SubConfigurations hierarchy="PRL" description="Portel">
       <Holidays>
-        <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+        <ChristianHoliday type="EASTER_MONDAY"/>
       </Holidays>
     </SubConfigurations>
 
     <SubConfigurations hierarchy="RDD" description="Redondo">
       <Holidays>
-        <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+        <ChristianHoliday type="EASTER_MONDAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -1252,25 +1252,25 @@
 
     <SubConfigurations hierarchy="AVS" description="Avis">
       <Holidays>
-        <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+        <ChristianHoliday type="EASTER_MONDAY"/>
       </Holidays>
     </SubConfigurations>
 
     <SubConfigurations hierarchy="CMR" description="Campo Maior">
       <Holidays>
-        <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+        <ChristianHoliday type="EASTER_MONDAY"/>
       </Holidays>
     </SubConfigurations>
 
     <SubConfigurations hierarchy="CVD" description="Castelo de Vide">
       <Holidays>
-        <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+        <ChristianHoliday type="EASTER_MONDAY"/>
       </Holidays>
     </SubConfigurations>
 
     <SubConfigurations hierarchy="CRT" description="Crato">
       <Holidays>
-        <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+        <ChristianHoliday type="EASTER_MONDAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -1306,13 +1306,13 @@
 
     <SubConfigurations hierarchy="NIS" description="Nisa">
       <Holidays>
-        <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+        <ChristianHoliday type="EASTER_MONDAY"/>
       </Holidays>
     </SubConfigurations>
 
     <SubConfigurations hierarchy="PSR" description="Ponte de Sor">
       <Holidays>
-        <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+        <ChristianHoliday type="EASTER_MONDAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -1324,7 +1324,7 @@
 
     <SubConfigurations hierarchy="SSL" description="Sousel">
       <Holidays>
-        <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+        <ChristianHoliday type="EASTER_MONDAY"/>
       </Holidays>
     </SubConfigurations>
   </SubConfigurations>
@@ -1488,7 +1488,7 @@
 
     <SubConfigurations hierarchy="CNS" description="Constância">
       <Holidays>
-        <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+        <ChristianHoliday type="EASTER_MONDAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -1518,7 +1518,7 @@
 
     <SubConfigurations hierarchy="MAC" description="Mação">
       <Holidays>
-        <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+        <ChristianHoliday type="EASTER_MONDAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -1663,7 +1663,7 @@
 
     <SubConfigurations hierarchy="CMN" description="Caminha">
       <Holidays>
-        <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+        <ChristianHoliday type="EASTER_MONDAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -1675,7 +1675,7 @@
 
     <SubConfigurations hierarchy="MNC" description="Monção">
       <Holidays>
-        <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+        <ChristianHoliday type="EASTER_MONDAY"/>
       </Holidays>
     </SubConfigurations>
 

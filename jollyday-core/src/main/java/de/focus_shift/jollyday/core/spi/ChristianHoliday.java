@@ -60,4 +60,9 @@ public interface ChristianHoliday extends Limited, Described, Movable {
    * @return the chronology of the christian holiday
    */
   Chronology chronology();
+
+  @Override
+  default String descriptionPropertiesKeyPrefix() {
+    return "christian";
+  }
 }

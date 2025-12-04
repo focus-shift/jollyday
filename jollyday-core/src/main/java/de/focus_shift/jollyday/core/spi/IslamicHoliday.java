@@ -39,4 +39,9 @@ public interface IslamicHoliday extends Described, Limited, Movable {
    * @return the type of the islamic holiday
    */
   IslamicHolidayType type();
+
+  @Override
+  default String descriptionPropertiesKeyPrefix() {
+    return "islamic";
+  }
 }

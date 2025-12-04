@@ -16,7 +16,7 @@
     <Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CHRISTMAS_EVE"/>
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
     <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
-    <ChristianHoliday type="GOOD_FRIDAY" validFrom="2016" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-    <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+    <ChristianHoliday type="GOOD_FRIDAY" validFrom="2016"/>
+    <ChristianHoliday type="EASTER_MONDAY"/>
   </Holidays>
 </Configuration>

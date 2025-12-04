@@ -11,14 +11,14 @@
     <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
     <Fixed month="MAY" day="5" descriptionPropertiesKey="VICTORY"/>
     <Fixed month="MAY" day="28" descriptionPropertiesKey="NATIONAL_DAY"/>
-    <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER" chronology="JULIAN"/>
-    <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY" chronology="JULIAN"/>
-    <IslamicHoliday type="RAMADAN" descriptionPropertiesKey="islamic.RAMADAN"/>
-    <IslamicHoliday type="MAWLID_AN_NABI" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
-    <IslamicHoliday type="ID_AL_FITR" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
-    <IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
-    <EthiopianOrthodoxHoliday type="TIMKAT" descriptionPropertiesKey="ethiopian.orthodox.TIMKAT"/>
-    <EthiopianOrthodoxHoliday type="ENKUTATASH" descriptionPropertiesKey="ethiopian.orthodox.ENKUTATASH"/>
-    <EthiopianOrthodoxHoliday type="MESKEL" descriptionPropertiesKey="ethiopian.orthodox.MESKEL"/>
+    <ChristianHoliday type="EASTER" chronology="JULIAN"/>
+    <ChristianHoliday type="GOOD_FRIDAY" chronology="JULIAN"/>
+    <IslamicHoliday type="RAMADAN"/>
+    <IslamicHoliday type="MAWLID_AN_NABI"/>
+    <IslamicHoliday type="ID_AL_FITR"/>
+    <IslamicHoliday type="ID_UL_ADHA"/>
+    <EthiopianOrthodoxHoliday type="TIMKAT"/>
+    <EthiopianOrthodoxHoliday type="ENKUTATASH"/>
+    <EthiopianOrthodoxHoliday type="MESKEL"/>
   </Holidays>
 </Configuration>
