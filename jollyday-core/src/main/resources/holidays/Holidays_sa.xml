@@ -7,13 +7,13 @@
 
   <Holidays>
     <Fixed month="SEPTEMBER" day="23" descriptionPropertiesKey="NATIONAL_DAY"/>
-    <IslamicHoliday type="RAMADAN_END" descriptionPropertiesKey="islamic.RAMADAN_END"/>
-    <IslamicHoliday type="ID_AL_FITR" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
-    <IslamicHoliday type="ID_AL_FITR_2" descriptionPropertiesKey="islamic.ID_AL_FITR_2"/>
-    <IslamicHoliday type="ID_AL_FITR_3" descriptionPropertiesKey="islamic.ID_AL_FITR_3"/>
-    <IslamicHoliday type="ARAFAAT" descriptionPropertiesKey="islamic.ARAFAAT"/>
-    <IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
-    <IslamicHoliday type="ID_UL_ADHA_2" descriptionPropertiesKey="islamic.ID_UL_ADHA_2"/>
-    <IslamicHoliday type="ID_UL_ADHA_3" descriptionPropertiesKey="islamic.ID_UL_ADHA_3"/>
+    <IslamicHoliday type="RAMADAN_END"/>
+    <IslamicHoliday type="ID_AL_FITR"/>
+    <IslamicHoliday type="ID_AL_FITR_2"/>
+    <IslamicHoliday type="ID_AL_FITR_3"/>
+    <IslamicHoliday type="ARAFAAT"/>
+    <IslamicHoliday type="ID_UL_ADHA"/>
+    <IslamicHoliday type="ID_UL_ADHA_2"/>
+    <IslamicHoliday type="ID_UL_ADHA_3"/>
   </Holidays>
 </Configuration>

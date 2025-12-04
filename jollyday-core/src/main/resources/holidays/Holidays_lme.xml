@@ -21,7 +21,7 @@
     </Fixed>
     <FixedWeekday which="FIRST" weekday="MONDAY" month="MAY" descriptionPropertiesKey="BANK_HOLIDAY"/>
     <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" descriptionPropertiesKey="BANK_HOLIDAY"/>
-    <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
-    <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER"/>
+    <ChristianHoliday type="GOOD_FRIDAY"/>
   </Holidays>
 </Configuration>

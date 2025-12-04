@@ -26,4 +26,9 @@ public interface EthiopianOrthodoxHoliday extends Described, Limited {
    * @return the type of the ethiopian orthodox holiday
    */
   EthiopianOrthodoxHolidayType type();
+
+  @Override
+  default String descriptionPropertiesKeyPrefix() {
+    return "ethiopian.orthodox";
+  }
 }

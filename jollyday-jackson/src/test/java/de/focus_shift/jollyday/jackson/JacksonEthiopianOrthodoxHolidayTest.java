@@ -40,7 +40,7 @@ class JacksonEthiopianOrthodoxHolidayTest {
     final JacksonEthiopianOrthodoxHoliday jacksonEthiopianOrthodoxHoliday = new JacksonEthiopianOrthodoxHoliday(ethiopianOrthodoxHoliday);
     assertThat(jacksonEthiopianOrthodoxHoliday.type()).isEqualTo(EthiopianOrthodoxHolidayType.TIMKAT);
     assertThat(jacksonEthiopianOrthodoxHoliday.cycle()).isEqualTo(YearCycle.EVERY_YEAR);
-    assertThat(jacksonEthiopianOrthodoxHoliday.descriptionPropertiesKey()).isNull();
+    assertThat(jacksonEthiopianOrthodoxHoliday.descriptionPropertiesKey()).isEqualTo("ethiopian.orthodox.TIMKAT");
     assertThat(jacksonEthiopianOrthodoxHoliday.holidayType()).isEqualTo(de.focus_shift.jollyday.core.HolidayType.PUBLIC_HOLIDAY);
     assertThat(jacksonEthiopianOrthodoxHoliday.validFrom()).isNull();
     assertThat(jacksonEthiopianOrthodoxHoliday.validTo()).isNull();

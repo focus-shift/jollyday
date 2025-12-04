@@ -23,7 +23,9 @@ class JacksonEthiopianOrthodoxHoliday implements EthiopianOrthodoxHoliday {
    */
   @Override
   public String descriptionPropertiesKey() {
-    return ethiopianOrthodoxHoliday.getDescriptionPropertiesKey();
+    return ethiopianOrthodoxHoliday.getDescriptionPropertiesKey() == null
+      ? descriptionPropertiesKeyPrefix() + descriptionPropertiesKeyPrefixSeparator() + type()
+      : ethiopianOrthodoxHoliday.getDescriptionPropertiesKey();
   }
 
   /**

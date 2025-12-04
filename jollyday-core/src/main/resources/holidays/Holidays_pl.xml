@@ -15,9 +15,9 @@
     <Fixed month="DECEMBER" day="24" validFrom="2025" descriptionPropertiesKey="CHRISTMAS_EVE"/>
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
     <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
-    <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
-    <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-    <ChristianHoliday type="PENTECOST" descriptionPropertiesKey="christian.PENTECOST"/>
-    <ChristianHoliday type="CORPUS_CHRISTI" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
+    <ChristianHoliday type="EASTER"/>
+    <ChristianHoliday type="EASTER_MONDAY"/>
+    <ChristianHoliday type="PENTECOST"/>
+    <ChristianHoliday type="CORPUS_CHRISTI"/>
   </Holidays>
 </Configuration>
