@@ -36,7 +36,9 @@ class JacksonIslamicHoliday implements IslamicHoliday {
    */
   @Override
   public String descriptionPropertiesKey() {
-    return islamicHoliday.getDescriptionPropertiesKey();
+    return islamicHoliday.getDescriptionPropertiesKey() == null
+      ? descriptionPropertiesKeyPrefix() + descriptionPropertiesKeyPrefixSeparator() + type()
+      : islamicHoliday.getDescriptionPropertiesKey();
   }
 
   /**

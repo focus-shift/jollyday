@@ -13,9 +13,9 @@
     <Fixed month="NOVEMBER" day="28" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
     <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="MOTHERS_DAY"/>
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-    <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
-    <ChristianHoliday type="CLEAN_MONDAY" descriptionPropertiesKey="christian.CLEAN_MONDAY"/>
-    <ChristianHoliday type="CARNIVAL" descriptionPropertiesKey="christian.CARNIVAL"/>
-    <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER"/>
+    <ChristianHoliday type="CLEAN_MONDAY"/>
+    <ChristianHoliday type="CARNIVAL"/>
+    <ChristianHoliday type="GOOD_FRIDAY"/>
   </Holidays>
 </Configuration>

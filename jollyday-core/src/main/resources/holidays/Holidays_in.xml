@@ -8,7 +8,7 @@
     <Fixed month="JANUARY" day="26" descriptionPropertiesKey="REPUBLIC_DAY"/>
     <Fixed month="AUGUST" day="15" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
     <Fixed month="OCTOBER" day="2" descriptionPropertiesKey="GHANDIS_BIRTHDAY"/>
-    <IslamicHoliday type="ID_AL_FITR_2" descriptionPropertiesKey="islamic.ID_AL_FITR_2"/>
+    <IslamicHoliday type="ID_AL_FITR_2"/>
   </Holidays>
 
   <Sources>
@@ -21,11 +21,11 @@
   <SubConfigurations hierarchy="an" description="Andaman and Nicobar Islands">
     <Holidays>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <IslamicHoliday type="ASCHURA" descriptionPropertiesKey="islamic.ASCHURA"/>
-      <IslamicHoliday type="MAWLID_AN_NABI" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
-      <IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
+      <ChristianHoliday type="EASTER"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+      <IslamicHoliday type="ASCHURA"/>
+      <IslamicHoliday type="MAWLID_AN_NABI"/>
+      <IslamicHoliday type="ID_UL_ADHA"/>
     </Holidays>
   </SubConfigurations>
 
@@ -33,10 +33,10 @@
     <Holidays>
       <Fixed month="APRIL" day="14"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <IslamicHoliday type="ASCHURA" descriptionPropertiesKey="islamic.ASCHURA"/>
-      <IslamicHoliday type="MAWLID_AN_NABI" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
-      <IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+      <IslamicHoliday type="ASCHURA"/>
+      <IslamicHoliday type="MAWLID_AN_NABI"/>
+      <IslamicHoliday type="ID_UL_ADHA"/>
     </Holidays>
   </SubConfigurations>
 
@@ -44,9 +44,9 @@
     <Holidays>
       <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
+      <ChristianHoliday type="EASTER"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+      <IslamicHoliday type="ID_UL_ADHA"/>
     </Holidays>
   </SubConfigurations>
 
@@ -54,9 +54,9 @@
     <Holidays>
       <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
+      <ChristianHoliday type="EASTER"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+      <IslamicHoliday type="ID_UL_ADHA"/>
     </Holidays>
   </SubConfigurations>
 
@@ -65,10 +65,10 @@
       <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
       <Fixed month="APRIL" day="14"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <IslamicHoliday type="ASCHURA" descriptionPropertiesKey="islamic.ASCHURA"/>
-      <IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
+      <ChristianHoliday type="EASTER"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+      <IslamicHoliday type="ASCHURA"/>
+      <IslamicHoliday type="ID_UL_ADHA"/>
     </Holidays>
   </SubConfigurations>
 
@@ -76,38 +76,38 @@
     <Holidays>
       <Fixed month="APRIL" day="14"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <IslamicHoliday type="ASCHURA" descriptionPropertiesKey="islamic.ASCHURA"/>
-      <IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
+      <ChristianHoliday type="EASTER"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+      <IslamicHoliday type="ASCHURA"/>
+      <IslamicHoliday type="ID_UL_ADHA"/>
     </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="cg" description="Chhattīsgarh">
     <Holidays>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <IslamicHoliday type="ASCHURA" descriptionPropertiesKey="islamic.ASCHURA"/>
-      <IslamicHoliday type="MAWLID_AN_NABI" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
-      <IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
+      <IslamicHoliday type="ASCHURA"/>
+      <IslamicHoliday type="MAWLID_AN_NABI"/>
+      <IslamicHoliday type="ID_UL_ADHA"/>
     </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="dl" description="Delhi">
     <Holidays>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <IslamicHoliday type="ASCHURA" descriptionPropertiesKey="islamic.ASCHURA"/>
-      <IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
+      <ChristianHoliday type="EASTER"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+      <IslamicHoliday type="ASCHURA"/>
+      <IslamicHoliday type="ID_UL_ADHA"/>
     </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="dh" description="Dādra and Nagar Haveli and Damān and Diu">
     <Holidays>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
+      <ChristianHoliday type="EASTER"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+      <IslamicHoliday type="ID_UL_ADHA"/>
     </Holidays>
   </SubConfigurations>
 
@@ -116,8 +116,8 @@
       <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
       <Fixed month="DECEMBER" day="3"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+      <ChristianHoliday type="EASTER"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
     </Holidays>
   </SubConfigurations>
 
@@ -125,7 +125,7 @@
     <Holidays>
       <Fixed month="APRIL" day="14"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
+      <IslamicHoliday type="ID_UL_ADHA"/>
     </Holidays>
   </SubConfigurations>
 
@@ -139,7 +139,7 @@
   <SubConfigurations hierarchy="hp" description="Himāchal Pradesh">
     <Holidays>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <IslamicHoliday type="ASCHURA" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <IslamicHoliday type="ASCHURA"/>
     </Holidays>
   </SubConfigurations>
 
@@ -147,16 +147,16 @@
     <Holidays>
       <Fixed month="APRIL" day="14"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <IslamicHoliday type="ASCHURA" descriptionPropertiesKey="islamic.ASCHURA"/>
-      <IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
+      <IslamicHoliday type="ASCHURA"/>
+      <IslamicHoliday type="ID_UL_ADHA"/>
     </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="jh" description="Jhārkhand">
     <Holidays>
-      <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
+      <ChristianHoliday type="EASTER"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+      <IslamicHoliday type="ID_UL_ADHA"/>
     </Holidays>
   </SubConfigurations>
 
@@ -167,11 +167,11 @@
       <Fixed month="NOVEMBER" day="1"/>
       <Fixed month="NOVEMBER" day="5"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <IslamicHoliday type="ASCHURA" descriptionPropertiesKey="islamic.ASCHURA"/>
-      <IslamicHoliday type="MAWLID_AN_NABI" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
-      <IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
+      <ChristianHoliday type="EASTER"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+      <IslamicHoliday type="ASCHURA"/>
+      <IslamicHoliday type="MAWLID_AN_NABI"/>
+      <IslamicHoliday type="ID_UL_ADHA"/>
     </Holidays>
   </SubConfigurations>
 
@@ -180,9 +180,9 @@
       <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
       <Fixed month="APRIL" day="14"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
+      <ChristianHoliday type="EASTER"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+      <IslamicHoliday type="ID_UL_ADHA"/>
     </Holidays>
   </SubConfigurations>
 
@@ -193,18 +193,18 @@
   <SubConfigurations hierarchy="ld" description="Lakshadweep">
     <Holidays>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
+      <ChristianHoliday type="EASTER"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+      <IslamicHoliday type="ID_UL_ADHA"/>
     </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="mp" description="Madhya Pradesh">
     <Holidays>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <IslamicHoliday type="ASCHURA" descriptionPropertiesKey="islamic.ASCHURA"/>
-      <IslamicHoliday type="MAWLID_AN_NABI" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
-      <IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
+      <IslamicHoliday type="ASCHURA"/>
+      <IslamicHoliday type="MAWLID_AN_NABI"/>
+      <IslamicHoliday type="ID_UL_ADHA"/>
     </Holidays>
   </SubConfigurations>
 
@@ -214,9 +214,9 @@
       <Fixed month="APRIL" day="14"/>
       <Fixed month="FEBRUARY" day="19"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <IslamicHoliday type="ASCHURA" descriptionPropertiesKey="islamic.ASCHURA"/>
-      <IslamicHoliday type="MAWLID_AN_NABI" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
-      <IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
+      <IslamicHoliday type="ASCHURA"/>
+      <IslamicHoliday type="MAWLID_AN_NABI"/>
+      <IslamicHoliday type="ID_UL_ADHA"/>
     </Holidays>
   </SubConfigurations>
 
@@ -225,9 +225,9 @@
       <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
       <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
+      <ChristianHoliday type="EASTER"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+      <IslamicHoliday type="ID_UL_ADHA"/>
     </Holidays>
   </SubConfigurations>
 
@@ -235,9 +235,9 @@
     <Holidays>
       <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
+      <ChristianHoliday type="EASTER"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+      <IslamicHoliday type="ID_UL_ADHA"/>
     </Holidays>
   </SubConfigurations>
 
@@ -245,9 +245,9 @@
     <Holidays>
       <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <IslamicHoliday type="MAWLID_AN_NABI" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <ChristianHoliday type="EASTER"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+      <IslamicHoliday type="MAWLID_AN_NABI"/>
     </Holidays>
   </SubConfigurations>
 
@@ -255,9 +255,9 @@
     <Holidays>
       <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
+      <ChristianHoliday type="EASTER"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+      <IslamicHoliday type="ID_UL_ADHA"/>
     </Holidays>
   </SubConfigurations>
 
@@ -265,8 +265,8 @@
     <Holidays>
       <Fixed month="APRIL" day="14"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <IslamicHoliday type="ASCHURA" descriptionPropertiesKey="islamic.ASCHURA"/>
-      <IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
+      <IslamicHoliday type="ASCHURA"/>
+      <IslamicHoliday type="ID_UL_ADHA"/>
     </Holidays>
   </SubConfigurations>
 
@@ -276,11 +276,11 @@
       <Fixed month="APRIL" day="14"/>
       <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <IslamicHoliday type="ASCHURA" descriptionPropertiesKey="islamic.ASCHURA"/>
-      <IslamicHoliday type="MAWLID_AN_NABI" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
-      <IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
+      <ChristianHoliday type="EASTER"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+      <IslamicHoliday type="ASCHURA"/>
+      <IslamicHoliday type="MAWLID_AN_NABI"/>
+      <IslamicHoliday type="ID_UL_ADHA"/>
     </Holidays>
   </SubConfigurations>
 
@@ -293,8 +293,8 @@
   <SubConfigurations hierarchy="rj" description="Rājasthān">
     <Holidays>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <IslamicHoliday type="ASCHURA" descriptionPropertiesKey="islamic.ASCHURA"/>
-      <IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
+      <IslamicHoliday type="ASCHURA"/>
+      <IslamicHoliday type="ID_UL_ADHA"/>
     </Holidays>
   </SubConfigurations>
 
@@ -303,8 +303,8 @@
       <Fixed month="MAY" day="16"/>
       <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+      <ChristianHoliday type="EASTER"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
     </Holidays>
   </SubConfigurations>
 
@@ -314,11 +314,11 @@
       <Fixed month="APRIL" day="14"/>
       <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <IslamicHoliday type="ASCHURA" descriptionPropertiesKey="islamic.ASCHURA"/>
-      <IslamicHoliday type="MAWLID_AN_NABI" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
-      <IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
+      <ChristianHoliday type="EASTER"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+      <IslamicHoliday type="ASCHURA"/>
+      <IslamicHoliday type="MAWLID_AN_NABI"/>
+      <IslamicHoliday type="ID_UL_ADHA"/>
     </Holidays>
   </SubConfigurations>
 
@@ -331,7 +331,7 @@
       <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
       <Fixed month="JANUARY" day="23"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
+      <IslamicHoliday type="ID_UL_ADHA"/>
     </Holidays>
   </SubConfigurations>
 
@@ -340,11 +340,11 @@
       <Fixed month="APRIL" day="14"/>
       <Fixed month="MARCH" day="15"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <IslamicHoliday type="ASCHURA" descriptionPropertiesKey="islamic.ASCHURA"/>
-      <IslamicHoliday type="MAWLID_AN_NABI" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
-      <IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
+      <ChristianHoliday type="EASTER"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+      <IslamicHoliday type="ASCHURA"/>
+      <IslamicHoliday type="MAWLID_AN_NABI"/>
+      <IslamicHoliday type="ID_UL_ADHA"/>
     </Holidays>
   </SubConfigurations>
 
@@ -352,11 +352,11 @@
     <Holidays>
       <Fixed month="APRIL" day="14"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <IslamicHoliday type="ASCHURA" descriptionPropertiesKey="islamic.ASCHURA"/>
-      <IslamicHoliday type="MAWLID_AN_NABI" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
-      <IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
+      <ChristianHoliday type="EASTER"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+      <IslamicHoliday type="ASCHURA"/>
+      <IslamicHoliday type="MAWLID_AN_NABI"/>
+      <IslamicHoliday type="ID_UL_ADHA"/>
     </Holidays>
   </SubConfigurations>
 
@@ -365,10 +365,10 @@
       <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
       <Fixed month="JANUARY" day="23"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <IslamicHoliday type="ASCHURA" descriptionPropertiesKey="islamic.ASCHURA"/>
-      <IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
+      <ChristianHoliday type="EASTER"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+      <IslamicHoliday type="ASCHURA"/>
+      <IslamicHoliday type="ID_UL_ADHA"/>
     </Holidays>
   </SubConfigurations>
 </Configuration>

@@ -11,7 +11,7 @@
     <Fixed validFrom="1999" month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
     <Fixed validFrom="2001" validTo="2001" month="DECEMBER" day="31" descriptionPropertiesKey="NEW_YEARS_EVE"/>
     <Fixed validFrom="1999" validTo="1999" month="DECEMBER" day="31" descriptionPropertiesKey="NEW_YEARS_EVE"/>
-    <ChristianHoliday validFrom="2000" type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-    <ChristianHoliday validFrom="2000" type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+    <ChristianHoliday validFrom="2000" type="GOOD_FRIDAY"/>
+    <ChristianHoliday validFrom="2000" type="EASTER_MONDAY"/>
   </Holidays>
 </Configuration>

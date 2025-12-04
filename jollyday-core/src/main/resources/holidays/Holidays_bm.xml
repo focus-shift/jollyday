@@ -72,7 +72,7 @@
 
     <FixedWeekday which="FIRST" weekday="MONDAY" month="SEPTEMBER" descriptionPropertiesKey="LABOUR_DAY"/>
 
-    <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+    <ChristianHoliday type="GOOD_FRIDAY"/>
 
     <!-- the Thursday before the first Monday in August -->
     <FixedWeekdayBetweenFixed weekday="THURSDAY" validFrom="1947" descriptionPropertiesKey="EMANCIPATION_DAY">

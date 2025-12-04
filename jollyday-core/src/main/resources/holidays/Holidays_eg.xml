@@ -12,15 +12,15 @@
     <Fixed month="JUNE" day="30" descriptionPropertiesKey="EGYPT_30_JUNE_REVOLUTION" validFrom="2015"/>
     <Fixed month="JULY" day="23" descriptionPropertiesKey="EGYPT_23_JULY_REVOLUTION"/>
     <Fixed month="OCTOBER" day="6" descriptionPropertiesKey="EGYPT_ARMED_FORCES_DAY"/>
-    <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY" chronology="JULIAN"/>
-    <IslamicHoliday type="ID_AL_FITR" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
-    <IslamicHoliday type="ID_AL_FITR_2" descriptionPropertiesKey="islamic.ID_AL_FITR_2"/>
-    <IslamicHoliday type="ID_AL_FITR_3" descriptionPropertiesKey="islamic.ID_AL_FITR_3"/>
-    <IslamicHoliday type="ARAFAAT" descriptionPropertiesKey="islamic.ARAFAAT"/>
-    <IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
-    <IslamicHoliday type="ID_UL_ADHA_2" descriptionPropertiesKey="islamic.ID_UL_ADHA_2"/>
-    <IslamicHoliday type="ID_UL_ADHA_3" descriptionPropertiesKey="islamic.ID_UL_ADHA_3"/>
-    <IslamicHoliday type="NEWYEAR" descriptionPropertiesKey="islamic.NEWYEAR"/>
-    <IslamicHoliday type="MAWLID_AN_NABI" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+    <ChristianHoliday type="EASTER_MONDAY" chronology="JULIAN"/>
+    <IslamicHoliday type="ID_AL_FITR"/>
+    <IslamicHoliday type="ID_AL_FITR_2"/>
+    <IslamicHoliday type="ID_AL_FITR_3"/>
+    <IslamicHoliday type="ARAFAAT"/>
+    <IslamicHoliday type="ID_UL_ADHA"/>
+    <IslamicHoliday type="ID_UL_ADHA_2"/>
+    <IslamicHoliday type="ID_UL_ADHA_3"/>
+    <IslamicHoliday type="NEWYEAR"/>
+    <IslamicHoliday type="MAWLID_AN_NABI"/>
   </Holidays>
 </Configuration>

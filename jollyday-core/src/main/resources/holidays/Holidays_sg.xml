@@ -194,7 +194,7 @@
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
 
-    <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+    <ChristianHoliday type="GOOD_FRIDAY"/>
 
     <IslamicHoliday type="ID_AL_FITR" validTo="2018" descriptionPropertiesKey="HARI_RAYA_PUASA">
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>

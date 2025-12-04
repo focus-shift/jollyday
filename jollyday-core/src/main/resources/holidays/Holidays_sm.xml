@@ -20,9 +20,9 @@
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
     <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
     <Fixed month="DECEMBER" day="31" descriptionPropertiesKey="NEW_YEARS_EVE"/>
-    <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
-    <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-    <ChristianHoliday type="CORPUS_CHRISTI" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
+    <ChristianHoliday type="EASTER"/>
+    <ChristianHoliday type="EASTER_MONDAY"/>
+    <ChristianHoliday type="CORPUS_CHRISTI"/>
   </Holidays>
 
   <Sources>

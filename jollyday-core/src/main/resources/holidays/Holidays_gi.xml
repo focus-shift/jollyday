@@ -40,8 +40,8 @@
     <FixedWeekday which="SECOND" weekday="MONDAY" month="MARCH" validFrom="1977" validTo="2020" descriptionPropertiesKey="COMMONWEALTH_DAY"/>
     <FixedWeekday which="THIRD" weekday="MONDAY" month="JUNE" validFrom="2022" descriptionPropertiesKey="KINGS_BIRTHDAY"/>
 
-    <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-    <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY"/>
   </Holidays>
 
   <Sources>
