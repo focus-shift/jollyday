@@ -617,19 +617,19 @@
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
 
-    <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+    <ChristianHoliday type="GOOD_FRIDAY"/>
     <ChristianHoliday type="EASTER_SATURDAY" descriptionPropertiesKey="DAY_FOLLOWING_GOOD_FRIDAY"/>
-    <ChristianHoliday type="EASTER_MONDAY" validTo="2014" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY" validTo="2014"/>
     <!-- https://www.gov.hk/en/about/abouthk/holiday/2015.htm -->
     <!-- as the day following Ching Ming Festival and Easter Monday fall on the same day,
     the next following day that is not itself a general holiday will be observed as an additional general holiday. -->
     <ChristianHoliday type="EASTER_TUESDAY" validFrom="2015" validTo="2015" descriptionPropertiesKey="DAY_FOLLOWING_EASTER_MONDAY"/>
-    <ChristianHoliday type="EASTER_MONDAY" validFrom="2016" validTo="2020" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY" validFrom="2016" validTo="2020"/>
     <!-- https://www.gov.hk/en/about/abouthk/holiday/2021.htm -->
     <!-- as the day following Ching Ming Festival and Easter Monday fall on the same day,
     the next following day that is not itself a general holiday will be observed as an additional general holiday. -->
     <ChristianHoliday type="EASTER_TUESDAY" validFrom="2021" validTo="2021" descriptionPropertiesKey="DAY_FOLLOWING_EASTER_MONDAY"/>
-    <ChristianHoliday type="EASTER_MONDAY" validFrom="2022" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY" validFrom="2022"/>
   </Holidays>
 
   <Sources>

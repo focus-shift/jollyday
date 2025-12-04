@@ -19,7 +19,7 @@
     <Fixed month="SEPTEMBER" day="21" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
     <Fixed month="DECEMBER" day="31" descriptionPropertiesKey="NEW_YEARS_EVE"/>
 
-    <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
+    <ChristianHoliday type="EASTER"/>
   </Holidays>
 
   <Sources>

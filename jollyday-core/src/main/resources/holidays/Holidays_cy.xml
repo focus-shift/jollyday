@@ -16,12 +16,12 @@
     <Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CHRISTMAS_EVE"/>
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
     <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
-    <ChristianHoliday type="CLEAN_MONDAY" descriptionPropertiesKey="christian.CLEAN_MONDAY"/>
-    <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-    <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-    <ChristianHoliday type="EASTER_TUESDAY" descriptionPropertiesKey="christian.EASTER_TUESDAY"/>
-    <ChristianHoliday type="PENTECOST" descriptionPropertiesKey="christian.PENTECOST"/>
-    <ChristianHoliday type="WHIT_MONDAY" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
+    <ChristianHoliday type="CLEAN_MONDAY"/>
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY"/>
+    <ChristianHoliday type="EASTER_TUESDAY"/>
+    <ChristianHoliday type="PENTECOST"/>
+    <ChristianHoliday type="WHIT_MONDAY"/>
   </Holidays>
 
   <Sources>

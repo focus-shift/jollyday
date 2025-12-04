@@ -11,8 +11,8 @@
     <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
     <Fixed month="MAY" day="21" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
     <Fixed month="JULY" day="13" descriptionPropertiesKey="STATEHOOD"/>
-    <ChristianHoliday type="EASTER" chronology="JULIAN" descriptionPropertiesKey="christian.EASTER"/>
-    <ChristianHoliday type="GOOD_FRIDAY" chronology="JULIAN" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-    <ChristianHoliday type="EASTER_MONDAY" chronology="JULIAN" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+    <ChristianHoliday type="EASTER" chronology="JULIAN"/>
+    <ChristianHoliday type="GOOD_FRIDAY" chronology="JULIAN"/>
+    <ChristianHoliday type="EASTER_MONDAY" chronology="JULIAN"/>
   </Holidays>
 </Configuration>

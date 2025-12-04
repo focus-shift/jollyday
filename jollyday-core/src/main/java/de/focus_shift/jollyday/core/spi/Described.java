@@ -23,4 +23,12 @@ public interface Described {
    * @return the holiday type
    */
   HolidayType holidayType();
+
+  default String descriptionPropertiesKeyPrefix() {
+    return "";
+  }
+
+  default String descriptionPropertiesKeyPrefixSeparator() {
+    return ".";
+  }
 }

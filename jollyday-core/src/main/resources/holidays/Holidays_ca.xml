@@ -11,7 +11,7 @@
     </Fixed>
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
     <FixedWeekday which="FIRST" weekday="MONDAY" month="SEPTEMBER" descriptionPropertiesKey="LABOUR_DAY"/>
-    <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+    <ChristianHoliday type="GOOD_FRIDAY"/>
   </Holidays>
 
   <SubConfigurations hierarchy="on" description="Ontario">
@@ -33,7 +33,7 @@
                     localizedType="BANK_HOLIDAY"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="THANKSGIVING"/>
 
-      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"
+      <ChristianHoliday type="EASTER_MONDAY"
                         localizedType="BANK_HOLIDAY"/>
     </Holidays>
   </SubConfigurations>
@@ -54,7 +54,7 @@
       <FixedWeekday which="THIRD" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="DISCOVERY_DAY"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="THANKSGIVING"/>
 
-      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"
+      <ChristianHoliday type="EASTER_MONDAY"
                         localizedType="BANK_HOLIDAY"/>
     </Holidays>
   </SubConfigurations>
@@ -75,7 +75,7 @@
 
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="THANKSGIVING"/>
 
-      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+      <ChristianHoliday type="EASTER_MONDAY"/>
     </Holidays>
   </SubConfigurations>
 
@@ -99,7 +99,7 @@
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="THANKSGIVING"
                     localizedType="BANK_HOLIDAY"/>
 
-      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"
+      <ChristianHoliday type="EASTER_MONDAY"
                         localizedType="BANK_HOLIDAY"/>
     </Holidays>
   </SubConfigurations>
@@ -122,7 +122,7 @@
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="THANKSGIVING"
                     localizedType="BANK_HOLIDAY"/>
 
-      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"
+      <ChristianHoliday type="EASTER_MONDAY"
                         localizedType="BANK_HOLIDAY"/>
     </Holidays>
   </SubConfigurations>
@@ -145,7 +145,7 @@
                     localizedType="BANK_HOLIDAY"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="THANKSGIVING"/>
 
-      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"
+      <ChristianHoliday type="EASTER_MONDAY"
                         localizedType="BANK_HOLIDAY"/>
     </Holidays>
   </SubConfigurations>
@@ -166,7 +166,7 @@
       <FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="CIVIC"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="THANKSGIVING"/>
 
-      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"
+      <ChristianHoliday type="EASTER_MONDAY"
                         localizedType="BANK_HOLIDAY"/>
     </Holidays>
   </SubConfigurations>
@@ -188,7 +188,7 @@
       <FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="CIVIC"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="THANKSGIVING"/>
 
-      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"
+      <ChristianHoliday type="EASTER_MONDAY"
                         localizedType="BANK_HOLIDAY"/>
     </Holidays>
   </SubConfigurations>
@@ -212,7 +212,7 @@
       <FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="CIVIC"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="THANKSGIVING"/>
 
-      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"
+      <ChristianHoliday type="EASTER_MONDAY"
                         localizedType="BANK_HOLIDAY"/>
     </Holidays>
   </SubConfigurations>
@@ -238,7 +238,7 @@
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="THANKSGIVING"
                     localizedType="BANK_HOLIDAY"/>
 
-      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"
+      <ChristianHoliday type="EASTER_MONDAY"
                         localizedType="BANK_HOLIDAY"/>
     </Holidays>
   </SubConfigurations>
@@ -261,7 +261,7 @@
       <FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="SASKATCHEWAN_DAY"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="THANKSGIVING"/>
 
-      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"
+      <ChristianHoliday type="EASTER_MONDAY"
                         localizedType="BANK_HOLIDAY"/>
     </Holidays>
   </SubConfigurations>
@@ -285,7 +285,7 @@
                     localizedType="BANK_HOLIDAY"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="THANKSGIVING"/>
 
-      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"
+      <ChristianHoliday type="EASTER_MONDAY"
                         localizedType="BANK_HOLIDAY"/>
     </Holidays>
   </SubConfigurations>
@@ -306,7 +306,7 @@
       <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="THANKSGIVING"
                     localizedType="BANK_HOLIDAY"/>
 
-      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"
+      <ChristianHoliday type="EASTER_MONDAY"
                         localizedType="BANK_HOLIDAY"/>
     </Holidays>
   </SubConfigurations>
