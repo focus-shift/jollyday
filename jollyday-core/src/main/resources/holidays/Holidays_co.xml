@@ -67,10 +67,10 @@
     </Fixed>
     <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-    <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
-    <ChristianHoliday type="MAUNDY_THURSDAY" descriptionPropertiesKey="christian.MAUNDY_THURSDAY"/>
-    <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-    <ChristianHoliday type="ASCENSION_DAY" descriptionPropertiesKey="christian.ASCENSION_DAY">
+    <ChristianHoliday type="EASTER"/>
+    <ChristianHoliday type="MAUNDY_THURSDAY"/>
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="ASCENSION_DAY">
       <MovingCondition substitute="TUESDAY" with="NEXT" weekday="MONDAY"/>
       <MovingCondition substitute="WEDNESDAY" with="NEXT" weekday="MONDAY"/>
       <MovingCondition substitute="THURSDAY" with="NEXT" weekday="MONDAY"/>
@@ -78,7 +78,7 @@
       <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </ChristianHoliday>
-    <ChristianHoliday type="CORPUS_CHRISTI" descriptionPropertiesKey="christian.CORPUS_CHRISTI">
+    <ChristianHoliday type="CORPUS_CHRISTI">
       <MovingCondition substitute="TUESDAY" with="NEXT" weekday="MONDAY"/>
       <MovingCondition substitute="WEDNESDAY" with="NEXT" weekday="MONDAY"/>
       <MovingCondition substitute="THURSDAY" with="NEXT" weekday="MONDAY"/>
@@ -86,7 +86,7 @@
       <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </ChristianHoliday>
-    <ChristianHoliday type="SACRED_HEART" descriptionPropertiesKey="christian.SACRED_HEART">
+    <ChristianHoliday type="SACRED_HEART">
       <MovingCondition substitute="TUESDAY" with="NEXT" weekday="MONDAY"/>
       <MovingCondition substitute="WEDNESDAY" with="NEXT" weekday="MONDAY"/>
       <MovingCondition substitute="THURSDAY" with="NEXT" weekday="MONDAY"/>

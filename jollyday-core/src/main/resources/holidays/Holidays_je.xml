@@ -81,8 +81,8 @@
     <!-- 2020 it was replaced by the 75th Anniversary of VE Day on the second Friday of May -->
     <FixedWeekday which="LAST" weekday="MONDAY" month="AUGUST" validFrom="2021" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
 
-    <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-    <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY"/>
   </Holidays>
 
   <Sources>

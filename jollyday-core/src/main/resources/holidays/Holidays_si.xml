@@ -20,8 +20,8 @@
     <Fixed month="DECEMBER" validTo="1952" day="25" descriptionPropertiesKey="CHRISTMAS"/>
     <Fixed month="DECEMBER" validFrom="1991" day="25" descriptionPropertiesKey="CHRISTMAS"/>
     <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
-    <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
-    <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-    <ChristianHoliday type="PENTECOST" descriptionPropertiesKey="christian.PENTECOST"/>
+    <ChristianHoliday type="EASTER"/>
+    <ChristianHoliday type="EASTER_MONDAY"/>
+    <ChristianHoliday type="PENTECOST"/>
   </Holidays>
 </Configuration>

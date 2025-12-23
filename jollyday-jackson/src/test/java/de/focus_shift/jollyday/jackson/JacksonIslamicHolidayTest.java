@@ -47,7 +47,7 @@ class JacksonIslamicHolidayTest {
         final JacksonIslamicHoliday jacksonIslamicHoliday = new JacksonIslamicHoliday(islamicHoliday);
         assertThat(jacksonIslamicHoliday.type()).isEqualTo(IslamicHolidayType.ID_UL_ADHA);
         assertThat(jacksonIslamicHoliday.cycle()).isEqualTo(YearCycle.EVERY_YEAR);
-        assertThat(jacksonIslamicHoliday.descriptionPropertiesKey()).isNull();
+        assertThat(jacksonIslamicHoliday.descriptionPropertiesKey()).isEqualTo("islamic.ID_UL_ADHA");
         assertThat(jacksonIslamicHoliday.holidayType()).isEqualTo(de.focus_shift.jollyday.core.HolidayType.PUBLIC_HOLIDAY);
         assertThat(jacksonIslamicHoliday.validFrom()).isNull();
         assertThat(jacksonIslamicHoliday.validTo()).isNull();

@@ -13,7 +13,7 @@
     <Fixed month="JULY" day="27" descriptionPropertiesKey="DAY_AFTER_THE_COMMEMORATION_OF_THE_ASSAULT_OF_THE_MONCADA_GARRISON"/>
     <Fixed month="OCTOBER" day="10" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-    <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+    <ChristianHoliday type="GOOD_FRIDAY"/>
   </Holidays>
 
   <Sources>

@@ -41,7 +41,7 @@ class JaxbIslamicHolidayTest {
         final JaxbIslamicHoliday jaxbIslamicHoliday = new JaxbIslamicHoliday(islamicHoliday);
         assertThat(jaxbIslamicHoliday.type()).isEqualTo(IslamicHolidayType.ID_UL_ADHA);
         assertThat(jaxbIslamicHoliday.cycle()).isEqualTo(YearCycle.EVERY_YEAR);
-        assertThat(jaxbIslamicHoliday.descriptionPropertiesKey()).isNull();
+        assertThat(jaxbIslamicHoliday.descriptionPropertiesKey()).isEqualTo("islamic.ID_UL_ADHA");
         assertThat(jaxbIslamicHoliday.holidayType()).isEqualTo(de.focus_shift.jollyday.core.HolidayType.PUBLIC_HOLIDAY);
         assertThat(jaxbIslamicHoliday.validFrom()).isNull();
         assertThat(jaxbIslamicHoliday.validTo()).isNull();

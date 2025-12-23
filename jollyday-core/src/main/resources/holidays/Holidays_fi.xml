@@ -12,10 +12,10 @@
     <Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CHRISTMAS_EVE"/>
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
     <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
-    <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
-    <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-    <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-    <ChristianHoliday type="ASCENSION_DAY" descriptionPropertiesKey="christian.ASCENSION_DAY"/>
+    <ChristianHoliday type="EASTER"/>
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY"/>
+    <ChristianHoliday type="ASCENSION_DAY"/>
     <FixedWeekdayBetweenFixed weekday="FRIDAY" descriptionPropertiesKey="MIDSUMMER_EVE">
       <from month="JUNE" day="19"/>
       <to month="JUNE" day="25"/>
@@ -33,7 +33,7 @@
   <SubConfigurations hierarchy="01" description="Åland">
     <Holidays>
       <Fixed month="JUNE" day="9" descriptionPropertiesKey="SELF_GOVERNANCE"/>
-      <ChristianHoliday type="WHIT_SUNDAY" descriptionPropertiesKey="christian.WHIT_SUNDAY"/>
+      <ChristianHoliday type="WHIT_SUNDAY"/>
     </Holidays>
 
     <Sources>

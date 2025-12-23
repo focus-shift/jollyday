@@ -18,10 +18,10 @@
     <Fixed month="AUGUST" day="28" descriptionPropertiesKey="ST_MARY"/>
     <Fixed month="OCTOBER" day="14" descriptionPropertiesKey="DAY_OF_SVETITSKHOVELI_CATHEDRA"/>
     <Fixed month="NOVEMBER" day="23" descriptionPropertiesKey="ST_GEORGE"/>
-    <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY" chronology="JULIAN"/>
-    <ChristianHoliday type="EASTER_SATURDAY" descriptionPropertiesKey="christian.EASTER_SATURDAY" chronology="JULIAN"/>
-    <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER" chronology="JULIAN"/>
-    <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY" chronology="JULIAN"/>
+    <ChristianHoliday type="GOOD_FRIDAY" chronology="JULIAN"/>
+    <ChristianHoliday type="EASTER_SATURDAY" chronology="JULIAN"/>
+    <ChristianHoliday type="EASTER" chronology="JULIAN"/>
+    <ChristianHoliday type="EASTER_MONDAY" chronology="JULIAN"/>
   </Holidays>
 
   <Sources>
