@@ -34,7 +34,7 @@
       <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
-    <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="NATIONAL_DAY">
+    <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="NATIONAL_DAY" localizedType="OBSERVANCE">
       <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
@@ -53,4 +53,8 @@
     <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER" chronology="JULIAN"/>
     <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY" chronology="JULIAN"/>
   </Holidays>
+
+  <Sources>
+    <Source of="National Day">https://www.government.bg/en/About-Bulgaria/BULGARIAN-PUBLIC-HOLIDAYS/Bulgarian-public-holidays</Source>
+  </Sources>
 </Configuration>
