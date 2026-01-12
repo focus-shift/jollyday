@@ -14,6 +14,6 @@
     <Fixed month="JULY" day="6" descriptionPropertiesKey="REPUBLIC_DAY"/>
     <Fixed month="AUGUST" day="30" descriptionPropertiesKey="CONSTITUTION_DAY"/>
     <Fixed month="DECEMBER" day="16" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
-    <IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
+    <IslamicHoliday type="ID_UL_ADHA"/>
   </Holidays>
 </Configuration>

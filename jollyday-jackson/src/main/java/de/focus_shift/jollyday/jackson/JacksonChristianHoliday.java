@@ -52,7 +52,9 @@ class JacksonChristianHoliday implements ChristianHoliday {
    */
   @Override
   public String descriptionPropertiesKey() {
-    return christianHoliday.getDescriptionPropertiesKey();
+    return christianHoliday.getDescriptionPropertiesKey() == null
+      ? descriptionPropertiesKeyPrefix() + descriptionPropertiesKeyPrefixSeparator() + type()
+      : christianHoliday.getDescriptionPropertiesKey();
   }
 
   /**

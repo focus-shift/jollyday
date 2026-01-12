@@ -1,6 +1,6 @@
 package de.focus_shift.jollyday.jackson.mapping;
 
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import tools.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 
 public class EthiopianOrthodoxHoliday extends Holiday {
 

@@ -14,11 +14,11 @@
     <Fixed month="NOVEMBER" day="15" descriptionPropertiesKey="NATIONAL_DAY"/>
     <Fixed month="NOVEMBER" day="20" validFrom="2024" descriptionPropertiesKey="NATIONAL_DAY_OF_ZUMBI_AND_BLACK_AWARENESS"/>
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-    <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
-    <ChristianHoliday type="CARNIVAL" descriptionPropertiesKey="christian.CARNIVAL"/>
-    <ChristianHoliday type="ASH_WEDNESDAY" descriptionPropertiesKey="christian.ASH_WEDNESDAY"/>
-    <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-    <ChristianHoliday type="CORPUS_CHRISTI" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
+    <ChristianHoliday type="EASTER"/>
+    <ChristianHoliday type="CARNIVAL"/>
+    <ChristianHoliday type="ASH_WEDNESDAY"/>
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="CORPUS_CHRISTI"/>
   </Holidays>
 
   <SubConfigurations hierarchy="rj" description="Rio de Janeiro">

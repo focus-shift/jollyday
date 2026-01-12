@@ -50,7 +50,7 @@ class JaxbChristianHolidayTest {
         final JaxbChristianHoliday jaxbChristianHoliday = new JaxbChristianHoliday(christianHoliday);
         assertThat(jaxbChristianHoliday.type()).isEqualTo(ChristianHolidayType.GOOD_FRIDAY);
         assertThat(jaxbChristianHoliday.chronology()).isEqualTo(IsoChronology.INSTANCE);
-        assertThat(jaxbChristianHoliday.descriptionPropertiesKey()).isNull();
+        assertThat(jaxbChristianHoliday.descriptionPropertiesKey()).isEqualTo("christian.GOOD_FRIDAY");
         assertThat(jaxbChristianHoliday.holidayType()).isEqualTo(HolidayType.PUBLIC_HOLIDAY);
         assertThat(jaxbChristianHoliday.validFrom()).isNull();
         assertThat(jaxbChristianHoliday.validTo()).isNull();

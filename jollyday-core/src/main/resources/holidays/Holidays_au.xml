@@ -38,10 +38,10 @@
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
       <MovingCondition substitute="MONDAY" with="NEXT" weekday="TUESDAY"/>
     </Fixed>
-    <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
-    <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-    <ChristianHoliday type="EASTER_SATURDAY" descriptionPropertiesKey="christian.EASTER_SATURDAY"/>
-    <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+    <ChristianHoliday type="EASTER"/>
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_SATURDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY"/>
   </Holidays>
 
   <SubConfigurations hierarchy="act" description="Australian Capital Territory">
@@ -210,7 +210,7 @@
       </Fixed>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="MARCH" descriptionPropertiesKey="EIGHT"/>
       <FixedWeekday which="SECOND" weekday="MONDAY" month="JUNE" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
-      <ChristianHoliday type="EASTER_TUESDAY" descriptionPropertiesKey="christian.EASTER_TUESDAY"/>
+      <ChristianHoliday type="EASTER_TUESDAY"/>
     </Holidays>
 
     <SubConfigurations hierarchy="ho" description="Hobart Area">

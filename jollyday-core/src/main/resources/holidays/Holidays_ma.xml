@@ -15,10 +15,10 @@
     <Fixed month="AUGUST" day="21" descriptionPropertiesKey="YOUTH"/>
     <Fixed month="NOVEMBER" day="6" descriptionPropertiesKey="GREEN_MARCH"/>
     <Fixed month="NOVEMBER" day="18" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
-    <IslamicHoliday type="NEWYEAR" descriptionPropertiesKey="islamic.NEWYEAR"/>
-    <IslamicHoliday type="ID_AL_FITR" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
-    <IslamicHoliday type="ID_UL_ADHA" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
-    <IslamicHoliday type="MAWLID_AN_NABI" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+    <IslamicHoliday type="NEWYEAR"/>
+    <IslamicHoliday type="ID_AL_FITR"/>
+    <IslamicHoliday type="ID_UL_ADHA"/>
+    <IslamicHoliday type="MAWLID_AN_NABI"/>
   </Holidays>
 
   <Sources>
