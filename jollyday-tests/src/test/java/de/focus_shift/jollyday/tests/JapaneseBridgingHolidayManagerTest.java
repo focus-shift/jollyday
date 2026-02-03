@@ -2,7 +2,7 @@ package de.focus_shift.jollyday.tests;
 
 import de.focus_shift.jollyday.core.Holiday;
 import de.focus_shift.jollyday.core.HolidayManager;
-import de.focus_shift.jollyday.core.impl.JapaneseHolidayManager;
+import de.focus_shift.jollyday.core.impl.JapaneseBridgingHolidayManager;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -15,7 +15,7 @@ import static de.focus_shift.jollyday.core.HolidayType.PUBLIC_HOLIDAY;
 import static de.focus_shift.jollyday.core.ManagerParameters.create;
 import static org.assertj.core.api.Assertions.assertThat;
 
-class JapaneseHolidayManagerTest {
+class JapaneseBridgingHolidayManagerTest {
 
   @BeforeAll
   static void beforeAll() {
@@ -29,13 +29,13 @@ class JapaneseHolidayManagerTest {
 
   @Test
   void ensureToInstantiateHolidayManagerImplementationBasedOnCountry() {
-    assertThat(HolidayManager.getInstance(create("test_jp"))).isInstanceOf(JapaneseHolidayManager.class);
+    assertThat(HolidayManager.getInstance(create("test_jp"))).isInstanceOf(JapaneseBridgingHolidayManager.class);
   }
 
   @Test
   void ensureThatBridgingDaysAreCalculatesCorrectly() {
     final HolidayManager japaneseHolidayManager = HolidayManager.getInstance(create("test_jp"));
-    assertThat(japaneseHolidayManager).isInstanceOf(JapaneseHolidayManager.class);
+    assertThat(japaneseHolidayManager).isInstanceOf(JapaneseBridgingHolidayManager.class);
 
     final Set<Holiday> holidaysWithBridging = japaneseHolidayManager.getHolidays(Year.of(2000));
     assertThat(holidaysWithBridging)
