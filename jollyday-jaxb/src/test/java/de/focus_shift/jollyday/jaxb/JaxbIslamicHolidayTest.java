@@ -1,6 +1,6 @@
 package de.focus_shift.jollyday.jaxb;
 
-import de.focus_shift.jollyday.core.spi.IslamicHoliday.IslamicHolidayType;
+import de.focus_shift.jollyday.core.spi.IslamicHolidayConfiguration.IslamicHolidayType;
 import de.focus_shift.jollyday.core.spi.Limited.YearCycle;
 import de.focus_shift.jollyday.jaxb.mapping.HolidayCycleType;
 import de.focus_shift.jollyday.jaxb.mapping.HolidayType;

@@ -4,7 +4,7 @@ import de.focus_shift.jollyday.core.caching.Cache;
 import de.focus_shift.jollyday.core.configuration.ConfigurationProviderManager;
 import de.focus_shift.jollyday.core.datasource.ConfigurationServiceManager;
 import de.focus_shift.jollyday.core.parser.functions.CalendarToLocalDate;
-import de.focus_shift.jollyday.core.spi.ConfigurationService;
+import de.focus_shift.jollyday.core.spi.HolidayCalendarConfigurationService;
 import de.focus_shift.jollyday.core.support.LazyServiceLoaderCache;
 import de.focus_shift.jollyday.core.util.CalendarUtil;
 import org.slf4j.Logger;
@@ -46,12 +46,12 @@ public abstract class HolidayManager {
    * data.
    */
   private static final ConfigurationServiceManager configurationServiceManager =
-    new ConfigurationServiceManager(new LazyServiceLoaderCache<>(ConfigurationService.class));
+    new ConfigurationServiceManager(new LazyServiceLoaderCache<>(HolidayCalendarConfigurationService.class));
 
   /**
    * The datasource to get the holiday data from.
    */
-  private ConfigurationService configurationService;
+  private HolidayCalendarConfigurationService configurationService;
 
   /**
    * the manager parameter
@@ -244,19 +244,19 @@ public abstract class HolidayManager {
   /**
    * Sets the configuration datasource with this holiday manager.
    *
-   * @param configurationService the {@link ConfigurationService} to use.
+   * @param configurationService the {@link HolidayCalendarConfigurationService} to use.
    */
-  public void setConfigurationService(ConfigurationService configurationService) {
+  public void setConfigurationService(HolidayCalendarConfigurationService configurationService) {
     this.configurationService = configurationService;
   }
 
   /**
-   * Returns the {@link ConfigurationService} to be used to retrieve
+   * Returns the {@link HolidayCalendarConfigurationService} to be used to retrieve
    * holiday data.
    *
-   * @return the {@link ConfigurationService} to use.
+   * @return the {@link HolidayCalendarConfigurationService} to use.
    */
-  public ConfigurationService getConfigurationService() {
+  public HolidayCalendarConfigurationService getConfigurationService() {
     return configurationService;
   }
 

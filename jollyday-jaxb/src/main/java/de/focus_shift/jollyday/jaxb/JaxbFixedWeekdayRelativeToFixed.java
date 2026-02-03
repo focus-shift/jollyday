@@ -1,8 +1,8 @@
 package de.focus_shift.jollyday.jaxb;
 
 import de.focus_shift.jollyday.core.HolidayType;
-import de.focus_shift.jollyday.core.spi.Fixed;
-import de.focus_shift.jollyday.core.spi.FixedWeekdayRelativeToFixed;
+import de.focus_shift.jollyday.core.spi.FixedHolidayConfiguration;
+import de.focus_shift.jollyday.core.spi.FixedWeekdayRelativeToFixedHolidayConfiguration;
 import de.focus_shift.jollyday.core.spi.Occurrence;
 import de.focus_shift.jollyday.core.spi.Relation;
 
@@ -10,9 +10,9 @@ import java.time.DayOfWeek;
 import java.time.Year;
 
 /**
- * see {@link FixedWeekdayRelativeToFixed}
+ * see {@link FixedWeekdayRelativeToFixedHolidayConfiguration}
  */
-class JaxbFixedWeekdayRelativeToFixed implements FixedWeekdayRelativeToFixed {
+class JaxbFixedWeekdayRelativeToFixed implements FixedWeekdayRelativeToFixedHolidayConfiguration {
 
   private final de.focus_shift.jollyday.jaxb.mapping.FixedWeekdayRelativeToFixed fixedWeekdayRelativeToFixed;
 
@@ -46,7 +46,7 @@ class JaxbFixedWeekdayRelativeToFixed implements FixedWeekdayRelativeToFixed {
    * @return {@inheritDoc}
    */
   @Override
-  public Fixed day() {
+  public FixedHolidayConfiguration day() {
     return new JaxbFixed(fixedWeekdayRelativeToFixed.getDay());
   }
 

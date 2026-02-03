@@ -1,7 +1,7 @@
 package de.focus_shift.jollyday.jaxb;
 
 import de.focus_shift.jollyday.core.ManagerParameter;
-import de.focus_shift.jollyday.core.spi.Configuration;
+import de.focus_shift.jollyday.core.spi.HolidayCalendarConfiguration;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -24,7 +24,7 @@ class JaxbConfigurationServiceTest {
   }
 
   @Test
-  void ensureToGetConfiguration() throws Exception {
+  void ensureToGetHolidayCalendarConfiguration() throws Exception {
     // Arrange
     final ManagerParameter parameter = mock(ManagerParameter.class);
     final URL url = mock(URL.class);
@@ -35,18 +35,18 @@ class JaxbConfigurationServiceTest {
     when(url.openStream()).thenReturn(stream);
 
     // Act & Assert
-    final Configuration config = service.getConfiguration(parameter);
+    final HolidayCalendarConfiguration config = service.getHolidayCalendarConfiguration(parameter);
     assertThat(config).isNotNull();
   }
 
   @Test
-  void ensureToGetConfigurationThrowsException() throws Exception {
+  void ensureToGetHolidayCalendarConfigurationThrowsException() throws Exception {
     final ManagerParameter parameter = mock(ManagerParameter.class);
     final URL url = mock(URL.class);
     when(parameter.createResourceUrl()).thenReturn(url);
     when(url.openStream()).thenThrow(new RuntimeException("IO error"));
 
-    assertThatThrownBy(() -> service.getConfiguration(parameter))
+    assertThatThrownBy(() -> service.getHolidayCalendarConfiguration(parameter))
       .isInstanceOf(IllegalStateException.class)
       .hasMessageContaining("Cannot instantiate configuration from URL");
   }

@@ -1,7 +1,7 @@
 package de.focus_shift.jollyday.jaxb;
 
 import de.focus_shift.jollyday.core.HolidayType;
-import de.focus_shift.jollyday.core.spi.ChristianHoliday.ChristianHolidayType;
+import de.focus_shift.jollyday.core.spi.ChristianHolidayConfiguration.ChristianHolidayType;
 import de.focus_shift.jollyday.core.spi.Limited.YearCycle;
 import de.focus_shift.jollyday.core.spi.Movable;
 import de.focus_shift.jollyday.jaxb.mapping.ChristianHoliday;

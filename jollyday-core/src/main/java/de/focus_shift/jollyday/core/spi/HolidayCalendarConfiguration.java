@@ -3,8 +3,8 @@ package de.focus_shift.jollyday.core.spi;
 import java.util.stream.Stream;
 
 /**
- * Represents the holiday configuration, meta information like the hierarchy and description
- * and the sub configuration for a specific {@link de.focus_shift.jollyday.core.HolidayCalendar}.
+ * Represents the holiday calendar configuration, meta information like the hierarchy and description
+ * and the sub calendar configuration for a specific {@link de.focus_shift.jollyday.core.HolidayCalendar}.
  * <ul>
  *   <li>The `holidays` contains the holiday configuration for every holiday.</li>
  *   <li>The `hierarchy` contains the ISO 3166-1 alpha-2 for countries or ISO 3166-2 code for subdivisions.</li>
@@ -12,7 +12,7 @@ import java.util.stream.Stream;
  *   <li>The `subConfiguration` contains the holiday configuration for subdivisions, cities, ... of the main configuration.</li>
  * </ul>
  */
-public interface Configuration {
+public interface HolidayCalendarConfiguration {
 
   /**
    * Contains the ISO 3166-1 alpha-2 for countries or ISO 3166-2 code for subdivisions
@@ -29,11 +29,11 @@ public interface Configuration {
   String description();
 
   /**
-   * Contains all holiday configuration of different types like {@link Fixed} or {@link ChristianHoliday} e.g.
+   * Contains all holiday configuration of different types like {@link FixedHolidayConfiguration} or {@link ChristianHolidayConfiguration} e.g.
    *
    * @return all holiday configuration for this {@link de.focus_shift.jollyday.core.HolidayCalendar}
    */
-  Holidays holidays();
+  HolidayConfigurations holidays();
 
   /**
    * Contains the holiday configuration for subdivisions, cities, ... of the main configuration.
@@ -42,6 +42,6 @@ public interface Configuration {
    *
    * @return all configurations for the next hierarchy level like subdivisions or cities.
    */
-  Stream<Configuration> subConfigurations();
+  Stream<HolidayCalendarConfiguration> subConfigurations();
 
 }

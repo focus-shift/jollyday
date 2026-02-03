@@ -1,6 +1,6 @@
 package de.focus_shift.jollyday.jaxb;
 
-import de.focus_shift.jollyday.core.spi.EthiopianOrthodoxHoliday.EthiopianOrthodoxHolidayType;
+import de.focus_shift.jollyday.core.spi.EthiopianOrthodoxHolidayConfiguration.EthiopianOrthodoxHolidayType;
 import de.focus_shift.jollyday.core.spi.Limited.YearCycle;
 import de.focus_shift.jollyday.jaxb.mapping.EthiopianOrthodoxHoliday;
 import de.focus_shift.jollyday.jaxb.mapping.HolidayCycleType;

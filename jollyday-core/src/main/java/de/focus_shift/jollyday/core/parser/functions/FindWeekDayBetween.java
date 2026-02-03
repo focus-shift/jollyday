@@ -1,6 +1,6 @@
 package de.focus_shift.jollyday.core.parser.functions;
 
-import de.focus_shift.jollyday.core.spi.FixedWeekdayBetweenFixed;
+import de.focus_shift.jollyday.core.spi.FixedWeekdayBetweenFixedHolidayConfiguration;
 
 import java.time.LocalDate;
 import java.util.function.Function;
@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 
 import static java.time.temporal.ChronoUnit.DAYS;
 
-public class FindWeekDayBetween implements Function<FixedWeekdayBetweenFixed, LocalDate> {
+public class FindWeekDayBetween implements Function<FixedWeekdayBetweenFixedHolidayConfiguration, LocalDate> {
 
   private final LocalDate from;
   private final LocalDate to;
@@ -19,7 +19,7 @@ public class FindWeekDayBetween implements Function<FixedWeekdayBetweenFixed, Lo
   }
 
   @Override
-  public LocalDate apply(final FixedWeekdayBetweenFixed fwm) {
+  public LocalDate apply(final FixedWeekdayBetweenFixedHolidayConfiguration fwm) {
     return Stream.iterate(from, date -> date.plusDays(1))
       .limit(DAYS.between(from, to) + 1)
       .filter(date -> date.getDayOfWeek() == fwm.weekday())

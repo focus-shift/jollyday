@@ -6,7 +6,7 @@ import de.focus_shift.jollyday.core.parser.functions.CreateHoliday;
 import de.focus_shift.jollyday.core.parser.functions.FixedToLocalDate;
 import de.focus_shift.jollyday.core.parser.functions.MoveDateRelative;
 import de.focus_shift.jollyday.core.parser.predicates.ValidLimitation;
-import de.focus_shift.jollyday.core.spi.Holidays;
+import de.focus_shift.jollyday.core.spi.HolidayConfigurations;
 
 import java.time.LocalDate;
 import java.time.Year;
@@ -20,7 +20,7 @@ import static java.util.stream.Collectors.toList;
 public class FixedParser implements HolidayParser {
 
   @Override
-  public List<Holiday> parse(final Year year, final Holidays holidays) {
+  public List<Holiday> parse(final Year year, final HolidayConfigurations holidays) {
     return holidays.fixed().stream()
       .filter(new ValidLimitation(year))
       .map(fixedConfiguration -> {

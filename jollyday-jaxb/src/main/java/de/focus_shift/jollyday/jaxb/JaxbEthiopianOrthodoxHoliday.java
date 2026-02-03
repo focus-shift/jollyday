@@ -1,14 +1,14 @@
 package de.focus_shift.jollyday.jaxb;
 
 import de.focus_shift.jollyday.core.HolidayType;
-import de.focus_shift.jollyday.core.spi.EthiopianOrthodoxHoliday;
+import de.focus_shift.jollyday.core.spi.EthiopianOrthodoxHolidayConfiguration;
 
 import java.time.Year;
 
 /**
- * see {@link EthiopianOrthodoxHoliday}
+ * see {@link EthiopianOrthodoxHolidayConfiguration}
  */
-class JaxbEthiopianOrthodoxHoliday implements EthiopianOrthodoxHoliday {
+class JaxbEthiopianOrthodoxHoliday implements EthiopianOrthodoxHolidayConfiguration {
 
   private final de.focus_shift.jollyday.jaxb.mapping.EthiopianOrthodoxHoliday ethiopianOrthodoxHoliday;
 

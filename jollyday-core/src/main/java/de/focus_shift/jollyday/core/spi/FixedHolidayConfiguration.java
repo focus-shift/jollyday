@@ -17,7 +17,7 @@ import java.time.MonthDay;
  * <p>
  * The {@link de.focus_shift.jollyday.core.parser.impl.FixedParser} is used.
  */
-public interface Fixed extends Described, Movable, Limited {
+public interface FixedHolidayConfiguration extends Described, Movable, Limited {
 
   /**
    * Contains the information on which day and month this holiday occurs.

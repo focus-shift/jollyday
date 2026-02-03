@@ -1,7 +1,7 @@
 package de.focus_shift.jollyday.jaxb;
 
 import de.focus_shift.jollyday.core.HolidayType;
-import de.focus_shift.jollyday.core.spi.RelativeToEasterSunday;
+import de.focus_shift.jollyday.core.spi.RelativeToEasterSundayHolidayConfiguration;
 import de.focus_shift.jollyday.jaxb.mapping.ChronologyType;
 import org.threeten.extra.Days;
 import org.threeten.extra.chrono.JulianChronology;
@@ -11,9 +11,9 @@ import java.time.chrono.Chronology;
 import java.time.chrono.IsoChronology;
 
 /**
- * see {@link RelativeToEasterSunday}
+ * see {@link RelativeToEasterSundayHolidayConfiguration}
  */
-class JaxbRelativeToEasterSunday implements RelativeToEasterSunday {
+class JaxbRelativeToEasterSunday implements RelativeToEasterSundayHolidayConfiguration {
 
   private final de.focus_shift.jollyday.jaxb.mapping.RelativeToEasterSunday relativeToEasterSunday;
 

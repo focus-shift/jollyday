@@ -5,7 +5,7 @@ import org.threeten.extra.Days;
 import java.time.DayOfWeek;
 
 /**
- * Represents the configuration of a holiday that is in relation to a {@link Fixed} date.
+ * Represents the configuration of a holiday that is in relation to a {@link FixedHolidayConfiguration} date.
  * <ul>
  *   <li>If only weekday is set it will use the weekday.</li>
  *   <li>If only days is set is not set it will use days.</li>
@@ -25,7 +25,7 @@ import java.time.DayOfWeek;
  * <p>
  * The {@link de.focus_shift.jollyday.core.parser.impl.RelativeToFixedParser} is used.
  */
-public interface RelativeToFixed extends Described, Limited {
+public interface RelativeToFixedHolidayConfiguration extends Described, Limited {
 
   /**
    * Describes the weekday on which the new holiday occurs
@@ -53,6 +53,6 @@ public interface RelativeToFixed extends Described, Limited {
    *
    * @return anchor date for the new holiday
    */
-  Fixed date();
+  FixedHolidayConfiguration date();
 
 }

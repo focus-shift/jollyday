@@ -23,7 +23,7 @@ import java.time.chrono.Chronology;
  * <p>
  * The {@link de.focus_shift.jollyday.core.parser.impl.ChristianHolidayParser} is used.
  */
-public interface ChristianHoliday extends Limited, Described, Movable {
+public interface ChristianHolidayConfiguration extends Limited, Described, Movable {
 
   enum ChristianHolidayType {
     GOOD_FRIDAY,

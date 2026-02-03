@@ -275,16 +275,16 @@ The configuration resides within the `jollyday.properties` and can be overridden
   A parser implementation is used for parsing the XML file content. There are several parsers configured depending on the class to parse the info from.
   
   ```properties
-  parser.impl.de.focus_shift.jollyday.core.spi.Fixed                       = de.focus_shift.jollyday.core.parser.impl.FixedParser
-  parser.impl.de.focus_shift.jollyday.core.spi.FixedWeekdayInMonth         = de.focus_shift.jollyday.core.parser.impl.FixedWeekdayInMonthParser
-  parser.impl.de.focus_shift.jollyday.core.spi.IslamicHoliday              = de.focus_shift.jollyday.core.parser.impl.IslamicHolidayParser
-  parser.impl.de.focus_shift.jollyday.core.spi.ChristianHoliday            = de.focus_shift.jollyday.core.parser.impl.ChristianHolidayParser
-  parser.impl.de.focus_shift.jollyday.core.spi.RelativeToFixed             = de.focus_shift.jollyday.core.parser.impl.RelativeToFixedParser
-  parser.impl.de.focus_shift.jollyday.core.spi.RelativeToWeekdayInMonth    = de.focus_shift.jollyday.core.parser.impl.RelativeToWeekdayInMonthParser
-  parser.impl.de.focus_shift.jollyday.core.spi.FixedWeekdayBetweenFixed    = de.focus_shift.jollyday.core.parser.impl.FixedWeekdayBetweenFixedParser
-  parser.impl.de.focus_shift.jollyday.core.spi.FixedWeekdayRelativeToFixed = de.focus_shift.jollyday.core.parser.impl.FixedWeekdayRelativeToFixedParser
-  parser.impl.de.focus_shift.jollyday.core.spi.EthiopianOrthodoxHoliday    = de.focus_shift.jollyday.core.parser.impl.EthiopianOrthodoxHolidayParser
-  parser.impl.de.focus_shift.jollyday.core.spi.RelativeToEasterSunday      = de.focus_shift.jollyday.core.parser.impl.RelativeToEasterSundayParser
+  parser.impl.de.focus_shift.jollyday.core.spi.FixedHolidayConfiguration                       = de.focus_shift.jollyday.core.parser.impl.FixedParser
+  parser.impl.de.focus_shift.jollyday.core.spi.FixedWeekdayInMonthHolidayConfiguration         = de.focus_shift.jollyday.core.parser.impl.FixedWeekdayInMonthParser
+  parser.impl.de.focus_shift.jollyday.core.spi.IslamicHolidayConfiguration                     = de.focus_shift.jollyday.core.parser.impl.IslamicHolidayParser
+  parser.impl.de.focus_shift.jollyday.core.spi.ChristianHolidayConfiguration                   = de.focus_shift.jollyday.core.parser.impl.ChristianHolidayParser
+  parser.impl.de.focus_shift.jollyday.core.spi.RelativeToFixedHolidayConfiguration             = de.focus_shift.jollyday.core.parser.impl.RelativeToFixedParser
+  parser.impl.de.focus_shift.jollyday.core.spi.RelativeToWeekdayInMonthHolidayConfiguration    = de.focus_shift.jollyday.core.parser.impl.RelativeToWeekdayInMonthParser
+  parser.impl.de.focus_shift.jollyday.core.spi.FixedWeekdayBetweenFixedHolidayConfiguration    = de.focus_shift.jollyday.core.parser.impl.FixedWeekdayBetweenFixedParser
+  parser.impl.de.focus_shift.jollyday.core.spi.FixedWeekdayRelativeToFixedHolidayConfiguration = de.focus_shift.jollyday.core.parser.impl.FixedWeekdayRelativeToFixedParser
+  parser.impl.de.focus_shift.jollyday.core.spi.EthiopianOrthodoxHolidayConfiguration           = de.focus_shift.jollyday.core.parser.impl.EthiopianOrthodoxHolidayParser
+  parser.impl.de.focus_shift.jollyday.core.spi.RelativeToEasterSundayHolidayConfiguration      = de.focus_shift.jollyday.core.parser.impl.RelativeToEasterSundayParser
   ```
 
   The configuration property name starts with `parser.impl` and finishes with the XML class name.
@@ -300,7 +300,7 @@ The configuration resides within the `jollyday.properties` and can be overridden
   ```
 
   The configuration property `configuration.service.impl` contains the class name as string.
-  The value is the configuration service implementation class name which implements the `ConfigurationService` interface.
+  The value is the configuration service implementation class name which implements the `HolidayCalendarConfigurationService` interface.
 
   Values are:
   * `de.focus_shift.jollyday.jackson.JacksonConfigurationService` (default)

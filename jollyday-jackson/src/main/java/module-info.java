@@ -1,9 +1,9 @@
-import de.focus_shift.jollyday.core.spi.ConfigurationService;
+import de.focus_shift.jollyday.core.spi.HolidayCalendarConfigurationService;
 import de.focus_shift.jollyday.jackson.JacksonConfigurationService;
 
 module de.focus_shift.jollyday.jackson {
 
-  provides ConfigurationService with
+  provides HolidayCalendarConfigurationService with
     JacksonConfigurationService;
 
   opens de.focus_shift.jollyday.jackson.mapping to

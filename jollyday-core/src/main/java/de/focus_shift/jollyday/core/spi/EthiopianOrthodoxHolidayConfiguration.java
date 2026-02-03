@@ -12,7 +12,7 @@ package de.focus_shift.jollyday.core.spi;
  * <p>
  * The {@link de.focus_shift.jollyday.core.parser.impl.EthiopianOrthodoxHolidayParser} is used.
  */
-public interface EthiopianOrthodoxHoliday extends Described, Limited {
+public interface EthiopianOrthodoxHolidayConfiguration extends Described, Limited {
 
   enum EthiopianOrthodoxHolidayType {
     TIMKAT,

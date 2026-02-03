@@ -1,9 +1,9 @@
 package de.focus_shift.jollyday.core.datasource;
 
 import de.focus_shift.jollyday.core.ManagerParameter;
-import de.focus_shift.jollyday.core.spi.Configuration;
-import de.focus_shift.jollyday.core.spi.ConfigurationService;
-import de.focus_shift.jollyday.core.spi.Holidays;
+import de.focus_shift.jollyday.core.spi.HolidayCalendarConfiguration;
+import de.focus_shift.jollyday.core.spi.HolidayCalendarConfigurationService;
+import de.focus_shift.jollyday.core.spi.HolidayConfigurations;
 import de.focus_shift.jollyday.core.support.LazyServiceLoaderCache;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -22,7 +22,7 @@ import static org.mockito.Mockito.when;
 class ConfigurationServiceManagerTest {
 
   @Mock
-  private LazyServiceLoaderCache<ConfigurationService> configurationServiceCache;
+  private LazyServiceLoaderCache<HolidayCalendarConfigurationService> configurationServiceCache;
 
   private ConfigurationServiceManager sut;
 
@@ -44,7 +44,7 @@ class ConfigurationServiceManagerTest {
   void ensuresToProvideConfigurationServiceIfExactlyOneIsAvailable() {
     when(configurationServiceCache.getServices()).thenReturn(List.of(new MockConfigurationService()));
 
-    final ConfigurationService configurationService = sut.getConfigurationService("configurationServiceImplClassName");
+    final HolidayCalendarConfigurationService configurationService = sut.getConfigurationService("configurationServiceImplClassName");
     assertThat(configurationService).isInstanceOf(MockConfigurationService.class);
   }
 
@@ -63,22 +63,22 @@ class ConfigurationServiceManagerTest {
     final MockConfigurationServiceOther mockConfigurationServiceOther = new MockConfigurationServiceOther();
     when(configurationServiceCache.getServices()).thenReturn(List.of(new MockConfigurationService(), mockConfigurationServiceOther));
 
-    final ConfigurationService configurationService = sut.getConfigurationService(mockConfigurationServiceOther.getClass().getName());
+    final HolidayCalendarConfigurationService configurationService = sut.getConfigurationService(mockConfigurationServiceOther.getClass().getName());
     assertThat(configurationService).isInstanceOf(MockConfigurationServiceOther.class);
   }
 
-  private static class MockConfigurationService implements ConfigurationService {
+  private static class MockConfigurationService implements HolidayCalendarConfigurationService {
 
     @Override
-    public Configuration getConfiguration(ManagerParameter parameter) {
-      return new Configuration() {
+    public HolidayCalendarConfiguration getHolidayCalendarConfiguration(ManagerParameter parameter) {
+      return new HolidayCalendarConfiguration() {
         @Override
-        public Holidays holidays() {
+        public HolidayConfigurations holidays() {
           return null;
         }
 
         @Override
-        public Stream<Configuration> subConfigurations() {
+        public Stream<HolidayCalendarConfiguration> subConfigurations() {
           return null;
         }
 
@@ -95,18 +95,18 @@ class ConfigurationServiceManagerTest {
     }
   }
 
-  private static class MockConfigurationServiceOther implements ConfigurationService {
+  private static class MockConfigurationServiceOther implements HolidayCalendarConfigurationService {
 
     @Override
-    public Configuration getConfiguration(ManagerParameter parameter) {
-      return new Configuration() {
+    public HolidayCalendarConfiguration getHolidayCalendarConfiguration(ManagerParameter parameter) {
+      return new HolidayCalendarConfiguration() {
         @Override
-        public Holidays holidays() {
+        public HolidayConfigurations holidays() {
           return null;
         }
 
         @Override
-        public Stream<Configuration> subConfigurations() {
+        public Stream<HolidayCalendarConfiguration> subConfigurations() {
           return null;
         }
 

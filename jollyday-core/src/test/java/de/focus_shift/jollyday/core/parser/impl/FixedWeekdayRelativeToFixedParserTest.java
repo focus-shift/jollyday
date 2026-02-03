@@ -2,9 +2,9 @@ package de.focus_shift.jollyday.core.parser.impl;
 
 import de.focus_shift.jollyday.core.Holiday;
 import de.focus_shift.jollyday.core.HolidayType;
-import de.focus_shift.jollyday.core.spi.Fixed;
-import de.focus_shift.jollyday.core.spi.FixedWeekdayRelativeToFixed;
-import de.focus_shift.jollyday.core.spi.Holidays;
+import de.focus_shift.jollyday.core.spi.FixedHolidayConfiguration;
+import de.focus_shift.jollyday.core.spi.FixedWeekdayRelativeToFixedHolidayConfiguration;
+import de.focus_shift.jollyday.core.spi.HolidayConfigurations;
 import de.focus_shift.jollyday.core.spi.Occurrence;
 import de.focus_shift.jollyday.core.spi.Relation;
 import org.junit.jupiter.api.Nested;
@@ -30,7 +30,7 @@ import static org.mockito.Mockito.when;
 class FixedWeekdayRelativeToFixedParserTest {
 
   @Mock
-  private Holidays holidays;
+  private HolidayConfigurations holidays;
 
   @Nested
   class LimitedTests {
@@ -39,7 +39,7 @@ class FixedWeekdayRelativeToFixedParserTest {
     void ensureThatFixedWeekdayRelativeToFixedAreLimitedAndIsValid() {
 
       final Year year = Year.of(2025);
-      final FixedWeekdayRelativeToFixed fixedWeekdayRelativeToFixed = getFixedWeekdayRelativeToFixed(MonthDay.of(JANUARY, 6), WEDNESDAY, Occurrence.LAST, Relation.BEFORE, year, year);
+      final FixedWeekdayRelativeToFixedHolidayConfiguration fixedWeekdayRelativeToFixed = getFixedWeekdayRelativeToFixed(MonthDay.of(JANUARY, 6), WEDNESDAY, Occurrence.LAST, Relation.BEFORE, year, year);
 
       final FixedWeekdayRelativeToFixedParser sut = new FixedWeekdayRelativeToFixedParser();
       when(holidays.fixedWeekdayRelativeToFixed()).thenReturn(List.of(fixedWeekdayRelativeToFixed));
@@ -51,7 +51,7 @@ class FixedWeekdayRelativeToFixedParserTest {
     @Test
     void ensureThatFixedWeekdayRelativeToFixedAreLimitedAndIsInvalid() {
 
-      final FixedWeekdayRelativeToFixed fixedWeekdayRelativeToFixed = getFixedWeekdayRelativeToFixed(MonthDay.of(JANUARY, 6), WEDNESDAY, Occurrence.LAST, Relation.BEFORE, Year.of(2023), Year.of(2023));
+      final FixedWeekdayRelativeToFixedHolidayConfiguration fixedWeekdayRelativeToFixed = getFixedWeekdayRelativeToFixed(MonthDay.of(JANUARY, 6), WEDNESDAY, Occurrence.LAST, Relation.BEFORE, Year.of(2023), Year.of(2023));
 
       final FixedWeekdayRelativeToFixedParser sut = new FixedWeekdayRelativeToFixedParser();
       when(holidays.fixedWeekdayRelativeToFixed()).thenReturn(List.of(fixedWeekdayRelativeToFixed));
@@ -61,7 +61,7 @@ class FixedWeekdayRelativeToFixedParserTest {
     }
   }
 
-  private static FixedWeekdayRelativeToFixed getFixedWeekdayRelativeToFixed(
+  private static FixedWeekdayRelativeToFixedHolidayConfiguration getFixedWeekdayRelativeToFixed(
     final MonthDay fixed,
     final DayOfWeek dayOfWeek,
     final Occurrence occurrence,
@@ -69,10 +69,10 @@ class FixedWeekdayRelativeToFixedParserTest {
     final Year validFrom,
     final Year validTo
   ) {
-    return new FixedWeekdayRelativeToFixed() {
+    return new FixedWeekdayRelativeToFixedHolidayConfiguration() {
 
-      private Fixed getFixed(final MonthDay monthDay) {
-        return new Fixed() {
+      private FixedHolidayConfiguration getFixed(final MonthDay monthDay) {
+        return new FixedHolidayConfiguration() {
           @Override
           public MonthDay day() {
             return monthDay;
@@ -111,7 +111,7 @@ class FixedWeekdayRelativeToFixedParserTest {
       }
 
       @Override
-      public Fixed day() {
+      public FixedHolidayConfiguration day() {
         return getFixed(fixed);
       }
 

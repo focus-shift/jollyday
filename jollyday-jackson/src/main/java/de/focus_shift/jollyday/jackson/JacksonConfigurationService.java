@@ -1,16 +1,16 @@
 package de.focus_shift.jollyday.jackson;
 
 import de.focus_shift.jollyday.core.ManagerParameter;
-import de.focus_shift.jollyday.core.spi.Configuration;
-import de.focus_shift.jollyday.core.spi.ConfigurationService;
+import de.focus_shift.jollyday.core.spi.HolidayCalendarConfiguration;
+import de.focus_shift.jollyday.core.spi.HolidayCalendarConfigurationService;
 
 import java.io.InputStream;
 import java.net.URL;
 
 /**
- * see {@link ConfigurationService}
+ * see {@link HolidayCalendarConfigurationService}
  */
-public class JacksonConfigurationService implements ConfigurationService {
+public class JacksonConfigurationService implements HolidayCalendarConfigurationService {
 
   private static final JacksonXMLMapper xmlUtil = new JacksonXMLMapper();
 
@@ -20,7 +20,7 @@ public class JacksonConfigurationService implements ConfigurationService {
    * @return {@inheritDoc}
    */
   @Override
-  public Configuration getConfiguration(ManagerParameter parameter) {
+  public HolidayCalendarConfiguration getHolidayCalendarConfiguration(ManagerParameter parameter) {
     final URL resourceUrl = parameter.createResourceUrl();
     try (final InputStream inputStream = resourceUrl.openStream()) {
       return new JacksonConfiguration(xmlUtil.unmarshallConfiguration(inputStream));

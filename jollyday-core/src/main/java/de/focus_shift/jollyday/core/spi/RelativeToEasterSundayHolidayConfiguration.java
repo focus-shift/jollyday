@@ -14,11 +14,11 @@ import java.time.chrono.Chronology;
  * <p>
  * Example: A holiday 42 days after Easter Sunday.
  * <p>
- * The difference to {@link ChristianHoliday} is that these holidays are based on Easter Sunday but no christian holidays.
+ * The difference to {@link ChristianHolidayConfiguration} is that these holidays are based on Easter Sunday but no christian holidays.
  * <p>
  * The {@link de.focus_shift.jollyday.core.parser.impl.RelativeToEasterSundayParser} is used.
  */
-public interface RelativeToEasterSunday extends Described, Limited {
+public interface RelativeToEasterSundayHolidayConfiguration extends Described, Limited {
 
   /**
    * Describes the {@link Chronology} of the holiday

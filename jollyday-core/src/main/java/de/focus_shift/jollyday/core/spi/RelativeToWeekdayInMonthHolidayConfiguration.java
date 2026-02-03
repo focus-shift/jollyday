@@ -15,7 +15,7 @@ import java.time.DayOfWeek;
  * <p>
  * The {@link de.focus_shift.jollyday.core.parser.impl.RelativeToWeekdayInMonthParser} is used.
  */
-public interface RelativeToWeekdayInMonth extends Described, Limited {
+public interface RelativeToWeekdayInMonthHolidayConfiguration extends Described, Limited {
 
   /**
    * Describes the weekday on which the new holiday occurs
@@ -36,6 +36,6 @@ public interface RelativeToWeekdayInMonth extends Described, Limited {
    *
    * @return the anchor for the relation to the new holiday
    */
-  FixedWeekdayInMonth weekdayInMonth();
+  FixedWeekdayInMonthHolidayConfiguration weekdayInMonth();
 
 }

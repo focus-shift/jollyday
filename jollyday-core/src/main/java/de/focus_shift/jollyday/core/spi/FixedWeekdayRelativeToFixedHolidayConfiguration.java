@@ -4,7 +4,7 @@ import java.time.DayOfWeek;
 
 /**
  * Represents the configuration of a holiday that occurs on a fixed weekday
- * relative to a {@link Fixed} holiday that can be
+ * relative to a {@link FixedHolidayConfiguration} holiday that can be
  *
  * <ul>
  *   <li>Limited</li>
@@ -20,14 +20,14 @@ import java.time.DayOfWeek;
  * <p>
  * The {@link de.focus_shift.jollyday.core.parser.impl.FixedWeekdayRelativeToFixedParser} is used.
  */
-public interface FixedWeekdayRelativeToFixed extends Described, Limited {
+public interface FixedWeekdayRelativeToFixedHolidayConfiguration extends Described, Limited {
 
   /**
    * Describes the anchor the new holiday
    *
    * @return the fixed holiday
    */
-  Fixed day();
+  FixedHolidayConfiguration day();
 
   /**
    * Describes, based on the anchor (day), on which occurrence the new holiday will occur

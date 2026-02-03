@@ -2,8 +2,8 @@ package de.focus_shift.jollyday.core.parser.impl;
 
 import de.focus_shift.jollyday.core.Holiday;
 import de.focus_shift.jollyday.core.HolidayType;
-import de.focus_shift.jollyday.core.spi.Holidays;
-import de.focus_shift.jollyday.core.spi.RelativeToEasterSunday;
+import de.focus_shift.jollyday.core.spi.HolidayConfigurations;
+import de.focus_shift.jollyday.core.spi.RelativeToEasterSundayHolidayConfiguration;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -29,13 +29,13 @@ import static org.mockito.Mockito.when;
 class RelativeToEasterSundayParserTest {
 
   @Mock
-  private Holidays holidays;
+  private HolidayConfigurations holidays;
 
   @Test
   void ensureThatRelativeToEasterSundayWithGregorianChronologyIsValid() {
 
     final Year year = Year.of(1400);
-    final RelativeToEasterSunday relativeToEasterSunday = getRelativeToEasterSunday(Days.of(24), IsoChronology.INSTANCE, year, year);
+    final RelativeToEasterSundayHolidayConfiguration relativeToEasterSunday = getRelativeToEasterSunday(Days.of(24), IsoChronology.INSTANCE, year, year);
 
     final RelativeToEasterSundayParser sut = new RelativeToEasterSundayParser();
     when(holidays.relativeToEasterSunday()).thenReturn(List.of(relativeToEasterSunday));
@@ -48,7 +48,7 @@ class RelativeToEasterSundayParserTest {
   void ensureThatRelativeToEasterSundayWithJulianChronologyIsValid() {
 
     final Year year = Year.of(1400);
-    final RelativeToEasterSunday relativeToEasterSunday = getRelativeToEasterSunday(Days.of(24), JulianChronology.INSTANCE, year, year);
+    final RelativeToEasterSundayHolidayConfiguration relativeToEasterSunday = getRelativeToEasterSunday(Days.of(24), JulianChronology.INSTANCE, year, year);
 
     final RelativeToEasterSundayParser sut = new RelativeToEasterSundayParser();
     when(holidays.relativeToEasterSunday()).thenReturn(List.of(relativeToEasterSunday));
@@ -64,7 +64,7 @@ class RelativeToEasterSundayParserTest {
     void ensureThatRelativeToEasterSundayAreLimitedAndIsValid() {
 
       final Year year = Year.of(2025);
-      final RelativeToEasterSunday relativeToEasterSunday = getRelativeToEasterSunday(Days.of(2), IsoChronology.INSTANCE, year, year);
+      final RelativeToEasterSundayHolidayConfiguration relativeToEasterSunday = getRelativeToEasterSunday(Days.of(2), IsoChronology.INSTANCE, year, year);
 
       final RelativeToEasterSundayParser sut = new RelativeToEasterSundayParser();
       when(holidays.relativeToEasterSunday()).thenReturn(List.of(relativeToEasterSunday));
@@ -76,7 +76,7 @@ class RelativeToEasterSundayParserTest {
     @Test
     void ensureThatRelativeToEasterSundayAreLimitedAndIsInvalid() {
 
-      final RelativeToEasterSunday relativeToEasterSunday = getRelativeToEasterSunday(Days.of(2), IsoChronology.INSTANCE, Year.of(2023), Year.of(2023));
+      final RelativeToEasterSundayHolidayConfiguration relativeToEasterSunday = getRelativeToEasterSunday(Days.of(2), IsoChronology.INSTANCE, Year.of(2023), Year.of(2023));
 
       final RelativeToEasterSundayParser sut = new RelativeToEasterSundayParser();
       when(holidays.relativeToEasterSunday()).thenReturn(List.of(relativeToEasterSunday));
@@ -86,13 +86,13 @@ class RelativeToEasterSundayParserTest {
     }
   }
 
-  private static RelativeToEasterSunday getRelativeToEasterSunday(
+  private static RelativeToEasterSundayHolidayConfiguration getRelativeToEasterSunday(
     final Days days,
     final Chronology chronology,
     final Year validFrom,
     final Year validTo
   ) {
-    return new RelativeToEasterSunday() {
+    return new RelativeToEasterSundayHolidayConfiguration() {
 
       @Override
       public Chronology chronology() {
