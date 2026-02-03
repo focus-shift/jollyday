@@ -4,8 +4,8 @@ Jollyday is a java library to query public holidays. Currently, we support **ove
 
 ## How to use it
 
-**Jollyday** is based on **Java 17** and can be used directly as dependency via maven or gradle e.g.
-The calculation basis of the public holidays for each country is based on a xml file and will be mapped via Jakarta XML Binding or Jackson.
+**Jollyday** is based on **Java 17** and can be used directly as dependency via maven or Gradle e.g.
+The calculation basis of the public holidays for each country is based on an XML file and will be mapped via Jakarta XML Binding or Jackson.
 If you already use one of these libraries in your project than just use the specific jollyday dependency.
 
 <details>
@@ -130,7 +130,7 @@ Returns all german public holidays from the **15th of april in 2022** until the 
 <details>
   <summary>Check if a specific date is a public holiday (click to expand)</summary>
 
-Returns true or false if a date is a public holidays in germany.
+Returns true or false if a date is a public holidays in Germany.
   ```java
   import de.focus_shift.jollyday.core.HolidayManager;
   import de.focus_shift.jollyday.core.ManagerParameters;
@@ -143,7 +143,7 @@ Returns true or false if a date is a public holidays in germany.
   final boolean isHoliday = holidayManager.isHoliday(LocalDate.of(2022, 6, 6));
   ```
 
-Returns true or false if a date is a public holidays in Baden-Württemberg in germany.
+Returns true or false if a date is a public holidays in Baden-Württemberg in Germany.
   ```java
   import de.focus_shift.jollyday.core.HolidayManager;
   import de.focus_shift.jollyday.core.ManagerParameters;
@@ -293,7 +293,7 @@ The configuration resides within the `jollyday.properties` and can be overridden
 
 <details>
   <summary>of Configuration Service (click to expand)</summary>
-  A configuration service implementation is used to define which xml unmarshalling implementation should be used
+  A configuration service implementation is used to define which XML unmarshalling implementation should be used
 
   ```properties
   configuration.service.impl = de.focus_shift.jollyday.jackson.JacksonConfigurationService
