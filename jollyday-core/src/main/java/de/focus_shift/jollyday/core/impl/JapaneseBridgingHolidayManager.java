@@ -12,10 +12,10 @@ import static de.focus_shift.jollyday.core.util.CalendarUtil.contains;
 
 /**
  * <p>
- * JapaneseHolidayManager class.
+ * JapaneseBridgingHolidayManager class.
  * </p>
  */
-public class JapaneseHolidayManager extends DefaultHolidayManager {
+public class JapaneseBridgingHolidayManager extends DefaultHolidayManager {
 
   /**
    * The properties key for japanese bridging holidays.

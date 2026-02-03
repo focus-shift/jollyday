@@ -2,7 +2,7 @@ package de.focus_shift.jollyday.core;
 
 import de.focus_shift.jollyday.core.datasource.ConfigurationServiceManager;
 import de.focus_shift.jollyday.core.impl.DefaultHolidayManager;
-import de.focus_shift.jollyday.core.impl.JapaneseHolidayManager;
+import de.focus_shift.jollyday.core.impl.JapaneseBridgingHolidayManager;
 import de.focus_shift.jollyday.core.spi.HolidayCalendarConfiguration;
 import de.focus_shift.jollyday.core.spi.HolidayCalendarConfigurationService;
 import org.junit.jupiter.api.Test;
@@ -38,7 +38,7 @@ class HolidayManagerValueHandlerTest {
   private static Stream<Arguments> provideHolidayManagers() {
     return Stream.of(
       Arguments.of("de.focus_shift.jollyday.core.impl.DefaultHolidayManager", DefaultHolidayManager.class),
-      Arguments.of("de.focus_shift.jollyday.core.impl.JapaneseHolidayManager", JapaneseHolidayManager.class)
+      Arguments.of("de.focus_shift.jollyday.core.impl.JapaneseBridgingHolidayManager", JapaneseBridgingHolidayManager.class)
     );
   }
 
