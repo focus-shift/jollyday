@@ -45,7 +45,7 @@ They can also be added after the original pull request but before a merge.
 ## Working with the Code
 
 If you don't have an IDE preference we would recommend that you use
-[the Intellij Community Edition](https://www.jetbrains.com/idea/download). This will
+[the IntelliJ Community Edition](https://www.jetbrains.com/idea/download). This will
 automatically use our EditorConfig.
 
 ### Building from Source
