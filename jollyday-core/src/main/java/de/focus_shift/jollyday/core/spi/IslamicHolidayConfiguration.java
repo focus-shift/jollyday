@@ -13,7 +13,7 @@ package de.focus_shift.jollyday.core.spi;
  * <p>
  * The {@link de.focus_shift.jollyday.core.parser.impl.IslamicHolidayParser} is used.
  */
-public interface IslamicHoliday extends Described, Limited, Movable {
+public interface IslamicHolidayConfiguration extends Described, Limited, Movable {
 
   enum IslamicHolidayType {
     NEWYEAR,

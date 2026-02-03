@@ -1,7 +1,7 @@
 package de.focus_shift.jollyday.jaxb;
 
 import de.focus_shift.jollyday.core.HolidayType;
-import de.focus_shift.jollyday.core.spi.IslamicHoliday;
+import de.focus_shift.jollyday.core.spi.IslamicHolidayConfiguration;
 
 import java.time.Year;
 import java.util.List;
@@ -9,9 +9,9 @@ import java.util.List;
 import static java.util.stream.Collectors.toList;
 
 /**
- * see {@link IslamicHoliday}
+ * see {@link IslamicHolidayConfiguration}
  */
-class JaxbIslamicHoliday implements IslamicHoliday {
+class JaxbIslamicHoliday implements IslamicHolidayConfiguration {
 
   private final de.focus_shift.jollyday.jaxb.mapping.IslamicHoliday islamicHoliday;
 

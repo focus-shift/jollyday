@@ -2,8 +2,8 @@ package de.focus_shift.jollyday.core.parser.impl;
 
 import de.focus_shift.jollyday.core.Holiday;
 import de.focus_shift.jollyday.core.HolidayType;
-import de.focus_shift.jollyday.core.spi.ChristianHoliday;
-import de.focus_shift.jollyday.core.spi.Holidays;
+import de.focus_shift.jollyday.core.spi.ChristianHolidayConfiguration;
+import de.focus_shift.jollyday.core.spi.HolidayConfigurations;
 import de.focus_shift.jollyday.core.spi.Movable;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
@@ -24,8 +24,8 @@ import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 import static de.focus_shift.jollyday.core.HolidayType.PUBLIC_HOLIDAY;
-import static de.focus_shift.jollyday.core.spi.ChristianHoliday.ChristianHolidayType.EASTER;
-import static de.focus_shift.jollyday.core.spi.ChristianHoliday.ChristianHolidayType.GOOD_FRIDAY;
+import static de.focus_shift.jollyday.core.spi.ChristianHolidayConfiguration.ChristianHolidayType.EASTER;
+import static de.focus_shift.jollyday.core.spi.ChristianHolidayConfiguration.ChristianHolidayType.GOOD_FRIDAY;
 import static de.focus_shift.jollyday.core.spi.Limited.YearCycle.EVERY_YEAR;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.when;
@@ -34,14 +34,14 @@ import static org.mockito.Mockito.when;
 class ChristianHolidayParserTest {
 
   @Mock
-  private Holidays holidays;
+  private HolidayConfigurations holidays;
 
   @Nested
   @TestInstance(TestInstance.Lifecycle.PER_CLASS)
   class ChristianHolidayTypeTests {
 
     private Stream<Arguments> christianHolidaysWithLocalDates() {
-      final ChristianHoliday.ChristianHolidayType[] christianHolidayTypes = ChristianHoliday.ChristianHolidayType.values();
+      final ChristianHolidayConfiguration.ChristianHolidayType[] christianHolidayTypes = ChristianHolidayConfiguration.ChristianHolidayType.values();
       final String[] christianHolidayDates = {
         "2022-04-15",
         "2022-04-18",
@@ -70,9 +70,9 @@ class ChristianHolidayParserTest {
 
     @ParameterizedTest
     @MethodSource("christianHolidaysWithLocalDates")
-    void ensureThatAllChristianHolidayTypesProvideAHoliday(final ChristianHoliday.ChristianHolidayType type, final LocalDate expected) {
+    void ensureThatAllChristianHolidayTypesProvideAHoliday(final ChristianHolidayConfiguration.ChristianHolidayType type, final LocalDate expected) {
 
-      final ChristianHoliday christianHoliday = getChristianHoliday(type);
+      final ChristianHolidayConfiguration christianHoliday = getChristianHoliday(type);
 
       final ChristianHolidayParser sut = new ChristianHolidayParser();
       when(holidays.christianHolidays()).thenReturn(List.of(christianHoliday));
@@ -89,7 +89,7 @@ class ChristianHolidayParserTest {
     @Test
     void ensureThatChristianHolidaysAreLimitedAndIsValid() {
 
-      final ChristianHoliday christianHoliday = getChristianHoliday(GOOD_FRIDAY, Year.of(2022), Year.of(2022));
+      final ChristianHolidayConfiguration christianHoliday = getChristianHoliday(GOOD_FRIDAY, Year.of(2022), Year.of(2022));
 
       final ChristianHolidayParser sut = new ChristianHolidayParser();
       when(holidays.christianHolidays()).thenReturn(List.of(christianHoliday));
@@ -101,7 +101,7 @@ class ChristianHolidayParserTest {
     @Test
     void ensureThatChristianHolidaysAreLimitedAndIsInvalid() {
 
-      final ChristianHoliday christianHoliday = getChristianHoliday(GOOD_FRIDAY, Year.of(2023), Year.of(2023));
+      final ChristianHolidayConfiguration christianHoliday = getChristianHoliday(GOOD_FRIDAY, Year.of(2023), Year.of(2023));
 
       final ChristianHolidayParser sut = new ChristianHolidayParser();
       when(holidays.christianHolidays()).thenReturn(List.of(christianHoliday));
@@ -134,7 +134,7 @@ class ChristianHolidayParserTest {
         }
       };
 
-      final ChristianHoliday christianHoliday = getChristianHoliday(EASTER, movingCondition);
+      final ChristianHolidayConfiguration christianHoliday = getChristianHoliday(EASTER, movingCondition);
 
       final ChristianHolidayParser sut = new ChristianHolidayParser();
       when(holidays.christianHolidays()).thenReturn(List.of(christianHoliday));
@@ -147,25 +147,25 @@ class ChristianHolidayParserTest {
     }
   }
 
-  private static ChristianHoliday getChristianHoliday(final ChristianHoliday.ChristianHolidayType type) {
+  private static ChristianHolidayConfiguration getChristianHoliday(final ChristianHolidayConfiguration.ChristianHolidayType type) {
     return getChristianHoliday(type, null, null, null);
   }
 
-  private static ChristianHoliday getChristianHoliday(final ChristianHoliday.ChristianHolidayType type, final Movable.MovingCondition movingCondition) {
+  private static ChristianHolidayConfiguration getChristianHoliday(final ChristianHolidayConfiguration.ChristianHolidayType type, final Movable.MovingCondition movingCondition) {
     return getChristianHoliday(type, movingCondition, null, null);
   }
 
-  private static ChristianHoliday getChristianHoliday(final ChristianHoliday.ChristianHolidayType type, final Year validFrom, final Year validTo) {
+  private static ChristianHolidayConfiguration getChristianHoliday(final ChristianHolidayConfiguration.ChristianHolidayType type, final Year validFrom, final Year validTo) {
     return getChristianHoliday(type, null, validFrom, validTo);
   }
 
-  private static ChristianHoliday getChristianHoliday(
-    final ChristianHoliday.ChristianHolidayType type,
+  private static ChristianHolidayConfiguration getChristianHoliday(
+    final ChristianHolidayConfiguration.ChristianHolidayType type,
     final Movable.MovingCondition movingCondition,
     final Year validFrom,
     final Year validTo
   ) {
-    return new ChristianHoliday() {
+    return new ChristianHolidayConfiguration() {
 
       @Override
       public List<MovingCondition> conditions() {

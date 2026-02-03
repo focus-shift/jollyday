@@ -2,8 +2,8 @@ package de.focus_shift.jollyday.core.parser.functions;
 
 
 import de.focus_shift.jollyday.core.HolidayType;
-import de.focus_shift.jollyday.core.spi.Fixed;
-import de.focus_shift.jollyday.core.spi.FixedWeekdayBetweenFixed;
+import de.focus_shift.jollyday.core.spi.FixedHolidayConfiguration;
+import de.focus_shift.jollyday.core.spi.FixedWeekdayBetweenFixedHolidayConfiguration;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -37,17 +37,17 @@ class FindWeekDayBetweenTest {
     assertThat(actualDate).isNull();
   }
 
-  private static FixedWeekdayBetweenFixed getFixedWeekdayBetweenFixed(final DayOfWeek dayOfWeek) {
+  private static FixedWeekdayBetweenFixedHolidayConfiguration getFixedWeekdayBetweenFixed(final DayOfWeek dayOfWeek) {
 
-    return new FixedWeekdayBetweenFixed() {
+    return new FixedWeekdayBetweenFixedHolidayConfiguration() {
 
       @Override
-      public Fixed from() {
+      public FixedHolidayConfiguration from() {
         return null;
       }
 
       @Override
-      public Fixed to() {
+      public FixedHolidayConfiguration to() {
         return null;
       }
 

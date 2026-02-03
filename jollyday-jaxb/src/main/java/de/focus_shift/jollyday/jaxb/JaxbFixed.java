@@ -1,7 +1,7 @@
 package de.focus_shift.jollyday.jaxb;
 
 import de.focus_shift.jollyday.core.HolidayType;
-import de.focus_shift.jollyday.core.spi.Fixed;
+import de.focus_shift.jollyday.core.spi.FixedHolidayConfiguration;
 
 import java.time.Month;
 import java.time.MonthDay;
@@ -11,9 +11,9 @@ import java.util.List;
 import static java.util.stream.Collectors.toList;
 
 /**
- * see {@link Fixed}
+ * see {@link FixedHolidayConfiguration}
  */
-class JaxbFixed implements Fixed {
+class JaxbFixed implements FixedHolidayConfiguration {
 
   private final de.focus_shift.jollyday.jaxb.mapping.Fixed fixed;
 

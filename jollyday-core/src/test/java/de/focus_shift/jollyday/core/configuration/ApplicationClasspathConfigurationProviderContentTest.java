@@ -15,16 +15,16 @@ class ApplicationClasspathConfigurationProviderContentTest {
         assertThat(properties).containsOnlyKeys(
                 "manager.impl",
                 "manager.impl.jp",
-                "parser.impl.de.focus_shift.jollyday.core.spi.Fixed",
-                "parser.impl.de.focus_shift.jollyday.core.spi.FixedWeekdayInMonth",
-                "parser.impl.de.focus_shift.jollyday.core.spi.IslamicHoliday",
-                "parser.impl.de.focus_shift.jollyday.core.spi.ChristianHoliday",
-                "parser.impl.de.focus_shift.jollyday.core.spi.RelativeToFixed",
-                "parser.impl.de.focus_shift.jollyday.core.spi.RelativeToWeekdayInMonth",
-                "parser.impl.de.focus_shift.jollyday.core.spi.FixedWeekdayBetweenFixed",
-                "parser.impl.de.focus_shift.jollyday.core.spi.FixedWeekdayRelativeToFixed",
-                "parser.impl.de.focus_shift.jollyday.core.spi.EthiopianOrthodoxHoliday",
-                "parser.impl.de.focus_shift.jollyday.core.spi.RelativeToEasterSunday",
+                "parser.impl.de.focus_shift.jollyday.core.spi.FixedHolidayConfiguration",
+                "parser.impl.de.focus_shift.jollyday.core.spi.FixedWeekdayInMonthHolidayConfiguration",
+                "parser.impl.de.focus_shift.jollyday.core.spi.IslamicHolidayConfiguration",
+                "parser.impl.de.focus_shift.jollyday.core.spi.ChristianHolidayConfiguration",
+                "parser.impl.de.focus_shift.jollyday.core.spi.RelativeToFixedHolidayConfiguration",
+                "parser.impl.de.focus_shift.jollyday.core.spi.RelativeToWeekdayInMonthHolidayConfiguration",
+                "parser.impl.de.focus_shift.jollyday.core.spi.FixedWeekdayBetweenFixedHolidayConfiguration",
+                "parser.impl.de.focus_shift.jollyday.core.spi.FixedWeekdayRelativeToFixedHolidayConfiguration",
+                "parser.impl.de.focus_shift.jollyday.core.spi.EthiopianOrthodoxHolidayConfiguration",
+                "parser.impl.de.focus_shift.jollyday.core.spi.RelativeToEasterSundayHolidayConfiguration",
                 "configuration.service.impl"
         );
     }

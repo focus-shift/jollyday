@@ -1,18 +1,19 @@
 package de.focus_shift.jollyday.jackson;
 
 import de.focus_shift.jollyday.core.HolidayType;
-import de.focus_shift.jollyday.core.spi.EthiopianOrthodoxHoliday;
+import de.focus_shift.jollyday.core.spi.EthiopianOrthodoxHolidayConfiguration;
+import de.focus_shift.jollyday.jackson.mapping.EthiopianOrthodoxHoliday;
 
 import java.time.Year;
 
 /**
- * see {@link EthiopianOrthodoxHoliday}
+ * see {@link EthiopianOrthodoxHolidayConfiguration}
  */
-class JacksonEthiopianOrthodoxHoliday implements EthiopianOrthodoxHoliday {
+class JacksonEthiopianOrthodoxHoliday implements EthiopianOrthodoxHolidayConfiguration {
 
-  private final de.focus_shift.jollyday.jackson.mapping.EthiopianOrthodoxHoliday ethiopianOrthodoxHoliday;
+  private final EthiopianOrthodoxHoliday ethiopianOrthodoxHoliday;
 
-  JacksonEthiopianOrthodoxHoliday(de.focus_shift.jollyday.jackson.mapping.EthiopianOrthodoxHoliday ethiopianOrthodoxHoliday) {
+  JacksonEthiopianOrthodoxHoliday(EthiopianOrthodoxHoliday ethiopianOrthodoxHoliday) {
     this.ethiopianOrthodoxHoliday = ethiopianOrthodoxHoliday;
   }
 

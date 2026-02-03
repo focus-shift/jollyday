@@ -2,9 +2,9 @@ package de.focus_shift.jollyday.core.parser.impl;
 
 import de.focus_shift.jollyday.core.Holiday;
 import de.focus_shift.jollyday.core.HolidayType;
-import de.focus_shift.jollyday.core.spi.Fixed;
-import de.focus_shift.jollyday.core.spi.FixedWeekdayBetweenFixed;
-import de.focus_shift.jollyday.core.spi.Holidays;
+import de.focus_shift.jollyday.core.spi.FixedHolidayConfiguration;
+import de.focus_shift.jollyday.core.spi.FixedWeekdayBetweenFixedHolidayConfiguration;
+import de.focus_shift.jollyday.core.spi.HolidayConfigurations;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -28,7 +28,7 @@ import static org.mockito.Mockito.when;
 class FixedWeekdayBetweenFixedParserTest {
 
   @Mock
-  private Holidays holidays;
+  private HolidayConfigurations holidays;
 
   @Nested
   class LimitedTests {
@@ -37,7 +37,7 @@ class FixedWeekdayBetweenFixedParserTest {
     void ensureThatFixedWeekdayBetweenFixedAreLimitedAndIsValid() {
 
       final Year year = Year.of(2025);
-      final FixedWeekdayBetweenFixed fixedWeekdayBetweenFixed = getFixedWeekdayBetweenFixed(MonthDay.of(JANUARY, 6), MonthDay.of(JANUARY, 12), WEDNESDAY, year, year);
+      final FixedWeekdayBetweenFixedHolidayConfiguration fixedWeekdayBetweenFixed = getFixedWeekdayBetweenFixed(MonthDay.of(JANUARY, 6), MonthDay.of(JANUARY, 12), WEDNESDAY, year, year);
 
       final FixedWeekdayBetweenFixedParser sut = new FixedWeekdayBetweenFixedParser();
       when(holidays.fixedWeekdayBetweenFixed()).thenReturn(List.of(fixedWeekdayBetweenFixed));
@@ -49,7 +49,7 @@ class FixedWeekdayBetweenFixedParserTest {
     @Test
     void ensureThatFixedWeekdayBetweenFixedAreLimitedAndIsInvalid() {
 
-      final FixedWeekdayBetweenFixed fixedWeekdayBetweenFixed = getFixedWeekdayBetweenFixed(MonthDay.of(JANUARY, 6), MonthDay.of(JANUARY, 12), WEDNESDAY, Year.of(2023), Year.of(2023));
+      final FixedWeekdayBetweenFixedHolidayConfiguration fixedWeekdayBetweenFixed = getFixedWeekdayBetweenFixed(MonthDay.of(JANUARY, 6), MonthDay.of(JANUARY, 12), WEDNESDAY, Year.of(2023), Year.of(2023));
 
       final FixedWeekdayBetweenFixedParser sut = new FixedWeekdayBetweenFixedParser();
       when(holidays.fixedWeekdayBetweenFixed()).thenReturn(List.of(fixedWeekdayBetweenFixed));
@@ -59,17 +59,17 @@ class FixedWeekdayBetweenFixedParserTest {
     }
   }
 
-  private static FixedWeekdayBetweenFixed getFixedWeekdayBetweenFixed(
+  private static FixedWeekdayBetweenFixedHolidayConfiguration getFixedWeekdayBetweenFixed(
     final MonthDay from,
     final MonthDay to,
     final DayOfWeek dayOfWeek,
     final Year validFrom,
     final Year validTo
   ) {
-    return new FixedWeekdayBetweenFixed() {
+    return new FixedWeekdayBetweenFixedHolidayConfiguration() {
 
-      private Fixed getFixed(final MonthDay monthDay) {
-        return new Fixed() {
+      private FixedHolidayConfiguration getFixed(final MonthDay monthDay) {
+        return new FixedHolidayConfiguration() {
           @Override
           public MonthDay day() {
             return monthDay;
@@ -108,12 +108,12 @@ class FixedWeekdayBetweenFixedParserTest {
       }
 
       @Override
-      public Fixed from() {
+      public FixedHolidayConfiguration from() {
         return getFixed(from);
       }
 
       @Override
-      public Fixed to() {
+      public FixedHolidayConfiguration to() {
         return getFixed(to);
       }
 

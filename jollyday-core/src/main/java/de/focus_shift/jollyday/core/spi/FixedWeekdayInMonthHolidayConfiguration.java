@@ -15,7 +15,7 @@ import java.time.Month;
  * <p>
  * The {@link de.focus_shift.jollyday.core.parser.impl.FixedWeekdayInMonthParser} is used.
  */
-public interface FixedWeekdayInMonth extends Described, Limited {
+public interface FixedWeekdayInMonthHolidayConfiguration extends Described, Limited {
 
   /**
    * Describes the day of the week, like Monday, Tuesday, ...

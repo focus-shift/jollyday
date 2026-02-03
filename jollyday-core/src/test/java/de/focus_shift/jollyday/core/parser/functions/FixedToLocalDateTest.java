@@ -1,7 +1,7 @@
 package de.focus_shift.jollyday.core.parser.functions;
 
 import de.focus_shift.jollyday.core.HolidayType;
-import de.focus_shift.jollyday.core.spi.Fixed;
+import de.focus_shift.jollyday.core.spi.FixedHolidayConfiguration;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
@@ -17,7 +17,7 @@ class FixedToLocalDateTest {
   @Test
   void ensureToConvertFixedToLocalDate() {
 
-    final Fixed fixed = new Fixed() {
+    final FixedHolidayConfiguration fixed = new FixedHolidayConfiguration() {
       @Override
       public List<MovingCondition> conditions() {
         return null;

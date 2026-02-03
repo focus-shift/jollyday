@@ -1,7 +1,8 @@
 package de.focus_shift.jollyday.jackson;
 
 import de.focus_shift.jollyday.core.HolidayType;
-import de.focus_shift.jollyday.core.spi.ChristianHoliday;
+import de.focus_shift.jollyday.core.spi.ChristianHolidayConfiguration;
+import de.focus_shift.jollyday.jackson.mapping.ChristianHoliday;
 import de.focus_shift.jollyday.jackson.mapping.ChronologyType;
 import org.threeten.extra.chrono.JulianChronology;
 
@@ -13,13 +14,13 @@ import java.util.List;
 import static java.util.stream.Collectors.toList;
 
 /**
- * see {@link ChristianHoliday}
+ * see {@link ChristianHolidayConfiguration}
  */
-class JacksonChristianHoliday implements ChristianHoliday {
+class JacksonChristianHoliday implements ChristianHolidayConfiguration {
 
-  private final de.focus_shift.jollyday.jackson.mapping.ChristianHoliday christianHoliday;
+  private final ChristianHoliday christianHoliday;
 
-  JacksonChristianHoliday(de.focus_shift.jollyday.jackson.mapping.ChristianHoliday christianHoliday) {
+  JacksonChristianHoliday(ChristianHoliday christianHoliday) {
     this.christianHoliday = christianHoliday;
   }
 

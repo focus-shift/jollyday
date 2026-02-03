@@ -5,7 +5,7 @@ import de.focus_shift.jollyday.core.parser.HolidayParser;
 import de.focus_shift.jollyday.core.parser.functions.CalculateRelativeDatesFromChronologyWithinGregorianYear;
 import de.focus_shift.jollyday.core.parser.functions.CreateHoliday;
 import de.focus_shift.jollyday.core.parser.predicates.ValidLimitation;
-import de.focus_shift.jollyday.core.spi.Holidays;
+import de.focus_shift.jollyday.core.spi.HolidayConfigurations;
 import org.threeten.extra.chrono.CopticChronology;
 
 import java.time.LocalDate;
@@ -21,7 +21,7 @@ import static java.util.stream.Collectors.toList;
 public class EthiopianOrthodoxHolidayParser implements HolidayParser {
 
   @Override
-  public List<Holiday> parse(final Year year, final Holidays holidays) {
+  public List<Holiday> parse(final Year year, final HolidayConfigurations holidays) {
     return holidays.ethiopianOrthodoxHolidays().stream()
       .filter(new ValidLimitation(year))
       .flatMap(eoh -> {

@@ -1,7 +1,8 @@
 package de.focus_shift.jollyday.jackson;
 
 import de.focus_shift.jollyday.core.HolidayType;
-import de.focus_shift.jollyday.core.spi.IslamicHoliday;
+import de.focus_shift.jollyday.core.spi.IslamicHolidayConfiguration;
+import de.focus_shift.jollyday.jackson.mapping.IslamicHoliday;
 
 import java.time.Year;
 import java.util.List;
@@ -9,13 +10,13 @@ import java.util.List;
 import static java.util.stream.Collectors.toList;
 
 /**
- * see {@link IslamicHoliday}
+ * see {@link IslamicHolidayConfiguration}
  */
-class JacksonIslamicHoliday implements IslamicHoliday {
+class JacksonIslamicHoliday implements IslamicHolidayConfiguration {
 
-  private final de.focus_shift.jollyday.jackson.mapping.IslamicHoliday islamicHoliday;
+  private final IslamicHoliday islamicHoliday;
 
-  JacksonIslamicHoliday(de.focus_shift.jollyday.jackson.mapping.IslamicHoliday christianHoliday) {
+  JacksonIslamicHoliday(IslamicHoliday christianHoliday) {
     this.islamicHoliday = christianHoliday;
   }
 

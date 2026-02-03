@@ -2,8 +2,8 @@ package de.focus_shift.jollyday.core.parser.impl;
 
 import de.focus_shift.jollyday.core.Holiday;
 import de.focus_shift.jollyday.core.HolidayType;
-import de.focus_shift.jollyday.core.spi.Fixed;
-import de.focus_shift.jollyday.core.spi.Holidays;
+import de.focus_shift.jollyday.core.spi.FixedHolidayConfiguration;
+import de.focus_shift.jollyday.core.spi.HolidayConfigurations;
 import de.focus_shift.jollyday.core.spi.Limited;
 import de.focus_shift.jollyday.core.spi.Movable;
 import org.junit.jupiter.api.Nested;
@@ -28,7 +28,7 @@ import static org.mockito.Mockito.when;
 class FixedParserTest {
 
   @Mock
-  private Holidays holidays;
+  private HolidayConfigurations holidays;
 
   @Nested
   class LimitedTests {
@@ -36,7 +36,7 @@ class FixedParserTest {
     @Test
     void ensureThatFixedAreLimitedAndIsValid() {
 
-      final Fixed fixed = getFixed(MonthDay.of(JANUARY, 5), Year.of(2022), Year.of(2022), EVERY_YEAR);
+      final FixedHolidayConfiguration fixed = getFixed(MonthDay.of(JANUARY, 5), Year.of(2022), Year.of(2022), EVERY_YEAR);
 
       final FixedParser sut = new FixedParser();
       when(holidays.fixed()).thenReturn(List.of(fixed));
@@ -48,7 +48,7 @@ class FixedParserTest {
     @Test
     void ensureThatFixedAreLimitedAndIsInvalid() {
 
-      final Fixed fixed = getFixed(MonthDay.of(JANUARY, 5), Year.of(2023), Year.of(2023), EVERY_YEAR);
+      final FixedHolidayConfiguration fixed = getFixed(MonthDay.of(JANUARY, 5), Year.of(2023), Year.of(2023), EVERY_YEAR);
 
       final FixedParser sut = new FixedParser();
       when(holidays.fixed()).thenReturn(List.of(fixed));
@@ -81,7 +81,7 @@ class FixedParserTest {
         }
       };
 
-      final Fixed fixed = getFixed(MonthDay.of(JANUARY, 5), movingCondition);
+      final FixedHolidayConfiguration fixed = getFixed(MonthDay.of(JANUARY, 5), movingCondition);
 
       final FixedParser sut = new FixedParser();
       when(holidays.fixed()).thenReturn(List.of(fixed));
@@ -96,22 +96,22 @@ class FixedParserTest {
     }
   }
 
-  private static Fixed getFixed(final MonthDay day, final Movable.MovingCondition movingCondition) {
+  private static FixedHolidayConfiguration getFixed(final MonthDay day, final Movable.MovingCondition movingCondition) {
     return getFixed(day, movingCondition, null, null, EVERY_YEAR);
   }
 
-  private static Fixed getFixed(final MonthDay day, final Year validFrom, final Year validTo, final Limited.YearCycle yearCycle) {
+  private static FixedHolidayConfiguration getFixed(final MonthDay day, final Year validFrom, final Year validTo, final Limited.YearCycle yearCycle) {
     return getFixed(day, null, validFrom, validTo, yearCycle);
   }
 
-  private static Fixed getFixed(
+  private static FixedHolidayConfiguration getFixed(
     final MonthDay day,
     final Movable.MovingCondition movingCondition,
     final Year validFrom,
     final Year validTo,
     final Limited.YearCycle yearCycle
   ) {
-    return new Fixed() {
+    return new FixedHolidayConfiguration() {
 
       @Override
       public MonthDay day() {
