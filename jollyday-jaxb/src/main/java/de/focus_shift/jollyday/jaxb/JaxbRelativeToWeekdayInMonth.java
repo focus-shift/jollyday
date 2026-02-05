@@ -4,6 +4,7 @@ import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.FixedWeekdayInMonthHolidayConfiguration;
 import de.focus_shift.jollyday.core.spi.Relation;
 import de.focus_shift.jollyday.core.spi.RelativeToWeekdayInMonthHolidayConfiguration;
+import de.focus_shift.jollyday.jaxb.mapping.RelativeToWeekdayInMonth;
 
 import java.time.DayOfWeek;
 import java.time.Year;
@@ -13,9 +14,9 @@ import java.time.Year;
  */
 class JaxbRelativeToWeekdayInMonth implements RelativeToWeekdayInMonthHolidayConfiguration {
 
-  private final de.focus_shift.jollyday.jaxb.mapping.RelativeToWeekdayInMonth relativeToWeekdayInMonth;
+  private final RelativeToWeekdayInMonth relativeToWeekdayInMonth;
 
-  JaxbRelativeToWeekdayInMonth(de.focus_shift.jollyday.jaxb.mapping.RelativeToWeekdayInMonth relativeToWeekdayInMonth) {
+  JaxbRelativeToWeekdayInMonth(RelativeToWeekdayInMonth relativeToWeekdayInMonth) {
     this.relativeToWeekdayInMonth = relativeToWeekdayInMonth;
   }
 

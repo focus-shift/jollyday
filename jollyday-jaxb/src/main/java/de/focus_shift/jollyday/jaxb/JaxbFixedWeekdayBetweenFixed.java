@@ -3,6 +3,7 @@ package de.focus_shift.jollyday.jaxb;
 import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.FixedHolidayConfiguration;
 import de.focus_shift.jollyday.core.spi.FixedWeekdayBetweenFixedHolidayConfiguration;
+import de.focus_shift.jollyday.jaxb.mapping.FixedWeekdayBetweenFixed;
 
 import java.time.DayOfWeek;
 import java.time.Year;
@@ -12,9 +13,9 @@ import java.time.Year;
  */
 class JaxbFixedWeekdayBetweenFixed implements FixedWeekdayBetweenFixedHolidayConfiguration {
 
-  private final de.focus_shift.jollyday.jaxb.mapping.FixedWeekdayBetweenFixed fixedWeekdayBetweenFixed;
+  private final FixedWeekdayBetweenFixed fixedWeekdayBetweenFixed;
 
-  JaxbFixedWeekdayBetweenFixed(de.focus_shift.jollyday.jaxb.mapping.FixedWeekdayBetweenFixed fixedWeekdayInMonth) {
+  JaxbFixedWeekdayBetweenFixed(FixedWeekdayBetweenFixed fixedWeekdayInMonth) {
     this.fixedWeekdayBetweenFixed = fixedWeekdayInMonth;
   }
 

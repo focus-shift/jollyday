@@ -2,6 +2,7 @@ package de.focus_shift.jollyday.jaxb;
 
 import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.IslamicHolidayConfiguration;
+import de.focus_shift.jollyday.jaxb.mapping.IslamicHoliday;
 
 import java.time.Year;
 import java.util.List;
@@ -13,9 +14,9 @@ import static java.util.stream.Collectors.toList;
  */
 class JaxbIslamicHoliday implements IslamicHolidayConfiguration {
 
-  private final de.focus_shift.jollyday.jaxb.mapping.IslamicHoliday islamicHoliday;
+  private final IslamicHoliday islamicHoliday;
 
-  JaxbIslamicHoliday(de.focus_shift.jollyday.jaxb.mapping.IslamicHoliday christianHoliday) {
+  JaxbIslamicHoliday(IslamicHoliday christianHoliday) {
     this.islamicHoliday = christianHoliday;
   }
 

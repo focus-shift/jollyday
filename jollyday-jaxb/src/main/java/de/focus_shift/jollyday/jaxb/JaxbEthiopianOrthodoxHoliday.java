@@ -2,6 +2,7 @@ package de.focus_shift.jollyday.jaxb;
 
 import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.EthiopianOrthodoxHolidayConfiguration;
+import de.focus_shift.jollyday.jaxb.mapping.EthiopianOrthodoxHoliday;
 
 import java.time.Year;
 
@@ -10,9 +11,9 @@ import java.time.Year;
  */
 class JaxbEthiopianOrthodoxHoliday implements EthiopianOrthodoxHolidayConfiguration {
 
-  private final de.focus_shift.jollyday.jaxb.mapping.EthiopianOrthodoxHoliday ethiopianOrthodoxHoliday;
+  private final EthiopianOrthodoxHoliday ethiopianOrthodoxHoliday;
 
-  JaxbEthiopianOrthodoxHoliday(de.focus_shift.jollyday.jaxb.mapping.EthiopianOrthodoxHoliday ethiopianOrthodoxHoliday) {
+  JaxbEthiopianOrthodoxHoliday(EthiopianOrthodoxHoliday ethiopianOrthodoxHoliday) {
     this.ethiopianOrthodoxHoliday = ethiopianOrthodoxHoliday;
   }
 

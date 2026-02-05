@@ -2,6 +2,7 @@ package de.focus_shift.jollyday.jaxb;
 
 import de.focus_shift.jollyday.core.spi.HolidayCalendarConfiguration;
 import de.focus_shift.jollyday.core.spi.HolidayConfigurations;
+import de.focus_shift.jollyday.jaxb.mapping.Configuration;
 
 import java.util.stream.Stream;
 
@@ -10,9 +11,9 @@ import java.util.stream.Stream;
  */
 class JaxbConfiguration implements HolidayCalendarConfiguration {
 
-  private final de.focus_shift.jollyday.jaxb.mapping.Configuration xmlConfiguration;
+  private final Configuration xmlConfiguration;
 
-  JaxbConfiguration(de.focus_shift.jollyday.jaxb.mapping.Configuration xmlConfiguration) {
+  JaxbConfiguration(Configuration xmlConfiguration) {
     this.xmlConfiguration = xmlConfiguration;
   }
 

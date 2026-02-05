@@ -11,6 +11,7 @@ import de.focus_shift.jollyday.core.spi.IslamicHolidayConfiguration;
 import de.focus_shift.jollyday.core.spi.RelativeToEasterSundayHolidayConfiguration;
 import de.focus_shift.jollyday.core.spi.RelativeToFixedHolidayConfiguration;
 import de.focus_shift.jollyday.core.spi.RelativeToWeekdayInMonthHolidayConfiguration;
+import de.focus_shift.jollyday.jaxb.mapping.Holidays;
 
 import java.util.List;
 
@@ -21,9 +22,9 @@ import static java.util.stream.Collectors.toList;
  */
 public class JaxbHolidays implements HolidayConfigurations {
 
-  private final de.focus_shift.jollyday.jaxb.mapping.Holidays holidays;
+  private final Holidays holidays;
 
-  public JaxbHolidays(de.focus_shift.jollyday.jaxb.mapping.Holidays holidays) {
+  public JaxbHolidays(Holidays holidays) {
     this.holidays = holidays;
   }
 

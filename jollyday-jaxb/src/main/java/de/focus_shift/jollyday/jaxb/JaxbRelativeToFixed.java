@@ -4,6 +4,7 @@ import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.FixedHolidayConfiguration;
 import de.focus_shift.jollyday.core.spi.Relation;
 import de.focus_shift.jollyday.core.spi.RelativeToFixedHolidayConfiguration;
+import de.focus_shift.jollyday.jaxb.mapping.RelativeToFixed;
 import org.threeten.extra.Days;
 
 import java.time.DayOfWeek;
@@ -14,9 +15,9 @@ import java.time.Year;
  */
 class JaxbRelativeToFixed implements RelativeToFixedHolidayConfiguration {
 
-  private final de.focus_shift.jollyday.jaxb.mapping.RelativeToFixed relativeToFixed;
+  private final RelativeToFixed relativeToFixed;
 
-  JaxbRelativeToFixed(de.focus_shift.jollyday.jaxb.mapping.RelativeToFixed relativeToFixed) {
+  JaxbRelativeToFixed(RelativeToFixed relativeToFixed) {
     this.relativeToFixed = relativeToFixed;
   }
 
