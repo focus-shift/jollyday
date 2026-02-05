@@ -79,8 +79,8 @@ public class CalendarHierarchy {
    */
   @Override
   public boolean equals(final Object obj) {
-    if (obj instanceof CalendarHierarchy) {
-      return ((CalendarHierarchy) obj).getId().equals(this.getId());
+    if (obj instanceof CalendarHierarchy calendarHierarchy) {
+      return calendarHierarchy.getId().equals(this.getId());
     }
     return super.equals(obj);
   }
