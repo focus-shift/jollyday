@@ -2,6 +2,8 @@
 
 Jollyday is a java library to query public holidays. Currently, we support **over 90 countries**.
 
+_Note_: the `main` branch contains the 2.x release line of Jollyday. The legacy `1.x` branch continues the 1.x line is available at [1.x](https://github.com/focus-shift/jollyday/tree/1.x). A migration guide for upgrading to 2.0 is available in the project wiki: [Jollyday 2.0 Migration Guide](https://github.com/focus-shift/jollyday/wiki/Jollyday-2.0-Migration-Guide).
+
 ## How to use it
 
 **Jollyday** is based on **Java 17** and can be used directly as dependency via maven or Gradle e.g.
