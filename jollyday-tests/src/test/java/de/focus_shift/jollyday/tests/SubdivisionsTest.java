@@ -13,7 +13,6 @@ import java.util.List;
 
 import static de.focus_shift.jollyday.core.HolidayManager.getInstance;
 import static de.focus_shift.jollyday.core.ManagerParameters.create;
-import static java.util.stream.Collectors.toList;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class SubdivisionsTest {
@@ -31,7 +30,7 @@ class SubdivisionsTest {
         final Collection<CountrySubdivision.EnumVal> subdivisionVector = JavaConverters.asJavaCollection(ISOCountrySubdivision.fromCountry(enumVal));
         final List<String> subdivisions = subdivisionVector.stream()
           .map(CountrySubdivision.EnumVal::toString)
-          .collect(toList());
+          .toList();
 
         getInstance(create(holidayCalendar))
           .getCalendarHierarchy().getChildren().keySet()

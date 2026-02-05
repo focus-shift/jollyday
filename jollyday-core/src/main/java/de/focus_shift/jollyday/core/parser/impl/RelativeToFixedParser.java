@@ -16,7 +16,6 @@ import java.time.Year;
 import java.util.List;
 
 import static de.focus_shift.jollyday.core.spi.Relation.BEFORE;
-import static java.util.stream.Collectors.toList;
 
 /**
  * The Class RelativeToFixedParser.
@@ -41,7 +40,7 @@ public class RelativeToFixedParser implements HolidayParser {
     return holidays.relativeToFixed().stream()
       .filter(new ValidLimitation(year))
       .map(relativeToFixed -> moveToRelativeDate(year, relativeToFixed))
-      .collect(toList());
+      .toList();
   }
 
   private Holiday moveToRelativeDate(final Year year, final RelativeToFixedHolidayConfiguration rf) {

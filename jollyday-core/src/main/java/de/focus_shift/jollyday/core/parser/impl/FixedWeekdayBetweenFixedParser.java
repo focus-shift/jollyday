@@ -11,8 +11,6 @@ import de.focus_shift.jollyday.core.spi.HolidayConfigurations;
 import java.time.Year;
 import java.util.List;
 
-import static java.util.stream.Collectors.toList;
-
 /**
  * Parses the configuration for fixed weekdays between two fixed dates.
  */
@@ -30,6 +28,6 @@ public class FixedWeekdayBetweenFixedParser implements HolidayParser {
         )
       )
       .map(holder -> new CreateHoliday(holder.getActualDate()).apply(holder.getDescribed()))
-      .collect(toList());
+      .toList();
   }
 }

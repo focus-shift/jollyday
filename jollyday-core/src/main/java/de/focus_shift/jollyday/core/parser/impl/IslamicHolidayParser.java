@@ -14,8 +14,6 @@ import java.time.chrono.HijrahChronology;
 import java.util.List;
 import java.util.stream.Stream;
 
-import static java.util.stream.Collectors.toList;
-
 /**
  * This parser calculates gregorian dates for the different islamic holidays.
  */
@@ -65,6 +63,6 @@ public class IslamicHolidayParser implements HolidayParser {
           .map(describedDateHolder -> new CreateHoliday(describedDateHolder.getActualDate(), describedDateHolder.getObservedDate()).apply(islamicHoliday));
 
       })
-      .collect(toList());
+      .toList();
   }
 }

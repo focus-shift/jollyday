@@ -10,8 +10,6 @@ import de.focus_shift.jollyday.core.spi.HolidayConfigurations;
 import java.time.Year;
 import java.util.List;
 
-import static java.util.stream.Collectors.toList;
-
 /**
  * This parser creates holidays relative to easter sunday.
  */
@@ -23,6 +21,6 @@ public class RelativeToEasterSundayParser implements HolidayParser {
       .filter(new ValidLimitation(year))
       .map(res -> new DescribedDateHolder(res, new CalculateEasterSunday(year).apply(res.chronology()).plus(res.days())))
       .map(holder -> new CreateHoliday(holder.getActualDate()).apply(holder.getDescribed()))
-      .collect(toList());
+      .toList();
   }
 }
