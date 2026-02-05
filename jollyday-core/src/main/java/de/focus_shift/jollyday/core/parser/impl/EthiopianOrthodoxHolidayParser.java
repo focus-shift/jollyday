@@ -13,8 +13,6 @@ import java.time.Year;
 import java.util.List;
 import java.util.stream.Stream;
 
-import static java.util.stream.Collectors.toList;
-
 /**
  * Calculates the ethiopian orthodox holidays.
  */
@@ -35,6 +33,6 @@ public class EthiopianOrthodoxHolidayParser implements HolidayParser {
         };
         return ethiopianHolidays.map(date -> new CreateHoliday(date).apply(eoh));
       })
-      .collect(toList());
+      .toList();
   }
 }

@@ -12,8 +12,6 @@ import java.time.LocalDate;
 import java.time.Year;
 import java.util.List;
 
-import static java.util.stream.Collectors.toList;
-
 /**
  * The Class FixedParser. Parses a fixed date to create a Holiday.
  */
@@ -29,6 +27,6 @@ public class FixedParser implements HolidayParser {
         return new DescribedDateHolder(fixedConfiguration, actualDate, observedDate);
       })
       .map(describedDateHolder -> new CreateHoliday(describedDateHolder.getActualDate(), describedDateHolder.getObservedDate()).apply(describedDateHolder.getDescribed()))
-      .collect(toList());
+      .toList();
   }
 }

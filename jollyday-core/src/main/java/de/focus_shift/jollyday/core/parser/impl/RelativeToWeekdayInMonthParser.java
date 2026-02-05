@@ -13,7 +13,6 @@ import java.time.Year;
 import java.util.List;
 
 import static de.focus_shift.jollyday.core.spi.Relation.BEFORE;
-import static java.util.stream.Collectors.toList;
 
 /**
  * RelativeToWeekdayInMonthParser class.
@@ -34,7 +33,7 @@ public class RelativeToWeekdayInMonthParser implements HolidayParser {
     return holidays.relativeToWeekdayInMonth().stream()
       .filter(new ValidLimitation(year))
       .map(relativeToWeekdayInMonth -> resolveHolidayForRelativeToWeekdayInMonth(year, relativeToWeekdayInMonth))
-      .collect(toList());
+      .toList();
   }
 
   private Holiday resolveHolidayForRelativeToWeekdayInMonth(final Year year, final RelativeToWeekdayInMonthHolidayConfiguration rwm) {

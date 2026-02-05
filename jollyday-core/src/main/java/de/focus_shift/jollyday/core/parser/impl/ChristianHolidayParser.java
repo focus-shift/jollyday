@@ -12,8 +12,6 @@ import java.time.LocalDate;
 import java.time.Year;
 import java.util.List;
 
-import static java.util.stream.Collectors.toList;
-
 /**
  * This parser creates christian holidays for the given year relative to easter
  * sunday.
@@ -52,6 +50,6 @@ public class ChristianHolidayParser implements HolidayParser {
           .apply(christianHolidayConfiguration);
 
       })
-      .collect(toList());
+      .toList();
   }
 }
