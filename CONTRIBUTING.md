@@ -51,7 +51,7 @@ automatically use our EditorConfig.
 ### Building from Source
 
 The jollyday source can be built from the command line using
-[Apache Maven](http://maven.apache.org/run-maven/index.html) on JDK 11 or above.
+[Apache Maven](http://maven.apache.org/run-maven/index.html) on JDK 17 or above.
 We include '`Maven Wrapper`' scripts (`./mvnw` or `mvnw.cmd`) that you can run rather
 than needing to install Maven locally.
 
