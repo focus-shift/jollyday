@@ -27,8 +27,8 @@
     <FixedWeekday which="THIRD" weekday="MONDAY" month="JUNE" descriptionPropertiesKey="FLAG_DAY"/>
     <FixedWeekday which="THIRD" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="MARTIN_DAY"/>
     <ChristianHoliday type="EASTER"/>
-    <ChristianHoliday type="CLEAN_MONDAY" descriptionPropertiesKey="christian.CLEAN_MONDAY"/>
-    <ChristianHoliday type="CARNIVAL" descriptionPropertiesKey="christian.CARNIVAL"/>
+    <ChristianHoliday type="CLEAN_MONDAY"/>
+    <ChristianHoliday type="CARNIVAL"/>
     <ChristianHoliday type="MAUNDY_THURSDAY"/>
     <ChristianHoliday type="GOOD_FRIDAY"/>
   </Holidays>
