@@ -11,7 +11,6 @@ import java.time.chrono.IsoChronology;
 import java.util.List;
 
 import static de.focus_shift.jollyday.jaxb.mapping.ChronologyType.JULIAN;
-import static java.util.stream.Collectors.toList;
 
 /**
  * see {@link ChristianHolidayConfiguration}
@@ -110,6 +109,7 @@ class JaxbChristianHoliday implements ChristianHolidayConfiguration {
   public List<MovingCondition> conditions() {
     return christianHoliday.getMovingCondition().stream()
       .map(JaxbMovingCondition::new)
-      .collect(toList());
+      .map(MovingCondition.class::cast)
+      .toList();
   }
 }
