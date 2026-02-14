@@ -7,8 +7,6 @@ import de.focus_shift.jollyday.jaxb.mapping.IslamicHoliday;
 import java.time.Year;
 import java.util.List;
 
-import static java.util.stream.Collectors.toList;
-
 /**
  * see {@link IslamicHolidayConfiguration}
  */
@@ -99,6 +97,7 @@ class JaxbIslamicHoliday implements IslamicHolidayConfiguration {
   public List<MovingCondition> conditions() {
     return islamicHoliday.getMovingCondition().stream()
       .map(JaxbMovingCondition::new)
-      .collect(toList());
+      .map(MovingCondition.class::cast)
+      .toList();
   }
 }

@@ -9,8 +9,6 @@ import java.time.MonthDay;
 import java.time.Year;
 import java.util.List;
 
-import static java.util.stream.Collectors.toList;
-
 /**
  * see {@link FixedHolidayConfiguration}
  */
@@ -77,6 +75,7 @@ class JaxbFixed implements FixedHolidayConfiguration {
       ? null
       : Year.of(fixed.getValidTo());
   }
+
   /**
    * {@inheritDoc}
    *
@@ -99,6 +98,7 @@ class JaxbFixed implements FixedHolidayConfiguration {
   public List<MovingCondition> conditions() {
     return fixed.getMovingCondition().stream()
       .map(JaxbMovingCondition::new)
-      .collect(toList());
+      .map(MovingCondition.class::cast)
+      .toList();
   }
 }
