@@ -138,6 +138,7 @@
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
         <MovingCondition substitute="MONDAY" with="NEXT" weekday="TUESDAY"/>
       </Fixed>
+      <Fixed month="JUNE" day="15" validFrom="2026" validTo="2026" descriptionPropertiesKey="WORLD_CUP_BANK_HOLIDAY"/>
       <Fixed month="NOVEMBER" day="30" validFrom="2007" descriptionPropertiesKey="ST_ANDREW">
         <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
@@ -146,6 +147,7 @@
     </Holidays>
 
     <Sources>
+      <Source>https://www.gov.scot/news/world-cup-bank-holiday-confirmed</Source>
       <Source>https://www.gov.uk/bank-holidays#scotland</Source>
       <Source>https://www.direct.gov.uk/en/Governmentcitizensandrights/LivingintheUK/DG_073741</Source>
       <Source>https://www.mygov.scot/scotland-bank-holidays</Source>
