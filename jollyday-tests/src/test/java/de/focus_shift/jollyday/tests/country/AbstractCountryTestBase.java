@@ -11,7 +11,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-import static java.util.stream.Collectors.toList;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.fail;
 
@@ -69,8 +68,8 @@ public abstract class AbstractCountryTestBase {
     }
 
     if (assertAllHolidaysChecked) {
-      assertThat(expectedHolidays.stream().sorted().collect(toList())).describedAs(expectedHierarchy.getDescription())
-        .containsAll(foundHolidays.stream().sorted().collect(toList()));
+      assertThat(expectedHolidays.stream().sorted().toList()).describedAs(expectedHierarchy.getDescription())
+        .containsAll(foundHolidays.stream().sorted().toList());
     }
 
     for (String id : expectedHierarchy.getChildren().keySet()) {

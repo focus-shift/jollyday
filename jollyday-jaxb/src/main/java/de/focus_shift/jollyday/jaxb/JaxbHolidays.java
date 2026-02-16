@@ -15,8 +15,6 @@ import de.focus_shift.jollyday.jaxb.mapping.Holidays;
 
 import java.util.List;
 
-import static java.util.stream.Collectors.toList;
-
 /**
  * see {@link HolidayConfigurations}
  */
@@ -35,7 +33,10 @@ public class JaxbHolidays implements HolidayConfigurations {
    */
   @Override
   public List<FixedHolidayConfiguration> fixed() {
-    return holidays.getFixed().stream().map(JaxbFixed::new).collect(toList());
+    return holidays.getFixed().stream()
+      .map(JaxbFixed::new)
+      .map(FixedHolidayConfiguration.class::cast)
+      .toList();
   }
 
   /**
@@ -45,7 +46,10 @@ public class JaxbHolidays implements HolidayConfigurations {
    */
   @Override
   public List<RelativeToFixedHolidayConfiguration> relativeToFixed() {
-    return holidays.getRelativeToFixed().stream().map(JaxbRelativeToFixed::new).collect(toList());
+    return holidays.getRelativeToFixed().stream()
+      .map(JaxbRelativeToFixed::new)
+      .map(RelativeToFixedHolidayConfiguration.class::cast)
+      .toList();
   }
 
   /**
@@ -55,7 +59,10 @@ public class JaxbHolidays implements HolidayConfigurations {
    */
   @Override
   public List<RelativeToWeekdayInMonthHolidayConfiguration> relativeToWeekdayInMonth() {
-    return holidays.getRelativeToWeekdayInMonth().stream().map(JaxbRelativeToWeekdayInMonth::new).collect(toList());
+    return holidays.getRelativeToWeekdayInMonth().stream()
+      .map(JaxbRelativeToWeekdayInMonth::new)
+      .map(RelativeToWeekdayInMonthHolidayConfiguration.class::cast)
+      .toList();
   }
 
   /**
@@ -65,7 +72,10 @@ public class JaxbHolidays implements HolidayConfigurations {
    */
   @Override
   public List<FixedWeekdayInMonthHolidayConfiguration> fixedWeekdays() {
-    return holidays.getFixedWeekday().stream().map(JaxbFixedWeekdayInMonth::new).collect(toList());
+    return holidays.getFixedWeekday().stream()
+      .map(JaxbFixedWeekdayInMonth::new)
+      .map(FixedWeekdayInMonthHolidayConfiguration.class::cast)
+      .toList();
   }
 
   /**
@@ -75,7 +85,10 @@ public class JaxbHolidays implements HolidayConfigurations {
    */
   @Override
   public List<ChristianHolidayConfiguration> christianHolidays() {
-    return holidays.getChristianHoliday().stream().map(JaxbChristianHoliday::new).collect(toList());
+    return holidays.getChristianHoliday().stream()
+      .map(JaxbChristianHoliday::new)
+      .map(ChristianHolidayConfiguration.class::cast)
+      .toList();
   }
 
   /**
@@ -85,7 +98,10 @@ public class JaxbHolidays implements HolidayConfigurations {
    */
   @Override
   public List<IslamicHolidayConfiguration> islamicHolidays() {
-    return holidays.getIslamicHoliday().stream().map(JaxbIslamicHoliday::new).collect(toList());
+    return holidays.getIslamicHoliday().stream()
+      .map(JaxbIslamicHoliday::new)
+      .map(IslamicHolidayConfiguration.class::cast)
+      .toList();
   }
 
   /**
@@ -95,7 +111,10 @@ public class JaxbHolidays implements HolidayConfigurations {
    */
   @Override
   public List<FixedWeekdayBetweenFixedHolidayConfiguration> fixedWeekdayBetweenFixed() {
-    return holidays.getFixedWeekdayBetweenFixed().stream().map(JaxbFixedWeekdayBetweenFixed::new).collect(toList());
+    return holidays.getFixedWeekdayBetweenFixed().stream()
+      .map(JaxbFixedWeekdayBetweenFixed::new)
+      .map(FixedWeekdayBetweenFixedHolidayConfiguration.class::cast)
+      .toList();
   }
 
   /**
@@ -105,7 +124,10 @@ public class JaxbHolidays implements HolidayConfigurations {
    */
   @Override
   public List<FixedWeekdayRelativeToFixedHolidayConfiguration> fixedWeekdayRelativeToFixed() {
-    return holidays.getFixedWeekdayRelativeToFixed().stream().map(JaxbFixedWeekdayRelativeToFixed::new).collect(toList());
+    return holidays.getFixedWeekdayRelativeToFixed().stream()
+      .map(JaxbFixedWeekdayRelativeToFixed::new)
+      .map(FixedWeekdayRelativeToFixedHolidayConfiguration.class::cast)
+      .toList();
   }
 
   /**
@@ -115,11 +137,17 @@ public class JaxbHolidays implements HolidayConfigurations {
    */
   @Override
   public List<EthiopianOrthodoxHolidayConfiguration> ethiopianOrthodoxHolidays() {
-    return holidays.getEthiopianOrthodoxHoliday().stream().map(JaxbEthiopianOrthodoxHoliday::new).collect(toList());
+    return holidays.getEthiopianOrthodoxHoliday().stream()
+      .map(JaxbEthiopianOrthodoxHoliday::new)
+      .map(EthiopianOrthodoxHolidayConfiguration.class::cast)
+      .toList();
   }
 
   @Override
   public List<RelativeToEasterSundayHolidayConfiguration> relativeToEasterSunday() {
-    return holidays.getRelativeToEasterSunday().stream().map(JaxbRelativeToEasterSunday::new).collect(toList());
+    return holidays.getRelativeToEasterSunday().stream()
+      .map(JaxbRelativeToEasterSunday::new)
+      .map(RelativeToEasterSundayHolidayConfiguration.class::cast)
+      .toList();
   }
 }
