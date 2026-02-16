@@ -11,8 +11,6 @@ import java.time.chrono.Chronology;
 import java.time.chrono.IsoChronology;
 import java.util.List;
 
-import static java.util.stream.Collectors.toList;
-
 /**
  * see {@link ChristianHolidayConfiguration}
  */
@@ -115,6 +113,7 @@ class JacksonChristianHoliday implements ChristianHolidayConfiguration {
   public List<MovingCondition> conditions() {
     return christianHoliday.getMovingCondition().stream()
       .map(JacksonMovingCondition::new)
-      .collect(toList());
+      .map(MovingCondition.class::cast)
+      .toList();
   }
 }

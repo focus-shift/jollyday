@@ -9,8 +9,6 @@ import java.time.MonthDay;
 import java.time.Year;
 import java.util.List;
 
-import static java.util.stream.Collectors.toList;
-
 /**
  * see {@link FixedHolidayConfiguration}
  */
@@ -99,6 +97,7 @@ class JacksonFixed implements FixedHolidayConfiguration {
   public List<MovingCondition> conditions() {
     return fixed.getMovingCondition().stream()
       .map(JacksonMovingCondition::new)
-      .collect(toList());
+      .map(MovingCondition.class::cast)
+      .toList();
   }
 }
