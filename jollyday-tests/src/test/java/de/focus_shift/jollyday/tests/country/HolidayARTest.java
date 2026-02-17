@@ -51,6 +51,8 @@ class HolidayARTest {
       .hasFixedHoliday("CHRISTMAS", DECEMBER, 25).and()
       .hasFixedHoliday("NEW_YEARS_EVE", DECEMBER, 31).and()
       .hasChristianHoliday("EASTER").and()
+      .hasChristianHoliday("CLEAN_MONDAY").and()
+      .hasChristianHoliday("CARNIVAL").and()
       .hasChristianHoliday("MAUNDY_THURSDAY").and()
       .hasChristianHoliday("GOOD_FRIDAY")
       .check();
