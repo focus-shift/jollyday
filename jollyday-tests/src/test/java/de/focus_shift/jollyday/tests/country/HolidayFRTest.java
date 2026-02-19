@@ -34,7 +34,10 @@ class HolidayFRTest {
         .validFrom(Year.of(2008))
       .and()
 
-      .hasFixedHoliday("ABOLITION_OF_SLAVERY", DECEMBER, 26)
+      .hasFixedHoliday("SECOND_CHRISTMAS_DAY", DECEMBER, 26)
+        .inSubdivision("57")
+      .and()
+      .hasChristianHoliday("GOOD_FRIDAY")
         .inSubdivision("57")
       .and()
 
