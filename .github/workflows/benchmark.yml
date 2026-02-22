@@ -6,6 +6,7 @@ on:
   push:
     branches:
       - main
+      - 2.x
   pull_request:
   workflow_dispatch:
 
@@ -18,12 +19,12 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
-      - name: JDK
-        uses: actions/setup-java@v4
+        uses: actions/checkout@v6
+      - name: Set up JDK from .tool-versions
+        uses: actions/setup-java@v5
         with:
           distribution: 'temurin'
-          java-version: '11'
+          java-version-file: ".tool-versions"
           cache: 'maven'
       - name: Build
-        run: ./mvnw clean verify -Dtests.groups=BenchmarkTest
+        run: ./mvnw verify -Dtests.groups=BenchmarkTest

@@ -1,9 +1,10 @@
 changelog:
-  repository: focus-shift/jollyday
-  milestone-reference: id
   sections:
     - title: "⚠️ Security Issues"
       labels: [ "type: security" ]
+      sort: "title"
+    - title: "⭐ Holidays"
+      labels: [ "topic: public holiday" ]
       sort: "title"
     - title: "⭐ Enhancements"
       labels: [ "type: enhancement" ]

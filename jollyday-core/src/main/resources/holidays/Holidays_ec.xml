@@ -16,8 +16,8 @@
     <Fixed month="DECEMBER" day="6" descriptionPropertiesKey="FOUND_QUITO"/>
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
     <Fixed month="DECEMBER" day="31" descriptionPropertiesKey="NEW_YEARS_EVE"/>
-    <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
-    <ChristianHoliday type="MAUNDY_THURSDAY" descriptionPropertiesKey="christian.MAUNDY_THURSDAY"/>
-    <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER"/>
+    <ChristianHoliday type="MAUNDY_THURSDAY"/>
+    <ChristianHoliday type="GOOD_FRIDAY"/>
   </Holidays>
 </Configuration>

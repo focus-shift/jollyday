@@ -1,20 +1,21 @@
 package de.focus_shift.jollyday.jaxb;
 
 import de.focus_shift.jollyday.core.HolidayType;
-import de.focus_shift.jollyday.core.spi.Fixed;
-import de.focus_shift.jollyday.core.spi.FixedWeekdayBetweenFixed;
+import de.focus_shift.jollyday.core.spi.FixedHolidayConfiguration;
+import de.focus_shift.jollyday.core.spi.FixedWeekdayBetweenFixedHolidayConfiguration;
+import de.focus_shift.jollyday.jaxb.mapping.FixedWeekdayBetweenFixed;
 
 import java.time.DayOfWeek;
 import java.time.Year;
 
 /**
- * see {@link FixedWeekdayBetweenFixed}
+ * see {@link FixedWeekdayBetweenFixedHolidayConfiguration}
  */
-class JaxbFixedWeekdayBetweenFixed implements FixedWeekdayBetweenFixed {
+class JaxbFixedWeekdayBetweenFixed implements FixedWeekdayBetweenFixedHolidayConfiguration {
 
-  private final de.focus_shift.jollyday.jaxb.mapping.FixedWeekdayBetweenFixed fixedWeekdayBetweenFixed;
+  private final FixedWeekdayBetweenFixed fixedWeekdayBetweenFixed;
 
-  JaxbFixedWeekdayBetweenFixed(de.focus_shift.jollyday.jaxb.mapping.FixedWeekdayBetweenFixed fixedWeekdayInMonth) {
+  JaxbFixedWeekdayBetweenFixed(FixedWeekdayBetweenFixed fixedWeekdayInMonth) {
     this.fixedWeekdayBetweenFixed = fixedWeekdayInMonth;
   }
 
@@ -24,7 +25,7 @@ class JaxbFixedWeekdayBetweenFixed implements FixedWeekdayBetweenFixed {
    * @return {@inheritDoc}
    */
   @Override
-  public Fixed from() {
+  public FixedHolidayConfiguration from() {
     return new JaxbFixed(fixedWeekdayBetweenFixed.getFrom());
   }
 
@@ -34,7 +35,7 @@ class JaxbFixedWeekdayBetweenFixed implements FixedWeekdayBetweenFixed {
    * @return {@inheritDoc}
    */
   @Override
-  public Fixed to() {
+  public FixedHolidayConfiguration to() {
     return new JaxbFixed(fixedWeekdayBetweenFixed.getTo());
   }
 

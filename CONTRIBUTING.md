@@ -45,13 +45,13 @@ They can also be added after the original pull request but before a merge.
 ## Working with the Code
 
 If you don't have an IDE preference we would recommend that you use
-[the Intellij Community Edition](https://www.jetbrains.com/idea/download). This will
+[the IntelliJ Community Edition](https://www.jetbrains.com/idea/download). This will
 automatically use our EditorConfig.
 
 ### Building from Source
 
-The jollyday source can be build from the command line using
-[Apache Maven](http://maven.apache.org/run-maven/index.html) on JDK 11 or above.
+The jollyday source can be built from the command line using
+[Apache Maven](http://maven.apache.org/run-maven/index.html) on JDK 17 or above.
 We include '`Maven Wrapper`' scripts (`./mvnw` or `mvnw.cmd`) that you can run rather
 than needing to install Maven locally.
 

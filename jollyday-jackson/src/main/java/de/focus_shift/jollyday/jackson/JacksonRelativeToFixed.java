@@ -1,22 +1,23 @@
 package de.focus_shift.jollyday.jackson;
 
 import de.focus_shift.jollyday.core.HolidayType;
-import de.focus_shift.jollyday.core.spi.Fixed;
+import de.focus_shift.jollyday.core.spi.FixedHolidayConfiguration;
 import de.focus_shift.jollyday.core.spi.Relation;
-import de.focus_shift.jollyday.core.spi.RelativeToFixed;
+import de.focus_shift.jollyday.core.spi.RelativeToFixedHolidayConfiguration;
+import de.focus_shift.jollyday.jackson.mapping.RelativeToFixed;
 import org.threeten.extra.Days;
 
 import java.time.DayOfWeek;
 import java.time.Year;
 
 /**
- * see {@link RelativeToFixed}
+ * see {@link RelativeToFixedHolidayConfiguration}
  */
-class JacksonRelativeToFixed implements RelativeToFixed {
+class JacksonRelativeToFixed implements RelativeToFixedHolidayConfiguration {
 
-  private final de.focus_shift.jollyday.jackson.mapping.RelativeToFixed relativeToFixed;
+  private final RelativeToFixed relativeToFixed;
 
-  JacksonRelativeToFixed(de.focus_shift.jollyday.jackson.mapping.RelativeToFixed relativeToFixed) {
+  JacksonRelativeToFixed(RelativeToFixed relativeToFixed) {
     this.relativeToFixed = relativeToFixed;
   }
 
@@ -26,7 +27,7 @@ class JacksonRelativeToFixed implements RelativeToFixed {
    * @return {@inheritDoc}
    */
   @Override
-  public Fixed date() {
+  public FixedHolidayConfiguration date() {
     return new JacksonFixed(relativeToFixed.getDate());
   }
 

@@ -1,18 +1,19 @@
 package de.focus_shift.jollyday.jaxb;
 
 import de.focus_shift.jollyday.core.HolidayType;
-import de.focus_shift.jollyday.core.spi.EthiopianOrthodoxHoliday;
+import de.focus_shift.jollyday.core.spi.EthiopianOrthodoxHolidayConfiguration;
+import de.focus_shift.jollyday.jaxb.mapping.EthiopianOrthodoxHoliday;
 
 import java.time.Year;
 
 /**
- * see {@link EthiopianOrthodoxHoliday}
+ * see {@link EthiopianOrthodoxHolidayConfiguration}
  */
-class JaxbEthiopianOrthodoxHoliday implements EthiopianOrthodoxHoliday {
+class JaxbEthiopianOrthodoxHoliday implements EthiopianOrthodoxHolidayConfiguration {
 
-  private final de.focus_shift.jollyday.jaxb.mapping.EthiopianOrthodoxHoliday ethiopianOrthodoxHoliday;
+  private final EthiopianOrthodoxHoliday ethiopianOrthodoxHoliday;
 
-  JaxbEthiopianOrthodoxHoliday(de.focus_shift.jollyday.jaxb.mapping.EthiopianOrthodoxHoliday ethiopianOrthodoxHoliday) {
+  JaxbEthiopianOrthodoxHoliday(EthiopianOrthodoxHoliday ethiopianOrthodoxHoliday) {
     this.ethiopianOrthodoxHoliday = ethiopianOrthodoxHoliday;
   }
 
@@ -23,7 +24,9 @@ class JaxbEthiopianOrthodoxHoliday implements EthiopianOrthodoxHoliday {
    */
   @Override
   public String descriptionPropertiesKey() {
-    return ethiopianOrthodoxHoliday.getDescriptionPropertiesKey();
+    return ethiopianOrthodoxHoliday.getDescriptionPropertiesKey() == null
+      ? descriptionPropertiesKeyPrefix() + descriptionPropertiesKeyPrefixSeparator() + type()
+      : ethiopianOrthodoxHoliday.getDescriptionPropertiesKey();
   }
 
   /**

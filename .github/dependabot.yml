@@ -8,6 +8,7 @@ updates:
       - "type: dependencies"
       - "java"
     open-pull-requests-limit: 30
+    target-branch: main
 
   - package-ecosystem: "github-actions"
     directory: "/"
@@ -16,3 +17,23 @@ updates:
     labels:
       - "type: dependencies"
       - "github_actions"
+    target-branch: main
+
+  - package-ecosystem: "maven"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "type: dependencies"
+      - "java"
+    open-pull-requests-limit: 30
+    target-branch: 1.x
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "type: dependencies"
+      - "github_actions"
+    target-branch: 1.x

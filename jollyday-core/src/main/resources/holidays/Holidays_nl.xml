@@ -20,11 +20,11 @@
     <Fixed month="MAY" day="5" validFrom="1990" descriptionPropertiesKey="LIBERATION"/>
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="FIRST_CHRISTMAS_DAY"/>
     <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="SECOND_CHRISTMAS_DAY"/>
-    <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-    <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
-    <ChristianHoliday type="EASTER_MONDAY" validFrom="1642" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-    <ChristianHoliday type="ASCENSION_DAY" descriptionPropertiesKey="christian.ASCENSION_DAY"/>
-    <ChristianHoliday type="PENTECOST" descriptionPropertiesKey="christian.PENTECOST"/>
-    <ChristianHoliday type="PENTECOST_MONDAY" descriptionPropertiesKey="christian.PENTECOST_MONDAY"/>
+    <ChristianHoliday type="GOOD_FRIDAY" localizedType="OBSERVANCE"/>
+    <ChristianHoliday type="EASTER"/>
+    <ChristianHoliday type="EASTER_MONDAY" validFrom="1642"/>
+    <ChristianHoliday type="ASCENSION_DAY"/>
+    <ChristianHoliday type="PENTECOST"/>
+    <ChristianHoliday type="PENTECOST_MONDAY"/>
   </Holidays>
 </Configuration>

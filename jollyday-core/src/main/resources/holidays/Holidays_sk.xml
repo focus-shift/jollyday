@@ -11,15 +11,20 @@
     <Fixed month="MAY" day="8" descriptionPropertiesKey="VICTORY"/>
     <Fixed month="JULY" day="5" descriptionPropertiesKey="CYRUS_METHODIUS"/>
     <Fixed month="AUGUST" day="29" descriptionPropertiesKey="NATIONAL_UPRISING"/>
-    <Fixed month="SEPTEMBER" day="1" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+    <Fixed month="SEPTEMBER" day="1" validTo="2024" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+    <Fixed month="SEPTEMBER" day="1" validFrom="2025" descriptionPropertiesKey="CONSTITUTION_DAY" localizedType="OBSERVANCE"/>
     <Fixed month="SEPTEMBER" day="15" descriptionPropertiesKey="VIRGIN_MARY"/>
     <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
     <Fixed month="NOVEMBER" day="17" descriptionPropertiesKey="FREEDOM_DEMOCRACY"/>
     <Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CHRISTMAS_EVE"/>
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
     <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
-    <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
-    <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-    <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+    <ChristianHoliday type="EASTER"/>
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY"/>
   </Holidays>
+
+  <Sources>
+    <Source>https://mzv.sk/en/web/en/slovakia/public-holidays</Source>
+  </Sources>
 </Configuration>

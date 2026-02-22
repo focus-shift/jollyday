@@ -2,9 +2,9 @@ package de.focus_shift.jollyday.core;
 
 import de.focus_shift.jollyday.core.datasource.ConfigurationServiceManager;
 import de.focus_shift.jollyday.core.impl.DefaultHolidayManager;
-import de.focus_shift.jollyday.core.impl.JapaneseHolidayManager;
-import de.focus_shift.jollyday.core.spi.Configuration;
-import de.focus_shift.jollyday.core.spi.ConfigurationService;
+import de.focus_shift.jollyday.core.impl.JapaneseBridgingHolidayManager;
+import de.focus_shift.jollyday.core.spi.HolidayCalendarConfiguration;
+import de.focus_shift.jollyday.core.spi.HolidayCalendarConfigurationService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -38,7 +38,7 @@ class HolidayManagerValueHandlerTest {
   private static Stream<Arguments> provideHolidayManagers() {
     return Stream.of(
       Arguments.of("de.focus_shift.jollyday.core.impl.DefaultHolidayManager", DefaultHolidayManager.class),
-      Arguments.of("de.focus_shift.jollyday.core.impl.JapaneseHolidayManager", JapaneseHolidayManager.class)
+      Arguments.of("de.focus_shift.jollyday.core.impl.JapaneseBridgingHolidayManager", JapaneseBridgingHolidayManager.class)
     );
   }
 
@@ -47,11 +47,11 @@ class HolidayManagerValueHandlerTest {
   void ensureToCreateCorrectHolidayManagerAndReturnIt(final String managerImplClass, final Class<HolidayManager> clazz) {
 
     final ConfigurationServiceManager configurationServiceManager = mock(ConfigurationServiceManager.class);
-    final ConfigurationService configurationService = mock(ConfigurationService.class);
-    final Configuration configuration = mock(Configuration.class);
+    final HolidayCalendarConfigurationService configurationService = mock(HolidayCalendarConfigurationService.class);
+    final HolidayCalendarConfiguration configuration = mock(HolidayCalendarConfiguration.class);
 
     when(configurationServiceManager.getConfigurationService(any(String.class))).thenReturn(configurationService);
-    when(configurationService.getConfiguration(any(ManagerParameter.class))).thenReturn(configuration);
+    when(configurationService.getHolidayCalendarConfiguration(any(ManagerParameter.class))).thenReturn(configuration);
 
     final HolidayManagerValueHandler sut = new HolidayManagerValueHandler(create("de"), managerImplClass, "configurationServiceImplClassName", configurationServiceManager);
 

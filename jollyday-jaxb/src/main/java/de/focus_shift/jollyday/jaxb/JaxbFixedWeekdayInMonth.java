@@ -1,21 +1,22 @@
 package de.focus_shift.jollyday.jaxb;
 
 import de.focus_shift.jollyday.core.HolidayType;
-import de.focus_shift.jollyday.core.spi.FixedWeekdayInMonth;
+import de.focus_shift.jollyday.core.spi.FixedWeekdayInMonthHolidayConfiguration;
 import de.focus_shift.jollyday.core.spi.Occurrence;
+import de.focus_shift.jollyday.jaxb.mapping.FixedWeekdayInMonth;
 
 import java.time.DayOfWeek;
 import java.time.Month;
 import java.time.Year;
 
 /**
- * see {@link FixedWeekdayInMonth}
+ * see {@link FixedWeekdayInMonthHolidayConfiguration}
  */
-class JaxbFixedWeekdayInMonth implements FixedWeekdayInMonth {
+class JaxbFixedWeekdayInMonth implements FixedWeekdayInMonthHolidayConfiguration {
 
-  private final de.focus_shift.jollyday.jaxb.mapping.FixedWeekdayInMonth fixedWeekdayInMonth;
+  private final FixedWeekdayInMonth fixedWeekdayInMonth;
 
-  JaxbFixedWeekdayInMonth(de.focus_shift.jollyday.jaxb.mapping.FixedWeekdayInMonth fixedWeekdayInMonth) {
+  JaxbFixedWeekdayInMonth(FixedWeekdayInMonth fixedWeekdayInMonth) {
     this.fixedWeekdayInMonth = fixedWeekdayInMonth;
   }
 

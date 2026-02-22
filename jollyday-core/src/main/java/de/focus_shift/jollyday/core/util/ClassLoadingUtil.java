@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
  * ClassLoadingUtil class.
  * </p>
  */
-public class ClassLoadingUtil {
+public final class ClassLoadingUtil {
 
   private ClassLoadingUtil() {
     // ok

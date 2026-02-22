@@ -1,6 +1,6 @@
 package de.focus_shift.jollyday.jackson.mapping;
 
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
+import tools.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,4 +37,7 @@ public abstract class MoveableHoliday extends Holiday {
     return this.movingCondition;
   }
 
+  public void setMovingCondition(List<MovingCondition> movingCondition) {
+    this.movingCondition = movingCondition;
+  }
 }

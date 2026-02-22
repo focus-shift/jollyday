@@ -5,9 +5,10 @@
 We will support the following version with security fixes.
 
 | Version | Supported          | End of Life (EOL) |
-|---------|---------------------|--------------------|
-| 0.x     | :x:                 |                    |
-| 1.x     | :white_check_mark:  |                    |
+|---------|--------------------|-------------------|
+| 2.x     | :white_check_mark: |                   |
+| 1.x     | :white_check_mark: | 23.05.2024        |
+| 0.x     | :x:                | 06.12.2024        |
 
 
 ## Reporting a Vulnerability

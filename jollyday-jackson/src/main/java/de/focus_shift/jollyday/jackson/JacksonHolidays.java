@@ -1,29 +1,28 @@
 package de.focus_shift.jollyday.jackson;
 
-import de.focus_shift.jollyday.core.spi.ChristianHoliday;
-import de.focus_shift.jollyday.core.spi.EthiopianOrthodoxHoliday;
-import de.focus_shift.jollyday.core.spi.Fixed;
-import de.focus_shift.jollyday.core.spi.FixedWeekdayBetweenFixed;
-import de.focus_shift.jollyday.core.spi.FixedWeekdayInMonth;
-import de.focus_shift.jollyday.core.spi.FixedWeekdayRelativeToFixed;
-import de.focus_shift.jollyday.core.spi.Holidays;
-import de.focus_shift.jollyday.core.spi.IslamicHoliday;
-import de.focus_shift.jollyday.core.spi.RelativeToEasterSunday;
-import de.focus_shift.jollyday.core.spi.RelativeToFixed;
-import de.focus_shift.jollyday.core.spi.RelativeToWeekdayInMonth;
+import de.focus_shift.jollyday.core.spi.ChristianHolidayConfiguration;
+import de.focus_shift.jollyday.core.spi.EthiopianOrthodoxHolidayConfiguration;
+import de.focus_shift.jollyday.core.spi.FixedHolidayConfiguration;
+import de.focus_shift.jollyday.core.spi.FixedWeekdayBetweenFixedHolidayConfiguration;
+import de.focus_shift.jollyday.core.spi.FixedWeekdayInMonthHolidayConfiguration;
+import de.focus_shift.jollyday.core.spi.FixedWeekdayRelativeToFixedHolidayConfiguration;
+import de.focus_shift.jollyday.core.spi.HolidayConfigurations;
+import de.focus_shift.jollyday.core.spi.IslamicHolidayConfiguration;
+import de.focus_shift.jollyday.core.spi.RelativeToEasterSundayHolidayConfiguration;
+import de.focus_shift.jollyday.core.spi.RelativeToFixedHolidayConfiguration;
+import de.focus_shift.jollyday.core.spi.RelativeToWeekdayInMonthHolidayConfiguration;
+import de.focus_shift.jollyday.jackson.mapping.Holidays;
 
 import java.util.List;
-
-import static java.util.stream.Collectors.toList;
 
 /**
  * see {@link }
  */
-public class JacksonHolidays implements Holidays {
+public class JacksonHolidays implements HolidayConfigurations {
 
-  private final de.focus_shift.jollyday.jackson.mapping.Holidays holidays;
+  private final Holidays holidays;
 
-  public JacksonHolidays(de.focus_shift.jollyday.jackson.mapping.Holidays holidays) {
+  public JacksonHolidays(Holidays holidays) {
     this.holidays = holidays;
   }
 
@@ -33,8 +32,10 @@ public class JacksonHolidays implements Holidays {
    * @return {@inheritDoc}
    */
   @Override
-  public List<Fixed> fixed() {
-    return holidays.getFixed().stream().map(JacksonFixed::new).collect(toList());
+  public List<FixedHolidayConfiguration> fixed() {
+    return holidays.getFixed().stream().map(JacksonFixed::new)
+      .map(FixedHolidayConfiguration.class::cast)
+      .toList();
   }
 
   /**
@@ -43,8 +44,11 @@ public class JacksonHolidays implements Holidays {
    * @return {@inheritDoc}
    */
   @Override
-  public List<RelativeToFixed> relativeToFixed() {
-    return holidays.getRelativeToFixed().stream().map(JacksonRelativeToFixed::new).collect(toList());
+  public List<RelativeToFixedHolidayConfiguration> relativeToFixed() {
+    return holidays.getRelativeToFixed().stream()
+      .map(JacksonRelativeToFixed::new)
+      .map(RelativeToFixedHolidayConfiguration.class::cast)
+      .toList();
   }
 
   /**
@@ -53,8 +57,11 @@ public class JacksonHolidays implements Holidays {
    * @return {@inheritDoc}
    */
   @Override
-  public List<RelativeToWeekdayInMonth> relativeToWeekdayInMonth() {
-    return holidays.getRelativeToWeekdayInMonth().stream().map(JacksonRelativeToWeekdayInMonth::new).collect(toList());
+  public List<RelativeToWeekdayInMonthHolidayConfiguration> relativeToWeekdayInMonth() {
+    return holidays.getRelativeToWeekdayInMonth().stream()
+      .map(JacksonRelativeToWeekdayInMonth::new)
+      .map(RelativeToWeekdayInMonthHolidayConfiguration.class::cast)
+      .toList();
   }
 
   /**
@@ -63,8 +70,11 @@ public class JacksonHolidays implements Holidays {
    * @return {@inheritDoc}
    */
   @Override
-  public List<FixedWeekdayInMonth> fixedWeekdays() {
-    return holidays.getFixedWeekday().stream().map(JacksonFixedWeekdayInMonth::new).collect(toList());
+  public List<FixedWeekdayInMonthHolidayConfiguration> fixedWeekdays() {
+    return holidays.getFixedWeekday().stream()
+      .map(JacksonFixedWeekdayInMonth::new)
+      .map(FixedWeekdayInMonthHolidayConfiguration.class::cast)
+      .toList();
   }
 
   /**
@@ -73,8 +83,11 @@ public class JacksonHolidays implements Holidays {
    * @return {@inheritDoc}
    */
   @Override
-  public List<ChristianHoliday> christianHolidays() {
-    return holidays.getChristianHoliday().stream().map(JacksonChristianHoliday::new).collect(toList());
+  public List<ChristianHolidayConfiguration> christianHolidays() {
+    return holidays.getChristianHoliday().stream()
+      .map(JacksonChristianHoliday::new)
+      .map(ChristianHolidayConfiguration.class::cast)
+      .toList();
   }
 
   /**
@@ -83,8 +96,11 @@ public class JacksonHolidays implements Holidays {
    * @return {@inheritDoc}
    */
   @Override
-  public List<IslamicHoliday> islamicHolidays() {
-    return holidays.getIslamicHoliday().stream().map(JacksonIslamicHoliday::new).collect(toList());
+  public List<IslamicHolidayConfiguration> islamicHolidays() {
+    return holidays.getIslamicHoliday().stream()
+      .map(JacksonIslamicHoliday::new)
+      .map(IslamicHolidayConfiguration.class::cast)
+      .toList();
   }
 
   /**
@@ -93,8 +109,11 @@ public class JacksonHolidays implements Holidays {
    * @return {@inheritDoc}
    */
   @Override
-  public List<FixedWeekdayBetweenFixed> fixedWeekdayBetweenFixed() {
-    return holidays.getFixedWeekdayBetweenFixed().stream().map(JacksonFixedWeekdayBetweenFixed::new).collect(toList());
+  public List<FixedWeekdayBetweenFixedHolidayConfiguration> fixedWeekdayBetweenFixed() {
+    return holidays.getFixedWeekdayBetweenFixed().stream()
+      .map(JacksonFixedWeekdayBetweenFixed::new)
+      .map(FixedWeekdayBetweenFixedHolidayConfiguration.class::cast)
+      .toList();
   }
 
   /**
@@ -103,8 +122,11 @@ public class JacksonHolidays implements Holidays {
    * @return {@inheritDoc}
    */
   @Override
-  public List<FixedWeekdayRelativeToFixed> fixedWeekdayRelativeToFixed() {
-    return holidays.getFixedWeekdayRelativeToFixed().stream().map(JacksonFixedWeekdayRelativeToFixed::new).collect(toList());
+  public List<FixedWeekdayRelativeToFixedHolidayConfiguration> fixedWeekdayRelativeToFixed() {
+    return holidays.getFixedWeekdayRelativeToFixed().stream()
+      .map(JacksonFixedWeekdayRelativeToFixed::new)
+      .map(FixedWeekdayRelativeToFixedHolidayConfiguration.class::cast)
+      .toList();
   }
 
   /**
@@ -113,8 +135,11 @@ public class JacksonHolidays implements Holidays {
    * @return {@inheritDoc}
    */
   @Override
-  public List<EthiopianOrthodoxHoliday> ethiopianOrthodoxHolidays() {
-    return holidays.getEthiopianOrthodoxHoliday().stream().map(JacksonEthiopianOrthodoxHoliday::new).collect(toList());
+  public List<EthiopianOrthodoxHolidayConfiguration> ethiopianOrthodoxHolidays() {
+    return holidays.getEthiopianOrthodoxHoliday().stream()
+      .map(JacksonEthiopianOrthodoxHoliday::new)
+      .map(EthiopianOrthodoxHolidayConfiguration.class::cast)
+      .toList();
   }
 
   /**
@@ -123,7 +148,10 @@ public class JacksonHolidays implements Holidays {
    * @return {@inheritDoc}
    */
   @Override
-  public List<RelativeToEasterSunday> relativeToEasterSunday() {
-    return holidays.getRelativeToEasterSunday().stream().map(JacksonRelativeToEasterSunday::new).collect(toList());
+  public List<RelativeToEasterSundayHolidayConfiguration> relativeToEasterSunday() {
+    return holidays.getRelativeToEasterSunday().stream()
+      .map(JacksonRelativeToEasterSunday::new)
+      .map(RelativeToEasterSundayHolidayConfiguration.class::cast)
+      .toList();
   }
 }

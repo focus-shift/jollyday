@@ -1,6 +1,6 @@
 package de.focus_shift.jollyday.core.parser.functions;
 
-import de.focus_shift.jollyday.core.spi.FixedWeekdayRelativeToFixed;
+import de.focus_shift.jollyday.core.spi.FixedWeekdayRelativeToFixedHolidayConfiguration;
 import de.focus_shift.jollyday.core.spi.Relation;
 import org.threeten.extra.Days;
 
@@ -15,7 +15,7 @@ import static java.time.temporal.TemporalAdjusters.nextOrSame;
 import static java.time.temporal.TemporalAdjusters.previous;
 import static java.time.temporal.TemporalAdjusters.previousOrSame;
 
-public class FindWeekDayRelativeToDate implements Function<FixedWeekdayRelativeToFixed, LocalDate> {
+public class FindWeekDayRelativeToDate implements Function<FixedWeekdayRelativeToFixedHolidayConfiguration, LocalDate> {
 
   private final LocalDate date;
 
@@ -24,7 +24,7 @@ public class FindWeekDayRelativeToDate implements Function<FixedWeekdayRelativeT
   }
 
   @Override
-  public LocalDate apply(final FixedWeekdayRelativeToFixed fixedWeekdayRelativeToFixed) {
+  public LocalDate apply(final FixedWeekdayRelativeToFixedHolidayConfiguration fixedWeekdayRelativeToFixed) {
     LocalDate result = moveDateToFirstOccurrenceOfWeekday(fixedWeekdayRelativeToFixed, date);
     final int days = determineNumberOfDays(fixedWeekdayRelativeToFixed);
     result = fixedWeekdayRelativeToFixed.when() == Relation.AFTER ? result.plusDays(days) : result.minusDays(days);
@@ -38,21 +38,12 @@ public class FindWeekDayRelativeToDate implements Function<FixedWeekdayRelativeT
    * @param day                         the day to move
    * @return the day moved to the weekday and in the direction as specified
    */
-  private LocalDate moveDateToFirstOccurrenceOfWeekday(final FixedWeekdayRelativeToFixed fixedWeekdayRelativeToFixed, final LocalDate day) {
-    final TemporalAdjuster adjuster;
-    switch (fixedWeekdayRelativeToFixed.when()) {
-      case AFTER:
-        adjuster = next(fixedWeekdayRelativeToFixed.weekday());
-        break;
-      case BEFORE:
-        adjuster = previous(fixedWeekdayRelativeToFixed.weekday());
-        break;
-      case CLOSEST:
-        adjuster = closest(fixedWeekdayRelativeToFixed.weekday());
-        break;
-      default:
-        throw new IllegalArgumentException("Unsupported relative adjustment: " + fixedWeekdayRelativeToFixed.when());
-    }
+  private LocalDate moveDateToFirstOccurrenceOfWeekday(final FixedWeekdayRelativeToFixedHolidayConfiguration fixedWeekdayRelativeToFixed, final LocalDate day) {
+    final TemporalAdjuster adjuster = switch (fixedWeekdayRelativeToFixed.when()) {
+      case AFTER -> next(fixedWeekdayRelativeToFixed.weekday());
+      case BEFORE -> previous(fixedWeekdayRelativeToFixed.weekday());
+      case CLOSEST -> closest(fixedWeekdayRelativeToFixed.weekday());
+    };
     return day.with(adjuster);
   }
 
@@ -62,20 +53,16 @@ public class FindWeekDayRelativeToDate implements Function<FixedWeekdayRelativeT
    * @param fixedWeekdayRelativeToFixed the enumeration value
    * @return the number of days
    */
-  private int determineNumberOfDays(final FixedWeekdayRelativeToFixed fixedWeekdayRelativeToFixed) {
+  private int determineNumberOfDays(final FixedWeekdayRelativeToFixedHolidayConfiguration fixedWeekdayRelativeToFixed) {
     if (fixedWeekdayRelativeToFixed.when() == Relation.CLOSEST) {
       return 0;
     }
-    switch (fixedWeekdayRelativeToFixed.which()) {
-      case SECOND:
-        return 7;
-      case THIRD:
-        return 14;
-      case FOURTH:
-        return 21;
-      default:
-        return 0;
-    }
+    return switch (fixedWeekdayRelativeToFixed.which()) {
+      case SECOND -> 7;
+      case THIRD -> 14;
+      case FOURTH -> 21;
+      default -> 0;
+    };
   }
 
   /**
@@ -105,7 +92,7 @@ public class FindWeekDayRelativeToDate implements Function<FixedWeekdayRelativeT
       final Temporal next = temporal.with(nextOrSame(dayOfWeek));
       final int previousDays = Days.between(temporal, previous).abs().getAmount();
       final int nextDays = Days.between(temporal, next).abs().getAmount();
-      return (previousDays <= nextDays ? previous : next);
+      return previousDays <= nextDays ? previous : next;
     };
   }
 }

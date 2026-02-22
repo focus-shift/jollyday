@@ -1,27 +1,24 @@
-import de.focus_shift.jollyday.core.spi.ConfigurationService;
+import de.focus_shift.jollyday.core.spi.HolidayCalendarConfigurationService;
 import de.focus_shift.jollyday.jackson.JacksonConfigurationService;
 
 module de.focus_shift.jollyday.jackson {
 
-  provides ConfigurationService with
+  provides HolidayCalendarConfigurationService with
     JacksonConfigurationService;
 
   opens de.focus_shift.jollyday.jackson.mapping to
     com.fasterxml.jackson.annotation,
-    com.fasterxml.jackson.databind;
+    tools.jackson.databind;
 
-  requires com.fasterxml.jackson.annotation;
-  requires com.fasterxml.jackson.databind;
-  requires com.fasterxml.jackson.dataformat.xml;
+  requires tools.jackson.databind;
+  requires tools.jackson.dataformat.xml;
   requires de.focus_shift.jollyday.core;
   requires java.xml;
   requires org.slf4j;
   requires org.threeten.extra;
 
   exports de.focus_shift.jollyday.jackson to
-    de.focus_shift.jollyday.core,
-    de.focus_shift.jollyday.jackson.test;
+    de.focus_shift.jollyday.core;
   exports de.focus_shift.jollyday.jackson.mapping to
-    com.fasterxml.jackson.databind,
-    de.focus_shift.jollyday.jackson.test;
+    tools.jackson.databind;
 }

@@ -2,6 +2,8 @@ package de.focus_shift.jollyday.tests.country;
 
 import org.junit.jupiter.api.Test;
 
+import java.time.Year;
+
 import static de.focus_shift.jollyday.core.HolidayCalendar.AUSTRIA;
 import static de.focus_shift.jollyday.core.HolidayType.OBSERVANCE;
 import static de.focus_shift.jollyday.tests.CalendarCheckerApi.assertFor;
@@ -34,18 +36,22 @@ class HolidayATTest {
       .hasChristianHoliday("EASTER").and()
       .hasChristianHoliday("EASTER_MONDAY").and()
       .hasChristianHoliday("ASCENSION_DAY").and()
+      .hasChristianHoliday("PENTECOST").and()
       .hasChristianHoliday("WHIT_MONDAY").and()
       .hasChristianHoliday("CORPUS_CHRISTI").and()
-      .hasFixedHoliday("MARTINS_DAY", NOVEMBER, 11).inSubdivision("1").and()
-      .hasFixedHoliday("JOSEFS_DAY", MARCH, 19).inSubdivision("2").and()
-      .hasFixedHoliday("PLEBISCITE", OCTOBER, 10).inSubdivision("2").and()
-      .hasFixedHoliday("LEOPOLD", NOVEMBER, 15).inSubdivision("3").and()
-      .hasFixedHoliday("FLORIAN", MAY, 4).inSubdivision("4").and()
-      .hasFixedHoliday("RUPERT", SEPTEMBER, 24).inSubdivision("5").and()
-      .hasFixedHoliday("JOSEFS_DAY", MARCH, 19).inSubdivision("6").and()
-      .hasFixedHoliday("JOSEFS_DAY", MARCH, 19).inSubdivision("7").and()
-      .hasFixedHoliday("JOSEFS_DAY", MARCH, 19).inSubdivision("8").and()
-      .hasFixedHoliday("LEOPOLD", NOVEMBER, 15).inSubdivision("9")
+      .hasFixedHoliday("MARTINS_DAY", NOVEMBER, 11, OBSERVANCE).inSubdivision("1").and()
+      .hasFixedHoliday("JOSEFS_DAY", MARCH, 19, OBSERVANCE).inSubdivision("2").and()
+      .hasFixedHoliday("PLEBISCITE", OCTOBER, 10, OBSERVANCE).inSubdivision("2").and()
+      .hasFixedHoliday("LEOPOLD", NOVEMBER, 15, OBSERVANCE).inSubdivision("3").and()
+      .hasFixedHoliday("FLORIAN", MAY, 4, OBSERVANCE).inSubdivision("4")
+        .notValidBetween(Year.of(1900), Year.of(2003))
+        .validFrom(Year.of(2004))
+      .and()
+      .hasFixedHoliday("RUPERT", SEPTEMBER, 24, OBSERVANCE).inSubdivision("5").and()
+      .hasFixedHoliday("JOSEFS_DAY", MARCH, 19, OBSERVANCE).inSubdivision("6").and()
+      .hasFixedHoliday("JOSEFS_DAY", MARCH, 19, OBSERVANCE).inSubdivision("7").and()
+      .hasFixedHoliday("JOSEFS_DAY", MARCH, 19, OBSERVANCE).inSubdivision("8").and()
+      .hasFixedHoliday("LEOPOLD", NOVEMBER, 15, OBSERVANCE).inSubdivision("9")
       .check();
   }
 }

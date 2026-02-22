@@ -1,7 +1,8 @@
 package de.focus_shift.jollyday.jackson;
 
 import de.focus_shift.jollyday.core.HolidayType;
-import de.focus_shift.jollyday.core.spi.ChristianHoliday;
+import de.focus_shift.jollyday.core.spi.ChristianHolidayConfiguration;
+import de.focus_shift.jollyday.jackson.mapping.ChristianHoliday;
 import de.focus_shift.jollyday.jackson.mapping.ChronologyType;
 import org.threeten.extra.chrono.JulianChronology;
 
@@ -10,16 +11,14 @@ import java.time.chrono.Chronology;
 import java.time.chrono.IsoChronology;
 import java.util.List;
 
-import static java.util.stream.Collectors.toList;
-
 /**
- * see {@link ChristianHoliday}
+ * see {@link ChristianHolidayConfiguration}
  */
-class JacksonChristianHoliday implements ChristianHoliday {
+class JacksonChristianHoliday implements ChristianHolidayConfiguration {
 
-  private final de.focus_shift.jollyday.jackson.mapping.ChristianHoliday christianHoliday;
+  private final ChristianHoliday christianHoliday;
 
-  JacksonChristianHoliday(de.focus_shift.jollyday.jackson.mapping.ChristianHoliday christianHoliday) {
+  JacksonChristianHoliday(ChristianHoliday christianHoliday) {
     this.christianHoliday = christianHoliday;
   }
 
@@ -52,7 +51,9 @@ class JacksonChristianHoliday implements ChristianHoliday {
    */
   @Override
   public String descriptionPropertiesKey() {
-    return christianHoliday.getDescriptionPropertiesKey();
+    return christianHoliday.getDescriptionPropertiesKey() == null
+      ? descriptionPropertiesKeyPrefix() + descriptionPropertiesKeyPrefixSeparator() + type()
+      : christianHoliday.getDescriptionPropertiesKey();
   }
 
   /**
@@ -112,6 +113,7 @@ class JacksonChristianHoliday implements ChristianHoliday {
   public List<MovingCondition> conditions() {
     return christianHoliday.getMovingCondition().stream()
       .map(JacksonMovingCondition::new)
-      .collect(toList());
+      .map(MovingCondition.class::cast)
+      .toList();
   }
 }

@@ -2,7 +2,7 @@ package de.focus_shift.jollyday.core;
 
 import de.focus_shift.jollyday.core.caching.Cache;
 import de.focus_shift.jollyday.core.datasource.ConfigurationServiceManager;
-import de.focus_shift.jollyday.core.spi.ConfigurationService;
+import de.focus_shift.jollyday.core.spi.HolidayCalendarConfigurationService;
 import de.focus_shift.jollyday.core.util.ClassLoadingUtil;
 
 /**
@@ -34,7 +34,7 @@ class HolidayManagerValueHandler implements Cache.ValueHandler<HolidayManager> {
   public HolidayManager createValue() {
     final HolidayManager manager = instantiateManagerImpl(managerImplClassName);
 
-    final ConfigurationService configurationService = configurationServiceManager.getConfigurationService(configurationServiceImplClassName);
+    final HolidayCalendarConfigurationService configurationService = configurationServiceManager.getConfigurationService(configurationServiceImplClassName);
     manager.setConfigurationService(configurationService);
 
     manager.init(parameter);

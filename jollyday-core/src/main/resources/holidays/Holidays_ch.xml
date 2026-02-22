@@ -6,15 +6,17 @@
                xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
   <Holidays>
     <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="JANUARY" day="2" descriptionPropertiesKey="ST_BERCHTHOLD" localizedType="BANK_HOLIDAY"/>
     <Fixed month="AUGUST" day="1" descriptionPropertiesKey="NATIONAL_DAY"/>
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-    <ChristianHoliday type="ASCENSION_DAY" descriptionPropertiesKey="christian.ASCENSION_DAY"/>
-    <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
+    <ChristianHoliday type="ASCENSION_DAY"/>
+    <ChristianHoliday type="EASTER"/>
   </Holidays>
 
   <Sources>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:CH</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:CH</Source>
+    <Source of="ST Berchthold as bank holiday">https://www.six-group.com/de/market-data/news-tools/trading-currency-holiday-calendar.html</Source>
   </Sources>
 
   <SubConfigurations hierarchy="ag" description="Aargau">
@@ -24,10 +26,10 @@
       <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
       <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
       <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-      <ChristianHoliday type="WHIT_MONDAY" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
-      <ChristianHoliday type="CORPUS_CHRISTI" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+      <ChristianHoliday type="EASTER_MONDAY"/>
+      <ChristianHoliday type="WHIT_MONDAY"/>
+      <ChristianHoliday type="CORPUS_CHRISTI"/>
     </Holidays>
   </SubConfigurations>
 
@@ -38,18 +40,19 @@
       <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS" localizedType="OBSERVANCE"/>
       <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION" localizedType="OBSERVANCE"/>
       <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY" localizedType="OBSERVANCE"/>
-      <ChristianHoliday type="WHIT_MONDAY" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
-      <ChristianHoliday type="CORPUS_CHRISTI" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+      <ChristianHoliday type="EASTER_MONDAY"/>
+      <ChristianHoliday type="WHIT_MONDAY"/>
+      <ChristianHoliday type="CORPUS_CHRISTI"/>
     </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="ar" description="Appenzell Ausserrhoden">
     <Holidays>
       <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <ChristianHoliday type="WHIT_MONDAY" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+      <ChristianHoliday type="EASTER_MONDAY"/>
+      <ChristianHoliday type="WHIT_MONDAY"/>
     </Holidays>
   </SubConfigurations>
 
@@ -57,8 +60,9 @@
     <Holidays>
       <Fixed month="JANUARY" day="2" descriptionPropertiesKey="ST_BERCHTHOLD"/>
       <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <ChristianHoliday type="WHIT_MONDAY" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+      <ChristianHoliday type="EASTER_MONDAY"/>
+      <ChristianHoliday type="WHIT_MONDAY"/>
     </Holidays>
   </SubConfigurations>
 
@@ -66,8 +70,9 @@
     <Holidays>
       <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
       <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <ChristianHoliday type="WHIT_MONDAY" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+      <ChristianHoliday type="EASTER_MONDAY"/>
+      <ChristianHoliday type="WHIT_MONDAY"/>
     </Holidays>
   </SubConfigurations>
 
@@ -75,8 +80,9 @@
     <Holidays>
       <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
       <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <ChristianHoliday type="WHIT_MONDAY" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+      <ChristianHoliday type="EASTER_MONDAY"/>
+      <ChristianHoliday type="WHIT_MONDAY"/>
     </Holidays>
   </SubConfigurations>
 
@@ -87,10 +93,10 @@
       <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
       <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
       <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-      <ChristianHoliday type="WHIT_MONDAY" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
-      <ChristianHoliday type="CORPUS_CHRISTI" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+      <ChristianHoliday type="EASTER_MONDAY" localizedType="OBSERVANCE"/>
+      <ChristianHoliday type="WHIT_MONDAY"/>
+      <ChristianHoliday type="CORPUS_CHRISTI"/>
     </Holidays>
   </SubConfigurations>
 
@@ -100,8 +106,9 @@
       <RelativeToWeekdayInMonth weekday="THURSDAY" when="AFTER" descriptionPropertiesKey="GENEVAN_FAST">
         <FixedWeekday which="FIRST" weekday="SUNDAY" month="SEPTEMBER"/>
       </RelativeToWeekdayInMonth>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <ChristianHoliday type="WHIT_MONDAY" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+      <ChristianHoliday type="EASTER_MONDAY"/>
+      <ChristianHoliday type="WHIT_MONDAY"/>
     </Holidays>
   </SubConfigurations>
 
@@ -110,16 +117,18 @@
       <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
       <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
       <FixedWeekday which="FIRST" weekday="THURSDAY" month="APRIL" descriptionPropertiesKey="NAEFELS_TRIP"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <ChristianHoliday type="WHIT_MONDAY" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+      <ChristianHoliday type="EASTER_MONDAY"/>
+      <ChristianHoliday type="WHIT_MONDAY"/>
     </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="gr" description="Graubünden">
     <Holidays>
       <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <ChristianHoliday type="WHIT_MONDAY" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+      <ChristianHoliday type="EASTER_MONDAY"/>
+      <ChristianHoliday type="WHIT_MONDAY"/>
     </Holidays>
   </SubConfigurations>
 
@@ -130,10 +139,10 @@
       <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY" localizedType="OBSERVANCE"/>
       <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS" localizedType="OBSERVANCE"/>
       <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION" localizedType="OBSERVANCE"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY" localizedType="OBSERVANCE"/>
-      <ChristianHoliday type="WHIT_MONDAY" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
-      <ChristianHoliday type="CORPUS_CHRISTI" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+      <ChristianHoliday type="EASTER_MONDAY"/>
+      <ChristianHoliday type="WHIT_MONDAY"/>
+      <ChristianHoliday type="CORPUS_CHRISTI"/>
     </Holidays>
   </SubConfigurations>
 
@@ -144,9 +153,9 @@
       <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
       <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
       <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY" localizedType="OBSERVANCE"/>
-      <ChristianHoliday type="CORPUS_CHRISTI" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+      <ChristianHoliday type="EASTER_MONDAY" localizedType="OBSERVANCE"/>
+      <ChristianHoliday type="CORPUS_CHRISTI"/>
     </Holidays>
   </SubConfigurations>
 
@@ -154,7 +163,8 @@
     <Holidays>
       <Fixed month="MARCH" day="1" descriptionPropertiesKey="REPUBLIC_DAY"/>
       <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+      <ChristianHoliday type="EASTER_MONDAY" localizedType="OBSERVANCE"/>
     </Holidays>
   </SubConfigurations>
 
@@ -165,9 +175,9 @@
       <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
       <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
       <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-      <ChristianHoliday type="CORPUS_CHRISTI" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+      <ChristianHoliday type="EASTER_MONDAY" localizedType="OBSERVANCE"/>
+      <ChristianHoliday type="CORPUS_CHRISTI"/>
     </Holidays>
   </SubConfigurations>
 
@@ -178,10 +188,10 @@
       <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
       <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
       <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-      <ChristianHoliday type="WHIT_MONDAY" descriptionPropertiesKey="christian.WHIT_MONDAY" localizedType="OBSERVANCE"/>
-      <ChristianHoliday type="CORPUS_CHRISTI" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+      <ChristianHoliday type="EASTER_MONDAY" localizedType="OBSERVANCE"/>
+      <ChristianHoliday type="WHIT_MONDAY" localizedType="OBSERVANCE"/>
+      <ChristianHoliday type="CORPUS_CHRISTI"/>
     </Holidays>
   </SubConfigurations>
 
@@ -189,8 +199,9 @@
     <Holidays>
       <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
       <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <ChristianHoliday type="WHIT_MONDAY" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+      <ChristianHoliday type="EASTER_MONDAY"/>
+      <ChristianHoliday type="WHIT_MONDAY"/>
     </Holidays>
   </SubConfigurations>
 
@@ -199,8 +210,9 @@
       <Fixed month="JANUARY" day="2" descriptionPropertiesKey="ST_BERCHTHOLD"/>
       <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
       <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <ChristianHoliday type="WHIT_MONDAY" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+      <ChristianHoliday type="EASTER_MONDAY"/>
+      <ChristianHoliday type="WHIT_MONDAY"/>
     </Holidays>
   </SubConfigurations>
 
@@ -210,8 +222,9 @@
       <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
       <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
       <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <ChristianHoliday type="CORPUS_CHRISTI" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+      <ChristianHoliday type="EASTER_MONDAY" localizedType="OBSERVANCE"/>
+      <ChristianHoliday type="CORPUS_CHRISTI"/>
     </Holidays>
   </SubConfigurations>
 
@@ -223,10 +236,10 @@
       <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
       <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
       <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY" localizedType="OBSERVANCE"/>
-      <ChristianHoliday type="WHIT_MONDAY" descriptionPropertiesKey="christian.WHIT_MONDAY" localizedType="OBSERVANCE"/>
-      <ChristianHoliday type="CORPUS_CHRISTI" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+      <ChristianHoliday type="EASTER_MONDAY"/>
+      <ChristianHoliday type="WHIT_MONDAY" localizedType="OBSERVANCE"/>
+      <ChristianHoliday type="CORPUS_CHRISTI"/>
     </Holidays>
   </SubConfigurations>
 
@@ -235,8 +248,9 @@
       <Fixed month="JANUARY" day="2" descriptionPropertiesKey="ST_BERCHTHOLD"/>
       <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY" localizedType="OBSERVANCE"/>
       <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <ChristianHoliday type="WHIT_MONDAY" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+      <ChristianHoliday type="EASTER_MONDAY"/>
+      <ChristianHoliday type="WHIT_MONDAY"/>
     </Holidays>
   </SubConfigurations>
 
@@ -251,9 +265,9 @@
       <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
       <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
       <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
-      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY" localizedType="OBSERVANCE"/>
-      <ChristianHoliday type="WHIT_MONDAY" descriptionPropertiesKey="christian.WHIT_MONDAY" localizedType="OBSERVANCE"/>
-      <ChristianHoliday type="CORPUS_CHRISTI" descriptionPropertiesKey="christian.CORPUS_CHRISTI" localizedType="OBSERVANCE"/>
+      <ChristianHoliday type="EASTER_MONDAY"/>
+      <ChristianHoliday type="WHIT_MONDAY" localizedType="OBSERVANCE"/>
+      <ChristianHoliday type="CORPUS_CHRISTI" localizedType="OBSERVANCE"/>
     </Holidays>
   </SubConfigurations>
 
@@ -265,10 +279,10 @@
       <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
       <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
       <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-      <ChristianHoliday type="WHIT_MONDAY" descriptionPropertiesKey="christian.WHIT_MONDAY" localizedType="OBSERVANCE"/>
-      <ChristianHoliday type="CORPUS_CHRISTI" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+      <ChristianHoliday type="EASTER_MONDAY"/>
+      <ChristianHoliday type="WHIT_MONDAY" localizedType="OBSERVANCE"/>
+      <ChristianHoliday type="CORPUS_CHRISTI"/>
     </Holidays>
   </SubConfigurations>
 
@@ -278,9 +292,9 @@
       <RelativeToWeekdayInMonth weekday="MONDAY" when="AFTER" descriptionPropertiesKey="FEDERAL_DAY_THANKSGIVING_MON" localizedType="OBSERVANCE">
         <FixedWeekday which="THIRD" weekday="SUNDAY" month="SEPTEMBER"/>
       </RelativeToWeekdayInMonth>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-      <ChristianHoliday type="WHIT_MONDAY" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+      <ChristianHoliday type="EASTER_MONDAY"/>
+      <ChristianHoliday type="WHIT_MONDAY"/>
     </Holidays>
   </SubConfigurations>
 
@@ -290,7 +304,7 @@
       <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
       <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
       <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
-      <ChristianHoliday type="CORPUS_CHRISTI" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
+      <ChristianHoliday type="CORPUS_CHRISTI"/>
     </Holidays>
   </SubConfigurations>
 
@@ -300,9 +314,9 @@
       <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
       <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
       <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
-      <ChristianHoliday type="CORPUS_CHRISTI" descriptionPropertiesKey="christian.CORPUS_CHRISTI"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+      <ChristianHoliday type="EASTER_MONDAY" localizedType="OBSERVANCE"/>
+      <ChristianHoliday type="CORPUS_CHRISTI"/>
     </Holidays>
   </SubConfigurations>
 
@@ -310,8 +324,9 @@
     <Holidays>
       <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
       <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
-      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
-      <ChristianHoliday type="WHIT_MONDAY" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+      <ChristianHoliday type="EASTER_MONDAY"/>
+      <ChristianHoliday type="WHIT_MONDAY"/>
     </Holidays>
   </SubConfigurations>
 </Configuration>

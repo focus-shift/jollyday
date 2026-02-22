@@ -31,8 +31,8 @@ class HolidayCZTest {
       .hasFixedHoliday("CHRISTMAS", DECEMBER, 25).and()
       .hasFixedHoliday("STEPHENS", DECEMBER, 26).and()
       .hasChristianHoliday("GOOD_FRIDAY")
-        .between(Year.of(2016), Year.of(2500))
-        .notBetween(Year.of(1900), Year.of(2015))
+        .validFrom(Year.of(2016))
+        .notValidBetween(Year.of(1900), Year.of(2015))
       .and()
       .hasChristianHoliday("EASTER_MONDAY")
       .check();

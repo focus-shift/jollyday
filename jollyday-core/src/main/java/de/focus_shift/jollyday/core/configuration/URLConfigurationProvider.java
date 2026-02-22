@@ -20,7 +20,16 @@ import static java.util.function.Predicate.not;
  */
 class URLConfigurationProvider implements ConfigurationProvider {
 
+  /**
+   * System property to define URLs to overriding jollyday configuration files.
+   */
+  static final String CONFIG_URLS_PROPERTY = "de.focus_shift.jollyday.config.urls";
+
   private static final Logger LOG = LoggerFactory.getLogger(URLConfigurationProvider.class);
+
+  URLConfigurationProvider() {
+    // ok
+  }
 
   /**
    * Returns the properties by reading from the URLs provided by the system
@@ -29,8 +38,8 @@ class URLConfigurationProvider implements ConfigurationProvider {
   @Override
   public Properties getProperties() {
     final Properties properties = new Properties();
-    final String configURLs = System.getProperty(CONFIG_URLS_PROPERTY);
 
+    final String configURLs = System.getProperty(CONFIG_URLS_PROPERTY);
     if (configURLs != null) {
       stream(configURLs.split(","))
         .filter(not(String::isEmpty))
@@ -47,7 +56,7 @@ class URLConfigurationProvider implements ConfigurationProvider {
     try (final InputStream inputStream = url.openStream()) {
       properties.load(inputStream);
     } catch (IOException e) {
-      throw new IllegalStateException("Could not load default properties from classpath.", e);
+      throw new IllegalStateException("Could not load property from '" + url + "'.", e);
     }
   }
 

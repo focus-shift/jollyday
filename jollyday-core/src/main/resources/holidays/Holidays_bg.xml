@@ -9,6 +9,7 @@
       <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
+    <Fixed month="JANUARY" day="2" validFrom="2026" validTo="2026" descriptionPropertiesKey="CURRENCY_CHANGE_DAY"/>
     <Fixed month="MARCH" day="3" descriptionPropertiesKey="LIBERATION">
       <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
@@ -33,22 +34,30 @@
       <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
-    <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="NATIONAL_DAY">
+    <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="NATIONAL_DAY" localizedType="OBSERVANCE">
       <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
     <Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CHRISTMAS_EVE">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="TUESDAY"/>
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="WEDNESDAY"/>
     </Fixed>
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS">
-      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="WEDNESDAY"/>
     </Fixed>
     <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="SECOND_CHRISTMAS_DAY">
-      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
     </Fixed>
-    <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY" chronology="JULIAN"/>
-    <ChristianHoliday type="EASTER_SATURDAY" descriptionPropertiesKey="christian.EASTER_SATURDAY" chronology="JULIAN"/>
-    <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER" chronology="JULIAN"/>
-    <ChristianHoliday type="EASTER_MONDAY" descriptionPropertiesKey="christian.EASTER_MONDAY" chronology="JULIAN"/>
+    <Fixed month="DECEMBER" day="31" validFrom="2025" validTo="2025" descriptionPropertiesKey="CURRENCY_CHANGE_DAY"/>
+    <ChristianHoliday type="GOOD_FRIDAY" chronology="JULIAN"/>
+    <ChristianHoliday type="EASTER_SATURDAY" chronology="JULIAN"/>
+    <ChristianHoliday type="EASTER" chronology="JULIAN"/>
+    <ChristianHoliday type="EASTER_MONDAY" chronology="JULIAN"/>
   </Holidays>
+
+  <Sources>
+    <Source of="National Day">https://www.government.bg/en/About-Bulgaria/BULGARIAN-PUBLIC-HOLIDAYS/Bulgarian-public-holidays</Source>
+  </Sources>
 </Configuration>

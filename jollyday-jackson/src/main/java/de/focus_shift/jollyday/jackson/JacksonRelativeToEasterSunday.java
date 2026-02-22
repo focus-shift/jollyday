@@ -1,8 +1,9 @@
 package de.focus_shift.jollyday.jackson;
 
 import de.focus_shift.jollyday.core.HolidayType;
-import de.focus_shift.jollyday.core.spi.RelativeToEasterSunday;
+import de.focus_shift.jollyday.core.spi.RelativeToEasterSundayHolidayConfiguration;
 import de.focus_shift.jollyday.jackson.mapping.ChronologyType;
+import de.focus_shift.jollyday.jackson.mapping.RelativeToEasterSunday;
 import org.threeten.extra.Days;
 import org.threeten.extra.chrono.JulianChronology;
 
@@ -11,13 +12,13 @@ import java.time.chrono.Chronology;
 import java.time.chrono.IsoChronology;
 
 /**
- * see {@link RelativeToEasterSunday}
+ * see {@link RelativeToEasterSundayHolidayConfiguration}
  */
-class JacksonRelativeToEasterSunday implements RelativeToEasterSunday {
+class JacksonRelativeToEasterSunday implements RelativeToEasterSundayHolidayConfiguration {
 
-  private final de.focus_shift.jollyday.jackson.mapping.RelativeToEasterSunday relativeToEasterSunday;
+  private final RelativeToEasterSunday relativeToEasterSunday;
 
-  JacksonRelativeToEasterSunday(de.focus_shift.jollyday.jackson.mapping.RelativeToEasterSunday relativeToEasterSunday) {
+  JacksonRelativeToEasterSunday(RelativeToEasterSunday relativeToEasterSunday) {
     this.relativeToEasterSunday = relativeToEasterSunday;
   }
 

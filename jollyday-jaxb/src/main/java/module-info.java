@@ -1,9 +1,9 @@
-import de.focus_shift.jollyday.core.spi.ConfigurationService;
+import de.focus_shift.jollyday.core.spi.HolidayCalendarConfigurationService;
 import de.focus_shift.jollyday.jaxb.JaxbConfigurationService;
 
 module de.focus_shift.jollyday.jaxb {
 
-  provides ConfigurationService with
+  provides HolidayCalendarConfigurationService with
     JaxbConfigurationService;
 
   opens de.focus_shift.jollyday.jaxb.mapping to
@@ -16,8 +16,5 @@ module de.focus_shift.jollyday.jaxb {
   requires org.threeten.extra;
 
   exports de.focus_shift.jollyday.jaxb to
-    de.focus_shift.jollyday.core,
-    de.focus_shift.jollyday.jaxb.test;
-  exports de.focus_shift.jollyday.jaxb.mapping to
-    de.focus_shift.jollyday.jaxb.test;
+    de.focus_shift.jollyday.core;
 }

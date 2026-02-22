@@ -1,23 +1,22 @@
 package de.focus_shift.jollyday.jaxb;
 
 import de.focus_shift.jollyday.core.HolidayType;
-import de.focus_shift.jollyday.core.spi.Fixed;
+import de.focus_shift.jollyday.core.spi.FixedHolidayConfiguration;
+import de.focus_shift.jollyday.jaxb.mapping.Fixed;
 
 import java.time.Month;
 import java.time.MonthDay;
 import java.time.Year;
 import java.util.List;
 
-import static java.util.stream.Collectors.toList;
-
 /**
- * see {@link Fixed}
+ * see {@link FixedHolidayConfiguration}
  */
-class JaxbFixed implements Fixed {
+class JaxbFixed implements FixedHolidayConfiguration {
 
-  private final de.focus_shift.jollyday.jaxb.mapping.Fixed fixed;
+  private final Fixed fixed;
 
-  JaxbFixed(de.focus_shift.jollyday.jaxb.mapping.Fixed fixed) {
+  JaxbFixed(Fixed fixed) {
     this.fixed = fixed;
   }
 
@@ -76,6 +75,7 @@ class JaxbFixed implements Fixed {
       ? null
       : Year.of(fixed.getValidTo());
   }
+
   /**
    * {@inheritDoc}
    *
@@ -98,6 +98,7 @@ class JaxbFixed implements Fixed {
   public List<MovingCondition> conditions() {
     return fixed.getMovingCondition().stream()
       .map(JaxbMovingCondition::new)
-      .collect(toList());
+      .map(MovingCondition.class::cast)
+      .toList();
   }
 }

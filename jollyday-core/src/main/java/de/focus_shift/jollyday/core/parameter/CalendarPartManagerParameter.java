@@ -31,7 +31,7 @@ public class CalendarPartManagerParameter extends BaseManagerParameter {
   @Override
   public URL createResourceUrl() {
     final String configurationFileName = getConfigurationFileName(calendarPart);
-    return ResourceUtil.getResource(configurationFileName);
+    return ResourceUtil.getResource(configurationFileName).orElse(null);
   }
 
   @Override

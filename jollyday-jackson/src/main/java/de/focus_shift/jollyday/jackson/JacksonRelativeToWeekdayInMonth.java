@@ -1,21 +1,22 @@
 package de.focus_shift.jollyday.jackson;
 
 import de.focus_shift.jollyday.core.HolidayType;
-import de.focus_shift.jollyday.core.spi.FixedWeekdayInMonth;
+import de.focus_shift.jollyday.core.spi.FixedWeekdayInMonthHolidayConfiguration;
 import de.focus_shift.jollyday.core.spi.Relation;
-import de.focus_shift.jollyday.core.spi.RelativeToWeekdayInMonth;
+import de.focus_shift.jollyday.core.spi.RelativeToWeekdayInMonthHolidayConfiguration;
+import de.focus_shift.jollyday.jackson.mapping.RelativeToWeekdayInMonth;
 
 import java.time.DayOfWeek;
 import java.time.Year;
 
 /**
- * see {@link RelativeToWeekdayInMonth}
+ * see {@link RelativeToWeekdayInMonthHolidayConfiguration}
  */
-class JacksonRelativeToWeekdayInMonth implements RelativeToWeekdayInMonth {
+class JacksonRelativeToWeekdayInMonth implements RelativeToWeekdayInMonthHolidayConfiguration {
 
-  private final de.focus_shift.jollyday.jackson.mapping.RelativeToWeekdayInMonth relativeToWeekdayInMonth;
+  private final RelativeToWeekdayInMonth relativeToWeekdayInMonth;
 
-  JacksonRelativeToWeekdayInMonth(de.focus_shift.jollyday.jackson.mapping.RelativeToWeekdayInMonth relativeToWeekdayInMonth) {
+  JacksonRelativeToWeekdayInMonth(RelativeToWeekdayInMonth relativeToWeekdayInMonth) {
     this.relativeToWeekdayInMonth = relativeToWeekdayInMonth;
   }
 
@@ -25,7 +26,7 @@ class JacksonRelativeToWeekdayInMonth implements RelativeToWeekdayInMonth {
    * @return {@inheritDoc}
    */
   @Override
-  public FixedWeekdayInMonth weekdayInMonth() {
+  public FixedWeekdayInMonthHolidayConfiguration weekdayInMonth() {
     return new JacksonFixedWeekdayInMonth(relativeToWeekdayInMonth.getFixedWeekday());
   }
 

@@ -12,6 +12,7 @@ import java.time.Year;
 import java.util.Set;
 
 import static de.focus_shift.jollyday.core.HolidayCalendar.NETHERLANDS;
+import static de.focus_shift.jollyday.core.HolidayType.OBSERVANCE;
 import static de.focus_shift.jollyday.core.HolidayType.PUBLIC_HOLIDAY;
 import static de.focus_shift.jollyday.core.ManagerParameters.create;
 import static de.focus_shift.jollyday.tests.CalendarCheckerApi.assertFor;
@@ -32,32 +33,32 @@ class HolidayNLTest {
   void ensuresHolidays() {
     assertFor(NETHERLANDS)
       .hasFixedHoliday("NEW_YEAR", JANUARY, 1)
-        .notBetween(Year.of(1900), Year.of(1966))
-        .between(Year.of(1967), Year.of(2500))
+        .notValidBetween(Year.of(1900), Year.of(1966))
+        .validFrom(Year.of(1967))
       .and()
       .hasFixedHoliday("KINGS_DAY", APRIL, 27)
-        .notBetween(Year.of(1900), Year.of(2013))
-        .between(Year.of(2014), Year.of(2500))
-        .canBeenShiftedFrom(SUNDAY, PREVIOUS, SATURDAY)
+        .notValidBetween(Year.of(1900), Year.of(2013))
+        .validFrom(Year.of(2014))
+        .canBeMovedFrom(SUNDAY, PREVIOUS, SATURDAY)
       .and()
       .hasFixedHoliday("QUEENS_BIRTHDAY", AUGUST, 31)
-        .between(Year.of(1885), Year.of(1947))
-        .notBetween(Year.of(1948), Year.of(2500))
+        .validBetween(Year.of(1885), Year.of(1947))
+        .notValidBetween(Year.of(1948), Year.of(2500))
       .and()
       .hasFixedHoliday("QUEENS_BIRTHDAY", APRIL, 30)
-        .between(Year.of(1948), Year.of(1979))
-        .canBeenShiftedFrom(SUNDAY, MONDAY)
+        .validBetween(Year.of(1948), Year.of(1979))
+        .canBeMovedFrom(SUNDAY, MONDAY)
       .and()
       .hasFixedHoliday("QUEENS_BIRTHDAY", APRIL, 30)
-        .between(Year.of(1980), Year.of(2013))
-        .canBeenShiftedFrom(SUNDAY, PREVIOUS, SATURDAY)
+        .validBetween(Year.of(1980), Year.of(2013))
+        .canBeMovedFrom(SUNDAY, PREVIOUS, SATURDAY)
       .and()
       .hasFixedHoliday("LIBERATION", MAY, 5)
-        .between(Year.of(1990), Year.of(2500))
+        .validFrom(Year.of(1990))
       .and()
       .hasFixedHoliday("FIRST_CHRISTMAS_DAY", DECEMBER, 25).and()
       .hasFixedHoliday("SECOND_CHRISTMAS_DAY", DECEMBER, 26).and()
-      .hasChristianHoliday("GOOD_FRIDAY").and()
+      .hasChristianHoliday("GOOD_FRIDAY", OBSERVANCE).and()
       .hasChristianHoliday("EASTER").and()
       .hasChristianHoliday("EASTER_MONDAY").and()
       .hasChristianHoliday("ASCENSION_DAY").and()

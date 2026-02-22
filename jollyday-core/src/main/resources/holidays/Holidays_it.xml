@@ -11,17 +11,18 @@
     <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
     <Fixed month="JUNE" day="2" descriptionPropertiesKey="REPUBLIC_DAY"/>
     <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
+    <Fixed month="OCTOBER" day="4" validFrom="2026" descriptionPropertiesKey="ST_FRANCIS_OF_ASSISI"/>
     <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
     <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
     <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
-    <ChristianHoliday type="EASTER" descriptionPropertiesKey="christian.EASTER"/>
-    <ChristianHoliday type="EASTER_MONDAY" validFrom="1642" descriptionPropertiesKey="christian.EASTER_MONDAY"/>
+    <ChristianHoliday type="EASTER"/>
+    <ChristianHoliday type="EASTER_MONDAY" validFrom="1642"/>
   </Holidays>
 
   <SubConfigurations hierarchy="32" description="Südtirol">
     <Holidays>
-      <ChristianHoliday type="WHIT_MONDAY" descriptionPropertiesKey="christian.WHIT_MONDAY"/>
+      <ChristianHoliday type="WHIT_MONDAY"/>
     </Holidays>
   </SubConfigurations>
 </Configuration>

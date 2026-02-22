@@ -1,6 +1,8 @@
 package de.focus_shift.jollyday.jackson.mapping;
 
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import tools.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+
+import java.util.Objects;
 
 public abstract class Holiday {
 
@@ -106,11 +108,7 @@ public abstract class Holiday {
    * {@link HolidayType }
    */
   public HolidayType getLocalizedType() {
-    if (localizedType == null) {
-      return HolidayType.PUBLIC_HOLIDAY;
-    } else {
-      return localizedType;
-    }
+    return Objects.requireNonNullElse(localizedType, HolidayType.PUBLIC_HOLIDAY);
   }
 
   /**
