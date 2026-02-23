@@ -17,7 +17,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class SubdivisionsTest {
 
-  private static final List<String> noneIso3166Countries = List.of("DJ_STOXX", "LME", "NYSE", "NYSE_EURONEXT", "TARGET", "XK", "FR", "MC");
+  private static final List<String> noneIso3166Countries = List.of("DJ_STOXX", "LME", "NYSE", "NYSE_EURONEXT", "TARGET", "TARGET_2_SECURITIES", "XK", "FR", "MC");
   private static final List<String> okSubdivisions = List.of("FI-01", "ES-RI", "IN-DH", "IN-OD", "IN-UK", "IN-CG", "IN-LA", "IN-TS", "SM-03", "SM-04", "SM-05", "SM-06", "SM-08");
 
   @Test
