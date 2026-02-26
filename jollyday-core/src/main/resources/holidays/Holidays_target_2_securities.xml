@@ -5,13 +5,11 @@
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
   <Holidays>
-    <Fixed validFrom="2000" month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
-    <Fixed validFrom="1999" month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-    <Fixed validFrom="1999" month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
-    <Fixed validFrom="2001" validTo="2001" month="DECEMBER" day="31" descriptionPropertiesKey="NEW_YEARS_EVE"/>
-    <Fixed validFrom="1999" validTo="1999" month="DECEMBER" day="31" descriptionPropertiesKey="NEW_YEARS_EVE"/>
-    <ChristianHoliday validFrom="2000" type="GOOD_FRIDAY"/>
-    <ChristianHoliday validFrom="2000" type="EASTER_MONDAY"/>
+    <Fixed validFrom="2015" month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed validFrom="2015" month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+    <Fixed validFrom="2015" month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
+    <ChristianHoliday validFrom="2015" type="GOOD_FRIDAY"/>
+    <ChristianHoliday validFrom="2015" type="EASTER_MONDAY"/>
   </Holidays>
 
   <Sources>
