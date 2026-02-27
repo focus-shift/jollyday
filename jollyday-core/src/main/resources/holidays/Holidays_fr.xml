@@ -163,7 +163,8 @@
   </SubConfigurations>
   <SubConfigurations hierarchy="57" description="Moselle">
     <Holidays>
-      <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="ABOLITION_OF_SLAVERY"/>
+      <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="SECOND_CHRISTMAS_DAY"/>
+      <ChristianHoliday type="GOOD_FRIDAY" descriptionPropertiesKey="christian.GOOD_FRIDAY"/>
     </Holidays>
   </SubConfigurations>
   <SubConfigurations hierarchy="88" description="Vosges">
