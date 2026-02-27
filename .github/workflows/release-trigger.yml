@@ -21,6 +21,7 @@ env:
 
 jobs:
   trigger-release:
+    name: Release Trigger for version ${{ github.event.inputs.releaseVersion }}
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v6
