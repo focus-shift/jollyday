@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="target" description="TARGET2-Securities (T2S)"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed validFrom="2015" month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed validFrom="2015" month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+    <Fixed validFrom="2015" month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
+    <ChristianHoliday validFrom="2015" type="GOOD_FRIDAY"/>
+    <ChristianHoliday validFrom="2015" type="EASTER_MONDAY"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://www.bundesbank.de/de/aufgaben/unbarer-zahlungsverkehr/target2-securities</Source>
+    <Source>https://www.bundesbank.de/resource/blob/749314/edbf269e7e236ff9dcf3e95dab122a0b/472B63F073F071307366337C94F8C870/feiertage-in-deutschland-1-data.pdf</Source>
+  </Sources>
+</Configuration>
