@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<Configuration hierarchy="target" description="TARGET2-Securities (T2S)"
+<Configuration hierarchy="target2-securities" description="TARGET2-Securities (T2S)"
                xmlns="https://focus_shift.de/jollyday/schema/holiday"
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
