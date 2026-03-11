@@ -1,6 +1,7 @@
 package de.focus_shift.jollyday.jackson;
 
 import de.focus_shift.jollyday.jackson.mapping.Configuration;
+import org.jspecify.annotations.NonNull;
 import tools.jackson.dataformat.xml.XmlMapper;
 
 import java.io.InputStream;
@@ -18,7 +19,7 @@ public class JacksonXMLMapper {
    * @param stream a {@link InputStream} object.
    * @return The unmarshalled configuration.
    */
-  public Configuration unmarshallConfiguration(InputStream stream) {
+  public @NonNull Configuration unmarshallConfiguration(@NonNull final InputStream stream) {
     try {
       return mapper.readValue(stream, Configuration.class);
     } catch (Exception e) {
@@ -27,7 +28,7 @@ public class JacksonXMLMapper {
   }
 
   private static class JacksonMapperCreator {
-    private XmlMapper create() {
+    private @NonNull XmlMapper create() {
       return XmlMapper.builder()
         .propertyNamingStrategy(UPPER_CAMEL_CASE)
         .build();

@@ -2,6 +2,8 @@ package de.focus_shift.jollyday.core.util;
 
 import de.focus_shift.jollyday.core.Holiday;
 import de.focus_shift.jollyday.core.HolidayType;
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
 
 import java.time.LocalDate;
 import java.util.Set;
@@ -23,7 +25,7 @@ public final class CalendarUtil {
    * @param date     the date to look for
    * @return the date is contained in the set of holidays
    */
-  public static boolean contains(final Set<Holiday> holidays, final LocalDate date) {
+  public static boolean contains(@NonNull final Set<Holiday> holidays, @NonNull final LocalDate date) {
     return contains(holidays, date, null);
   }
 
@@ -35,7 +37,7 @@ public final class CalendarUtil {
    * @param holidayType a {@link HolidayType} object
    * @return contains this date
    */
-  public static boolean contains(final Set<Holiday> holidays, final LocalDate date, final HolidayType holidayType) {
+  public static boolean contains(@NonNull final Set<Holiday> holidays, @NonNull final LocalDate date, @Nullable final HolidayType holidayType) {
     return holidays.stream()
       .anyMatch(holiday -> holiday.getDate().equals(date) && (holidayType == null || holiday.getType() == holidayType));
   }

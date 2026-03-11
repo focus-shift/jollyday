@@ -1,5 +1,7 @@
 package de.focus_shift.jollyday.core.parser.functions;
 
+import org.jspecify.annotations.NonNull;
+
 import java.time.LocalDate;
 import java.util.Calendar;
 import java.util.function.Function;
@@ -11,7 +13,7 @@ import static java.util.Calendar.YEAR;
 public class CalendarToLocalDate implements Function<Calendar, LocalDate> {
 
   @Override
-  public LocalDate apply(final Calendar calendar) {
+  public @NonNull LocalDate apply(@NonNull final Calendar calendar) {
     return LocalDate.of(calendar.get(YEAR), calendar.get(MONTH) + 1, calendar.get(DAY_OF_MONTH));
   }
 }

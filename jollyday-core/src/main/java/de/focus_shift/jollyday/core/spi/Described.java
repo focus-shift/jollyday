@@ -1,6 +1,7 @@
 package de.focus_shift.jollyday.core.spi;
 
 import de.focus_shift.jollyday.core.HolidayType;
+import org.jspecify.annotations.NonNull;
 
 /**
  * Provides the functionality to describe a holiday with a
@@ -14,7 +15,7 @@ public interface Described {
    *
    * @return the properties key to use to translate
    */
-  String descriptionPropertiesKey();
+  @NonNull String descriptionPropertiesKey();
 
   /**
    * Represents the type of the holiday.
@@ -22,13 +23,13 @@ public interface Described {
    *
    * @return the holiday type
    */
-  HolidayType holidayType();
+  @NonNull HolidayType holidayType();
 
-  default String descriptionPropertiesKeyPrefix() {
+  @NonNull default String descriptionPropertiesKeyPrefix() {
     return "";
   }
 
-  default String descriptionPropertiesKeyPrefixSeparator() {
+  @NonNull default String descriptionPropertiesKeyPrefixSeparator() {
     return ".";
   }
 }

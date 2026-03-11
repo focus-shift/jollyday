@@ -8,6 +8,8 @@ import de.focus_shift.jollyday.core.parser.predicates.ValidLimitation;
 import de.focus_shift.jollyday.core.spi.HolidayConfigurations;
 import de.focus_shift.jollyday.core.spi.Relation;
 import de.focus_shift.jollyday.core.spi.RelativeToFixedHolidayConfiguration;
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
 import org.threeten.extra.Days;
 
 import java.time.DayOfWeek;
@@ -36,24 +38,30 @@ import static de.focus_shift.jollyday.core.spi.Relation.BEFORE;
 public class RelativeToFixedParser implements HolidayParser {
 
   @Override
-  public List<Holiday> parse(final Year year, final HolidayConfigurations holidays) {
+  public @NonNull List<Holiday> parse(@NonNull final Year year, @NonNull final HolidayConfigurations holidays) {
     return holidays.relativeToFixed().stream()
       .filter(new ValidLimitation(year))
       .map(relativeToFixed -> moveToRelativeDate(year, relativeToFixed))
       .toList();
   }
 
-  private Holiday moveToRelativeDate(final Year year, final RelativeToFixedHolidayConfiguration rf) {
+  private @NonNull Holiday moveToRelativeDate(@NonNull final Year year, @NonNull final RelativeToFixedHolidayConfiguration rf) {
     LocalDate fixed = new FixedToLocalDate(year).apply(rf.date());
-    if (rf.weekday() != null) {
-      fixed = moveToWeekday(fixed, rf.weekday(), rf.when());
-    } else if (rf.days() != null) {
-      fixed = moveByDays(fixed, rf.days(), rf.when());
+
+    final DayOfWeek weekday = rf.weekday();
+    if (weekday != null) {
+      fixed = moveToWeekday(fixed, weekday, rf.when());
+    } else {
+      final Days days = rf.days();
+      if (days != null) {
+        fixed = moveByDays(fixed, days, rf.when());
+      }
     }
+
     return new CreateHoliday(fixed).apply(rf);
   }
 
-  private LocalDate moveToWeekday(LocalDate date, DayOfWeek targetDay, Relation relation) {
+  private @NonNull LocalDate moveToWeekday(@NonNull final LocalDate date, @NonNull final DayOfWeek targetDay, @Nullable final Relation relation) {
 
     final int direction = (relation == BEFORE ? -1 : 1);
     final int currentDayValue = date.getDayOfWeek().getValue();
@@ -69,7 +77,7 @@ public class RelativeToFixedParser implements HolidayParser {
     return date.plusDays(daysDifference);
   }
 
-  private LocalDate moveByDays(LocalDate date, Days days, Relation relation) {
+  private @NonNull LocalDate moveByDays(@NonNull final LocalDate date, @NonNull final Days days, @Nullable final Relation relation) {
     return relation == BEFORE ? date.minus(days) : date.plus(days);
   }
 }

@@ -1,5 +1,6 @@
 package de.focus_shift.jollyday.core.support;
 
+import org.jspecify.annotations.NonNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -17,11 +18,11 @@ public class LazyServiceLoaderCache<S> {
   private final Class<S> clz;
   private List<S> services;
 
-  public LazyServiceLoaderCache(final Class<S> clz) {
+  public LazyServiceLoaderCache(@NonNull final Class<S> clz) {
     this.clz = clz;
   }
 
-  public List<S> getServices() {
+  public @NonNull List<S> getServices() {
     if (services == null) {
       loadServices();
     }

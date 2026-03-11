@@ -1,5 +1,7 @@
 package de.focus_shift.jollyday.core.spi;
 
+import org.jspecify.annotations.NonNull;
+
 import java.util.List;
 
 /**
@@ -13,69 +15,69 @@ public interface HolidayConfigurations {
    *
    * @return list of all fixed holidays configurations
    */
-  List<FixedHolidayConfiguration> fixed();
+  @NonNull List<FixedHolidayConfiguration> fixed();
 
     /**
    * see {@link RelativeToFixedHolidayConfiguration}
    *
    * @return list of relativeToFixed configurations
    */
-  List<RelativeToFixedHolidayConfiguration> relativeToFixed();
+  @NonNull List<RelativeToFixedHolidayConfiguration> relativeToFixed();
 
     /**
    * see {@link RelativeToWeekdayInMonthHolidayConfiguration}
    *
    * @return list of all relativeToWeekdayInMonth configurations
    */
-  List<RelativeToWeekdayInMonthHolidayConfiguration> relativeToWeekdayInMonth();
+  @NonNull List<RelativeToWeekdayInMonthHolidayConfiguration> relativeToWeekdayInMonth();
 
     /**
    * see {@link FixedWeekdayInMonthHolidayConfiguration}
    *
    * @return list of all fixedWeekdays configurations
    */
-  List<FixedWeekdayInMonthHolidayConfiguration> fixedWeekdays();
+  @NonNull List<FixedWeekdayInMonthHolidayConfiguration> fixedWeekdays();
 
     /**
    * see {@link ChristianHolidayConfiguration}
    *
    * @return list of all christianHolidays configurations
    */
-  List<ChristianHolidayConfiguration> christianHolidays();
+  @NonNull List<ChristianHolidayConfiguration> christianHolidays();
 
     /**
    * see {@link IslamicHolidayConfiguration}
    *
    * @return list of islamicHolidays fixed configurations
    */
-  List<IslamicHolidayConfiguration> islamicHolidays();
+  @NonNull List<IslamicHolidayConfiguration> islamicHolidays();
 
     /**
    * see {@link FixedWeekdayBetweenFixedHolidayConfiguration}
    *
    * @return list of all fixedWeekdayBetweenFixed configurations
    */
-  List<FixedWeekdayBetweenFixedHolidayConfiguration> fixedWeekdayBetweenFixed();
+  @NonNull List<FixedWeekdayBetweenFixedHolidayConfiguration> fixedWeekdayBetweenFixed();
 
     /**
    * see {@link FixedWeekdayRelativeToFixedHolidayConfiguration}
    *
    * @return list of all fixedWeekdayRelativeToFixed configurations
    */
-  List<FixedWeekdayRelativeToFixedHolidayConfiguration> fixedWeekdayRelativeToFixed();
+  @NonNull List<FixedWeekdayRelativeToFixedHolidayConfiguration> fixedWeekdayRelativeToFixed();
 
     /**
    * see {@link EthiopianOrthodoxHolidayConfiguration}
    *
    * @return list of all ethiopianOrthodoxHolidays configurations
    */
-  List<EthiopianOrthodoxHolidayConfiguration> ethiopianOrthodoxHolidays();
+  @NonNull List<EthiopianOrthodoxHolidayConfiguration> ethiopianOrthodoxHolidays();
 
     /**
    * see {@link RelativeToEasterSundayHolidayConfiguration}
    *
    * @return list of all relativeToEasterSunday configurations
    */
-  List<RelativeToEasterSundayHolidayConfiguration> relativeToEasterSunday();
+  @NonNull List<RelativeToEasterSundayHolidayConfiguration> relativeToEasterSunday();
 
 }

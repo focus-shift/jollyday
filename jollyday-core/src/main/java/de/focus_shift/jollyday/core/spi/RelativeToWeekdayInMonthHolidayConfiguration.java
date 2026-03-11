@@ -1,5 +1,7 @@
 package de.focus_shift.jollyday.core.spi;
 
+import org.jspecify.annotations.NonNull;
+
 import java.time.DayOfWeek;
 
 /**
@@ -22,20 +24,20 @@ public interface RelativeToWeekdayInMonthHolidayConfiguration extends Described,
    *
    * @return the weekday of the new holiday
    */
-  DayOfWeek weekday();
+  @NonNull DayOfWeek weekday();
 
   /**
    * Describes the relation of the new holiday to the `weekdayInMonth`
    *
    * @return the relation
    */
-  Relation when();
+  @NonNull Relation when();
 
   /**
    * Describes the fixed weekday in month that is the anchor in relation to the new holiday
    *
    * @return the anchor for the relation to the new holiday
    */
-  FixedWeekdayInMonthHolidayConfiguration weekdayInMonth();
+  @NonNull FixedWeekdayInMonthHolidayConfiguration weekdayInMonth();
 
 }

@@ -1,6 +1,7 @@
 package de.focus_shift.jollyday.core.configuration;
 
 import de.focus_shift.jollyday.core.ManagerParameter;
+import org.jspecify.annotations.NonNull;
 
 /**
  * Manages the configuration provider implementations and thus delivering the jollyday configuration.
@@ -28,7 +29,7 @@ public class ConfigurationProviderManager {
    *
    * @param parameter the configuration {@link ManagerParameter} to use
    */
-  public void mergeConfigurationProperties(final ManagerParameter parameter) {
+  public void mergeConfigurationProperties(@NonNull final ManagerParameter parameter) {
     parameter.mergeProperties(providerClassesConfigurationProvider.getProperties());
     parameter.mergeProperties(urlConfigurationProvider.getProperties());
     parameter.mergeProperties(applicationClasspathConfigurationProvider.getProperties());

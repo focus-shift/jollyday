@@ -1,5 +1,6 @@
 package de.focus_shift.jollyday.core.spi;
 
+import org.jspecify.annotations.NonNull;
 import org.threeten.extra.Days;
 
 import java.time.chrono.Chronology;
@@ -25,13 +26,13 @@ public interface RelativeToEasterSundayHolidayConfiguration extends Described, L
    *
    * @return the chronology of the holiday
    */
-  Chronology chronology();
+  @NonNull Chronology chronology();
 
   /**
    * Describes the number of days that will be added to Easter Sunday.
    *
    * @return the additional number of days
    */
-  Days days();
+  @NonNull Days days();
 
 }

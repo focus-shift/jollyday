@@ -5,6 +5,8 @@ import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.FixedWeekdayInMonthHolidayConfiguration;
 import de.focus_shift.jollyday.core.spi.HolidayConfigurations;
 import de.focus_shift.jollyday.core.spi.Occurrence;
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -69,42 +71,42 @@ class FixedWeekdayInMonthParserTest {
     return new FixedWeekdayInMonthHolidayConfiguration() {
 
       @Override
-      public DayOfWeek weekday() {
+      public @NonNull DayOfWeek weekday() {
         return dayOfWeek;
       }
 
       @Override
-      public Month month() {
+      public @NonNull Month month() {
         return month;
       }
 
       @Override
-      public Occurrence which() {
+      public @NonNull Occurrence which() {
         return occurrence;
       }
 
       @Override
-      public String descriptionPropertiesKey() {
+      public @NonNull String descriptionPropertiesKey() {
         return "";
       }
 
       @Override
-      public HolidayType holidayType() {
+      public @NonNull HolidayType holidayType() {
         return PUBLIC_HOLIDAY;
       }
 
       @Override
-      public Year validFrom() {
+      public @Nullable Year validFrom() {
         return validFrom;
       }
 
       @Override
-      public Year validTo() {
+      public @Nullable Year validTo() {
         return validTo;
       }
 
       @Override
-      public YearCycle cycle() {
+      public @NonNull YearCycle cycle() {
         return EVERY_YEAR;
       }
     };

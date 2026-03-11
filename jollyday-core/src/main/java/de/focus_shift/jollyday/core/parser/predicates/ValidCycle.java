@@ -1,6 +1,7 @@
 package de.focus_shift.jollyday.core.parser.predicates;
 
 import de.focus_shift.jollyday.core.spi.Limited;
+import org.jspecify.annotations.NonNull;
 
 import java.time.Period;
 import java.time.Year;
@@ -10,12 +11,12 @@ public class ValidCycle implements Predicate<Limited> {
 
   private final Year year;
 
-  public ValidCycle(final Year year) {
+  public ValidCycle(@NonNull final Year year) {
     this.year = year;
   }
 
   @Override
-  public boolean test(final Limited limited) {
+  public boolean test(@NonNull final Limited limited) {
     return switch (limited.cycle()) {
       case EVERY_YEAR -> true;
       case ODD_YEARS -> year.getValue() % 2 != 0;
@@ -37,11 +38,15 @@ public class ValidCycle implements Predicate<Limited> {
    * @param cycleYears number of years to start the cycle starting from validFrom/validTo
    * @return true if the given year based on validFrom/validTo and the cycle is valid, otherwise false
    */
-  private boolean isValidWithReferenceYear(Limited limited, Period cycleYears) {
-    if (limited.validFrom() != null) {
-      return (year.minusYears(limited.validFrom().getValue())).getValue() % cycleYears.getYears() == 0;
-    } else if (limited.validTo() != null) {
-      return (limited.validTo().minusYears(year.getValue())).getValue() % cycleYears.getYears() == 0;
+  private boolean isValidWithReferenceYear(@NonNull final Limited limited, @NonNull final Period cycleYears) {
+    final Year validFrom = limited.validFrom();
+    if (validFrom != null) {
+      return (year.minusYears(validFrom.getValue())).getValue() % cycleYears.getYears() == 0;
+    } else {
+      final Year validTo = limited.validTo();
+      if (validTo != null) {
+        return (validTo.minusYears(year.getValue())).getValue() % cycleYears.getYears() == 0;
+      }
     }
 
     throw new IllegalArgumentException("Cannot handle cycle type '" + limited.cycle() + "' without any reference year.");

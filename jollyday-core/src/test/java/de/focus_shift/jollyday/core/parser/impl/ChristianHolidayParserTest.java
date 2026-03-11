@@ -5,6 +5,8 @@ import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.ChristianHolidayConfiguration;
 import de.focus_shift.jollyday.core.spi.HolidayConfigurations;
 import de.focus_shift.jollyday.core.spi.Movable;
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
@@ -119,17 +121,17 @@ class ChristianHolidayParserTest {
 
       final Movable.MovingCondition movingCondition = new Movable.MovingCondition() {
         @Override
-        public DayOfWeek substitute() {
+        public @NonNull DayOfWeek substitute() {
           return DayOfWeek.SUNDAY;
         }
 
         @Override
-        public With with() {
+        public @NonNull With with() {
           return With.NEXT;
         }
 
         @Override
-        public DayOfWeek weekday() {
+        public @NonNull DayOfWeek weekday() {
           return DayOfWeek.MONDAY;
         }
       };
@@ -168,42 +170,42 @@ class ChristianHolidayParserTest {
     return new ChristianHolidayConfiguration() {
 
       @Override
-      public List<MovingCondition> conditions() {
+      public @NonNull List<MovingCondition> conditions() {
         return movingCondition == null ? List.of() : List.of(movingCondition);
       }
 
       @Override
-      public String descriptionPropertiesKey() {
+      public @NonNull String descriptionPropertiesKey() {
         return type.name();
       }
 
       @Override
-      public HolidayType holidayType() {
+      public @NonNull HolidayType holidayType() {
         return PUBLIC_HOLIDAY;
       }
 
       @Override
-      public ChristianHolidayType type() {
+      public @NonNull ChristianHolidayType type() {
         return type;
       }
 
       @Override
-      public Chronology chronology() {
+      public @NonNull Chronology chronology() {
         return null;
       }
 
       @Override
-      public Year validFrom() {
+      public @Nullable Year validFrom() {
         return validFrom;
       }
 
       @Override
-      public Year validTo() {
+      public @Nullable Year validTo() {
         return validTo;
       }
 
       @Override
-      public YearCycle cycle() {
+      public @NonNull YearCycle cycle() {
         return EVERY_YEAR;
       }
     };

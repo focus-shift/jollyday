@@ -5,6 +5,7 @@ import de.focus_shift.jollyday.core.spi.HolidayCalendarConfiguration;
 import de.focus_shift.jollyday.core.spi.HolidayCalendarConfigurationService;
 import de.focus_shift.jollyday.core.spi.HolidayConfigurations;
 import de.focus_shift.jollyday.core.support.LazyServiceLoaderCache;
+import org.jspecify.annotations.NonNull;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -70,25 +71,25 @@ class ConfigurationServiceManagerTest {
   private static class MockConfigurationService implements HolidayCalendarConfigurationService {
 
     @Override
-    public HolidayCalendarConfiguration getHolidayCalendarConfiguration(ManagerParameter parameter) {
+    public @NonNull HolidayCalendarConfiguration getHolidayCalendarConfiguration(ManagerParameter parameter) {
       return new HolidayCalendarConfiguration() {
         @Override
-        public HolidayConfigurations holidays() {
+        public @NonNull HolidayConfigurations holidays() {
           return null;
         }
 
         @Override
-        public Stream<HolidayCalendarConfiguration> subConfigurations() {
+        public @NonNull Stream<HolidayCalendarConfiguration> subConfigurations() {
           return null;
         }
 
         @Override
-        public String hierarchy() {
+        public @NonNull String hierarchy() {
           return null;
         }
 
         @Override
-        public String description() {
+        public @NonNull String description() {
           return null;
         }
       };
@@ -98,25 +99,25 @@ class ConfigurationServiceManagerTest {
   private static class MockConfigurationServiceOther implements HolidayCalendarConfigurationService {
 
     @Override
-    public HolidayCalendarConfiguration getHolidayCalendarConfiguration(ManagerParameter parameter) {
+    public @NonNull HolidayCalendarConfiguration getHolidayCalendarConfiguration(ManagerParameter parameter) {
       return new HolidayCalendarConfiguration() {
         @Override
-        public HolidayConfigurations holidays() {
+        public @NonNull HolidayConfigurations holidays() {
           return null;
         }
 
         @Override
-        public Stream<HolidayCalendarConfiguration> subConfigurations() {
+        public @NonNull Stream<HolidayCalendarConfiguration> subConfigurations() {
           return null;
         }
 
         @Override
-        public String hierarchy() {
+        public @NonNull String hierarchy() {
           return null;
         }
 
         @Override
-        public String description() {
+        public @NonNull String description() {
           return null;
         }
       };

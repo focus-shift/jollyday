@@ -6,6 +6,8 @@ import de.focus_shift.jollyday.core.spi.FixedWeekdayRelativeToFixedHolidayConfig
 import de.focus_shift.jollyday.core.spi.Occurrence;
 import de.focus_shift.jollyday.core.spi.Relation;
 import de.focus_shift.jollyday.jaxb.mapping.FixedWeekdayRelativeToFixed;
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
 
 import java.time.DayOfWeek;
 import java.time.Year;
@@ -27,7 +29,7 @@ class JaxbFixedWeekdayRelativeToFixed implements FixedWeekdayRelativeToFixedHoli
    * @return {@inheritDoc}
    */
   @Override
-  public DayOfWeek weekday() {
+  public @NonNull DayOfWeek weekday() {
     return DayOfWeek.valueOf(fixedWeekdayRelativeToFixed.getWeekday().name());
   }
 
@@ -37,7 +39,7 @@ class JaxbFixedWeekdayRelativeToFixed implements FixedWeekdayRelativeToFixedHoli
    * @return {@inheritDoc}
    */
   @Override
-  public Relation when() {
+  public @NonNull Relation when() {
     return Relation.valueOf(fixedWeekdayRelativeToFixed.getWhen().name());
   }
 
@@ -47,7 +49,7 @@ class JaxbFixedWeekdayRelativeToFixed implements FixedWeekdayRelativeToFixedHoli
    * @return {@inheritDoc}
    */
   @Override
-  public FixedHolidayConfiguration day() {
+  public @NonNull FixedHolidayConfiguration day() {
     return new JaxbFixed(fixedWeekdayRelativeToFixed.getDay());
   }
 
@@ -57,7 +59,7 @@ class JaxbFixedWeekdayRelativeToFixed implements FixedWeekdayRelativeToFixedHoli
    * @return {@inheritDoc}
    */
   @Override
-  public Occurrence which() {
+  public @NonNull Occurrence which() {
     return Occurrence.valueOf(fixedWeekdayRelativeToFixed.getWhich().name());
   }
 
@@ -67,7 +69,7 @@ class JaxbFixedWeekdayRelativeToFixed implements FixedWeekdayRelativeToFixedHoli
    * @return {@inheritDoc}
    */
   @Override
-  public String descriptionPropertiesKey() {
+  public @NonNull String descriptionPropertiesKey() {
     return fixedWeekdayRelativeToFixed.getDescriptionPropertiesKey();
   }
 
@@ -77,7 +79,7 @@ class JaxbFixedWeekdayRelativeToFixed implements FixedWeekdayRelativeToFixedHoli
    * @return {@inheritDoc}
    */
   @Override
-  public HolidayType holidayType() {
+  public @NonNull HolidayType holidayType() {
     return fixedWeekdayRelativeToFixed.getLocalizedType() == null
       ? HolidayType.PUBLIC_HOLIDAY
       : HolidayType.valueOf(fixedWeekdayRelativeToFixed.getLocalizedType().name());
@@ -89,7 +91,7 @@ class JaxbFixedWeekdayRelativeToFixed implements FixedWeekdayRelativeToFixedHoli
    * @return {@inheritDoc}
    */
   @Override
-  public Year validFrom() {
+  public @Nullable Year validFrom() {
     return fixedWeekdayRelativeToFixed.getValidFrom() == null
       ? null
       : Year.of(fixedWeekdayRelativeToFixed.getValidFrom());
@@ -101,7 +103,7 @@ class JaxbFixedWeekdayRelativeToFixed implements FixedWeekdayRelativeToFixedHoli
    * @return {@inheritDoc}
    */
   @Override
-  public Year validTo() {
+  public @Nullable Year validTo() {
     return fixedWeekdayRelativeToFixed.getValidTo() == null
       ? null
       : Year.of(fixedWeekdayRelativeToFixed.getValidTo());
@@ -113,7 +115,7 @@ class JaxbFixedWeekdayRelativeToFixed implements FixedWeekdayRelativeToFixedHoli
    * @return {@inheritDoc}
    */
   @Override
-  public YearCycle cycle() {
+  public @NonNull YearCycle cycle() {
     return fixedWeekdayRelativeToFixed.getEvery() == null
       ? YearCycle.EVERY_YEAR
       : YearCycle.valueOf(fixedWeekdayRelativeToFixed.getEvery().name());

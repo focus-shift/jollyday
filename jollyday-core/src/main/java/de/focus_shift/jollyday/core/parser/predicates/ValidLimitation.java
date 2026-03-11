@@ -1,6 +1,7 @@
 package de.focus_shift.jollyday.core.parser.predicates;
 
 import de.focus_shift.jollyday.core.spi.Limited;
+import org.jspecify.annotations.NonNull;
 
 import java.time.Year;
 import java.util.function.Predicate;
@@ -13,7 +14,7 @@ public class ValidLimitation implements Predicate<Limited> {
 
   private final Year year;
 
-  public ValidLimitation(final Year year) {
+  public ValidLimitation(@NonNull final Year year) {
     this.year = year;
   }
 
@@ -24,8 +25,7 @@ public class ValidLimitation implements Predicate<Limited> {
    * @return is valid for the year.
    */
   @Override
-  public boolean test(final Limited limited) {
+  public boolean test(@NonNull final Limited limited) {
     return new ValidFromTo(year).and(new ValidCycle(year)).test(limited);
   }
-
 }

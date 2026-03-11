@@ -1,5 +1,7 @@
 package de.focus_shift.jollyday.core.spi;
 
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
 import org.threeten.extra.Days;
 
 import java.time.DayOfWeek;
@@ -32,27 +34,27 @@ public interface RelativeToFixedHolidayConfiguration extends Described, Limited 
    *
    * @return the weekday of the new holiday
    */
-  DayOfWeek weekday();
+  @Nullable DayOfWeek weekday();
 
   /**
    * Describes the days in relation to the fixed date of the new holiday
    *
    * @return the days to shift
    */
-  Days days();
+  @Nullable Days days();
 
   /**
    * Describes the relation of the new holiday to the fixed date
    *
    * @return the relation
    */
-  Relation when();
+  @Nullable Relation when();
 
   /**
    * Describes the anchor date for the relation of the new holiday
    *
    * @return anchor date for the new holiday
    */
-  FixedHolidayConfiguration date();
+  @NonNull FixedHolidayConfiguration date();
 
 }

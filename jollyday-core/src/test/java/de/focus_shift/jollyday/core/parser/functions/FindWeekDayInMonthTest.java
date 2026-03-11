@@ -3,6 +3,8 @@ package de.focus_shift.jollyday.core.parser.functions;
 import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.FixedWeekdayInMonthHolidayConfiguration;
 import de.focus_shift.jollyday.core.spi.Occurrence;
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
@@ -28,42 +30,42 @@ class FindWeekDayInMonthTest {
 
     final FixedWeekdayInMonthHolidayConfiguration fixedWeekdayInMonth = new FixedWeekdayInMonthHolidayConfiguration() {
       @Override
-      public Year validFrom() {
+      public @Nullable Year validFrom() {
         return null;
       }
 
       @Override
-      public Year validTo() {
+      public @Nullable Year validTo() {
         return null;
       }
 
       @Override
-      public YearCycle cycle() {
+      public @NonNull YearCycle cycle() {
         return null;
       }
 
       @Override
-      public DayOfWeek weekday() {
+      public @NonNull DayOfWeek weekday() {
         return DayOfWeek.MONDAY;
       }
 
       @Override
-      public Month month() {
+      public @NonNull Month month() {
         return MARCH;
       }
 
       @Override
-      public Occurrence which() {
+      public @NonNull Occurrence which() {
         return occurrance;
       }
 
       @Override
-      public String descriptionPropertiesKey() {
+      public @NonNull String descriptionPropertiesKey() {
         return null;
       }
 
       @Override
-      public HolidayType holidayType() {
+      public @NonNull HolidayType holidayType() {
         return null;
       }
     };

@@ -8,6 +8,8 @@ import de.focus_shift.jollyday.core.caching.Cache;
 import de.focus_shift.jollyday.core.parser.HolidayParser;
 import de.focus_shift.jollyday.core.spi.HolidayCalendarConfiguration;
 import de.focus_shift.jollyday.core.spi.HolidayConfigurations;
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -88,7 +90,7 @@ public class DefaultHolidayManager extends HolidayManager {
    * with the configuration from initialization.
    */
   @Override
-  public Set<Holiday> getHolidays(final Year year, final String... args) {
+  public @NonNull Set<Holiday> getHolidays(@NonNull final Year year, @NonNull final String... args) {
 
     final StringBuilder keyBuilder = new StringBuilder();
     keyBuilder.append(year);
@@ -98,13 +100,14 @@ public class DefaultHolidayManager extends HolidayManager {
     }
 
     final Cache.ValueHandler<Set<Holiday>> holidayValueHandler = new Cache.ValueHandler<>() {
+
       @Override
-      public String getKey() {
+      public @NonNull String getKey() {
         return keyBuilder.toString();
       }
 
       @Override
-      public Set<Holiday> createValue() {
+      public @NonNull Set<Holiday> createValue() {
         final Set<Holiday> holidaySet = Collections.synchronizedSet(new HashSet<>());
         getHolidays(year, holidayCalendarConfiguration, holidaySet, args);
         return holidaySet;
@@ -118,7 +121,7 @@ public class DefaultHolidayManager extends HolidayManager {
    * {@inheritDoc}
    */
   @Override
-  public Set<Holiday> getHolidays(final Year year, final HolidayType holidayType, final String... args) {
+  public @NonNull Set<Holiday> getHolidays(@NonNull final Year year, @NonNull final HolidayType holidayType, @NonNull final String... args) {
     return getHolidays(year, args).stream()
       .filter(holiday -> holiday.getType().equals(holidayType))
       .collect(toSet());
@@ -132,7 +135,7 @@ public class DefaultHolidayManager extends HolidayManager {
    * interval.
    */
   @Override
-  public Set<Holiday> getHolidays(final LocalDate startDateInclusive, final LocalDate endDateInclusive, final String... args) {
+  public @NonNull Set<Holiday> getHolidays(@NonNull final LocalDate startDateInclusive, @NonNull final LocalDate endDateInclusive, @NonNull final String... args) {
     Objects.requireNonNull(startDateInclusive, "startDateInclusive is null");
     Objects.requireNonNull(endDateInclusive, "endDateInclusive is null");
 
@@ -148,7 +151,7 @@ public class DefaultHolidayManager extends HolidayManager {
    * {@inheritDoc}
    */
   @Override
-  public Set<Holiday> getHolidays(final LocalDate startDateInclusive, final LocalDate endDateInclusive, final HolidayType holidayType, final String... args) {
+  public @NonNull Set<Holiday> getHolidays(@NonNull final LocalDate startDateInclusive, @NonNull final LocalDate endDateInclusive, @NonNull final HolidayType holidayType, @NonNull final String... args) {
     return getHolidays(startDateInclusive, endDateInclusive, args).stream()
       .filter(holiday -> holiday.getType().equals(holidayType))
       .collect(toSet());
@@ -163,7 +166,7 @@ public class DefaultHolidayManager extends HolidayManager {
    * getHolidays()/isHoliday().
    */
   @Override
-  public CalendarHierarchy getCalendarHierarchy() {
+  public @NonNull CalendarHierarchy getCalendarHierarchy() {
     return createConfigurationHierarchy(holidayCalendarConfiguration, null);
   }
 
@@ -176,7 +179,7 @@ public class DefaultHolidayManager extends HolidayManager {
    * @param holidaySet    the set of holidays
    * @param args          the arguments to descend down the configuration tree
    */
-  private void getHolidays(final Year year, final HolidayCalendarConfiguration configuration, final Set<Holiday> holidaySet, final String... args) {
+  private void getHolidays(@NonNull final Year year, @NonNull final HolidayCalendarConfiguration configuration, @NonNull final Set<Holiday> holidaySet, @NonNull final String... args) {
     if (LOG.isDebugEnabled()) {
       LOG.debug("Adding holidays for {}", configuration.description());
     }
@@ -200,7 +203,7 @@ public class DefaultHolidayManager extends HolidayManager {
    * @param holidays the set to put the holidays into
    * @param config   the holiday configuration
    */
-  private void parseHolidays(final Year year, final Set<Holiday> holidays, final HolidayConfigurations config) {
+  private void parseHolidays(@NonNull final Year year, @NonNull final Set<Holiday> holidays, @NonNull final HolidayConfigurations config) {
     getParsers(config).stream()
       .map(holidayParser -> holidayParser.parse(year, config))
       .flatMap(Collection::stream)
@@ -214,7 +217,7 @@ public class DefaultHolidayManager extends HolidayManager {
    * @param config the holiday configuration
    * @return A list of parsers to for this configuration.
    */
-  private Collection<HolidayParser> getParsers(final HolidayConfigurations config) {
+  private @NonNull Collection<HolidayParser> getParsers(@NonNull final HolidayConfigurations config) {
     final Collection<HolidayParser> parsers = new HashSet<>();
     try {
       final Method[] declaredMethods = config.getClass().getDeclaredMethods();
@@ -223,10 +226,7 @@ public class DefaultHolidayManager extends HolidayManager {
           final Type actualTypeArgument = parameterizedType.getActualTypeArguments()[0];
           final List<?> holidays = (List<?>) declaredMethod.invoke(config);
           if (!holidays.isEmpty()) {
-            final HolidayParser holidayParser = instantiateParser(actualTypeArgument.getTypeName());
-            if (holidayParser != null) {
-              parsers.add(holidayParser);
-            }
+            parsers.add(instantiateParser(actualTypeArgument.getTypeName()));
           }
         }
       }
@@ -236,16 +236,16 @@ public class DefaultHolidayManager extends HolidayManager {
     return parsers;
   }
 
-  private HolidayParser instantiateParser(final String className) {
+  private @NonNull HolidayParser instantiateParser(@NonNull final String className) {
 
     final Cache.ValueHandler<HolidayParser> parserValueHandler = new Cache.ValueHandler<>() {
       @Override
-      public String getKey() {
+      public @NonNull String getKey() {
         return className;
       }
 
       @Override
-      public HolidayParser createValue() {
+      public @NonNull HolidayParser createValue() {
         final String parserClassName = getManagerParameter().getProperty(PARSER_IMPL_PREFIX + className);
         if (parserClassName != null) {
 
@@ -256,7 +256,7 @@ public class DefaultHolidayManager extends HolidayManager {
           }
         }
 
-        return null;
+        throw new IllegalStateException("Cannot create parsers. No parser implementation defined for class " + className + " in properties with key " + PARSER_IMPL_PREFIX + className);
       }
     };
 
@@ -269,7 +269,7 @@ public class DefaultHolidayManager extends HolidayManager {
    * @param configuration Configuration to log hierarchy for.
    * @param level         an int.
    */
-  protected static void logHierarchy(final HolidayCalendarConfiguration configuration, final int level) {
+  protected static void logHierarchy(@NonNull final HolidayCalendarConfiguration configuration, final int level) {
     if (LOG.isDebugEnabled()) {
       final StringBuilder space = new StringBuilder();
       space.append("-".repeat(level));
@@ -288,7 +288,7 @@ public class DefaultHolidayManager extends HolidayManager {
    *
    * @param configuration a {@link HolidayCalendarConfiguration} object.
    */
-  protected static void validateConfigurationHierarchy(final HolidayCalendarConfiguration configuration) {
+  protected static void validateConfigurationHierarchy(@NonNull final HolidayCalendarConfiguration configuration) {
     final Map<String, Integer> hierarchyMap = new HashMap<>();
     final Set<String> multipleHierarchies = new HashSet<>();
 
@@ -328,7 +328,7 @@ public class DefaultHolidayManager extends HolidayManager {
    * @param calendarHierarchy the calendars hierarchy
    * @return configuration hierarchy
    */
-  private static CalendarHierarchy createConfigurationHierarchy(final HolidayCalendarConfiguration configuration, final CalendarHierarchy calendarHierarchy) {
+  private static @NonNull CalendarHierarchy createConfigurationHierarchy(@NonNull final HolidayCalendarConfiguration configuration, @Nullable final CalendarHierarchy calendarHierarchy) {
     final CalendarHierarchy hierarchy = new CalendarHierarchy(calendarHierarchy, configuration.hierarchy());
     hierarchy.setFallbackDescription(configuration.description());
     configuration.subConfigurations()

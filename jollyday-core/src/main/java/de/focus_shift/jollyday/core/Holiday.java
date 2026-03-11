@@ -1,5 +1,8 @@
 package de.focus_shift.jollyday.core;
 
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
+
 import java.time.LocalDate;
 import java.util.Locale;
 import java.util.Objects;
@@ -41,7 +44,7 @@ public final class Holiday implements Comparable<Holiday> {
    * @param propertiesKey a {@link java.lang.String} object.
    * @param type          a {@link HolidayType} object.
    */
-  public Holiday(final LocalDate actualDate, final String propertiesKey, final HolidayType type) {
+  public Holiday(@NonNull final LocalDate actualDate, @Nullable final String propertiesKey, @NonNull final HolidayType type) {
     this(actualDate, null, propertiesKey, type);
   }
 
@@ -54,7 +57,7 @@ public final class Holiday implements Comparable<Holiday> {
    * @param propertiesKey a {@link java.lang.String} object.
    * @param type          a {@link HolidayType} object.
    */
-  public Holiday(final LocalDate actualDate, final LocalDate observedDate, final String propertiesKey, final HolidayType type) {
+  public Holiday(@NonNull final LocalDate actualDate, @Nullable final LocalDate observedDate, @Nullable final String propertiesKey, @NonNull final HolidayType type) {
     super();
     this.type = type;
     this.actualDate = actualDate;
@@ -72,7 +75,7 @@ public final class Holiday implements Comparable<Holiday> {
    * </ul>
    *  @return if holiday was moved the observed date, otherwise the actual date
    */
-  public LocalDate getDate() {
+  public @NonNull LocalDate getDate() {
     return Optional.ofNullable(observedDate).orElse(actualDate);
   }
 
@@ -85,7 +88,7 @@ public final class Holiday implements Comparable<Holiday> {
    *
    * @return the actual holiday date
    */
-  public LocalDate getActualDate() {
+  public @NonNull LocalDate getActualDate() {
     return actualDate;
   }
 
@@ -96,7 +99,7 @@ public final class Holiday implements Comparable<Holiday> {
    *
    * @return the observed holiday date as optional
    */
-  public Optional<LocalDate> getObservedDate() {
+  public @NonNull Optional<LocalDate> getObservedDate() {
     return Optional.ofNullable(observedDate);
   }
 
@@ -107,7 +110,7 @@ public final class Holiday implements Comparable<Holiday> {
    *
    * @return the holidays properties key
    */
-  public String getPropertiesKey() {
+  public @NonNull String getPropertiesKey() {
     return propertiesKey;
   }
 
@@ -116,7 +119,7 @@ public final class Holiday implements Comparable<Holiday> {
    *
    * @return Description for this holiday
    */
-  public String getDescription() {
+  public @NonNull String getDescription() {
     return getHolidayDescription(getPropertiesKey());
   }
 
@@ -126,7 +129,7 @@ public final class Holiday implements Comparable<Holiday> {
    * @param locale a {@link java.util.Locale} object.
    * @return Description for this holiday
    */
-  public String getDescription(Locale locale) {
+  public @NonNull String getDescription(Locale locale) {
     return getHolidayDescription(locale, getPropertiesKey());
   }
 
@@ -160,7 +163,7 @@ public final class Holiday implements Comparable<Holiday> {
    *
    * @return the type holiday
    */
-  public HolidayType getType() {
+  public @NonNull HolidayType getType() {
     return type;
   }
 

@@ -1,5 +1,7 @@
 package de.focus_shift.jollyday.core.caching;
 
+import org.jspecify.annotations.NonNull;
+
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -18,7 +20,7 @@ public class Cache<V> {
    * @param valueHandler which creates the key and the value if necessary
    * @return the eventually cached value, otherwise the newly created via {@link ValueHandler#createValue}
    */
-  public V get(final ValueHandler<V> valueHandler) {
+  public @NonNull V get(@NonNull final ValueHandler<V> valueHandler) {
     return cachingMap.computeIfAbsent(valueHandler.getKey(), key -> valueHandler.createValue());
   }
 
@@ -31,8 +33,8 @@ public class Cache<V> {
 
   public interface ValueHandler<V> {
 
-    String getKey();
+    @NonNull String getKey();
 
-    V createValue();
+    @NonNull V createValue();
   }
 }

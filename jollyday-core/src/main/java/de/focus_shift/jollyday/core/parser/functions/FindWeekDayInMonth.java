@@ -1,6 +1,7 @@
 package de.focus_shift.jollyday.core.parser.functions;
 
 import de.focus_shift.jollyday.core.spi.FixedWeekdayInMonthHolidayConfiguration;
+import org.jspecify.annotations.NonNull;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;
@@ -15,12 +16,12 @@ public class FindWeekDayInMonth implements Function<FixedWeekdayInMonthHolidayCo
 
   private final Year year;
 
-  public FindWeekDayInMonth(final Year year) {
+  public FindWeekDayInMonth(@ NonNull final Year year) {
     this.year = year;
   }
 
   @Override
-  public LocalDate apply(final FixedWeekdayInMonthHolidayConfiguration fixedWeekdayInMonth) {
+  public @NonNull LocalDate apply(@NonNull final FixedWeekdayInMonthHolidayConfiguration fixedWeekdayInMonth) {
     final LocalDate date = LocalDate.of(year.getValue(), fixedWeekdayInMonth.month(), 1);
     final DayOfWeek weekday = fixedWeekdayInMonth.weekday();
 

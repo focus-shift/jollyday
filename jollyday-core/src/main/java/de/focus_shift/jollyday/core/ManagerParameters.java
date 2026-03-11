@@ -2,6 +2,8 @@ package de.focus_shift.jollyday.core;
 
 import de.focus_shift.jollyday.core.parameter.CalendarPartManagerParameter;
 import de.focus_shift.jollyday.core.parameter.UrlManagerParameter;
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
 
 import java.net.URL;
 import java.util.Locale;
@@ -21,7 +23,7 @@ public final class ManagerParameters {
    * @param calendarPart The calendar part to create parameters from.
    * @return an {@link CalendarPartManagerParameter} based on {@link ManagerParameter}
    */
-  public static ManagerParameter create(final String calendarPart) {
+  public static @NonNull ManagerParameter create(@NonNull final String calendarPart) {
     return create(calendarPart, null);
   }
 
@@ -35,7 +37,7 @@ public final class ManagerParameters {
    * @param properties   Additional properties
    * @return an {@link CalendarPartManagerParameter} based on {@link ManagerParameter}
    */
-  public static ManagerParameter create(final String calendarPart, final Properties properties) {
+  public static @NonNull ManagerParameter create(@Nullable final String calendarPart, @Nullable final Properties properties) {
     return new CalendarPartManagerParameter(prepareCalendarName(calendarPart), properties);
   }
 
@@ -48,7 +50,7 @@ public final class ManagerParameters {
    * @param locale The locale to create parameters from.
    * @return an {@link CalendarPartManagerParameter} based on {@link ManagerParameter}
    */
-  public static ManagerParameter create(final Locale locale) {
+  public static @NonNull ManagerParameter create(@NonNull final Locale locale) {
     return create(locale, null);
   }
 
@@ -62,7 +64,7 @@ public final class ManagerParameters {
    * @param properties Additional properties
    * @return an {@link CalendarPartManagerParameter} based on {@link ManagerParameter}
    */
-  public static ManagerParameter create(final Locale locale, final Properties properties) {
+  public static @NonNull ManagerParameter create(@NonNull final Locale locale, @Nullable final Properties properties) {
     final String calendarPart = locale.getCountry().isEmpty() ? locale.getLanguage() : locale.getCountry();
     return create(calendarPart, properties);
   }
@@ -76,7 +78,7 @@ public final class ManagerParameters {
    * @param calendar A specific {@link HolidayCalendar} to create parameters from.
    * @return an {@link CalendarPartManagerParameter} based on {@link ManagerParameter}
    */
-  public static ManagerParameter create(final HolidayCalendar calendar) {
+  public static @NonNull ManagerParameter create(@NonNull final HolidayCalendar calendar) {
     return create(calendar, null);
   }
 
@@ -91,7 +93,7 @@ public final class ManagerParameters {
    * @param properties Additional properties
    * @return an {@link CalendarPartManagerParameter} based on {@link ManagerParameter}
    */
-  public static ManagerParameter create(final HolidayCalendar calendar, final Properties properties) {
+  public static @NonNull ManagerParameter create(@NonNull final HolidayCalendar calendar, @Nullable final Properties properties) {
     return create(calendar.getId(), properties);
   }
 
@@ -108,7 +110,7 @@ public final class ManagerParameters {
    * @param calendarFileUrl A specific calendar file {@link URL} to create parameters from.
    * @return an {@link CalendarPartManagerParameter} based on {@link ManagerParameter}
    */
-  public static ManagerParameter create(final URL calendarFileUrl) {
+  public static @NonNull ManagerParameter create(@NonNull final URL calendarFileUrl) {
     return create(calendarFileUrl, null);
   }
 
@@ -126,11 +128,11 @@ public final class ManagerParameters {
    * @param properties      Additional properties
    * @return an {@link CalendarPartManagerParameter} based on {@link ManagerParameter}
    */
-  public static ManagerParameter create(final URL calendarFileUrl, final Properties properties) {
+  public static @NonNull ManagerParameter create(@NonNull final URL calendarFileUrl, @Nullable final Properties properties) {
     return new UrlManagerParameter(calendarFileUrl, properties);
   }
 
-  private static String prepareCalendarName(final String calendar) {
+  private static @NonNull String prepareCalendarName(@Nullable final String calendar) {
     if (calendar == null || calendar.trim().isEmpty()) {
       return Locale.getDefault().getCountry().toLowerCase();
     } else {

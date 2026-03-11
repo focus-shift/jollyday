@@ -2,6 +2,7 @@ package de.focus_shift.jollyday.core.datasource;
 
 import de.focus_shift.jollyday.core.spi.HolidayCalendarConfigurationService;
 import de.focus_shift.jollyday.core.support.LazyServiceLoaderCache;
+import org.jspecify.annotations.NonNull;
 
 import java.util.List;
 
@@ -14,15 +15,15 @@ public class ConfigurationServiceManager {
 
   private final LazyServiceLoaderCache<HolidayCalendarConfigurationService> configurationServiceCache;
 
-  public ConfigurationServiceManager(LazyServiceLoaderCache<HolidayCalendarConfigurationService> configurationServiceCache) {
+  public ConfigurationServiceManager(@NonNull final LazyServiceLoaderCache<HolidayCalendarConfigurationService> configurationServiceCache) {
     this.configurationServiceCache = configurationServiceCache;
   }
 
-  public HolidayCalendarConfigurationService getConfigurationService(final String configurationServiceImplClassName) {
+  public @NonNull HolidayCalendarConfigurationService getConfigurationService(@NonNull final String configurationServiceImplClassName) {
     return instantiateDataSource(configurationServiceImplClassName);
   }
 
-  private HolidayCalendarConfigurationService instantiateDataSource(final String configurationServiceImplClassName) {
+  private @NonNull HolidayCalendarConfigurationService instantiateDataSource(@NonNull final String configurationServiceImplClassName) {
 
     final List<HolidayCalendarConfigurationService> services = configurationServiceCache.getServices();
 

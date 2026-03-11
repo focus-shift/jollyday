@@ -1,5 +1,7 @@
 package de.focus_shift.jollyday.core.spi;
 
+import org.jspecify.annotations.NonNull;
+
 import java.time.DayOfWeek;
 import java.util.List;
 
@@ -15,7 +17,7 @@ public interface Movable {
    *
    * @return the configured {@link MovingCondition} for this holiday
    */
-  List<MovingCondition> conditions();
+  @NonNull List<MovingCondition> conditions();
 
   /**
    * Describes how a holiday, that implements the {@link Movable} interface,
@@ -44,20 +46,20 @@ public interface Movable {
      *
      * @return the weekday on which the holiday will be moved to another weekday
      */
-    DayOfWeek weekday();
+    @NonNull DayOfWeek weekday();
 
     /**
      * Represents if the holiday will be moved to the previous or next weekday.
      *
      * @return the rule in which direction (next or previous) the holiday will be moved.
      */
-    With with();
+    @NonNull With with();
 
     /**
      * Represents the substitution weekday for the holiday
      *
      * @return the weekday the holiday will be moved to
      */
-    DayOfWeek substitute();
+    @NonNull DayOfWeek substitute();
   }
 }

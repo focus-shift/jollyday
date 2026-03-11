@@ -1,5 +1,6 @@
 package de.focus_shift.jollyday.core.configuration;
 
+import org.jspecify.annotations.NonNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -36,7 +37,7 @@ class URLConfigurationProvider implements ConfigurationProvider {
    * property 'config.urls'.
    */
   @Override
-  public Properties getProperties() {
+  public @NonNull Properties getProperties() {
     final Properties properties = new Properties();
 
     final String configURLs = System.getProperty(CONFIG_URLS_PROPERTY);
@@ -52,7 +53,7 @@ class URLConfigurationProvider implements ConfigurationProvider {
     return properties;
   }
 
-  private void readPropertiesFromURL(final Properties properties, final URL url) {
+  private void readPropertiesFromURL(@NonNull final Properties properties, @NonNull final URL url) {
     try (final InputStream inputStream = url.openStream()) {
       properties.load(inputStream);
     } catch (IOException e) {
@@ -60,7 +61,7 @@ class URLConfigurationProvider implements ConfigurationProvider {
     }
   }
 
-  private URL createUrl(final String stringUrl) {
+  private URL createUrl(@NonNull final String stringUrl) {
     URL url = null;
     try {
       url = new URL(stringUrl);

@@ -3,6 +3,8 @@ package de.focus_shift.jollyday.jackson;
 import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.IslamicHolidayConfiguration;
 import de.focus_shift.jollyday.jackson.mapping.IslamicHoliday;
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
 
 import java.time.Year;
 import java.util.List;
@@ -24,7 +26,7 @@ class JacksonIslamicHoliday implements IslamicHolidayConfiguration {
    * @return {@inheritDoc}
    */
   @Override
-  public IslamicHolidayType type() {
+  public @NonNull IslamicHolidayType type() {
     return IslamicHolidayType.valueOf(islamicHoliday.getType().name());
   }
 
@@ -34,7 +36,7 @@ class JacksonIslamicHoliday implements IslamicHolidayConfiguration {
    * @return {@inheritDoc}
    */
   @Override
-  public String descriptionPropertiesKey() {
+  public @NonNull String descriptionPropertiesKey() {
     return islamicHoliday.getDescriptionPropertiesKey() == null
       ? descriptionPropertiesKeyPrefix() + descriptionPropertiesKeyPrefixSeparator() + type()
       : islamicHoliday.getDescriptionPropertiesKey();
@@ -46,7 +48,7 @@ class JacksonIslamicHoliday implements IslamicHolidayConfiguration {
    * @return {@inheritDoc}
    */
   @Override
-  public HolidayType holidayType() {
+  public @NonNull HolidayType holidayType() {
     return islamicHoliday.getLocalizedType() == null
       ? HolidayType.PUBLIC_HOLIDAY
       : HolidayType.valueOf(islamicHoliday.getLocalizedType().name());
@@ -58,7 +60,7 @@ class JacksonIslamicHoliday implements IslamicHolidayConfiguration {
    * @return {@inheritDoc}
    */
   @Override
-  public Year validFrom() {
+  public @Nullable Year validFrom() {
     return islamicHoliday.getValidFrom() == null
       ? null
       : Year.of(islamicHoliday.getValidFrom());
@@ -70,7 +72,7 @@ class JacksonIslamicHoliday implements IslamicHolidayConfiguration {
    * @return {@inheritDoc}
    */
   @Override
-  public Year validTo() {
+  public @Nullable Year validTo() {
     return islamicHoliday.getValidTo() == null
       ? null
       : Year.of(islamicHoliday.getValidTo());
@@ -82,7 +84,7 @@ class JacksonIslamicHoliday implements IslamicHolidayConfiguration {
    * @return {@inheritDoc}
    */
   @Override
-  public YearCycle cycle() {
+  public @NonNull YearCycle cycle() {
     return islamicHoliday.getEvery() == null
       ? YearCycle.EVERY_YEAR
       : YearCycle.valueOf(islamicHoliday.getEvery().name());
@@ -94,7 +96,7 @@ class JacksonIslamicHoliday implements IslamicHolidayConfiguration {
    * @return {@inheritDoc}
    */
   @Override
-  public List<MovingCondition> conditions() {
+  public @NonNull List<MovingCondition> conditions() {
     return islamicHoliday.getMovingCondition().stream()
       .map(JacksonMovingCondition::new)
       .map(MovingCondition.class::cast)

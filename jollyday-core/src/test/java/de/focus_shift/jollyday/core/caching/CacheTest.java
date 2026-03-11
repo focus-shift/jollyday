@@ -1,5 +1,6 @@
 package de.focus_shift.jollyday.core.caching;
 
+import org.jspecify.annotations.NonNull;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -12,12 +13,12 @@ class CacheTest {
 
     final Cache.ValueHandler<String> valueHandler = new Cache.ValueHandler<>() {
       @Override
-      public String getKey() {
+      public @NonNull String getKey() {
         return "key";
       }
 
       @Override
-      public String createValue() {
+      public @NonNull String createValue() {
         callCounter[0]++;
         return "value";
       }
@@ -35,12 +36,12 @@ class CacheTest {
 
     final Cache.ValueHandler<String> valueHandler = new Cache.ValueHandler<>() {
       @Override
-      public String getKey() {
+      public @NonNull String getKey() {
         return String.valueOf(callCounter[1]++);
       }
 
       @Override
-      public String createValue() {
+      public @NonNull String createValue() {
         return "value" + callCounter[0]++;
       }
     };
@@ -57,12 +58,12 @@ class CacheTest {
 
     final Cache.ValueHandler<String> valueHandler = new Cache.ValueHandler<>() {
       @Override
-      public String getKey() {
+      public @NonNull String getKey() {
         return "key";
       }
 
       @Override
-      public String createValue() {
+      public @NonNull String createValue() {
         callCounter[0]++;
         return "value";
       }

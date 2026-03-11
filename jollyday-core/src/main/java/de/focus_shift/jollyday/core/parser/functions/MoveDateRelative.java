@@ -2,6 +2,7 @@ package de.focus_shift.jollyday.core.parser.functions;
 
 import de.focus_shift.jollyday.core.parser.predicates.ValidMovingCondition;
 import de.focus_shift.jollyday.core.spi.Movable;
+import org.jspecify.annotations.NonNull;
 
 import java.time.LocalDate;
 import java.util.Optional;
@@ -15,12 +16,12 @@ public class MoveDateRelative implements Function<Movable, Optional<LocalDate>> 
 
   private final LocalDate date;
 
-  public MoveDateRelative(final LocalDate date) {
+  public MoveDateRelative(@NonNull final LocalDate date) {
     this.date = date;
   }
 
   @Override
-  public Optional<LocalDate> apply(final Movable movable) {
+  public @NonNull Optional<LocalDate> apply(@NonNull final Movable movable) {
     return movable.conditions().stream()
       .filter(new ValidMovingCondition(date))
       .map(condition -> date.with(condition.with() == NEXT ? nextOrSame(condition.weekday()) : previousOrSame(condition.weekday())))

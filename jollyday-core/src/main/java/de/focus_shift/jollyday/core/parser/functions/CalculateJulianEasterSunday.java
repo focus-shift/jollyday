@@ -1,5 +1,6 @@
 package de.focus_shift.jollyday.core.parser.functions;
 
+import org.jspecify.annotations.NonNull;
 import org.threeten.extra.chrono.JulianChronology;
 
 import java.time.LocalDate;
@@ -9,7 +10,7 @@ import java.util.function.Function;
 public class CalculateJulianEasterSunday implements Function<Year, LocalDate> {
 
   @Override
-  public LocalDate apply(final Year year) {
+  public @NonNull LocalDate apply(@NonNull final Year year) {
     int a, b, c, d, e;
     int x, month, day;
     a = year.getValue() % 4;

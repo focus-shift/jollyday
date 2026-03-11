@@ -1,5 +1,7 @@
 package de.focus_shift.jollyday.core.configuration;
 
+import org.jspecify.annotations.NonNull;
+
 import java.util.Properties;
 
 /**
@@ -10,5 +12,5 @@ public interface ConfigurationProvider {
   /**
    * @return the configuration properties for jollyday.
    */
-  Properties getProperties();
+  @NonNull Properties getProperties();
 }

@@ -1,5 +1,8 @@
 package de.focus_shift.jollyday.core.util;
 
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
+
 import java.net.URL;
 import java.util.Collections;
 import java.util.Enumeration;
@@ -57,7 +60,7 @@ public final class ResourceUtil {
    * @param key a {@link java.lang.String} object.
    * @return holiday description using default locale.
    */
-  public static String getHolidayDescription(final String key) {
+  public static @NonNull String getHolidayDescription(@NonNull final String key) {
     return getHolidayDescription(Locale.getDefault(), key);
   }
 
@@ -68,7 +71,7 @@ public final class ResourceUtil {
    * @param key    a {@link java.lang.String} object.
    * @return holiday description using the provided locale.
    */
-  public static String getHolidayDescription(final Locale locale, final String key) {
+  public static @NonNull String getHolidayDescription(@NonNull final Locale locale, @NonNull final String key) {
     return getDescription(HOLIDAY_PROPERTY_PREFIX + "." + key, getHolidayDescriptions(locale));
   }
 
@@ -80,7 +83,7 @@ public final class ResourceUtil {
    * @param key a {@link java.lang.String} object.
    * @return the description
    */
-  public static String getCountryDescription(final String key) {
+  public static @NonNull String getCountryDescription(@NonNull final String key) {
     return getCountryDescription(Locale.getDefault(), key);
   }
 
@@ -91,7 +94,7 @@ public final class ResourceUtil {
    * @param key    a {@link java.lang.String} object.
    * @return Description text
    */
-  public static String getCountryDescription(final Locale locale, final String key) {
+  public static @NonNull String getCountryDescription(@NonNull final Locale locale, @Nullable final String key) {
     if (key != null) {
       return getDescription(COUNTRY_PROPERTY_PREFIX + "." + key.toLowerCase(), getCountryDescriptions(locale));
     }
@@ -106,7 +109,7 @@ public final class ResourceUtil {
    * @param bundle the bundle to get the description
    * @return description the description behind the key
    */
-  private static String getDescription(final String key, final ResourceBundle bundle) {
+  private static @NonNull String getDescription(@NonNull final String key, @NonNull final ResourceBundle bundle) {
     if (!bundle.containsKey(key)) {
       return UNDEFINED;
     }
@@ -120,7 +123,7 @@ public final class ResourceUtil {
    * @param locale Locale to retrieve the descriptions for.
    * @return ResourceBundle containing the descriptions for the locale.
    */
-  private static ResourceBundle getHolidayDescriptions(final Locale locale) {
+  private static @NonNull ResourceBundle getHolidayDescriptions(@NonNull final Locale locale) {
     return getResourceBundle(locale, HOLIDAY_DESCRIPTION_CACHE, HOLIDAY_DESCRIPTIONS_FILE_PREFIX);
   }
 
@@ -131,7 +134,7 @@ public final class ResourceUtil {
    * @param locale Locale to retrieve the descriptions for.
    * @return ResourceBundle containing the descriptions for the locale.
    */
-  private static ResourceBundle getCountryDescriptions(final Locale locale) {
+  private static @NonNull ResourceBundle getCountryDescriptions(@NonNull final Locale locale) {
     return getResourceBundle(locale, COUNTRY_DESCRIPTIONS_CACHE, COUNTRY_DESCRIPTIONS_FILE_PREFIX);
   }
 
@@ -141,7 +144,7 @@ public final class ResourceUtil {
    * @param locale Locale to retrieve the descriptions for.
    * @return ResourceBundle containing the descriptions for the locale.
    */
-  private static ResourceBundle getResourceBundle(final Locale locale, final Map<Locale, ResourceBundle> resourceCache, final String filePrefix) {
+  private static @NonNull ResourceBundle getResourceBundle(@NonNull final Locale locale, @NonNull final Map<Locale, ResourceBundle> resourceCache, @NonNull final String filePrefix) {
     return resourceCache.computeIfAbsent(locale, givenLocale -> getBundle(filePrefix, givenLocale, ClassLoadingUtil.getClassloader()));
   }
 
@@ -151,7 +154,7 @@ public final class ResourceUtil {
    * @param resourceName the name/path of the resource to load
    * @return the URL to the resource
    */
-  public static Optional<URL> getResource(final String resourceName) {
+  public static @NonNull Optional<URL> getResource(@NonNull final String resourceName) {
     return getResource(resourceName, false);
   }
 
@@ -163,12 +166,12 @@ public final class ResourceUtil {
    *                        otherwise the protocol is irrelevant
    * @return the optional URL to the resource
    */
-  public static Optional<URL> getResource(final String resourceName, final boolean searchOnlyInJar) {
+  public static @NonNull Optional<URL> getResource(@NonNull final String resourceName, final boolean searchOnlyInJar) {
     final Stream<URL> stream = getResources(resourceName).stream();
     return searchOnlyInJar ? stream.filter(resource -> resource.getProtocol().equals("jar")).findFirst() : stream.findFirst();
   }
 
-  private static List<URL> getResources(final String resourceName) {
+  private static @NonNull List<URL> getResources(@NonNull final String resourceName) {
     final Enumeration<URL> resourcesEnum;
 
     try {

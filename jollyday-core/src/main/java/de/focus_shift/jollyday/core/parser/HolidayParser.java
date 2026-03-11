@@ -2,6 +2,7 @@ package de.focus_shift.jollyday.core.parser;
 
 import de.focus_shift.jollyday.core.Holiday;
 import de.focus_shift.jollyday.core.spi.HolidayConfigurations;
+import org.jspecify.annotations.NonNull;
 
 import java.time.Year;
 import java.util.List;
@@ -16,5 +17,5 @@ public interface HolidayParser {
    * @param config the {@link HolidayConfigurations} config to use for parsing
    * @return the list of holidays
    */
-  List<Holiday> parse(final Year year, final HolidayConfigurations config);
+  @NonNull List<Holiday> parse(@NonNull final Year year, @NonNull final HolidayConfigurations config);
 }

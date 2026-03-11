@@ -1,5 +1,6 @@
 package de.focus_shift.jollyday.core.parameter;
 
+import org.jspecify.annotations.NonNull;
 import org.junit.jupiter.api.Test;
 
 import java.net.URL;
@@ -66,17 +67,17 @@ class BaseManagerParameterTest {
     }
 
     @Override
-    public String createCacheKey() {
+    public @NonNull String createCacheKey() {
       return "cacheKey";
     }
 
     @Override
-    public String getDisplayName() {
+    public @NonNull String getDisplayName() {
       return "displayName";
     }
 
     @Override
-    public URL createResourceUrl() {
+    public @NonNull URL createResourceUrl() {
       return mock(URL.class);
     }
   }

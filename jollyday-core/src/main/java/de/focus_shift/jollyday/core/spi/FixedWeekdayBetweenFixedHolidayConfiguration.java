@@ -1,5 +1,7 @@
 package de.focus_shift.jollyday.core.spi;
 
+import org.jspecify.annotations.NonNull;
+
 import java.time.DayOfWeek;
 
 /**
@@ -19,25 +21,25 @@ import java.time.DayOfWeek;
  */
 public interface FixedWeekdayBetweenFixedHolidayConfiguration extends Described, Limited {
 
-  /**
+   /**
    * Start of the date range in which the weekday occurs
    *
    * @return the {@link FixedHolidayConfiguration} start date of the date range
    */
-  FixedHolidayConfiguration from();
+  @NonNull FixedHolidayConfiguration from();
 
   /**
    * End of the date range in which the weekday occurs
    *
    * @return the {@link FixedHolidayConfiguration} end date of the date range
    */
-  FixedHolidayConfiguration to();
+  @NonNull FixedHolidayConfiguration to();
 
   /**
    * The weekday which represents the holiday between from and to
    *
    * @return the weekday for the holiday
    */
-  DayOfWeek weekday();
+  @NonNull DayOfWeek weekday();
 
 }

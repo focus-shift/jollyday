@@ -1,5 +1,7 @@
 package de.focus_shift.jollyday.core;
 
+import org.jspecify.annotations.NonNull;
+
 import java.util.Locale;
 import java.util.Set;
 
@@ -45,7 +47,7 @@ public enum HolidayCalendar {
    *
    * @return a {@link java.lang.String} object.
    */
-  public String getId() {
+  public @NonNull String getId() {
     return id;
   }
 
@@ -54,7 +56,7 @@ public enum HolidayCalendar {
    *
    * @return Set of supported calendar codes.
    */
-  public static Set<String> getSupportedCalendarCodes() {
+  public static @NonNull Set<String> getSupportedCalendarCodes() {
     return stream(HolidayCalendar.values())
       .map(HolidayCalendar::getId)
       .collect(toUnmodifiableSet());

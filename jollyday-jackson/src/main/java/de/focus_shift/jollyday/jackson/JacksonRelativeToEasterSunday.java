@@ -4,6 +4,8 @@ import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.RelativeToEasterSundayHolidayConfiguration;
 import de.focus_shift.jollyday.jackson.mapping.ChronologyType;
 import de.focus_shift.jollyday.jackson.mapping.RelativeToEasterSunday;
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
 import org.threeten.extra.Days;
 import org.threeten.extra.chrono.JulianChronology;
 
@@ -28,7 +30,7 @@ class JacksonRelativeToEasterSunday implements RelativeToEasterSundayHolidayConf
    * @return {@inheritDoc}
    */
   @Override
-  public String descriptionPropertiesKey() {
+  public @NonNull String descriptionPropertiesKey() {
     return relativeToEasterSunday.getDescriptionPropertiesKey();
   }
 
@@ -38,7 +40,7 @@ class JacksonRelativeToEasterSunday implements RelativeToEasterSundayHolidayConf
    * @return {@inheritDoc}
    */
   @Override
-  public HolidayType holidayType() {
+  public @NonNull HolidayType holidayType() {
     return relativeToEasterSunday.getLocalizedType() == null
       ? HolidayType.PUBLIC_HOLIDAY
       : HolidayType.valueOf(relativeToEasterSunday.getLocalizedType().name());
@@ -50,7 +52,7 @@ class JacksonRelativeToEasterSunday implements RelativeToEasterSundayHolidayConf
    * @return {@inheritDoc}
    */
   @Override
-  public Year validFrom() {
+  public @Nullable Year validFrom() {
     return relativeToEasterSunday.getValidFrom() == null
       ? null
       : Year.of(relativeToEasterSunday.getValidFrom());
@@ -62,7 +64,7 @@ class JacksonRelativeToEasterSunday implements RelativeToEasterSundayHolidayConf
    * @return {@inheritDoc}
    */
   @Override
-  public Year validTo() {
+  public @Nullable Year validTo() {
     return relativeToEasterSunday.getValidTo() == null
       ? null
       : Year.of(relativeToEasterSunday.getValidTo());
@@ -74,7 +76,7 @@ class JacksonRelativeToEasterSunday implements RelativeToEasterSundayHolidayConf
    * @return {@inheritDoc}
    */
   @Override
-  public YearCycle cycle() {
+  public @NonNull YearCycle cycle() {
     return relativeToEasterSunday.getEvery() == null
       ? YearCycle.EVERY_YEAR
       : YearCycle.valueOf(relativeToEasterSunday.getEvery().name());
@@ -86,7 +88,7 @@ class JacksonRelativeToEasterSunday implements RelativeToEasterSundayHolidayConf
    * @return {@inheritDoc}
    */
   @Override
-  public Chronology chronology() {
+  public @NonNull Chronology chronology() {
     return relativeToEasterSunday.getChronology() == ChronologyType.JULIAN ? JulianChronology.INSTANCE : IsoChronology.INSTANCE;
   }
 
@@ -96,7 +98,7 @@ class JacksonRelativeToEasterSunday implements RelativeToEasterSundayHolidayConf
    * @return {@inheritDoc}
    */
   @Override
-  public Days days() {
+  public @NonNull Days days() {
     return Days.of(relativeToEasterSunday.getDays());
   }
 }

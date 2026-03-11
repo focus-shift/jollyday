@@ -3,6 +3,8 @@ package de.focus_shift.jollyday.jaxb;
 import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.FixedHolidayConfiguration;
 import de.focus_shift.jollyday.jaxb.mapping.Fixed;
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
 
 import java.time.Month;
 import java.time.MonthDay;
@@ -26,7 +28,7 @@ class JaxbFixed implements FixedHolidayConfiguration {
    * @return {@inheritDoc}
    */
   @Override
-  public MonthDay day() {
+  public @NonNull MonthDay day() {
     return MonthDay.of(Month.valueOf(fixed.getMonth().value()), fixed.getDay());
   }
 
@@ -36,7 +38,7 @@ class JaxbFixed implements FixedHolidayConfiguration {
    * @return {@inheritDoc}
    */
   @Override
-  public String descriptionPropertiesKey() {
+  public @NonNull String descriptionPropertiesKey() {
     return fixed.getDescriptionPropertiesKey();
   }
 
@@ -46,7 +48,7 @@ class JaxbFixed implements FixedHolidayConfiguration {
    * @return {@inheritDoc}
    */
   @Override
-  public HolidayType holidayType() {
+  public @NonNull HolidayType holidayType() {
     return fixed.getLocalizedType() == null
       ? HolidayType.PUBLIC_HOLIDAY
       : HolidayType.valueOf(fixed.getLocalizedType().name());
@@ -58,7 +60,7 @@ class JaxbFixed implements FixedHolidayConfiguration {
    * @return {@inheritDoc}
    */
   @Override
-  public Year validFrom() {
+  public @Nullable Year validFrom() {
     return fixed.getValidFrom() == null
       ? null
       : Year.of(fixed.getValidFrom());
@@ -70,7 +72,7 @@ class JaxbFixed implements FixedHolidayConfiguration {
    * @return {@inheritDoc}
    */
   @Override
-  public Year validTo() {
+  public @Nullable Year validTo() {
     return fixed.getValidTo() == null
       ? null
       : Year.of(fixed.getValidTo());
@@ -83,7 +85,7 @@ class JaxbFixed implements FixedHolidayConfiguration {
    */
 
   @Override
-  public YearCycle cycle() {
+  public @NonNull YearCycle cycle() {
     return fixed.getEvery() == null
       ? YearCycle.EVERY_YEAR
       : YearCycle.valueOf(fixed.getEvery().name());
@@ -95,7 +97,7 @@ class JaxbFixed implements FixedHolidayConfiguration {
    * @return {@inheritDoc}
    */
   @Override
-  public List<MovingCondition> conditions() {
+  public @NonNull List<MovingCondition> conditions() {
     return fixed.getMovingCondition().stream()
       .map(JaxbMovingCondition::new)
       .map(MovingCondition.class::cast)

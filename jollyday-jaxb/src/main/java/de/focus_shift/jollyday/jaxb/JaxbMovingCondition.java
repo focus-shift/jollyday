@@ -1,6 +1,7 @@
 package de.focus_shift.jollyday.jaxb;
 
 import de.focus_shift.jollyday.core.spi.Movable;
+import org.jspecify.annotations.NonNull;
 
 import java.time.DayOfWeek;
 
@@ -21,7 +22,7 @@ class JaxbMovingCondition implements Movable.MovingCondition {
    * @return {@inheritDoc}
    */
   @Override
-  public DayOfWeek substitute() {
+  public @NonNull DayOfWeek substitute() {
     return DayOfWeek.valueOf(movingCondition.getSubstitute().name());
   }
 
@@ -31,7 +32,7 @@ class JaxbMovingCondition implements Movable.MovingCondition {
    * @return {@inheritDoc}
    */
   @Override
-  public With with() {
+  public @NonNull With with() {
     return With.valueOf(movingCondition.getWith().name());
   }
 
@@ -41,7 +42,7 @@ class JaxbMovingCondition implements Movable.MovingCondition {
    * @return {@inheritDoc}
    */
   @Override
-  public DayOfWeek weekday() {
+  public @NonNull DayOfWeek weekday() {
     return DayOfWeek.valueOf(movingCondition.getWeekday().name());
   }
 }

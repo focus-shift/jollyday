@@ -1,5 +1,7 @@
 package de.focus_shift.jollyday.core.parser.functions;
 
+import org.jspecify.annotations.NonNull;
+
 import java.time.LocalDate;
 import java.time.Year;
 import java.util.function.Function;
@@ -10,7 +12,7 @@ import static java.time.Month.MARCH;
 public class CalculateGregorianEasterSunday implements Function<Year, LocalDate> {
 
   @Override
-  public LocalDate apply(final Year year) {
+  public @NonNull LocalDate apply(@NonNull final Year year) {
     int a, b, c, d, e, f, g, h, i, j, k, l;
     int x, month, day;
     a = year.getValue() % 19;

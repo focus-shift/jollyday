@@ -1,6 +1,7 @@
 package de.focus_shift.jollyday.core.parser.functions;
 
 import de.focus_shift.jollyday.core.spi.Movable;
+import org.jspecify.annotations.NonNull;
 import org.junit.jupiter.api.Test;
 
 import java.time.DayOfWeek;
@@ -24,17 +25,17 @@ class MoveDateRelativeTest {
 
     final Movable.MovingCondition movingCondition = new Movable.MovingCondition() {
       @Override
-      public DayOfWeek weekday() {
+      public @NonNull DayOfWeek weekday() {
         return DayOfWeek.SUNDAY;
       }
 
       @Override
-      public With with() {
+      public @NonNull With with() {
         return With.NEXT;
       }
 
       @Override
-      public DayOfWeek substitute() {
+      public @NonNull DayOfWeek substitute() {
         return DayOfWeek.WEDNESDAY;
       }
     };
@@ -50,17 +51,17 @@ class MoveDateRelativeTest {
 
     final Movable.MovingCondition movingCondition = new Movable.MovingCondition() {
       @Override
-      public DayOfWeek substitute() {
+      public @NonNull DayOfWeek substitute() {
         return DayOfWeek.WEDNESDAY;
       }
 
       @Override
-      public With with() {
+      public @NonNull With with() {
         return With.PREVIOUS;
       }
 
       @Override
-      public DayOfWeek weekday() {
+      public @NonNull DayOfWeek weekday() {
         return DayOfWeek.SUNDAY;
       }
     };
@@ -76,17 +77,17 @@ class MoveDateRelativeTest {
 
     final Movable.MovingCondition movingCondition = new Movable.MovingCondition() {
       @Override
-      public DayOfWeek substitute() {
+      public @NonNull DayOfWeek substitute() {
         return null;
       }
 
       @Override
-      public With with() {
+      public @NonNull With with() {
         return null;
       }
 
       @Override
-      public DayOfWeek weekday() {
+      public @NonNull DayOfWeek weekday() {
         return null;
       }
     };
@@ -102,17 +103,17 @@ class MoveDateRelativeTest {
 
     final Movable.MovingCondition movingCondition = new Movable.MovingCondition() {
       @Override
-      public DayOfWeek weekday() {
+      public @NonNull DayOfWeek weekday() {
         return DayOfWeek.SUNDAY;
       }
 
       @Override
-      public With with() {
+      public @NonNull With with() {
         return With.NEXT;
       }
 
       @Override
-      public DayOfWeek substitute() {
+      public @NonNull DayOfWeek substitute() {
         return DayOfWeek.WEDNESDAY;
       }
     };

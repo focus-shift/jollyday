@@ -1,5 +1,8 @@
 package de.focus_shift.jollyday.core;
 
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
+
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
@@ -24,7 +27,7 @@ public class CalendarHierarchy {
    * @param parent a {@link CalendarHierarchy} object.
    * @param id     a {@link java.lang.String} object.
    */
-  public CalendarHierarchy(final CalendarHierarchy parent, final String id) {
+  public CalendarHierarchy(@Nullable final CalendarHierarchy parent, @NonNull final String id) {
     this.parent = parent;
     this.id = id;
   }
@@ -36,7 +39,7 @@ public class CalendarHierarchy {
    *
    * @return the id
    */
-  public String getId() {
+  public @NonNull String getId() {
     return id;
   }
 
@@ -45,7 +48,7 @@ public class CalendarHierarchy {
    *
    * @return the description
    */
-  public String getDescription() {
+  public @NonNull String getDescription() {
     return receiveFallbackDescription(getCountryDescription(getPropertiesKey()));
   }
 
@@ -55,7 +58,7 @@ public class CalendarHierarchy {
    * @param locale Locale to return the description text for.
    * @return Description text
    */
-  public String getDescription(Locale locale) {
+  public @NonNull String getDescription(Locale locale) {
     return receiveFallbackDescription(getCountryDescription(locale, getPropertiesKey()));
   }
 
@@ -65,7 +68,7 @@ public class CalendarHierarchy {
    *
    * @return the properties key to retrieve the description from the localized resource bundle
    */
-  private String getPropertiesKey() {
+  private @NonNull String getPropertiesKey() {
     if (parent != null) {
       return parent.getPropertiesKey() + "." + getId();
     }
@@ -108,7 +111,7 @@ public class CalendarHierarchy {
    *
    * @return the children
    */
-  public Map<String, CalendarHierarchy> getChildren() {
+  public @NonNull Map<String, CalendarHierarchy> getChildren() {
     return children;
   }
 
@@ -119,7 +122,7 @@ public class CalendarHierarchy {
     this.fallbackDescription = description;
   }
 
-  private String receiveFallbackDescription(final String description) {
+  private @NonNull String receiveFallbackDescription(final String description) {
     if (UNDEFINED.equals(description) && fallbackDescription != null) {
       return fallbackDescription;
     }

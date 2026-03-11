@@ -1,5 +1,7 @@
 package de.focus_shift.jollyday.core.spi;
 
+import org.jspecify.annotations.NonNull;
+
 import java.time.MonthDay;
 
 /**
@@ -24,6 +26,6 @@ public interface FixedHolidayConfiguration extends Described, Movable, Limited {
    *
    * @return month and day on which this holiday will occur
    */
-  MonthDay day();
+  @NonNull MonthDay day();
 
 }
