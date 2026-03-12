@@ -8,7 +8,6 @@ module de.focus_shift.jollyday.core {
   opens descriptions;
   opens holidays;
 
-  requires java.xml;
   requires org.slf4j;
   requires org.threeten.extra;
 
