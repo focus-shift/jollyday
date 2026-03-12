@@ -63,7 +63,7 @@ public class CalendarHierarchy {
    * Recursively returns the properties key to retrieve the description from
    * the localized resource bundle.
    *
-   * @return
+   * @return the properties key to retrieve the description from the localized resource bundle
    */
   private String getPropertiesKey() {
     if (parent != null) {

@@ -16,7 +16,7 @@ import de.focus_shift.jollyday.jackson.mapping.Holidays;
 import java.util.List;
 
 /**
- * see {@link }
+ * see {@link HolidayConfigurations}
  */
 public class JacksonHolidays implements HolidayConfigurations {
 
