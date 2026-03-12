@@ -152,7 +152,7 @@ public final class Holiday implements Comparable<Holiday> {
 
   @Override
   public String toString() {
-    return getDate().toString() + " (" + getDescription() + ")";
+    return getDate() + " (" + getDescription() + ")";
   }
 
   /**
