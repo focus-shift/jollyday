@@ -1,6 +1,7 @@
 package de.focus_shift.jollyday.core.parser.functions;
 
 import de.focus_shift.jollyday.core.spi.FixedHolidayConfiguration;
+import org.jspecify.annotations.NonNull;
 
 import java.time.LocalDate;
 import java.time.Year;
@@ -10,12 +11,12 @@ public class FixedToLocalDate implements Function<FixedHolidayConfiguration, Loc
 
   private final Year year;
 
-  public FixedToLocalDate(final Year year) {
+  public FixedToLocalDate(@NonNull final Year year) {
     this.year = year;
   }
 
   @Override
-  public LocalDate apply(final FixedHolidayConfiguration fixed) {
+  public @NonNull LocalDate apply(@NonNull final FixedHolidayConfiguration fixed) {
     return fixed.day().atYear(year.getValue());
   }
 }

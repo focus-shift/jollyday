@@ -4,6 +4,8 @@ package de.focus_shift.jollyday.core.parser.functions;
 import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.FixedHolidayConfiguration;
 import de.focus_shift.jollyday.core.spi.FixedWeekdayBetweenFixedHolidayConfiguration;
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -42,42 +44,42 @@ class FindWeekDayBetweenTest {
     return new FixedWeekdayBetweenFixedHolidayConfiguration() {
 
       @Override
-      public FixedHolidayConfiguration from() {
+      public @NonNull FixedHolidayConfiguration from() {
         return null;
       }
 
       @Override
-      public FixedHolidayConfiguration to() {
+      public @NonNull FixedHolidayConfiguration to() {
         return null;
       }
 
       @Override
-      public DayOfWeek weekday() {
+      public @NonNull DayOfWeek weekday() {
         return dayOfWeek;
       }
 
       @Override
-      public String descriptionPropertiesKey() {
+      public @NonNull String descriptionPropertiesKey() {
         return "";
       }
 
       @Override
-      public HolidayType holidayType() {
+      public @NonNull HolidayType holidayType() {
         return null;
       }
 
       @Override
-      public Year validFrom() {
+      public @Nullable Year validFrom() {
         return null;
       }
 
       @Override
-      public Year validTo() {
+      public @Nullable Year validTo() {
         return null;
       }
 
       @Override
-      public YearCycle cycle() {
+      public @NonNull YearCycle cycle() {
         return null;
       }
     };

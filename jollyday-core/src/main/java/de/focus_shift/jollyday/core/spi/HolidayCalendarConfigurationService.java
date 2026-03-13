@@ -1,6 +1,7 @@
 package de.focus_shift.jollyday.core.spi;
 
 import de.focus_shift.jollyday.core.ManagerParameter;
+import org.jspecify.annotations.NonNull;
 
 /**
  * This interface provides the way to receive the serialized holiday configuration
@@ -16,6 +17,6 @@ public interface HolidayCalendarConfigurationService {
    * @param parameter to identify the country or special calendar configuration
    * @return the holiday configuration of a country
    */
-  HolidayCalendarConfiguration getHolidayCalendarConfiguration(ManagerParameter parameter);
+  @NonNull HolidayCalendarConfiguration getHolidayCalendarConfiguration(ManagerParameter parameter);
 
 }

@@ -3,6 +3,7 @@ package de.focus_shift.jollyday.core.parser.functions;
 import de.focus_shift.jollyday.core.Holiday;
 import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.Described;
+import org.jspecify.annotations.NonNull;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
@@ -17,12 +18,12 @@ class CreateHolidayTest {
 
     final Described described = new Described() {
       @Override
-      public String descriptionPropertiesKey() {
+      public @NonNull String descriptionPropertiesKey() {
         return "propertiesKey";
       }
 
       @Override
-      public HolidayType holidayType() {
+      public @NonNull HolidayType holidayType() {
         return HolidayType.PUBLIC_HOLIDAY;
       }
     };

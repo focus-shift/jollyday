@@ -2,6 +2,7 @@ package de.focus_shift.jollyday.core.configuration;
 
 import de.focus_shift.jollyday.core.ManagerParameter;
 import de.focus_shift.jollyday.core.ManagerParameters;
+import org.jspecify.annotations.NonNull;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -78,7 +79,7 @@ class ConfigurationProviderManagerTest {
     }
 
     @Override
-    public Properties getProperties() {
+    public @NonNull Properties getProperties() {
       return properties;
     }
   }

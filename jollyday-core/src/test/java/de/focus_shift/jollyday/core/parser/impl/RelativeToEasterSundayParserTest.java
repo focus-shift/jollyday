@@ -4,6 +4,8 @@ import de.focus_shift.jollyday.core.Holiday;
 import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.HolidayConfigurations;
 import de.focus_shift.jollyday.core.spi.RelativeToEasterSundayHolidayConfiguration;
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -95,37 +97,37 @@ class RelativeToEasterSundayParserTest {
     return new RelativeToEasterSundayHolidayConfiguration() {
 
       @Override
-      public Chronology chronology() {
+      public @NonNull Chronology chronology() {
         return chronology;
       }
 
       @Override
-      public Days days() {
+      public @NonNull Days days() {
         return days;
       }
 
       @Override
-      public String descriptionPropertiesKey() {
+      public @NonNull String descriptionPropertiesKey() {
         return "";
       }
 
       @Override
-      public HolidayType holidayType() {
+      public @NonNull HolidayType holidayType() {
         return PUBLIC_HOLIDAY;
       }
 
       @Override
-      public Year validFrom() {
+      public @Nullable Year validFrom() {
         return validFrom;
       }
 
       @Override
-      public Year validTo() {
+      public @Nullable Year validTo() {
         return validTo;
       }
 
       @Override
-      public YearCycle cycle() {
+      public @NonNull YearCycle cycle() {
         return EVERY_YEAR;
       }
     };

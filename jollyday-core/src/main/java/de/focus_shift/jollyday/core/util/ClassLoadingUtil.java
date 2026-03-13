@@ -1,6 +1,7 @@
 package de.focus_shift.jollyday.core.util;
 
 
+import org.jspecify.annotations.NonNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -26,7 +27,7 @@ public final class ClassLoadingUtil {
    * @return a {@link java.lang.Class} object.
    * @throws java.lang.ClassNotFoundException if any.
    */
-  public static Class<?> loadClass(final String className) throws ClassNotFoundException {
+  public static @NonNull Class<?> loadClass(@NonNull final String className) throws ClassNotFoundException {
     try {
       return Class.forName(className, true, getClassloader());
     } catch (Exception e) {
@@ -41,7 +42,7 @@ public final class ClassLoadingUtil {
    * @return the current classloader
    * @see Class#getClassLoader()
    */
-  public static ClassLoader getClassloader() {
+  public static @NonNull ClassLoader getClassloader() {
     return ClassLoadingUtil.class.getClassLoader();
   }
 }

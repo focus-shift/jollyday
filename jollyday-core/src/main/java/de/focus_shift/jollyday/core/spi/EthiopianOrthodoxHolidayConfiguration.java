@@ -1,5 +1,7 @@
 package de.focus_shift.jollyday.core.spi;
 
+import org.jspecify.annotations.NonNull;
+
 /**
  * Represents the configuration of an ethiopian orthodox holiday that can be
  *
@@ -25,10 +27,10 @@ public interface EthiopianOrthodoxHolidayConfiguration extends Described, Limite
    *
    * @return the type of the ethiopian orthodox holiday
    */
-  EthiopianOrthodoxHolidayType type();
+  @NonNull EthiopianOrthodoxHolidayType type();
 
   @Override
-  default String descriptionPropertiesKeyPrefix() {
+  default @NonNull String descriptionPropertiesKeyPrefix() {
     return "ethiopian.orthodox";
   }
 }

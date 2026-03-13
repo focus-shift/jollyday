@@ -14,6 +14,7 @@ module de.focus_shift.jollyday.jaxb {
   requires java.xml;
   requires org.slf4j;
   requires org.threeten.extra;
+  requires org.jspecify;
 
   exports de.focus_shift.jollyday.jaxb to
     de.focus_shift.jollyday.core;

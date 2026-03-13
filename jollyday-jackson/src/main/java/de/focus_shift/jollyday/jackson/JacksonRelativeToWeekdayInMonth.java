@@ -5,6 +5,8 @@ import de.focus_shift.jollyday.core.spi.FixedWeekdayInMonthHolidayConfiguration;
 import de.focus_shift.jollyday.core.spi.Relation;
 import de.focus_shift.jollyday.core.spi.RelativeToWeekdayInMonthHolidayConfiguration;
 import de.focus_shift.jollyday.jackson.mapping.RelativeToWeekdayInMonth;
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
 
 import java.time.DayOfWeek;
 import java.time.Year;
@@ -26,7 +28,7 @@ class JacksonRelativeToWeekdayInMonth implements RelativeToWeekdayInMonthHoliday
    * @return {@inheritDoc}
    */
   @Override
-  public FixedWeekdayInMonthHolidayConfiguration weekdayInMonth() {
+  public @NonNull FixedWeekdayInMonthHolidayConfiguration weekdayInMonth() {
     return new JacksonFixedWeekdayInMonth(relativeToWeekdayInMonth.getFixedWeekday());
   }
 
@@ -36,7 +38,7 @@ class JacksonRelativeToWeekdayInMonth implements RelativeToWeekdayInMonthHoliday
    * @return {@inheritDoc}
    */
   @Override
-  public DayOfWeek weekday() {
+  public @NonNull DayOfWeek weekday() {
     return DayOfWeek.valueOf(relativeToWeekdayInMonth.getWeekday().name());
   }
 
@@ -46,7 +48,7 @@ class JacksonRelativeToWeekdayInMonth implements RelativeToWeekdayInMonthHoliday
    * @return {@inheritDoc}
    */
   @Override
-  public Relation when() {
+  public @NonNull Relation when() {
     return Relation.valueOf(relativeToWeekdayInMonth.getWhen().name());
   }
 
@@ -56,7 +58,7 @@ class JacksonRelativeToWeekdayInMonth implements RelativeToWeekdayInMonthHoliday
    * @return {@inheritDoc}
    */
   @Override
-  public String descriptionPropertiesKey() {
+  public @NonNull String descriptionPropertiesKey() {
     return relativeToWeekdayInMonth.getDescriptionPropertiesKey();
   }
 
@@ -66,7 +68,7 @@ class JacksonRelativeToWeekdayInMonth implements RelativeToWeekdayInMonthHoliday
    * @return {@inheritDoc}
    */
   @Override
-  public HolidayType holidayType() {
+  public @NonNull HolidayType holidayType() {
     return relativeToWeekdayInMonth.getLocalizedType() == null
       ? HolidayType.PUBLIC_HOLIDAY
       : HolidayType.valueOf(relativeToWeekdayInMonth.getLocalizedType().name());
@@ -78,7 +80,7 @@ class JacksonRelativeToWeekdayInMonth implements RelativeToWeekdayInMonthHoliday
    * @return {@inheritDoc}
    */
   @Override
-  public Year validFrom() {
+  public @Nullable Year validFrom() {
     return relativeToWeekdayInMonth.getValidFrom() == null
       ? null
       : Year.of(relativeToWeekdayInMonth.getValidFrom());
@@ -90,7 +92,7 @@ class JacksonRelativeToWeekdayInMonth implements RelativeToWeekdayInMonthHoliday
    * @return {@inheritDoc}
    */
   @Override
-  public Year validTo() {
+  public @Nullable Year validTo() {
     return relativeToWeekdayInMonth.getValidTo() == null
       ? null
       : Year.of(relativeToWeekdayInMonth.getValidTo());
@@ -102,7 +104,7 @@ class JacksonRelativeToWeekdayInMonth implements RelativeToWeekdayInMonthHoliday
    * @return {@inheritDoc}
    */
   @Override
-  public YearCycle cycle() {
+  public @NonNull YearCycle cycle() {
     return relativeToWeekdayInMonth.getEvery() == null
       ? YearCycle.EVERY_YEAR
       : YearCycle.valueOf(relativeToWeekdayInMonth.getEvery().name());

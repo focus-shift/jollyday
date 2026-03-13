@@ -1,5 +1,8 @@
 package de.focus_shift.jollyday.core.parameter;
 
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
+
 import java.net.URL;
 import java.util.Properties;
 
@@ -7,28 +10,28 @@ public class UrlManagerParameter extends BaseManagerParameter {
 
   private final URL calendarFileUrl;
 
-  public UrlManagerParameter(final URL calendarFileUrl, final Properties properties) {
+  public UrlManagerParameter(@NonNull final URL calendarFileUrl, @Nullable final Properties properties) {
     super(properties);
     this.calendarFileUrl = calendarFileUrl;
   }
 
   @Override
-  public String createCacheKey() {
+  public @NonNull String createCacheKey() {
     return calendarFileUrl.toString();
   }
 
   @Override
-  public String getDisplayName() {
+  public @NonNull String getDisplayName() {
     return calendarFileUrl.toString();
   }
 
   @Override
-  public URL createResourceUrl() {
+  public @NonNull URL createResourceUrl() {
     return calendarFileUrl;
   }
 
   @Override
-  public String toString() {
+  public @NonNull String toString() {
     return getClass().getSimpleName() + " - " + this.calendarFileUrl.toString();
   }
 }

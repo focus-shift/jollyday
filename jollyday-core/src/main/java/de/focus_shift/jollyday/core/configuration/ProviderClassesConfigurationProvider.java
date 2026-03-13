@@ -1,6 +1,7 @@
 package de.focus_shift.jollyday.core.configuration;
 
 import de.focus_shift.jollyday.core.util.ClassLoadingUtil;
+import org.jspecify.annotations.NonNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -29,7 +30,7 @@ class ProviderClassesConfigurationProvider implements ConfigurationProvider {
    * property 'config.urls'.
    */
   @Override
-  public Properties getProperties() {
+  public @NonNull Properties getProperties() {
 
     final Properties properties = new Properties();
 

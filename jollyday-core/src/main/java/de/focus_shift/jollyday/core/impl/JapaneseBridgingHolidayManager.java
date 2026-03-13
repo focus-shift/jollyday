@@ -1,6 +1,7 @@
 package de.focus_shift.jollyday.core.impl;
 
 import de.focus_shift.jollyday.core.Holiday;
+import org.jspecify.annotations.NonNull;
 
 import java.time.LocalDate;
 import java.time.Year;
@@ -29,7 +30,7 @@ public class JapaneseBridgingHolidayManager extends DefaultHolidayManager {
    * between each other than this day is also a holiday.
    */
   @Override
-  public Set<Holiday> getHolidays(final Year year, final String... args) {
+  public @NonNull Set<Holiday> getHolidays(@NonNull final Year year, @NonNull final String... args) {
     final Set<Holiday> holidays = super.getHolidays(year, args);
 
     final Set<Holiday> bridgingHolidays = new HashSet<>();

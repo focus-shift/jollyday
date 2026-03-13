@@ -1,5 +1,7 @@
 package de.focus_shift.jollyday.core.spi;
 
+import org.jspecify.annotations.NonNull;
+
 /**
  * Represents the configuration of an islamic holiday that can be
  *
@@ -38,10 +40,10 @@ public interface IslamicHolidayConfiguration extends Described, Limited, Movable
    *
    * @return the type of the islamic holiday
    */
-  IslamicHolidayType type();
+  @NonNull IslamicHolidayType type();
 
   @Override
-  default String descriptionPropertiesKeyPrefix() {
+  default @NonNull String descriptionPropertiesKeyPrefix() {
     return "islamic";
   }
 }

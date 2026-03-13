@@ -8,6 +8,8 @@ import de.focus_shift.jollyday.core.spi.Limited;
 import de.focus_shift.jollyday.core.spi.Occurrence;
 import de.focus_shift.jollyday.core.spi.Relation;
 import de.focus_shift.jollyday.core.spi.RelativeToWeekdayInMonthHolidayConfiguration;
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -110,42 +112,42 @@ class RelativeToWeekdayInMonthParserTest {
     return new RelativeToWeekdayInMonthHolidayConfiguration() {
 
       @Override
-      public DayOfWeek weekday() {
+      public @NonNull DayOfWeek weekday() {
         return dayOfWeek;
       }
 
       @Override
-      public Relation when() {
+      public @NonNull Relation when() {
         return relation;
       }
 
       @Override
-      public FixedWeekdayInMonthHolidayConfiguration weekdayInMonth() {
+      public @NonNull FixedWeekdayInMonthHolidayConfiguration weekdayInMonth() {
         return fixedWeekdayInMonth;
       }
 
       @Override
-      public String descriptionPropertiesKey() {
+      public @NonNull String descriptionPropertiesKey() {
         return "";
       }
 
       @Override
-      public HolidayType holidayType() {
+      public @NonNull HolidayType holidayType() {
         return PUBLIC_HOLIDAY;
       }
 
       @Override
-      public Year validFrom() {
+      public @Nullable Year validFrom() {
         return validFrom;
       }
 
       @Override
-      public Year validTo() {
+      public @Nullable Year validTo() {
         return validTo;
       }
 
       @Override
-      public YearCycle cycle() {
+      public @NonNull YearCycle cycle() {
         return EVERY_YEAR;
       }
     };
@@ -158,42 +160,42 @@ class RelativeToWeekdayInMonthParserTest {
   ) {
     return new FixedWeekdayInMonthHolidayConfiguration() {
       @Override
-      public DayOfWeek weekday() {
+      public @NonNull DayOfWeek weekday() {
         return dayOfWeek;
       }
 
       @Override
-      public Month month() {
+      public @NonNull Month month() {
         return month;
       }
 
       @Override
-      public Occurrence which() {
+      public @NonNull Occurrence which() {
         return occurrence;
       }
 
       @Override
-      public String descriptionPropertiesKey() {
+      public @NonNull String descriptionPropertiesKey() {
         return "";
       }
 
       @Override
-      public HolidayType holidayType() {
+      public @NonNull HolidayType holidayType() {
         return null;
       }
 
       @Override
-      public Year validFrom() {
+      public @Nullable Year validFrom() {
         return null;
       }
 
       @Override
-      public Year validTo() {
+      public @Nullable Year validTo() {
         return null;
       }
 
       @Override
-      public Limited.YearCycle cycle() {
+      public Limited.@NonNull YearCycle cycle() {
         return null;
       }
     };

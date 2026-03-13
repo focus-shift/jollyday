@@ -1,5 +1,7 @@
 package de.focus_shift.jollyday.core.spi;
 
+import org.jspecify.annotations.NonNull;
+
 import java.time.DayOfWeek;
 
 /**
@@ -27,27 +29,27 @@ public interface FixedWeekdayRelativeToFixedHolidayConfiguration extends Describ
    *
    * @return the fixed holiday
    */
-  FixedHolidayConfiguration day();
+  @NonNull FixedHolidayConfiguration day();
 
   /**
    * Describes, based on the anchor (day), on which occurrence the new holiday will occur
    *
    * @return the occurrence, like the first
    */
-  Occurrence which();
+  @NonNull Occurrence which();
 
   /**
    * Describes, based on the anchor (day), on which weekday the new holiday will occur
    *
    * @return the weekday
    */
-  DayOfWeek weekday();
+  @NonNull DayOfWeek weekday();
 
   /**
    * Describes, based on the anchor (day), the relation like before, after, ... the new holiday will occur
    *
    * @return the relation to the anchor
    */
-  Relation when();
+  @NonNull Relation when();
 
 }

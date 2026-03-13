@@ -3,6 +3,7 @@ package de.focus_shift.jollyday.jackson;
 import de.focus_shift.jollyday.core.spi.HolidayCalendarConfiguration;
 import de.focus_shift.jollyday.core.spi.HolidayConfigurations;
 import de.focus_shift.jollyday.jackson.mapping.Configuration;
+import org.jspecify.annotations.NonNull;
 
 import java.util.stream.Stream;
 
@@ -23,7 +24,7 @@ public class JacksonConfiguration implements HolidayCalendarConfiguration {
    * @return {@inheritDoc}
    */
   @Override
-  public HolidayConfigurations holidays() {
+  public @NonNull HolidayConfigurations holidays() {
     return new JacksonHolidays(xmlConfiguration.getHolidays());
   }
 
@@ -33,7 +34,7 @@ public class JacksonConfiguration implements HolidayCalendarConfiguration {
    * @return {@inheritDoc}
    */
   @Override
-  public Stream<HolidayCalendarConfiguration> subConfigurations() {
+  public @NonNull Stream<HolidayCalendarConfiguration> subConfigurations() {
     return xmlConfiguration.getSubConfigurations().stream().map(JacksonConfiguration::new);
   }
   /**
@@ -43,7 +44,7 @@ public class JacksonConfiguration implements HolidayCalendarConfiguration {
    */
 
   @Override
-  public String hierarchy() {
+  public @NonNull String hierarchy() {
     return xmlConfiguration.getHierarchy();
   }
 
@@ -53,7 +54,7 @@ public class JacksonConfiguration implements HolidayCalendarConfiguration {
    * @return {@inheritDoc}
    */
   @Override
-  public String description() {
+  public @NonNull String description() {
     return xmlConfiguration.getDescription();
   }
 

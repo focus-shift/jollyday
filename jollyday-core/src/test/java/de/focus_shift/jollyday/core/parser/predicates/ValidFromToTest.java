@@ -4,6 +4,8 @@ import de.focus_shift.jollyday.core.spi.Limited;
 import net.jqwik.api.ForAll;
 import net.jqwik.api.Property;
 import net.jqwik.time.api.constraints.YearRange;
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Test;
 
 import java.time.Year;
@@ -79,17 +81,17 @@ class ValidFromToTest {
   private static Limited getLimited(Year fromYear, Year toYear) {
     return new Limited() {
       @Override
-      public Year validFrom() {
+      public @Nullable Year validFrom() {
         return fromYear;
       }
 
       @Override
-      public Year validTo() {
+      public @Nullable Year validTo() {
         return toYear;
       }
 
       @Override
-      public YearCycle cycle() {
+      public @NonNull YearCycle cycle() {
         return YearCycle.EVERY_YEAR;
       }
     };

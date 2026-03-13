@@ -3,6 +3,8 @@ package de.focus_shift.jollyday.jackson;
 import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.EthiopianOrthodoxHolidayConfiguration;
 import de.focus_shift.jollyday.jackson.mapping.EthiopianOrthodoxHoliday;
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
 
 import java.time.Year;
 
@@ -23,7 +25,7 @@ class JacksonEthiopianOrthodoxHoliday implements EthiopianOrthodoxHolidayConfigu
    * @return {@inheritDoc}
    */
   @Override
-  public String descriptionPropertiesKey() {
+  public @NonNull String descriptionPropertiesKey() {
     return ethiopianOrthodoxHoliday.getDescriptionPropertiesKey() == null
       ? descriptionPropertiesKeyPrefix() + descriptionPropertiesKeyPrefixSeparator() + type()
       : ethiopianOrthodoxHoliday.getDescriptionPropertiesKey();
@@ -35,7 +37,7 @@ class JacksonEthiopianOrthodoxHoliday implements EthiopianOrthodoxHolidayConfigu
    * @return {@inheritDoc}
    */
   @Override
-  public HolidayType holidayType() {
+  public @NonNull HolidayType holidayType() {
     return ethiopianOrthodoxHoliday.getLocalizedType() == null
       ? HolidayType.PUBLIC_HOLIDAY
       : HolidayType.valueOf(ethiopianOrthodoxHoliday.getLocalizedType().name());
@@ -47,7 +49,7 @@ class JacksonEthiopianOrthodoxHoliday implements EthiopianOrthodoxHolidayConfigu
    * @return {@inheritDoc}
    */
   @Override
-  public EthiopianOrthodoxHolidayType type() {
+  public @NonNull EthiopianOrthodoxHolidayType type() {
     return EthiopianOrthodoxHolidayType.valueOf(ethiopianOrthodoxHoliday.getType().name());
   }
 
@@ -57,7 +59,7 @@ class JacksonEthiopianOrthodoxHoliday implements EthiopianOrthodoxHolidayConfigu
    * @return {@inheritDoc}
    */
   @Override
-  public Year validFrom() {
+  public @Nullable Year validFrom() {
     return ethiopianOrthodoxHoliday.getValidFrom() == null
       ? null
       : Year.of(ethiopianOrthodoxHoliday.getValidFrom());
@@ -69,7 +71,7 @@ class JacksonEthiopianOrthodoxHoliday implements EthiopianOrthodoxHolidayConfigu
    * @return {@inheritDoc}
    */
   @Override
-  public Year validTo() {
+  public @Nullable Year validTo() {
     return ethiopianOrthodoxHoliday.getValidTo() == null
       ? null
       : Year.of(ethiopianOrthodoxHoliday.getValidTo());
@@ -81,7 +83,7 @@ class JacksonEthiopianOrthodoxHoliday implements EthiopianOrthodoxHolidayConfigu
    * @return {@inheritDoc}
    */
   @Override
-  public YearCycle cycle() {
+  public @NonNull YearCycle cycle() {
     return ethiopianOrthodoxHoliday.getEvery() == null
       ? YearCycle.EVERY_YEAR
       : YearCycle.valueOf(ethiopianOrthodoxHoliday.getEvery().name());

@@ -8,6 +8,8 @@ import net.jqwik.api.ForAll;
 import net.jqwik.api.Property;
 import net.jqwik.api.Provide;
 import net.jqwik.time.api.constraints.YearRange;
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
 
 import java.time.Year;
 
@@ -21,17 +23,17 @@ class ValidCycleTest {
 
     final Limited limited = new Limited() {
       @Override
-      public Year validFrom() {
+      public @Nullable Year validFrom() {
         return null;
       }
 
       @Override
-      public Year validTo() {
+      public @Nullable Year validTo() {
         return null;
       }
 
       @Override
-      public YearCycle cycle() {
+      public @NonNull YearCycle cycle() {
         return YearCycle.EVERY_YEAR;
       }
     };
@@ -45,17 +47,17 @@ class ValidCycleTest {
 
     final Limited limited = new Limited() {
       @Override
-      public Year validFrom() {
+      public @Nullable Year validFrom() {
         return null;
       }
 
       @Override
-      public Year validTo() {
+      public @Nullable Year validTo() {
         return null;
       }
 
       @Override
-      public YearCycle cycle() {
+      public @NonNull YearCycle cycle() {
         return YearCycle.ODD_YEARS;
       }
     };
@@ -73,17 +75,17 @@ class ValidCycleTest {
 
     final Limited limited = new Limited() {
       @Override
-      public Year validFrom() {
+      public @Nullable Year validFrom() {
         return null;
       }
 
       @Override
-      public Year validTo() {
+      public @Nullable Year validTo() {
         return null;
       }
 
       @Override
-      public YearCycle cycle() {
+      public @NonNull YearCycle cycle() {
         return YearCycle.EVEN_YEARS;
       }
     };
@@ -103,17 +105,17 @@ class ValidCycleTest {
 
     final Limited limited = new Limited() {
       @Override
-      public Year validFrom() {
+      public @Nullable Year validFrom() {
         return Year.of(1901);
       }
 
       @Override
-      public Year validTo() {
+      public @Nullable Year validTo() {
         return null;
       }
 
       @Override
-      public YearCycle cycle() {
+      public @NonNull YearCycle cycle() {
         return cycle;
       }
     };
@@ -129,17 +131,17 @@ class ValidCycleTest {
 
     final Limited limited = new Limited() {
       @Override
-      public Year validFrom() {
+      public @Nullable Year validFrom() {
         return null;
       }
 
       @Override
-      public Year validTo() {
+      public @Nullable Year validTo() {
         return Year.of(2013);
       }
 
       @Override
-      public YearCycle cycle() {
+      public @NonNull YearCycle cycle() {
         return cycle;
       }
     };
@@ -169,17 +171,17 @@ class ValidCycleTest {
 
     final Limited limited = new Limited() {
       @Override
-      public Year validFrom() {
+      public @Nullable Year validFrom() {
         return null;
       }
 
       @Override
-      public Year validTo() {
+      public @Nullable Year validTo() {
         return null;
       }
 
       @Override
-      public YearCycle cycle() {
+      public @NonNull YearCycle cycle() {
         return YearCycle.TWO_YEARS;
       }
     };

@@ -7,6 +7,8 @@ import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBElement;
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.Unmarshaller;
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,7 +32,7 @@ public class JaxbXMLMapper {
    * @param stream a {@link java.io.InputStream} object.
    * @return The unmarshalled configuration.
    */
-  public Configuration unmarshallConfiguration(InputStream stream) {
+  public @NonNull Configuration unmarshallConfiguration(@Nullable final InputStream stream) {
     if (stream == null) {
       throw new IllegalArgumentException("Stream is NULL. Cannot read XML.");
     }
@@ -49,7 +51,7 @@ public class JaxbXMLMapper {
       return createJAXBContext();
     }
 
-    private static JAXBContext createJAXBContext() {
+    private static @NonNull JAXBContext createJAXBContext() {
       JAXBContext ctx = null;
       try {
         ctx = JAXBContext.newInstance(JaxbXMLMapper.PACKAGE, ClassLoadingUtil.getClassloader());

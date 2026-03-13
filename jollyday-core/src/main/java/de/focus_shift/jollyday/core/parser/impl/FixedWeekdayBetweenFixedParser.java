@@ -7,6 +7,7 @@ import de.focus_shift.jollyday.core.parser.functions.FindWeekDayBetween;
 import de.focus_shift.jollyday.core.parser.functions.FixedToLocalDate;
 import de.focus_shift.jollyday.core.parser.predicates.ValidLimitation;
 import de.focus_shift.jollyday.core.spi.HolidayConfigurations;
+import org.jspecify.annotations.NonNull;
 
 import java.time.Year;
 import java.util.List;
@@ -17,7 +18,7 @@ import java.util.List;
 public class FixedWeekdayBetweenFixedParser implements HolidayParser {
 
   @Override
-  public List<Holiday> parse(final Year year, final HolidayConfigurations holidays) {
+  public @NonNull List<Holiday> parse(@NonNull final Year year, @NonNull final HolidayConfigurations holidays) {
     return holidays.fixedWeekdayBetweenFixed().stream()
       .filter(new ValidLimitation(year))
       .map(fwm -> new DescribedDateHolder(fwm,

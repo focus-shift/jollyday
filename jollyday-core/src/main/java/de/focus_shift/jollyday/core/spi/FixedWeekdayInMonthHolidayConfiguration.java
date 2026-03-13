@@ -1,5 +1,7 @@
 package de.focus_shift.jollyday.core.spi;
 
+import org.jspecify.annotations.NonNull;
+
 import java.time.DayOfWeek;
 import java.time.Month;
 
@@ -22,20 +24,20 @@ public interface FixedWeekdayInMonthHolidayConfiguration extends Described, Limi
    *
    * @return the weekday on which the holiday occurs
    */
-  DayOfWeek weekday();
+  @NonNull DayOfWeek weekday();
 
   /**
    * Describes the month in which the holiday will occur.
    *
    * @return the month in which the holiday occurs
    */
-  Month month();
+  @NonNull Month month();
 
   /**
    * Describes on which weekday the holiday occurs, like the first or second
    *
    * @return the occurrence
    */
-  Occurrence which();
+  @NonNull Occurrence which();
 
 }

@@ -4,6 +4,8 @@ import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.FixedHolidayConfiguration;
 import de.focus_shift.jollyday.core.spi.FixedWeekdayBetweenFixedHolidayConfiguration;
 import de.focus_shift.jollyday.jackson.mapping.FixedWeekdayBetweenFixed;
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
 
 import java.time.DayOfWeek;
 import java.time.Year;
@@ -25,7 +27,7 @@ class JacksonFixedWeekdayBetweenFixed implements FixedWeekdayBetweenFixedHoliday
    * @return {@inheritDoc}
    */
   @Override
-  public FixedHolidayConfiguration from() {
+  public @NonNull FixedHolidayConfiguration from() {
     return new JacksonFixed(fixedWeekdayBetweenFixed.getFrom());
   }
 
@@ -35,7 +37,7 @@ class JacksonFixedWeekdayBetweenFixed implements FixedWeekdayBetweenFixedHoliday
    * @return {@inheritDoc}
    */
   @Override
-  public FixedHolidayConfiguration to() {
+  public @NonNull FixedHolidayConfiguration to() {
     return new JacksonFixed(fixedWeekdayBetweenFixed.getTo());
   }
 
@@ -45,7 +47,7 @@ class JacksonFixedWeekdayBetweenFixed implements FixedWeekdayBetweenFixedHoliday
    * @return {@inheritDoc}
    */
   @Override
-  public DayOfWeek weekday() {
+  public @NonNull DayOfWeek weekday() {
     return DayOfWeek.valueOf(fixedWeekdayBetweenFixed.getWeekday().name());
   }
 
@@ -55,7 +57,7 @@ class JacksonFixedWeekdayBetweenFixed implements FixedWeekdayBetweenFixedHoliday
    * @return {@inheritDoc}
    */
   @Override
-  public String descriptionPropertiesKey() {
+  public @NonNull String descriptionPropertiesKey() {
     return fixedWeekdayBetweenFixed.getDescriptionPropertiesKey();
   }
 
@@ -65,7 +67,7 @@ class JacksonFixedWeekdayBetweenFixed implements FixedWeekdayBetweenFixedHoliday
    * @return {@inheritDoc}
    */
   @Override
-  public HolidayType holidayType() {
+  public @NonNull HolidayType holidayType() {
     return fixedWeekdayBetweenFixed.getLocalizedType() == null
       ? HolidayType.PUBLIC_HOLIDAY
       : HolidayType.valueOf(fixedWeekdayBetweenFixed.getLocalizedType().name());
@@ -77,7 +79,7 @@ class JacksonFixedWeekdayBetweenFixed implements FixedWeekdayBetweenFixedHoliday
    * @return {@inheritDoc}
    */
   @Override
-  public Year validFrom() {
+  public @Nullable Year validFrom() {
     return fixedWeekdayBetweenFixed.getValidFrom() == null
       ? null
       : Year.of(fixedWeekdayBetweenFixed.getValidFrom());
@@ -89,7 +91,7 @@ class JacksonFixedWeekdayBetweenFixed implements FixedWeekdayBetweenFixedHoliday
    * @return {@inheritDoc}
    */
   @Override
-  public Year validTo() {
+  public @Nullable Year validTo() {
     return fixedWeekdayBetweenFixed.getValidTo() == null
       ? null
       : Year.of(fixedWeekdayBetweenFixed.getValidTo());
@@ -101,7 +103,7 @@ class JacksonFixedWeekdayBetweenFixed implements FixedWeekdayBetweenFixedHoliday
    * @return {@inheritDoc}
    */
   @Override
-  public YearCycle cycle() {
+  public @NonNull YearCycle cycle() {
     return fixedWeekdayBetweenFixed.getEvery() == null
       ? YearCycle.EVERY_YEAR
       : YearCycle.valueOf(fixedWeekdayBetweenFixed.getEvery().name());

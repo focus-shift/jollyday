@@ -1,5 +1,7 @@
 package de.focus_shift.jollyday.core.spi;
 
+import org.jspecify.annotations.NonNull;
+
 import java.util.stream.Stream;
 
 /**
@@ -19,21 +21,21 @@ public interface HolidayCalendarConfiguration {
    *
    * @return the code of this configuration
    */
-  String hierarchy();
+  @NonNull String hierarchy();
 
   /**
    * Contains further information like the name.
    *
    * @return the description of this configuration
    */
-  String description();
+  @NonNull String description();
 
   /**
    * Contains all holiday configuration of different types like {@link FixedHolidayConfiguration} or {@link ChristianHolidayConfiguration} e.g.
    *
    * @return all holiday configuration for this {@link de.focus_shift.jollyday.core.HolidayCalendar}
    */
-  HolidayConfigurations holidays();
+  @NonNull HolidayConfigurations holidays();
 
   /**
    * Contains the holiday configuration for subdivisions, cities, ... of the main configuration.
@@ -42,6 +44,6 @@ public interface HolidayCalendarConfiguration {
    *
    * @return all configurations for the next hierarchy level like subdivisions or cities.
    */
-  Stream<HolidayCalendarConfiguration> subConfigurations();
+  @NonNull Stream<HolidayCalendarConfiguration> subConfigurations();
 
 }

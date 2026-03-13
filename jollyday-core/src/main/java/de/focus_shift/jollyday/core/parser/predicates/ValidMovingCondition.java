@@ -1,6 +1,7 @@
 package de.focus_shift.jollyday.core.parser.predicates;
 
 import de.focus_shift.jollyday.core.spi.Movable;
+import org.jspecify.annotations.NonNull;
 
 import java.time.LocalDate;
 import java.util.Objects;
@@ -10,7 +11,7 @@ public class ValidMovingCondition implements Predicate<Movable.MovingCondition> 
 
   private final LocalDate date;
 
-  public ValidMovingCondition(final LocalDate date) {
+  public ValidMovingCondition(@NonNull final LocalDate date) {
     this.date = date;
   }
 

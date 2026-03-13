@@ -1,5 +1,7 @@
 package de.focus_shift.jollyday.core.parser.functions;
 
+import org.jspecify.annotations.NonNull;
+
 import java.time.LocalDate;
 import java.time.Year;
 import java.time.chrono.ChronoLocalDate;
@@ -28,7 +30,12 @@ public class CalculateRelativeDatesFromChronologyWithinGregorianYear implements 
   private final Chronology targetChronology;
   private final int relativeShift;
 
-  public CalculateRelativeDatesFromChronologyWithinGregorianYear(final int targetMonth, final int targetDay, final Chronology targetChronology, final int relativeShift) {
+  public CalculateRelativeDatesFromChronologyWithinGregorianYear(
+    final int targetMonth,
+    final int targetDay,
+    @NonNull final Chronology targetChronology,
+    final int relativeShift
+  ) {
     this.targetMonth = targetMonth;
     this.targetDay = targetDay;
     this.targetChronology = targetChronology;
@@ -36,7 +43,7 @@ public class CalculateRelativeDatesFromChronologyWithinGregorianYear implements 
   }
 
   @Override
-  public Stream<LocalDate> apply(final Year gregorianYear) {
+  public @NonNull Stream<LocalDate> apply(@NonNull final Year gregorianYear) {
     final int absoluteShift = Math.abs(relativeShift);
 
     final LocalDate firstGregorianDate = LocalDate.of(gregorianYear.getValue(), JANUARY, 1);

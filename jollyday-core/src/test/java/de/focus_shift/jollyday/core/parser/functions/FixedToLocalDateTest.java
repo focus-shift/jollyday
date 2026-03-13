@@ -2,6 +2,8 @@ package de.focus_shift.jollyday.core.parser.functions;
 
 import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.FixedHolidayConfiguration;
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
@@ -19,37 +21,37 @@ class FixedToLocalDateTest {
 
     final FixedHolidayConfiguration fixed = new FixedHolidayConfiguration() {
       @Override
-      public List<MovingCondition> conditions() {
+      public @NonNull List<MovingCondition> conditions() {
         return null;
       }
 
       @Override
-      public Year validFrom() {
+      public @Nullable Year validFrom() {
         return null;
       }
 
       @Override
-      public Year validTo() {
+      public @Nullable Year validTo() {
         return null;
       }
 
       @Override
-      public YearCycle cycle() {
+      public @NonNull YearCycle cycle() {
         return null;
       }
 
       @Override
-      public MonthDay day() {
+      public @NonNull MonthDay day() {
         return MonthDay.of(2, 28);
       }
 
       @Override
-      public String descriptionPropertiesKey() {
+      public @NonNull String descriptionPropertiesKey() {
         return null;
       }
 
       @Override
-      public HolidayType holidayType() {
+      public @NonNull HolidayType holidayType() {
         return null;
       }
     };

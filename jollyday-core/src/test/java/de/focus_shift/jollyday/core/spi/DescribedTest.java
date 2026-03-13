@@ -1,6 +1,7 @@
 package de.focus_shift.jollyday.core.spi;
 
 import de.focus_shift.jollyday.core.HolidayType;
+import org.jspecify.annotations.NonNull;
 import org.junit.jupiter.api.Test;
 
 import static de.focus_shift.jollyday.core.HolidayType.PUBLIC_HOLIDAY;
@@ -20,12 +21,12 @@ class DescribedTest {
     }
 
     @Override
-    public String descriptionPropertiesKey() {
+    public @NonNull String descriptionPropertiesKey() {
       return key;
     }
 
     @Override
-    public HolidayType holidayType() {
+    public @NonNull HolidayType holidayType() {
       return type;
     }
   }

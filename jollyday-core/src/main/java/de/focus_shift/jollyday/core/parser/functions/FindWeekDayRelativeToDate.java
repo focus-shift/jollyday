@@ -2,6 +2,7 @@ package de.focus_shift.jollyday.core.parser.functions;
 
 import de.focus_shift.jollyday.core.spi.FixedWeekdayRelativeToFixedHolidayConfiguration;
 import de.focus_shift.jollyday.core.spi.Relation;
+import org.jspecify.annotations.NonNull;
 import org.threeten.extra.Days;
 
 import java.time.DayOfWeek;
@@ -19,12 +20,12 @@ public class FindWeekDayRelativeToDate implements Function<FixedWeekdayRelativeT
 
   private final LocalDate date;
 
-  public FindWeekDayRelativeToDate(final LocalDate date) {
+  public FindWeekDayRelativeToDate(@NonNull final LocalDate date) {
     this.date = date;
   }
 
   @Override
-  public LocalDate apply(final FixedWeekdayRelativeToFixedHolidayConfiguration fixedWeekdayRelativeToFixed) {
+  public @NonNull LocalDate apply(@NonNull final FixedWeekdayRelativeToFixedHolidayConfiguration fixedWeekdayRelativeToFixed) {
     LocalDate result = moveDateToFirstOccurrenceOfWeekday(fixedWeekdayRelativeToFixed, date);
     final int days = determineNumberOfDays(fixedWeekdayRelativeToFixed);
     result = fixedWeekdayRelativeToFixed.when() == Relation.AFTER ? result.plusDays(days) : result.minusDays(days);
@@ -38,7 +39,7 @@ public class FindWeekDayRelativeToDate implements Function<FixedWeekdayRelativeT
    * @param day                         the day to move
    * @return the day moved to the weekday and in the direction as specified
    */
-  private LocalDate moveDateToFirstOccurrenceOfWeekday(final FixedWeekdayRelativeToFixedHolidayConfiguration fixedWeekdayRelativeToFixed, final LocalDate day) {
+  private @NonNull LocalDate moveDateToFirstOccurrenceOfWeekday(@NonNull final FixedWeekdayRelativeToFixedHolidayConfiguration fixedWeekdayRelativeToFixed, @NonNull final LocalDate day) {
     final TemporalAdjuster adjuster = switch (fixedWeekdayRelativeToFixed.when()) {
       case AFTER -> next(fixedWeekdayRelativeToFixed.weekday());
       case BEFORE -> previous(fixedWeekdayRelativeToFixed.weekday());
@@ -53,7 +54,7 @@ public class FindWeekDayRelativeToDate implements Function<FixedWeekdayRelativeT
    * @param fixedWeekdayRelativeToFixed the enumeration value
    * @return the number of days
    */
-  private int determineNumberOfDays(final FixedWeekdayRelativeToFixedHolidayConfiguration fixedWeekdayRelativeToFixed) {
+  private int determineNumberOfDays(@NonNull final FixedWeekdayRelativeToFixedHolidayConfiguration fixedWeekdayRelativeToFixed) {
     if (fixedWeekdayRelativeToFixed.when() == Relation.CLOSEST) {
       return 0;
     }
@@ -86,7 +87,7 @@ public class FindWeekDayRelativeToDate implements Function<FixedWeekdayRelativeT
    * @param dayOfWeek the day-of-week to check for or move the date to, not null
    * @return the closest day-of-week adjuster, not null
    */
-  private static TemporalAdjuster closest(final DayOfWeek dayOfWeek) {
+  private static @NonNull TemporalAdjuster closest(@NonNull final DayOfWeek dayOfWeek) {
     return temporal -> {
       final Temporal previous = temporal.with(previousOrSame(dayOfWeek));
       final Temporal next = temporal.with(nextOrSame(dayOfWeek));

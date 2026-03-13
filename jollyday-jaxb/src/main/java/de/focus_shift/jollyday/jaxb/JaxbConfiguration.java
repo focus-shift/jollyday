@@ -3,6 +3,7 @@ package de.focus_shift.jollyday.jaxb;
 import de.focus_shift.jollyday.core.spi.HolidayCalendarConfiguration;
 import de.focus_shift.jollyday.core.spi.HolidayConfigurations;
 import de.focus_shift.jollyday.jaxb.mapping.Configuration;
+import org.jspecify.annotations.NonNull;
 
 import java.util.stream.Stream;
 
@@ -18,22 +19,22 @@ class JaxbConfiguration implements HolidayCalendarConfiguration {
   }
 
   @Override
-  public HolidayConfigurations holidays() {
+  public @NonNull HolidayConfigurations holidays() {
     return new JaxbHolidays(xmlConfiguration.getHolidays());
   }
 
   @Override
-  public Stream<HolidayCalendarConfiguration> subConfigurations() {
+  public @NonNull Stream<HolidayCalendarConfiguration> subConfigurations() {
     return xmlConfiguration.getSubConfigurations().stream().map(JaxbConfiguration::new);
   }
 
   @Override
-  public String hierarchy() {
+  public @NonNull String hierarchy() {
     return xmlConfiguration.getHierarchy();
   }
 
   @Override
-  public String description() {
+  public @NonNull String description() {
     return xmlConfiguration.getDescription();
   }
 

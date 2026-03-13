@@ -1,6 +1,8 @@
 package de.focus_shift.jollyday.core.parser.predicates;
 
 import de.focus_shift.jollyday.core.spi.Limited;
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Test;
 
 import java.time.Year;
@@ -13,17 +15,17 @@ class ValidLimitationTest {
   void ensureToTestValidFromToAndCycle() {
     final Limited limited = new Limited() {
       @Override
-      public Year validFrom() {
+      public @Nullable Year validFrom() {
         return Year.of(2001);
       }
 
       @Override
-      public Year validTo() {
+      public @Nullable Year validTo() {
         return Year.of(2020);
       }
 
       @Override
-      public YearCycle cycle() {
+      public @NonNull YearCycle cycle() {
         return YearCycle.TWO_YEARS;
       }
     };
@@ -36,17 +38,17 @@ class ValidLimitationTest {
   void ensureToFailIfCycleIsIncorrect() {
     final Limited limited = new Limited() {
       @Override
-      public Year validFrom() {
+      public @Nullable Year validFrom() {
         return Year.of(2001);
       }
 
       @Override
-      public Year validTo() {
+      public @Nullable Year validTo() {
         return Year.of(2020);
       }
 
       @Override
-      public YearCycle cycle() {
+      public @NonNull YearCycle cycle() {
         return YearCycle.EVEN_YEARS;
       }
     };
@@ -59,17 +61,17 @@ class ValidLimitationTest {
   void ensureToFailIfFromToIsIncorrect() {
     final Limited limited = new Limited() {
       @Override
-      public Year validFrom() {
+      public @Nullable Year validFrom() {
         return Year.of(2001);
       }
 
       @Override
-      public Year validTo() {
+      public @Nullable Year validTo() {
         return Year.of(2020);
       }
 
       @Override
-      public YearCycle cycle() {
+      public @NonNull YearCycle cycle() {
         return YearCycle.EVERY_YEAR;
       }
     };

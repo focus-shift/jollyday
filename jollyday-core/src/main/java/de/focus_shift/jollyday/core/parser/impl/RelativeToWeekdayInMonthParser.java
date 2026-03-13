@@ -7,6 +7,7 @@ import de.focus_shift.jollyday.core.parser.functions.FindWeekDayInMonth;
 import de.focus_shift.jollyday.core.parser.predicates.ValidLimitation;
 import de.focus_shift.jollyday.core.spi.HolidayConfigurations;
 import de.focus_shift.jollyday.core.spi.RelativeToWeekdayInMonthHolidayConfiguration;
+import org.jspecify.annotations.NonNull;
 
 import java.time.LocalDate;
 import java.time.Year;
@@ -29,14 +30,14 @@ import static de.focus_shift.jollyday.core.spi.Relation.BEFORE;
 public class RelativeToWeekdayInMonthParser implements HolidayParser {
 
   @Override
-  public List<Holiday> parse(final Year year, final HolidayConfigurations holidays) {
+  public @NonNull List<Holiday> parse(@NonNull final Year year,  @NonNull final HolidayConfigurations holidays) {
     return holidays.relativeToWeekdayInMonth().stream()
       .filter(new ValidLimitation(year))
       .map(relativeToWeekdayInMonth -> resolveHolidayForRelativeToWeekdayInMonth(year, relativeToWeekdayInMonth))
       .toList();
   }
 
-  private Holiday resolveHolidayForRelativeToWeekdayInMonth(final Year year, final RelativeToWeekdayInMonthHolidayConfiguration rwm) {
+  private @NonNull Holiday resolveHolidayForRelativeToWeekdayInMonth(@NonNull final Year year, @NonNull final RelativeToWeekdayInMonthHolidayConfiguration rwm) {
     final LocalDate baseDate = new FindWeekDayInMonth(year).apply(rwm.weekdayInMonth());
 
     final int currentDayValue = baseDate.getDayOfWeek().getValue();

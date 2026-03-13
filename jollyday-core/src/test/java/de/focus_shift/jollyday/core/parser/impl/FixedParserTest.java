@@ -6,6 +6,8 @@ import de.focus_shift.jollyday.core.spi.FixedHolidayConfiguration;
 import de.focus_shift.jollyday.core.spi.HolidayConfigurations;
 import de.focus_shift.jollyday.core.spi.Limited;
 import de.focus_shift.jollyday.core.spi.Movable;
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -66,17 +68,17 @@ class FixedParserTest {
 
       final Movable.MovingCondition movingCondition = new Movable.MovingCondition() {
         @Override
-        public DayOfWeek substitute() {
+        public @NonNull DayOfWeek substitute() {
           return DayOfWeek.SUNDAY;
         }
 
         @Override
-        public With with() {
+        public @NonNull With with() {
           return With.NEXT;
         }
 
         @Override
-        public DayOfWeek weekday() {
+        public @NonNull DayOfWeek weekday() {
           return DayOfWeek.MONDAY;
         }
       };
@@ -114,37 +116,37 @@ class FixedParserTest {
     return new FixedHolidayConfiguration() {
 
       @Override
-      public MonthDay day() {
+      public @NonNull MonthDay day() {
         return day;
       }
 
       @Override
-      public List<MovingCondition> conditions() {
+      public @NonNull List<MovingCondition> conditions() {
         return movingCondition == null ? List.of() : List.of(movingCondition);
       }
 
       @Override
-      public String descriptionPropertiesKey() {
+      public @NonNull String descriptionPropertiesKey() {
         return day.toString();
       }
 
       @Override
-      public HolidayType holidayType() {
+      public @NonNull HolidayType holidayType() {
         return PUBLIC_HOLIDAY;
       }
 
       @Override
-      public Year validFrom() {
+      public @Nullable Year validFrom() {
         return validFrom;
       }
 
       @Override
-      public Year validTo() {
+      public @Nullable Year validTo() {
         return validTo;
       }
 
       @Override
-      public YearCycle cycle() {
+      public @NonNull YearCycle cycle() {
         return yearCycle;
       }
     };

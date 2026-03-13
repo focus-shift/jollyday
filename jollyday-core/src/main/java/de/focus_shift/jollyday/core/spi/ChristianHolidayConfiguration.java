@@ -1,5 +1,7 @@
 package de.focus_shift.jollyday.core.spi;
 
+import org.jspecify.annotations.NonNull;
+
 import java.time.chrono.Chronology;
 
 /**
@@ -52,17 +54,17 @@ public interface ChristianHolidayConfiguration extends Limited, Described, Movab
    *
    * @return the type of the christian holiday
    */
-  ChristianHolidayType type();
+  @NonNull ChristianHolidayType type();
 
   /**
    * Describes the {@link Chronology} of the christian holiday
    *
    * @return the chronology of the christian holiday
    */
-  Chronology chronology();
+  @NonNull Chronology chronology();
 
   @Override
-  default String descriptionPropertiesKeyPrefix() {
+  @NonNull default String descriptionPropertiesKeyPrefix() {
     return "christian";
   }
 }

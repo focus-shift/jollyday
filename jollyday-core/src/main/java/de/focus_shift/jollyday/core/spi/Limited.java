@@ -1,5 +1,8 @@
 package de.focus_shift.jollyday.core.spi;
 
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
+
 import java.time.Year;
 
 /**
@@ -36,14 +39,14 @@ public interface Limited {
    *
    * @return the first valid year of a holiday
    */
-  Year validFrom();
+  @Nullable Year validFrom();
 
   /**
    * Describes the last year a holiday is valid (inclusive)
    *
    * @return the last valid year of a holiday
    */
-  Year validTo();
+  @Nullable Year validTo();
 
   /**
    * Describes the cycle a holiday is valid in between the
@@ -51,6 +54,6 @@ public interface Limited {
    *
    * @return the cycle to limit a holiday between from and to
    */
-  YearCycle cycle();
+  @NonNull YearCycle cycle();
 
 }
