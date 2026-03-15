@@ -1,7 +1,6 @@
 package de.focus_shift.jollyday.jackson.mapping;
 
 public enum IslamicHolidayType {
-
   NEWYEAR,
   ASCHURA,
   MAWLID_AN_NABI,
@@ -25,5 +24,4 @@ public enum IslamicHolidayType {
   public static IslamicHolidayType fromValue(String v) {
     return valueOf(v);
   }
-
 }

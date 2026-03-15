@@ -1,29 +1,5 @@
 package de.focus_shift.jollyday.core.parser.impl;
 
-import de.focus_shift.jollyday.core.Holiday;
-import de.focus_shift.jollyday.core.HolidayType;
-import de.focus_shift.jollyday.core.spi.FixedWeekdayInMonthHolidayConfiguration;
-import de.focus_shift.jollyday.core.spi.HolidayConfigurations;
-import de.focus_shift.jollyday.core.spi.Limited;
-import de.focus_shift.jollyday.core.spi.Occurrence;
-import de.focus_shift.jollyday.core.spi.Relation;
-import de.focus_shift.jollyday.core.spi.RelativeToWeekdayInMonthHolidayConfiguration;
-import org.jspecify.annotations.NonNull;
-import org.jspecify.annotations.Nullable;
-import org.junit.jupiter.api.Nested;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvSource;
-import org.mockito.Mock;
-import org.mockito.junit.jupiter.MockitoExtension;
-
-import java.time.DayOfWeek;
-import java.time.LocalDate;
-import java.time.Month;
-import java.time.Year;
-import java.util.List;
-
 import static de.focus_shift.jollyday.core.HolidayType.PUBLIC_HOLIDAY;
 import static de.focus_shift.jollyday.core.spi.Limited.YearCycle.EVERY_YEAR;
 import static de.focus_shift.jollyday.core.spi.Occurrence.FIRST;
@@ -35,19 +11,44 @@ import static java.time.Month.APRIL;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.when;
 
+import de.focus_shift.jollyday.core.Holiday;
+import de.focus_shift.jollyday.core.HolidayType;
+import de.focus_shift.jollyday.core.spi.FixedWeekdayInMonthHolidayConfiguration;
+import de.focus_shift.jollyday.core.spi.HolidayConfigurations;
+import de.focus_shift.jollyday.core.spi.Limited;
+import de.focus_shift.jollyday.core.spi.Occurrence;
+import de.focus_shift.jollyday.core.spi.Relation;
+import de.focus_shift.jollyday.core.spi.RelativeToWeekdayInMonthHolidayConfiguration;
+import java.time.DayOfWeek;
+import java.time.LocalDate;
+import java.time.Month;
+import java.time.Year;
+import java.util.List;
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
+import org.junit.jupiter.api.Nested;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
+
 @ExtendWith(MockitoExtension.class)
 class RelativeToWeekdayInMonthParserTest {
 
-  @Mock
-  private HolidayConfigurations holidays;
+  @Mock private HolidayConfigurations holidays;
 
   @ParameterizedTest
   @CsvSource({"BEFORE,2025-04-23", "AFTER,2025-04-30"})
-  void ensureThatRelativeToWeekdayInMonthWithRelationBeforeIsValid(final Relation relation, final LocalDate expectedLocalDate) {
+  void ensureThatRelativeToWeekdayInMonthWithRelationBeforeIsValid(
+      final Relation relation, final LocalDate expectedLocalDate) {
 
     final Year year = Year.of(2025);
-    final FixedWeekdayInMonthHolidayConfiguration fixedWeekdayInMonth = getFixedWeekdayInMonth(APRIL, MONDAY, LAST);
-    final RelativeToWeekdayInMonthHolidayConfiguration relativeToWeekdayInMonth = getRelativeToWeekdayInMonth(WEDNESDAY, relation, fixedWeekdayInMonth, year, year);
+    final FixedWeekdayInMonthHolidayConfiguration fixedWeekdayInMonth =
+        getFixedWeekdayInMonth(APRIL, MONDAY, LAST);
+    final RelativeToWeekdayInMonthHolidayConfiguration relativeToWeekdayInMonth =
+        getRelativeToWeekdayInMonth(WEDNESDAY, relation, fixedWeekdayInMonth, year, year);
 
     final RelativeToWeekdayInMonthParser sut = new RelativeToWeekdayInMonthParser();
     when(holidays.relativeToWeekdayInMonth()).thenReturn(List.of(relativeToWeekdayInMonth));
@@ -58,11 +59,14 @@ class RelativeToWeekdayInMonthParserTest {
 
   @ParameterizedTest
   @CsvSource({"BEFORE,2025-03-31", "AFTER,2025-04-14"})
-  void ensureThatRelativeToWeekdayInMonthWithRelationBeforeIsValidAndIsOnSameWeekday(final Relation relation, final LocalDate expectedLocalDate) {
+  void ensureThatRelativeToWeekdayInMonthWithRelationBeforeIsValidAndIsOnSameWeekday(
+      final Relation relation, final LocalDate expectedLocalDate) {
 
     final Year year = Year.of(2025);
-    final FixedWeekdayInMonthHolidayConfiguration fixedWeekdayInMonth = getFixedWeekdayInMonth(APRIL, MONDAY, FIRST);
-    final RelativeToWeekdayInMonthHolidayConfiguration relativeToWeekdayInMonth = getRelativeToWeekdayInMonth(MONDAY, relation, fixedWeekdayInMonth, year, year);
+    final FixedWeekdayInMonthHolidayConfiguration fixedWeekdayInMonth =
+        getFixedWeekdayInMonth(APRIL, MONDAY, FIRST);
+    final RelativeToWeekdayInMonthHolidayConfiguration relativeToWeekdayInMonth =
+        getRelativeToWeekdayInMonth(MONDAY, relation, fixedWeekdayInMonth, year, year);
 
     final RelativeToWeekdayInMonthParser sut = new RelativeToWeekdayInMonthParser();
     when(holidays.relativeToWeekdayInMonth()).thenReturn(List.of(relativeToWeekdayInMonth));
@@ -78,8 +82,10 @@ class RelativeToWeekdayInMonthParserTest {
     void ensureThatRelativeToWeekdayInMonthAreLimitedAndIsValid() {
 
       final Year year = Year.of(2025);
-      final FixedWeekdayInMonthHolidayConfiguration fixedWeekdayInMonth = getFixedWeekdayInMonth(APRIL, MONDAY, LAST);
-      final RelativeToWeekdayInMonthHolidayConfiguration relativeToWeekdayInMonth = getRelativeToWeekdayInMonth(WEDNESDAY, Relation.BEFORE, fixedWeekdayInMonth, year, year);
+      final FixedWeekdayInMonthHolidayConfiguration fixedWeekdayInMonth =
+          getFixedWeekdayInMonth(APRIL, MONDAY, LAST);
+      final RelativeToWeekdayInMonthHolidayConfiguration relativeToWeekdayInMonth =
+          getRelativeToWeekdayInMonth(WEDNESDAY, Relation.BEFORE, fixedWeekdayInMonth, year, year);
 
       final RelativeToWeekdayInMonthParser sut = new RelativeToWeekdayInMonthParser();
       when(holidays.relativeToWeekdayInMonth()).thenReturn(List.of(relativeToWeekdayInMonth));
@@ -91,8 +97,11 @@ class RelativeToWeekdayInMonthParserTest {
     @Test
     void ensureThatRelativeToWeekdayInMonthAreLimitedAndIsInvalid() {
 
-      final FixedWeekdayInMonthHolidayConfiguration fixedWeekdayInMonth = getFixedWeekdayInMonth(APRIL, MONDAY, LAST);
-      final RelativeToWeekdayInMonthHolidayConfiguration relativeToWeekdayInMonth = getRelativeToWeekdayInMonth(TUESDAY, Relation.BEFORE, fixedWeekdayInMonth, Year.of(2023), Year.of(2023));
+      final FixedWeekdayInMonthHolidayConfiguration fixedWeekdayInMonth =
+          getFixedWeekdayInMonth(APRIL, MONDAY, LAST);
+      final RelativeToWeekdayInMonthHolidayConfiguration relativeToWeekdayInMonth =
+          getRelativeToWeekdayInMonth(
+              TUESDAY, Relation.BEFORE, fixedWeekdayInMonth, Year.of(2023), Year.of(2023));
 
       final RelativeToWeekdayInMonthParser sut = new RelativeToWeekdayInMonthParser();
       when(holidays.relativeToWeekdayInMonth()).thenReturn(List.of(relativeToWeekdayInMonth));
@@ -103,12 +112,11 @@ class RelativeToWeekdayInMonthParserTest {
   }
 
   private static RelativeToWeekdayInMonthHolidayConfiguration getRelativeToWeekdayInMonth(
-    final DayOfWeek dayOfWeek,
-    final Relation relation,
-    final FixedWeekdayInMonthHolidayConfiguration fixedWeekdayInMonth,
-    final Year validFrom,
-    final Year validTo
-  ) {
+      final DayOfWeek dayOfWeek,
+      final Relation relation,
+      final FixedWeekdayInMonthHolidayConfiguration fixedWeekdayInMonth,
+      final Year validFrom,
+      final Year validTo) {
     return new RelativeToWeekdayInMonthHolidayConfiguration() {
 
       @Override
@@ -154,10 +162,7 @@ class RelativeToWeekdayInMonthParserTest {
   }
 
   private static FixedWeekdayInMonthHolidayConfiguration getFixedWeekdayInMonth(
-    final Month month,
-    final DayOfWeek dayOfWeek,
-    final Occurrence occurrence
-  ) {
+      final Month month, final DayOfWeek dayOfWeek, final Occurrence occurrence) {
     return new FixedWeekdayInMonthHolidayConfiguration() {
       @Override
       public @NonNull DayOfWeek weekday() {

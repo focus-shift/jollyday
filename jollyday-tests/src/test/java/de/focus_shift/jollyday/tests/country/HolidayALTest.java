@@ -1,9 +1,5 @@
 package de.focus_shift.jollyday.tests.country;
 
-import org.junit.jupiter.api.Test;
-
-import java.time.Year;
-
 import static de.focus_shift.jollyday.core.HolidayCalendar.ALBANIA;
 import static de.focus_shift.jollyday.tests.CalendarCheckerApi.assertFor;
 import static java.time.DayOfWeek.MONDAY;
@@ -16,6 +12,9 @@ import static java.time.Month.MAY;
 import static java.time.Month.NOVEMBER;
 import static java.time.Month.OCTOBER;
 
+import java.time.Year;
+import org.junit.jupiter.api.Test;
+
 class HolidayALTest {
 
   private static final Year YEAR_FROM = Year.of(1900);
@@ -25,50 +24,56 @@ class HolidayALTest {
   void ensuresHolidays() {
 
     assertFor(ALBANIA)
-      .hasFixedHoliday("NEW_YEAR", JANUARY, 1)
+        .hasFixedHoliday("NEW_YEAR", JANUARY, 1)
         .validBetween(YEAR_FROM, YEAR_TO)
         .canBeMovedFrom(SATURDAY, MONDAY)
         .canBeMovedFrom(SUNDAY, MONDAY)
-      .and()
-      .hasFixedHoliday("NEW_YEAR", JANUARY, 1)
+        .and()
+        .hasFixedHoliday("NEW_YEAR", JANUARY, 1)
         .validBetween(YEAR_FROM, YEAR_TO)
         .canBeMovedFrom(SATURDAY, MONDAY)
         .canBeMovedFrom(SUNDAY, MONDAY)
-      .and()
-      .hasFixedHoliday("NEW_YEAR", JANUARY, 2)
+        .and()
+        .hasFixedHoliday("NEW_YEAR", JANUARY, 2)
         .validBetween(YEAR_FROM, YEAR_TO)
         .canBeMovedFrom(SATURDAY, MONDAY)
-        .canBeMovedFrom(SUNDAY, MONDAY).and()
-      .hasFixedHoliday("SPRING_DAY", MARCH, 14)
+        .canBeMovedFrom(SUNDAY, MONDAY)
+        .and()
+        .hasFixedHoliday("SPRING_DAY", MARCH, 14)
         .validBetween(Year.of(2004), YEAR_TO)
         .canBeMovedFrom(SATURDAY, MONDAY)
-        .canBeMovedFrom(SUNDAY, MONDAY).and()
-      .hasFixedHoliday("LABOUR_DAY", MAY, 1)
+        .canBeMovedFrom(SUNDAY, MONDAY)
+        .and()
+        .hasFixedHoliday("LABOUR_DAY", MAY, 1)
         .validBetween(YEAR_FROM, YEAR_TO)
         .canBeMovedFrom(SATURDAY, MONDAY)
-        .canBeMovedFrom(SUNDAY, MONDAY).and()
-      .hasFixedHoliday("MOTHER_TERESA", OCTOBER, 19)
+        .canBeMovedFrom(SUNDAY, MONDAY)
+        .and()
+        .hasFixedHoliday("MOTHER_TERESA", OCTOBER, 19)
         .validBetween(Year.of(2003), YEAR_TO)
         .canBeMovedFrom(SATURDAY, MONDAY)
         .canBeMovedFrom(SUNDAY, MONDAY)
-      .and()
-      .hasFixedHoliday("INDEPENDENCE_DAY", NOVEMBER, 28)
+        .and()
+        .hasFixedHoliday("INDEPENDENCE_DAY", NOVEMBER, 28)
         .validBetween(YEAR_FROM, YEAR_TO)
-      .and()
-      .hasFixedHoliday("LIBERATION", NOVEMBER, 29)
+        .and()
+        .hasFixedHoliday("LIBERATION", NOVEMBER, 29)
         .validBetween(YEAR_FROM, YEAR_TO)
-      .and()
-      .hasFixedHoliday("CHRISTMAS", DECEMBER, 25)
+        .and()
+        .hasFixedHoliday("CHRISTMAS", DECEMBER, 25)
         .validBetween(YEAR_FROM, YEAR_TO)
-      .and()
-      .hasChristianHoliday("EASTER")
-        .validBetween(YEAR_FROM, YEAR_TO).and()
-      .hasChristianHoliday("EASTER_MONDAY")
-        .validBetween(YEAR_FROM, YEAR_TO).and()
-      .hasIslamicHoliday("ID_UL_ADHA")
-        .validBetween(YEAR_FROM, YEAR_TO).and()
-      .hasIslamicHoliday("ID_AL_FITR")
+        .and()
+        .hasChristianHoliday("EASTER")
         .validBetween(YEAR_FROM, YEAR_TO)
-      .check();
+        .and()
+        .hasChristianHoliday("EASTER_MONDAY")
+        .validBetween(YEAR_FROM, YEAR_TO)
+        .and()
+        .hasIslamicHoliday("ID_UL_ADHA")
+        .validBetween(YEAR_FROM, YEAR_TO)
+        .and()
+        .hasIslamicHoliday("ID_AL_FITR")
+        .validBetween(YEAR_FROM, YEAR_TO)
+        .check();
   }
 }

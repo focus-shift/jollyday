@@ -7,28 +7,27 @@ import de.focus_shift.jollyday.core.parser.functions.FindWeekDayBetween;
 import de.focus_shift.jollyday.core.parser.functions.FixedToLocalDate;
 import de.focus_shift.jollyday.core.parser.predicates.ValidLimitation;
 import de.focus_shift.jollyday.core.spi.HolidayConfigurations;
-import org.jspecify.annotations.NonNull;
-
 import java.time.Year;
 import java.util.List;
+import org.jspecify.annotations.NonNull;
 
-/**
- * Parses the configuration for fixed weekdays between two fixed dates.
- */
+/** Parses the configuration for fixed weekdays between two fixed dates. */
 public class FixedWeekdayBetweenFixedParser implements HolidayParser {
 
   @Override
-  public @NonNull List<Holiday> parse(@NonNull final Year year, @NonNull final HolidayConfigurations holidays) {
+  public @NonNull List<Holiday> parse(
+      @NonNull final Year year, @NonNull final HolidayConfigurations holidays) {
     return holidays.fixedWeekdayBetweenFixed().stream()
-      .filter(new ValidLimitation(year))
-      .map(fwm -> new DescribedDateHolder(fwm,
-          new FindWeekDayBetween(
-            new FixedToLocalDate(year).apply(fwm.from()),
-            new FixedToLocalDate(year).apply(fwm.to())
-          ).apply(fwm)
-        )
-      )
-      .map(holder -> new CreateHoliday(holder.getActualDate()).apply(holder.getDescribed()))
-      .toList();
+        .filter(new ValidLimitation(year))
+        .map(
+            fwm ->
+                new DescribedDateHolder(
+                    fwm,
+                    new FindWeekDayBetween(
+                            new FixedToLocalDate(year).apply(fwm.from()),
+                            new FixedToLocalDate(year).apply(fwm.to()))
+                        .apply(fwm)))
+        .map(holder -> new CreateHoliday(holder.getActualDate()).apply(holder.getDescribed()))
+        .toList();
   }
 }

@@ -10,8 +10,7 @@ public class EthiopianOrthodoxHoliday extends Holiday {
   /**
    * Gets the value of the type property.
    *
-   * @return possible object is
-   * {@link EthiopianOrthodoxHolidayType }
+   * @return possible object is {@link EthiopianOrthodoxHolidayType }
    */
   public EthiopianOrthodoxHolidayType getType() {
     return type;
@@ -20,11 +19,9 @@ public class EthiopianOrthodoxHoliday extends Holiday {
   /**
    * Sets the value of the type property.
    *
-   * @param value allowed object is
-   *              {@link EthiopianOrthodoxHolidayType }
+   * @param value allowed object is {@link EthiopianOrthodoxHolidayType }
    */
   public void setType(EthiopianOrthodoxHolidayType value) {
     this.type = value;
   }
-
 }

@@ -1,7 +1,5 @@
 package de.focus_shift.jollyday.tests.country;
 
-import org.junit.jupiter.api.Test;
-
 import static de.focus_shift.jollyday.core.HolidayCalendar.SERBIA;
 import static de.focus_shift.jollyday.tests.CalendarCheckerApi.assertFor;
 import static java.time.DayOfWeek.MONDAY;
@@ -12,36 +10,41 @@ import static java.time.Month.JANUARY;
 import static java.time.Month.MAY;
 import static java.time.Month.NOVEMBER;
 
+import org.junit.jupiter.api.Test;
+
 class HolidayRSTest {
 
   @Test
   void ensuresAllSerbianHolidays() {
     assertFor(SERBIA)
-      .hasFixedHoliday("NEW_YEAR", JANUARY, 1)
+        .hasFixedHoliday("NEW_YEAR", JANUARY, 1)
         .canBeMovedFrom(SUNDAY, TUESDAY)
-      .and()
-      .hasFixedHoliday("NEW_YEAR", JANUARY, 2)
+        .and()
+        .hasFixedHoliday("NEW_YEAR", JANUARY, 2)
         .canBeMovedFrom(SUNDAY, MONDAY)
-      .and()
-      .hasFixedHoliday("CHRISTMAS", JANUARY, 7).and()
-      .hasFixedHoliday("STATEHOOD", FEBRUARY, 15)
+        .and()
+        .hasFixedHoliday("CHRISTMAS", JANUARY, 7)
+        .and()
+        .hasFixedHoliday("STATEHOOD", FEBRUARY, 15)
         .canBeMovedFrom(SUNDAY, TUESDAY)
-      .and()
-      .hasFixedHoliday("STATEHOOD", FEBRUARY, 16)
+        .and()
+        .hasFixedHoliday("STATEHOOD", FEBRUARY, 16)
         .canBeMovedFrom(SUNDAY, MONDAY)
-      .and()
-      .hasFixedHoliday("LABOUR_DAY", MAY, 1)
+        .and()
+        .hasFixedHoliday("LABOUR_DAY", MAY, 1)
         .canBeMovedFrom(SUNDAY, TUESDAY)
-      .and()
-      .hasFixedHoliday("LABOUR_DAY", MAY, 2)
+        .and()
+        .hasFixedHoliday("LABOUR_DAY", MAY, 2)
         .canBeMovedFrom(SUNDAY, MONDAY)
-      .and()
-      .hasFixedHoliday("ARMISTICE", NOVEMBER, 11)
+        .and()
+        .hasFixedHoliday("ARMISTICE", NOVEMBER, 11)
         .canBeMovedFrom(SUNDAY, MONDAY)
-      .and()
-      .hasChristianHoliday("EASTER").and()
-      .hasChristianHoliday("GOOD_FRIDAY").and()
-      .hasChristianHoliday("EASTER_MONDAY")
-      .check();
+        .and()
+        .hasChristianHoliday("EASTER")
+        .and()
+        .hasChristianHoliday("GOOD_FRIDAY")
+        .and()
+        .hasChristianHoliday("EASTER_MONDAY")
+        .check();
   }
 }

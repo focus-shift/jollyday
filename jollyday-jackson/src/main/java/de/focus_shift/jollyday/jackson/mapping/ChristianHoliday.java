@@ -13,8 +13,7 @@ public class ChristianHoliday extends MoveableHoliday {
   /**
    * Gets the value of the type property.
    *
-   * @return possible object is
-   * {@link ChristianHolidayType }
+   * @return possible object is {@link ChristianHolidayType }
    */
   public ChristianHolidayType getType() {
     return type;
@@ -23,8 +22,7 @@ public class ChristianHoliday extends MoveableHoliday {
   /**
    * Sets the value of the type property.
    *
-   * @param value allowed object is
-   *              {@link ChristianHolidayType }
+   * @param value allowed object is {@link ChristianHolidayType }
    */
   public void setType(ChristianHolidayType value) {
     this.type = value;
@@ -33,8 +31,7 @@ public class ChristianHoliday extends MoveableHoliday {
   /**
    * Gets the value of the chronology property.
    *
-   * @return possible object is
-   * {@link ChronologyType }
+   * @return possible object is {@link ChronologyType }
    */
   public ChronologyType getChronology() {
     return chronology;
@@ -43,11 +40,9 @@ public class ChristianHoliday extends MoveableHoliday {
   /**
    * Sets the value of the chronology property.
    *
-   * @param value allowed object is
-   *              {@link ChronologyType }
+   * @param value allowed object is {@link ChronologyType }
    */
   public void setChronology(ChronologyType value) {
     this.chronology = value;
   }
-
 }

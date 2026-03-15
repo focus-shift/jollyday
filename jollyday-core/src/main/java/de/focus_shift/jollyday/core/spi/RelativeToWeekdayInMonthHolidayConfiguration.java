@@ -1,21 +1,20 @@
 package de.focus_shift.jollyday.core.spi;
 
+import java.time.DayOfWeek;
 import org.jspecify.annotations.NonNull;
 
-import java.time.DayOfWeek;
-
 /**
- * Represents the configuration of a holiday that occurs on a weekday in relation
- * to a fixed weekday in a month that can be
+ * Represents the configuration of a holiday that occurs on a weekday in relation to a fixed weekday
+ * in a month that can be
  *
  * <ul>
- *   <li>Limited</li>
- *   <li>Described</li>
+ *   <li>Limited
+ *   <li>Described
  * </ul>
- * <p>
- * Example: A holiday on tuesday before the second friday in october
- * <p>
- * The {@link de.focus_shift.jollyday.core.parser.impl.RelativeToWeekdayInMonthParser} is used.
+ *
+ * <p>Example: A holiday on tuesday before the second friday in october
+ *
+ * <p>The {@link de.focus_shift.jollyday.core.parser.impl.RelativeToWeekdayInMonthParser} is used.
  */
 public interface RelativeToWeekdayInMonthHolidayConfiguration extends Described, Limited {
 
@@ -39,5 +38,4 @@ public interface RelativeToWeekdayInMonthHolidayConfiguration extends Described,
    * @return the anchor for the relation to the new holiday
    */
   @NonNull FixedWeekdayInMonthHolidayConfiguration weekdayInMonth();
-
 }

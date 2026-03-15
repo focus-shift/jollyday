@@ -1,13 +1,12 @@
 package de.focus_shift.jollyday.core.configuration;
 
 import de.focus_shift.jollyday.core.util.ResourceUtil;
-import org.jspecify.annotations.NonNull;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.util.Optional;
 import java.util.Properties;
+import org.jspecify.annotations.NonNull;
 
 abstract class AbstractClasspathConfigurationProvider implements ConfigurationProvider {
 
@@ -29,9 +28,7 @@ abstract class AbstractClasspathConfigurationProvider implements ConfigurationPr
   }
 
   private @NonNull Properties loadProperties(final boolean searchOnlyInJar) {
-    return getConfigurationFile(searchOnlyInJar)
-      .map(this::toProperties)
-      .orElseGet(Properties::new);
+    return getConfigurationFile(searchOnlyInJar).map(this::toProperties).orElseGet(Properties::new);
   }
 
   private @NonNull Properties toProperties(final URL propertiesFile) {

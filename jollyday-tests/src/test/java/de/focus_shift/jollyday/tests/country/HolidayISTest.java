@@ -1,8 +1,7 @@
 package de.focus_shift.jollyday.tests.country;
 
-import org.junit.jupiter.api.Test;
-
 import java.time.Year;
+import org.junit.jupiter.api.Test;
 
 class HolidayISTest extends AbstractCountryTestBase {
 
@@ -13,5 +12,4 @@ class HolidayISTest extends AbstractCountryTestBase {
   void testManagerISStructure() {
     validateCalendarData(ISO_CODE, YEAR);
   }
-
 }

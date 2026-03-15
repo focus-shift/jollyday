@@ -1,9 +1,5 @@
 package de.focus_shift.jollyday.tests.country;
 
-import org.junit.jupiter.api.Test;
-
-import java.time.Year;
-
 import static de.focus_shift.jollyday.core.HolidayCalendar.MEXICO;
 import static de.focus_shift.jollyday.core.HolidayType.OBSERVANCE;
 import static de.focus_shift.jollyday.tests.CalendarChecker.Adjuster.PREVIOUS;
@@ -20,34 +16,41 @@ import static java.time.Month.MAY;
 import static java.time.Month.OCTOBER;
 import static java.time.Month.SEPTEMBER;
 
+import java.time.Year;
+import org.junit.jupiter.api.Test;
+
 class HolidayMXTest {
 
   @Test
   void ensuresHolidays() {
     assertFor(MEXICO)
-      .hasFixedHoliday("ARMY_DAY", FEBRUARY, 19, OBSERVANCE).and()
-      .hasFixedHoliday("FLAG_DAY", FEBRUARY, 24, OBSERVANCE)
+        .hasFixedHoliday("ARMY_DAY", FEBRUARY, 19, OBSERVANCE)
+        .and()
+        .hasFixedHoliday("FLAG_DAY", FEBRUARY, 24, OBSERVANCE)
         .notValidBetween(Year.of(1900), Year.of(1936))
         .validFrom(Year.of(1937))
-      .and()
-      .hasFixedHoliday("OIL_EXPROPRIATION_DAY", MARCH, 18, OBSERVANCE)
+        .and()
+        .hasFixedHoliday("OIL_EXPROPRIATION_DAY", MARCH, 18, OBSERVANCE)
         .notValidBetween(Year.of(1900), Year.of(1937))
         .validFrom(Year.of(1938))
-      .and()
-      .hasFixedHoliday("COLUMBUS_DAY", OCTOBER, 12, OBSERVANCE).and()
-      .hasFixedHoliday("NEW_YEAR", JANUARY, 1)
-        .canBeMovedFrom(SATURDAY, PREVIOUS, FRIDAY)
-        .canBeMovedFrom(SUNDAY, MONDAY).and()
-      .hasFixedHoliday("LABOUR_DAY", MAY, 1)
-        .canBeMovedFrom(SATURDAY, PREVIOUS, FRIDAY)
-        .canBeMovedFrom(SUNDAY, MONDAY).and()
-      .hasFixedHoliday("INDEPENDENCE_DAY", SEPTEMBER, 16)
+        .and()
+        .hasFixedHoliday("COLUMBUS_DAY", OCTOBER, 12, OBSERVANCE)
+        .and()
+        .hasFixedHoliday("NEW_YEAR", JANUARY, 1)
         .canBeMovedFrom(SATURDAY, PREVIOUS, FRIDAY)
         .canBeMovedFrom(SUNDAY, MONDAY)
-      .and()
-      .hasFixedHoliday("CHRISTMAS", DECEMBER, 25)
+        .and()
+        .hasFixedHoliday("LABOUR_DAY", MAY, 1)
         .canBeMovedFrom(SATURDAY, PREVIOUS, FRIDAY)
         .canBeMovedFrom(SUNDAY, MONDAY)
-      .check();
+        .and()
+        .hasFixedHoliday("INDEPENDENCE_DAY", SEPTEMBER, 16)
+        .canBeMovedFrom(SATURDAY, PREVIOUS, FRIDAY)
+        .canBeMovedFrom(SUNDAY, MONDAY)
+        .and()
+        .hasFixedHoliday("CHRISTMAS", DECEMBER, 25)
+        .canBeMovedFrom(SATURDAY, PREVIOUS, FRIDAY)
+        .canBeMovedFrom(SUNDAY, MONDAY)
+        .check();
   }
 }

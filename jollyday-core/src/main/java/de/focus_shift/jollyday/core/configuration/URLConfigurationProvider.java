@@ -1,8 +1,7 @@
 package de.focus_shift.jollyday.core.configuration;
 
-import org.jspecify.annotations.NonNull;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import static java.util.Arrays.stream;
+import static java.util.function.Predicate.not;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -10,20 +9,17 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Objects;
 import java.util.Properties;
-
-import static java.util.Arrays.stream;
-import static java.util.function.Predicate.not;
+import org.jspecify.annotations.NonNull;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
- * An {@link ConfigurationProvider} implementation which reads a list of URLs
- * provided by the system property 'config.urls' in order they are
- * provided into a {@link Properties} instance.
+ * An {@link ConfigurationProvider} implementation which reads a list of URLs provided by the system
+ * property 'config.urls' in order they are provided into a {@link Properties} instance.
  */
 class URLConfigurationProvider implements ConfigurationProvider {
 
-  /**
-   * System property to define URLs to overriding jollyday configuration files.
-   */
+  /** System property to define URLs to overriding jollyday configuration files. */
   static final String CONFIG_URLS_PROPERTY = "de.focus_shift.jollyday.config.urls";
 
   private static final Logger LOG = LoggerFactory.getLogger(URLConfigurationProvider.class);
@@ -33,8 +29,7 @@ class URLConfigurationProvider implements ConfigurationProvider {
   }
 
   /**
-   * Returns the properties by reading from the URLs provided by the system
-   * property 'config.urls'.
+   * Returns the properties by reading from the URLs provided by the system property 'config.urls'.
    */
   @Override
   public @NonNull Properties getProperties() {
@@ -43,11 +38,11 @@ class URLConfigurationProvider implements ConfigurationProvider {
     final String configURLs = System.getProperty(CONFIG_URLS_PROPERTY);
     if (configURLs != null) {
       stream(configURLs.split(","))
-        .filter(not(String::isEmpty))
-        .map(String::trim)
-        .map(this::createUrl)
-        .filter(Objects::nonNull)
-        .forEach(url -> readPropertiesFromURL(properties, url));
+          .filter(not(String::isEmpty))
+          .map(String::trim)
+          .map(this::createUrl)
+          .filter(Objects::nonNull)
+          .forEach(url -> readPropertiesFromURL(properties, url));
     }
 
     return properties;

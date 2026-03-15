@@ -1,6 +1,8 @@
 package de.focus_shift.jollyday.core.descriptions;
 
-import org.junit.jupiter.api.Test;
+import static java.util.Collections.list;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.fail;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -11,10 +13,7 @@ import java.util.Locale;
 import java.util.MissingResourceException;
 import java.util.ResourceBundle;
 import java.util.Set;
-
-import static java.util.Collections.list;
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.fail;
+import org.junit.jupiter.api.Test;
 
 class CountryDescriptionsTest {
 
@@ -22,18 +21,18 @@ class CountryDescriptionsTest {
 
   @Test
   void ensureThatAllISOCodesAreAvailableInResourceBundleGenerally() {
-    getResourceBundles("descriptions.country_descriptions").forEach(resourceBundle -> {
-        final Set<String> isoCodes = getISOCodes(resourceBundle);
-        assertThat(isoCodes)
-          .isNotNull()
-          .hasSize(NUMBER_OF_ISO_COUNTRIES);
-      }
-    );
+    getResourceBundles("descriptions.country_descriptions")
+        .forEach(
+            resourceBundle -> {
+              final Set<String> isoCodes = getISOCodes(resourceBundle);
+              assertThat(isoCodes).isNotNull().hasSize(NUMBER_OF_ISO_COUNTRIES);
+            });
   }
 
   @Test
   void ensuresThatAllCountryDescriptionKeysAreAvailableInTheBaseResource() {
-    final List<ResourceBundle> countryDescriptions = new ArrayList<>(getResourceBundles("descriptions.country_descriptions"));
+    final List<ResourceBundle> countryDescriptions =
+        new ArrayList<>(getResourceBundles("descriptions.country_descriptions"));
     for (int i = 0; i < countryDescriptions.size(); i++) {
       for (int j = i + 1; j < countryDescriptions.size(); j++) {
         compareL1WithL2(countryDescriptions.get(i), countryDescriptions.get(j));

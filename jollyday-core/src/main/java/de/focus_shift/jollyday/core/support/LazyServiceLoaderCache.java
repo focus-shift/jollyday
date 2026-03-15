@@ -1,15 +1,14 @@
 package de.focus_shift.jollyday.core.support;
 
-import org.jspecify.annotations.NonNull;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import static java.lang.String.format;
 
 import java.util.List;
 import java.util.ServiceConfigurationError;
 import java.util.ServiceLoader;
 import java.util.concurrent.CopyOnWriteArrayList;
-
-import static java.lang.String.format;
+import org.jspecify.annotations.NonNull;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class LazyServiceLoaderCache<S> {
 
@@ -36,10 +35,10 @@ public class LazyServiceLoaderCache<S> {
         services.add(s);
       }
     } catch (ServiceConfigurationError serviceConfigurationError) {
-      final String message = format("Cannot load services of type [%s].%n    %s",
-        clz.getName(),
-        serviceConfigurationError.getMessage()
-      );
+      final String message =
+          format(
+              "Cannot load services of type [%s].%n    %s",
+              clz.getName(), serviceConfigurationError.getMessage());
       LOG.warn(message);
     }
   }

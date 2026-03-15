@@ -1,13 +1,12 @@
 package de.focus_shift.jollyday.tests.country;
 
-import org.junit.jupiter.api.Test;
-
-import java.time.Year;
-
 import static de.focus_shift.jollyday.core.HolidayCalendar.TARGET2_SECURITIES;
 import static de.focus_shift.jollyday.tests.CalendarCheckerApi.assertFor;
 import static java.time.Month.DECEMBER;
 import static java.time.Month.JANUARY;
+
+import java.time.Year;
+import org.junit.jupiter.api.Test;
 
 class HolidayTarget2SecuritiesTest {
 
@@ -15,20 +14,20 @@ class HolidayTarget2SecuritiesTest {
   void ensuresHolidays() {
 
     assertFor(TARGET2_SECURITIES)
-      .hasFixedHoliday("NEW_YEAR", JANUARY, 1)
+        .hasFixedHoliday("NEW_YEAR", JANUARY, 1)
         .validFrom(Year.of(2015))
-      .and()
-      .hasFixedHoliday("CHRISTMAS", DECEMBER, 25)
+        .and()
+        .hasFixedHoliday("CHRISTMAS", DECEMBER, 25)
         .validFrom(Year.of(2015))
-      .and()
-      .hasFixedHoliday("STEPHENS", DECEMBER, 26)
+        .and()
+        .hasFixedHoliday("STEPHENS", DECEMBER, 26)
         .validFrom(Year.of(2015))
-      .and()
-      .hasChristianHoliday("GOOD_FRIDAY")
+        .and()
+        .hasChristianHoliday("GOOD_FRIDAY")
         .validFrom(Year.of(2015))
-      .and()
-      .hasChristianHoliday("EASTER_MONDAY")
+        .and()
+        .hasChristianHoliday("EASTER_MONDAY")
         .validFrom(Year.of(2015))
-      .check();
+        .check();
   }
 }

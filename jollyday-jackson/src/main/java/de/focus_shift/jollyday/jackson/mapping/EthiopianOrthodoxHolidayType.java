@@ -1,7 +1,6 @@
 package de.focus_shift.jollyday.jackson.mapping;
 
 public enum EthiopianOrthodoxHolidayType {
-
   TIMKAT,
   ENKUTATASH,
   MESKEL;
@@ -13,5 +12,4 @@ public enum EthiopianOrthodoxHolidayType {
   public static EthiopianOrthodoxHolidayType fromValue(String v) {
     return valueOf(v);
   }
-
 }

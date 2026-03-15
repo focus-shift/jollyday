@@ -4,15 +4,12 @@ import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.FixedHolidayConfiguration;
 import de.focus_shift.jollyday.core.spi.FixedWeekdayBetweenFixedHolidayConfiguration;
 import de.focus_shift.jollyday.jackson.mapping.FixedWeekdayBetweenFixed;
+import java.time.DayOfWeek;
+import java.time.Year;
 import org.jspecify.annotations.NonNull;
 import org.jspecify.annotations.Nullable;
 
-import java.time.DayOfWeek;
-import java.time.Year;
-
-/**
- * see {@link FixedWeekdayBetweenFixedHolidayConfiguration}
- */
+/** see {@link FixedWeekdayBetweenFixedHolidayConfiguration} */
 class JacksonFixedWeekdayBetweenFixed implements FixedWeekdayBetweenFixedHolidayConfiguration {
 
   private final FixedWeekdayBetweenFixed fixedWeekdayBetweenFixed;
@@ -69,8 +66,8 @@ class JacksonFixedWeekdayBetweenFixed implements FixedWeekdayBetweenFixedHoliday
   @Override
   public @NonNull HolidayType holidayType() {
     return fixedWeekdayBetweenFixed.getLocalizedType() == null
-      ? HolidayType.PUBLIC_HOLIDAY
-      : HolidayType.valueOf(fixedWeekdayBetweenFixed.getLocalizedType().name());
+        ? HolidayType.PUBLIC_HOLIDAY
+        : HolidayType.valueOf(fixedWeekdayBetweenFixed.getLocalizedType().name());
   }
 
   /**
@@ -81,8 +78,8 @@ class JacksonFixedWeekdayBetweenFixed implements FixedWeekdayBetweenFixedHoliday
   @Override
   public @Nullable Year validFrom() {
     return fixedWeekdayBetweenFixed.getValidFrom() == null
-      ? null
-      : Year.of(fixedWeekdayBetweenFixed.getValidFrom());
+        ? null
+        : Year.of(fixedWeekdayBetweenFixed.getValidFrom());
   }
 
   /**
@@ -93,8 +90,8 @@ class JacksonFixedWeekdayBetweenFixed implements FixedWeekdayBetweenFixedHoliday
   @Override
   public @Nullable Year validTo() {
     return fixedWeekdayBetweenFixed.getValidTo() == null
-      ? null
-      : Year.of(fixedWeekdayBetweenFixed.getValidTo());
+        ? null
+        : Year.of(fixedWeekdayBetweenFixed.getValidTo());
   }
 
   /**
@@ -105,7 +102,7 @@ class JacksonFixedWeekdayBetweenFixed implements FixedWeekdayBetweenFixedHoliday
   @Override
   public @NonNull YearCycle cycle() {
     return fixedWeekdayBetweenFixed.getEvery() == null
-      ? YearCycle.EVERY_YEAR
-      : YearCycle.valueOf(fixedWeekdayBetweenFixed.getEvery().name());
+        ? YearCycle.EVERY_YEAR
+        : YearCycle.valueOf(fixedWeekdayBetweenFixed.getEvery().name());
   }
 }

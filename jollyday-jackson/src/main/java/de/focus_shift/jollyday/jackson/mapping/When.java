@@ -1,7 +1,6 @@
 package de.focus_shift.jollyday.jackson.mapping;
 
 public enum When {
-
   BEFORE,
   AFTER,
   CLOSEST;
@@ -13,5 +12,4 @@ public enum When {
   public static When fromValue(String v) {
     return valueOf(v);
   }
-
 }

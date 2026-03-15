@@ -1,18 +1,17 @@
 package de.focus_shift.jollyday.jackson;
 
-import de.focus_shift.jollyday.core.ManagerParameter;
-import de.focus_shift.jollyday.core.spi.HolidayCalendarConfiguration;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-
-import java.io.ByteArrayInputStream;
-import java.io.InputStream;
-import java.net.URL;
-
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
+
+import de.focus_shift.jollyday.core.ManagerParameter;
+import de.focus_shift.jollyday.core.spi.HolidayCalendarConfiguration;
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+import java.net.URL;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 class JacksonConfigurationServiceTest {
 
@@ -30,7 +29,8 @@ class JacksonConfigurationServiceTest {
     final URL url = mock(URL.class);
     when(parameter.createResourceUrl()).thenReturn(url);
     // Provide a minimal valid XML for unmarshalling with correct namespace
-    final String xml = "<Configuration xmlns=\"https://focus_shift.de/jollyday/schema/holiday\"></Configuration>";
+    final String xml =
+        "<Configuration xmlns=\"https://focus_shift.de/jollyday/schema/holiday\"></Configuration>";
     final InputStream stream = new ByteArrayInputStream(xml.getBytes());
     when(url.openStream()).thenReturn(stream);
 
@@ -47,7 +47,7 @@ class JacksonConfigurationServiceTest {
     when(url.openStream()).thenThrow(new RuntimeException("IO error"));
 
     assertThatThrownBy(() -> service.getHolidayCalendarConfiguration(parameter))
-      .isInstanceOf(IllegalStateException.class)
-      .hasMessageContaining("Cannot instantiate configuration from URL");
+        .isInstanceOf(IllegalStateException.class)
+        .hasMessageContaining("Cannot instantiate configuration from URL");
   }
 }

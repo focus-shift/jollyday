@@ -1,11 +1,11 @@
 package de.focus_shift.jollyday.core.spi;
 
+import static de.focus_shift.jollyday.core.HolidayType.PUBLIC_HOLIDAY;
+import static org.assertj.core.api.Assertions.assertThat;
+
 import de.focus_shift.jollyday.core.HolidayType;
 import org.jspecify.annotations.NonNull;
 import org.junit.jupiter.api.Test;
-
-import static de.focus_shift.jollyday.core.HolidayType.PUBLIC_HOLIDAY;
-import static org.assertj.core.api.Assertions.assertThat;
 
 class DescribedTest {
 
@@ -34,28 +34,24 @@ class DescribedTest {
   @Test
   void shouldReturnCorrectDescriptionPropertiesKey() {
     final Described holiday = new TestHoliday("holiday.christmas", PUBLIC_HOLIDAY);
-    assertThat(holiday.descriptionPropertiesKey())
-      .isEqualTo("holiday.christmas");
+    assertThat(holiday.descriptionPropertiesKey()).isEqualTo("holiday.christmas");
   }
 
   @Test
   void shouldReturnCorrectHolidayType() {
     final Described holiday = new TestHoliday("holiday.christmas", PUBLIC_HOLIDAY);
-    assertThat(holiday.holidayType())
-      .isEqualTo(PUBLIC_HOLIDAY);
+    assertThat(holiday.holidayType()).isEqualTo(PUBLIC_HOLIDAY);
   }
 
   @Test
   void shouldReturnDefaultDescriptionPropertiesKeyPrefix() {
     final Described holiday = new TestHoliday("holiday.christmas", PUBLIC_HOLIDAY);
-    assertThat(holiday.descriptionPropertiesKeyPrefix())
-      .isEmpty();
+    assertThat(holiday.descriptionPropertiesKeyPrefix()).isEmpty();
   }
 
   @Test
   void shouldReturnDefaultDescriptionPropertiesKeyPrefixSeparator() {
     final Described holiday = new TestHoliday("holiday.christmas", PUBLIC_HOLIDAY);
-    assertThat(holiday.descriptionPropertiesKeyPrefixSeparator())
-      .isEqualTo(".");
+    assertThat(holiday.descriptionPropertiesKeyPrefixSeparator()).isEqualTo(".");
   }
 }

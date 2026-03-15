@@ -1,10 +1,22 @@
 package de.focus_shift.jollyday.core.parser.impl;
 
+import static de.focus_shift.jollyday.core.spi.IslamicHolidayConfiguration.IslamicHolidayType.ID_UL_ADHA_2;
+import static de.focus_shift.jollyday.core.spi.IslamicHolidayConfiguration.IslamicHolidayType.MAWLID_AN_NABI;
+import static de.focus_shift.jollyday.core.spi.Limited.YearCycle.EVERY_YEAR;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.Mockito.when;
+
 import de.focus_shift.jollyday.core.Holiday;
 import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.HolidayConfigurations;
 import de.focus_shift.jollyday.core.spi.IslamicHolidayConfiguration;
 import de.focus_shift.jollyday.core.spi.Movable;
+import java.time.DayOfWeek;
+import java.time.LocalDate;
+import java.time.Year;
+import java.util.List;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 import org.jspecify.annotations.NonNull;
 import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Nested;
@@ -17,31 +29,18 @@ import org.junit.jupiter.params.provider.MethodSource;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import java.time.DayOfWeek;
-import java.time.LocalDate;
-import java.time.Year;
-import java.util.List;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
-
-import static de.focus_shift.jollyday.core.spi.IslamicHolidayConfiguration.IslamicHolidayType.ID_UL_ADHA_2;
-import static de.focus_shift.jollyday.core.spi.IslamicHolidayConfiguration.IslamicHolidayType.MAWLID_AN_NABI;
-import static de.focus_shift.jollyday.core.spi.Limited.YearCycle.EVERY_YEAR;
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.Mockito.when;
-
 @ExtendWith(MockitoExtension.class)
 class IslamicHolidayParserTest {
 
-  @Mock
-  private HolidayConfigurations holidays;
+  @Mock private HolidayConfigurations holidays;
 
   @Nested
   @TestInstance(TestInstance.Lifecycle.PER_CLASS)
   class IslamicHolidayTypeTests {
 
     private Stream<Arguments> islamicHolidaysWithLocalDates() {
-      final IslamicHolidayConfiguration.IslamicHolidayType[] islamicHolidayTypes = IslamicHolidayConfiguration.IslamicHolidayType.values();
+      final IslamicHolidayConfiguration.IslamicHolidayType[] islamicHolidayTypes =
+          IslamicHolidayConfiguration.IslamicHolidayType.values();
       final String[] islamicHolidayDates = {
         "2022-07-30",
         "2022-08-08",
@@ -61,12 +60,13 @@ class IslamicHolidayParserTest {
       };
 
       return IntStream.range(0, islamicHolidayTypes.length)
-        .mapToObj(i -> Arguments.of(islamicHolidayTypes[i], islamicHolidayDates[i]));
+          .mapToObj(i -> Arguments.of(islamicHolidayTypes[i], islamicHolidayDates[i]));
     }
 
     @ParameterizedTest
     @MethodSource("islamicHolidaysWithLocalDates")
-    void ensureThatAllIslamicHolidayTypesProvideAHoliday(final IslamicHolidayConfiguration.IslamicHolidayType type, final LocalDate expected) {
+    void ensureThatAllIslamicHolidayTypesProvideAHoliday(
+        final IslamicHolidayConfiguration.IslamicHolidayType type, final LocalDate expected) {
 
       final IslamicHolidayConfiguration islamicHoliday = getIslamicHoliday(type);
 
@@ -85,7 +85,8 @@ class IslamicHolidayParserTest {
     @Test
     void ensureThatIslamicHolidaysAreLimitedAndIsValid() {
 
-      final IslamicHolidayConfiguration islamicHoliday = getIslamicHoliday(MAWLID_AN_NABI, Year.of(2022), Year.of(2022));
+      final IslamicHolidayConfiguration islamicHoliday =
+          getIslamicHoliday(MAWLID_AN_NABI, Year.of(2022), Year.of(2022));
 
       final IslamicHolidayParser sut = new IslamicHolidayParser();
       when(holidays.islamicHolidays()).thenReturn(List.of(islamicHoliday));
@@ -97,7 +98,8 @@ class IslamicHolidayParserTest {
     @Test
     void ensureThatIslamicHolidaysAreLimitedAndIsInvalid() {
 
-      final IslamicHolidayConfiguration islamicHoliday = getIslamicHoliday(MAWLID_AN_NABI, Year.of(2023), Year.of(2023));
+      final IslamicHolidayConfiguration islamicHoliday =
+          getIslamicHoliday(MAWLID_AN_NABI, Year.of(2023), Year.of(2023));
 
       final IslamicHolidayParser sut = new IslamicHolidayParser();
       when(holidays.islamicHolidays()).thenReturn(List.of(islamicHoliday));
@@ -112,24 +114,26 @@ class IslamicHolidayParserTest {
     @Test
     void ensureThatIslamicHolidaysAreMovable() {
 
-      final Movable.MovingCondition movingCondition = new Movable.MovingCondition() {
-        @Override
-        public @NonNull DayOfWeek substitute() {
-          return DayOfWeek.SUNDAY;
-        }
+      final Movable.MovingCondition movingCondition =
+          new Movable.MovingCondition() {
+            @Override
+            public @NonNull DayOfWeek substitute() {
+              return DayOfWeek.SUNDAY;
+            }
 
-        @Override
-        public @NonNull With with() {
-          return With.NEXT;
-        }
+            @Override
+            public @NonNull With with() {
+              return With.NEXT;
+            }
 
-        @Override
-        public @NonNull DayOfWeek weekday() {
-          return DayOfWeek.MONDAY;
-        }
-      };
+            @Override
+            public @NonNull DayOfWeek weekday() {
+              return DayOfWeek.MONDAY;
+            }
+          };
 
-      final IslamicHolidayConfiguration islamicHoliday = getIslamicHoliday(ID_UL_ADHA_2, movingCondition);
+      final IslamicHolidayConfiguration islamicHoliday =
+          getIslamicHoliday(ID_UL_ADHA_2, movingCondition);
 
       final IslamicHolidayParser sut = new IslamicHolidayParser();
       when(holidays.islamicHolidays()).thenReturn(List.of(islamicHoliday));
@@ -138,29 +142,37 @@ class IslamicHolidayParserTest {
       final List<Holiday> calculatedHoliday = sut.parse(Year.of(2022), holidays);
       assertThat(calculatedHoliday.get(0).getPropertiesKey()).isEqualTo("ID_UL_ADHA_2");
       assertThat(calculatedHoliday.get(0).getDate().getDayOfWeek()).isEqualTo(DayOfWeek.MONDAY);
-      assertThat(calculatedHoliday.get(0).getActualDate().getDayOfWeek()).isEqualTo(DayOfWeek.SUNDAY);
-      assertThat(calculatedHoliday.get(0).getObservedDate()).map(LocalDate::getDayOfWeek).hasValue(DayOfWeek.MONDAY);
+      assertThat(calculatedHoliday.get(0).getActualDate().getDayOfWeek())
+          .isEqualTo(DayOfWeek.SUNDAY);
+      assertThat(calculatedHoliday.get(0).getObservedDate())
+          .map(LocalDate::getDayOfWeek)
+          .hasValue(DayOfWeek.MONDAY);
     }
   }
 
-  private static IslamicHolidayConfiguration getIslamicHoliday(final IslamicHolidayConfiguration.IslamicHolidayType type) {
+  private static IslamicHolidayConfiguration getIslamicHoliday(
+      final IslamicHolidayConfiguration.IslamicHolidayType type) {
     return getIslamicHoliday(type, null, null, null);
   }
 
-  private static IslamicHolidayConfiguration getIslamicHoliday(final IslamicHolidayConfiguration.IslamicHolidayType type, final Movable.MovingCondition movingCondition) {
+  private static IslamicHolidayConfiguration getIslamicHoliday(
+      final IslamicHolidayConfiguration.IslamicHolidayType type,
+      final Movable.MovingCondition movingCondition) {
     return getIslamicHoliday(type, movingCondition, null, null);
   }
 
-  private static IslamicHolidayConfiguration getIslamicHoliday(final IslamicHolidayConfiguration.IslamicHolidayType type, final Year validFrom, final Year validTo) {
+  private static IslamicHolidayConfiguration getIslamicHoliday(
+      final IslamicHolidayConfiguration.IslamicHolidayType type,
+      final Year validFrom,
+      final Year validTo) {
     return getIslamicHoliday(type, null, validFrom, validTo);
   }
 
   private static IslamicHolidayConfiguration getIslamicHoliday(
-    final IslamicHolidayConfiguration.IslamicHolidayType type,
-    final Movable.MovingCondition movingCondition,
-    final Year validFrom,
-    final Year validTo
-  ) {
+      final IslamicHolidayConfiguration.IslamicHolidayType type,
+      final Movable.MovingCondition movingCondition,
+      final Year validFrom,
+      final Year validTo) {
     return new IslamicHolidayConfiguration() {
 
       @Override

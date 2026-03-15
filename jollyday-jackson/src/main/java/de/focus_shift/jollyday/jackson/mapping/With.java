@@ -1,7 +1,6 @@
 package de.focus_shift.jollyday.jackson.mapping;
 
 public enum With {
-
   NEXT,
   PREVIOUS;
 
@@ -12,5 +11,4 @@ public enum With {
   public static With fromValue(String v) {
     return valueOf(v);
   }
-
 }

@@ -5,16 +5,13 @@ import de.focus_shift.jollyday.core.spi.FixedHolidayConfiguration;
 import de.focus_shift.jollyday.core.spi.Relation;
 import de.focus_shift.jollyday.core.spi.RelativeToFixedHolidayConfiguration;
 import de.focus_shift.jollyday.jaxb.mapping.RelativeToFixed;
+import java.time.DayOfWeek;
+import java.time.Year;
 import org.jspecify.annotations.NonNull;
 import org.jspecify.annotations.Nullable;
 import org.threeten.extra.Days;
 
-import java.time.DayOfWeek;
-import java.time.Year;
-
-/**
- * see {@link RelativeToFixedHolidayConfiguration}
- */
+/** see {@link RelativeToFixedHolidayConfiguration} */
 class JaxbRelativeToFixed implements RelativeToFixedHolidayConfiguration {
 
   private final RelativeToFixed relativeToFixed;
@@ -41,8 +38,8 @@ class JaxbRelativeToFixed implements RelativeToFixedHolidayConfiguration {
   @Override
   public @Nullable DayOfWeek weekday() {
     return relativeToFixed.getWeekday() == null
-      ? null
-      : DayOfWeek.valueOf(relativeToFixed.getWeekday().name());
+        ? null
+        : DayOfWeek.valueOf(relativeToFixed.getWeekday().name());
   }
 
   /**
@@ -53,8 +50,8 @@ class JaxbRelativeToFixed implements RelativeToFixedHolidayConfiguration {
   @Override
   public @Nullable Relation when() {
     return relativeToFixed.getWhen() == null
-      ? null
-      : Relation.valueOf(relativeToFixed.getWhen().name());
+        ? null
+        : Relation.valueOf(relativeToFixed.getWhen().name());
   }
 
   /**
@@ -64,9 +61,7 @@ class JaxbRelativeToFixed implements RelativeToFixedHolidayConfiguration {
    */
   @Override
   public @Nullable Days days() {
-    return relativeToFixed.getDays() == null
-      ? null
-      : Days.of(relativeToFixed.getDays());
+    return relativeToFixed.getDays() == null ? null : Days.of(relativeToFixed.getDays());
   }
 
   /**
@@ -87,8 +82,8 @@ class JaxbRelativeToFixed implements RelativeToFixedHolidayConfiguration {
   @Override
   public @NonNull HolidayType holidayType() {
     return relativeToFixed.getLocalizedType() == null
-      ? HolidayType.PUBLIC_HOLIDAY
-      : HolidayType.valueOf(relativeToFixed.getLocalizedType().name());
+        ? HolidayType.PUBLIC_HOLIDAY
+        : HolidayType.valueOf(relativeToFixed.getLocalizedType().name());
   }
 
   /**
@@ -98,9 +93,7 @@ class JaxbRelativeToFixed implements RelativeToFixedHolidayConfiguration {
    */
   @Override
   public @Nullable Year validFrom() {
-    return relativeToFixed.getValidFrom() == null
-      ? null
-      : Year.of(relativeToFixed.getValidFrom());
+    return relativeToFixed.getValidFrom() == null ? null : Year.of(relativeToFixed.getValidFrom());
   }
 
   /**
@@ -110,9 +103,7 @@ class JaxbRelativeToFixed implements RelativeToFixedHolidayConfiguration {
    */
   @Override
   public @Nullable Year validTo() {
-    return relativeToFixed.getValidTo() == null
-      ? null
-      : Year.of(relativeToFixed.getValidTo());
+    return relativeToFixed.getValidTo() == null ? null : Year.of(relativeToFixed.getValidTo());
   }
 
   /**
@@ -123,7 +114,7 @@ class JaxbRelativeToFixed implements RelativeToFixedHolidayConfiguration {
   @Override
   public @NonNull YearCycle cycle() {
     return relativeToFixed.getEvery() == null
-      ? YearCycle.EVERY_YEAR
-      : YearCycle.valueOf(relativeToFixed.getEvery().name());
+        ? YearCycle.EVERY_YEAR
+        : YearCycle.valueOf(relativeToFixed.getEvery().name());
   }
 }

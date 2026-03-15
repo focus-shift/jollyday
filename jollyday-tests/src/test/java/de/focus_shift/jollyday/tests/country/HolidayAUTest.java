@@ -3,12 +3,11 @@ package de.focus_shift.jollyday.tests.country;
 import de.focus_shift.jollyday.core.CalendarHierarchy;
 import de.focus_shift.jollyday.core.HolidayManager;
 import de.focus_shift.jollyday.core.ManagerParameters;
+import java.time.Year;
 import net.jqwik.api.ForAll;
 import net.jqwik.api.Property;
 import net.jqwik.time.api.constraints.YearRange;
 import org.junit.jupiter.api.Test;
-
-import java.time.Year;
 
 class HolidayAUTest extends AbstractCountryTestBase {
 
@@ -21,10 +20,14 @@ class HolidayAUTest extends AbstractCountryTestBase {
 
   @Test
   void testManagerAULoadFromUrl() {
-    final HolidayManager calendarPartLoaded = HolidayManager.getInstance(ManagerParameters.create("test_au_2020"));
-    final HolidayManager urlLoaded = HolidayManager.getInstance(
-      ManagerParameters.create(AbstractCountryTestBase.class.getClassLoader().getResource("holidays/Holidays_test_au_2020.xml"))
-    );
+    final HolidayManager calendarPartLoaded =
+        HolidayManager.getInstance(ManagerParameters.create("test_au_2020"));
+    final HolidayManager urlLoaded =
+        HolidayManager.getInstance(
+            ManagerParameters.create(
+                AbstractCountryTestBase.class
+                    .getClassLoader()
+                    .getResource("holidays/Holidays_test_au_2020.xml")));
 
     final CalendarHierarchy dataHierarchy = calendarPartLoaded.getCalendarHierarchy();
     final CalendarHierarchy testHierarchy = urlLoaded.getCalendarHierarchy();

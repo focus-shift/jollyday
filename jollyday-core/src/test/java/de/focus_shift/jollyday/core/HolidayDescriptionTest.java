@@ -1,6 +1,7 @@
 package de.focus_shift.jollyday.core;
 
-import org.junit.jupiter.api.Test;
+import static java.util.Locale.ROOT;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -9,9 +10,7 @@ import java.util.HashSet;
 import java.util.Properties;
 import java.util.ResourceBundle;
 import java.util.Set;
-
-import static java.util.Locale.ROOT;
-import static org.assertj.core.api.Assertions.assertThat;
+import org.junit.jupiter.api.Test;
 
 class HolidayDescriptionTest {
 
@@ -42,7 +41,10 @@ class HolidayDescriptionTest {
     assertThat(folder).isDirectory();
 
     // Collect all localised descriptions
-    final File[] descriptions = folder.listFiles((dir, name) -> name.startsWith("holiday_descriptions_") && name.endsWith(".properties"));
+    final File[] descriptions =
+        folder.listFiles(
+            (dir, name) ->
+                name.startsWith("holiday_descriptions_") && name.endsWith(".properties"));
     assertThat(descriptions).isNotEmpty();
 
     final Set<String> propertiesNames = new HashSet<>();

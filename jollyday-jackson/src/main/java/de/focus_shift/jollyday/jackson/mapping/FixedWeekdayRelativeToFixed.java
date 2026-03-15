@@ -6,18 +6,20 @@ public class FixedWeekdayRelativeToFixed extends Holiday {
 
   @JacksonXmlProperty(localName = "day")
   protected Fixed day;
+
   @JacksonXmlProperty(localName = "which", isAttribute = true)
   protected Which which;
+
   @JacksonXmlProperty(localName = "weekday", isAttribute = true)
   protected Weekday weekday;
+
   @JacksonXmlProperty(localName = "when", isAttribute = true)
   protected When when;
 
   /**
    * Gets the value of the day property.
    *
-   * @return possible object is
-   * {@link Fixed }
+   * @return possible object is {@link Fixed }
    */
   public Fixed getDay() {
     return day;
@@ -26,8 +28,7 @@ public class FixedWeekdayRelativeToFixed extends Holiday {
   /**
    * Sets the value of the day property.
    *
-   * @param value allowed object is
-   *              {@link Fixed }
+   * @param value allowed object is {@link Fixed }
    */
   public void setDay(Fixed value) {
     this.day = value;
@@ -36,8 +37,7 @@ public class FixedWeekdayRelativeToFixed extends Holiday {
   /**
    * Gets the value of the which property.
    *
-   * @return possible object is
-   * {@link Which }
+   * @return possible object is {@link Which }
    */
   public Which getWhich() {
     return which;
@@ -46,8 +46,7 @@ public class FixedWeekdayRelativeToFixed extends Holiday {
   /**
    * Sets the value of the which property.
    *
-   * @param value allowed object is
-   *              {@link Which }
+   * @param value allowed object is {@link Which }
    */
   public void setWhich(Which value) {
     this.which = value;
@@ -56,8 +55,7 @@ public class FixedWeekdayRelativeToFixed extends Holiday {
   /**
    * Gets the value of the weekday property.
    *
-   * @return possible object is
-   * {@link Weekday }
+   * @return possible object is {@link Weekday }
    */
   public Weekday getWeekday() {
     return weekday;
@@ -66,8 +64,7 @@ public class FixedWeekdayRelativeToFixed extends Holiday {
   /**
    * Sets the value of the weekday property.
    *
-   * @param value allowed object is
-   *              {@link Weekday }
+   * @param value allowed object is {@link Weekday }
    */
   public void setWeekday(Weekday value) {
     this.weekday = value;
@@ -76,8 +73,7 @@ public class FixedWeekdayRelativeToFixed extends Holiday {
   /**
    * Gets the value of the when property.
    *
-   * @return possible object is
-   * {@link When }
+   * @return possible object is {@link When }
    */
   public When getWhen() {
     return when;
@@ -86,11 +82,9 @@ public class FixedWeekdayRelativeToFixed extends Holiday {
   /**
    * Sets the value of the when property.
    *
-   * @param value allowed object is
-   *              {@link When }
+   * @param value allowed object is {@link When }
    */
   public void setWhen(When value) {
     this.when = value;
   }
-
 }

@@ -7,28 +7,26 @@ import de.focus_shift.jollyday.core.parser.functions.FindWeekDayRelativeToDate;
 import de.focus_shift.jollyday.core.parser.functions.FixedToLocalDate;
 import de.focus_shift.jollyday.core.parser.predicates.ValidLimitation;
 import de.focus_shift.jollyday.core.spi.HolidayConfigurations;
-import org.jspecify.annotations.NonNull;
-
 import java.time.Year;
 import java.util.List;
+import org.jspecify.annotations.NonNull;
 
-/**
- * Parses fixed weekday relative to fixed date.
- */
+/** Parses fixed weekday relative to fixed date. */
 public class FixedWeekdayRelativeToFixedParser implements HolidayParser {
 
   @Override
-  public @NonNull List<Holiday> parse(@NonNull final Year year, @NonNull final HolidayConfigurations holidays) {
+  public @NonNull List<Holiday> parse(
+      @NonNull final Year year, @NonNull final HolidayConfigurations holidays) {
     return holidays.fixedWeekdayRelativeToFixed().stream()
-      .filter(new ValidLimitation(year))
-      .map(weekdayRelativeToFixed ->
-        new DescribedDateHolder(
-          weekdayRelativeToFixed,
-          new FindWeekDayRelativeToDate(new FixedToLocalDate(year).apply(weekdayRelativeToFixed.day())).apply(weekdayRelativeToFixed)
-        )
-      )
-      .map(holder -> new CreateHoliday(holder.getActualDate()).apply(holder.getDescribed()))
-      .toList();
+        .filter(new ValidLimitation(year))
+        .map(
+            weekdayRelativeToFixed ->
+                new DescribedDateHolder(
+                    weekdayRelativeToFixed,
+                    new FindWeekDayRelativeToDate(
+                            new FixedToLocalDate(year).apply(weekdayRelativeToFixed.day()))
+                        .apply(weekdayRelativeToFixed)))
+        .map(holder -> new CreateHoliday(holder.getActualDate()).apply(holder.getDescribed()))
+        .toList();
   }
 }
-

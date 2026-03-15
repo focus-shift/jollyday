@@ -1,7 +1,6 @@
 package de.focus_shift.jollyday.jackson.mapping;
 
 public enum HolidayType {
-
   PUBLIC_HOLIDAY,
   BANK_HOLIDAY,
   OBSERVANCE;
@@ -13,5 +12,4 @@ public enum HolidayType {
   public static HolidayType fromValue(String v) {
     return valueOf(v);
   }
-
 }

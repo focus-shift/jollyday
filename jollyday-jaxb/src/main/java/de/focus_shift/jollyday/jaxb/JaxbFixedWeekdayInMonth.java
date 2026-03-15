@@ -4,16 +4,13 @@ import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.FixedWeekdayInMonthHolidayConfiguration;
 import de.focus_shift.jollyday.core.spi.Occurrence;
 import de.focus_shift.jollyday.jaxb.mapping.FixedWeekdayInMonth;
-import org.jspecify.annotations.NonNull;
-import org.jspecify.annotations.Nullable;
-
 import java.time.DayOfWeek;
 import java.time.Month;
 import java.time.Year;
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
 
-/**
- * see {@link FixedWeekdayInMonthHolidayConfiguration}
- */
+/** see {@link FixedWeekdayInMonthHolidayConfiguration} */
 class JaxbFixedWeekdayInMonth implements FixedWeekdayInMonthHolidayConfiguration {
 
   private final FixedWeekdayInMonth fixedWeekdayInMonth;
@@ -45,28 +42,28 @@ class JaxbFixedWeekdayInMonth implements FixedWeekdayInMonthHolidayConfiguration
   @Override
   public @NonNull HolidayType holidayType() {
     return fixedWeekdayInMonth.getLocalizedType() == null
-      ? HolidayType.PUBLIC_HOLIDAY
-      : HolidayType.valueOf(fixedWeekdayInMonth.getLocalizedType().name());
+        ? HolidayType.PUBLIC_HOLIDAY
+        : HolidayType.valueOf(fixedWeekdayInMonth.getLocalizedType().name());
   }
 
   @Override
   public @Nullable Year validFrom() {
     return fixedWeekdayInMonth.getValidFrom() == null
-      ? null
-      : Year.of(fixedWeekdayInMonth.getValidFrom());
+        ? null
+        : Year.of(fixedWeekdayInMonth.getValidFrom());
   }
 
   @Override
   public @Nullable Year validTo() {
     return fixedWeekdayInMonth.getValidTo() == null
-      ? null
-      : Year.of(fixedWeekdayInMonth.getValidTo());
+        ? null
+        : Year.of(fixedWeekdayInMonth.getValidTo());
   }
 
   @Override
   public @NonNull YearCycle cycle() {
     return fixedWeekdayInMonth.getEvery() == null
-      ? YearCycle.EVERY_YEAR
-      : YearCycle.valueOf(fixedWeekdayInMonth.getEvery().name());
+        ? YearCycle.EVERY_YEAR
+        : YearCycle.valueOf(fixedWeekdayInMonth.getEvery().name());
   }
 }

@@ -6,34 +6,40 @@ import de.focus_shift.jollyday.core.parser.functions.CalculateRelativeDatesFromC
 import de.focus_shift.jollyday.core.parser.functions.CreateHoliday;
 import de.focus_shift.jollyday.core.parser.predicates.ValidLimitation;
 import de.focus_shift.jollyday.core.spi.HolidayConfigurations;
-import org.jspecify.annotations.NonNull;
-import org.threeten.extra.chrono.CopticChronology;
-
 import java.time.LocalDate;
 import java.time.Year;
 import java.util.List;
 import java.util.stream.Stream;
+import org.jspecify.annotations.NonNull;
+import org.threeten.extra.chrono.CopticChronology;
 
-/**
- * Calculates the ethiopian orthodox holidays.
- */
+/** Calculates the ethiopian orthodox holidays. */
 public class EthiopianOrthodoxHolidayParser implements HolidayParser {
 
   @Override
-  public @NonNull List<Holiday> parse(@NonNull final Year year, @NonNull final HolidayConfigurations holidays) {
+  public @NonNull List<Holiday> parse(
+      @NonNull final Year year, @NonNull final HolidayConfigurations holidays) {
     return holidays.ethiopianOrthodoxHolidays().stream()
-      .filter(new ValidLimitation(year))
-      .flatMap(eoh -> {
-        final Stream<LocalDate> ethiopianHolidays = switch (eoh.type()) {
-          case TIMKAT ->
-            new CalculateRelativeDatesFromChronologyWithinGregorianYear(5, 10, CopticChronology.INSTANCE, 0).apply(year);
-          case ENKUTATASH ->
-            new CalculateRelativeDatesFromChronologyWithinGregorianYear(1, 1, CopticChronology.INSTANCE, 0).apply(year);
-          case MESKEL ->
-            new CalculateRelativeDatesFromChronologyWithinGregorianYear(1, 17, CopticChronology.INSTANCE, 0).apply(year);
-        };
-        return ethiopianHolidays.map(date -> new CreateHoliday(date).apply(eoh));
-      })
-      .toList();
+        .filter(new ValidLimitation(year))
+        .flatMap(
+            eoh -> {
+              final Stream<LocalDate> ethiopianHolidays =
+                  switch (eoh.type()) {
+                    case TIMKAT ->
+                        new CalculateRelativeDatesFromChronologyWithinGregorianYear(
+                                5, 10, CopticChronology.INSTANCE, 0)
+                            .apply(year);
+                    case ENKUTATASH ->
+                        new CalculateRelativeDatesFromChronologyWithinGregorianYear(
+                                1, 1, CopticChronology.INSTANCE, 0)
+                            .apply(year);
+                    case MESKEL ->
+                        new CalculateRelativeDatesFromChronologyWithinGregorianYear(
+                                1, 17, CopticChronology.INSTANCE, 0)
+                            .apply(year);
+                  };
+              return ethiopianHolidays.map(date -> new CreateHoliday(date).apply(eoh));
+            })
+        .toList();
   }
 }

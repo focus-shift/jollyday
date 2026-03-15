@@ -1,11 +1,10 @@
 package de.focus_shift.jollyday.core.parameter;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.Properties;
-
-import static org.assertj.core.api.Assertions.assertThat;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 class CalendarPartManagerParameterTest {
 
@@ -34,7 +33,7 @@ class CalendarPartManagerParameterTest {
   @Test
   void ensureToCreateResourceUrl() {
     assertThat(sut.createResourceUrl().getFile())
-      .endsWith("jollyday-core/target/classes/holidays/Holidays_de.xml");
+        .endsWith("jollyday-core/target/classes/holidays/Holidays_de.xml");
   }
 
   @Test
@@ -46,24 +45,22 @@ class CalendarPartManagerParameterTest {
     properties.setProperty("manager.impl.de", "managerImplClassNameDE");
 
     assertThat(new CalendarPartManagerParameter("de", properties).getManagerImplClassName())
-      .isEqualTo("managerImplClassNameDE");
+        .isEqualTo("managerImplClassNameDE");
   }
 
   @Test
   void ensureToReturnCorrectClassNameWithoutCalendarPart() {
-    assertThat(sut.getManagerImplClassName())
-      .isEqualTo("managerImplClassName");
+    assertThat(sut.getManagerImplClassName()).isEqualTo("managerImplClassName");
   }
 
   @Test
   void ensureToConfigurationFileName() {
     assertThat(CalendarPartManagerParameter.getConfigurationFileName("de"))
-      .isEqualTo("holidays/Holidays_de.xml");
+        .isEqualTo("holidays/Holidays_de.xml");
   }
 
   @Test
   void ensureToGetCorrectToString() {
-    assertThat(sut)
-      .hasToString("CalendarPartManagerParameter - de");
+    assertThat(sut).hasToString("CalendarPartManagerParameter - de");
   }
 }

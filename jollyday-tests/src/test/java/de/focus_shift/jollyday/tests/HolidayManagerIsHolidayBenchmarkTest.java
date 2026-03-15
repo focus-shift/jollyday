@@ -1,6 +1,12 @@
 package de.focus_shift.jollyday.tests;
 
+import static de.focus_shift.jollyday.core.ManagerParameters.create;
+import static org.assertj.core.api.Assertions.assertThat;
+
 import de.focus_shift.jollyday.core.HolidayManager;
+import java.time.LocalDate;
+import java.util.Collection;
+import java.util.concurrent.TimeUnit;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.openjdk.jmh.annotations.Benchmark;
@@ -16,13 +22,6 @@ import org.openjdk.jmh.runner.Runner;
 import org.openjdk.jmh.runner.RunnerException;
 import org.openjdk.jmh.runner.options.Options;
 import org.openjdk.jmh.runner.options.OptionsBuilder;
-
-import java.time.LocalDate;
-import java.util.Collection;
-import java.util.concurrent.TimeUnit;
-
-import static de.focus_shift.jollyday.core.ManagerParameters.create;
-import static org.assertj.core.api.Assertions.assertThat;
 
 @BenchmarkMode(Mode.Throughput)
 @Fork(3)
@@ -43,16 +42,18 @@ public class HolidayManagerIsHolidayBenchmarkTest extends Benchmarks {
   }
 
   @Benchmark
-  public static boolean benchmarkIsHoliday(final HolidayManagerState holidayManagerState, final LocalDateState localDateState) {
+  public static boolean benchmarkIsHoliday(
+      final HolidayManagerState holidayManagerState, final LocalDateState localDateState) {
     return holidayManagerState.holidayManager.isHoliday(localDateState.localDate);
   }
 
   @Test
   @Tag("BenchmarkTest")
   void runJmhBenchmark() throws RunnerException {
-    final Options opt = new OptionsBuilder()
-      .include(HolidayManagerIsHolidayBenchmarkTest.class.getSimpleName())
-      .build();
+    final Options opt =
+        new OptionsBuilder()
+            .include(HolidayManagerIsHolidayBenchmarkTest.class.getSimpleName())
+            .build();
 
     final Collection<RunResult> runResults = new Runner(opt).run();
     assertThat(runResults).isNotEmpty();

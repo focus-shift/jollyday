@@ -6,22 +6,20 @@ import de.focus_shift.jollyday.core.parser.functions.CreateHoliday;
 import de.focus_shift.jollyday.core.parser.functions.FindWeekDayInMonth;
 import de.focus_shift.jollyday.core.parser.predicates.ValidLimitation;
 import de.focus_shift.jollyday.core.spi.HolidayConfigurations;
-import org.jspecify.annotations.NonNull;
-
 import java.time.Year;
 import java.util.List;
+import org.jspecify.annotations.NonNull;
 
-/**
- * The Class FixedWeekdayInMonthParser.
- */
+/** The Class FixedWeekdayInMonthParser. */
 public class FixedWeekdayInMonthParser implements HolidayParser {
 
   @Override
-  public @NonNull List<Holiday> parse(@NonNull final Year year, @NonNull final HolidayConfigurations holidays) {
+  public @NonNull List<Holiday> parse(
+      @NonNull final Year year, @NonNull final HolidayConfigurations holidays) {
     return holidays.fixedWeekdays().stream()
-      .filter(new ValidLimitation(year))
-      .map(fwm -> new DescribedDateHolder(fwm, new FindWeekDayInMonth(year).apply(fwm)))
-      .map(holder -> new CreateHoliday(holder.getActualDate()).apply(holder.getDescribed()))
-      .toList();
+        .filter(new ValidLimitation(year))
+        .map(fwm -> new DescribedDateHolder(fwm, new FindWeekDayInMonth(year).apply(fwm)))
+        .map(holder -> new CreateHoliday(holder.getActualDate()).apply(holder.getDescribed()))
+        .toList();
   }
 }

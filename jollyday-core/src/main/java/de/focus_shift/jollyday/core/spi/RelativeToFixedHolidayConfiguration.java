@@ -1,31 +1,31 @@
 package de.focus_shift.jollyday.core.spi;
 
+import java.time.DayOfWeek;
 import org.jspecify.annotations.NonNull;
 import org.jspecify.annotations.Nullable;
 import org.threeten.extra.Days;
 
-import java.time.DayOfWeek;
-
 /**
- * Represents the configuration of a holiday that is in relation to a {@link FixedHolidayConfiguration} date.
- * <ul>
- *   <li>If only weekday is set it will use the weekday.</li>
- *   <li>If only days is set is not set it will use days.</li>
- *   <li>If both is set it will use the weekday.</li>
- * </ul>
- * <p>
- * and can be
+ * Represents the configuration of a holiday that is in relation to a {@link
+ * FixedHolidayConfiguration} date.
  *
  * <ul>
- *   <li>Limited</li>
- *   <li>Described</li>
+ *   <li>If only weekday is set it will use the weekday.
+ *   <li>If only days is set is not set it will use days.
+ *   <li>If both is set it will use the weekday.
  * </ul>
- * <p>
- * Example:
- * A holiday on tuesday before the second friday in october
- * A holiday on 3 days after the second friday in october
- * <p>
- * The {@link de.focus_shift.jollyday.core.parser.impl.RelativeToFixedParser} is used.
+ *
+ * <p>and can be
+ *
+ * <ul>
+ *   <li>Limited
+ *   <li>Described
+ * </ul>
+ *
+ * <p>Example: A holiday on tuesday before the second friday in october A holiday on 3 days after
+ * the second friday in october
+ *
+ * <p>The {@link de.focus_shift.jollyday.core.parser.impl.RelativeToFixedParser} is used.
  */
 public interface RelativeToFixedHolidayConfiguration extends Described, Limited {
 
@@ -56,5 +56,4 @@ public interface RelativeToFixedHolidayConfiguration extends Described, Limited 
    * @return anchor date for the new holiday
    */
   @NonNull FixedHolidayConfiguration date();
-
 }

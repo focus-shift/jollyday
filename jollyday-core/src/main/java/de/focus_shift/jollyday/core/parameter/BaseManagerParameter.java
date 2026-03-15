@@ -1,10 +1,9 @@
 package de.focus_shift.jollyday.core.parameter;
 
 import de.focus_shift.jollyday.core.ManagerParameter;
+import java.util.Properties;
 import org.jspecify.annotations.NonNull;
 import org.jspecify.annotations.Nullable;
-
-import java.util.Properties;
 
 public abstract class BaseManagerParameter implements ManagerParameter {
 

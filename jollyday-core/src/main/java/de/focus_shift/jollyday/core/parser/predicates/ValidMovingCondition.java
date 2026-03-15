@@ -1,11 +1,10 @@
 package de.focus_shift.jollyday.core.parser.predicates;
 
 import de.focus_shift.jollyday.core.spi.Movable;
-import org.jspecify.annotations.NonNull;
-
 import java.time.LocalDate;
 import java.util.Objects;
 import java.util.function.Predicate;
+import org.jspecify.annotations.NonNull;
 
 public class ValidMovingCondition implements Predicate<Movable.MovingCondition> {
 

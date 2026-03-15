@@ -1,16 +1,16 @@
 package de.focus_shift.jollyday.core.parameter;
 
-import org.jspecify.annotations.NonNull;
-import org.jspecify.annotations.Nullable;
-
 import java.net.URL;
 import java.util.Properties;
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
 
 public class UrlManagerParameter extends BaseManagerParameter {
 
   private final URL calendarFileUrl;
 
-  public UrlManagerParameter(@NonNull final URL calendarFileUrl, @Nullable final Properties properties) {
+  public UrlManagerParameter(
+      @NonNull final URL calendarFileUrl, @Nullable final Properties properties) {
     super(properties);
     this.calendarFileUrl = calendarFileUrl;
   }

@@ -1,11 +1,10 @@
 package de.focus_shift.jollyday.core.parser.predicates;
 
 import de.focus_shift.jollyday.core.spi.Limited;
-import org.jspecify.annotations.NonNull;
-
 import java.time.Period;
 import java.time.Year;
 import java.util.function.Predicate;
+import org.jspecify.annotations.NonNull;
 
 public class ValidCycle implements Predicate<Limited> {
 
@@ -30,15 +29,19 @@ public class ValidCycle implements Predicate<Limited> {
   }
 
   /**
-   * Will validate if a given year based on the reference year (validFrom/validTo) is valid based on the cycle strategy.
-   * <p>
-   * Note: no need to test whether we are in range, as this is already done in {@link ValidFromTo}
+   * Will validate if a given year based on the reference year (validFrom/validTo) is valid based on
+   * the cycle strategy.
    *
-   * @param limited    provides the reference years. First we use validFrom and if not given validTo
+   * <p>Note: no need to test whether we are in range, as this is already done in {@link
+   * ValidFromTo}
+   *
+   * @param limited provides the reference years. First we use validFrom and if not given validTo
    * @param cycleYears number of years to start the cycle starting from validFrom/validTo
-   * @return true if the given year based on validFrom/validTo and the cycle is valid, otherwise false
+   * @return true if the given year based on validFrom/validTo and the cycle is valid, otherwise
+   *     false
    */
-  private boolean isValidWithReferenceYear(@NonNull final Limited limited, @NonNull final Period cycleYears) {
+  private boolean isValidWithReferenceYear(
+      @NonNull final Limited limited, @NonNull final Period cycleYears) {
     final Year validFrom = limited.validFrom();
     if (validFrom != null) {
       return (year.minusYears(validFrom.getValue())).getValue() % cycleYears.getYears() == 0;
@@ -49,6 +52,7 @@ public class ValidCycle implements Predicate<Limited> {
       }
     }
 
-    throw new IllegalArgumentException("Cannot handle cycle type '" + limited.cycle() + "' without any reference year.");
+    throw new IllegalArgumentException(
+        "Cannot handle cycle type '" + limited.cycle() + "' without any reference year.");
   }
 }

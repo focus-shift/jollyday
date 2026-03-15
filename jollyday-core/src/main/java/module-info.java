@@ -1,7 +1,6 @@
 import de.focus_shift.jollyday.core.spi.HolidayCalendarConfigurationService;
 
 module de.focus_shift.jollyday.core {
-
   uses HolidayCalendarConfigurationService;
 
   opens de.focus_shift.jollyday.core.util;
@@ -16,6 +15,6 @@ module de.focus_shift.jollyday.core {
   exports de.focus_shift.jollyday.core;
   exports de.focus_shift.jollyday.core.spi;
   exports de.focus_shift.jollyday.core.util to
-    de.focus_shift.jollyday.jaxb,
-    de.focus_shift.jollyday.jackson;
+      de.focus_shift.jollyday.jaxb,
+      de.focus_shift.jollyday.jackson;
 }

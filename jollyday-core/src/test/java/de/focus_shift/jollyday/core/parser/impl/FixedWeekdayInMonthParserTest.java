@@ -1,10 +1,22 @@
 package de.focus_shift.jollyday.core.parser.impl;
 
+import static de.focus_shift.jollyday.core.HolidayType.PUBLIC_HOLIDAY;
+import static de.focus_shift.jollyday.core.spi.Limited.YearCycle.EVERY_YEAR;
+import static java.time.DayOfWeek.WEDNESDAY;
+import static java.time.Month.JANUARY;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.Mockito.when;
+
 import de.focus_shift.jollyday.core.Holiday;
 import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.FixedWeekdayInMonthHolidayConfiguration;
 import de.focus_shift.jollyday.core.spi.HolidayConfigurations;
 import de.focus_shift.jollyday.core.spi.Occurrence;
+import java.time.DayOfWeek;
+import java.time.LocalDate;
+import java.time.Month;
+import java.time.Year;
+import java.util.List;
 import org.jspecify.annotations.NonNull;
 import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Nested;
@@ -13,24 +25,10 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import java.time.DayOfWeek;
-import java.time.LocalDate;
-import java.time.Month;
-import java.time.Year;
-import java.util.List;
-
-import static de.focus_shift.jollyday.core.HolidayType.PUBLIC_HOLIDAY;
-import static de.focus_shift.jollyday.core.spi.Limited.YearCycle.EVERY_YEAR;
-import static java.time.DayOfWeek.WEDNESDAY;
-import static java.time.Month.JANUARY;
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.Mockito.when;
-
 @ExtendWith(MockitoExtension.class)
 class FixedWeekdayInMonthParserTest {
 
-  @Mock
-  private HolidayConfigurations holidays;
+  @Mock private HolidayConfigurations holidays;
 
   @Nested
   class LimitedTests {
@@ -39,7 +37,8 @@ class FixedWeekdayInMonthParserTest {
     void ensureThatFixedWeekdayInMonthAreLimitedAndIsValid() {
 
       final Year year = Year.of(2025);
-      final FixedWeekdayInMonthHolidayConfiguration fixedWeekdayInMonth = getFixedWeekdayInMonth(WEDNESDAY, JANUARY, Occurrence.LAST, year, year);
+      final FixedWeekdayInMonthHolidayConfiguration fixedWeekdayInMonth =
+          getFixedWeekdayInMonth(WEDNESDAY, JANUARY, Occurrence.LAST, year, year);
 
       final FixedWeekdayInMonthParser sut = new FixedWeekdayInMonthParser();
       when(holidays.fixedWeekdays()).thenReturn(List.of(fixedWeekdayInMonth));
@@ -51,7 +50,8 @@ class FixedWeekdayInMonthParserTest {
     @Test
     void ensureThatFixedWeekdayInMonthAreLimitedAndIsInvalid() {
 
-      final FixedWeekdayInMonthHolidayConfiguration fixedWeekdayInMonth = getFixedWeekdayInMonth(WEDNESDAY, JANUARY, Occurrence.LAST, Year.of(2023), Year.of(2023));
+      final FixedWeekdayInMonthHolidayConfiguration fixedWeekdayInMonth =
+          getFixedWeekdayInMonth(WEDNESDAY, JANUARY, Occurrence.LAST, Year.of(2023), Year.of(2023));
 
       final FixedWeekdayInMonthParser sut = new FixedWeekdayInMonthParser();
       when(holidays.fixedWeekdays()).thenReturn(List.of(fixedWeekdayInMonth));
@@ -62,12 +62,11 @@ class FixedWeekdayInMonthParserTest {
   }
 
   private static FixedWeekdayInMonthHolidayConfiguration getFixedWeekdayInMonth(
-    final DayOfWeek dayOfWeek,
-    final Month month,
-    final Occurrence occurrence,
-    final Year validFrom,
-    final Year validTo
-  ) {
+      final DayOfWeek dayOfWeek,
+      final Month month,
+      final Occurrence occurrence,
+      final Year validFrom,
+      final Year validTo) {
     return new FixedWeekdayInMonthHolidayConfiguration() {
 
       @Override

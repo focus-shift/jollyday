@@ -6,16 +6,14 @@ import de.focus_shift.jollyday.core.spi.FixedWeekdayRelativeToFixedHolidayConfig
 import de.focus_shift.jollyday.core.spi.Occurrence;
 import de.focus_shift.jollyday.core.spi.Relation;
 import de.focus_shift.jollyday.jackson.mapping.FixedWeekdayRelativeToFixed;
+import java.time.DayOfWeek;
+import java.time.Year;
 import org.jspecify.annotations.NonNull;
 import org.jspecify.annotations.Nullable;
 
-import java.time.DayOfWeek;
-import java.time.Year;
-
-/**
- * see {@link FixedWeekdayRelativeToFixedHolidayConfiguration}
- */
-class JacksonFixedWeekdayRelativeToFixed implements FixedWeekdayRelativeToFixedHolidayConfiguration {
+/** see {@link FixedWeekdayRelativeToFixedHolidayConfiguration} */
+class JacksonFixedWeekdayRelativeToFixed
+    implements FixedWeekdayRelativeToFixedHolidayConfiguration {
 
   private final FixedWeekdayRelativeToFixed fixedWeekdayRelativeToFixed;
 
@@ -81,8 +79,8 @@ class JacksonFixedWeekdayRelativeToFixed implements FixedWeekdayRelativeToFixedH
   @Override
   public @NonNull HolidayType holidayType() {
     return fixedWeekdayRelativeToFixed.getLocalizedType() == null
-      ? HolidayType.PUBLIC_HOLIDAY
-      : HolidayType.valueOf(fixedWeekdayRelativeToFixed.getLocalizedType().name());
+        ? HolidayType.PUBLIC_HOLIDAY
+        : HolidayType.valueOf(fixedWeekdayRelativeToFixed.getLocalizedType().name());
   }
 
   /**
@@ -93,8 +91,8 @@ class JacksonFixedWeekdayRelativeToFixed implements FixedWeekdayRelativeToFixedH
   @Override
   public @Nullable Year validFrom() {
     return fixedWeekdayRelativeToFixed.getValidFrom() == null
-      ? null
-      : Year.of(fixedWeekdayRelativeToFixed.getValidFrom());
+        ? null
+        : Year.of(fixedWeekdayRelativeToFixed.getValidFrom());
   }
 
   /**
@@ -105,8 +103,8 @@ class JacksonFixedWeekdayRelativeToFixed implements FixedWeekdayRelativeToFixedH
   @Override
   public @Nullable Year validTo() {
     return fixedWeekdayRelativeToFixed.getValidTo() == null
-      ? null
-      : Year.of(fixedWeekdayRelativeToFixed.getValidTo());
+        ? null
+        : Year.of(fixedWeekdayRelativeToFixed.getValidTo());
   }
 
   /**
@@ -117,7 +115,7 @@ class JacksonFixedWeekdayRelativeToFixed implements FixedWeekdayRelativeToFixedH
   @Override
   public @NonNull YearCycle cycle() {
     return fixedWeekdayRelativeToFixed.getEvery() == null
-      ? YearCycle.EVERY_YEAR
-      : YearCycle.valueOf(fixedWeekdayRelativeToFixed.getEvery().name());
+        ? YearCycle.EVERY_YEAR
+        : YearCycle.valueOf(fixedWeekdayRelativeToFixed.getEvery().name());
   }
 }

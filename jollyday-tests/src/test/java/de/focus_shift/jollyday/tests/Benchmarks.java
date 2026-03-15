@@ -1,17 +1,20 @@
 package de.focus_shift.jollyday.tests;
 
-import org.openjdk.jmh.results.RunResult;
-
 import static org.assertj.core.api.Assertions.assertThat;
+
+import org.openjdk.jmh.results.RunResult;
 
 public abstract class Benchmarks {
 
-  protected static void assertDeviationWithin(final RunResult result, final double referenceScore, final double maxDeviationInPercent) {
+  protected static void assertDeviationWithin(
+      final RunResult result, final double referenceScore, final double maxDeviationInPercent) {
     final double score = result.getPrimaryResult().getScore();
     final double minimumValidScore = referenceScore - (referenceScore * maxDeviationInPercent);
 
     assertThat(score)
-      .withFailMessage("The score (%s) must be greater than the minimum valid score (%s)", score, minimumValidScore)
-      .isGreaterThan(minimumValidScore);
+        .withFailMessage(
+            "The score (%s) must be greater than the minimum valid score (%s)",
+            score, minimumValidScore)
+        .isGreaterThan(minimumValidScore);
   }
 }

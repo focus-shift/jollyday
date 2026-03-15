@@ -1,23 +1,22 @@
 package de.focus_shift.jollyday.core.datasource;
 
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.mockito.Mockito.when;
+
 import de.focus_shift.jollyday.core.ManagerParameter;
 import de.focus_shift.jollyday.core.spi.HolidayCalendarConfiguration;
 import de.focus_shift.jollyday.core.spi.HolidayCalendarConfigurationService;
 import de.focus_shift.jollyday.core.spi.HolidayConfigurations;
 import de.focus_shift.jollyday.core.support.LazyServiceLoaderCache;
+import java.util.List;
+import java.util.stream.Stream;
 import org.jspecify.annotations.NonNull;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-
-import java.util.List;
-import java.util.stream.Stream;
-
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
 class ConfigurationServiceManagerTest {
@@ -37,41 +36,57 @@ class ConfigurationServiceManagerTest {
 
     when(configurationServiceCache.getServices()).thenReturn(List.of());
 
-    final IllegalStateException exception = assertThrows(IllegalStateException.class, () -> sut.getConfigurationService("configurationServiceImplClassName"));
-    assertThat(exception.getMessage()).contains("Cannot instantiate datasource instance because there is no implementations");
+    final IllegalStateException exception =
+        assertThrows(
+            IllegalStateException.class,
+            () -> sut.getConfigurationService("configurationServiceImplClassName"));
+    assertThat(exception.getMessage())
+        .contains("Cannot instantiate datasource instance because there is no implementations");
   }
 
   @Test
   void ensuresToProvideConfigurationServiceIfExactlyOneIsAvailable() {
-    when(configurationServiceCache.getServices()).thenReturn(List.of(new MockConfigurationService()));
+    when(configurationServiceCache.getServices())
+        .thenReturn(List.of(new MockConfigurationService()));
 
-    final HolidayCalendarConfigurationService configurationService = sut.getConfigurationService("configurationServiceImplClassName");
+    final HolidayCalendarConfigurationService configurationService =
+        sut.getConfigurationService("configurationServiceImplClassName");
     assertThat(configurationService).isInstanceOf(MockConfigurationService.class);
   }
 
   @Test
   void ensuresToThrowExceptionIfMultipleImplementationsAreAvailableButNoneOfThatAreConfigured() {
 
-    when(configurationServiceCache.getServices()).thenReturn(List.of(new MockConfigurationService(), new MockConfigurationService()));
+    when(configurationServiceCache.getServices())
+        .thenReturn(List.of(new MockConfigurationService(), new MockConfigurationService()));
 
-    final IllegalStateException exception = assertThrows(IllegalStateException.class, () -> sut.getConfigurationService("configurationServiceImplClassName"));
-    assertThat(exception.getMessage()).contains("Cannot instantiate datasource instance because there are two or more implementations available");
+    final IllegalStateException exception =
+        assertThrows(
+            IllegalStateException.class,
+            () -> sut.getConfigurationService("configurationServiceImplClassName"));
+    assertThat(exception.getMessage())
+        .contains(
+            "Cannot instantiate datasource instance because there are two or more implementations available");
   }
 
   @Test
   void ensuresToUseTheConfiguredConfigurationServiceIfMultipleAreOnTheClasspath() {
 
-    final MockConfigurationServiceOther mockConfigurationServiceOther = new MockConfigurationServiceOther();
-    when(configurationServiceCache.getServices()).thenReturn(List.of(new MockConfigurationService(), mockConfigurationServiceOther));
+    final MockConfigurationServiceOther mockConfigurationServiceOther =
+        new MockConfigurationServiceOther();
+    when(configurationServiceCache.getServices())
+        .thenReturn(List.of(new MockConfigurationService(), mockConfigurationServiceOther));
 
-    final HolidayCalendarConfigurationService configurationService = sut.getConfigurationService(mockConfigurationServiceOther.getClass().getName());
+    final HolidayCalendarConfigurationService configurationService =
+        sut.getConfigurationService(mockConfigurationServiceOther.getClass().getName());
     assertThat(configurationService).isInstanceOf(MockConfigurationServiceOther.class);
   }
 
   private static class MockConfigurationService implements HolidayCalendarConfigurationService {
 
     @Override
-    public @NonNull HolidayCalendarConfiguration getHolidayCalendarConfiguration(ManagerParameter parameter) {
+    public @NonNull HolidayCalendarConfiguration getHolidayCalendarConfiguration(
+        ManagerParameter parameter) {
       return new HolidayCalendarConfiguration() {
         @Override
         public @NonNull HolidayConfigurations holidays() {
@@ -96,10 +111,12 @@ class ConfigurationServiceManagerTest {
     }
   }
 
-  private static class MockConfigurationServiceOther implements HolidayCalendarConfigurationService {
+  private static class MockConfigurationServiceOther
+      implements HolidayCalendarConfigurationService {
 
     @Override
-    public @NonNull HolidayCalendarConfiguration getHolidayCalendarConfiguration(ManagerParameter parameter) {
+    public @NonNull HolidayCalendarConfiguration getHolidayCalendarConfiguration(
+        ManagerParameter parameter) {
       return new HolidayCalendarConfiguration() {
         @Override
         public @NonNull HolidayConfigurations holidays() {

@@ -1,9 +1,5 @@
 package de.focus_shift.jollyday.tests.country;
 
-import org.junit.jupiter.api.Test;
-
-import java.time.Year;
-
 import static de.focus_shift.jollyday.core.HolidayCalendar.TURKEY;
 import static de.focus_shift.jollyday.tests.CalendarCheckerApi.assertFor;
 import static java.time.Month.APRIL;
@@ -12,6 +8,9 @@ import static java.time.Month.JANUARY;
 import static java.time.Month.JULY;
 import static java.time.Month.MAY;
 import static java.time.Month.OCTOBER;
+
+import java.time.Year;
+import org.junit.jupiter.api.Test;
 
 class HolidayTRTest {
 
@@ -22,31 +21,32 @@ class HolidayTRTest {
   void ensuresHolidays() {
 
     assertFor(TURKEY)
-      .hasFixedHoliday("NEW_YEAR", JANUARY, 1)
+        .hasFixedHoliday("NEW_YEAR", JANUARY, 1)
         .validBetween(YEAR_FROM, YEAR_TO)
-      .and()
-      .hasFixedHoliday("TURKEY_CHILDRENS_DAY", APRIL, 23)
+        .and()
+        .hasFixedHoliday("TURKEY_CHILDRENS_DAY", APRIL, 23)
         .validBetween(YEAR_FROM, YEAR_TO)
-      .and()
-      .hasFixedHoliday("LABOUR_DAY", MAY, 1)
+        .and()
+        .hasFixedHoliday("LABOUR_DAY", MAY, 1)
         .validBetween(YEAR_FROM, YEAR_TO)
-      .and()
-      .hasFixedHoliday("TURKEY_COMMEMORATION_OF_ATATURK", MAY, 19)
+        .and()
+        .hasFixedHoliday("TURKEY_COMMEMORATION_OF_ATATURK", MAY, 19)
         .validBetween(Year.of(2004), YEAR_TO)
-      .and()
-      .hasFixedHoliday("TURKEY_DEMOCRATIC_UNITY_DAY", JULY, 15)
-        .validBetween(YEAR_FROM, YEAR_TO).and()
-      .hasFixedHoliday("TURKEY_VICTORY_DAY", AUGUST, 30)
-        .validBetween(Year.of(2003), YEAR_TO)
-      .and()
-      .hasFixedHoliday("TURKEY_REPUBLIC_DAY", OCTOBER, 29)
-        .validBetween(Year.of(2003), YEAR_TO)
-      .and()
-      .hasIslamicHoliday("ID_AL_FITR")
+        .and()
+        .hasFixedHoliday("TURKEY_DEMOCRATIC_UNITY_DAY", JULY, 15)
         .validBetween(YEAR_FROM, YEAR_TO)
-      .and()
-      .hasIslamicHoliday("ID_UL_ADHA")
+        .and()
+        .hasFixedHoliday("TURKEY_VICTORY_DAY", AUGUST, 30)
+        .validBetween(Year.of(2003), YEAR_TO)
+        .and()
+        .hasFixedHoliday("TURKEY_REPUBLIC_DAY", OCTOBER, 29)
+        .validBetween(Year.of(2003), YEAR_TO)
+        .and()
+        .hasIslamicHoliday("ID_AL_FITR")
         .validBetween(YEAR_FROM, YEAR_TO)
-      .check();
+        .and()
+        .hasIslamicHoliday("ID_UL_ADHA")
+        .validBetween(YEAR_FROM, YEAR_TO)
+        .check();
   }
 }

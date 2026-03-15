@@ -1,10 +1,9 @@
 package de.focus_shift.jollyday.core.parser.impl;
 
 import de.focus_shift.jollyday.core.spi.Described;
+import java.time.LocalDate;
 import org.jspecify.annotations.NonNull;
 import org.jspecify.annotations.Nullable;
-
-import java.time.LocalDate;
 
 class DescribedDateHolder {
 
@@ -16,7 +15,10 @@ class DescribedDateHolder {
     this(described, actualDate, null);
   }
 
-  DescribedDateHolder(@NonNull final Described described, @NonNull final LocalDate actualDate, @Nullable final LocalDate observedDate) {
+  DescribedDateHolder(
+      @NonNull final Described described,
+      @NonNull final LocalDate actualDate,
+      @Nullable final LocalDate observedDate) {
     this.actualDate = actualDate;
     this.observedDate = observedDate;
     this.described = described;

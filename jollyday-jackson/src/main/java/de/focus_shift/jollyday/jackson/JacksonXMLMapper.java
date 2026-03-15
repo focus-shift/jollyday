@@ -1,20 +1,18 @@
 package de.focus_shift.jollyday.jackson;
 
+import static tools.jackson.databind.PropertyNamingStrategies.UPPER_CAMEL_CASE;
+
 import de.focus_shift.jollyday.jackson.mapping.Configuration;
+import java.io.InputStream;
 import org.jspecify.annotations.NonNull;
 import tools.jackson.dataformat.xml.XmlMapper;
-
-import java.io.InputStream;
-
-import static tools.jackson.databind.PropertyNamingStrategies.UPPER_CAMEL_CASE;
 
 public class JacksonXMLMapper {
 
   private static final XmlMapper mapper = new JacksonMapperCreator().create();
 
   /**
-   * Unmarshalls the configuration from the stream. Uses <code>jackson</code> for
-   * this.
+   * Unmarshalls the configuration from the stream. Uses <code>jackson</code> for this.
    *
    * @param stream a {@link InputStream} object.
    * @return The unmarshalled configuration.
@@ -29,9 +27,7 @@ public class JacksonXMLMapper {
 
   private static class JacksonMapperCreator {
     private @NonNull XmlMapper create() {
-      return XmlMapper.builder()
-        .propertyNamingStrategy(UPPER_CAMEL_CASE)
-        .build();
+      return XmlMapper.builder().propertyNamingStrategy(UPPER_CAMEL_CASE).build();
     }
   }
 }

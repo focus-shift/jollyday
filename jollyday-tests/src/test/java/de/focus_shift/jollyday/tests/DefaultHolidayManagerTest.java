@@ -1,29 +1,5 @@
 package de.focus_shift.jollyday.tests;
 
-import de.focus_shift.jollyday.core.CalendarHierarchy;
-import de.focus_shift.jollyday.core.Holiday;
-import de.focus_shift.jollyday.core.HolidayCalendar;
-import de.focus_shift.jollyday.core.HolidayManager;
-import de.focus_shift.jollyday.core.ManagerParameter;
-import de.focus_shift.jollyday.core.ManagerParameters;
-import de.focus_shift.jollyday.core.util.CalendarUtil;
-import org.junit.jupiter.api.Nested;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInstance;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.Arguments;
-import org.junit.jupiter.params.provider.EnumSource;
-import org.junit.jupiter.params.provider.MethodSource;
-
-import java.time.LocalDate;
-import java.time.Year;
-import java.util.Calendar;
-import java.util.HashSet;
-import java.util.Locale;
-import java.util.Properties;
-import java.util.Set;
-import java.util.stream.Stream;
-
 import static de.focus_shift.jollyday.core.HolidayCalendar.GERMANY;
 import static de.focus_shift.jollyday.core.HolidayCalendar.UNITED_STATES;
 import static de.focus_shift.jollyday.core.HolidayType.OBSERVANCE;
@@ -45,6 +21,29 @@ import static java.util.Locale.US;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.junit.jupiter.api.Assertions.fail;
+
+import de.focus_shift.jollyday.core.CalendarHierarchy;
+import de.focus_shift.jollyday.core.Holiday;
+import de.focus_shift.jollyday.core.HolidayCalendar;
+import de.focus_shift.jollyday.core.HolidayManager;
+import de.focus_shift.jollyday.core.ManagerParameter;
+import de.focus_shift.jollyday.core.ManagerParameters;
+import de.focus_shift.jollyday.core.util.CalendarUtil;
+import java.time.LocalDate;
+import java.time.Year;
+import java.util.Calendar;
+import java.util.HashSet;
+import java.util.Locale;
+import java.util.Properties;
+import java.util.Set;
+import java.util.stream.Stream;
+import org.junit.jupiter.api.Nested;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.EnumSource;
+import org.junit.jupiter.params.provider.MethodSource;
 
 class DefaultHolidayManagerTest {
 
@@ -130,7 +129,7 @@ class DefaultHolidayManagerTest {
   void ensureToThrowIllegalStateExceptionIfCountryIsMissing() {
     final ManagerParameter parameter = create("NoCountry");
     assertThatThrownBy(() -> HolidayManager.getInstance(parameter))
-      .isInstanceOf(IllegalStateException.class);
+        .isInstanceOf(IllegalStateException.class);
   }
 
   @Test
@@ -157,7 +156,8 @@ class DefaultHolidayManagerTest {
     }
   }
 
-  private void assertNotUndefined(HolidayCalendar holidayCalendar, CalendarHierarchy calendarHierarchy) {
+  private void assertNotUndefined(
+      HolidayCalendar holidayCalendar, CalendarHierarchy calendarHierarchy) {
     assertThat(calendarHierarchy.getDescription()).isNotEqualTo("undefined");
     for (CalendarHierarchy calendarHierarchyChild : calendarHierarchy.getChildren().values()) {
       assertNotUndefined(holidayCalendar, calendarHierarchyChild);
@@ -176,20 +176,18 @@ class DefaultHolidayManagerTest {
   void ensureToRetrieveHolidaysByType() {
     final HolidayManager sut = HolidayManager.getInstance(create("test"));
     final Set<Holiday> holidays = sut.getHolidays(Year.of(2010), OBSERVANCE);
-    assertThat(holidays)
-      .containsOnly(new Holiday(LocalDate.of(2010, 1, 4), "", OBSERVANCE));
+    assertThat(holidays).containsOnly(new Holiday(LocalDate.of(2010, 1, 4), "", OBSERVANCE));
   }
 
   private static Stream<Arguments> firstLevel() {
     return Stream.of(
-      Arguments.of("level1_1", test_days_l1_1),
-      Arguments.of("level1_2", test_days_l1_2)
-    );
+        Arguments.of("level1_1", test_days_l1_1), Arguments.of("level1_2", test_days_l1_2));
   }
 
   @ParameterizedTest
   @MethodSource("firstLevel")
-  void ensureToRetrieveHolidaysFromFirstLevelHierarchies(final String firstLevelName, final Set<LocalDate> expectedHolidays) {
+  void ensureToRetrieveHolidaysFromFirstLevelHierarchies(
+      final String firstLevelName, final Set<LocalDate> expectedHolidays) {
     final HolidayManager sut = HolidayManager.getInstance(create("test"));
     final Set<Holiday> actualHolidays = sut.getHolidays(Year.of(2010), firstLevelName);
     assertThat(actualHolidays).isNotNull();
@@ -215,24 +213,27 @@ class DefaultHolidayManagerTest {
   @Test
   void ensureToTestIntervalToRetrieveHolidays() {
     final HolidayManager sut = HolidayManager.getInstance(create("test"));
-    final Set<Holiday> holidays = sut.getHolidays(LocalDate.of(2010, 1, 1), LocalDate.of(2010, 1, 31), "level1_2");
+    final Set<Holiday> holidays =
+        sut.getHolidays(LocalDate.of(2010, 1, 1), LocalDate.of(2010, 1, 31), "level1_2");
     assertThat(holidays).isNotNull();
-    assertDates(Set.of(LocalDate.of(2010, 1, 4), LocalDate.of(2010, 1, 1), LocalDate.of(2010, 1, 18)), holidays);
+    assertDates(
+        Set.of(LocalDate.of(2010, 1, 4), LocalDate.of(2010, 1, 1), LocalDate.of(2010, 1, 18)),
+        holidays);
   }
 
   @Test
   void ensureToTestIntervalToRetrieveHolidaysByType() {
     final HolidayManager sut = HolidayManager.getInstance(create("test"));
-    final Set<Holiday> holidays = sut.getHolidays(LocalDate.of(2010, 1, 1), LocalDate.of(2010, 1, 31), OBSERVANCE);
-    assertThat(holidays)
-      .containsOnly(new Holiday(LocalDate.of(2010, 1, 4), "", OBSERVANCE));
+    final Set<Holiday> holidays =
+        sut.getHolidays(LocalDate.of(2010, 1, 1), LocalDate.of(2010, 1, 31), OBSERVANCE);
+    assertThat(holidays).containsOnly(new Holiday(LocalDate.of(2010, 1, 4), "", OBSERVANCE));
   }
 
   @Test
   void ensureThatExceptionIsThrownOnSubConfigurationWithSameId() {
     final ManagerParameter parameter = create("test_fail");
     assertThatThrownBy(() -> HolidayManager.getInstance(parameter))
-      .isInstanceOf(IllegalArgumentException.class);
+        .isInstanceOf(IllegalArgumentException.class);
   }
 
   @Test
@@ -303,25 +304,27 @@ class DefaultHolidayManagerTest {
 
     private Stream<Arguments> provideLocaleAndHolidayCalendar() {
       return Stream.of(
-        Arguments.of(Locale.GERMANY, HolidayCalendar.GERMANY),
-        Arguments.of(Locale.FRANCE, HolidayCalendar.FRANCE)
-      );
+          Arguments.of(Locale.GERMANY, HolidayCalendar.GERMANY),
+          Arguments.of(Locale.FRANCE, HolidayCalendar.FRANCE));
     }
 
     @ParameterizedTest
     @MethodSource("provideLocaleAndHolidayCalendar")
-    void ensureManagerAreEqualWithLocaleAndHolidayCalendarInstance(final Locale locale, final HolidayCalendar holidayCalendar) {
+    void ensureManagerAreEqualWithLocaleAndHolidayCalendarInstance(
+        final Locale locale, final HolidayCalendar holidayCalendar) {
       final Locale defaultLocale = Locale.getDefault();
       Locale.setDefault(locale);
       final HolidayManager defaultManager = HolidayManager.getInstance();
-      final HolidayManager countryManager = HolidayManager.getInstance(ManagerParameters.create(holidayCalendar));
+      final HolidayManager countryManager =
+          HolidayManager.getInstance(ManagerParameters.create(holidayCalendar));
       assertThat(countryManager).isEqualTo(defaultManager);
       Locale.setDefault(defaultLocale);
     }
 
     @ParameterizedTest
     @EnumSource(HolidayCalendar.class)
-    void ensuresManagerIsDifferentWithDifferentDefaultLocales(final HolidayCalendar countryCalendar) {
+    void ensuresManagerIsDifferentWithDifferentDefaultLocales(
+        final HolidayCalendar countryCalendar) {
       final Locale defaultLocale = Locale.getDefault();
       if (countryCalendar == UNITED_STATES) {
         Locale.setDefault(FRANCE);
@@ -329,7 +332,8 @@ class DefaultHolidayManagerTest {
         Locale.setDefault(US);
       }
       final HolidayManager defaultManager = HolidayManager.getInstance();
-      final HolidayManager countryManager = HolidayManager.getInstance(ManagerParameters.create(countryCalendar, null));
+      final HolidayManager countryManager =
+          HolidayManager.getInstance(ManagerParameters.create(countryCalendar, null));
       assertThat(countryManager).isNotEqualTo(defaultManager);
       Locale.setDefault(defaultLocale);
     }

@@ -1,23 +1,22 @@
 package de.focus_shift.jollyday.core.spi;
 
-import org.jspecify.annotations.NonNull;
-
 import java.time.MonthDay;
+import org.jspecify.annotations.NonNull;
 
 /**
  * Represents the configuration of a holiday that can be
  *
  * <ul>
- *   <li>Movable</li>
- *   <li>Limited</li>
- *   <li>Described</li>
+ *   <li>Movable
+ *   <li>Limited
+ *   <li>Described
  * </ul>
- * <p>
- * and occurs on the same day and month on every year.
- * <p>
- * Example: A holiday on the first January, like New Year.
- * <p>
- * The {@link de.focus_shift.jollyday.core.parser.impl.FixedParser} is used.
+ *
+ * <p>and occurs on the same day and month on every year.
+ *
+ * <p>Example: A holiday on the first January, like New Year.
+ *
+ * <p>The {@link de.focus_shift.jollyday.core.parser.impl.FixedParser} is used.
  */
 public interface FixedHolidayConfiguration extends Described, Movable, Limited {
 
@@ -27,5 +26,4 @@ public interface FixedHolidayConfiguration extends Described, Movable, Limited {
    * @return month and day on which this holiday will occur
    */
   @NonNull MonthDay day();
-
 }

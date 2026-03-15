@@ -6,13 +6,13 @@ import org.jspecify.annotations.NonNull;
  * Represents the configuration of an ethiopian orthodox holiday that can be
  *
  * <ul>
- *   <li>Limited</li>
- *   <li>Described</li>
+ *   <li>Limited
+ *   <li>Described
  * </ul>
- * <p>
- * and has a special {@link EthiopianOrthodoxHolidayType}.
- * <p>
- * The {@link de.focus_shift.jollyday.core.parser.impl.EthiopianOrthodoxHolidayParser} is used.
+ *
+ * <p>and has a special {@link EthiopianOrthodoxHolidayType}.
+ *
+ * <p>The {@link de.focus_shift.jollyday.core.parser.impl.EthiopianOrthodoxHolidayParser} is used.
  */
 public interface EthiopianOrthodoxHolidayConfiguration extends Described, Limited {
 
