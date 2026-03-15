@@ -3,13 +3,10 @@ package de.focus_shift.jollyday.jaxb;
 import de.focus_shift.jollyday.core.spi.HolidayCalendarConfiguration;
 import de.focus_shift.jollyday.core.spi.HolidayConfigurations;
 import de.focus_shift.jollyday.jaxb.mapping.Configuration;
+import java.util.stream.Stream;
 import org.jspecify.annotations.NonNull;
 
-import java.util.stream.Stream;
-
-/**
- * see {@link HolidayCalendarConfiguration}
- */
+/** see {@link HolidayCalendarConfiguration} */
 class JaxbConfiguration implements HolidayCalendarConfiguration {
 
   private final Configuration xmlConfiguration;
@@ -37,5 +34,4 @@ class JaxbConfiguration implements HolidayCalendarConfiguration {
   public @NonNull String description() {
     return xmlConfiguration.getDescription();
   }
-
 }

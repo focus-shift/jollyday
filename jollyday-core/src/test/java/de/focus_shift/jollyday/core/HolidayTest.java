@@ -1,15 +1,14 @@
 package de.focus_shift.jollyday.core;
 
-import org.junit.jupiter.api.Test;
-
-import java.time.LocalDate;
-import java.util.Locale;
-
 import static de.focus_shift.jollyday.core.HolidayType.OBSERVANCE;
 import static de.focus_shift.jollyday.core.HolidayType.PUBLIC_HOLIDAY;
 import static java.util.Locale.ENGLISH;
 import static java.util.Locale.GERMAN;
 import static org.assertj.core.api.Assertions.assertThat;
+
+import java.time.LocalDate;
+import java.util.Locale;
+import org.junit.jupiter.api.Test;
 
 class HolidayTest {
 
@@ -53,7 +52,8 @@ class HolidayTest {
   @Test
   void ensureToReturnObservedDateIfPresent() {
     final LocalDate observedDate = LocalDate.of(2011, 2, 10);
-    final Holiday holiday = new Holiday(LocalDate.of(2011, 2, 2), observedDate, "CHRISTMAS", PUBLIC_HOLIDAY);
+    final Holiday holiday =
+        new Holiday(LocalDate.of(2011, 2, 2), observedDate, "CHRISTMAS", PUBLIC_HOLIDAY);
     assertThat(holiday.getDate()).isEqualTo(observedDate);
   }
 
@@ -76,9 +76,7 @@ class HolidayTest {
   @Test
   void ensuresHolidayAreNotEqual() {
     final Holiday h1 = new Holiday(LocalDate.of(2011, 2, 2), "CHRISTMAS", PUBLIC_HOLIDAY);
-    assertThat(h1)
-      .isNotEqualTo(null)
-      .isNotEqualTo(new Object());
+    assertThat(h1).isNotEqualTo(null).isNotEqualTo(new Object());
 
     final Holiday h2 = new Holiday(LocalDate.of(2011, 2, 1), "CHRISTMAS", PUBLIC_HOLIDAY);
     assertThat(h1).isNotEqualTo(h2);

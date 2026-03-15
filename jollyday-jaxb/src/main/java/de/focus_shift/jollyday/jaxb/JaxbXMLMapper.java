@@ -7,18 +7,15 @@ import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBElement;
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.Unmarshaller;
+import java.io.InputStream;
 import org.jspecify.annotations.NonNull;
 import org.jspecify.annotations.Nullable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.InputStream;
-
 public class JaxbXMLMapper {
 
-  /**
-   * the package name to search for the generated java classes.
-   */
+  /** the package name to search for the generated java classes. */
   private static final String PACKAGE = "de.focus_shift.jollyday.jaxb.mapping";
 
   private static final Logger LOG = LoggerFactory.getLogger(JaxbXMLMapper.class);
@@ -26,8 +23,7 @@ public class JaxbXMLMapper {
   private static final JAXBContext jaxbContext = new JAXBContextCreator().create();
 
   /**
-   * Unmarshalls the configuration from the stream. Uses <code>JAXB</code> for
-   * this.
+   * Unmarshalls the configuration from the stream. Uses <code>JAXB</code> for this.
    *
    * @param stream a {@link java.io.InputStream} object.
    * @return The unmarshalled configuration.
@@ -39,7 +35,9 @@ public class JaxbXMLMapper {
 
     try {
       final Unmarshaller um = jaxbContext.createUnmarshaller();
-      @SuppressWarnings("unchecked") final JAXBElement<Configuration> jaxbElement = (JAXBElement<Configuration>) um.unmarshal(stream);
+      @SuppressWarnings("unchecked")
+      final JAXBElement<Configuration> jaxbElement =
+          (JAXBElement<Configuration>) um.unmarshal(stream);
       return jaxbElement.getValue();
     } catch (JAXBException exception) {
       throw new IllegalStateException("Cannot parse holidays XML file.", exception);
@@ -56,14 +54,17 @@ public class JaxbXMLMapper {
       try {
         ctx = JAXBContext.newInstance(JaxbXMLMapper.PACKAGE, ClassLoadingUtil.getClassloader());
       } catch (JAXBException e) {
-        LOG.warn("Could not create JAXB context using the current classloader from ClassLoadingUtil. Falling back to ObjectFactory class classloader.");
+        LOG.warn(
+            "Could not create JAXB context using the current classloader from ClassLoadingUtil. Falling back to ObjectFactory class classloader.");
       }
 
       if (ctx == null) {
         try {
-          ctx = JAXBContext.newInstance(JaxbXMLMapper.PACKAGE, ObjectFactory.class.getClassLoader());
+          ctx =
+              JAXBContext.newInstance(JaxbXMLMapper.PACKAGE, ObjectFactory.class.getClassLoader());
         } catch (JAXBException exception) {
-          throw new IllegalStateException("Could not create JAXB context using ObjectFactory classloader.", exception);
+          throw new IllegalStateException(
+              "Could not create JAXB context using ObjectFactory classloader.", exception);
         }
       }
 

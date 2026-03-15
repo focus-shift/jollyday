@@ -10,8 +10,7 @@ public class IslamicHoliday extends MoveableHoliday {
   /**
    * Gets the value of the type property.
    *
-   * @return possible object is
-   * {@link IslamicHolidayType }
+   * @return possible object is {@link IslamicHolidayType }
    */
   public IslamicHolidayType getType() {
     return type;
@@ -20,11 +19,9 @@ public class IslamicHoliday extends MoveableHoliday {
   /**
    * Sets the value of the type property.
    *
-   * @param value allowed object is
-   *              {@link IslamicHolidayType }
+   * @param value allowed object is {@link IslamicHolidayType }
    */
   public void setType(IslamicHolidayType value) {
     this.type = value;
   }
-
 }

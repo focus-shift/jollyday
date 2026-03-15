@@ -3,7 +3,6 @@ package de.focus_shift.jollyday.tests;
 import de.focus_shift.jollyday.core.HolidayCalendar;
 import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.tests.CalendarChecker.Adjuster;
-
 import java.time.DayOfWeek;
 import java.time.Month;
 import java.time.Year;
@@ -12,10 +11,12 @@ public interface CalendarCheckerApi {
 
   /**
    * Creates a new instance of <code>{@link CalendarChecker}</code>.
-   * <p>
-   * Calling multiple methods on the returned {@link CalendarChecker} is safe as it only interacts with the {@link CalendarCheckerApi}
-   * <p>
-   * Example:
+   *
+   * <p>Calling multiple methods on the returned {@link CalendarChecker} is safe as it only
+   * interacts with the {@link CalendarCheckerApi}
+   *
+   * <p>Example:
+   *
    * <pre><code class='java'> // you can chain multiple holiday checks
    * assertFor(GERMANY)
    *   .hasFixedHoliday("NEW_YEAR", JANUARY, 1).and()
@@ -40,8 +41,8 @@ public interface CalendarCheckerApi {
      * Checks for a fixed holiday with the given property key, month, and day.
      *
      * @param propertyKey the property key of the holiday
-     * @param month       the month of the holiday
-     * @param day         the day of the holiday
+     * @param month the month of the holiday
+     * @param day the day of the holiday
      * @return properties for further assertions
      */
     Properties hasFixedHoliday(final String propertyKey, final Month month, final int day);
@@ -50,12 +51,13 @@ public interface CalendarCheckerApi {
      * Checks for a fixed holiday with the given property key, month, day, and holiday type.
      *
      * @param propertyKey the property key of the holiday
-     * @param month       the month of the holiday
-     * @param day         the day of the holiday
-     * @param type        the type of the holiday
+     * @param month the month of the holiday
+     * @param day the day of the holiday
+     * @param type the type of the holiday
      * @return properties for further assertions
      */
-    Properties hasFixedHoliday(final String propertyKey, final Month month, final int day, final HolidayType type);
+    Properties hasFixedHoliday(
+        final String propertyKey, final Month month, final int day, final HolidayType type);
 
     /**
      * Checks for a Christian holiday with the given property key.
@@ -69,7 +71,7 @@ public interface CalendarCheckerApi {
      * Checks for a Christian holiday with the given property key and holiday type.
      *
      * @param propertyKey the property key of the holiday
-     * @param type        the type of the holiday
+     * @param type the type of the holiday
      * @return properties for further assertions
      */
     Properties hasChristianHoliday(final String propertyKey, final HolidayType type);
@@ -86,7 +88,7 @@ public interface CalendarCheckerApi {
      * Checks for an Islamic holiday with the given property key and holiday type.
      *
      * @param propertyKey the property key of the holiday
-     * @param type        the type of the holiday
+     * @param type the type of the holiday
      * @return properties for further assertions
      */
     Properties hasIslamicHoliday(final String propertyKey, final HolidayType type);
@@ -103,14 +105,13 @@ public interface CalendarCheckerApi {
      * Checks for an Ethiopian Orthodox holiday with the given property key and holiday type.
      *
      * @param propertyKey the property key of the holiday
-     * @param type        the type of the holiday
+     * @param type the type of the holiday
      * @return properties for further assertions
      */
     Properties hasEthiopianOrthodoxHoliday(final String propertyKey, final HolidayType type);
   }
 
-  interface Properties extends Subdivision, Between, Shift, Check {
-  }
+  interface Properties extends Subdivision, Between, Shift, Check {}
 
   interface Subdivision extends Check {
     /**
@@ -143,7 +144,7 @@ public interface CalendarCheckerApi {
      * Specifies that the holiday is valid between the given years.
      *
      * @param from the starting year
-     * @param to   the ending year
+     * @param to the ending year
      * @return properties for further assertions
      */
     Properties validBetween(Year from, Year to);
@@ -152,7 +153,7 @@ public interface CalendarCheckerApi {
      * Specifies that the holiday is not valid between the given years.
      *
      * @param from the starting year
-     * @param to   the ending year
+     * @param to the ending year
      * @return properties for further assertions
      */
     Properties notValidBetween(Year from, Year to);
@@ -163,17 +164,18 @@ public interface CalendarCheckerApi {
      * Specifies that the holiday can be moved from one day of the week to another.
      *
      * @param from the original day of the week
-     * @param to   the target day of the week
+     * @param to the target day of the week
      * @return properties for further assertions
      */
     Properties canBeMovedFrom(DayOfWeek from, DayOfWeek to);
 
     /**
-     * Specifies that the holiday can be moved from one day of the week to another using an adjuster.
+     * Specifies that the holiday can be moved from one day of the week to another using an
+     * adjuster.
      *
-     * @param from     the original day of the week
+     * @param from the original day of the week
      * @param adjuster the adjuster to use for moving
-     * @param to       the target day of the week
+     * @param to the target day of the week
      * @return properties for further assertions
      */
     Properties canBeMovedFrom(DayOfWeek from, Adjuster adjuster, DayOfWeek to);
@@ -187,9 +189,7 @@ public interface CalendarCheckerApi {
      */
     Holiday and();
 
-    /**
-     * Performs the holiday checks and assertions.
-     */
+    /** Performs the holiday checks and assertions. */
     void check();
   }
 }

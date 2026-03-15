@@ -1,11 +1,10 @@
 package de.focus_shift.jollyday.core.parameter;
 
 import de.focus_shift.jollyday.core.util.ResourceUtil;
-import org.jspecify.annotations.NonNull;
-import org.jspecify.annotations.Nullable;
-
 import java.net.URL;
 import java.util.Properties;
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
 
 public class CalendarPartManagerParameter extends BaseManagerParameter {
 
@@ -14,7 +13,8 @@ public class CalendarPartManagerParameter extends BaseManagerParameter {
 
   private final String calendarPart;
 
-  public CalendarPartManagerParameter(@NonNull final String calendarPart, @Nullable final Properties properties) {
+  public CalendarPartManagerParameter(
+      @NonNull final String calendarPart, @Nullable final Properties properties) {
     super(properties);
     this.calendarPart = calendarPart;
   }

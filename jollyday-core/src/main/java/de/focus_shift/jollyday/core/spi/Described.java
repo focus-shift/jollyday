@@ -4,9 +4,9 @@ import de.focus_shift.jollyday.core.HolidayType;
 import org.jspecify.annotations.NonNull;
 
 /**
- * Provides the functionality to describe a holiday with a
- * name represented by the `descriptionPropertiesKey` and a
- * `holidayType` holiday type that can be one of the provides {@link HolidayType}s
+ * Provides the functionality to describe a holiday with a name represented by the
+ * `descriptionPropertiesKey` and a `holidayType` holiday type that can be one of the provides
+ * {@link HolidayType}s
  */
 public interface Described {
 
@@ -18,8 +18,8 @@ public interface Described {
   @NonNull String descriptionPropertiesKey();
 
   /**
-   * Represents the type of the holiday.
-   * Different holiday types are available in {@link HolidayType}
+   * Represents the type of the holiday. Different holiday types are available in {@link
+   * HolidayType}
    *
    * @return the holiday type
    */

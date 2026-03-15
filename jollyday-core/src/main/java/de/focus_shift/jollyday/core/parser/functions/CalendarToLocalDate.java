@@ -1,14 +1,13 @@
 package de.focus_shift.jollyday.core.parser.functions;
 
-import org.jspecify.annotations.NonNull;
+import static java.util.Calendar.DAY_OF_MONTH;
+import static java.util.Calendar.MONTH;
+import static java.util.Calendar.YEAR;
 
 import java.time.LocalDate;
 import java.util.Calendar;
 import java.util.function.Function;
-
-import static java.util.Calendar.DAY_OF_MONTH;
-import static java.util.Calendar.MONTH;
-import static java.util.Calendar.YEAR;
+import org.jspecify.annotations.NonNull;
 
 public class CalendarToLocalDate implements Function<Calendar, LocalDate> {
 

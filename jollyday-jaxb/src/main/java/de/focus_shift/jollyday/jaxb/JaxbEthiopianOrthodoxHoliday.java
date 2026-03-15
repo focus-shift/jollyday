@@ -3,14 +3,11 @@ package de.focus_shift.jollyday.jaxb;
 import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.EthiopianOrthodoxHolidayConfiguration;
 import de.focus_shift.jollyday.jaxb.mapping.EthiopianOrthodoxHoliday;
+import java.time.Year;
 import org.jspecify.annotations.NonNull;
 import org.jspecify.annotations.Nullable;
 
-import java.time.Year;
-
-/**
- * see {@link EthiopianOrthodoxHolidayConfiguration}
- */
+/** see {@link EthiopianOrthodoxHolidayConfiguration} */
 class JaxbEthiopianOrthodoxHoliday implements EthiopianOrthodoxHolidayConfiguration {
 
   private final EthiopianOrthodoxHoliday ethiopianOrthodoxHoliday;
@@ -27,8 +24,8 @@ class JaxbEthiopianOrthodoxHoliday implements EthiopianOrthodoxHolidayConfigurat
   @Override
   public @NonNull String descriptionPropertiesKey() {
     return ethiopianOrthodoxHoliday.getDescriptionPropertiesKey() == null
-      ? descriptionPropertiesKeyPrefix() + descriptionPropertiesKeyPrefixSeparator() + type()
-      : ethiopianOrthodoxHoliday.getDescriptionPropertiesKey();
+        ? descriptionPropertiesKeyPrefix() + descriptionPropertiesKeyPrefixSeparator() + type()
+        : ethiopianOrthodoxHoliday.getDescriptionPropertiesKey();
   }
 
   /**
@@ -39,8 +36,8 @@ class JaxbEthiopianOrthodoxHoliday implements EthiopianOrthodoxHolidayConfigurat
   @Override
   public @NonNull HolidayType holidayType() {
     return ethiopianOrthodoxHoliday.getLocalizedType() == null
-      ? HolidayType.PUBLIC_HOLIDAY
-      : HolidayType.valueOf(ethiopianOrthodoxHoliday.getLocalizedType().name());
+        ? HolidayType.PUBLIC_HOLIDAY
+        : HolidayType.valueOf(ethiopianOrthodoxHoliday.getLocalizedType().name());
   }
 
   /**
@@ -61,8 +58,8 @@ class JaxbEthiopianOrthodoxHoliday implements EthiopianOrthodoxHolidayConfigurat
   @Override
   public @Nullable Year validFrom() {
     return ethiopianOrthodoxHoliday.getValidFrom() == null
-      ? null
-      : Year.of(ethiopianOrthodoxHoliday.getValidFrom());
+        ? null
+        : Year.of(ethiopianOrthodoxHoliday.getValidFrom());
   }
 
   /**
@@ -73,8 +70,8 @@ class JaxbEthiopianOrthodoxHoliday implements EthiopianOrthodoxHolidayConfigurat
   @Override
   public @Nullable Year validTo() {
     return ethiopianOrthodoxHoliday.getValidTo() == null
-      ? null
-      : Year.of(ethiopianOrthodoxHoliday.getValidTo());
+        ? null
+        : Year.of(ethiopianOrthodoxHoliday.getValidTo());
   }
 
   /**
@@ -85,7 +82,7 @@ class JaxbEthiopianOrthodoxHoliday implements EthiopianOrthodoxHolidayConfigurat
   @Override
   public @NonNull YearCycle cycle() {
     return ethiopianOrthodoxHoliday.getEvery() == null
-      ? YearCycle.EVERY_YEAR
-      : YearCycle.valueOf(ethiopianOrthodoxHoliday.getEvery().name());
+        ? YearCycle.EVERY_YEAR
+        : YearCycle.valueOf(ethiopianOrthodoxHoliday.getEvery().name());
   }
 }

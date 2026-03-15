@@ -3,17 +3,14 @@ package de.focus_shift.jollyday.jackson;
 import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.FixedHolidayConfiguration;
 import de.focus_shift.jollyday.jackson.mapping.Fixed;
-import org.jspecify.annotations.NonNull;
-import org.jspecify.annotations.Nullable;
-
 import java.time.Month;
 import java.time.MonthDay;
 import java.time.Year;
 import java.util.List;
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
 
-/**
- * see {@link FixedHolidayConfiguration}
- */
+/** see {@link FixedHolidayConfiguration} */
 class JacksonFixed implements FixedHolidayConfiguration {
 
   private final Fixed fixed;
@@ -50,8 +47,8 @@ class JacksonFixed implements FixedHolidayConfiguration {
   @Override
   public @NonNull HolidayType holidayType() {
     return fixed.getLocalizedType() == null
-      ? HolidayType.PUBLIC_HOLIDAY
-      : HolidayType.valueOf(fixed.getLocalizedType().name());
+        ? HolidayType.PUBLIC_HOLIDAY
+        : HolidayType.valueOf(fixed.getLocalizedType().name());
   }
 
   /**
@@ -61,9 +58,7 @@ class JacksonFixed implements FixedHolidayConfiguration {
    */
   @Override
   public @Nullable Year validFrom() {
-    return fixed.getValidFrom() == null
-      ? null
-      : Year.of(fixed.getValidFrom());
+    return fixed.getValidFrom() == null ? null : Year.of(fixed.getValidFrom());
   }
 
   /**
@@ -73,9 +68,7 @@ class JacksonFixed implements FixedHolidayConfiguration {
    */
   @Override
   public @Nullable Year validTo() {
-    return fixed.getValidTo() == null
-      ? null
-      : Year.of(fixed.getValidTo());
+    return fixed.getValidTo() == null ? null : Year.of(fixed.getValidTo());
   }
 
   /**
@@ -86,8 +79,8 @@ class JacksonFixed implements FixedHolidayConfiguration {
   @Override
   public @NonNull YearCycle cycle() {
     return fixed.getEvery() == null
-      ? YearCycle.EVERY_YEAR
-      : YearCycle.valueOf(fixed.getEvery().name());
+        ? YearCycle.EVERY_YEAR
+        : YearCycle.valueOf(fixed.getEvery().name());
   }
 
   /**
@@ -98,8 +91,8 @@ class JacksonFixed implements FixedHolidayConfiguration {
   @Override
   public @NonNull List<MovingCondition> conditions() {
     return fixed.getMovingCondition().stream()
-      .map(JacksonMovingCondition::new)
-      .map(MovingCondition.class::cast)
-      .toList();
+        .map(JacksonMovingCondition::new)
+        .map(MovingCondition.class::cast)
+        .toList();
   }
 }

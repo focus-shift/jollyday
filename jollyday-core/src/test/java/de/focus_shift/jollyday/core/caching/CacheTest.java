@@ -1,28 +1,29 @@
 package de.focus_shift.jollyday.core.caching;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 import org.jspecify.annotations.NonNull;
 import org.junit.jupiter.api.Test;
-
-import static org.assertj.core.api.Assertions.assertThat;
 
 class CacheTest {
 
   @Test
   void ensureToWriteIntoCacheAndGetSameValueWithSameKey() {
-    final int[] callCounter = new int[]{0};
+    final int[] callCounter = new int[] {0};
 
-    final Cache.ValueHandler<String> valueHandler = new Cache.ValueHandler<>() {
-      @Override
-      public @NonNull String getKey() {
-        return "key";
-      }
+    final Cache.ValueHandler<String> valueHandler =
+        new Cache.ValueHandler<>() {
+          @Override
+          public @NonNull String getKey() {
+            return "key";
+          }
 
-      @Override
-      public @NonNull String createValue() {
-        callCounter[0]++;
-        return "value";
-      }
-    };
+          @Override
+          public @NonNull String createValue() {
+            callCounter[0]++;
+            return "value";
+          }
+        };
 
     final Cache<String> stringCache = new Cache<>();
     assertThat(stringCache.get(valueHandler)).isEqualTo("value");
@@ -32,19 +33,20 @@ class CacheTest {
 
   @Test
   void ensureToWriteIntoCacheWithDifferentKeys() {
-    final int[] callCounter = new int[]{0, 0};
+    final int[] callCounter = new int[] {0, 0};
 
-    final Cache.ValueHandler<String> valueHandler = new Cache.ValueHandler<>() {
-      @Override
-      public @NonNull String getKey() {
-        return String.valueOf(callCounter[1]++);
-      }
+    final Cache.ValueHandler<String> valueHandler =
+        new Cache.ValueHandler<>() {
+          @Override
+          public @NonNull String getKey() {
+            return String.valueOf(callCounter[1]++);
+          }
 
-      @Override
-      public @NonNull String createValue() {
-        return "value" + callCounter[0]++;
-      }
-    };
+          @Override
+          public @NonNull String createValue() {
+            return "value" + callCounter[0]++;
+          }
+        };
 
     final Cache<String> stringCache = new Cache<>();
     assertThat(stringCache.get(valueHandler)).isEqualTo("value0");
@@ -54,20 +56,21 @@ class CacheTest {
 
   @Test
   void ensureToClearTheCacheSoThatTheSecondCallWasNotCachedAndMustBeCreatedAgain() {
-    final int[] callCounter = new int[]{0};
+    final int[] callCounter = new int[] {0};
 
-    final Cache.ValueHandler<String> valueHandler = new Cache.ValueHandler<>() {
-      @Override
-      public @NonNull String getKey() {
-        return "key";
-      }
+    final Cache.ValueHandler<String> valueHandler =
+        new Cache.ValueHandler<>() {
+          @Override
+          public @NonNull String getKey() {
+            return "key";
+          }
 
-      @Override
-      public @NonNull String createValue() {
-        callCounter[0]++;
-        return "value";
-      }
-    };
+          @Override
+          public @NonNull String createValue() {
+            callCounter[0]++;
+            return "value";
+          }
+        };
 
     final Cache<String> stringCache = new Cache<>();
     assertThat(stringCache.get(valueHandler)).isEqualTo("value");

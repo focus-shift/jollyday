@@ -1,13 +1,12 @@
 package de.focus_shift.jollyday.core.parameter;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Properties;
-
-import static org.assertj.core.api.Assertions.assertThat;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 class UrlManagerParameterTest {
 
@@ -38,7 +37,6 @@ class UrlManagerParameterTest {
 
   @Test
   void ensureToGetCorrectToString() {
-    assertThat(sut)
-      .hasToString("UrlManagerParameter - https://www.example.org");
+    assertThat(sut).hasToString("UrlManagerParameter - https://www.example.org");
   }
 }

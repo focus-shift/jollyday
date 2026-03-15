@@ -1,22 +1,19 @@
 package de.focus_shift.jollyday.jaxb;
 
+import static de.focus_shift.jollyday.jaxb.mapping.ChronologyType.JULIAN;
+
 import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.ChristianHolidayConfiguration;
 import de.focus_shift.jollyday.jaxb.mapping.ChristianHoliday;
-import org.jspecify.annotations.NonNull;
-import org.jspecify.annotations.Nullable;
-import org.threeten.extra.chrono.JulianChronology;
-
 import java.time.Year;
 import java.time.chrono.Chronology;
 import java.time.chrono.IsoChronology;
 import java.util.List;
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
+import org.threeten.extra.chrono.JulianChronology;
 
-import static de.focus_shift.jollyday.jaxb.mapping.ChronologyType.JULIAN;
-
-/**
- * see {@link ChristianHolidayConfiguration}
- */
+/** see {@link ChristianHolidayConfiguration} */
 class JaxbChristianHoliday implements ChristianHolidayConfiguration {
 
   private final ChristianHoliday christianHoliday;
@@ -38,8 +35,8 @@ class JaxbChristianHoliday implements ChristianHolidayConfiguration {
   @Override
   public @NonNull Chronology chronology() {
     return christianHoliday.getChronology() == JULIAN
-      ? JulianChronology.INSTANCE
-      : IsoChronology.INSTANCE;
+        ? JulianChronology.INSTANCE
+        : IsoChronology.INSTANCE;
   }
 
   /**
@@ -50,8 +47,8 @@ class JaxbChristianHoliday implements ChristianHolidayConfiguration {
   @Override
   public @NonNull String descriptionPropertiesKey() {
     return christianHoliday.getDescriptionPropertiesKey() == null
-      ? descriptionPropertiesKeyPrefix() + descriptionPropertiesKeyPrefixSeparator() + type()
-      : christianHoliday.getDescriptionPropertiesKey();
+        ? descriptionPropertiesKeyPrefix() + descriptionPropertiesKeyPrefixSeparator() + type()
+        : christianHoliday.getDescriptionPropertiesKey();
   }
 
   /**
@@ -62,8 +59,8 @@ class JaxbChristianHoliday implements ChristianHolidayConfiguration {
   @Override
   public @NonNull HolidayType holidayType() {
     return christianHoliday.getLocalizedType() == null
-      ? HolidayType.PUBLIC_HOLIDAY
-      : HolidayType.valueOf(christianHoliday.getLocalizedType().name());
+        ? HolidayType.PUBLIC_HOLIDAY
+        : HolidayType.valueOf(christianHoliday.getLocalizedType().name());
   }
 
   /**
@@ -74,8 +71,8 @@ class JaxbChristianHoliday implements ChristianHolidayConfiguration {
   @Override
   public @Nullable Year validFrom() {
     return christianHoliday.getValidFrom() == null
-      ? null
-      : Year.of(christianHoliday.getValidFrom());
+        ? null
+        : Year.of(christianHoliday.getValidFrom());
   }
 
   /**
@@ -85,9 +82,7 @@ class JaxbChristianHoliday implements ChristianHolidayConfiguration {
    */
   @Override
   public @Nullable Year validTo() {
-    return christianHoliday.getValidTo() == null
-      ? null
-      : Year.of(christianHoliday.getValidTo());
+    return christianHoliday.getValidTo() == null ? null : Year.of(christianHoliday.getValidTo());
   }
 
   /**
@@ -98,8 +93,8 @@ class JaxbChristianHoliday implements ChristianHolidayConfiguration {
   @Override
   public @NonNull YearCycle cycle() {
     return christianHoliday.getEvery() == null
-      ? YearCycle.EVERY_YEAR
-      : YearCycle.valueOf(christianHoliday.getEvery().name());
+        ? YearCycle.EVERY_YEAR
+        : YearCycle.valueOf(christianHoliday.getEvery().name());
   }
 
   /**
@@ -110,8 +105,8 @@ class JaxbChristianHoliday implements ChristianHolidayConfiguration {
   @Override
   public @NonNull List<MovingCondition> conditions() {
     return christianHoliday.getMovingCondition().stream()
-      .map(JaxbMovingCondition::new)
-      .map(MovingCondition.class::cast)
-      .toList();
+        .map(JaxbMovingCondition::new)
+        .map(MovingCondition.class::cast)
+        .toList();
   }
 }

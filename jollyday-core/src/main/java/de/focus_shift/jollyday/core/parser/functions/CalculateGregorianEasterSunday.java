@@ -1,13 +1,12 @@
 package de.focus_shift.jollyday.core.parser.functions;
 
-import org.jspecify.annotations.NonNull;
+import static java.time.Month.APRIL;
+import static java.time.Month.MARCH;
 
 import java.time.LocalDate;
 import java.time.Year;
 import java.util.function.Function;
-
-import static java.time.Month.APRIL;
-import static java.time.Month.MARCH;
+import org.jspecify.annotations.NonNull;
 
 public class CalculateGregorianEasterSunday implements Function<Year, LocalDate> {
 

@@ -1,13 +1,11 @@
 package de.focus_shift.jollyday.jackson.mapping;
 
-import tools.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
-
 import java.util.ArrayList;
 import java.util.List;
-
+import tools.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 
 /**
- * <p>Java class for Sources complex type.
+ * Java class for Sources complex type.
  *
  * <p>The following schema fragment specifies the expected content contained within this class.
  *
@@ -31,22 +29,17 @@ public class Sources {
   /**
    * Gets the value of the source property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list,
-   * not a snapshot. Therefore any modification you make to the
-   * returned list will be present inside the Jakarta XML Binding object.
-   * This is why there is not a <CODE>set</CODE> method for the source property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the Jakarta XML Binding
+   * object. This is why there is not a <CODE>set</CODE> method for the source property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
+   *
    * <pre>
    *    getSource().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list
-   * {@link Source }
+   * <p>Objects of the following type(s) are allowed in the list {@link Source }
    */
   public List<Source> getSource() {
     if (source == null) {
@@ -54,5 +47,4 @@ public class Sources {
     }
     return this.source;
   }
-
 }

@@ -1,5 +1,9 @@
 package de.focus_shift.jollyday.jackson;
 
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
+
 import de.focus_shift.jollyday.core.spi.ChristianHolidayConfiguration;
 import de.focus_shift.jollyday.core.spi.EthiopianOrthodoxHolidayConfiguration;
 import de.focus_shift.jollyday.core.spi.FixedHolidayConfiguration;
@@ -21,23 +25,17 @@ import de.focus_shift.jollyday.jackson.mapping.IslamicHoliday;
 import de.focus_shift.jollyday.jackson.mapping.RelativeToEasterSunday;
 import de.focus_shift.jollyday.jackson.mapping.RelativeToFixed;
 import de.focus_shift.jollyday.jackson.mapping.RelativeToWeekdayInMonth;
+import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import java.util.List;
-
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
-
 @ExtendWith(MockitoExtension.class)
 class JacksonHolidaysTest {
 
-  @Mock
-  private Holidays mappingHolidays;
+  @Mock private Holidays mappingHolidays;
   private JacksonHolidays jacksonHolidays;
 
   @BeforeEach
@@ -67,7 +65,8 @@ class JacksonHolidaysTest {
   void testRelativeToWeekdayInMonth() {
     final RelativeToWeekdayInMonth rel = mock(RelativeToWeekdayInMonth.class);
     when(mappingHolidays.getRelativeToWeekdayInMonth()).thenReturn(List.of(rel));
-    final List<RelativeToWeekdayInMonthHolidayConfiguration> result = jacksonHolidays.relativeToWeekdayInMonth();
+    final List<RelativeToWeekdayInMonthHolidayConfiguration> result =
+        jacksonHolidays.relativeToWeekdayInMonth();
     assertThat(result).hasSize(1);
     assertThat(result.get(0)).isInstanceOf(JacksonRelativeToWeekdayInMonth.class);
   }
@@ -103,7 +102,8 @@ class JacksonHolidaysTest {
   void testFixedWeekdayBetweenFixed() {
     final FixedWeekdayBetweenFixed holiday = mock(FixedWeekdayBetweenFixed.class);
     when(mappingHolidays.getFixedWeekdayBetweenFixed()).thenReturn(List.of(holiday));
-    final List<FixedWeekdayBetweenFixedHolidayConfiguration> result = jacksonHolidays.fixedWeekdayBetweenFixed();
+    final List<FixedWeekdayBetweenFixedHolidayConfiguration> result =
+        jacksonHolidays.fixedWeekdayBetweenFixed();
     assertThat(result).hasSize(1);
     assertThat(result.get(0)).isInstanceOf(JacksonFixedWeekdayBetweenFixed.class);
   }
@@ -112,7 +112,8 @@ class JacksonHolidaysTest {
   void testFixedWeekdayRelativeToFixed() {
     final FixedWeekdayRelativeToFixed holiday = mock(FixedWeekdayRelativeToFixed.class);
     when(mappingHolidays.getFixedWeekdayRelativeToFixed()).thenReturn(List.of(holiday));
-    final List<FixedWeekdayRelativeToFixedHolidayConfiguration> result = jacksonHolidays.fixedWeekdayRelativeToFixed();
+    final List<FixedWeekdayRelativeToFixedHolidayConfiguration> result =
+        jacksonHolidays.fixedWeekdayRelativeToFixed();
     assertThat(result).hasSize(1);
     assertThat(result.get(0)).isInstanceOf(JacksonFixedWeekdayRelativeToFixed.class);
   }
@@ -121,7 +122,8 @@ class JacksonHolidaysTest {
   void testEthiopianOrthodoxHolidays() {
     final EthiopianOrthodoxHoliday holiday = mock(EthiopianOrthodoxHoliday.class);
     when(mappingHolidays.getEthiopianOrthodoxHoliday()).thenReturn(List.of(holiday));
-    final List<EthiopianOrthodoxHolidayConfiguration> result = jacksonHolidays.ethiopianOrthodoxHolidays();
+    final List<EthiopianOrthodoxHolidayConfiguration> result =
+        jacksonHolidays.ethiopianOrthodoxHolidays();
     assertThat(result).hasSize(1);
     assertThat(result.get(0)).isInstanceOf(JacksonEthiopianOrthodoxHoliday.class);
   }
@@ -130,7 +132,8 @@ class JacksonHolidaysTest {
   void testRelativeToEasterSunday() {
     final RelativeToEasterSunday holiday = mock(RelativeToEasterSunday.class);
     when(mappingHolidays.getRelativeToEasterSunday()).thenReturn(List.of(holiday));
-    final List<RelativeToEasterSundayHolidayConfiguration> result = jacksonHolidays.relativeToEasterSunday();
+    final List<RelativeToEasterSundayHolidayConfiguration> result =
+        jacksonHolidays.relativeToEasterSunday();
     assertThat(result).hasSize(1);
     assertThat(result.get(0)).isInstanceOf(JacksonRelativeToEasterSunday.class);
   }

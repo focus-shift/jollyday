@@ -1,7 +1,6 @@
 package de.focus_shift.jollyday.jackson.mapping;
 
 public enum Substituted {
-
   ON_SATURDAY,
   ON_SUNDAY,
   ON_WEEKEND,
@@ -15,5 +14,4 @@ public enum Substituted {
   public static Substituted fromValue(String v) {
     return valueOf(v);
   }
-
 }

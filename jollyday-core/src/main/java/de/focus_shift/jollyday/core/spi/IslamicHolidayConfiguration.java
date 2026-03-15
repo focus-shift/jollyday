@@ -6,14 +6,14 @@ import org.jspecify.annotations.NonNull;
  * Represents the configuration of an islamic holiday that can be
  *
  * <ul>
- *   <li>Movable</li>
- *   <li>Limited</li>
- *   <li>Described</li>
+ *   <li>Movable
+ *   <li>Limited
+ *   <li>Described
  * </ul>
- * <p>
- * and has a special {@link IslamicHolidayType}.
- * <p>
- * The {@link de.focus_shift.jollyday.core.parser.impl.IslamicHolidayParser} is used.
+ *
+ * <p>and has a special {@link IslamicHolidayType}.
+ *
+ * <p>The {@link de.focus_shift.jollyday.core.parser.impl.IslamicHolidayParser} is used.
  */
 public interface IslamicHolidayConfiguration extends Described, Limited, Movable {
 

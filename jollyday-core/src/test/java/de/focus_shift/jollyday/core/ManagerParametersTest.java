@@ -1,18 +1,17 @@
 package de.focus_shift.jollyday.core;
 
-import de.focus_shift.jollyday.core.parameter.CalendarPartManagerParameter;
-import de.focus_shift.jollyday.core.parameter.UrlManagerParameter;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.junit.jupiter.MockitoExtension;
-
-import java.net.URL;
-import java.util.Locale;
-import java.util.Properties;
-
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
+
+import de.focus_shift.jollyday.core.parameter.CalendarPartManagerParameter;
+import de.focus_shift.jollyday.core.parameter.UrlManagerParameter;
+import java.net.URL;
+import java.util.Locale;
+import java.util.Properties;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 @ExtendWith(MockitoExtension.class)
 class ManagerParametersTest {
@@ -78,7 +77,8 @@ class ManagerParametersTest {
     final Properties properties = new Properties();
     properties.setProperty("property", "property-value");
 
-    final ManagerParameter managerParameter = ManagerParameters.create(HolidayCalendar.GERMANY, properties);
+    final ManagerParameter managerParameter =
+        ManagerParameters.create(HolidayCalendar.GERMANY, properties);
     assertThat(managerParameter).isInstanceOf(CalendarPartManagerParameter.class);
     assertThat(managerParameter.getDisplayName()).isEqualTo("de");
     assertThat(managerParameter.getProperty("property")).isEqualTo("property-value");

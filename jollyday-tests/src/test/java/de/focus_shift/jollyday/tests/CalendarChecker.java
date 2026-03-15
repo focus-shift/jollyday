@@ -1,23 +1,5 @@
 package de.focus_shift.jollyday.tests;
 
-import de.focus_shift.jollyday.core.Holiday;
-import de.focus_shift.jollyday.core.HolidayCalendar;
-import de.focus_shift.jollyday.core.HolidayManager;
-import de.focus_shift.jollyday.core.HolidayType;
-import net.jqwik.api.Arbitraries;
-import net.jqwik.time.api.arbitraries.YearArbitrary;
-import org.junit.jupiter.api.Assertions;
-
-import java.time.DayOfWeek;
-import java.time.LocalDate;
-import java.time.Month;
-import java.time.Year;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
-import java.util.Set;
-
 import static de.focus_shift.jollyday.core.HolidayType.PUBLIC_HOLIDAY;
 import static de.focus_shift.jollyday.core.ManagerParameters.create;
 import static de.focus_shift.jollyday.tests.CalendarChecker.Adjuster.NEXT;
@@ -28,11 +10,27 @@ import static java.time.temporal.TemporalAdjusters.previousOrSame;
 import static java.util.Collections.unmodifiableList;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class CalendarChecker implements
-  CalendarCheckerApi.Holiday,
-  CalendarCheckerApi.Between,
-  CalendarCheckerApi.Properties
-{
+import de.focus_shift.jollyday.core.Holiday;
+import de.focus_shift.jollyday.core.HolidayCalendar;
+import de.focus_shift.jollyday.core.HolidayManager;
+import de.focus_shift.jollyday.core.HolidayType;
+import java.time.DayOfWeek;
+import java.time.LocalDate;
+import java.time.Month;
+import java.time.Year;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Objects;
+import java.util.Set;
+import net.jqwik.api.Arbitraries;
+import net.jqwik.time.api.arbitraries.YearArbitrary;
+import org.junit.jupiter.api.Assertions;
+
+public class CalendarChecker
+    implements CalendarCheckerApi.Holiday,
+        CalendarCheckerApi.Between,
+        CalendarCheckerApi.Properties {
 
   enum Category {
     BY_DAY,
@@ -50,7 +48,7 @@ public class CalendarChecker implements
   private int day;
   private HolidayType type;
   private Category category;
-  private String[] subdivisions = new String[]{};
+  private String[] subdivisions = new String[] {};
   private List<YearRange> validRanges = new ArrayList<>();
   private List<YearRange> invalidRanges = new ArrayList<>();
   private List<WeekDayFromTo> validShifts = new ArrayList<>();
@@ -67,7 +65,8 @@ public class CalendarChecker implements
   }
 
   @Override
-  public CalendarCheckerApi.Properties hasChristianHoliday(final String propertyKey, final HolidayType type) {
+  public CalendarCheckerApi.Properties hasChristianHoliday(
+      final String propertyKey, final HolidayType type) {
     Objects.requireNonNull(propertyKey, "propertyKey is required");
     Objects.requireNonNull(type, "holiday type is required");
 
@@ -84,7 +83,8 @@ public class CalendarChecker implements
   }
 
   @Override
-  public CalendarCheckerApi.Properties hasIslamicHoliday(final String propertyKey, final HolidayType type) {
+  public CalendarCheckerApi.Properties hasIslamicHoliday(
+      final String propertyKey, final HolidayType type) {
     Objects.requireNonNull(propertyKey, "propertyKey is required");
     Objects.requireNonNull(type, "holiday type is required");
 
@@ -101,7 +101,8 @@ public class CalendarChecker implements
   }
 
   @Override
-  public CalendarCheckerApi.Properties hasEthiopianOrthodoxHoliday(final String propertyKey, final HolidayType type) {
+  public CalendarCheckerApi.Properties hasEthiopianOrthodoxHoliday(
+      final String propertyKey, final HolidayType type) {
     Objects.requireNonNull(propertyKey, "propertyKey is required");
     Objects.requireNonNull(type, "holiday type is required");
 
@@ -113,12 +114,14 @@ public class CalendarChecker implements
   }
 
   @Override
-  public CalendarCheckerApi.Properties hasFixedHoliday(final String propertyKey, final Month month, final int day) {
+  public CalendarCheckerApi.Properties hasFixedHoliday(
+      final String propertyKey, final Month month, final int day) {
     return hasFixedHoliday(propertyKey, month, day, PUBLIC_HOLIDAY);
   }
 
   @Override
-  public CalendarCheckerApi.Properties hasFixedHoliday(final String propertyKey, final Month month, final int day, final HolidayType type) {
+  public CalendarCheckerApi.Properties hasFixedHoliday(
+      final String propertyKey, final Month month, final int day, final HolidayType type) {
 
     Objects.requireNonNull(propertyKey, "propertyKey is required");
     Objects.requireNonNull(month, "month is required");
@@ -173,25 +176,26 @@ public class CalendarChecker implements
   }
 
   @Override
-  public CalendarCheckerApi.Properties canBeMovedFrom(DayOfWeek from, Adjuster adjuster, DayOfWeek to) {
+  public CalendarCheckerApi.Properties canBeMovedFrom(
+      DayOfWeek from, Adjuster adjuster, DayOfWeek to) {
     this.validShifts.add(new WeekDayFromTo(from, to, adjuster));
     return this;
   }
 
   @Override
   public CalendarCheckerApi.Holiday and() {
-    checks.add(new HolidayCalendarCheck(
-      this.calendar,
-      this.propertyKey,
-      this.month,
-      this.day,
-      this.type,
-      new ArrayList<>(this.validRanges),
-      new ArrayList<>(this.invalidRanges),
-      new ArrayList<>(this.validShifts),
-      this.subdivisions.clone(),
-      this.category
-    ));
+    checks.add(
+        new HolidayCalendarCheck(
+            this.calendar,
+            this.propertyKey,
+            this.month,
+            this.day,
+            this.type,
+            new ArrayList<>(this.validRanges),
+            new ArrayList<>(this.invalidRanges),
+            new ArrayList<>(this.validShifts),
+            this.subdivisions.clone(),
+            this.category));
 
     clearProperties();
 
@@ -202,7 +206,8 @@ public class CalendarChecker implements
   public void check() {
     and();
 
-    final HolidayManager holidayManager = HolidayManager.getInstance(create(checks.get(0).calendar()));
+    final HolidayManager holidayManager =
+        HolidayManager.getInstance(create(checks.get(0).calendar()));
 
     for (HolidayCalendarCheck check : checks) {
       switch (check.category) {
@@ -225,47 +230,64 @@ public class CalendarChecker implements
 
     for (final YearRange invalidRange : check.invalidRanges()) {
       yearArbitrary
-        .between(invalidRange.from().getValue(), invalidRange.to().getValue())
-        .forEachValue(year -> {
-            final Set<Holiday> holidays = holidayManager.getHolidays(year, check.subdivisions());
-            final LocalDate dateToCheck = LocalDate.of(year.getValue(), check.month(), check.day());
-            final LocalDate shiftLocalDate = shiftLocalDate(check, dateToCheck);
-            final Holiday holiday = new Holiday(shiftLocalDate, check.propertiesKey(), check.holidayType());
-            assertHolidayNotPresent(holidays, holiday, holidayManager, check.subdivisions());
-          }
-        );
+          .between(invalidRange.from().getValue(), invalidRange.to().getValue())
+          .forEachValue(
+              year -> {
+                final Set<Holiday> holidays =
+                    holidayManager.getHolidays(year, check.subdivisions());
+                final LocalDate dateToCheck =
+                    LocalDate.of(year.getValue(), check.month(), check.day());
+                final LocalDate shiftLocalDate = shiftLocalDate(check, dateToCheck);
+                final Holiday holiday =
+                    new Holiday(shiftLocalDate, check.propertiesKey(), check.holidayType());
+                assertHolidayNotPresent(holidays, holiday, holidayManager, check.subdivisions());
+              });
     }
 
     for (final YearRange validRange : check.validRanges()) {
       yearArbitrary
-        .between(validRange.from().getValue(), validRange.to().getValue())
-        .forEachValue(year -> {
-            final Set<Holiday> holidays = holidayManager.getHolidays(year, check.subdivisions());
-            final LocalDate dateToCheck = LocalDate.of(year.getValue(), check.month(), check.day());
-            final LocalDate shiftLocalDate = shiftLocalDate(check, dateToCheck);
-            final Holiday holiday = new Holiday(shiftLocalDate, check.propertiesKey(), check.holidayType());
-            assertHolidayPresent(holidays, holiday, holidayManager, check.subdivisions());
-          }
-        );
+          .between(validRange.from().getValue(), validRange.to().getValue())
+          .forEachValue(
+              year -> {
+                final Set<Holiday> holidays =
+                    holidayManager.getHolidays(year, check.subdivisions());
+                final LocalDate dateToCheck =
+                    LocalDate.of(year.getValue(), check.month(), check.day());
+                final LocalDate shiftLocalDate = shiftLocalDate(check, dateToCheck);
+                final Holiday holiday =
+                    new Holiday(shiftLocalDate, check.propertiesKey(), check.holidayType());
+                assertHolidayPresent(holidays, holiday, holidayManager, check.subdivisions());
+              });
     }
   }
 
-  private void assertHolidayNotPresent(Set<Holiday> holidays, Holiday holiday, HolidayManager holidayManager, String[] subdivisions) {
+  private void assertHolidayNotPresent(
+      Set<Holiday> holidays,
+      Holiday holiday,
+      HolidayManager holidayManager,
+      String[] subdivisions) {
     assertThat(holidays)
-      .isNotEmpty()
-      .as(() -> buildAssertionMessage(holidayManager, subdivisions))
-      .doesNotContain(holiday);
+        .isNotEmpty()
+        .as(() -> buildAssertionMessage(holidayManager, subdivisions))
+        .doesNotContain(holiday);
   }
 
-  private void assertHolidayPresent(Set<Holiday> holidays, Holiday holiday, HolidayManager holidayManager, String[] subdivisions) {
+  private void assertHolidayPresent(
+      Set<Holiday> holidays,
+      Holiday holiday,
+      HolidayManager holidayManager,
+      String[] subdivisions) {
     assertThat(holidays)
-      .isNotEmpty()
-      .as(() -> buildAssertionMessage(holidayManager, subdivisions))
-      .contains(holiday);
+        .isNotEmpty()
+        .as(() -> buildAssertionMessage(holidayManager, subdivisions))
+        .contains(holiday);
   }
 
   private String buildAssertionMessage(HolidayManager holidayManager, String[] subdivisions) {
-    final String displayName = holidayManager != null && holidayManager.getManagerParameter() != null ? holidayManager.getManagerParameter().getDisplayName() : "UnknownManager";
+    final String displayName =
+        holidayManager != null && holidayManager.getManagerParameter() != null
+            ? holidayManager.getManagerParameter().getDisplayName()
+            : "UnknownManager";
     final String subdivisionsStr = subdivisions != null ? Arrays.toString(subdivisions) : "[]";
     return "Failure in a holiday for " + displayName + " " + subdivisionsStr;
   }
@@ -294,32 +316,50 @@ public class CalendarChecker implements
 
     for (final YearRange invalidRange : check.invalidRanges()) {
       yearArbitrary
-        .between(invalidRange.from().getValue(), invalidRange.to().getValue())
-        .forEachValue(year -> {
-            final Set<Holiday> holidays = holidayManager.getHolidays(year, check.subdivisions());
-            assertThat(holidays)
-              .isNotEmpty()
-              .filteredOn(holiday -> holiday.getPropertiesKey().equals(check.propertiesKey()))
-              .extracting(Holiday::getType)
-              .withFailMessage("Holiday '" + check.propertiesKey() + "' with holiday type '" + check.holidayType + "' in year '" + year + "' not found.")
-              .doesNotContain(check.holidayType());
-          }
-        );
+          .between(invalidRange.from().getValue(), invalidRange.to().getValue())
+          .forEachValue(
+              year -> {
+                final Set<Holiday> holidays =
+                    holidayManager.getHolidays(year, check.subdivisions());
+                assertThat(holidays)
+                    .isNotEmpty()
+                    .filteredOn(holiday -> holiday.getPropertiesKey().equals(check.propertiesKey()))
+                    .extracting(Holiday::getType)
+                    .withFailMessage(
+                        "Holiday '"
+                            + check.propertiesKey()
+                            + "' with holiday type '"
+                            + check.holidayType
+                            + "' in year '"
+                            + year
+                            + "' not found.")
+                    .doesNotContain(check.holidayType());
+              });
     }
 
     for (final YearRange validRange : check.validRanges()) {
       yearArbitrary
-        .between(validRange.from().getValue(), validRange.to().getValue())
-        .forEachValue(year -> {
-            final Set<Holiday> holidays = holidayManager.getHolidays(year, check.subdivisions());
-            assertThat(holidays)
-              .isNotEmpty()
-              .filteredOn(holiday -> holiday.getPropertiesKey().equals(check.propertiesKey()))
-              .extracting(Holiday::getType)
-              .withFailMessage("Holiday '" + check.propertiesKey() + "' with holiday type '" + check.holidayType + "' in year '" + year + "' and in subdivision '" + Arrays.toString(check.subdivisions()) + "' not found.")
-              .contains(check.holidayType());
-          }
-        );
+          .between(validRange.from().getValue(), validRange.to().getValue())
+          .forEachValue(
+              year -> {
+                final Set<Holiday> holidays =
+                    holidayManager.getHolidays(year, check.subdivisions());
+                assertThat(holidays)
+                    .isNotEmpty()
+                    .filteredOn(holiday -> holiday.getPropertiesKey().equals(check.propertiesKey()))
+                    .extracting(Holiday::getType)
+                    .withFailMessage(
+                        "Holiday '"
+                            + check.propertiesKey()
+                            + "' with holiday type '"
+                            + check.holidayType
+                            + "' in year '"
+                            + year
+                            + "' and in subdivision '"
+                            + Arrays.toString(check.subdivisions())
+                            + "' not found.")
+                    .contains(check.holidayType());
+              });
     }
   }
 
@@ -333,33 +373,44 @@ public class CalendarChecker implements
     this.day = 0;
     this.type = null;
     this.category = null;
-    this.subdivisions = new String[]{};
+    this.subdivisions = new String[] {};
     this.validRanges = new ArrayList<>();
     this.invalidRanges = new ArrayList<>();
     this.validShifts = new ArrayList<>();
   }
 
   private record HolidayCalendarCheck(
-    HolidayCalendar calendar, String propertiesKey, Month month, int day,
-    HolidayType holidayType, List<YearRange> validRanges,
-    List<YearRange> invalidRanges, List<WeekDayFromTo> validShifts,
-    String[] subdivisions, Category category
-  ) {
+      HolidayCalendar calendar,
+      String propertiesKey,
+      Month month,
+      int day,
+      HolidayType holidayType,
+      List<YearRange> validRanges,
+      List<YearRange> invalidRanges,
+      List<WeekDayFromTo> validShifts,
+      String[] subdivisions,
+      Category category) {
 
     private static final YearRange DEFAULT_YEAR_RANGE = new YearRange(Year.of(1900), Year.of(2500));
 
     private HolidayCalendarCheck(
-      HolidayCalendar calendar,
-      String propertiesKey, Month month, int day, HolidayType holidayType,
-      List<YearRange> validRanges, List<YearRange> invalidRanges,
-      List<WeekDayFromTo> validShifts, String[] subdivisions, Category category
-    ) {
+        HolidayCalendar calendar,
+        String propertiesKey,
+        Month month,
+        int day,
+        HolidayType holidayType,
+        List<YearRange> validRanges,
+        List<YearRange> invalidRanges,
+        List<WeekDayFromTo> validShifts,
+        String[] subdivisions,
+        Category category) {
       this.calendar = calendar;
       this.propertiesKey = propertiesKey;
       this.month = month;
       this.day = day;
       this.holidayType = holidayType;
-      this.validRanges = validRanges.isEmpty() ? List.of(DEFAULT_YEAR_RANGE) : unmodifiableList(validRanges);
+      this.validRanges =
+          validRanges.isEmpty() ? List.of(DEFAULT_YEAR_RANGE) : unmodifiableList(validRanges);
       this.invalidRanges = unmodifiableList(invalidRanges);
       this.validShifts = unmodifiableList(validShifts);
       this.subdivisions = subdivisions;
@@ -370,11 +421,11 @@ public class CalendarChecker implements
   private record YearRange(Year from, Year to) {
     private YearRange {
       if (from != null && to != null) {
-        Assertions.assertFalse(from.isAfter(to), "To must be greater than or equal to the from year.");
+        Assertions.assertFalse(
+            from.isAfter(to), "To must be greater than or equal to the from year.");
       }
     }
   }
 
-  private record WeekDayFromTo(DayOfWeek from, DayOfWeek to, Adjuster adjuster) {
-  }
+  private record WeekDayFromTo(DayOfWeek from, DayOfWeek to, Adjuster adjuster) {}
 }

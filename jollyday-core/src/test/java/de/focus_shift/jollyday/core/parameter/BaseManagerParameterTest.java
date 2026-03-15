@@ -1,13 +1,12 @@
 package de.focus_shift.jollyday.core.parameter;
 
-import org.jspecify.annotations.NonNull;
-import org.junit.jupiter.api.Test;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.Mockito.mock;
 
 import java.net.URL;
 import java.util.Properties;
-
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.Mockito.mock;
+import org.jspecify.annotations.NonNull;
+import org.junit.jupiter.api.Test;
 
 class BaseManagerParameterTest {
 

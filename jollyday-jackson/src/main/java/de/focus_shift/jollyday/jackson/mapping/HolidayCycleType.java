@@ -1,7 +1,6 @@
 package de.focus_shift.jollyday.jackson.mapping;
 
 public enum HolidayCycleType {
-
   EVERY_YEAR,
   TWO_YEARS,
   THREE_YEARS,
@@ -18,5 +17,4 @@ public enum HolidayCycleType {
   public static HolidayCycleType fromValue(String v) {
     return valueOf(v);
   }
-
 }

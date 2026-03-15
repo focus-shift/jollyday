@@ -6,9 +6,7 @@ import de.focus_shift.jollyday.core.spi.HolidayCalendarConfigurationService;
 import de.focus_shift.jollyday.core.util.ClassLoadingUtil;
 import org.jspecify.annotations.NonNull;
 
-/**
- * Creates the {@link Cache.ValueHandler} which constructs and caches a {@link HolidayManager}.
- */
+/** Creates the {@link Cache.ValueHandler} which constructs and caches a {@link HolidayManager}. */
 class HolidayManagerValueHandler implements Cache.ValueHandler<HolidayManager> {
 
   private final ManagerParameter parameter;
@@ -17,11 +15,10 @@ class HolidayManagerValueHandler implements Cache.ValueHandler<HolidayManager> {
   private final ConfigurationServiceManager configurationServiceManager;
 
   HolidayManagerValueHandler(
-    final ManagerParameter parameter,
-    final String managerImplClassName,
-    final String configurationServiceImplClassName,
-    final ConfigurationServiceManager configurationServiceManager
-  ) {
+      final ManagerParameter parameter,
+      final String managerImplClassName,
+      final String configurationServiceImplClassName,
+      final ConfigurationServiceManager configurationServiceManager) {
     this.parameter = parameter;
     this.managerImplClassName = managerImplClassName;
     this.configurationServiceImplClassName = configurationServiceImplClassName;
@@ -37,7 +34,8 @@ class HolidayManagerValueHandler implements Cache.ValueHandler<HolidayManager> {
   public @NonNull HolidayManager createValue() {
     final HolidayManager manager = instantiateManagerImpl(managerImplClassName);
 
-    final HolidayCalendarConfigurationService configurationService = configurationServiceManager.getConfigurationService(configurationServiceImplClassName);
+    final HolidayCalendarConfigurationService configurationService =
+        configurationServiceManager.getConfigurationService(configurationServiceImplClassName);
     manager.setConfigurationService(configurationService);
 
     manager.init(parameter);

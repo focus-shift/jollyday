@@ -1,7 +1,6 @@
 package de.focus_shift.jollyday.jackson.mapping;
 
 public enum Month {
-
   JANUARY,
   FEBRUARY,
   MARCH,
@@ -22,5 +21,4 @@ public enum Month {
   public static Month fromValue(String v) {
     return valueOf(v);
   }
-
 }

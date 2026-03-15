@@ -1,27 +1,29 @@
 package de.focus_shift.jollyday.jackson.mapping;
 
-import tools.jackson.dataformat.xml.annotation.JacksonXmlProperty;
-
 import java.util.Objects;
+import tools.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 
 public abstract class Holiday {
 
   @JacksonXmlProperty(localName = "validFrom", isAttribute = true)
   protected Integer validFrom;
+
   @JacksonXmlProperty(localName = "validTo", isAttribute = true)
   protected Integer validTo;
+
   @JacksonXmlProperty(localName = "every", isAttribute = true)
   protected HolidayCycleType every;
+
   @JacksonXmlProperty(localName = "descriptionPropertiesKey", isAttribute = true)
   protected String descriptionPropertiesKey;
+
   @JacksonXmlProperty(localName = "localizedType", isAttribute = true)
   protected HolidayType localizedType;
 
   /**
    * Gets the value of the validFrom property.
    *
-   * @return possible object is
-   * {@link Integer }
+   * @return possible object is {@link Integer }
    */
   public Integer getValidFrom() {
     return validFrom;
@@ -30,8 +32,7 @@ public abstract class Holiday {
   /**
    * Sets the value of the validFrom property.
    *
-   * @param value allowed object is
-   *              {@link Integer }
+   * @param value allowed object is {@link Integer }
    */
   public void setValidFrom(Integer value) {
     this.validFrom = value;
@@ -40,8 +41,7 @@ public abstract class Holiday {
   /**
    * Gets the value of the validTo property.
    *
-   * @return possible object is
-   * {@link Integer }
+   * @return possible object is {@link Integer }
    */
   public Integer getValidTo() {
     return validTo;
@@ -50,8 +50,7 @@ public abstract class Holiday {
   /**
    * Sets the value of the validTo property.
    *
-   * @param value allowed object is
-   *              {@link Integer }
+   * @param value allowed object is {@link Integer }
    */
   public void setValidTo(Integer value) {
     this.validTo = value;
@@ -60,8 +59,7 @@ public abstract class Holiday {
   /**
    * Gets the value of the every property.
    *
-   * @return possible object is
-   * {@link HolidayCycleType }
+   * @return possible object is {@link HolidayCycleType }
    */
   public HolidayCycleType getEvery() {
     if (every == null) {
@@ -74,8 +72,7 @@ public abstract class Holiday {
   /**
    * Sets the value of the every property.
    *
-   * @param value allowed object is
-   *              {@link HolidayCycleType }
+   * @param value allowed object is {@link HolidayCycleType }
    */
   public void setEvery(HolidayCycleType value) {
     this.every = value;
@@ -84,8 +81,7 @@ public abstract class Holiday {
   /**
    * Gets the value of the descriptionPropertiesKey property.
    *
-   * @return possible object is
-   * {@link String }
+   * @return possible object is {@link String }
    */
   public String getDescriptionPropertiesKey() {
     return descriptionPropertiesKey;
@@ -94,8 +90,7 @@ public abstract class Holiday {
   /**
    * Sets the value of the descriptionPropertiesKey property.
    *
-   * @param value allowed object is
-   *              {@link String }
+   * @param value allowed object is {@link String }
    */
   public void setDescriptionPropertiesKey(String value) {
     this.descriptionPropertiesKey = value;
@@ -104,8 +99,7 @@ public abstract class Holiday {
   /**
    * Gets the value of the localizedType property.
    *
-   * @return possible object is
-   * {@link HolidayType }
+   * @return possible object is {@link HolidayType }
    */
   public HolidayType getLocalizedType() {
     return Objects.requireNonNullElse(localizedType, HolidayType.PUBLIC_HOLIDAY);
@@ -114,11 +108,9 @@ public abstract class Holiday {
   /**
    * Sets the value of the localizedType property.
    *
-   * @param value allowed object is
-   *              {@link HolidayType }
+   * @param value allowed object is {@link HolidayType }
    */
   public void setLocalizedType(HolidayType value) {
     this.localizedType = value;
   }
-
 }

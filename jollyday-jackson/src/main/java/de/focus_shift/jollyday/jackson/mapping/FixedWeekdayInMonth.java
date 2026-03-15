@@ -6,16 +6,17 @@ public class FixedWeekdayInMonth extends Holiday {
 
   @JacksonXmlProperty(localName = "which", isAttribute = true)
   protected Which which;
+
   @JacksonXmlProperty(localName = "weekday", isAttribute = true)
   protected Weekday weekday;
+
   @JacksonXmlProperty(localName = "month", isAttribute = true)
   protected Month month;
 
   /**
    * Gets the value of the which property.
    *
-   * @return possible object is
-   * {@link Which }
+   * @return possible object is {@link Which }
    */
   public Which getWhich() {
     return which;
@@ -24,8 +25,7 @@ public class FixedWeekdayInMonth extends Holiday {
   /**
    * Sets the value of the which property.
    *
-   * @param value allowed object is
-   *              {@link Which }
+   * @param value allowed object is {@link Which }
    */
   public void setWhich(Which value) {
     this.which = value;
@@ -34,8 +34,7 @@ public class FixedWeekdayInMonth extends Holiday {
   /**
    * Gets the value of the weekday property.
    *
-   * @return possible object is
-   * {@link Weekday }
+   * @return possible object is {@link Weekday }
    */
   public Weekday getWeekday() {
     return weekday;
@@ -44,8 +43,7 @@ public class FixedWeekdayInMonth extends Holiday {
   /**
    * Sets the value of the weekday property.
    *
-   * @param value allowed object is
-   *              {@link Weekday }
+   * @param value allowed object is {@link Weekday }
    */
   public void setWeekday(Weekday value) {
     this.weekday = value;
@@ -54,8 +52,7 @@ public class FixedWeekdayInMonth extends Holiday {
   /**
    * Gets the value of the month property.
    *
-   * @return possible object is
-   * {@link Month }
+   * @return possible object is {@link Month }
    */
   public Month getMonth() {
     return month;
@@ -64,11 +61,9 @@ public class FixedWeekdayInMonth extends Holiday {
   /**
    * Sets the value of the month property.
    *
-   * @param value allowed object is
-   *              {@link Month }
+   * @param value allowed object is {@link Month }
    */
   public void setMonth(Month value) {
     this.month = value;
   }
-
 }

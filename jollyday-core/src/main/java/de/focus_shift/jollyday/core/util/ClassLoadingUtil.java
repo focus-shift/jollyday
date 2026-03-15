@@ -1,15 +1,10 @@
 package de.focus_shift.jollyday.core.util;
 
-
 import org.jspecify.annotations.NonNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
- * <p>
- * ClassLoadingUtil class.
- * </p>
- */
+/** ClassLoadingUtil class. */
 public final class ClassLoadingUtil {
 
   private ClassLoadingUtil() {
@@ -19,19 +14,22 @@ public final class ClassLoadingUtil {
   private static final Logger LOG = LoggerFactory.getLogger(ClassLoadingUtil.class);
 
   /**
-   * Loads the class by class name with the current threads context
-   * classloader. If there occurs an exception the class will be loaded by
-   * default classloader.
+   * Loads the class by class name with the current threads context classloader. If there occurs an
+   * exception the class will be loaded by default classloader.
    *
    * @param className a {@link java.lang.String} object.
    * @return a {@link java.lang.Class} object.
    * @throws java.lang.ClassNotFoundException if any.
    */
-  public static @NonNull Class<?> loadClass(@NonNull final String className) throws ClassNotFoundException {
+  public static @NonNull Class<?> loadClass(@NonNull final String className)
+      throws ClassNotFoundException {
     try {
       return Class.forName(className, true, getClassloader());
     } catch (Exception e) {
-      LOG.warn("Could not load class with current threads context classloader. Using default. Reason: {}: {}", e.getClass().getSimpleName(), e.getMessage());
+      LOG.warn(
+          "Could not load class with current threads context classloader. Using default. Reason: {}: {}",
+          e.getClass().getSimpleName(),
+          e.getMessage());
       return Class.forName(className);
     }
   }

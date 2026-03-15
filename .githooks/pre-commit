@@ -1,0 +1,17 @@
+#!/bin/sh
+
+echo "Running Spotless for Maven..."
+
+# Spotless prüfen und Commit abbrechen, wenn es nicht sauber ist
+mvn spotless:check
+RESULT=$?
+
+if [ $RESULT -ne 0 ]; then
+    echo "Spotless check failed! Applying formatting..."
+    mvn spotless:apply
+    git add .
+    echo "Formatting applied and files staged for commit. Please commit again."
+    exit 1
+fi
+
+echo "Spotless check passed."

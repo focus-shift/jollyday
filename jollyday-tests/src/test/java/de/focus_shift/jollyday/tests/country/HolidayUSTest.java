@@ -1,9 +1,8 @@
 package de.focus_shift.jollyday.tests.country;
 
+import java.time.Year;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
-
-import java.time.Year;
 
 class HolidayUSTest extends AbstractCountryTestBase {
 

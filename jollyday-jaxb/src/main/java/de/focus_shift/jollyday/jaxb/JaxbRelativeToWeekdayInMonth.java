@@ -5,15 +5,12 @@ import de.focus_shift.jollyday.core.spi.FixedWeekdayInMonthHolidayConfiguration;
 import de.focus_shift.jollyday.core.spi.Relation;
 import de.focus_shift.jollyday.core.spi.RelativeToWeekdayInMonthHolidayConfiguration;
 import de.focus_shift.jollyday.jaxb.mapping.RelativeToWeekdayInMonth;
+import java.time.DayOfWeek;
+import java.time.Year;
 import org.jspecify.annotations.NonNull;
 import org.jspecify.annotations.Nullable;
 
-import java.time.DayOfWeek;
-import java.time.Year;
-
-/**
- * see {@link RelativeToWeekdayInMonthHolidayConfiguration}
- */
+/** see {@link RelativeToWeekdayInMonthHolidayConfiguration} */
 class JaxbRelativeToWeekdayInMonth implements RelativeToWeekdayInMonthHolidayConfiguration {
 
   private final RelativeToWeekdayInMonth relativeToWeekdayInMonth;
@@ -70,8 +67,8 @@ class JaxbRelativeToWeekdayInMonth implements RelativeToWeekdayInMonthHolidayCon
   @Override
   public @NonNull HolidayType holidayType() {
     return relativeToWeekdayInMonth.getLocalizedType() == null
-      ? HolidayType.PUBLIC_HOLIDAY
-      : HolidayType.valueOf(relativeToWeekdayInMonth.getLocalizedType().name());
+        ? HolidayType.PUBLIC_HOLIDAY
+        : HolidayType.valueOf(relativeToWeekdayInMonth.getLocalizedType().name());
   }
 
   /**
@@ -82,8 +79,8 @@ class JaxbRelativeToWeekdayInMonth implements RelativeToWeekdayInMonthHolidayCon
   @Override
   public @Nullable Year validFrom() {
     return relativeToWeekdayInMonth.getValidFrom() == null
-      ? null
-      : Year.of(relativeToWeekdayInMonth.getValidFrom());
+        ? null
+        : Year.of(relativeToWeekdayInMonth.getValidFrom());
   }
 
   /**
@@ -94,8 +91,8 @@ class JaxbRelativeToWeekdayInMonth implements RelativeToWeekdayInMonthHolidayCon
   @Override
   public @Nullable Year validTo() {
     return relativeToWeekdayInMonth.getValidTo() == null
-      ? null
-      : Year.of(relativeToWeekdayInMonth.getValidTo());
+        ? null
+        : Year.of(relativeToWeekdayInMonth.getValidTo());
   }
 
   /**
@@ -106,7 +103,7 @@ class JaxbRelativeToWeekdayInMonth implements RelativeToWeekdayInMonthHolidayCon
   @Override
   public @NonNull YearCycle cycle() {
     return relativeToWeekdayInMonth.getEvery() == null
-      ? YearCycle.EVERY_YEAR
-      : YearCycle.valueOf(relativeToWeekdayInMonth.getEvery().name());
+        ? YearCycle.EVERY_YEAR
+        : YearCycle.valueOf(relativeToWeekdayInMonth.getEvery().name());
   }
 }

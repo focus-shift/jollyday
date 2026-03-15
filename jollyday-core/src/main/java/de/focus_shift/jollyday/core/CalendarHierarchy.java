@@ -1,18 +1,15 @@
 package de.focus_shift.jollyday.core;
 
-import org.jspecify.annotations.NonNull;
-import org.jspecify.annotations.Nullable;
+import static de.focus_shift.jollyday.core.util.ResourceUtil.UNDEFINED;
+import static de.focus_shift.jollyday.core.util.ResourceUtil.getCountryDescription;
 
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
 
-import static de.focus_shift.jollyday.core.util.ResourceUtil.UNDEFINED;
-import static de.focus_shift.jollyday.core.util.ResourceUtil.getCountryDescription;
-
-/**
- * Bean class for describing the configuration hierarchy.
- */
+/** Bean class for describing the configuration hierarchy. */
 public class CalendarHierarchy {
 
   private final String id;
@@ -21,11 +18,11 @@ public class CalendarHierarchy {
   private String fallbackDescription;
 
   /**
-   * Constructor which takes a eventually existing parent hierarchy node and
-   * the ID of this hierarchy.
+   * Constructor which takes a eventually existing parent hierarchy node and the ID of this
+   * hierarchy.
    *
    * @param parent a {@link CalendarHierarchy} object.
-   * @param id     a {@link java.lang.String} object.
+   * @param id a {@link java.lang.String} object.
    */
   public CalendarHierarchy(@Nullable final CalendarHierarchy parent, @NonNull final String id) {
     this.parent = parent;
@@ -33,9 +30,7 @@ public class CalendarHierarchy {
   }
 
   /**
-   * <p>
    * Getter for the field <code>id</code>.
-   * </p>
    *
    * @return the id
    */
@@ -63,8 +58,8 @@ public class CalendarHierarchy {
   }
 
   /**
-   * Recursively returns the properties key to retrieve the description from
-   * the localized resource bundle.
+   * Recursively returns the properties key to retrieve the description from the localized resource
+   * bundle.
    *
    * @return the properties key to retrieve the description from the localized resource bundle
    */
@@ -77,8 +72,8 @@ public class CalendarHierarchy {
 
   /**
    * {@inheritDoc}
-   * <p>
-   * Compares Hierarchies by id.
+   *
+   * <p>Compares Hierarchies by id.
    */
   @Override
   public boolean equals(final Object obj) {
@@ -94,9 +89,7 @@ public class CalendarHierarchy {
   }
 
   /**
-   * <p>
    * Setter for the field <code>children</code>.
-   * </p>
    *
    * @param children the children to set
    */
@@ -105,9 +98,7 @@ public class CalendarHierarchy {
   }
 
   /**
-   * <p>
    * Getter for the field <code>children</code>.
-   * </p>
    *
    * @return the children
    */

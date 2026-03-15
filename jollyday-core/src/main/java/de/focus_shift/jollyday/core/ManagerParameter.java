@@ -1,10 +1,9 @@
 package de.focus_shift.jollyday.core;
 
-import org.jspecify.annotations.NonNull;
-import org.jspecify.annotations.Nullable;
-
 import java.net.URL;
 import java.util.Properties;
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
 
 public interface ManagerParameter {
 
@@ -27,5 +26,4 @@ public interface ManagerParameter {
   @NonNull String getDisplayName();
 
   @Nullable URL createResourceUrl();
-
 }

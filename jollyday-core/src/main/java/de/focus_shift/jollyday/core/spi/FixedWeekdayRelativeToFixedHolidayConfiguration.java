@@ -1,26 +1,23 @@
 package de.focus_shift.jollyday.core.spi;
 
+import java.time.DayOfWeek;
 import org.jspecify.annotations.NonNull;
 
-import java.time.DayOfWeek;
-
 /**
- * Represents the configuration of a holiday that occurs on a fixed weekday
- * relative to a {@link FixedHolidayConfiguration} holiday that can be
+ * Represents the configuration of a holiday that occurs on a fixed weekday relative to a {@link
+ * FixedHolidayConfiguration} holiday that can be
  *
  * <ul>
- *   <li>Limited</li>
- *   <li>Described</li>
+ *   <li>Limited
+ *   <li>Described
  * </ul>
- * <p>
- * Example: A holiday on the first thursday after the second april.
- * In this example the
- * `first` is the which (occurrence)
- * `thursday` is thr weekday (dayOfWeek)
- * `after` is the when (relation)
+ *
+ * <p>Example: A holiday on the first thursday after the second april. In this example the `first`
+ * is the which (occurrence) `thursday` is thr weekday (dayOfWeek) `after` is the when (relation)
  * `day` is the second april (fixed)
- * <p>
- * The {@link de.focus_shift.jollyday.core.parser.impl.FixedWeekdayRelativeToFixedParser} is used.
+ *
+ * <p>The {@link de.focus_shift.jollyday.core.parser.impl.FixedWeekdayRelativeToFixedParser} is
+ * used.
  */
 public interface FixedWeekdayRelativeToFixedHolidayConfiguration extends Described, Limited {
 
@@ -46,10 +43,10 @@ public interface FixedWeekdayRelativeToFixedHolidayConfiguration extends Describ
   @NonNull DayOfWeek weekday();
 
   /**
-   * Describes, based on the anchor (day), the relation like before, after, ... the new holiday will occur
+   * Describes, based on the anchor (day), the relation like before, after, ... the new holiday will
+   * occur
    *
    * @return the relation to the anchor
    */
   @NonNull Relation when();
-
 }

@@ -1,7 +1,6 @@
 package de.focus_shift.jollyday.jackson.mapping;
 
 public enum Which {
-
   FIRST,
   SECOND,
   THIRD,
@@ -15,5 +14,4 @@ public enum Which {
   public static Which fromValue(String v) {
     return valueOf(v);
   }
-
 }

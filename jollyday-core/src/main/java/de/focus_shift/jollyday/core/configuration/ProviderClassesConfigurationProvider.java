@@ -1,33 +1,31 @@
 package de.focus_shift.jollyday.core.configuration;
 
+import static java.util.Arrays.stream;
+import static java.util.function.Predicate.not;
+
 import de.focus_shift.jollyday.core.util.ClassLoadingUtil;
+import java.util.Properties;
 import org.jspecify.annotations.NonNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.Properties;
-
-import static java.util.Arrays.stream;
-import static java.util.function.Predicate.not;
-
 class ProviderClassesConfigurationProvider implements ConfigurationProvider {
 
   /**
-   * System property to define a comma separated list of custom
-   * {@link ConfigurationProvider} implementations to use for jollyday
-   * configuration.
+   * System property to define a comma separated list of custom {@link ConfigurationProvider}
+   * implementations to use for jollyday configuration.
    */
   static final String CONFIG_PROVIDERS_PROPERTY = "de.focus_shift.jollyday.config.providers";
 
-  private static final Logger LOG = LoggerFactory.getLogger(ProviderClassesConfigurationProvider.class);
+  private static final Logger LOG =
+      LoggerFactory.getLogger(ProviderClassesConfigurationProvider.class);
 
   ProviderClassesConfigurationProvider() {
     // ok
   }
 
   /**
-   * Returns the properties by reading from the URLs provided by the system
-   * property 'config.urls'.
+   * Returns the properties by reading from the URLs provided by the system property 'config.urls'.
    */
   @Override
   public @NonNull Properties getProperties() {
@@ -37,17 +35,24 @@ class ProviderClassesConfigurationProvider implements ConfigurationProvider {
     final String providerClassNames = System.getProperty(CONFIG_PROVIDERS_PROPERTY);
     if (providerClassNames != null) {
       stream(providerClassNames.split(","))
-        .filter(not(String::isEmpty))
-        .map(String::trim)
-        .forEach(providerClassName -> {
-          try {
-            final Class<?> providerClass = Class.forName(providerClassName, true, ClassLoadingUtil.getClassloader());
-            final ConfigurationProvider configurationProvider = (ConfigurationProvider) providerClass.getDeclaredConstructor().newInstance();
-            properties.putAll(configurationProvider.getProperties());
-          } catch (Exception e) {
-            LOG.warn("Cannot load configuration from provider class '{}'. {} ({}).", providerClassName, e.getClass().getSimpleName(), e.getMessage());
-          }
-        });
+          .filter(not(String::isEmpty))
+          .map(String::trim)
+          .forEach(
+              providerClassName -> {
+                try {
+                  final Class<?> providerClass =
+                      Class.forName(providerClassName, true, ClassLoadingUtil.getClassloader());
+                  final ConfigurationProvider configurationProvider =
+                      (ConfigurationProvider) providerClass.getDeclaredConstructor().newInstance();
+                  properties.putAll(configurationProvider.getProperties());
+                } catch (Exception e) {
+                  LOG.warn(
+                      "Cannot load configuration from provider class '{}'. {} ({}).",
+                      providerClassName,
+                      e.getClass().getSimpleName(),
+                      e.getMessage());
+                }
+              });
     }
 
     return properties;

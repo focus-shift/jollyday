@@ -1,7 +1,6 @@
 package de.focus_shift.jollyday.jackson.mapping;
 
 public enum ChronologyType {
-
   JULIAN,
   GREGORIAN;
 
@@ -12,5 +11,4 @@ public enum ChronologyType {
   public static ChronologyType fromValue(String v) {
     return valueOf(v);
   }
-
 }

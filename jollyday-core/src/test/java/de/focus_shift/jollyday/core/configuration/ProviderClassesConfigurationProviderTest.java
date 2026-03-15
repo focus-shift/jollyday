@@ -1,15 +1,14 @@
 package de.focus_shift.jollyday.core.configuration;
 
+import static de.focus_shift.jollyday.core.configuration.ProviderClassesConfigurationProvider.CONFIG_PROVIDERS_PROPERTY;
+import static org.assertj.core.api.Assertions.assertThat;
+
+import java.util.Properties;
 import org.jspecify.annotations.NonNull;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-
-import java.util.Properties;
-
-import static de.focus_shift.jollyday.core.configuration.ProviderClassesConfigurationProvider.CONFIG_PROVIDERS_PROPERTY;
-import static org.assertj.core.api.Assertions.assertThat;
 
 class ProviderClassesConfigurationProviderTest {
 
@@ -21,12 +20,15 @@ class ProviderClassesConfigurationProviderTest {
   }
 
   @ParameterizedTest
-  @CsvSource(value = {
-    "de.focus_shift.jollyday.core.configuration.ProviderClassesConfigurationProviderTest$TestProvider:value",
-    "de.focus_shift.jollyday.core.configuration.ProviderClassesConfigurationProviderTest$TestProvider,de.focus_shift.jollyday.core.configuration.ProviderClassesConfigurationProviderTest$SecondTestProvider:second-value",
-    "de.focus_shift.jollyday.core.configuration.ProviderClassesConfigurationProviderTest$TestProvider,java.lang.String:value",
-  }, delimiter = ':')
-  void ensuresToOverridePropertiesAndIgnoreExceptions(final String classList, final String propertyValue) {
+  @CsvSource(
+      value = {
+        "de.focus_shift.jollyday.core.configuration.ProviderClassesConfigurationProviderTest$TestProvider:value",
+        "de.focus_shift.jollyday.core.configuration.ProviderClassesConfigurationProviderTest$TestProvider,de.focus_shift.jollyday.core.configuration.ProviderClassesConfigurationProviderTest$SecondTestProvider:second-value",
+        "de.focus_shift.jollyday.core.configuration.ProviderClassesConfigurationProviderTest$TestProvider,java.lang.String:value",
+      },
+      delimiter = ':')
+  void ensuresToOverridePropertiesAndIgnoreExceptions(
+      final String classList, final String propertyValue) {
     System.setProperty(CONFIG_PROVIDERS_PROPERTY, classList);
 
     final Properties properties = sut.getProperties();

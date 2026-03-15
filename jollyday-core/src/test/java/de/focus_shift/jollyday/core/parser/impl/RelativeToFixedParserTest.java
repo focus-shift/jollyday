@@ -1,11 +1,23 @@
 package de.focus_shift.jollyday.core.parser.impl;
 
+import static de.focus_shift.jollyday.core.HolidayType.PUBLIC_HOLIDAY;
+import static de.focus_shift.jollyday.core.spi.Limited.YearCycle.EVERY_YEAR;
+import static java.time.DayOfWeek.WEDNESDAY;
+import static java.time.Month.JANUARY;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.Mockito.when;
+
 import de.focus_shift.jollyday.core.Holiday;
 import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.FixedHolidayConfiguration;
 import de.focus_shift.jollyday.core.spi.HolidayConfigurations;
 import de.focus_shift.jollyday.core.spi.Relation;
 import de.focus_shift.jollyday.core.spi.RelativeToFixedHolidayConfiguration;
+import java.time.DayOfWeek;
+import java.time.LocalDate;
+import java.time.MonthDay;
+import java.time.Year;
+import java.util.List;
 import org.jspecify.annotations.NonNull;
 import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Nested;
@@ -17,31 +29,19 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.threeten.extra.Days;
 
-import java.time.DayOfWeek;
-import java.time.LocalDate;
-import java.time.MonthDay;
-import java.time.Year;
-import java.util.List;
-
-import static de.focus_shift.jollyday.core.HolidayType.PUBLIC_HOLIDAY;
-import static de.focus_shift.jollyday.core.spi.Limited.YearCycle.EVERY_YEAR;
-import static java.time.DayOfWeek.WEDNESDAY;
-import static java.time.Month.JANUARY;
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.Mockito.when;
-
 @ExtendWith(MockitoExtension.class)
 class RelativeToFixedParserTest {
 
-  @Mock
-  private HolidayConfigurations holidays;
+  @Mock private HolidayConfigurations holidays;
 
   @ParameterizedTest
   @CsvSource({"BEFORE,2025-01-01", "AFTER,2025-01-08"})
-  void ensureThatRelativeToFixedIsValidWithWeekday(final Relation relation, final LocalDate expectedLocalDate) {
+  void ensureThatRelativeToFixedIsValidWithWeekday(
+      final Relation relation, final LocalDate expectedLocalDate) {
 
     final Year year = Year.of(2025);
-    final RelativeToFixedHolidayConfiguration relativeToFixed = getRelativeToFixed(MonthDay.of(JANUARY, 6), WEDNESDAY, null, relation, year, year);
+    final RelativeToFixedHolidayConfiguration relativeToFixed =
+        getRelativeToFixed(MonthDay.of(JANUARY, 6), WEDNESDAY, null, relation, year, year);
 
     final RelativeToFixedParser sut = new RelativeToFixedParser();
     when(holidays.relativeToFixed()).thenReturn(List.of(relativeToFixed));
@@ -52,10 +52,12 @@ class RelativeToFixedParserTest {
 
   @ParameterizedTest
   @CsvSource({"BEFORE,2025-01-04", "AFTER,2025-01-08"})
-  void ensureThatRelativeToFixedAIsValidWithDays(final Relation relation, final LocalDate expectedLocalDate) {
+  void ensureThatRelativeToFixedAIsValidWithDays(
+      final Relation relation, final LocalDate expectedLocalDate) {
 
     final Year year = Year.of(2025);
-    final RelativeToFixedHolidayConfiguration relativeToFixed = getRelativeToFixed(MonthDay.of(JANUARY, 6), null, Days.of(2), relation, year, year);
+    final RelativeToFixedHolidayConfiguration relativeToFixed =
+        getRelativeToFixed(MonthDay.of(JANUARY, 6), null, Days.of(2), relation, year, year);
 
     final RelativeToFixedParser sut = new RelativeToFixedParser();
     when(holidays.relativeToFixed()).thenReturn(List.of(relativeToFixed));
@@ -71,7 +73,8 @@ class RelativeToFixedParserTest {
     void ensureThatRelativeToFixedAreLimitedAndIsValid() {
 
       final Year year = Year.of(2025);
-      final RelativeToFixedHolidayConfiguration relativeToFixed = getRelativeToFixed(MonthDay.of(JANUARY, 6), WEDNESDAY, null, Relation.BEFORE, year, year);
+      final RelativeToFixedHolidayConfiguration relativeToFixed =
+          getRelativeToFixed(MonthDay.of(JANUARY, 6), WEDNESDAY, null, Relation.BEFORE, year, year);
 
       final RelativeToFixedParser sut = new RelativeToFixedParser();
       when(holidays.relativeToFixed()).thenReturn(List.of(relativeToFixed));
@@ -83,7 +86,14 @@ class RelativeToFixedParserTest {
     @Test
     void ensureThatRelativeToFixedAreLimitedAndIsInvalid() {
 
-      final RelativeToFixedHolidayConfiguration relativeToFixed = getRelativeToFixed(MonthDay.of(JANUARY, 6), WEDNESDAY, Days.of(2), Relation.AFTER, Year.of(2023), Year.of(2023));
+      final RelativeToFixedHolidayConfiguration relativeToFixed =
+          getRelativeToFixed(
+              MonthDay.of(JANUARY, 6),
+              WEDNESDAY,
+              Days.of(2),
+              Relation.AFTER,
+              Year.of(2023),
+              Year.of(2023));
 
       final RelativeToFixedParser sut = new RelativeToFixedParser();
       when(holidays.relativeToFixed()).thenReturn(List.of(relativeToFixed));
@@ -94,13 +104,12 @@ class RelativeToFixedParserTest {
   }
 
   private static RelativeToFixedHolidayConfiguration getRelativeToFixed(
-    final MonthDay monthDay,
-    final DayOfWeek dayOfWeek,
-    final Days days,
-    final Relation relation,
-    final Year validFrom,
-    final Year validTo
-  ) {
+      final MonthDay monthDay,
+      final DayOfWeek dayOfWeek,
+      final Days days,
+      final Relation relation,
+      final Year validFrom,
+      final Year validTo) {
     return new RelativeToFixedHolidayConfiguration() {
 
       private FixedHolidayConfiguration getFixed(final MonthDay monthDay) {

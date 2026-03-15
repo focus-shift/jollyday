@@ -1,7 +1,6 @@
 package de.focus_shift.jollyday.jackson.mapping;
 
 public enum ChristianHolidayType {
-
   GOOD_FRIDAY,
   EASTER_MONDAY,
   ASCENSION_DAY,
@@ -29,5 +28,4 @@ public enum ChristianHolidayType {
   public static ChristianHolidayType fromValue(String v) {
     return valueOf(v);
   }
-
 }

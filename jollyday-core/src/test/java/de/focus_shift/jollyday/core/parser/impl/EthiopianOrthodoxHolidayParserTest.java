@@ -1,9 +1,20 @@
 package de.focus_shift.jollyday.core.parser.impl;
 
+import static de.focus_shift.jollyday.core.HolidayType.PUBLIC_HOLIDAY;
+import static de.focus_shift.jollyday.core.spi.EthiopianOrthodoxHolidayConfiguration.EthiopianOrthodoxHolidayType.TIMKAT;
+import static de.focus_shift.jollyday.core.spi.Limited.YearCycle.EVERY_YEAR;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.Mockito.when;
+
 import de.focus_shift.jollyday.core.Holiday;
 import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.EthiopianOrthodoxHolidayConfiguration;
 import de.focus_shift.jollyday.core.spi.HolidayConfigurations;
+import java.time.LocalDate;
+import java.time.Year;
+import java.util.List;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 import org.jspecify.annotations.NonNull;
 import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Nested;
@@ -16,45 +27,34 @@ import org.junit.jupiter.params.provider.MethodSource;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import java.time.LocalDate;
-import java.time.Year;
-import java.util.List;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
-
-import static de.focus_shift.jollyday.core.HolidayType.PUBLIC_HOLIDAY;
-import static de.focus_shift.jollyday.core.spi.EthiopianOrthodoxHolidayConfiguration.EthiopianOrthodoxHolidayType.TIMKAT;
-import static de.focus_shift.jollyday.core.spi.Limited.YearCycle.EVERY_YEAR;
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.Mockito.when;
-
 @ExtendWith(MockitoExtension.class)
 class EthiopianOrthodoxHolidayParserTest {
 
-  @Mock
-  private HolidayConfigurations holidays;
+  @Mock private HolidayConfigurations holidays;
 
   @Nested
   @TestInstance(TestInstance.Lifecycle.PER_CLASS)
   class EthiopianOrthodoxHolidayTypeTests {
 
     private Stream<Arguments> ethiopianOrthodoxHolidaysWithLocalDates() {
-      final EthiopianOrthodoxHolidayConfiguration.EthiopianOrthodoxHolidayType[] ethiopianOrthodoxHoliday = EthiopianOrthodoxHolidayConfiguration.EthiopianOrthodoxHolidayType.values();
-      final String[] ethiopianOrthodoxHolidayDates = {
-        "2022-01-18",
-        "2022-09-11",
-        "2022-09-27"
-      };
+      final EthiopianOrthodoxHolidayConfiguration.EthiopianOrthodoxHolidayType[]
+          ethiopianOrthodoxHoliday =
+              EthiopianOrthodoxHolidayConfiguration.EthiopianOrthodoxHolidayType.values();
+      final String[] ethiopianOrthodoxHolidayDates = {"2022-01-18", "2022-09-11", "2022-09-27"};
 
       return IntStream.range(0, ethiopianOrthodoxHoliday.length)
-        .mapToObj(i -> Arguments.of(ethiopianOrthodoxHoliday[i], ethiopianOrthodoxHolidayDates[i]));
+          .mapToObj(
+              i -> Arguments.of(ethiopianOrthodoxHoliday[i], ethiopianOrthodoxHolidayDates[i]));
     }
 
     @ParameterizedTest
     @MethodSource("ethiopianOrthodoxHolidaysWithLocalDates")
-    void ensureThatAllEthiopianOrthodoxHolidayTypesProvideAHoliday(final EthiopianOrthodoxHolidayConfiguration.EthiopianOrthodoxHolidayType type, final LocalDate expected) {
+    void ensureThatAllEthiopianOrthodoxHolidayTypesProvideAHoliday(
+        final EthiopianOrthodoxHolidayConfiguration.EthiopianOrthodoxHolidayType type,
+        final LocalDate expected) {
 
-      final EthiopianOrthodoxHolidayConfiguration ethiopianOrthodoxHoliday = getEthiopianOrthodoxHoliday(type);
+      final EthiopianOrthodoxHolidayConfiguration ethiopianOrthodoxHoliday =
+          getEthiopianOrthodoxHoliday(type);
 
       final EthiopianOrthodoxHolidayParser sut = new EthiopianOrthodoxHolidayParser();
       when(holidays.ethiopianOrthodoxHolidays()).thenReturn(List.of(ethiopianOrthodoxHoliday));
@@ -71,7 +71,8 @@ class EthiopianOrthodoxHolidayParserTest {
     @Test
     void ensureThatEthiopianOrthodoxHolidaysAreLimitedAndIsValid() {
 
-      final EthiopianOrthodoxHolidayConfiguration ethiopianOrthodoxHoliday = getEthiopianOrthodoxHoliday(TIMKAT, Year.of(2022), Year.of(2022));
+      final EthiopianOrthodoxHolidayConfiguration ethiopianOrthodoxHoliday =
+          getEthiopianOrthodoxHoliday(TIMKAT, Year.of(2022), Year.of(2022));
 
       final EthiopianOrthodoxHolidayParser sut = new EthiopianOrthodoxHolidayParser();
       when(holidays.ethiopianOrthodoxHolidays()).thenReturn(List.of(ethiopianOrthodoxHoliday));
@@ -83,7 +84,8 @@ class EthiopianOrthodoxHolidayParserTest {
     @Test
     void ensureThatEthiopianOrthodoxHolidaysAreLimitedAndIsInvalid() {
 
-      final EthiopianOrthodoxHolidayConfiguration ethiopianOrthodoxHoliday = getEthiopianOrthodoxHoliday(TIMKAT, Year.of(2023), Year.of(2023));
+      final EthiopianOrthodoxHolidayConfiguration ethiopianOrthodoxHoliday =
+          getEthiopianOrthodoxHoliday(TIMKAT, Year.of(2023), Year.of(2023));
 
       final EthiopianOrthodoxHolidayParser sut = new EthiopianOrthodoxHolidayParser();
       when(holidays.ethiopianOrthodoxHolidays()).thenReturn(List.of(ethiopianOrthodoxHoliday));
@@ -93,15 +95,15 @@ class EthiopianOrthodoxHolidayParserTest {
     }
   }
 
-  private static EthiopianOrthodoxHolidayConfiguration getEthiopianOrthodoxHoliday(final EthiopianOrthodoxHolidayConfiguration.EthiopianOrthodoxHolidayType type) {
+  private static EthiopianOrthodoxHolidayConfiguration getEthiopianOrthodoxHoliday(
+      final EthiopianOrthodoxHolidayConfiguration.EthiopianOrthodoxHolidayType type) {
     return getEthiopianOrthodoxHoliday(type, null, null);
   }
 
   private static EthiopianOrthodoxHolidayConfiguration getEthiopianOrthodoxHoliday(
-    final EthiopianOrthodoxHolidayConfiguration.EthiopianOrthodoxHolidayType type,
-    final Year validFrom,
-    final Year validTo
-  ) {
+      final EthiopianOrthodoxHolidayConfiguration.EthiopianOrthodoxHolidayType type,
+      final Year validFrom,
+      final Year validTo) {
     return new EthiopianOrthodoxHolidayConfiguration() {
 
       @Override
