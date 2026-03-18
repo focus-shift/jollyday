@@ -168,7 +168,7 @@ public final class ResourceUtil {
    */
   public static @NonNull Optional<URL> getResource(@NonNull final String resourceName, final boolean searchOnlyInJar) {
     final Stream<URL> stream = getResources(resourceName).stream();
-    return searchOnlyInJar ? stream.filter(resource -> resource.getProtocol().equals("jar")).findFirst() : stream.findFirst();
+    return searchOnlyInJar ? stream.filter(resource -> "jar".equals(resource.getProtocol())).findFirst() : stream.findFirst();
   }
 
   private static @NonNull List<URL> getResources(@NonNull final String resourceName) {
