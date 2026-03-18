@@ -11,7 +11,6 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -37,7 +36,7 @@ class XMLValidationTest {
 
   @Test
   void testHolidayFilesAreValid() throws Exception {
-    final Path holidaysFolder = Paths.get("src/main/resources/holidays/");
+    final Path holidaysFolder = Path.of("src/main/resources/holidays/");
     try (final Stream<Path> list = Files.list(holidaysFolder)) {
       list.forEach(this::validateHolidayFile);
     }
