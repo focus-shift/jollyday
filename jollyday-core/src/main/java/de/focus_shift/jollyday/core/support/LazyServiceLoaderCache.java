@@ -9,8 +9,6 @@ import java.util.ServiceConfigurationError;
 import java.util.ServiceLoader;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-import static java.lang.String.format;
-
 public class LazyServiceLoaderCache<S> {
 
   private static final Logger LOG = LoggerFactory.getLogger(LazyServiceLoaderCache.class.getName());
@@ -36,7 +34,7 @@ public class LazyServiceLoaderCache<S> {
         services.add(s);
       }
     } catch (ServiceConfigurationError serviceConfigurationError) {
-      final String message = format("Cannot load services of type [%s].%n    %s",
+      final String message = "Cannot load services of type [%s].%n    %s".formatted(
         clz.getName(),
         serviceConfigurationError.getMessage()
       );
