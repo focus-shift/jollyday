@@ -39,9 +39,9 @@ class JacksonRelativeToFixedTest {
 
         final JacksonRelativeToFixed jacksonRelativeToFixed = new JacksonRelativeToFixed(relativeToFixed);
         assertThat(jacksonRelativeToFixed.date().day()).isEqualTo(MonthDay.of(java.time.Month.JANUARY, 1));
-        assertThat(jacksonRelativeToFixed.days()).isEqualTo(Days.of(3));
-        assertThat(jacksonRelativeToFixed.weekday()).isEqualTo(MONDAY);
-        assertThat(jacksonRelativeToFixed.when()).isEqualTo(Relation.AFTER);
+        assertThat(jacksonRelativeToFixed.days()).hasValue(Days.of(3));
+        assertThat(jacksonRelativeToFixed.weekday()).hasValue(MONDAY);
+        assertThat(jacksonRelativeToFixed.when()).hasValue(Relation.AFTER);
         assertThat(jacksonRelativeToFixed.cycle()).isEqualTo(YearCycle.ODD_YEARS);
         assertThat(jacksonRelativeToFixed.descriptionPropertiesKey()).isEqualTo("relative.fixed.description");
         assertThat(jacksonRelativeToFixed.holidayType()).isEqualTo(HolidayType.BANK_HOLIDAY);
@@ -60,8 +60,8 @@ class JacksonRelativeToFixedTest {
 
         final JacksonRelativeToFixed jacksonRelativeToFixed = new JacksonRelativeToFixed(relativeToFixed);
         assertThat(jacksonRelativeToFixed.date().day()).isEqualTo(MonthDay.of(java.time.Month.FEBRUARY, 10));
-        assertThat(jacksonRelativeToFixed.days()).isNull();
-        assertThat(jacksonRelativeToFixed.when()).isNull();
+        assertThat(jacksonRelativeToFixed.days()).isEmpty();
+        assertThat(jacksonRelativeToFixed.when()).isEmpty();
         assertThat(jacksonRelativeToFixed.cycle()).isEqualTo(YearCycle.EVERY_YEAR);
         assertThat(jacksonRelativeToFixed.descriptionPropertiesKey()).isNull();
         assertThat(jacksonRelativeToFixed.holidayType()).isEqualTo(HolidayType.PUBLIC_HOLIDAY);
