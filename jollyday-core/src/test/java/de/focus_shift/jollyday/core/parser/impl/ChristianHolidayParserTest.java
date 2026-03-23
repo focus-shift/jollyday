@@ -6,7 +6,6 @@ import de.focus_shift.jollyday.core.spi.ChristianHolidayConfiguration;
 import de.focus_shift.jollyday.core.spi.HolidayConfigurations;
 import de.focus_shift.jollyday.core.spi.Movable;
 import org.jspecify.annotations.NonNull;
-import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
@@ -22,6 +21,7 @@ import java.time.LocalDate;
 import java.time.Year;
 import java.time.chrono.Chronology;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -195,13 +195,13 @@ class ChristianHolidayParserTest {
       }
 
       @Override
-      public @Nullable Year validFrom() {
-        return validFrom;
+      public @NonNull Optional<Year> validFrom() {
+        return Optional.ofNullable(validFrom);
       }
 
       @Override
-      public @Nullable Year validTo() {
-        return validTo;
+      public @NonNull Optional<Year> validTo() {
+        return Optional.ofNullable(validTo);
       }
 
       @Override

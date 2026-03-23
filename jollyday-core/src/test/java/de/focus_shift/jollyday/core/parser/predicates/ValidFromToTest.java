@@ -5,10 +5,10 @@ import net.jqwik.api.ForAll;
 import net.jqwik.api.Property;
 import net.jqwik.time.api.constraints.YearRange;
 import org.jspecify.annotations.NonNull;
-import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Test;
 
 import java.time.Year;
+import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -81,13 +81,13 @@ class ValidFromToTest {
   private static Limited getLimited(Year fromYear, Year toYear) {
     return new Limited() {
       @Override
-      public @Nullable Year validFrom() {
-        return fromYear;
+      public @NonNull Optional<Year> validFrom() {
+        return Optional.ofNullable(fromYear);
       }
 
       @Override
-      public @Nullable Year validTo() {
-        return toYear;
+      public @NonNull Optional<Year> validTo() {
+        return Optional.ofNullable(toYear);
       }
 
       @Override

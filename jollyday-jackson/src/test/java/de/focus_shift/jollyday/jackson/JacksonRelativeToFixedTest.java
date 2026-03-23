@@ -45,8 +45,8 @@ class JacksonRelativeToFixedTest {
         assertThat(jacksonRelativeToFixed.cycle()).isEqualTo(YearCycle.ODD_YEARS);
         assertThat(jacksonRelativeToFixed.descriptionPropertiesKey()).isEqualTo("relative.fixed.description");
         assertThat(jacksonRelativeToFixed.holidayType()).isEqualTo(HolidayType.BANK_HOLIDAY);
-        assertThat(jacksonRelativeToFixed.validFrom()).isEqualTo(Year.of(2000));
-        assertThat(jacksonRelativeToFixed.validTo()).isEqualTo(Year.of(2020));
+        assertThat(jacksonRelativeToFixed.validFrom()).hasValue(Year.of(2000));
+        assertThat(jacksonRelativeToFixed.validTo()).hasValue(Year.of(2020));
     }
 
     @Test
@@ -65,7 +65,7 @@ class JacksonRelativeToFixedTest {
         assertThat(jacksonRelativeToFixed.cycle()).isEqualTo(YearCycle.EVERY_YEAR);
         assertThat(jacksonRelativeToFixed.descriptionPropertiesKey()).isNull();
         assertThat(jacksonRelativeToFixed.holidayType()).isEqualTo(HolidayType.PUBLIC_HOLIDAY);
-        assertThat(jacksonRelativeToFixed.validFrom()).isNull();
-        assertThat(jacksonRelativeToFixed.validTo()).isNull();
+        assertThat(jacksonRelativeToFixed.validFrom()).isEmpty();
+        assertThat(jacksonRelativeToFixed.validTo()).isEmpty();
     }
 }

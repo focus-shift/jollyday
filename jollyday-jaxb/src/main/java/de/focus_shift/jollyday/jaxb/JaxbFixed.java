@@ -4,12 +4,12 @@ import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.FixedHolidayConfiguration;
 import de.focus_shift.jollyday.jaxb.mapping.Fixed;
 import org.jspecify.annotations.NonNull;
-import org.jspecify.annotations.Nullable;
 
 import java.time.Month;
 import java.time.MonthDay;
 import java.time.Year;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * see {@link FixedHolidayConfiguration}
@@ -60,10 +60,10 @@ class JaxbFixed implements FixedHolidayConfiguration {
    * @return {@inheritDoc}
    */
   @Override
-  public @Nullable Year validFrom() {
+  public @NonNull Optional<Year> validFrom() {
     return fixed.getValidFrom() == null
-      ? null
-      : Year.of(fixed.getValidFrom());
+      ? Optional.empty()
+      : Optional.of(Year.of(fixed.getValidFrom()));
   }
 
   /**
@@ -72,10 +72,10 @@ class JaxbFixed implements FixedHolidayConfiguration {
    * @return {@inheritDoc}
    */
   @Override
-  public @Nullable Year validTo() {
+  public @NonNull Optional<Year> validTo() {
     return fixed.getValidTo() == null
-      ? null
-      : Year.of(fixed.getValidTo());
+      ? Optional.empty()
+      : Optional.of(Year.of(fixed.getValidTo()));
   }
 
   /**

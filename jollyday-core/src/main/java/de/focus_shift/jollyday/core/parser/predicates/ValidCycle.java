@@ -5,6 +5,7 @@ import org.jspecify.annotations.NonNull;
 
 import java.time.Period;
 import java.time.Year;
+import java.util.Optional;
 import java.util.function.Predicate;
 
 public class ValidCycle implements Predicate<Limited> {
@@ -39,13 +40,13 @@ public class ValidCycle implements Predicate<Limited> {
    * @return true if the given year based on validFrom/validTo and the cycle is valid, otherwise false
    */
   private boolean isValidWithReferenceYear(@NonNull final Limited limited, @NonNull final Period cycleYears) {
-    final Year validFrom = limited.validFrom();
-    if (validFrom != null) {
-      return (year.minusYears(validFrom.getValue())).getValue() % cycleYears.getYears() == 0;
+    final Optional<Year> validFrom = limited.validFrom();
+    if (validFrom.isPresent()) {
+      return (year.minusYears(validFrom.get().getValue())).getValue() % cycleYears.getYears() == 0;
     } else {
-      final Year validTo = limited.validTo();
-      if (validTo != null) {
-        return (validTo.minusYears(year.getValue())).getValue() % cycleYears.getYears() == 0;
+      final Optional<Year> validTo = limited.validTo();
+      if (validTo.isPresent()) {
+        return (validTo.get().minusYears(year.getValue())).getValue() % cycleYears.getYears() == 0;
       }
     }
 

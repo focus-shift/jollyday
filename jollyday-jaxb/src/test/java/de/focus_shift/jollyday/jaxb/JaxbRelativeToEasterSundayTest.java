@@ -33,8 +33,8 @@ class JaxbRelativeToEasterSundayTest {
         assertThat(jaxbRelativeToEasterSunday.cycle()).isEqualTo(YearCycle.ODD_YEARS);
         assertThat(jaxbRelativeToEasterSunday.descriptionPropertiesKey()).isEqualTo("easter.description");
         assertThat(jaxbRelativeToEasterSunday.holidayType()).isEqualTo(HolidayType.BANK_HOLIDAY);
-        assertThat(jaxbRelativeToEasterSunday.validFrom()).isEqualTo(Year.of(2015));
-        assertThat(jaxbRelativeToEasterSunday.validTo()).isEqualTo(Year.of(2025));
+        assertThat(jaxbRelativeToEasterSunday.validFrom()).hasValue(Year.of(2015));
+        assertThat(jaxbRelativeToEasterSunday.validTo()).hasValue(Year.of(2025));
     }
 
     @Test
@@ -48,7 +48,7 @@ class JaxbRelativeToEasterSundayTest {
         assertThat(jaxbRelativeToEasterSunday.cycle()).isEqualTo(YearCycle.EVERY_YEAR);
         assertThat(jaxbRelativeToEasterSunday.descriptionPropertiesKey()).isNull();
         assertThat(jaxbRelativeToEasterSunday.holidayType()).isEqualTo(HolidayType.PUBLIC_HOLIDAY);
-        assertThat(jaxbRelativeToEasterSunday.validFrom()).isNull();
-        assertThat(jaxbRelativeToEasterSunday.validTo()).isNull();
+        assertThat(jaxbRelativeToEasterSunday.validFrom()).isEmpty();
+        assertThat(jaxbRelativeToEasterSunday.validTo()).isEmpty();
     }
 }

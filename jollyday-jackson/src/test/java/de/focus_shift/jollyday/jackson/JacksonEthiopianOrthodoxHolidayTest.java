@@ -28,8 +28,8 @@ class JacksonEthiopianOrthodoxHolidayTest {
     assertThat(jacksonEthiopianOrthodoxHoliday.cycle()).isEqualTo(YearCycle.ODD_YEARS);
     assertThat(jacksonEthiopianOrthodoxHoliday.descriptionPropertiesKey()).isEqualTo("ethiopian.description");
     assertThat(jacksonEthiopianOrthodoxHoliday.holidayType()).isEqualTo(de.focus_shift.jollyday.core.HolidayType.BANK_HOLIDAY);
-    assertThat(jacksonEthiopianOrthodoxHoliday.validFrom()).isEqualTo(Year.of(2010));
-    assertThat(jacksonEthiopianOrthodoxHoliday.validTo()).isEqualTo(Year.of(2020));
+    assertThat(jacksonEthiopianOrthodoxHoliday.validFrom()).hasValue(Year.of(2010));
+    assertThat(jacksonEthiopianOrthodoxHoliday.validTo()).hasValue(Year.of(2020));
   }
 
   @Test
@@ -42,7 +42,7 @@ class JacksonEthiopianOrthodoxHolidayTest {
     assertThat(jacksonEthiopianOrthodoxHoliday.cycle()).isEqualTo(YearCycle.EVERY_YEAR);
     assertThat(jacksonEthiopianOrthodoxHoliday.descriptionPropertiesKey()).isEqualTo("ethiopian.orthodox.TIMKAT");
     assertThat(jacksonEthiopianOrthodoxHoliday.holidayType()).isEqualTo(de.focus_shift.jollyday.core.HolidayType.PUBLIC_HOLIDAY);
-    assertThat(jacksonEthiopianOrthodoxHoliday.validFrom()).isNull();
-    assertThat(jacksonEthiopianOrthodoxHoliday.validTo()).isNull();
+    assertThat(jacksonEthiopianOrthodoxHoliday.validFrom()).isEmpty();
+    assertThat(jacksonEthiopianOrthodoxHoliday.validTo()).isEmpty();
   }
 }

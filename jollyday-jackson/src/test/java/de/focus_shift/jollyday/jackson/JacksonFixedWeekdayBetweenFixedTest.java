@@ -46,8 +46,8 @@ class JacksonFixedWeekdayBetweenFixedTest {
         assertThat(jacksonFixedWeekdayBetweenFixed.cycle()).isEqualTo(YearCycle.ODD_YEARS);
         assertThat(jacksonFixedWeekdayBetweenFixed.descriptionPropertiesKey()).isEqualTo("between.description");
         assertThat(jacksonFixedWeekdayBetweenFixed.holidayType()).isEqualTo(de.focus_shift.jollyday.core.HolidayType.BANK_HOLIDAY);
-        assertThat(jacksonFixedWeekdayBetweenFixed.validFrom()).isEqualTo(Year.of(2010));
-        assertThat(jacksonFixedWeekdayBetweenFixed.validTo()).isEqualTo(Year.of(2020));
+        assertThat(jacksonFixedWeekdayBetweenFixed.validFrom()).hasValue(Year.of(2010));
+        assertThat(jacksonFixedWeekdayBetweenFixed.validTo()).hasValue(Year.of(2020));
     }
 
     @Test
@@ -72,7 +72,7 @@ class JacksonFixedWeekdayBetweenFixedTest {
         assertThat(jacksonFixedWeekdayBetweenFixed.cycle()).isEqualTo(YearCycle.EVERY_YEAR);
         assertThat(jacksonFixedWeekdayBetweenFixed.descriptionPropertiesKey()).isNull();
         assertThat(jacksonFixedWeekdayBetweenFixed.holidayType()).isEqualTo(PUBLIC_HOLIDAY);
-        assertThat(jacksonFixedWeekdayBetweenFixed.validFrom()).isNull();
-        assertThat(jacksonFixedWeekdayBetweenFixed.validTo()).isNull();
+        assertThat(jacksonFixedWeekdayBetweenFixed.validFrom()).isEmpty();
+        assertThat(jacksonFixedWeekdayBetweenFixed.validTo()).isEmpty();
     }
 }

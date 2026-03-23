@@ -5,7 +5,6 @@ import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.EthiopianOrthodoxHolidayConfiguration;
 import de.focus_shift.jollyday.core.spi.HolidayConfigurations;
 import org.jspecify.annotations.NonNull;
-import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
@@ -19,6 +18,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import java.time.LocalDate;
 import java.time.Year;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -120,13 +120,13 @@ class EthiopianOrthodoxHolidayParserTest {
       }
 
       @Override
-      public @Nullable Year validFrom() {
-        return validFrom;
+      public @NonNull Optional<Year> validFrom() {
+        return Optional.ofNullable(validFrom);
       }
 
       @Override
-      public @Nullable Year validTo() {
-        return validTo;
+      public @NonNull Optional<Year> validTo() {
+        return Optional.ofNullable(validTo);
       }
 
       @Override

@@ -5,11 +5,11 @@ import de.focus_shift.jollyday.core.spi.FixedWeekdayInMonthHolidayConfiguration;
 import de.focus_shift.jollyday.core.spi.Occurrence;
 import de.focus_shift.jollyday.jackson.mapping.FixedWeekdayInMonth;
 import org.jspecify.annotations.NonNull;
-import org.jspecify.annotations.Nullable;
 
 import java.time.DayOfWeek;
 import java.time.Month;
 import java.time.Year;
+import java.util.Optional;
 
 /**
  * see {@link FixedWeekdayInMonthHolidayConfiguration}
@@ -80,10 +80,10 @@ class JacksonFixedWeekdayInMonth implements FixedWeekdayInMonthHolidayConfigurat
    * @return {@inheritDoc}
    */
   @Override
-  public @Nullable Year validFrom() {
+  public @NonNull Optional<Year> validFrom() {
     return fixedWeekdayInMonth.getValidFrom() == null
-      ? null
-      : Year.of(fixedWeekdayInMonth.getValidFrom());
+      ? Optional.empty()
+      : Optional.of(Year.of(fixedWeekdayInMonth.getValidFrom()));
   }
 
   /**
@@ -92,10 +92,10 @@ class JacksonFixedWeekdayInMonth implements FixedWeekdayInMonthHolidayConfigurat
    * @return {@inheritDoc}
    */
   @Override
-  public @Nullable Year validTo() {
+  public @NonNull Optional<Year> validTo() {
     return fixedWeekdayInMonth.getValidTo() == null
-      ? null
-      : Year.of(fixedWeekdayInMonth.getValidTo());
+      ? Optional.empty()
+      : Optional.of(Year.of(fixedWeekdayInMonth.getValidTo()));
   }
 
   /**

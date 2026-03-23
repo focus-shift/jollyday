@@ -6,7 +6,6 @@ import de.focus_shift.jollyday.core.spi.FixedHolidayConfiguration;
 import de.focus_shift.jollyday.core.spi.FixedWeekdayBetweenFixedHolidayConfiguration;
 import de.focus_shift.jollyday.core.spi.HolidayConfigurations;
 import org.jspecify.annotations.NonNull;
-import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -18,6 +17,7 @@ import java.time.LocalDate;
 import java.time.MonthDay;
 import java.time.Year;
 import java.util.List;
+import java.util.Optional;
 
 import static de.focus_shift.jollyday.core.HolidayType.PUBLIC_HOLIDAY;
 import static de.focus_shift.jollyday.core.spi.Limited.YearCycle.EVERY_YEAR;
@@ -88,13 +88,13 @@ class FixedWeekdayBetweenFixedParserTest {
           }
 
           @Override
-          public @Nullable Year validFrom() {
-            return null;
+          public @NonNull Optional<Year> validFrom() {
+            return Optional.empty();
           }
 
           @Override
-          public @Nullable Year validTo() {
-            return null;
+          public @NonNull Optional<Year> validTo() {
+            return Optional.empty();
           }
 
           @Override
@@ -135,13 +135,13 @@ class FixedWeekdayBetweenFixedParserTest {
       }
 
       @Override
-      public @Nullable Year validFrom() {
-        return validFrom;
+      public @NonNull Optional<Year> validFrom() {
+        return Optional.of(validFrom);
       }
 
       @Override
-      public @Nullable Year validTo() {
-        return validTo;
+      public @NonNull Optional<Year> validTo() {
+        return Optional.of(validTo);
       }
 
       @Override

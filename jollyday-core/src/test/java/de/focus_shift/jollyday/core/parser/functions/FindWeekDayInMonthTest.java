@@ -4,7 +4,6 @@ import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.FixedWeekdayInMonthHolidayConfiguration;
 import de.focus_shift.jollyday.core.spi.Occurrence;
 import org.jspecify.annotations.NonNull;
-import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
@@ -12,6 +11,7 @@ import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.Month;
 import java.time.Year;
+import java.util.Optional;
 
 import static java.time.Month.MARCH;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -26,17 +26,17 @@ class FindWeekDayInMonthTest {
     "FOURTH,2024-03-25",
     "LAST,2024-03-25",
   })
-  void ensureToFindFixedWeekdayInMonth(final Occurrence occurrance, final LocalDate expectedLocalDate) {
+  void ensureToFindFixedWeekdayInMonth(final Occurrence occurrence, final LocalDate expectedLocalDate) {
 
     final FixedWeekdayInMonthHolidayConfiguration fixedWeekdayInMonth = new FixedWeekdayInMonthHolidayConfiguration() {
       @Override
-      public @Nullable Year validFrom() {
-        return null;
+      public @NonNull Optional<Year> validFrom() {
+        return Optional.empty();
       }
 
       @Override
-      public @Nullable Year validTo() {
-        return null;
+      public @NonNull Optional<Year> validTo() {
+        return Optional.empty();
       }
 
       @Override
@@ -56,7 +56,7 @@ class FindWeekDayInMonthTest {
 
       @Override
       public @NonNull Occurrence which() {
-        return occurrance;
+        return occurrence;
       }
 
       @Override

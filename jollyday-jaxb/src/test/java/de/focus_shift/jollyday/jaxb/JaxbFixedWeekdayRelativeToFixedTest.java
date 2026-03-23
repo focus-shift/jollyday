@@ -47,8 +47,8 @@ class JaxbFixedWeekdayRelativeToFixedTest {
         assertThat(jaxbFixedWeekdayRelativeToFixed.cycle()).isEqualTo(YearCycle.EVEN_YEARS);
         assertThat(jaxbFixedWeekdayRelativeToFixed.descriptionPropertiesKey()).isEqualTo("relative.description");
         assertThat(jaxbFixedWeekdayRelativeToFixed.holidayType()).isEqualTo(HolidayType.BANK_HOLIDAY);
-        assertThat(jaxbFixedWeekdayRelativeToFixed.validFrom()).isEqualTo(Year.of(2011));
-        assertThat(jaxbFixedWeekdayRelativeToFixed.validTo()).isEqualTo(Year.of(2021));
+        assertThat(jaxbFixedWeekdayRelativeToFixed.validFrom()).hasValue(Year.of(2011));
+        assertThat(jaxbFixedWeekdayRelativeToFixed.validTo()).hasValue(Year.of(2021));
     }
 
     @Test
@@ -71,7 +71,7 @@ class JaxbFixedWeekdayRelativeToFixedTest {
         assertThat(jaxbFixedWeekdayRelativeToFixed.cycle()).isEqualTo(YearCycle.EVERY_YEAR);
         assertThat(jaxbFixedWeekdayRelativeToFixed.descriptionPropertiesKey()).isNull();
         assertThat(jaxbFixedWeekdayRelativeToFixed.holidayType()).isEqualTo(HolidayType.PUBLIC_HOLIDAY);
-        assertThat(jaxbFixedWeekdayRelativeToFixed.validFrom()).isNull();
-        assertThat(jaxbFixedWeekdayRelativeToFixed.validTo()).isNull();
+        assertThat(jaxbFixedWeekdayRelativeToFixed.validFrom()).isEmpty();
+        assertThat(jaxbFixedWeekdayRelativeToFixed.validTo()).isEmpty();
     }
 }

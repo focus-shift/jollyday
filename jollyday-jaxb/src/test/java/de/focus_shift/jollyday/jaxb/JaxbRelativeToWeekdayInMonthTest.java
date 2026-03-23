@@ -45,8 +45,8 @@ class JaxbRelativeToWeekdayInMonthTest {
         assertThat(jaxbRelativeToWeekdayInMonth.when()).isEqualTo(Relation.BEFORE);
         assertThat(jaxbRelativeToWeekdayInMonth.descriptionPropertiesKey()).isEqualTo("weekdayinmonth.description");
         assertThat(jaxbRelativeToWeekdayInMonth.holidayType()).isEqualTo(HolidayType.BANK_HOLIDAY);
-        assertThat(jaxbRelativeToWeekdayInMonth.validFrom()).isEqualTo(Year.of(2010));
-        assertThat(jaxbRelativeToWeekdayInMonth.validTo()).isEqualTo(Year.of(2020));
+        assertThat(jaxbRelativeToWeekdayInMonth.validFrom()).hasValue(Year.of(2010));
+        assertThat(jaxbRelativeToWeekdayInMonth.validTo()).hasValue(Year.of(2020));
         assertThat(jaxbRelativeToWeekdayInMonth.cycle()).isEqualTo(YearCycle.ODD_YEARS);
     }
 
@@ -70,8 +70,8 @@ class JaxbRelativeToWeekdayInMonthTest {
         assertThat(jaxbRelativeToWeekdayInMonth.when()).isEqualTo(Relation.AFTER);
         assertThat(jaxbRelativeToWeekdayInMonth.descriptionPropertiesKey()).isNull();
         assertThat(jaxbRelativeToWeekdayInMonth.holidayType()).isEqualTo(HolidayType.PUBLIC_HOLIDAY);
-        assertThat(jaxbRelativeToWeekdayInMonth.validFrom()).isNull();
-        assertThat(jaxbRelativeToWeekdayInMonth.validTo()).isNull();
+        assertThat(jaxbRelativeToWeekdayInMonth.validFrom()).isEmpty();
+        assertThat(jaxbRelativeToWeekdayInMonth.validTo()).isEmpty();
         assertThat(jaxbRelativeToWeekdayInMonth.cycle()).isEqualTo(YearCycle.EVERY_YEAR);
     }
 }

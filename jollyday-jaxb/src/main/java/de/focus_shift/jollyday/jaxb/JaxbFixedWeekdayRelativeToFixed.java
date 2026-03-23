@@ -7,10 +7,10 @@ import de.focus_shift.jollyday.core.spi.Occurrence;
 import de.focus_shift.jollyday.core.spi.Relation;
 import de.focus_shift.jollyday.jaxb.mapping.FixedWeekdayRelativeToFixed;
 import org.jspecify.annotations.NonNull;
-import org.jspecify.annotations.Nullable;
 
 import java.time.DayOfWeek;
 import java.time.Year;
+import java.util.Optional;
 
 /**
  * see {@link FixedWeekdayRelativeToFixedHolidayConfiguration}
@@ -91,10 +91,10 @@ class JaxbFixedWeekdayRelativeToFixed implements FixedWeekdayRelativeToFixedHoli
    * @return {@inheritDoc}
    */
   @Override
-  public @Nullable Year validFrom() {
+  public @NonNull Optional<Year> validFrom() {
     return fixedWeekdayRelativeToFixed.getValidFrom() == null
-      ? null
-      : Year.of(fixedWeekdayRelativeToFixed.getValidFrom());
+      ? Optional.empty()
+      : Optional.of(Year.of(fixedWeekdayRelativeToFixed.getValidFrom()));
   }
 
   /**
@@ -103,10 +103,10 @@ class JaxbFixedWeekdayRelativeToFixed implements FixedWeekdayRelativeToFixedHoli
    * @return {@inheritDoc}
    */
   @Override
-  public @Nullable Year validTo() {
+  public @NonNull Optional<Year> validTo() {
     return fixedWeekdayRelativeToFixed.getValidTo() == null
-      ? null
-      : Year.of(fixedWeekdayRelativeToFixed.getValidTo());
+      ? Optional.empty()
+      : Optional.of(Year.of(fixedWeekdayRelativeToFixed.getValidTo()));
   }
 
   /**

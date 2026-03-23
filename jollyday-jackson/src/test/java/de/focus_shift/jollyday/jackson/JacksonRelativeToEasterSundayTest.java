@@ -33,8 +33,8 @@ class JacksonRelativeToEasterSundayTest {
         assertThat(jacksonRelativeToEasterSunday.cycle()).isEqualTo(YearCycle.ODD_YEARS);
         assertThat(jacksonRelativeToEasterSunday.descriptionPropertiesKey()).isEqualTo("easter.description");
         assertThat(jacksonRelativeToEasterSunday.holidayType()).isEqualTo(HolidayType.BANK_HOLIDAY);
-        assertThat(jacksonRelativeToEasterSunday.validFrom()).isEqualTo(Year.of(2015));
-        assertThat(jacksonRelativeToEasterSunday.validTo()).isEqualTo(Year.of(2025));
+        assertThat(jacksonRelativeToEasterSunday.validFrom()).hasValue(Year.of(2015));
+        assertThat(jacksonRelativeToEasterSunday.validTo()).hasValue(Year.of(2025));
     }
 
     @Test
@@ -48,7 +48,7 @@ class JacksonRelativeToEasterSundayTest {
         assertThat(jacksonRelativeToEasterSunday.cycle()).isEqualTo(YearCycle.EVERY_YEAR);
         assertThat(jacksonRelativeToEasterSunday.descriptionPropertiesKey()).isNull();
         assertThat(jacksonRelativeToEasterSunday.holidayType()).isEqualTo(HolidayType.PUBLIC_HOLIDAY);
-        assertThat(jacksonRelativeToEasterSunday.validFrom()).isNull();
-        assertThat(jacksonRelativeToEasterSunday.validTo()).isNull();
+        assertThat(jacksonRelativeToEasterSunday.validFrom()).isEmpty();
+        assertThat(jacksonRelativeToEasterSunday.validTo()).isEmpty();
     }
 }

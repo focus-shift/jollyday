@@ -4,13 +4,13 @@ import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.ChristianHolidayConfiguration;
 import de.focus_shift.jollyday.jaxb.mapping.ChristianHoliday;
 import org.jspecify.annotations.NonNull;
-import org.jspecify.annotations.Nullable;
 import org.threeten.extra.chrono.JulianChronology;
 
 import java.time.Year;
 import java.time.chrono.Chronology;
 import java.time.chrono.IsoChronology;
 import java.util.List;
+import java.util.Optional;
 
 import static de.focus_shift.jollyday.jaxb.mapping.ChronologyType.JULIAN;
 
@@ -72,10 +72,10 @@ class JaxbChristianHoliday implements ChristianHolidayConfiguration {
    * @return {@inheritDoc}
    */
   @Override
-  public @Nullable Year validFrom() {
+  public @NonNull Optional<Year> validFrom() {
     return christianHoliday.getValidFrom() == null
-      ? null
-      : Year.of(christianHoliday.getValidFrom());
+      ? Optional.empty()
+      : Optional.of(Year.of(christianHoliday.getValidFrom()));
   }
 
   /**
@@ -84,10 +84,10 @@ class JaxbChristianHoliday implements ChristianHolidayConfiguration {
    * @return {@inheritDoc}
    */
   @Override
-  public @Nullable Year validTo() {
+  public @NonNull Optional<Year> validTo() {
     return christianHoliday.getValidTo() == null
-      ? null
-      : Year.of(christianHoliday.getValidTo());
+      ? Optional.empty()
+      : Optional.of(Year.of(christianHoliday.getValidTo()));
   }
 
   /**
