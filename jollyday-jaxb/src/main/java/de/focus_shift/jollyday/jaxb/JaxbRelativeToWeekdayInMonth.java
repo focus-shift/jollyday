@@ -6,10 +6,10 @@ import de.focus_shift.jollyday.core.spi.Relation;
 import de.focus_shift.jollyday.core.spi.RelativeToWeekdayInMonthHolidayConfiguration;
 import de.focus_shift.jollyday.jaxb.mapping.RelativeToWeekdayInMonth;
 import org.jspecify.annotations.NonNull;
-import org.jspecify.annotations.Nullable;
 
 import java.time.DayOfWeek;
 import java.time.Year;
+import java.util.Optional;
 
 /**
  * see {@link RelativeToWeekdayInMonthHolidayConfiguration}
@@ -80,10 +80,10 @@ class JaxbRelativeToWeekdayInMonth implements RelativeToWeekdayInMonthHolidayCon
    * @return {@inheritDoc}
    */
   @Override
-  public @Nullable Year validFrom() {
+  public @NonNull Optional<Year> validFrom() {
     return relativeToWeekdayInMonth.getValidFrom() == null
-      ? null
-      : Year.of(relativeToWeekdayInMonth.getValidFrom());
+      ? Optional.empty()
+      : Optional.of(Year.of(relativeToWeekdayInMonth.getValidFrom()));
   }
 
   /**
@@ -92,10 +92,10 @@ class JaxbRelativeToWeekdayInMonth implements RelativeToWeekdayInMonthHolidayCon
    * @return {@inheritDoc}
    */
   @Override
-  public @Nullable Year validTo() {
+  public @NonNull Optional<Year> validTo() {
     return relativeToWeekdayInMonth.getValidTo() == null
-      ? null
-      : Year.of(relativeToWeekdayInMonth.getValidTo());
+      ? Optional.empty()
+      : Optional.of(Year.of(relativeToWeekdayInMonth.getValidTo()));
   }
 
   /**

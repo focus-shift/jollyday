@@ -33,8 +33,8 @@ class JacksonIslamicHolidayTest {
         assertThat(jacksonIslamicHoliday.cycle()).isEqualTo(YearCycle.ODD_YEARS);
         assertThat(jacksonIslamicHoliday.descriptionPropertiesKey()).isEqualTo("islamic.description");
         assertThat(jacksonIslamicHoliday.holidayType()).isEqualTo(de.focus_shift.jollyday.core.HolidayType.BANK_HOLIDAY);
-        assertThat(jacksonIslamicHoliday.validFrom()).isEqualTo(Year.of(2015));
-        assertThat(jacksonIslamicHoliday.validTo()).isEqualTo(Year.of(2025));
+        assertThat(jacksonIslamicHoliday.validFrom()).hasValue(Year.of(2015));
+        assertThat(jacksonIslamicHoliday.validTo()).hasValue(Year.of(2025));
         assertThat(jacksonIslamicHoliday.conditions()).hasSize(1);
     }
 
@@ -49,8 +49,8 @@ class JacksonIslamicHolidayTest {
         assertThat(jacksonIslamicHoliday.cycle()).isEqualTo(YearCycle.EVERY_YEAR);
         assertThat(jacksonIslamicHoliday.descriptionPropertiesKey()).isEqualTo("islamic.ID_UL_ADHA");
         assertThat(jacksonIslamicHoliday.holidayType()).isEqualTo(de.focus_shift.jollyday.core.HolidayType.PUBLIC_HOLIDAY);
-        assertThat(jacksonIslamicHoliday.validFrom()).isNull();
-        assertThat(jacksonIslamicHoliday.validTo()).isNull();
+        assertThat(jacksonIslamicHoliday.validFrom()).isEmpty();
+        assertThat(jacksonIslamicHoliday.validTo()).isEmpty();
         assertThat(jacksonIslamicHoliday.conditions()).isEmpty();
     }
 }

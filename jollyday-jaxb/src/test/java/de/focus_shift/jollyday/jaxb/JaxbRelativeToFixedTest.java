@@ -45,8 +45,8 @@ class JaxbRelativeToFixedTest {
         assertThat(jaxbRelativeToFixed.cycle()).isEqualTo(YearCycle.ODD_YEARS);
         assertThat(jaxbRelativeToFixed.descriptionPropertiesKey()).isEqualTo("relative.fixed.description");
         assertThat(jaxbRelativeToFixed.holidayType()).isEqualTo(HolidayType.BANK_HOLIDAY);
-        assertThat(jaxbRelativeToFixed.validFrom()).isEqualTo(Year.of(2000));
-        assertThat(jaxbRelativeToFixed.validTo()).isEqualTo(Year.of(2020));
+        assertThat(jaxbRelativeToFixed.validFrom()).hasValue(Year.of(2000));
+        assertThat(jaxbRelativeToFixed.validTo()).hasValue(Year.of(2020));
     }
 
     @Test
@@ -65,7 +65,7 @@ class JaxbRelativeToFixedTest {
         assertThat(jaxbRelativeToFixed.cycle()).isEqualTo(YearCycle.EVERY_YEAR);
         assertThat(jaxbRelativeToFixed.descriptionPropertiesKey()).isNull();
         assertThat(jaxbRelativeToFixed.holidayType()).isEqualTo(HolidayType.PUBLIC_HOLIDAY);
-        assertThat(jaxbRelativeToFixed.validFrom()).isNull();
-        assertThat(jaxbRelativeToFixed.validTo()).isNull();
+        assertThat(jaxbRelativeToFixed.validFrom()).isEmpty();
+        assertThat(jaxbRelativeToFixed.validTo()).isEmpty();
     }
 }

@@ -11,6 +11,7 @@ import org.threeten.extra.Days;
 
 import java.time.DayOfWeek;
 import java.time.Year;
+import java.util.Optional;
 
 /**
  * see {@link RelativeToFixedHolidayConfiguration}
@@ -97,10 +98,10 @@ class JaxbRelativeToFixed implements RelativeToFixedHolidayConfiguration {
    * @return {@inheritDoc}
    */
   @Override
-  public @Nullable Year validFrom() {
+  public @NonNull Optional<Year> validFrom() {
     return relativeToFixed.getValidFrom() == null
-      ? null
-      : Year.of(relativeToFixed.getValidFrom());
+      ? Optional.empty()
+      : Optional.of(Year.of(relativeToFixed.getValidFrom()));
   }
 
   /**
@@ -109,10 +110,10 @@ class JaxbRelativeToFixed implements RelativeToFixedHolidayConfiguration {
    * @return {@inheritDoc}
    */
   @Override
-  public @Nullable Year validTo() {
+  public @NonNull Optional<Year> validTo() {
     return relativeToFixed.getValidTo() == null
-      ? null
-      : Year.of(relativeToFixed.getValidTo());
+      ? Optional.empty()
+      : Optional.of(Year.of(relativeToFixed.getValidTo()));
   }
 
   /**

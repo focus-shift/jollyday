@@ -42,8 +42,8 @@ class JacksonChristianHolidayTest {
         assertThat(holiday.chronology()).isEqualTo(JulianChronology.INSTANCE);
         assertThat(holiday.descriptionPropertiesKey()).isEqualTo("easter.description");
         assertThat(holiday.holidayType()).isEqualTo(HolidayType.BANK_HOLIDAY);
-        assertThat(holiday.validFrom()).isEqualTo(Year.of(2010));
-        assertThat(holiday.validTo()).isEqualTo(Year.of(2020));
+        assertThat(holiday.validFrom()).hasValue(Year.of(2010));
+        assertThat(holiday.validTo()).hasValue(Year.of(2020));
         assertThat(holiday.cycle()).isEqualTo(YearCycle.ODD_YEARS);
 
         final List<Movable.MovingCondition> conditions = holiday.conditions();
@@ -61,8 +61,8 @@ class JacksonChristianHolidayTest {
         assertThat(jacksonChristianHoliday.chronology()).isEqualTo(IsoChronology.INSTANCE);
         assertThat(jacksonChristianHoliday.descriptionPropertiesKey()).isEqualTo("christian.GOOD_FRIDAY");
         assertThat(jacksonChristianHoliday.holidayType()).isEqualTo(HolidayType.PUBLIC_HOLIDAY);
-        assertThat(jacksonChristianHoliday.validFrom()).isNull();
-        assertThat(jacksonChristianHoliday.validTo()).isNull();
+        assertThat(jacksonChristianHoliday.validFrom()).isEmpty();
+        assertThat(jacksonChristianHoliday.validTo()).isEmpty();
         assertThat(jacksonChristianHoliday.cycle()).isEqualTo(YearCycle.EVERY_YEAR);
         assertThat(jacksonChristianHoliday.conditions()).isEmpty();
     }

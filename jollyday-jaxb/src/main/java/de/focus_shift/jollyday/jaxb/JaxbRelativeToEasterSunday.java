@@ -5,13 +5,13 @@ import de.focus_shift.jollyday.core.spi.RelativeToEasterSundayHolidayConfigurati
 import de.focus_shift.jollyday.jaxb.mapping.ChronologyType;
 import de.focus_shift.jollyday.jaxb.mapping.RelativeToEasterSunday;
 import org.jspecify.annotations.NonNull;
-import org.jspecify.annotations.Nullable;
 import org.threeten.extra.Days;
 import org.threeten.extra.chrono.JulianChronology;
 
 import java.time.Year;
 import java.time.chrono.Chronology;
 import java.time.chrono.IsoChronology;
+import java.util.Optional;
 
 /**
  * see {@link RelativeToEasterSundayHolidayConfiguration}
@@ -52,10 +52,10 @@ class JaxbRelativeToEasterSunday implements RelativeToEasterSundayHolidayConfigu
    * @return {@inheritDoc}
    */
   @Override
-  public @Nullable Year validFrom() {
+  public @NonNull Optional<Year> validFrom() {
     return relativeToEasterSunday.getValidFrom() == null
-      ? null
-      : Year.of(relativeToEasterSunday.getValidFrom());
+      ? Optional.empty()
+      : Optional.of(Year.of(relativeToEasterSunday.getValidFrom()));
   }
 
   /**
@@ -64,10 +64,10 @@ class JaxbRelativeToEasterSunday implements RelativeToEasterSundayHolidayConfigu
    * @return {@inheritDoc}
    */
   @Override
-  public @Nullable Year validTo() {
+  public @NonNull Optional<Year> validTo() {
     return relativeToEasterSunday.getValidTo() == null
-      ? null
-      : Year.of(relativeToEasterSunday.getValidTo());
+      ? Optional.empty()
+      : Optional.of(Year.of(relativeToEasterSunday.getValidTo()));
   }
 
   /**

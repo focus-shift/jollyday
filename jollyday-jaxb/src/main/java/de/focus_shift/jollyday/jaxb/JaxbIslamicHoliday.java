@@ -4,10 +4,10 @@ import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.IslamicHolidayConfiguration;
 import de.focus_shift.jollyday.jaxb.mapping.IslamicHoliday;
 import org.jspecify.annotations.NonNull;
-import org.jspecify.annotations.Nullable;
 
 import java.time.Year;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * see {@link IslamicHolidayConfiguration}
@@ -60,10 +60,10 @@ class JaxbIslamicHoliday implements IslamicHolidayConfiguration {
    * @return {@inheritDoc}
    */
   @Override
-  public @Nullable Year validFrom() {
+  public @NonNull Optional<Year> validFrom() {
     return islamicHoliday.getValidFrom() == null
-      ? null
-      : Year.of(islamicHoliday.getValidFrom());
+      ? Optional.empty()
+      : Optional.of(Year.of(islamicHoliday.getValidFrom()));
   }
 
   /**
@@ -72,10 +72,10 @@ class JaxbIslamicHoliday implements IslamicHolidayConfiguration {
    * @return {@inheritDoc}
    */
   @Override
-  public @Nullable Year validTo() {
+  public @NonNull Optional<Year> validTo() {
     return islamicHoliday.getValidTo() == null
-      ? null
-      : Year.of(islamicHoliday.getValidTo());
+      ? Optional.empty()
+      : Optional.of(Year.of(islamicHoliday.getValidTo()));
   }
 
   /**

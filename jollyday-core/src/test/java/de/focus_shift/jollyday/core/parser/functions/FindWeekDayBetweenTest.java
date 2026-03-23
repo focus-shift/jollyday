@@ -5,7 +5,6 @@ import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.FixedHolidayConfiguration;
 import de.focus_shift.jollyday.core.spi.FixedWeekdayBetweenFixedHolidayConfiguration;
 import org.jspecify.annotations.NonNull;
-import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -13,6 +12,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.Year;
+import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -69,13 +69,13 @@ class FindWeekDayBetweenTest {
       }
 
       @Override
-      public @Nullable Year validFrom() {
-        return null;
+      public @NonNull Optional<Year> validFrom() {
+        return Optional.empty();
       }
 
       @Override
-      public @Nullable Year validTo() {
-        return null;
+      public @NonNull Optional<Year> validTo() {
+        return Optional.empty();
       }
 
       @Override

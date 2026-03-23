@@ -2,10 +2,10 @@ package de.focus_shift.jollyday.core.parser.predicates;
 
 import de.focus_shift.jollyday.core.spi.Limited;
 import org.jspecify.annotations.NonNull;
-import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Test;
 
 import java.time.Year;
+import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -15,13 +15,13 @@ class ValidLimitationTest {
   void ensureToTestValidFromToAndCycle() {
     final Limited limited = new Limited() {
       @Override
-      public @Nullable Year validFrom() {
-        return Year.of(2001);
+      public @NonNull Optional<Year> validFrom() {
+        return Optional.of(Year.of(2001));
       }
 
       @Override
-      public @Nullable Year validTo() {
-        return Year.of(2020);
+      public @NonNull Optional<Year> validTo() {
+        return Optional.of(Year.of(2020));
       }
 
       @Override
@@ -38,13 +38,13 @@ class ValidLimitationTest {
   void ensureToFailIfCycleIsIncorrect() {
     final Limited limited = new Limited() {
       @Override
-      public @Nullable Year validFrom() {
-        return Year.of(2001);
+      public @NonNull Optional<Year> validFrom() {
+        return Optional.of(Year.of(2001));
       }
 
       @Override
-      public @Nullable Year validTo() {
-        return Year.of(2020);
+      public @NonNull Optional<Year> validTo() {
+        return Optional.of(Year.of(2020));
       }
 
       @Override
@@ -61,13 +61,13 @@ class ValidLimitationTest {
   void ensureToFailIfFromToIsIncorrect() {
     final Limited limited = new Limited() {
       @Override
-      public @Nullable Year validFrom() {
-        return Year.of(2001);
+      public @NonNull Optional<Year> validFrom() {
+        return Optional.of(Year.of(2001));
       }
 
       @Override
-      public @Nullable Year validTo() {
-        return Year.of(2020);
+      public @NonNull Optional<Year> validTo() {
+        return Optional.of(Year.of(2020));
       }
 
       @Override

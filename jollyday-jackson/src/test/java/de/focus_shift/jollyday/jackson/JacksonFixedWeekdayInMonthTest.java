@@ -36,8 +36,8 @@ class JacksonFixedWeekdayInMonthTest {
         assertThat(jacksonFixedWeekdayInMonth.cycle()).isEqualTo(YearCycle.ODD_YEARS);
         assertThat(jacksonFixedWeekdayInMonth.descriptionPropertiesKey()).isEqualTo("weekdayinmonth.description");
         assertThat(jacksonFixedWeekdayInMonth.holidayType()).isEqualTo(de.focus_shift.jollyday.core.HolidayType.BANK_HOLIDAY);
-        assertThat(jacksonFixedWeekdayInMonth.validFrom()).isEqualTo(Year.of(2012));
-        assertThat(jacksonFixedWeekdayInMonth.validTo()).isEqualTo(Year.of(2022));
+        assertThat(jacksonFixedWeekdayInMonth.validFrom()).hasValue(Year.of(2012));
+        assertThat(jacksonFixedWeekdayInMonth.validTo()).hasValue(Year.of(2022));
     }
 
     @Test
@@ -54,7 +54,7 @@ class JacksonFixedWeekdayInMonthTest {
         assertThat(holiday.cycle()).isEqualTo(YearCycle.EVERY_YEAR);
         assertThat(holiday.descriptionPropertiesKey()).isNull();
         assertThat(holiday.holidayType()).isEqualTo(de.focus_shift.jollyday.core.HolidayType.PUBLIC_HOLIDAY);
-        assertThat(holiday.validFrom()).isNull();
-        assertThat(holiday.validTo()).isNull();
+        assertThat(holiday.validFrom()).isEmpty();
+        assertThat(holiday.validTo()).isEmpty();
     }
 }

@@ -1,9 +1,9 @@
 package de.focus_shift.jollyday.core.spi;
 
 import org.jspecify.annotations.NonNull;
-import org.jspecify.annotations.Nullable;
 
 import java.time.Year;
+import java.util.Optional;
 
 /**
  * Provides the functionality to limit the years a holiday will occur.
@@ -39,14 +39,14 @@ public interface Limited {
    *
    * @return the first valid year of a holiday
    */
-  @Nullable Year validFrom();
+  @NonNull Optional<Year> validFrom();
 
   /**
    * Describes the last year a holiday is valid (inclusive)
    *
    * @return the last valid year of a holiday
    */
-  @Nullable Year validTo();
+  @NonNull Optional<Year> validTo();
 
   /**
    * Describes the cycle a holiday is valid in between the

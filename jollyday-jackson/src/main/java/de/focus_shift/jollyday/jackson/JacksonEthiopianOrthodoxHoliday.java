@@ -4,9 +4,9 @@ import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.EthiopianOrthodoxHolidayConfiguration;
 import de.focus_shift.jollyday.jackson.mapping.EthiopianOrthodoxHoliday;
 import org.jspecify.annotations.NonNull;
-import org.jspecify.annotations.Nullable;
 
 import java.time.Year;
+import java.util.Optional;
 
 /**
  * see {@link EthiopianOrthodoxHolidayConfiguration}
@@ -59,10 +59,10 @@ class JacksonEthiopianOrthodoxHoliday implements EthiopianOrthodoxHolidayConfigu
    * @return {@inheritDoc}
    */
   @Override
-  public @Nullable Year validFrom() {
+  public @NonNull Optional<Year> validFrom() {
     return ethiopianOrthodoxHoliday.getValidFrom() == null
-      ? null
-      : Year.of(ethiopianOrthodoxHoliday.getValidFrom());
+      ? Optional.empty()
+      : Optional.of(Year.of(ethiopianOrthodoxHoliday.getValidFrom()));
   }
 
   /**
@@ -71,10 +71,10 @@ class JacksonEthiopianOrthodoxHoliday implements EthiopianOrthodoxHolidayConfigu
    * @return {@inheritDoc}
    */
   @Override
-  public @Nullable Year validTo() {
+  public @NonNull Optional<Year> validTo() {
     return ethiopianOrthodoxHoliday.getValidTo() == null
-      ? null
-      : Year.of(ethiopianOrthodoxHoliday.getValidTo());
+      ? Optional.empty()
+      : Optional.of(Year.of(ethiopianOrthodoxHoliday.getValidTo()));
   }
 
   /**

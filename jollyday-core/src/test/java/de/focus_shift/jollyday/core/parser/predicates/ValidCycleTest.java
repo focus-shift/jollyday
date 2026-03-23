@@ -9,9 +9,9 @@ import net.jqwik.api.Property;
 import net.jqwik.api.Provide;
 import net.jqwik.time.api.constraints.YearRange;
 import org.jspecify.annotations.NonNull;
-import org.jspecify.annotations.Nullable;
 
 import java.time.Year;
+import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -23,13 +23,13 @@ class ValidCycleTest {
 
     final Limited limited = new Limited() {
       @Override
-      public @Nullable Year validFrom() {
-        return null;
+      public @NonNull Optional<Year> validFrom() {
+        return Optional.empty();
       }
 
       @Override
-      public @Nullable Year validTo() {
-        return null;
+      public @NonNull Optional<Year> validTo() {
+        return Optional.empty();
       }
 
       @Override
@@ -47,13 +47,13 @@ class ValidCycleTest {
 
     final Limited limited = new Limited() {
       @Override
-      public @Nullable Year validFrom() {
-        return null;
+      public @NonNull Optional<Year> validFrom() {
+        return Optional.empty();
       }
 
       @Override
-      public @Nullable Year validTo() {
-        return null;
+      public @NonNull Optional<Year> validTo() {
+        return Optional.empty();
       }
 
       @Override
@@ -75,13 +75,13 @@ class ValidCycleTest {
 
     final Limited limited = new Limited() {
       @Override
-      public @Nullable Year validFrom() {
-        return null;
+      public @NonNull Optional<Year> validFrom() {
+        return Optional.empty();
       }
 
       @Override
-      public @Nullable Year validTo() {
-        return null;
+      public @NonNull Optional<Year> validTo() {
+        return Optional.empty();
       }
 
       @Override
@@ -105,13 +105,13 @@ class ValidCycleTest {
 
     final Limited limited = new Limited() {
       @Override
-      public @Nullable Year validFrom() {
-        return Year.of(1901);
+      public @NonNull Optional<Year> validFrom() {
+        return Optional.of(Year.of(1901));
       }
 
       @Override
-      public @Nullable Year validTo() {
-        return null;
+      public @NonNull Optional<Year> validTo() {
+        return Optional.empty();
       }
 
       @Override
@@ -121,7 +121,7 @@ class ValidCycleTest {
     };
 
     final ValidCycle validCycle = new ValidCycle(year);
-    assertThat(validCycle.test(limited)).isEqualTo(((year.getValue() - limited.validFrom().getValue()) % modulo) == 0);
+    assertThat(validCycle.test(limited)).isEqualTo(((year.getValue() - limited.validFrom().get().getValue()) % modulo) == 0);
   }
 
   @Property
@@ -131,13 +131,13 @@ class ValidCycleTest {
 
     final Limited limited = new Limited() {
       @Override
-      public @Nullable Year validFrom() {
-        return null;
+      public @NonNull Optional<Year> validFrom() {
+        return Optional.empty();
       }
 
       @Override
-      public @Nullable Year validTo() {
-        return Year.of(2013);
+      public @NonNull Optional<Year> validTo() {
+        return Optional.of(Year.of(2013));
       }
 
       @Override
@@ -147,7 +147,7 @@ class ValidCycleTest {
     };
 
     final ValidCycle validCycle = new ValidCycle(year);
-    assertThat(validCycle.test(limited)).isEqualTo(((limited.validTo().getValue() - year.getValue()) % modulo) == 0);
+    assertThat(validCycle.test(limited)).isEqualTo(((limited.validTo().get().getValue() - year.getValue()) % modulo) == 0);
   }
 
   @Provide
@@ -171,13 +171,13 @@ class ValidCycleTest {
 
     final Limited limited = new Limited() {
       @Override
-      public @Nullable Year validFrom() {
-        return null;
+      public @NonNull Optional<Year> validFrom() {
+        return Optional.empty();
       }
 
       @Override
-      public @Nullable Year validTo() {
-        return null;
+      public @NonNull Optional<Year> validTo() {
+        return Optional.empty();
       }
 
       @Override
