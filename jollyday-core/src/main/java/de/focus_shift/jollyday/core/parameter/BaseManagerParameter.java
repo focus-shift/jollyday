@@ -40,7 +40,7 @@ public abstract class BaseManagerParameter implements ManagerParameter {
   public @NonNull String getManagerImplClassName() {
     final Optional<String> managerImplClass = getProperty(MANAGER_IMPL_CLASS_PREFIX);
     if (managerImplClass.isEmpty()) {
-      throw new IllegalStateException("Missing configuration '" + MANAGER_IMPL_CLASS_PREFIX + "'.");
+      throw new IllegalStateException("Missing configuration '" + MANAGER_IMPL_CLASS_PREFIX + "'. Cannot create manager.");
     }
     return managerImplClass.get();
   }
@@ -58,7 +58,7 @@ public abstract class BaseManagerParameter implements ManagerParameter {
   public @NonNull String getConfigurationServiceImplClassName() {
     final Optional<String> configurationServiceImplClass = getProperty(CONFIGURATION_SERVICE_IMPL);
     if (configurationServiceImplClass.isEmpty()) {
-      throw new IllegalStateException("Missing configuration '" + CONFIGURATION_SERVICE_IMPL + "'.");
+      throw new IllegalStateException("Missing configuration '" + CONFIGURATION_SERVICE_IMPL + "'. Cannot create configuration service.");
     }
     return configurationServiceImplClass.get();
   }
