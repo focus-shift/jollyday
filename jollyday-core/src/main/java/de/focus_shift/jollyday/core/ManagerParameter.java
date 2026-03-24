@@ -1,9 +1,9 @@
 package de.focus_shift.jollyday.core;
 
 import org.jspecify.annotations.NonNull;
-import org.jspecify.annotations.Nullable;
 
 import java.net.URL;
+import java.util.Optional;
 import java.util.Properties;
 
 public interface ManagerParameter {
@@ -14,18 +14,18 @@ public interface ManagerParameter {
 
   void mergeProperties(final Properties properties);
 
-  @Nullable String getProperty(final String key);
+  @NonNull Optional<String> getProperty(final String key);
 
   void setProperty(final String key, final String value);
 
-  @Nullable String getManagerImplClassName();
+  @NonNull String getManagerImplClassName();
 
-  @Nullable String getConfigurationServiceImplClassName();
+  @NonNull String getConfigurationServiceImplClassName();
 
   @NonNull String createCacheKey();
 
   @NonNull String getDisplayName();
 
-  @Nullable URL createResourceUrl();
+  @NonNull URL createResourceUrl();
 
 }

@@ -341,7 +341,7 @@ class DefaultHolidayManagerTest {
       final Properties properties = new Properties();
       properties.setProperty("prop", "test");
       final HolidayManager sut = HolidayManager.getInstance(properties);
-      assertThat(sut.getManagerParameter().getProperty("prop")).isEqualTo("test");
+      assertThat(sut.getManagerParameter().getProperty("prop")).hasValue("test");
     }
 
     @Test

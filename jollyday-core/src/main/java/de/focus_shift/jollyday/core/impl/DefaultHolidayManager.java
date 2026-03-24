@@ -25,6 +25,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.Set;
 
 import static de.focus_shift.jollyday.core.util.ClassLoadingUtil.loadClass;
@@ -246,11 +247,11 @@ public class DefaultHolidayManager extends HolidayManager {
 
       @Override
       public @NonNull HolidayParser createValue() {
-        final String parserClassName = getManagerParameter().getProperty(PARSER_IMPL_PREFIX + className);
-        if (parserClassName != null) {
+        final Optional<String> parserClassName = getManagerParameter().getProperty(PARSER_IMPL_PREFIX + className);
+        if (parserClassName.isPresent()) {
 
           try {
-            return (HolidayParser) loadClass(parserClassName).getConstructor().newInstance();
+            return (HolidayParser) loadClass(parserClassName.get()).getConstructor().newInstance();
           } catch (ReflectiveOperationException | SecurityException e) {
             throw new IllegalStateException("Cannot create parsers.", e);
           }
