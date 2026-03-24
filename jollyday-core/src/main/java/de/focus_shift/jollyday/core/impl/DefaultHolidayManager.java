@@ -43,11 +43,6 @@ public class DefaultHolidayManager extends HolidayManager {
   private static final Logger LOG = LoggerFactory.getLogger(DefaultHolidayManager.class);
 
   /**
-   * The configuration prefix for parser implementations.
-   */
-  private static final String PARSER_IMPL_PREFIX = "parser.impl.";
-
-  /**
    * Caches all {@link HolidayParser} instances actually used by the HolidayManager
    */
   private final Cache<HolidayParser> parserCache = new Cache<>();
@@ -246,17 +241,12 @@ public class DefaultHolidayManager extends HolidayManager {
 
       @Override
       public @NonNull HolidayParser createValue() {
-        final String parserClassName = getManagerParameter().getProperty(PARSER_IMPL_PREFIX + className);
-        if (parserClassName != null) {
-
-          try {
-            return (HolidayParser) loadClass(parserClassName).getConstructor().newInstance();
-          } catch (ReflectiveOperationException | SecurityException e) {
-            throw new IllegalStateException("Cannot create parsers.", e);
-          }
+        final String parserClassName = getManagerParameter().getParserImplClassName(className);
+        try {
+          return (HolidayParser) loadClass(parserClassName).getConstructor().newInstance();
+        } catch (ReflectiveOperationException | SecurityException e) {
+          throw new IllegalStateException("Cannot create parsers.", e);
         }
-
-        throw new IllegalStateException("Cannot create parsers. No parser implementation defined for class " + className + " in properties with key " + PARSER_IMPL_PREFIX + className);
       }
     };
 

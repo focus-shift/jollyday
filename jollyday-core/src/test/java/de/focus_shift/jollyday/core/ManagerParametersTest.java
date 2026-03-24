@@ -33,7 +33,7 @@ class ManagerParametersTest {
     final ManagerParameter managerParameter = ManagerParameters.create("de", properties);
     assertThat(managerParameter).isInstanceOf(CalendarPartManagerParameter.class);
     assertThat(managerParameter.getDisplayName()).isEqualTo("de");
-    assertThat(managerParameter.getProperty("property")).isEqualTo("property-value");
+    assertThat(managerParameter.getProperty("property")).hasValue("property-value");
   }
 
   @Test
@@ -62,7 +62,7 @@ class ManagerParametersTest {
     final ManagerParameter managerParameter = ManagerParameters.create(Locale.GERMANY, properties);
     assertThat(managerParameter).isInstanceOf(CalendarPartManagerParameter.class);
     assertThat(managerParameter.getDisplayName()).isEqualTo("de");
-    assertThat(managerParameter.getProperty("property")).isEqualTo("property-value");
+    assertThat(managerParameter.getProperty("property")).hasValue("property-value");
   }
 
   @Test
@@ -81,7 +81,7 @@ class ManagerParametersTest {
     final ManagerParameter managerParameter = ManagerParameters.create(HolidayCalendar.GERMANY, properties);
     assertThat(managerParameter).isInstanceOf(CalendarPartManagerParameter.class);
     assertThat(managerParameter.getDisplayName()).isEqualTo("de");
-    assertThat(managerParameter.getProperty("property")).isEqualTo("property-value");
+    assertThat(managerParameter.getProperty("property")).hasValue("property-value");
   }
 
   @Test
@@ -107,6 +107,6 @@ class ManagerParametersTest {
     final ManagerParameter managerParameter = ManagerParameters.create(url, properties);
     assertThat(managerParameter).isInstanceOf(UrlManagerParameter.class);
     assertThat(managerParameter.getDisplayName()).isEqualTo("Holidays_test.xml");
-    assertThat(managerParameter.getProperty("property")).isEqualTo("property-value");
+    assertThat(managerParameter.getProperty("property")).hasValue("property-value");
   }
 }

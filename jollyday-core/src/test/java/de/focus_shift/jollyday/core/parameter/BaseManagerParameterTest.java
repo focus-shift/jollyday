@@ -18,8 +18,8 @@ class BaseManagerParameterTest {
     properties.setProperty("manager.impl", "managerImplClassName");
 
     final TestBaseManagerParameter sut = new TestBaseManagerParameter(properties);
-    assertThat(sut.getProperty("somebody")).isEqualTo("just told me");
-    assertThat(sut.getProperty("manager.impl")).isEqualTo("managerImplClassName");
+    assertThat(sut.getProperty("somebody")).hasValue("just told me");
+    assertThat(sut.getProperty("manager.impl")).hasValue("managerImplClassName");
   }
 
   @Test
@@ -28,7 +28,7 @@ class BaseManagerParameterTest {
     final TestBaseManagerParameter sut = new TestBaseManagerParameter(new Properties());
     sut.setProperty("somebody", "just told me");
 
-    assertThat(sut.getProperty("somebody")).isEqualTo("just told me");
+    assertThat(sut.getProperty("somebody")).hasValue("just told me");
   }
 
   @Test
@@ -38,17 +38,17 @@ class BaseManagerParameterTest {
     properties.setProperty("manager.impl", "managerImplClassName");
 
     final TestBaseManagerParameter sut = new TestBaseManagerParameter(properties);
-    assertThat(sut.getProperty("somebody")).isEqualTo("just told me");
-    assertThat(sut.getProperty("manager.impl")).isEqualTo("managerImplClassName");
+    assertThat(sut.getProperty("somebody")).hasValue("just told me");
+    assertThat(sut.getProperty("manager.impl")).hasValue("managerImplClassName");
 
     final Properties mergeProperties = new Properties();
     mergeProperties.setProperty("somebody", "just told me that this is a new one");
     mergeProperties.setProperty("somebody new", "just told me that this is a new one");
 
     sut.mergeProperties(mergeProperties);
-    assertThat(sut.getProperty("somebody")).isEqualTo("just told me");
-    assertThat(sut.getProperty("somebody new")).isEqualTo("just told me that this is a new one");
-    assertThat(sut.getProperty("manager.impl")).isEqualTo("managerImplClassName");
+    assertThat(sut.getProperty("somebody")).hasValue("just told me");
+    assertThat(sut.getProperty("somebody new")).hasValue("just told me that this is a new one");
+    assertThat(sut.getProperty("manager.impl")).hasValue("managerImplClassName");
   }
 
   @Test

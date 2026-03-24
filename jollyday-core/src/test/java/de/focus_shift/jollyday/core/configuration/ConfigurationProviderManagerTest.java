@@ -29,8 +29,8 @@ class ConfigurationProviderManagerTest {
     final ManagerParameter managerParameter = ManagerParameters.create((String) null);
     sut.mergeConfigurationProperties(managerParameter);
 
-    assertThat(managerParameter.getProperty("manager.impl")).isEqualTo("UrlConfigurationProviderOverloaded");
-    assertThat(managerParameter.getProperty("manager.impl.url")).isEqualTo("UrlConfigurationProviderOverloaded.url");
+    assertThat(managerParameter.getProperty("manager.impl")).hasValue("UrlConfigurationProviderOverloaded");
+    assertThat(managerParameter.getProperty("manager.impl.url")).hasValue("UrlConfigurationProviderOverloaded.url");
     System.clearProperty(CONFIG_URLS_PROPERTY);
   }
 
@@ -42,9 +42,9 @@ class ConfigurationProviderManagerTest {
     final ManagerParameter managerParameter = ManagerParameters.create((String) null);
     sut.mergeConfigurationProperties(managerParameter);
 
-    assertThat(managerParameter.getProperty("manager.impl")).isEqualTo("ProviderClassesConfigurationProviderOverloaded");
-    assertThat(managerParameter.getProperty("manager.impl.url")).isEqualTo("UrlConfigurationProviderOverloaded.url");
-    assertThat(managerParameter.getProperty("manager.impl.custom")).isEqualTo("ProviderClassesConfigurationProviderOverloaded.custom");
+    assertThat(managerParameter.getProperty("manager.impl")).hasValue("ProviderClassesConfigurationProviderOverloaded");
+    assertThat(managerParameter.getProperty("manager.impl.url")).hasValue("UrlConfigurationProviderOverloaded.url");
+    assertThat(managerParameter.getProperty("manager.impl.custom")).hasValue("ProviderClassesConfigurationProviderOverloaded.custom");
 
     System.clearProperty(CONFIG_URLS_PROPERTY);
     System.clearProperty(CONFIG_PROVIDERS_PROPERTY);
@@ -62,8 +62,8 @@ class ConfigurationProviderManagerTest {
 
     sut.mergeConfigurationProperties(managerParameter);
 
-    assertThat(managerParameter.getProperty("manager.impl")).isEqualTo("ManagerParameterOverloaded");
-    assertThat(managerParameter.getProperty("manager.impl.manager")).isEqualTo("ManagerParameterOverloaded.manager");
+    assertThat(managerParameter.getProperty("manager.impl")).hasValue("ManagerParameterOverloaded");
+    assertThat(managerParameter.getProperty("manager.impl.manager")).hasValue("ManagerParameterOverloaded.manager");
 
     System.clearProperty(CONFIG_URLS_PROPERTY);
     System.clearProperty(CONFIG_PROVIDERS_PROPERTY);

@@ -265,7 +265,7 @@ public class CalendarChecker implements
   }
 
   private String buildAssertionMessage(HolidayManager holidayManager, String[] subdivisions) {
-    final String displayName = holidayManager != null && holidayManager.getManagerParameter() != null ? holidayManager.getManagerParameter().getDisplayName() : "UnknownManager";
+    final String displayName = holidayManager != null ? holidayManager.getManagerParameter().getDisplayName() : "UnknownManager";
     final String subdivisionsStr = subdivisions != null ? Arrays.toString(subdivisions) : "[]";
     return "Failure in a holiday for " + displayName + " " + subdivisionsStr;
   }

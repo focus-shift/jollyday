@@ -1,11 +1,12 @@
 package de.focus_shift.jollyday.core.parameter;
 
-import de.focus_shift.jollyday.core.util.ResourceUtil;
 import org.jspecify.annotations.NonNull;
 import org.jspecify.annotations.Nullable;
 
 import java.net.URL;
 import java.util.Properties;
+
+import static de.focus_shift.jollyday.core.util.ResourceUtil.getResource;
 
 public class CalendarPartManagerParameter extends BaseManagerParameter {
 
@@ -30,18 +31,16 @@ public class CalendarPartManagerParameter extends BaseManagerParameter {
   }
 
   @Override
-  public @Nullable URL createResourceUrl() {
+  public @NonNull URL createResourceUrl() {
     final String configurationFileName = getConfigurationFileName(calendarPart);
-    return ResourceUtil.getResource(configurationFileName).orElse(null);
+    return getResource(configurationFileName)
+      .orElseThrow(() -> new IllegalStateException("Cannot find resource '" + configurationFileName + "'."));
   }
 
   @Override
-  public @Nullable String getManagerImplClassName() {
-    String className = getProperty(MANAGER_IMPL_CLASS_PREFIX + "." + calendarPart);
-    if (className == null) {
-      className = super.getManagerImplClassName();
-    }
-    return className;
+  public @NonNull String getManagerImplClassName() {
+    return getProperty(MANAGER_IMPL_CLASS_PREFIX + "." + calendarPart)
+      .orElse(super.getManagerImplClassName());
   }
 
   /**

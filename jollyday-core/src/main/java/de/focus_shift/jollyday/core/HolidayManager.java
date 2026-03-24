@@ -132,11 +132,7 @@ public abstract class HolidayManager {
    * @return the manager implementation class name
    */
   private static @NonNull String readManagerImplClassName(@NonNull final ManagerParameter parameter) {
-    final String className = parameter.getManagerImplClassName();
-    if (className == null) {
-      throw new IllegalStateException("Missing configuration '" + ManagerParameter.MANAGER_IMPL_CLASS_PREFIX + "'. Cannot create manager.");
-    }
-    return className;
+    return parameter.getManagerImplClassName();
   }
 
   /**
@@ -146,11 +142,7 @@ public abstract class HolidayManager {
    * @return the manager implementation class name
    */
   private static @NonNull String readConfigurationServiceImplClassName(@NonNull final ManagerParameter parameter) {
-    final String className = parameter.getConfigurationServiceImplClassName();
-    if (className == null) {
-      throw new IllegalStateException("Missing configuration '" + ManagerParameter.CONFIGURATION_SERVICE_IMPL + "'. Cannot create configuration service.");
-    }
-    return className;
+    return parameter.getConfigurationServiceImplClassName();
   }
 
   /**
