@@ -27,7 +27,6 @@ public abstract class BaseManagerParameter implements ManagerParameter {
     }
   }
 
-  @Override
   public @NonNull Optional<String> getProperty(@NonNull String key) {
     return Optional.ofNullable(properties.getProperty(key));
   }
@@ -47,8 +46,17 @@ public abstract class BaseManagerParameter implements ManagerParameter {
   }
 
   @Override
+  public @NonNull String getParserImplClassName(@NonNull final String className) {
+    final Optional<String> parserImplClass = getProperty(PARSER_IMPL_PREFIX + className);
+    if (parserImplClass.isEmpty()) {
+      throw new IllegalStateException("Cannot create parsers. No parser implementation defined for class " + className + " in properties with key " + PARSER_IMPL_PREFIX + className);
+    }
+    return parserImplClass.get();
+  }
+
+  @Override
   public @NonNull String getConfigurationServiceImplClassName() {
-    final Optional<String> configurationServiceImplClass =  getProperty(CONFIGURATION_SERVICE_IMPL);
+    final Optional<String> configurationServiceImplClass = getProperty(CONFIGURATION_SERVICE_IMPL);
     if (configurationServiceImplClass.isEmpty()) {
       throw new IllegalStateException("Missing configuration '" + CONFIGURATION_SERVICE_IMPL + "'.");
     }

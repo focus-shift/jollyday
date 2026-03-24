@@ -26,6 +26,11 @@ public interface ManagerParameter {
   String MANAGER_IMPL_CLASS_PREFIX = "manager.impl";
 
   /**
+   * The configuration prefix for parser implementations.
+   */
+  String PARSER_IMPL_PREFIX = "parser.impl.";
+
+  /**
    * Key used to identify the configuration service implementation class.
    */
   String CONFIGURATION_SERVICE_IMPL = "configuration.service.impl";
@@ -61,6 +66,13 @@ public interface ManagerParameter {
    * @return the manager implementation class name; never {@code null}
    */
   @NonNull String getManagerImplClassName();
+
+  /**
+   * Returns the fully qualified class name of the parser implementation.
+   *
+   * @return the parser implementation class name; never {@code null}
+   */
+  @NonNull String getParserImplClassName(@NonNull final String className);
 
   /**
    * Returns the fully qualified class name of the configuration service implementation.
