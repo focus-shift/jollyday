@@ -39,9 +39,9 @@ class JaxbRelativeToFixedTest {
 
         final JaxbRelativeToFixed jaxbRelativeToFixed = new JaxbRelativeToFixed(relativeToFixed);
         assertThat(jaxbRelativeToFixed.date().day()).isEqualTo(MonthDay.of(java.time.Month.JANUARY, 1));
-        assertThat(jaxbRelativeToFixed.days()).isEqualTo(Days.of(3));
-        assertThat(jaxbRelativeToFixed.weekday()).isEqualTo(MONDAY);
-        assertThat(jaxbRelativeToFixed.when()).isEqualTo(Relation.AFTER);
+        assertThat(jaxbRelativeToFixed.days()).hasValue(Days.of(3));
+        assertThat(jaxbRelativeToFixed.weekday()).hasValue(MONDAY);
+        assertThat(jaxbRelativeToFixed.when()).hasValue(Relation.AFTER);
         assertThat(jaxbRelativeToFixed.cycle()).isEqualTo(YearCycle.ODD_YEARS);
         assertThat(jaxbRelativeToFixed.descriptionPropertiesKey()).isEqualTo("relative.fixed.description");
         assertThat(jaxbRelativeToFixed.holidayType()).isEqualTo(HolidayType.BANK_HOLIDAY);
@@ -60,8 +60,8 @@ class JaxbRelativeToFixedTest {
 
         final JaxbRelativeToFixed jaxbRelativeToFixed = new JaxbRelativeToFixed(relativeToFixed);
         assertThat(jaxbRelativeToFixed.date().day()).isEqualTo(MonthDay.of(java.time.Month.FEBRUARY, 10));
-        assertThat(jaxbRelativeToFixed.days()).isNull();
-        assertThat(jaxbRelativeToFixed.when()).isNull();
+        assertThat(jaxbRelativeToFixed.days()).isEmpty();
+        assertThat(jaxbRelativeToFixed.when()).isEmpty();
         assertThat(jaxbRelativeToFixed.cycle()).isEqualTo(YearCycle.EVERY_YEAR);
         assertThat(jaxbRelativeToFixed.descriptionPropertiesKey()).isNull();
         assertThat(jaxbRelativeToFixed.holidayType()).isEqualTo(HolidayType.PUBLIC_HOLIDAY);

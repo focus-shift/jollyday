@@ -6,7 +6,6 @@ import de.focus_shift.jollyday.core.spi.Relation;
 import de.focus_shift.jollyday.core.spi.RelativeToFixedHolidayConfiguration;
 import de.focus_shift.jollyday.jaxb.mapping.RelativeToFixed;
 import org.jspecify.annotations.NonNull;
-import org.jspecify.annotations.Nullable;
 import org.threeten.extra.Days;
 
 import java.time.DayOfWeek;
@@ -40,10 +39,10 @@ class JaxbRelativeToFixed implements RelativeToFixedHolidayConfiguration {
    * @return {@inheritDoc}
    */
   @Override
-  public @Nullable DayOfWeek weekday() {
+  public @NonNull Optional<DayOfWeek> weekday() {
     return relativeToFixed.getWeekday() == null
-      ? null
-      : DayOfWeek.valueOf(relativeToFixed.getWeekday().name());
+      ? Optional.empty()
+      : Optional.of(DayOfWeek.valueOf(relativeToFixed.getWeekday().name()));
   }
 
   /**
@@ -52,10 +51,10 @@ class JaxbRelativeToFixed implements RelativeToFixedHolidayConfiguration {
    * @return {@inheritDoc}
    */
   @Override
-  public @Nullable Relation when() {
+  public @NonNull Optional<Relation> when() {
     return relativeToFixed.getWhen() == null
-      ? null
-      : Relation.valueOf(relativeToFixed.getWhen().name());
+      ? Optional.empty()
+      : Optional.of(Relation.valueOf(relativeToFixed.getWhen().name()));
   }
 
   /**
@@ -64,10 +63,10 @@ class JaxbRelativeToFixed implements RelativeToFixedHolidayConfiguration {
    * @return {@inheritDoc}
    */
   @Override
-  public @Nullable Days days() {
+  public @NonNull Optional<Days> days() {
     return relativeToFixed.getDays() == null
-      ? null
-      : Days.of(relativeToFixed.getDays());
+      ? Optional.empty()
+      : Optional.of(Days.of(relativeToFixed.getDays()));
   }
 
   /**

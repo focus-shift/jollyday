@@ -16,6 +16,7 @@ import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.Year;
 import java.util.List;
+import java.util.Optional;
 
 import static de.focus_shift.jollyday.core.spi.Relation.BEFORE;
 
@@ -48,13 +49,13 @@ public class RelativeToFixedParser implements HolidayParser {
   private @NonNull Holiday moveToRelativeDate(@NonNull final Year year, @NonNull final RelativeToFixedHolidayConfiguration rf) {
     LocalDate fixed = new FixedToLocalDate(year).apply(rf.date());
 
-    final DayOfWeek weekday = rf.weekday();
-    if (weekday != null) {
-      fixed = moveToWeekday(fixed, weekday, rf.when());
+    final Optional<DayOfWeek> weekday = rf.weekday();
+    if (weekday.isPresent()) {
+      fixed = moveToWeekday(fixed, weekday.get(), rf.when().orElse(null));
     } else {
-      final Days days = rf.days();
-      if (days != null) {
-        fixed = moveByDays(fixed, days, rf.when());
+      final Optional<Days> days = rf.days();
+      if (days.isPresent()) {
+        fixed = moveByDays(fixed, days.get(), rf.when().orElse(null));
       }
     }
 

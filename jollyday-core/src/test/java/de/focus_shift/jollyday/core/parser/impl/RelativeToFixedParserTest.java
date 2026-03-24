@@ -7,7 +7,6 @@ import de.focus_shift.jollyday.core.spi.HolidayConfigurations;
 import de.focus_shift.jollyday.core.spi.Relation;
 import de.focus_shift.jollyday.core.spi.RelativeToFixedHolidayConfiguration;
 import org.jspecify.annotations.NonNull;
-import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -144,18 +143,18 @@ class RelativeToFixedParserTest {
       }
 
       @Override
-      public @Nullable DayOfWeek weekday() {
-        return dayOfWeek;
+      public @NonNull Optional<DayOfWeek> weekday() {
+        return Optional.ofNullable(dayOfWeek);
       }
 
       @Override
-      public @Nullable Days days() {
-        return days;
+      public @NonNull Optional<Days> days() {
+        return Optional.ofNullable(days);
       }
 
       @Override
-      public @Nullable Relation when() {
-        return relation;
+      public @NonNull Optional<Relation> when() {
+        return Optional.ofNullable(relation);
       }
 
       @Override
