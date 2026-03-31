@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="mg" description="Madagascar"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="MARCH" day="8" descriptionPropertiesKey="INTERNATIONAL_WOMAN"/>
+    <Fixed month="MARCH" day="29" descriptionPropertiesKey="MARTYRS_DAY"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="JUNE" day="26" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
+    <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+
+    <ChristianHoliday type="EASTER_MONDAY"/>
+    <ChristianHoliday type="ASCENSION_DAY"/>
+    <ChristianHoliday type="WHIT_MONDAY"/>
+    <IslamicHoliday type="ID_AL_FITR"/>
+    <IslamicHoliday type="ID_UL_ADHA"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Madagascar</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:MG</Source>
+  </Sources>
+
+  <SubConfigurations hierarchy="A" description="Toamasina">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="D" description="Antsiranana">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="F" description="Fianarantsoa">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="M" description="Mahajanga">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="T" description="Antananarivo">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="U" description="Toliara">
+    <Holidays/>
+  </SubConfigurations>
+</Configuration>
