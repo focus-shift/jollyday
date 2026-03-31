@@ -86,6 +86,10 @@
       <Fixed month="APRIL" day="25" validTo="2007" descriptionPropertiesKey="ANZAC">
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
+      <Fixed month="APRIL" day="25" validFrom="2026" descriptionPropertiesKey="ANZAC">
+        <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+      </Fixed>
       <Fixed month="DECEMBER" day="25" validFrom="2008" validTo="2019" descriptionPropertiesKey="CHRISTMAS">
         <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
@@ -171,7 +175,7 @@
       <Fixed month="APRIL" day="25" validTo="2007" descriptionPropertiesKey="ANZAC">
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
-      <Fixed month="APRIL" day="25" validFrom="2020" descriptionPropertiesKey="ANZAC">
+      <Fixed month="APRIL" day="25" validFrom="2020" validTo="2022" descriptionPropertiesKey="ANZAC">
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
       <Fixed month="DECEMBER" day="25" validFrom="2008" validTo="2019" descriptionPropertiesKey="CHRISTMAS">
