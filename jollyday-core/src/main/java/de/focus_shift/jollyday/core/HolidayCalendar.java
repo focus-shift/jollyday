@@ -20,7 +20,7 @@ public enum HolidayCalendar {
   ECUADOR("EC"), EGYPT("EG"), ESTONIA("EE"), ETHIOPIA("ET"),
   FINLAND("FI"), FRANCE(Locale.FRANCE.getCountry()),
   GEORGIA("GE"), GERMANY(Locale.GERMANY.getCountry()), GIBRALTAR("GI"), GUATEMALA("GT"), GUERNSEY("GG"), GREECE("GR"), GREENLAND("GL"),
-  HONG_KONG("HK"), HUNGARY("HU"),
+  HONDURAS("HN"), HONG_KONG("HK"), HUNGARY("HU"),
   ICELAND("IS"), INDIA("IN"), IRELAND("IE"), ISLE_OF_MAN("IM"), ITALY(Locale.ITALY.getCountry()),
   JAPAN("JP"), JERSEY("JE"),
   KAZAKHSTAN("KZ"), KOSOVO("XK"),
