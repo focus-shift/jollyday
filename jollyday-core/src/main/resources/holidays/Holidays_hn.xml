@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="hn" description="Honduras"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="APRIL" day="14" descriptionPropertiesKey="AMERICAS_DAY"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="SEPTEMBER" day="15" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <Fixed month="OCTOBER" day="3" descriptionPropertiesKey="FRANCISCO_MORAZAN_DAY"/>
+    <Fixed month="OCTOBER" day="12" descriptionPropertiesKey="COLUMBUS_DAY"/>
+    <Fixed month="OCTOBER" day="21" descriptionPropertiesKey="ARMY_DAY"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+
+    <ChristianHoliday type="MAUNDY_THURSDAY"/>
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_SATURDAY"/>
+    <ChristianHoliday type="EASTER"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Honduras</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:HN</Source>
+  </Sources>
+
+  <SubConfigurations hierarchy="AT" description="Atlántida">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="CH" description="Choluteca">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="CL" description="Colón">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="CM" description="Comayagua">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="CP" description="Copán">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="CR" description="Cortés">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="EP" description="El Paraíso">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="FM" description="Francisco Morazán">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="GD" description="Gracias a Dios">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="IN" description="Intibucá">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="IB" description="Islas de la Bahía">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="LP" description="La Paz">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="LE" description="Lempira">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="OC" description="Ocotepeque">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="OL" description="Olancho">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="SB" description="Santa Bárbara">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="VA" description="Valle">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="YO" description="Yoro">
+    <Holidays/>
+  </SubConfigurations>
+</Configuration>
