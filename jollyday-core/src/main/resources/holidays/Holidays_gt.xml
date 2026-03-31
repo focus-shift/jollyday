@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="gt" description="Guatemala"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="INTERNATIONAL_WORKERS_DAY"/>
+    <Fixed month="JUNE" day="30" descriptionPropertiesKey="ARMY_DAY"/>
+    <Fixed month="SEPTEMBER" day="15" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <Fixed month="OCTOBER" day="20" descriptionPropertiesKey="REVOLUTION"/>
+    <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
+    <Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CHRISTMAS_EVE"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+    <Fixed month="DECEMBER" day="31" descriptionPropertiesKey="NEW_YEARS_EVE"/>
+
+    <ChristianHoliday type="MAUNDY_THURSDAY"/>
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_SATURDAY"/>
+    <ChristianHoliday type="EASTER"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Guatemala</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:GT</Source>
+  </Sources>
+
+  <SubConfigurations hierarchy="01" description="Guatemala">
+    <Holidays>
+      <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="02" description="El Progreso">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="03" description="Sacatepéquez">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="04" description="Chimaltenango">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="05" description="Escuintla">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="06" description="Saint Rose">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="07" description="Sololá">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="08" description="Totonicapán">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="09" description="Quetzaltenango">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="10" description="Suchitepéquez">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="11" description="Retalhuleu">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="12" description="Saint Mark">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="13" description="Huehuetenango">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="14" description="Quiché">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="15" description="Lower Verapaz">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="16" description="Upper Verapaz">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="17" description="Petén">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="18" description="Izabal">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="19" description="Zacapa">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="20" description="Chiquimula">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="21" description="Jalapa">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="22" description="Jutiapa">
+    <Holidays/>
+  </SubConfigurations>
+
+</Configuration>
