@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="gl" description="Greenland"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="JANUARY" day="6" descriptionPropertiesKey="EPIPHANY" localizedType="OBSERVANCE"/>
+    <Fixed month="JUNE" day="21" descriptionPropertiesKey="ULLORTUNEQ"/>
+    <Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CHRISTMAS_EVE"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="STEPHENS"/>
+    <Fixed month="DECEMBER" day="31" descriptionPropertiesKey="NEW_YEARS_EVE" localizedType="OBSERVANCE"/>
+
+    <ChristianHoliday type="GENERAL_PRAYER_DAY"/>
+    <ChristianHoliday type="MAUNDY_THURSDAY"/>
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER"/>
+    <ChristianHoliday type="EASTER_MONDAY"/>
+    <ChristianHoliday type="ASCENSION_DAY"/>
+    <ChristianHoliday type="PENTECOST"/>
+    <ChristianHoliday type="WHIT_MONDAY"/>
+
+    <RelativeToEasterSunday descriptionPropertiesKey="BANK_HOLIDAY" localizedType="OBSERVANCE">
+      <chronology>GREGORIAN</chronology>
+      <days>40</days>
+    </RelativeToEasterSunday>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Greenland</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:GL</Source>
+  </Sources>
+
+  <SubConfigurations hierarchy="av" description="Avannaata">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ku" description="Kujalleq">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="qt" description="Qeqertalik">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="sm" description="Sermersooq">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="qe" description="Qeqqata">
+    <Holidays/>
+  </SubConfigurations>
+</Configuration>
