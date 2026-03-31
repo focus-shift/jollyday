@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="jm" description="Jamaica"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="MAY" day="23" descriptionPropertiesKey="LABOUR_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="AUGUST" day="1" descriptionPropertiesKey="EMANCIPATION_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="AUGUST" day="6" descriptionPropertiesKey="INDEPENDENCE_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <FixedWeekday which="THIRD" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="HEROES"/>
+
+    <ChristianHoliday type="ASH_WEDNESDAY"/>
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Jamaica</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:JM</Source>
+  </Sources>
+
+  <SubConfigurations hierarchy="01" description="Kingston">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="02" description="Saint Andrew">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="03" description="Saint Thomas">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="04" description="Portland">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="05" description="Saint Mary">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="06" description="Saint Ann">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="07" description="Trelawny">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="08" description="Saint James">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="09" description="Hanover">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="10" description="Westmoreland">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="11" description="Saint Elizabeth">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="12" description="Manchester">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="13" description="Clarendon">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="14" description="Saint Catherine">
+    <Holidays/>
+  </SubConfigurations>
+</Configuration>
