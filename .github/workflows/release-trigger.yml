@@ -39,7 +39,7 @@ jobs:
         run: ./mvnw verify
 
       - name: Create Release Notes
-        uses: spring-io/github-changelog-generator@v0.0.13
+        uses: spring-io/github-changelog-generator@v0.0.14
         with:
           milestone: ${{ github.event.inputs.milestoneName }}
           changelog-file: ${{format('{0}{1}{2}', '.chglog/', github.event.inputs.releaseVersion, '.md')}}
