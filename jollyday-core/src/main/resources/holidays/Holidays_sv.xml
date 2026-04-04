@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="sv" description="El Salvador"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <!-- New Year's Day -->
+    <Fixed day="1" month="JANUARY" descriptionPropertiesKey="NEW_YEAR"/>
+
+    <!-- Labour Day -->
+    <Fixed day="1" month="MAY" descriptionPropertiesKey="LABOUR_DAY"/>
+
+    <!-- The Day of the Cross -->
+    <Fixed day="3" month="MAY" descriptionPropertiesKey="DAY_OF_THE_CROSS"/>
+
+    <!-- Soldiers' Day -->
+    <Fixed day="7" month="MAY" descriptionPropertiesKey="SOLDIERS_DAY"/>
+
+    <!-- Mother's Day / Father's Day (same date) -->
+    <Fixed day="10" month="MAY" descriptionPropertiesKey="MOTHERS_DAY"/>
+
+    <!-- August Festivals (Fiestas de agosto) - August 1-7 -->
+    <Fixed day="1" month="AUGUST" descriptionPropertiesKey="AUGUST_FESTIVALS"/>
+    <Fixed day="2" month="AUGUST" descriptionPropertiesKey="AUGUST_FESTIVALS"/>
+    <Fixed day="3" month="AUGUST" descriptionPropertiesKey="AUGUST_FESTIVALS"/>
+    <Fixed day="4" month="AUGUST" descriptionPropertiesKey="AUGUST_FESTIVALS"/>
+    <Fixed day="5" month="AUGUST" descriptionPropertiesKey="AUGUST_FESTIVALS"/>
+    <Fixed day="6" month="AUGUST" descriptionPropertiesKey="AUGUST_FESTIVALS"/>
+    <Fixed day="7" month="AUGUST" descriptionPropertiesKey="AUGUST_FESTIVALS"/>
+
+    <!-- Independence Day -->
+    <Fixed day="15" month="SEPTEMBER" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+
+    <!-- Children's Day -->
+    <Fixed day="1" month="OCTOBER" descriptionPropertiesKey="CHILDRENS_DAY"/>
+
+    <!-- Ethnic Pride Day -->
+    <Fixed day="12" month="OCTOBER" descriptionPropertiesKey="ETHNIC_PRIDE_DAY"/>
+
+    <!-- Day of the Dead -->
+    <Fixed day="2" month="NOVEMBER" descriptionPropertiesKey="DAY_OF_THE_DEAD"/>
+
+    <!-- National Pupusa Festival - November 7-13 -->
+    <Fixed day="7" month="NOVEMBER" descriptionPropertiesKey="NATIONAL_PUPUSA_FESTIVAL"/>
+    <Fixed day="8" month="NOVEMBER" descriptionPropertiesKey="NATIONAL_PUPUSA_FESTIVAL"/>
+    <Fixed day="9" month="NOVEMBER" descriptionPropertiesKey="NATIONAL_PUPUSA_FESTIVAL"/>
+    <Fixed day="10" month="NOVEMBER" descriptionPropertiesKey="NATIONAL_PUPUSA_FESTIVAL"/>
+    <Fixed day="11" month="NOVEMBER" descriptionPropertiesKey="NATIONAL_PUPUSA_FESTIVAL"/>
+    <Fixed day="12" month="NOVEMBER" descriptionPropertiesKey="NATIONAL_PUPUSA_FESTIVAL"/>
+    <Fixed day="13" month="NOVEMBER" descriptionPropertiesKey="NATIONAL_PUPUSA_FESTIVAL"/>
+
+    <!-- Day of the Queen of Peace -->
+    <Fixed day="21" month="NOVEMBER" descriptionPropertiesKey="DAY_OF_THE_QUEEN_OF_PEACE"/>
+
+    <!-- Christmas Day (Noche Buena) -->
+    <Fixed day="25" month="DECEMBER" descriptionPropertiesKey="CHRISTMAS"/>
+
+    <!-- New Year's Eve (Fin de año) -->
+    <Fixed day="31" month="DECEMBER" descriptionPropertiesKey="NEW_YEARS_EVE"/>
+
+    <!-- Christian holidays (Catholic) -->
+    <ChristianHoliday type="MAUNDY_THURSDAY"/>
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_SATURDAY"/>
+    <ChristianHoliday type="EASTER"/>
+  </Holidays>
+</Configuration>
