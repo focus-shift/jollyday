@@ -3,14 +3,28 @@
 Jollyday is released under the Apache 2.0 license. If you would like to contribute
 something, or simply want to hack on the code this document should help you get started.
 
-## Ideal for contribution
+## Reporting Security Vulnerabilities
+
+If you think you have found a security vulnerability in Jollyday please *DO NOT*
+disclose it publicly until we've had a chance to fix it. Please *don't report security
+vulnerabilities using GitHub issues*, instead open a report of a security vulnerability
+via [Report a security vulnerability](https://github.com/focus-shift/jollyday/security/advisories/new)
+
+## Adding a new holiday calendar
+If you want to add a new holiday calendar, please follow the instructions in
+[Adding a New Holiday Calendar to Jollyday](./.docs/add-new-holiday-calendar.md).
+
+
+## Working with us on GitHub
+
+### Ideal for contribution
 
 We would be more than pleased if the community would help us build an awesome piece of software for all.
 To find issues and pull requests that are good for contributions you can use the
 ['ideal for contribution'](https://github.com/focus-shift/jollyday/issues?q=is%3Aissue+is%3Aopen+label%3A%22status%3A+ideal-for-contribution%22)
 label.
 
-## Using GitHub Issues
+### Using GitHub Issues
 
 We use GitHub issues to track bugs and enhancements.
 
@@ -20,14 +34,13 @@ information as possible.
 Please look for other issues or pull requests which already work on this topic.
 Is somebody already on it? Do you need to synchronize?
 
-## Reporting Security Vulnerabilities
+## Working with the Code
 
-If you think you have found a security vulnerability in Jollyday please *DO NOT*
-disclose it publicly until we've had a chance to fix it. Please *don't report security
-vulnerabilities using GitHub issues*, instead open a report of a security vulnerability
-via [Report a security vulnerability](https://github.com/focus-shift/jollyday/security/advisories/new)
+If you don't have an IDE preference we would recommend that you use
+[the IntelliJ Community Edition](https://www.jetbrains.com/idea/download). This will
+automatically use our EditorConfig.
 
-## Code Conventions and Housekeeping
+### Code Conventions and Housekeeping
 
 None of these is essential for a pull request, but they will all help.
 They can also be added after the original pull request but before a merge.
@@ -42,20 +55,12 @@ They can also be added after the original pull request but before a merge.
   if you are fixing an existing issue please add `Fixes gh-XXXX` at the end of the commit
   message (where `XXXX` is the issue number).
 
-## Working with the Code
-
-If you don't have an IDE preference we would recommend that you use
-[the IntelliJ Community Edition](https://www.jetbrains.com/idea/download). This will
-automatically use our EditorConfig.
-
 ### Building from Source
 
 The jollyday source can be built from the command line using
 [Apache Maven](http://maven.apache.org/run-maven/index.html) on JDK 17 or above.
 We include '`Maven Wrapper`' scripts (`./mvnw` or `mvnw.cmd`) that you can run rather
 than needing to install Maven locally.
-
-#### Default Build
 
 The project can be built from the root directory using the standard Maven command:
 
