@@ -229,6 +229,15 @@ class DefaultHolidayManagerTest {
   }
 
   @Test
+  void ensureToTestIntervalToRetrieveEmptyHolidaysIfStartYearIsGreaterThenEndYear() {
+    final LocalDate startDate = LocalDate.of(2023, 1, 1);
+    final LocalDate endDate = LocalDate.of(2022, 1, 1);
+
+    final Set<Holiday> holidays = HolidayManager.getInstance(create("test")).getHolidays(startDate, endDate);
+    assertThat(holidays).isEmpty();
+  }
+
+  @Test
   void ensureThatExceptionIsThrownOnSubConfigurationWithSameId() {
     final ManagerParameter parameter = create("test_fail");
     assertThatThrownBy(() -> HolidayManager.getInstance(parameter))
