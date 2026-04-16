@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="vn" description="Vietnam"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="APRIL" day="30" descriptionPropertiesKey="UNIFICATION"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="SEPTEMBER" day="2" descriptionPropertiesKey="NATIONAL_DAY"/>
+    <Fixed month="NOVEMBER" day="24" descriptionPropertiesKey="CULTURE_DAY"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Vietnam</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:VN</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:VN</Source>
+  </Sources>
+
+  <SubConfigurations hierarchy="01" description="Lai Châu">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="02" description="Lào Cai">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="03" description="Hà Giang">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="04" description="Cao Bằng">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="05" description="Sơn La">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="06" description="Yên Bái">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="07" description="Tuyên Quang">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="09" description="Lạng Sơn">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="13" description="Quảng Ninh">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="14" description="Hòa Bình">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="18" description="Ninh Bình">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="20" description="Thái Bình">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="21" description="Thanh Hóa">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="22" description="Nghệ An">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="23" description="Hà Tĩnh">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="24" description="Quảng Bình">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="25" description="Quảng Trị">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="26" description="Thừa Thiên-Huế">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="27" description="Quảng Nam">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="28" description="Kon Tum">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="29" description="Quảng Ngãi">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="30" description="Gia Lai">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="31" description="Bình Định">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="32" description="Phú Yên">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="33" description="Đắk Lắk">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="34" description="Khánh Hòa">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="35" description="Lâm Đồng">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="36" description="Ninh Thuận">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="37" description="Tây Ninh">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="39" description="Đồng Nai">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="40" description="Bình Thuận">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="41" description="Long An">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="43" description="Bà Rịa - Vũng Tàu">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="44" description="An Giang">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="45" description="Đồng Tháp">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="46" description="Tiền Giang">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="47" description="Kiến Giang">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="49" description="Vĩnh Long">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="50" description="Bến Tre">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="51" description="Trà Vinh">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="52" description="Sóc Trăng">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="53" description="Bắc Kạn">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="54" description="Bắc Giang">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="55" description="Bạc Liêu">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="56" description="Bắc Ninh">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="57" description="Bình Dương">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="58" description="Bình Phước">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="59" description="Cà Mau">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="61" description="Hải Dương">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="63" description="Hà Nam">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="66" description="Hưng Yên">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="67" description="Nam Định">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="68" description="Phú Thọ">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="69" description="Thái Nguyên">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="70" description="Vĩnh Phúc">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="71" description="Điện Biên">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="72" description="Đắk Nông">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="73" description="Hậu Giang">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="CT" description="Cần Thơ">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="DN" description="Đà Nẵng">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="HN" description="Hà Nội">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="HP" description="Hải Phòng">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="SG" description="Hồ Chí Minh">
+    <Holidays/>
+  </SubConfigurations>
+
+</Configuration>
