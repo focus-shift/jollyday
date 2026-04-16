@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="tn" description="Tunisia"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="MARCH" day="20" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <Fixed month="APRIL" day="9" descriptionPropertiesKey="MARTYRS_DAY"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="JULY" day="25" descriptionPropertiesKey="REPUBLIC_DAY"/>
+    <Fixed month="AUGUST" day="13" descriptionPropertiesKey="WOMENS_DAY"/>
+    <Fixed month="OCTOBER" day="15" descriptionPropertiesKey="EVACUATION"/>
+    <Fixed month="DECEMBER" day="17" validFrom="2021" descriptionPropertiesKey="REVOLUTION"/>
+
+    <IslamicHoliday type="NEWYEAR"/>
+    <IslamicHoliday type="MAWLID_AN_NABI"/>
+    <IslamicHoliday type="ID_AL_FITR"/>
+    <IslamicHoliday type="ID_UL_ADHA"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Tunisia</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:TN</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:TN</Source>
+  </Sources>
+
+  <SubConfigurations hierarchy="11" description="Tunis">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="12" description="Ariana">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="13" description="Ben Arous">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="14" description="Manouba">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="21" description="Nabeul">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="22" description="Zaghouan">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="23" description="Bizerte">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="31" description="Béja">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="32" description="Jendouba">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="33" description="Kef">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="34" description="Siliana">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="41" description="Kairouan">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="42" description="Kasserine">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="43" description="Sidi Bouzid">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="51" description="Sousse">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="52" description="Monastir">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="53" description="Mahdia">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="61" description="Sfax">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="71" description="Gafsa">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="72" description="Tozeur">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="73" description="Kebili">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="81" description="Gabès">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="82" description="Medenine">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="83" description="Tataouine">
+    <Holidays/>
+  </SubConfigurations>
+
+</Configuration>
