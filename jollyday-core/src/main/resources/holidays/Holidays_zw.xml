@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="zw" description="Zimbabwe"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="FEBRUARY" day="21" validFrom="2017" descriptionPropertiesKey="ROBERT_GABRIEL_MUGABE_NATIONAL_YOUTH_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="APRIL" day="18" validFrom="1980" descriptionPropertiesKey="INDEPENDENCE_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="MAY" day="10" descriptionPropertiesKey="MOTHERS_DAY" localizedType="OBSERVANCE"/>
+    <Fixed month="MAY" day="25" descriptionPropertiesKey="AFRICA_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="JUNE" day="21" descriptionPropertiesKey="FATHERS_DAY" localizedType="OBSERVANCE"/>
+    <Fixed month="SEPTEMBER" day="15" validFrom="2025" descriptionPropertiesKey="MUNHUMUTAPA_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="DECEMBER" day="22" validFrom="1997" descriptionPropertiesKey="NATIONAL_UNITY_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <FixedWeekday which="SECOND" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="HEROES"/>
+    <FixedWeekday which="SECOND" weekday="TUESDAY" month="AUGUST" descriptionPropertiesKey="DEFENCE_FORCES_DAY"/>
+
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_SATURDAY"/>
+    <ChristianHoliday type="EASTER" localizedType="OBSERVANCE"/>
+    <ChristianHoliday type="EASTER_MONDAY"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Zimbabwe</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:ZW</Source>
+  </Sources>
+
+  <SubConfigurations hierarchy="BU" description="Bulawayo">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="HA" description="Harare">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="MA" description="Manicaland">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="MC" description="Mashonaland Central">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ME" description="Mashonaland East">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="MW" description="Mashonaland West">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="MV" description="Masvingo">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="MN" description="Matabeleland North">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="MS" description="Matabeleland South">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="MI" description="Midlands">
+    <Holidays/>
+  </SubConfigurations>
+</Configuration>
