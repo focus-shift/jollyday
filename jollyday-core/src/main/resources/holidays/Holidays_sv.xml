@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="sv" description="El Salvador"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+
+  <Holidays>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="MAY" day="3" descriptionPropertiesKey="holiday.dayOfTheCross"/>
+    <Fixed month="MAY" day="7" descriptionPropertiesKey="holiday.soldiersDay"/>
+    <Fixed month="MAY" day="10" descriptionPropertiesKey="MOTHERS_DAY"/>
+    <Fixed month="MAY" day="10" descriptionPropertiesKey="holiday.fathersDay"/>
+
+    <Fixed month="AUGUST" day="1" descriptionPropertiesKey="AUGUST_FESTIVALS"/>
+    <Fixed month="AUGUST" day="2" descriptionPropertiesKey="AUGUST_FESTIVALS"/>
+    <Fixed month="AUGUST" day="3" descriptionPropertiesKey="AUGUST_FESTIVALS"/>
+    <Fixed month="AUGUST" day="4" descriptionPropertiesKey="AUGUST_FESTIVALS"/>
+    <Fixed month="AUGUST" day="5" descriptionPropertiesKey="AUGUST_FESTIVALS"/>
+    <Fixed month="AUGUST" day="6" descriptionPropertiesKey="AUGUST_FESTIVALS"/>
+    <Fixed month="AUGUST" day="7" descriptionPropertiesKey="AUGUST_FESTIVALS"/>
+
+    <Fixed month="SEPTEMBER" day="15" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+
+    <Fixed month="OCTOBER" day="1" descriptionPropertiesKey="CHILDRENS_DAY"/>
+    <Fixed month="OCTOBER" day="12" descriptionPropertiesKey="holiday.ethnicPrideDay"/>
+
+    <Fixed month="NOVEMBER" day="2" descriptionPropertiesKey="holiday.dayOfTheDead"/>
+    <Fixed month="NOVEMBER" day="7" descriptionPropertiesKey="NATIONAL_PUPUSA_FESTIVAL"/>
+    <Fixed month="NOVEMBER" day="8" descriptionPropertiesKey="NATIONAL_PUPUSA_FESTIVAL"/>
+    <Fixed month="NOVEMBER" day="9" descriptionPropertiesKey="NATIONAL_PUPUSA_FESTIVAL"/>
+    <Fixed month="NOVEMBER" day="10" descriptionPropertiesKey="NATIONAL_PUPUSA_FESTIVAL"/>
+    <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="NATIONAL_PUPUSA_FESTIVAL"/>
+    <Fixed month="NOVEMBER" day="12" descriptionPropertiesKey="NATIONAL_PUPUSA_FESTIVAL"/>
+    <Fixed month="NOVEMBER" day="13" descriptionPropertiesKey="NATIONAL_PUPUSA_FESTIVAL"/>
+
+    <Fixed month="NOVEMBER" day="21" descriptionPropertiesKey="holiday.dayOfTheQueenOfPeace"/>
+
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+    <Fixed month="DECEMBER" day="31" descriptionPropertiesKey="NEW_YEARS_EVE"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_El_Salvador</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:SV</Source>
+  </Sources>
+</Configuration>
