@@ -6,35 +6,35 @@
                xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
   <Holidays>
     <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
-        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-      </Fixed>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
     <Fixed month="JANUARY" day="2" descriptionPropertiesKey="NEW_YEAR_HOLIDAY">
-        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-      </Fixed>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
     <Fixed month="FEBRUARY" day="1" validFrom="2026" descriptionPropertiesKey="ABOLITION_OF_SLAVERY">
-        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-      </Fixed>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
     <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY">
-        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-      </Fixed>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
     <Fixed month="JUNE" day="18" descriptionPropertiesKey="CONSTITUTION_DAY">
-        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-      </Fixed>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
     <Fixed month="JUNE" day="29" descriptionPropertiesKey="INDEPENDENCE_DAY">
-        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-      </Fixed>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
     <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY">
-        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-      </Fixed>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
     <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS">
-        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-      </Fixed>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
     <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION">
-        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-      </Fixed>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS">
-        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-      </Fixed>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
     <ChristianHoliday type="EASTER_SATURDAY"/>
     <ChristianHoliday type="EASTER_MONDAY"/>
     <ChristianHoliday type="GOOD_FRIDAY"/>
@@ -50,4 +50,111 @@
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:SC</Source>
   </Sources>
 
+  <SubConfigurations hierarchy="01" description="Anse aux Pins">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="02" description="Anse Boileau">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="03" description="Anse Etoile">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="04" description="Au Cap">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="05" description="Anse Royale">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="06" description="Baie Lazare">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="07" description="Baie Sainte Anne">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="08" description="Beau Vallon">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="09" description="Bel Air">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="10" description="Bel Ombre">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="11" description="Cascade">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="12" description="Glacis">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="13" description="Grand Anse Mahe">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="14" description="Grand Anse Praslin">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="15" description="La Digue">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="16" description="English River">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="17" description="Mont Buxton">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="18" description="Mont Fleuri">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="19" description="Plaisance">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="20" description="Pointe Larue">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="21" description="Port Glaud">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="22" description="Saint Louis">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="23" description="Takamaka">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="24" description="Les Mamelles">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="25" description="Roche Caiman">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="26" description="Ile Perseverance I">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="27" description="Ile Perseverance II">
+    <Holidays/>
+  </SubConfigurations>
 </Configuration>
