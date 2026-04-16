@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="cd" description="Democratic Republic of the Congo"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="JANUARY" day="4" descriptionPropertiesKey="MARTYRS_DAY"/>
+    <Fixed month="JANUARY" day="16" descriptionPropertiesKey="LAURENT_DESIRE_KABILA_ASSASSINATION"/>
+    <Fixed month="JANUARY" day="17" descriptionPropertiesKey="PATRICE_LUMUMBA_ASSASSINATION"/>
+    <Fixed month="APRIL" day="6" descriptionPropertiesKey="KIMBANGUS_DAY"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="MAY" day="17" validTo="2018" descriptionPropertiesKey="LIBERATION"/>
+    <Fixed month="MAY" day="17" validFrom="2019" descriptionPropertiesKey="ARMED_FORCES_DAY"/>
+    <Fixed month="JUNE" day="30" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <Fixed month="AUGUST" day="1" descriptionPropertiesKey="PARENTS_DAY"/>
+    <Fixed month="AUGUST" day="2" descriptionPropertiesKey="CONGOLESE_GENOCIDE_DAY"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_the_Democratic_Republic_of_the_Congo</Source>
+    <Source>https://www.officeholidays.com/countries/dr-congo</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:CD</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:CD</Source>
+  </Sources>
+
+  <SubConfigurations hierarchy="BU" description="Lower Uele">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="EQ" description="Equator">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="HK" description="Upper Katanga">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="HL" description="Upper Lomami">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="HU" description="Upper Uele">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="IT" description="Ituri">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="KS" description="Kasai">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="KC" description="Central Kasai">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="KE" description="Eastern Kasai">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="KN" description="Kinshasa">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="BC" description="Central Kongo">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="KG" description="Kwango">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="KL" description="Kwilu">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="LO" description="Lomami">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="LU" description="Lualaba">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="MN" description="Mai-Ndombe">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="MA" description="Maniema">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="MO" description="Mongala">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="NK" description="North Kivu">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="NU" description="North Ubangi">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="SA" description="Sankuru">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="SK" description="South Kivu">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="SU" description="South Ubangi">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="TA" description="Tanganyika">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="TO" description="Tshopo">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="TU" description="Tshuapa">
+    <Holidays/>
+  </SubConfigurations>
+</Configuration>
