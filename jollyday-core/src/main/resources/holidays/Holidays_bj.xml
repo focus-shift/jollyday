@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="bj" description="Benin"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="JANUARY" day="10" descriptionPropertiesKey="TRADITIONAL_DAY"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="AUGUST" day="1" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
+    <Fixed month="OCTOBER" day="26" descriptionPropertiesKey="ARMED_FORCES_DAY"/>
+    <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
+    <Fixed month="NOVEMBER" day="30" descriptionPropertiesKey="NATIONAL_DAY"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY"/>
+    <ChristianHoliday type="EASTER"/>
+    <ChristianHoliday type="EASTER_MONDAY"/>
+    <ChristianHoliday type="ASCENSION_DAY"/>
+    <ChristianHoliday type="WHIT_MONDAY"/>
+    <IslamicHoliday type="ID_AL_FITR"/>
+    <IslamicHoliday type="ID_UL_ADHA"/>
+    <IslamicHoliday type="MAWLID_AN_NABI"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Benin</Source>
+  </Sources>
+</Configuration>
