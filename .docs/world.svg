@@ -984,7 +984,7 @@
     <path d="M637.3 294l-0.3 0-0.1 0.1 0.1 0.2-0.4 0.2-0.1-0.1 0.2-0.1 0.1 0 0.1-0.3 0.3-0.1 0.1 0.1z" name="Bermuda">
     </path>
   </g>
-  <g class="country" data-iso="BB">
+  <g class="country active" data-iso="BB">
     <title>Barbados</title>
     <path d="M651.5 418l-0.6-0.2-0.1-0.5 0-0.8 0.2-0.4 0.2 0.2 0.2 0.6 0.5 0.3 0.1 0.4-0.5 0.4z" name="Barbados">
     </path>
