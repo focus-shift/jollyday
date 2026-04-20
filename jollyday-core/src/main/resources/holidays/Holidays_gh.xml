@@ -30,8 +30,9 @@
       <MovingCondition substitute="MONDAY" with="NEXT" weekday="TUESDAY"/>
     </Fixed>
 
-    <FixedWeekday which="FIRST" weekday="FRIDAY" month="DECEMBER" descriptionPropertiesKey="FARMERS_DAY"/>
-      <!--<MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>-->
+    <FixedWeekday which="FIRST" weekday="FRIDAY" month="DECEMBER" descriptionPropertiesKey="FARMERS_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </FixedWeekday>
 
     <ChristianHoliday type="GOOD_FRIDAY"/>
     <ChristianHoliday type="EASTER_MONDAY"/>
