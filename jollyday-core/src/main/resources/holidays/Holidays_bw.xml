@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="bw" description="Botswana"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="JULY" day="1" descriptionPropertiesKey="SIR_SERETSE_KHAMA_DAY"/>
+    <Fixed month="SEPTEMBER" day="30" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <Fixed month="OCTOBER" day="1" descriptionPropertiesKey="BOTSWANA_DAY"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="FIRST_CHRISTMAS_DAY"/>
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="SECOND_CHRISTMAS_DAY"/>
+
+    <FixedWeekday which="THIRD" weekday="MONDAY" month="JULY" descriptionPropertiesKey="PRESIDENTS_DAY"/>
+
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY"/>
+    <ChristianHoliday type="ASCENSION_DAY"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Botswana</Source>
+    <Source>https://www.playroll.com/compliance-hub/public-holiday-regulations-in-botswana</Source>
+  </Sources>
+</Configuration>
