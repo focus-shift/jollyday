@@ -9,6 +9,7 @@ import java.time.Month;
  * Represents the configuration of a holiday that has a fixed weekday in a month based on its occurrence that can be
  *
  * <ul>
+ *   <li>Movable</li>
  *   <li>Limited</li>
  *   <li>Described</li>
  * </ul>
@@ -17,7 +18,7 @@ import java.time.Month;
  * <p>
  * The {@link de.focus_shift.jollyday.core.parser.impl.FixedWeekdayInMonthParser} is used.
  */
-public interface FixedWeekdayInMonthHolidayConfiguration extends Described, Limited {
+public interface FixedWeekdayInMonthHolidayConfiguration extends Described, Limited, Movable {
 
   /**
    * Describes the day of the week, like Monday, Tuesday, ...

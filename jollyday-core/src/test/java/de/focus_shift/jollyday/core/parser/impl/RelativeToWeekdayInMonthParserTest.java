@@ -160,6 +160,11 @@ class RelativeToWeekdayInMonthParserTest {
   ) {
     return new FixedWeekdayInMonthHolidayConfiguration() {
       @Override
+      public @NonNull List<MovingCondition> conditions() {
+        return List.of();
+      }
+
+      @Override
       public @NonNull DayOfWeek weekday() {
         return dayOfWeek;
       }
