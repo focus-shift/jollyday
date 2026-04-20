@@ -1,3 +1,8 @@
+---
+name: add-holiday-calendar
+description: Guide for adding new country holiday calendars to Jollyday, including XML configuration, holiday definitions, description properties, and test coverage
+---
+
 # How to Add a New Holiday Calendar for a Country
 
 This guide explains how to add a new country's holiday calendar to Jollyday based on existing implementations and pull requests.
