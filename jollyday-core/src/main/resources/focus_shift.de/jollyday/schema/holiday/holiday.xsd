@@ -116,7 +116,7 @@
 
   <xsd:complexType name="FixedWeekdayInMonth">
     <xsd:complexContent>
-      <xsd:extension base="Holiday">
+      <xsd:extension base="MoveableHoliday">
         <xsd:attribute name="which" type="Which"/>
         <xsd:attribute name="weekday" type="Weekday"/>
         <xsd:attribute name="month" type="Month"/>

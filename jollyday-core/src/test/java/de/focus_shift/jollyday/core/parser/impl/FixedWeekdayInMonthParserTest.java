@@ -4,6 +4,7 @@ import de.focus_shift.jollyday.core.Holiday;
 import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.FixedWeekdayInMonthHolidayConfiguration;
 import de.focus_shift.jollyday.core.spi.HolidayConfigurations;
+import de.focus_shift.jollyday.core.spi.Movable;
 import de.focus_shift.jollyday.core.spi.Occurrence;
 import org.jspecify.annotations.NonNull;
 import org.junit.jupiter.api.Nested;
@@ -21,7 +22,9 @@ import java.util.Optional;
 
 import static de.focus_shift.jollyday.core.HolidayType.PUBLIC_HOLIDAY;
 import static de.focus_shift.jollyday.core.spi.Limited.YearCycle.EVERY_YEAR;
+import static java.time.DayOfWeek.MONDAY;
 import static java.time.DayOfWeek.WEDNESDAY;
+import static java.time.Month.FEBRUARY;
 import static java.time.Month.JANUARY;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.when;
@@ -61,6 +64,45 @@ class FixedWeekdayInMonthParserTest {
     }
   }
 
+  @Nested
+  class MovableTests {
+
+    @Test
+    void ensureThatFixedWeekdayInMonthAreMovable() {
+
+      final Movable.MovingCondition movingCondition = new Movable.MovingCondition() {
+        @Override
+        public @NonNull DayOfWeek substitute() {
+          return WEDNESDAY;
+        }
+
+        @Override
+        public @NonNull With with() {
+          return With.NEXT;
+        }
+
+        @Override
+        public @NonNull DayOfWeek weekday() {
+          return MONDAY;
+        }
+      };
+
+      final Year year = Year.of(2025);
+      final FixedWeekdayInMonthHolidayConfiguration fixedWeekdayInMonth = getFixedWeekdayInMonth(WEDNESDAY, JANUARY, Occurrence.LAST, year, year, movingCondition);
+
+      final FixedWeekdayInMonthParser sut = new FixedWeekdayInMonthParser();
+      when(holidays.fixedWeekdays()).thenReturn(List.of(fixedWeekdayInMonth));
+
+      final List<Holiday> calculatedHoliday = sut.parse(Year.of(2025), holidays);
+      assertThat(calculatedHoliday.get(0).getDate()).isEqualTo(LocalDate.of(2025, FEBRUARY, 3));
+      assertThat(calculatedHoliday.get(0).getDate().getDayOfWeek()).isEqualTo(MONDAY);
+      assertThat(calculatedHoliday.get(0).getActualDate()).isEqualTo(LocalDate.of(2025, JANUARY, 29));
+      assertThat(calculatedHoliday.get(0).getActualDate().getDayOfWeek()).isEqualTo(WEDNESDAY);
+      assertThat(calculatedHoliday.get(0).getObservedDate()).hasValue(LocalDate.of(2025, FEBRUARY, 3));
+      assertThat(calculatedHoliday.get(0).getObservedDate()).map(LocalDate::getDayOfWeek).hasValue(MONDAY);
+    }
+  }
+
   private static FixedWeekdayInMonthHolidayConfiguration getFixedWeekdayInMonth(
     final DayOfWeek dayOfWeek,
     final Month month,
@@ -68,7 +110,23 @@ class FixedWeekdayInMonthParserTest {
     final Year validFrom,
     final Year validTo
   ) {
+    return getFixedWeekdayInMonth(dayOfWeek, month, occurrence, validFrom, validTo, null);
+  }
+
+  private static FixedWeekdayInMonthHolidayConfiguration getFixedWeekdayInMonth(
+    final DayOfWeek dayOfWeek,
+    final Month month,
+    final Occurrence occurrence,
+    final Year validFrom,
+    final Year validTo,
+    final Movable.MovingCondition movingCondition
+  ) {
     return new FixedWeekdayInMonthHolidayConfiguration() {
+
+      @Override
+      public @NonNull List<MovingCondition> conditions() {
+        return movingCondition == null ? List.of() : List.of(movingCondition);
+      }
 
       @Override
       public @NonNull DayOfWeek weekday() {

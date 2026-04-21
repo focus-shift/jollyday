@@ -11,6 +11,7 @@ import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.Month;
 import java.time.Year;
+import java.util.List;
 import java.util.Optional;
 
 import static java.time.Month.MARCH;
@@ -29,6 +30,11 @@ class FindWeekDayInMonthTest {
   void ensureToFindFixedWeekdayInMonth(final Occurrence occurrence, final LocalDate expectedLocalDate) {
 
     final FixedWeekdayInMonthHolidayConfiguration fixedWeekdayInMonth = new FixedWeekdayInMonthHolidayConfiguration() {
+      @Override
+      public @NonNull List<MovingCondition> conditions() {
+        return List.of();
+      }
+
       @Override
       public @NonNull Optional<Year> validFrom() {
         return Optional.empty();

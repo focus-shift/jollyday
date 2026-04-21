@@ -2,6 +2,7 @@ package de.focus_shift.jollyday.jackson;
 
 import de.focus_shift.jollyday.core.HolidayType;
 import de.focus_shift.jollyday.core.spi.FixedWeekdayInMonthHolidayConfiguration;
+import de.focus_shift.jollyday.core.spi.Movable;
 import de.focus_shift.jollyday.core.spi.Occurrence;
 import de.focus_shift.jollyday.jackson.mapping.FixedWeekdayInMonth;
 import org.jspecify.annotations.NonNull;
@@ -9,6 +10,7 @@ import org.jspecify.annotations.NonNull;
 import java.time.DayOfWeek;
 import java.time.Month;
 import java.time.Year;
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -108,5 +110,18 @@ class JacksonFixedWeekdayInMonth implements FixedWeekdayInMonthHolidayConfigurat
     return fixedWeekdayInMonth.getEvery() == null
       ? YearCycle.EVERY_YEAR
       : YearCycle.valueOf(fixedWeekdayInMonth.getEvery().name());
+  }
+
+  /**
+   * {@inheritDoc}
+   *
+   * @return {@inheritDoc}
+   */
+  @Override
+  public @NonNull List<Movable.MovingCondition> conditions() {
+    return fixedWeekdayInMonth.getMovingCondition().stream()
+      .map(JacksonMovingCondition::new)
+      .map(Movable.MovingCondition.class::cast)
+      .toList();
   }
 }

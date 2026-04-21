@@ -9,6 +9,7 @@ import org.jspecify.annotations.NonNull;
 import java.time.DayOfWeek;
 import java.time.Month;
 import java.time.Year;
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -68,5 +69,18 @@ class JaxbFixedWeekdayInMonth implements FixedWeekdayInMonthHolidayConfiguration
     return fixedWeekdayInMonth.getEvery() == null
       ? YearCycle.EVERY_YEAR
       : YearCycle.valueOf(fixedWeekdayInMonth.getEvery().name());
+  }
+
+  /**
+   * {@inheritDoc}
+   *
+   * @return {@inheritDoc}
+   */
+  @Override
+  public @NonNull List<MovingCondition> conditions() {
+    return fixedWeekdayInMonth.getMovingCondition().stream()
+      .map(JaxbMovingCondition::new)
+      .map(MovingCondition.class::cast)
+      .toList();
   }
 }

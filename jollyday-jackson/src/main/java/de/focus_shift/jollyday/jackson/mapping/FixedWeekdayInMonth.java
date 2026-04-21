@@ -2,7 +2,7 @@ package de.focus_shift.jollyday.jackson.mapping;
 
 import tools.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 
-public class FixedWeekdayInMonth extends Holiday {
+public class FixedWeekdayInMonth extends MoveableHoliday {
 
   @JacksonXmlProperty(localName = "which", isAttribute = true)
   protected Which which;
