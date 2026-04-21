@@ -205,6 +205,11 @@ public class CalendarChecker implements
     final HolidayManager holidayManager = HolidayManager.getInstance(create(checks.get(0).calendar()));
 
     for (HolidayCalendarCheck check : checks) {
+
+      if (check.category == null) {
+        continue;
+      }
+
       switch (check.category) {
         case BY_DAY:
           checkByDate(check, holidayManager);

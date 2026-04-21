@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="aq" description="Antarctica"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <!--
+    Antarctica is governed collectively by around 30 countries.
+    It has no permanent population or independent government, and therefore no official public holidays.
+    -->
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Antarctica</Source>
+  </Sources>
+</Configuration>
