@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="bd" description="Bangladesh"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="FEBRUARY" day="21" descriptionPropertiesKey="MOTHER_LANGUAGE_DAY"/>
+    <Fixed month="MARCH" day="26" descriptionPropertiesKey="INDEPENDENCE_AND_NATIONAL_DAY"/>
+    <Fixed month="APRIL" day="14" descriptionPropertiesKey="BENGALI_NEW_YEAR"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="AUGUST" day="5" validFrom="2025" descriptionPropertiesKey="JULY_MASS_UPRISING_DAY"/>
+    <Fixed month="DECEMBER" day="16" descriptionPropertiesKey="VICTORY"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+
+    <IslamicHoliday type="RAMADAN"/>
+    <IslamicHoliday type="ID_AL_FITR"/>
+    <IslamicHoliday type="ID_AL_FITR_2"/>
+    <IslamicHoliday type="ARAFAAT"/>
+    <IslamicHoliday type="ID_UL_ADHA"/>
+    <IslamicHoliday type="ID_UL_ADHA_2"/>
+    <IslamicHoliday type="ID_UL_ADHA_3"/>
+    <IslamicHoliday type="MAWLID_AN_NABI"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://mopa.gov.bd/ (Official Government Gazette dated 09 November 2025)</Source>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Bangladesh</Source>
+  </Sources>
+</Configuration>
