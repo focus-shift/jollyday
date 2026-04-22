@@ -96,6 +96,7 @@ With optional `localizedType` for observance holidays:
 For Islamic calendar-based holidays:
 
 ```xml
+<IslamicHoliday type="JUMUATUL_WIDA"/>
 <IslamicHoliday type="RAMADAN_END"/>
 <IslamicHoliday type="ID_AL_FITR"/>
 <IslamicHoliday type="ID_AL_FITR_2"/>

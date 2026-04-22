@@ -24,6 +24,7 @@ public interface IslamicHolidayConfiguration extends Described, Limited, Movable
     LAILAT_AL_MIRAJ,
     LAILAT_AL_BARAT,
     RAMADAN,
+    JUMUATUL_WIDA,
     LAILAT_AL_QADR,
     RAMADAN_END,
     ID_AL_FITR,
