@@ -162,6 +162,7 @@
       <xsd:enumeration value="LAILAT_AL_MIRAJ"/>
       <xsd:enumeration value="LAILAT_AL_BARAT"/>
       <xsd:enumeration value="RAMADAN"/>
+      <xsd:enumeration value="JUMUATUL_WIDA"/>
       <xsd:enumeration value="LAILAT_AL_QADR"/>
       <xsd:enumeration value="RAMADAN_END"/>
       <xsd:enumeration value="ID_AL_FITR"/>
