@@ -28,6 +28,8 @@ class HolidayBDTest {
       .hasFixedHoliday("JULY_MASS_UPRISING_DAY", AUGUST, 5).validBetween(Year.of(2025), YEAR_TO).and()
       .hasFixedHoliday("VICTORY", DECEMBER, 16).validBetween(YEAR_FROM, YEAR_TO).and()
       .hasFixedHoliday("CHRISTMAS", DECEMBER, 25).validBetween(YEAR_FROM, YEAR_TO).and()
+      .hasIslamicHoliday("JUMUATUL_WIDA").validBetween(YEAR_FROM, YEAR_TO).and()
+      .hasIslamicHoliday("RAMADAN").validBetween(YEAR_FROM, YEAR_TO).and()
       .hasIslamicHoliday("ID_AL_FITR").validBetween(YEAR_FROM, YEAR_TO).and()
       .hasIslamicHoliday("ID_AL_FITR_2").validBetween(YEAR_FROM, YEAR_TO).and()
       .hasIslamicHoliday("ARAFAAT").validBetween(YEAR_FROM, YEAR_TO).and()

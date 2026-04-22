@@ -13,6 +13,7 @@
     <Fixed month="DECEMBER" day="16" descriptionPropertiesKey="VICTORY"/>
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
 
+    <IslamicHoliday type="JUMUATUL_WIDA"/>
     <IslamicHoliday type="RAMADAN"/>
     <IslamicHoliday type="ID_AL_FITR"/>
     <IslamicHoliday type="ID_AL_FITR_2"/>
