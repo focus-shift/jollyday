@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="sr" description="Suriname"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="JANUARY" day="6" descriptionPropertiesKey="EPIPHANY"/>
+    <Fixed month="FEBRUARY" day="25" descriptionPropertiesKey="REVOLUTION"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="JUNE" day="5" descriptionPropertiesKey="INDIAN_ARRIVAL_DAY"/>
+    <Fixed month="JULY" day="1" descriptionPropertiesKey="KETI_KOTI"/>
+    <Fixed month="AUGUST" day="8" descriptionPropertiesKey="JAVANESE_ARRIVAL_DAY"/>
+    <Fixed month="AUGUST" day="9" descriptionPropertiesKey="INDIGENOUS_PEOPLES_DAY"/>
+    <Fixed month="OCTOBER" day="10" descriptionPropertiesKey="DAY_OF_THE_MAROONS"/>
+    <Fixed month="OCTOBER" day="20" descriptionPropertiesKey="CHINESE_ARRIVAL_DAY"/>
+    <Fixed month="NOVEMBER" day="25" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY"/>
+
+    <!-- Chinese New Year - dates calculated from lunar calendar -->
+    <Fixed month="FEBRUARY" day="10" validFrom="2010" validTo="2010" descriptionPropertiesKey="CHINESE_NEW_YEAR"/>
+    <Fixed month="JANUARY" day="29" validFrom="2011" validTo="2011" descriptionPropertiesKey="CHINESE_NEW_YEAR"/>
+    <Fixed month="JANUARY" day="23" validFrom="2012" validTo="2012" descriptionPropertiesKey="CHINESE_NEW_YEAR"/>
+    <Fixed month="FEBRUARY" day="10" validFrom="2013" validTo="2013" descriptionPropertiesKey="CHINESE_NEW_YEAR"/>
+    <Fixed month="FEBRUARY" day="1" validFrom="2014" validTo="2014" descriptionPropertiesKey="CHINESE_NEW_YEAR"/>
+    <Fixed month="FEBRUARY" day="19" validFrom="2015" validTo="2015" descriptionPropertiesKey="CHINESE_NEW_YEAR"/>
+    <Fixed month="FEBRUARY" day="8" validFrom="2016" validTo="2016" descriptionPropertiesKey="CHINESE_NEW_YEAR"/>
+    <Fixed month="JANUARY" day="28" validFrom="2017" validTo="2017" descriptionPropertiesKey="CHINESE_NEW_YEAR"/>
+    <Fixed month="FEBRUARY" day="16" validFrom="2018" validTo="2018" descriptionPropertiesKey="CHINESE_NEW_YEAR"/>
+    <Fixed month="FEBRUARY" day="5" validFrom="2019" validTo="2019" descriptionPropertiesKey="CHINESE_NEW_YEAR"/>
+    <Fixed month="JANUARY" day="25" validFrom="2020" validTo="2020" descriptionPropertiesKey="CHINESE_NEW_YEAR"/>
+    <Fixed month="FEBRUARY" day="12" validFrom="2021" validTo="2021" descriptionPropertiesKey="CHINESE_NEW_YEAR"/>
+    <Fixed month="FEBRUARY" day="1" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHINESE_NEW_YEAR"/>
+    <Fixed month="JANUARY" day="22" validFrom="2023" validTo="2023" descriptionPropertiesKey="CHINESE_NEW_YEAR"/>
+    <Fixed month="FEBRUARY" day="10" validFrom="2024" validTo="2024" descriptionPropertiesKey="CHINESE_NEW_YEAR"/>
+    <Fixed month="JANUARY" day="29" validFrom="2025" validTo="2025" descriptionPropertiesKey="CHINESE_NEW_YEAR"/>
+    <Fixed month="FEBRUARY" day="17" validFrom="2026" validTo="2026" descriptionPropertiesKey="CHINESE_NEW_YEAR"/>
+    <Fixed month="FEBRUARY" day="6" validFrom="2027" validTo="2027" descriptionPropertiesKey="CHINESE_NEW_YEAR"/>
+    <Fixed month="JANUARY" day="26" validFrom="2028" validTo="2028" descriptionPropertiesKey="CHINESE_NEW_YEAR"/>
+    <Fixed month="FEBRUARY" day="13" validFrom="2029" validTo="2029" descriptionPropertiesKey="CHINESE_NEW_YEAR"/>
+    <Fixed month="FEBRUARY" day="3" validFrom="2030" validTo="2030" descriptionPropertiesKey="CHINESE_NEW_YEAR"/>
+    <Fixed month="JANUARY" day="23" validFrom="2031" validTo="2031" descriptionPropertiesKey="CHINESE_NEW_YEAR"/>
+
+    <!-- Diwali - dates calculated from Hindu lunar calendar -->
+    <Fixed month="NOVEMBER" day="5" validFrom="2010" validTo="2010" descriptionPropertiesKey="DEEPAVALI"/>
+    <Fixed month="NOVEMBER" day="26" validFrom="2011" validTo="2011" descriptionPropertiesKey="DEEPAVALI"/>
+    <Fixed month="NOVEMBER" day="14" validFrom="2012" validTo="2012" descriptionPropertiesKey="DEEPAVALI"/>
+    <Fixed month="NOVEMBER" day="2" validFrom="2013" validTo="2013" descriptionPropertiesKey="DEEPAVALI"/>
+    <Fixed month="OCTOBER" day="22" validFrom="2014" validTo="2014" descriptionPropertiesKey="DEEPAVALI"/>
+    <Fixed month="NOVEMBER" day="10" validFrom="2015" validTo="2015" descriptionPropertiesKey="DEEPAVALI"/>
+    <Fixed month="OCTOBER" day="29" validFrom="2016" validTo="2016" descriptionPropertiesKey="DEEPAVALI"/>
+    <Fixed month="OCTOBER" day="18" validFrom="2017" validTo="2017" descriptionPropertiesKey="DEEPAVALI"/>
+    <Fixed month="NOVEMBER" day="6" validFrom="2018" validTo="2018" descriptionPropertiesKey="DEEPAVALI"/>
+    <Fixed month="OCTOBER" day="27" validFrom="2019" validTo="2019" descriptionPropertiesKey="DEEPAVALI"/>
+    <Fixed month="NOVEMBER" day="14" validFrom="2020" validTo="2020" descriptionPropertiesKey="DEEPAVALI"/>
+    <Fixed month="NOVEMBER" day="4" validFrom="2021" validTo="2021" descriptionPropertiesKey="DEEPAVALI"/>
+    <Fixed month="OCTOBER" day="24" validFrom="2022" validTo="2022" descriptionPropertiesKey="DEEPAVALI"/>
+    <Fixed month="NOVEMBER" day="12" validFrom="2023" validTo="2023" descriptionPropertiesKey="DEEPAVALI"/>
+    <Fixed month="OCTOBER" day="31" validFrom="2024" validTo="2024" descriptionPropertiesKey="DEEPAVALI"/>
+    <Fixed month="OCTOBER" day="20" validFrom="2025" validTo="2025" descriptionPropertiesKey="DEEPAVALI"/>
+    <Fixed month="OCTOBER" day="8" validFrom="2026" validTo="2026" descriptionPropertiesKey="DEEPAVALI"/>
+    <Fixed month="OCTOBER" day="27" validFrom="2027" validTo="2027" descriptionPropertiesKey="DEEPAVALI"/>
+    <Fixed month="NOVEMBER" day="14" validFrom="2028" validTo="2028" descriptionPropertiesKey="DEEPAVALI"/>
+    <Fixed month="NOVEMBER" day="3" validFrom="2029" validTo="2029" descriptionPropertiesKey="DEEPAVALI"/>
+    <Fixed month="OCTOBER" day="23" validFrom="2030" validTo="2030" descriptionPropertiesKey="DEEPAVALI"/>
+    <Fixed month="NOVEMBER" day="11" validFrom="2031" validTo="2031" descriptionPropertiesKey="DEEPAVALI"/>
+
+    <FixedWeekday which="THIRD" weekday="SUNDAY" month="JANUARY" descriptionPropertiesKey="WORLD_RELIGION_DAY"/>
+
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER"/>
+    <ChristianHoliday type="ASCENSION_DAY"/>
+
+    <IslamicHoliday type="NEWYEAR"/>
+    <IslamicHoliday type="ID_AL_FITR"/>
+    <IslamicHoliday type="ID_UL_ADHA"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Suriname#National_holidays</Source>
+  </Sources>
+</Configuration>
