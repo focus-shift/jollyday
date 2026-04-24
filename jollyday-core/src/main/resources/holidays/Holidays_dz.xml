@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="dz" description="Algeria"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="JANUARY" day="12" descriptionPropertiesKey="AMAZIGH_NEW_YEAR"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="JULY" day="5" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="REVOLUTION"/>
+
+    <IslamicHoliday type="NEWYEAR"/>
+    <IslamicHoliday type="ASCHURA"/>
+    <IslamicHoliday type="MAWLID_AN_NABI"/>
+    <IslamicHoliday type="ID_AL_FITR"/>
+    <IslamicHoliday type="ID_AL_FITR_2"/>
+    <IslamicHoliday type="ID_AL_FITR_3"/>
+    <IslamicHoliday type="ID_UL_ADHA"/>
+    <IslamicHoliday type="ID_UL_ADHA_2"/>
+    <IslamicHoliday type="ID_UL_ADHA_3"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Algeria</Source>
+    <Source>https://mofa.gov.pk/algiers-holidays</Source>
+    <Source>https://www.mosaicnorthafrica.com/holidays-in-algeria/</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:DZ</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:DZ</Source>
+  </Sources>
+
+</Configuration>
