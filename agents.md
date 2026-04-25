@@ -261,69 +261,46 @@ public interface HolidayParser {
 | `descriptions/holiday_descriptions_de.properties` | German holiday names                                     |
 | `descriptions/country_descriptions.properties`    | English country names                                    |
 
-## Testing
-
-### Prerequisites
-
-This project uses **asdf** for version management. Ensure you have the correct JDK version set up:
-
-```bash
-# Check available JDK versions
-asdf list java
-
-# Set the project JDK version (defined in .tool-versions)
-asdf install
-
-# Verify the JDK version
-java -version
-```
-
-### Running Tests
-
-**Note**: The `package` phase must run before tests to build the required JARs:
-
-```bash
-# Package first, then run tests
-./mvnw package -DskipTests
-./mvnw test
-
-# Single country test
-./mvnw test -Dtest=HolidayDETest -pl jollyday-tests
-```
-
-### CalendarCheckerApi
-
-For writing country tests:
-
-```java
-import static de.focus_shift.jollyday.tests.CalendarCheckerApi.assertFor;
-import static de.focus_shift.jollyday.core.HolidayCalendar.GERMANY;
-import static java.time.Month.JANUARY;
-
-@Test
-void ensuresHolidays() {
-  assertFor(GERMANY)
-    .hasFixedHoliday("NEW_YEAR", JANUARY, 1).and()
-    .hasChristianHoliday("GOOD_FRIDAY").and()
-    .check();
-}
-```
-
 ## Skills
 
-### add-holiday-calendar
+### add-holiday-calendar-xml
 
-**Location**: `.agents/skills/how-to-add-a-new-holiday-calendar-for-a-country/SKILL.md`
+**Location**: `.agents/skills/add-holiday-calendar-xml/SKILL.md`
 
-Complete guide for adding a new country's holiday calendar to Jollyday:
+Create XML holiday calendar configuration files for a new country or region. Covers:
+- Root structure with namespace declarations
+- Holiday types: Fixed, FixedWeekday, Christian, Islamic, RelativeToFixed
+- Moving conditions and validity periods
+- Regional/subdivision configurations
 
-1. Create `Holidays_[country_code].xml` in `jollyday-core/src/main/resources/holidays/`
-2. Add holiday definitions (Fixed, FixedWeekday, Christian, Islamic, etc.)
-3. Add description properties to `holiday_descriptions.properties`
-4. Add country description to `country_descriptions.properties`
-5. Add regional holidays via `SubConfigurations`
-6. Register calendar in `HolidayCalendar.java` enum
-7. Write tests using `CalendarCheckerApi`
+### add-holiday-description-properties
+
+**Location**: `.agents/skills/add-holiday-description-properties/SKILL.md`
+
+Add holiday and country description properties for localization. Covers:
+- Base English descriptions in `holiday_descriptions.properties`
+- Localized descriptions (de, el, fr, nl, pt, sv)
+- Country descriptions in `country_descriptions.properties`
+- Key naming conventions
+
+### register-holiday-calendar
+
+**Location**: `.agents/skills/register-holiday-calendar/SKILL.md`
+
+Register a new holiday calendar in the `HolidayCalendar` enum. Covers:
+- Alphabetical organization by ISO country code
+- File location: `jollyday-core/src/main/java/de/focus_shift/jollyday/core/HolidayCalendar.java`
+- Entry format: `COUNTRY_NAME("ISO_CODE")`
+
+### write-holiday-tests
+
+**Location**: `.agents/skills/write-holiday-tests/SKILL.md`
+
+Write country-specific holiday tests using `CalendarCheckerApi`. Covers:
+- Test file location and naming conventions
+- Assertion methods for all holiday types
+- Testing regional/subdivision holidays
+- Testing edge cases (moving conditions, historical changes)
 
 ## Best Practices
 
