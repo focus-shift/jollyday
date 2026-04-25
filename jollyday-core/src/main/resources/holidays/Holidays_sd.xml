@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="sd" description="Sudan"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <Fixed month="JANUARY" day="7" descriptionPropertiesKey="EGYPT_COPTIC_CHRISTMAS"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+    <ChristianHoliday type="EASTER" chronology="JULIAN" descriptionPropertiesKey="COPTIC_EASTER"/>
+    <IslamicHoliday type="NEWYEAR"/>
+    <IslamicHoliday type="MAWLID_AN_NABI"/>
+    <IslamicHoliday type="ID_AL_FITR"/>
+    <IslamicHoliday type="ID_UL_ADHA"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Sudan</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:SD</Source>
+  </Sources>
+
+  <SubConfigurations hierarchy="bn" description="Blue Nile">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="dc" description="Central Darfur">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="dg" description="East Darfur">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="dk" description="North">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="dn" description="North Darfur">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ds" description="South Darfur">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="dw" description="West Darfur">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="gz" description="Gedarif">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ka" description="Kassala">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="kh" description="Khartoum">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="kl" description="Sennar">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="nk" description="North Kordofan">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="no" description="White Nile">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="nr" description="River Nile">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="rs" description="Red Sea">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="sk" description="South Kordofan">
+    <Holidays/>
+  </SubConfigurations>
+</Configuration>
