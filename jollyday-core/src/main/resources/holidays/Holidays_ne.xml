@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="ne" description="Niger"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="MARCH" day="26" descriptionPropertiesKey="REFOUNDATION_DAY"/>
+    <Fixed month="APRIL" day="24" descriptionPropertiesKey="CONCORD_DAY"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="JULY" day="26" descriptionPropertiesKey="CNSP_COUP_ANNIVERSARY"/>
+    <Fixed month="AUGUST" day="3" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <Fixed month="DECEMBER" day="18" descriptionPropertiesKey="REPUBLIC_DAY"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+
+    <ChristianHoliday type="EASTER_MONDAY"/>
+
+    <IslamicHoliday type="NEWYEAR"/>
+    <IslamicHoliday type="MAWLID_AN_NABI"/>
+    <IslamicHoliday type="LAILAT_AL_QADR"/>
+    <IslamicHoliday type="ID_AL_FITR"/>
+    <IslamicHoliday type="ID_UL_ADHA"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Niger</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:NE</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:NE</Source>
+  </Sources>
+
+  <SubConfigurations hierarchy="1" description="Diffa">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="2" description="Agadez">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="3" description="Tillabéri">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="4" description="Dosso">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="5" description="Maradi">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="6" description="Tahoua">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="7" description="Zinder">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="8" description="Niamey">
+    <Holidays/>
+  </SubConfigurations>
+</Configuration>
