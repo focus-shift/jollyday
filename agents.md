@@ -302,6 +302,17 @@ Write country-specific holiday tests using `CalendarCheckerApi`. Covers:
 - Testing regional/subdivision holidays
 - Testing edge cases (moving conditions, historical changes)
 
+### add-subdivision
+
+**Location**: `.agents/skills/add-subdivision/SKILL.md`
+
+Add regional/subdivision holiday configurations based on ISO 3166-2 codes. Covers:
+- ISO 3166-2 subdivision codes and format
+- SubConfigurations XML structure
+- Nested subdivisions (cities within states)
+- Validity periods for regional holidays
+- Testing subdivisions with CalendarCheckerApi
+
 ## Best Practices
 
 ### Adding New Countries

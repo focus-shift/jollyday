@@ -37,11 +37,11 @@ public enum HolidayCalendar {
 
 Identify which line your country code should appear on based on the first letter:
 
-| First Letter | Example Calendars |
-|-----|---------|
-| A | ANTARCTICA, ALBANIA, ANDORRA, ARGENTINA, AUSTRALIA |
-| B | BELARUS, BELGIUM, BERMUDA, BRAZIL |
-| D | DENMARK, DOMINICAN, ECUADAR (E starts D line) |
+| First Letter | Example Calendars                                  |
+|--------------|----------------------------------------------------|
+| A            | ANTARCTICA, ALBANIA, ANDORRA, ARGENTINA, AUSTRALIA |
+| B            | BELARUS, BELGIUM, BERMUDA, BRAZIL                  |
+| D            | DENMARK, DOMINICAN, ECUADAR (E starts D line)      |
 
 ### 2. Insert in Alphabetical Order
 

@@ -36,14 +36,14 @@ holiday.description.SECOND_CHRISTMAS_DAY        = Second Day of Christmas
 
 Add entries to locale-specific files:
 
-| File                                  | Language  |
-|-----------------------------------------|-----------|
-| `holiday_descriptions_de.properties`  | German   |
-| `holiday_descriptions_el.properties`  | Greek    |
-| `holiday_descriptions_fr.properties`  | French   |
-| `holiday_descriptions_nl.properties`  | Dutch    |
-| `holiday_descriptions_pt.properties`  | Portuguese |
-| `holiday_descriptions_sv.properties`  | Swedish  |
+| File                                 | Language   |
+|--------------------------------------|------------|
+| `holiday_descriptions_de.properties` | German     |
+| `holiday_descriptions_el.properties` | Greek      |
+| `holiday_descriptions_fr.properties` | French     |
+| `holiday_descriptions_nl.properties` | Dutch      |
+| `holiday_descriptions_pt.properties` | Portuguese |
+| `holiday_descriptions_sv.properties` | Swedish    |
 
 **Example - German:**
 
@@ -80,11 +80,11 @@ country.description.fr = Frankreich
 
 ## Property File Locations
 
-| File                                                | Purpose                    |
-|------------------------------------------------------|-----------------------------|
-| `descriptions/holiday_descriptions.properties`      | English holiday names      |
-| `descriptions/holiday_descriptions_[locale].properties` | Localized holiday names   |
-| `descriptions/country_descriptions.properties`      | English country names      |
+| File                                                    | Purpose                 |
+|---------------------------------------------------------|-------------------------|
+| `descriptions/holiday_descriptions.properties`          | English holiday names   |
+| `descriptions/holiday_descriptions_[locale].properties` | Localized holiday names |
+| `descriptions/country_descriptions.properties`          | English country names   |
 | `descriptions/country_descriptions_[locale].properties` | Localized country names |
 
 ## Complete Example
