@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="va" description="Vatican City State"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="SOLEMNITY_MARY_MOTHER"/>
+    <Fixed month="JANUARY" day="6" descriptionPropertiesKey="EPIPHANY"/>
+    <Fixed month="FEBRUARY" day="11" descriptionPropertiesKey="FOUNDATION_ANNIVERSARY"/>
+    <Fixed month="MARCH" day="13" validFrom="2014" validTo="2025" descriptionPropertiesKey="PETER_FRANCIS_ELECTION"/>
+    <Fixed month="MARCH" day="19" descriptionPropertiesKey="ST_JOSEPH"/>
+    <Fixed month="APRIL" day="23" descriptionPropertiesKey="ST_GEORGE"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="ST_JOSEPH_WORKER"/>
+    <Fixed month="MAY" day="8" validFrom="2026" descriptionPropertiesKey="LEO_XIV_ELECTION"/>
+    <Fixed month="JUNE" day="29" descriptionPropertiesKey="ST_PETER_PAUL"/>
+    <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_MARY"/>
+    <Fixed month="NOVEMBER" day="17" descriptionPropertiesKey="ST_ROBERT_BELLARMINE"/>
+    <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
+    <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
+    <ChristianHoliday type="EASTER_MONDAY"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Vatican_City</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:VA</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:VA</Source>
+  </Sources>
+</Configuration>
