@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="td" description="Chad"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="MARCH" day="8" descriptionPropertiesKey="WOMENS_DAY"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="AUGUST" day="11" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
+    <Fixed month="NOVEMBER" day="28" descriptionPropertiesKey="REPUBLIC_DAY"/>
+    <Fixed month="DECEMBER" day="1" descriptionPropertiesKey="FREEDOM_DEMOCRACY"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+    <ChristianHoliday type="EASTER_MONDAY"/>
+    <IslamicHoliday type="MAWLID_AN_NABI"/>
+    <IslamicHoliday type="ID_AL_FITR"/>
+    <IslamicHoliday type="ID_UL_ADHA"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Chad</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:TD</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:TD</Source>
+  </Sources>
+
+  <SubConfigurations hierarchy="01" description="Bahr el Gazel">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="02" description="Batha">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="03" description="Chari-Baguirmi">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="04" description="Ennedi">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="05" description="Guéra">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="06" description="Hadjer-Lamis">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="07" description="Kanem">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="08" description="Lac">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="09" description="Logone Occidental">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="10" description="Logone Oriental">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="11" description="Mandoul">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="12" description="Mayo Kebbi Est">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="13" description="Mayo-Kebbi Ouest">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="14" description="Moyen-Chari">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="15" description="N'Djaména">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="16" description="Ouaddaï">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="17" description="Salamat">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="18" description="Sila">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="19" description="Tandjilé">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="20" description="Tibesti">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="21" description="Wadi Fira">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="22" description="Barh El Gazel">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="23" description="Chari-Baguirmi">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="24" description="Ennedi-Est">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="25" description="Ennedi-Ouest">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="26" description="Sibut">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="27" description="Borkou">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="28" description="Borkou-Ennedi-Tibesti">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="29" description="Tamra">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="30" description="Tandjile">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="31" description="Ville de N'Djaména">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="32" description="Ville de N'Djaména">
+    <Holidays/>
+  </SubConfigurations>
+</Configuration>
