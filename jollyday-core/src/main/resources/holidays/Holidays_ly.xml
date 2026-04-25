@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="ly" description="Libya"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed day="17" month="FEBRUARY" descriptionPropertiesKey="REVOLUTION"/>
+    <Fixed day="1" month="MAY" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed day="16" month="SEPTEMBER" descriptionPropertiesKey="MARTYRS_DAY"/>
+    <Fixed day="23" month="OCTOBER" descriptionPropertiesKey="LIBERATION"/>
+    <Fixed day="24" month="DECEMBER" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+
+    <IslamicHoliday type="NEWYEAR"/>
+    <IslamicHoliday type="MAWLID_AN_NABI"/>
+    <IslamicHoliday type="ID_AL_FITR"/>
+    <IslamicHoliday type="ID_AL_FITR_2"/>
+    <IslamicHoliday type="ID_AL_FITR_3"/>
+    <IslamicHoliday type="ARAFAAT"/>
+    <IslamicHoliday type="ID_UL_ADHA"/>
+    <IslamicHoliday type="ID_UL_ADHA_2"/>
+    <IslamicHoliday type="ID_UL_ADHA_3"/>
+
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Libya</Source>
+  </Sources>
+</Configuration>
