@@ -34,7 +34,7 @@ public enum HolidayCalendar {
   TARGET("TARGET"), TARGET2_SECURITIES("TARGET2_SECURITIES"), TUNISIA("TN"), TURKEY("TR"),
   UGANDA("UG"), UKRAINE("UA"), UNITED_ARAB_EMIRATES("AE"), UNITED_KINGDOM(Locale.UK.getCountry()), UNITED_STATES(Locale.US.getCountry()), URUGUAY("UY"),
   VATICAN_CITY("VA"), VENEZUELA("VE"), VIETNAM("VN"),
-  ZIMBABWE("ZW");
+  ZAMBIA("ZM"), ZIMBABWE("ZW");
 
   private final String id;
 
