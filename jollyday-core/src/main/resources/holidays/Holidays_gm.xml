@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="gm" description="Gambia"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="FEBRUARY" day="18" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+     <Fixed month="MAY" day="25" descriptionPropertiesKey="AFRICAN_FREEDOM_DAY"/>
+     <Fixed month="JULY" day="22" descriptionPropertiesKey="REVOLUTION"/>
+     <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
+     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+
+     <ChristianHoliday type="GOOD_FRIDAY"/>
+     <ChristianHoliday type="EASTER_MONDAY"/>
+
+     <IslamicHoliday type="ASCHURA"/>
+     <IslamicHoliday type="MAWLID_AN_NABI"/>
+     <IslamicHoliday type="LAILAT_AL_QADR"/>
+     <IslamicHoliday type="ID_AL_FITR"/>
+     <IslamicHoliday type="ID_UL_ADHA"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_the_Gambia</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:GM</Source>
+  </Sources>
+</Configuration>
