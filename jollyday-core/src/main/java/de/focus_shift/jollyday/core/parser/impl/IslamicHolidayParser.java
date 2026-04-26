@@ -36,6 +36,8 @@ public class IslamicHolidayParser implements HolidayParser {
             new CalculateRelativeDatesFromChronologyWithinGregorianYear(1, 1, HIJRAH, 0).apply(year);
           case ASCHURA ->
             new CalculateRelativeDatesFromChronologyWithinGregorianYear(1, 10, HIJRAH, 0).apply(year);
+          case GRAND_MAGAL_OF_TOUBA ->
+            new CalculateRelativeDatesFromChronologyWithinGregorianYear(2, 18, HIJRAH, 0).apply(year);
           case MAWLID_AN_NABI ->
             new CalculateRelativeDatesFromChronologyWithinGregorianYear(3, 12, HIJRAH, 0).apply(year);
           case LAILAT_AL_MIRAJ ->
