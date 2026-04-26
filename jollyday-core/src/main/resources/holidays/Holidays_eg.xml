@@ -5,7 +5,7 @@
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
   <Holidays>
-    <Fixed month="JANUARY" day="7" descriptionPropertiesKey="EGYPT_COPTIC_CHRISTMAS"/>
+    <Fixed month="JANUARY" day="7" descriptionPropertiesKey="COPTIC_CHRISTMAS"/>
     <Fixed month="JANUARY" day="25" descriptionPropertiesKey="EGYPT_25_JAN_REVOLUTION" validFrom="2012"/>
     <Fixed month="APRIL" day="25" descriptionPropertiesKey="EGYPT_SINAI_LIBERATION"/>
     <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>

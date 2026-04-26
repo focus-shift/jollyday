@@ -31,8 +31,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class CalendarChecker implements
   CalendarCheckerApi.Holiday,
   CalendarCheckerApi.Between,
-  CalendarCheckerApi.Properties
-{
+  CalendarCheckerApi.Properties {
 
   enum Category {
     BY_DAY,
@@ -63,16 +62,26 @@ public class CalendarChecker implements
 
   @Override
   public CalendarCheckerApi.Properties hasChristianHoliday(final String propertyKey) {
-    return hasChristianHoliday(propertyKey, PUBLIC_HOLIDAY);
+    return hasChristianHoliday(propertyKey, PUBLIC_HOLIDAY, false);
+  }
+
+  @Override
+  public CalendarCheckerApi.Properties hasChristianHoliday(final String propertyKey, boolean overriddenPropertiesKey) {
+    return hasChristianHoliday(propertyKey, PUBLIC_HOLIDAY, overriddenPropertiesKey);
   }
 
   @Override
   public CalendarCheckerApi.Properties hasChristianHoliday(final String propertyKey, final HolidayType type) {
+    return hasChristianHoliday(propertyKey, type, false);
+  }
+
+  @Override
+  public CalendarCheckerApi.Properties hasChristianHoliday(final String propertyKey, final HolidayType type, boolean overriddenPropertiesKey) {
     Objects.requireNonNull(propertyKey, "propertyKey is required");
     Objects.requireNonNull(type, "holiday type is required");
 
     this.category = BY_KEY;
-    this.propertyKey = "christian." + propertyKey;
+    this.propertyKey = overriddenPropertiesKey ? propertyKey : "christian." + propertyKey;
     this.type = type;
 
     return this;
