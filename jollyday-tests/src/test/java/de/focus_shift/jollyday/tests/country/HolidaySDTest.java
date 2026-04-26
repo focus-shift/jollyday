@@ -18,7 +18,7 @@ class HolidaySDTest {
   void ensuresHolidays() {
     assertFor(SUDAN)
       .hasFixedHoliday("INDEPENDENCE_DAY", JANUARY, 1).validBetween(YEAR_FROM, YEAR_TO).and()
-      .hasFixedHoliday("EGYPT_COPTIC_CHRISTMAS", JANUARY, 7).validBetween(YEAR_FROM, YEAR_TO).and()
+      .hasFixedHoliday("COPTIC_CHRISTMAS", JANUARY, 7).validBetween(YEAR_FROM, YEAR_TO).and()
       .hasFixedHoliday("CHRISTMAS", DECEMBER, 25).validBetween(YEAR_FROM, YEAR_TO).and()
       .hasChristianHoliday("COPTIC_EASTER", true).validBetween(YEAR_FROM, YEAR_TO).and()
       .hasIslamicHoliday("NEWYEAR").validBetween(YEAR_FROM, YEAR_TO).and()

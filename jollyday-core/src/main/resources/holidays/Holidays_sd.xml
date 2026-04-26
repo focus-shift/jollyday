@@ -6,7 +6,7 @@
                xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
   <Holidays>
     <Fixed month="JANUARY" day="1" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
-    <Fixed month="JANUARY" day="7" descriptionPropertiesKey="EGYPT_COPTIC_CHRISTMAS"/>
+    <Fixed month="JANUARY" day="7" descriptionPropertiesKey="COPTIC_CHRISTMAS"/>
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
     <ChristianHoliday type="EASTER" chronology="JULIAN" descriptionPropertiesKey="COPTIC_EASTER"/>
     <IslamicHoliday type="NEWYEAR"/>

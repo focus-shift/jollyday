@@ -21,7 +21,7 @@ class HolidayEGTest {
   @Test
   void ensuresHolidays() {
     assertFor(EGYPT)
-      .hasFixedHoliday("EGYPT_COPTIC_CHRISTMAS", JANUARY, 7)
+      .hasFixedHoliday("COPTIC_CHRISTMAS", JANUARY, 7)
         .validBetween(YEAR_FROM, YEAR_TO)
       .and()
       .hasFixedHoliday("EGYPT_25_JAN_REVOLUTION", JANUARY, 25)
