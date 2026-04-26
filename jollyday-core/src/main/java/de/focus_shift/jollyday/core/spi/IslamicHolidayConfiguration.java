@@ -33,7 +33,8 @@ public interface IslamicHolidayConfiguration extends Described, Limited, Movable
     ARAFAAT,
     ID_UL_ADHA,
     ID_UL_ADHA_2,
-    ID_UL_ADHA_3
+    ID_UL_ADHA_3,
+    GRAND_MAGAL_OF_TOUBA
   }
 
   /**

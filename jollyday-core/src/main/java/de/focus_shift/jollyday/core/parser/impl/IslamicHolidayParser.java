@@ -65,6 +65,8 @@ public class IslamicHolidayParser implements HolidayParser {
           case JUMUATUL_WIDA ->
             new CalculateRelativeDatesFromChronologyWithinGregorianYear(10, 1, HIJRAH, -1).apply(year)
             .map(localDate -> localDate.with(previousOrSame(FRIDAY)));
+          case GRAND_MAGAL_OF_TOUBA ->
+            new CalculateRelativeDatesFromChronologyWithinGregorianYear(2, 18, HIJRAH, 0).apply(year);
         };
 
         return islamicHolidays

@@ -62,7 +62,8 @@ class IslamicHolidayParserTest {
          "2022-07-08",  // ARAFAAT
          "2022-07-09",  // ID_UL_ADHA
          "2022-07-10",  // ID_UL_ADHA_2
-         "2022-07-11"   // ID_UL_ADHA_3
+         "2022-07-11",  // ID_UL_ADHA_3
+         "2022-09-14"   // GRAND_MAGAL_OF_TOUBA
        };
 
        return IntStream.range(0, islamicHolidayTypes.length)
