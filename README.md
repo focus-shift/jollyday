@@ -1,6 +1,6 @@
 # Jollyday [![Build Status](https://github.com/focus-shift/jollyday/actions/workflows/build.yml/badge.svg)](https://github.com/focus-shift/jollyday/actions/workflows/build.yml) [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=focus-shift_jollyday&metric=coverage)](https://sonarcloud.io/summary/overall?id=focus-shift_jollyday) [![Maven Central](https://img.shields.io/maven-central/v/de.focus-shift/jollyday-core.svg)](https://central.sonatype.com/artifact/de.focus-shift/jollyday-core/) [![Javadocs](https://www.javadoc.io/badge/de.focus-shift/jollyday-core.svg)](https://www.javadoc.io/doc/de.focus-shift/jollyday-core)
 
-Jollyday is a Java library to query public holidays. Currently, we support **over 120 countries**.
+Jollyday is a Java library to query public holidays. Currently, we support **over 130 countries**.
 
 _Note_: the `main` branch contains the 2.x release line of Jollyday. The legacy `1.x` branch continues the 1.x line is available at [1.x](https://github.com/focus-shift/jollyday/tree/1.x). A migration guide for upgrading to 2.0 is available in the project wiki: [Jollyday 2.0 Migration Guide](https://github.com/focus-shift/jollyday/wiki/Jollyday-2.0-Migration-Guide).
 
