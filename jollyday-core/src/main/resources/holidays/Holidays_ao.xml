@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="ao" description="Angola"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="FEBRUARY" day="4" descriptionPropertiesKey="LIBERATION"/>
+    <Fixed month="MARCH" day="8" descriptionPropertiesKey="INTERNATIONAL_WOMAN"/>
+    <Fixed month="MARCH" day="23" descriptionPropertiesKey="DAY_OF_THE_LIBERATION_OF_SOUTHERN_AFRICA"/>
+    <Fixed month="APRIL" day="4" descriptionPropertiesKey="PEACE"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="SEPTEMBER" day="17" descriptionPropertiesKey="NATIONAL_HEROES_DAY"/>
+    <Fixed month="NOVEMBER" day="2" descriptionPropertiesKey="ALL_SOULS"/>
+    <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+
+    <ChristianHoliday type="CARNIVAL"/>
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Angola</Source>
+  </Sources>
+
+</Configuration>
