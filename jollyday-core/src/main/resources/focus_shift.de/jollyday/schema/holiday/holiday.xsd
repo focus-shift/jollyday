@@ -172,6 +172,7 @@
       <xsd:enumeration value="ID_UL_ADHA"/>
       <xsd:enumeration value="ID_UL_ADHA_2"/>
       <xsd:enumeration value="ID_UL_ADHA_3"/>
+      <xsd:enumeration value="GRAND_MAGAL_OF_TOUBA"/>
     </xsd:restriction>
   </xsd:simpleType>
 
