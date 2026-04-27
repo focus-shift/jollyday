@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="lr" description="Liberia"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="FEBRUARY" day="11" descriptionPropertiesKey="ARMED_FORCES_DAY"/>
+    <Fixed month="MARCH" day="15" descriptionPropertiesKey="JOSEPH_JENKINS_ROBERTS_BIRTHDAY"/>
+    <Fixed month="MAY" day="14" descriptionPropertiesKey="NATIONAL_UNIFICATION_DAY"/>
+    <Fixed month="JULY" day="26" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <Fixed month="AUGUST" day="24" descriptionPropertiesKey="FLAG_DAY"/>
+    <Fixed month="NOVEMBER" day="29" descriptionPropertiesKey="WILLIAM_TUBMAN_BIRTHDAY"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+
+    <FixedWeekday which="SECOND" weekday="WEDNESDAY" month="MARCH" descriptionPropertiesKey="NATIONAL_DECORATION_DAY"/>
+    <FixedWeekday which="SECOND" weekday="FRIDAY" month="APRIL" descriptionPropertiesKey="FAST_AND_PRAYER_DAY"/>
+    <FixedWeekday which="FIRST" weekday="THURSDAY" month="NOVEMBER" descriptionPropertiesKey="THANKSGIVING"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Liberia</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:LR</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:LR</Source>
+  </Sources>
+</Configuration>
