@@ -15,8 +15,8 @@ import static java.time.Month.MAY;
 
 class HolidayBDTest {
 
-  private static final Year YEAR_FROM = Year.of(2020);
-  private static final Year YEAR_TO = Year.of(2030);
+  private static final Year YEAR_FROM = Year.of(1900);
+  private static final Year YEAR_TO = Year.of(2173);
 
   @Test
   void ensuresHolidays() {
