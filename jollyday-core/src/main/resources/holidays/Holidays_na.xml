@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="na" description="Namibia"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <!-- New Year's Day -->
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR" validFrom="1990">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- Independence Day -->
+    <Fixed month="MARCH" day="21" descriptionPropertiesKey="INDEPENDENCE_DAY" validFrom="1990">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- Workers' Day -->
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY" validFrom="1990">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- Cassinga Day -->
+    <Fixed month="MAY" day="4" descriptionPropertiesKey="CASSINGA" validFrom="1990">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- Africa Day -->
+    <Fixed month="MAY" day="25" descriptionPropertiesKey="AFRICA_DAY" validFrom="1990">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- Genocide Remembrance Day -->
+    <Fixed month="MAY" day="28" descriptionPropertiesKey="GENOCIDE_REMEMBRANCE" validFrom="2016">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- Heroes' Day -->
+    <Fixed month="AUGUST" day="26" descriptionPropertiesKey="HEROES" validFrom="1990">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- Human Rights Day -->
+    <Fixed month="DECEMBER" day="10" descriptionPropertiesKey="HUMAN_RIGHTS" validFrom="1990">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- Christmas Day -->
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS" validFrom="1990">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- Family Day -->
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="FAMILY_DAY" validFrom="1990">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- Good Friday -->
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+
+    <!-- Easter Monday -->
+    <ChristianHoliday type="EASTER_MONDAY"/>
+
+    <!-- Ascension Day -->
+    <ChristianHoliday type="ASCENSION_DAY"/>
+  </Holidays>
+</Configuration>
