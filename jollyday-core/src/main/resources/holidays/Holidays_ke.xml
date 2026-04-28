@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="ke" description="Kenya"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="JUNE" day="1" descriptionPropertiesKey="MADARAKA_DAY"/>
+    <Fixed month="OCTOBER" day="10" descriptionPropertiesKey="MAZINGIRA_DAY"/>
+    <Fixed month="OCTOBER" day="20" descriptionPropertiesKey="MASHUJAA_DAY"/>
+    <Fixed month="DECEMBER" day="12" descriptionPropertiesKey="JAMHURI_DAY"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY"/>
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY"/>
+    <IslamicHoliday type="ID_AL_FITR"/>
+    <IslamicHoliday type="ID_UL_ADHA"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Kenya</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:KE</Source>
+  </Sources>
+</Configuration>
