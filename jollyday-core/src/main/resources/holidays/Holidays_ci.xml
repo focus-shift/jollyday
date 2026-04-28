@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="ci" description="Ivory Coast"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="AUGUST" day="7" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
+    <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
+    <Fixed month="NOVEMBER" day="15" descriptionPropertiesKey="NATIONAL_PEACE_DAY"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+
+    <ChristianHoliday type="EASTER_MONDAY"/>
+    <ChristianHoliday type="ASCENSION_DAY"/>
+    <ChristianHoliday type="WHIT_MONDAY"/>
+
+    <IslamicHoliday type="MAWLID_AN_NABI"/>
+    <IslamicHoliday type="LAILAT_AL_QADR"/>
+    <IslamicHoliday type="ID_AL_FITR"/>
+    <IslamicHoliday type="ID_UL_ADHA"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Ivory_Coast</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:CI</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:CI</Source>
+  </Sources>
+
+</Configuration>
