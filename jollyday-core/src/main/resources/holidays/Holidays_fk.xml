@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="fk" description="Falkland Islands"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <!-- New Year's Day -->
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- Liberation Day - commemorates the 1982 end of the Falklands War -->
+    <Fixed month="JUNE" day="14" descriptionPropertiesKey="LIBERATION">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- King's Birthday - 14 November -->
+    <Fixed month="NOVEMBER" day="14" descriptionPropertiesKey="KINGS_BIRTHDAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- Battle Day - commemorates the 1845 Battle of Camp -->
+    <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="BATTLE_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- Christmas Day -->
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- Boxing Day -->
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- Christmas Holiday -->
+    <Fixed month="DECEMBER" day="27" descriptionPropertiesKey="CHRISTMAS_HOLIDAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- Government Holiday -->
+    <Fixed month="DECEMBER" day="30" descriptionPropertiesKey="GOVERNMENT_HOLIDAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- Queen Elizabeth II State Funeral - one-off public holiday -->
+    <Fixed month="SEPTEMBER" day="19" validFrom="2022" validTo="2022" descriptionPropertiesKey="FUNERAL_QUEEN_ELIZABETH_II"/>
+
+    <!-- Peat Cutting Day - First Monday in October -->
+    <FixedWeekday which="FIRST" weekday="MONDAY" month="OCTOBER" validFrom="2002" descriptionPropertiesKey="PEAT_CUTTING_DAY"/>
+
+    <!-- Good Friday -->
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_the_Falkland_Islands</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:FK</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:FK</Source>
+  </Sources>
+</Configuration>
