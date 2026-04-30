@@ -25,7 +25,7 @@ Create a new file at: `jollyday-core/src/main/resources/holidays/Holidays_[count
   </Holidays>
 
   <Sources>
-    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_[Country]</Source>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_[Country Name]</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:[country_code]</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:[country_code]</Source>
   </Sources>
@@ -127,17 +127,23 @@ For holidays that shift to weekdays when falling on weekends:
 </Fixed>
 ```
 
-## Regional/Subdivision Holidays
+## Subdivision Holidays
 
-For countries with regional holidays (states, provinces):
+For countries with subdivision holidays (states, provinces):
 
 ```xml
-<SubConfigurations hierarchy="[region_code]" description="[Region Name]">
+<SubConfigurations hierarchy="[subdivision_code]" description="[Subdivision Name]">
   <Holidays>
     <Fixed month="MARCH" day="8" descriptionPropertiesKey="INTERNATIONAL_WOMAN"/>
   </Holidays>
 </SubConfigurations>
 ```
+
+
+| Attribute     | Description                        |
+|---------------|------------------------------------|
+| `hierarchy`   | ISO 3166-2 code (e.g., "by", "bw") |
+| `description` | Full subdivision name in English   |
 
 Example with nested subdivisions:
 

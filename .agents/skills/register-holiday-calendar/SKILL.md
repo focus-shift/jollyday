@@ -17,7 +17,7 @@ The `HolidayCalendar` enum follows a strict organization pattern:
 
 1. Calendars are listed in **alphabetical order** by their ISO country code
 2. Each line starts with calendars beginning with a specific letter (A, B, C, etc.)
-3. Multiple calendars sharing the same starting letter are grouped on the same line
+3. Multiple calendars sharing the same starting letter are grouped on the same line alphabetically
 
 ## Example Structure
 
@@ -63,9 +63,9 @@ Format: `COUNTRY_NAME("ISO_CODE")`
 
 **Examples:**
 ```java
-GERMANY("DE"),                    // Direct ISO code
-CANADA(Locale.CANADA.getCountry()), // Java Locale for special cases
-UNITED_STATES(Locale.US.getCountry()), // Java Locale for US
+GERMANY("DE"),                          // Direct ISO code
+CANADA(Locale.CANADA.getCountry()),     // Java Locale for special cases
+UNITED_STATES(Locale.US.getCountry()),  // Java Locale for US
 ```
 
 ## Complete Example

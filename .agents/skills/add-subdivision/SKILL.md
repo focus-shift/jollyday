@@ -1,15 +1,15 @@
 ---
 name: add-subdivision
-description: Add regional/subdivision holiday configurations based on ISO 3166-2 codes
+description: Add subdivision holiday configurations based on ISO 3166-2 codes
 ---
 
 # How to Add Subdivisions
 
-This guide explains how to add regional holiday configurations for subdivisions (states, provinces, regions) based on ISO 3166-2 codes.
+This guide explains how to add subdivision holiday configurations for subdivisions (states, provinces, regions) based on ISO 3166-2 codes.
 
 ## Overview
 
-Subdivisions allow you to define holidays that are specific to certain regions within a country. For example, in Germany, Bavaria (BY) has different holidays than Berlin (BE).
+Subdivisions allow you to define holidays that are specific to certain subdivision within a country. For example, in Germany, Bavaria (BY) has different holidays than Berlin (BE).
 
 ## File Location
 
@@ -19,19 +19,19 @@ Edit the country's XML file: `jollyday-core/src/main/resources/holidays/Holidays
 
 Subdivision codes follow the ISO 3166-2 standard:
 
-| Format  | Example | Meaning                    |
-|---------|---------|----------------------------|
-| `XX-YY` | `DE-BY` | Germany - Bavaria          |
-| `XXYY`  | `USCA`  | United States - California |
+| Format     | Example    | Meaning                    |
+|------------|------------|----------------------------|
+| `XX-YY`    | `DE-BY`    | Germany - Bavaria          |
+| `XX-YY-ZZ` | `DE-BY-MU` | Germany - Bavaria - Munich |
 
 The subdivision `hierarchy` attribute uses **only the regional part** (without the country prefix).
 
 ## Basic Structure
 
 ```xml
-<SubConfigurations hierarchy="[region_code]" description="[Region Name]">
+<SubConfigurations hierarchy="[subdivision_code]" description="[Subdivision Name]">
   <Holidays>
-    <!-- Regional-specific holidays go here -->
+    <!-- Subdivision-specific holidays go here -->
   </Holidays>
 </SubConfigurations>
 ```
@@ -78,7 +78,7 @@ Insert the subdivision in your country's XML file:
 ```xml
 <!-- Inside the root Configuration element, after <Holidays> and before closing </Configuration> -->
 
-<SubConfigurations hierarchy="xx" description="Your Region Name">
+<SubConfigurations hierarchy="[subdivision_code]" description="[Subdivision Name]">
   <Holidays>
     <Fixed month="JANUARY" day="6" descriptionPropertiesKey="EPIPHANY"/>
   </Holidays>
@@ -87,10 +87,10 @@ Insert the subdivision in your country's XML file:
 
 ### Step 3: Add Sources (Optional)
 
-Document the source of regional holiday information:
+Document the source of subdivision holiday information:
 
 ```xml
-<SubConfigurations hierarchy="xx" description="Your Region Name">
+<SubConfigurations hierarchy="[subdivision_code]" description="[Subdivision Name]">
   <Holidays>
     <Fixed month="JANUARY" day="6" descriptionPropertiesKey="EPIPHANY"/>
   </Holidays>
@@ -148,6 +148,11 @@ Subdivisions can be nested for more granular regions (cities within states):
     <ChristianHoliday type="WHIT_MONDAY"/>
   </Holidays>
 
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Germany</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:DE</Source>
+  </Sources>
+  
   <!-- Regional holidays for Bavaria only -->
   <SubConfigurations hierarchy="by" description="Bavaria">
     <Holidays>
@@ -163,11 +168,6 @@ Subdivisions can be nested for more granular regions (cities within states):
       <Fixed month="MARCH" day="8" descriptionPropertiesKey="INTERNATIONAL_WOMAN" validFrom="2019"/>
     </Holidays>
   </SubConfigurations>
-
-  <Sources>
-    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Germany</Source>
-    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:DE</Source>
-  </Sources>
 </Configuration>
 ```
 
@@ -176,7 +176,7 @@ Subdivisions can be nested for more granular regions (cities within states):
 All holiday types can be used in subdivisions:
 
 ```xml
-<SubConfigurations hierarchy="xx" description="Example Region">
+<SubConfigurations hierarchy="[subdivision_code]" description="[Subdivision Name]">
   <Holidays>
     <!-- Fixed date -->
     <Fixed month="JANUARY" day="6" descriptionPropertiesKey="EPIPHANY"/>
@@ -199,10 +199,10 @@ All holiday types can be used in subdivisions:
 
 ## Validity Periods
 
-Regional holidays can have validity periods:
+Subdivision holidays can have validity periods:
 
 ```xml
-<SubConfigurations hierarchy="xx" description="Example Region">
+<SubConfigurations hierarchy="[subdivision_code]" description="[Subdivision Name]">
   <Holidays>
     <!-- Only valid from 2019 onwards -->
     <Fixed month="MARCH" day="8" descriptionPropertiesKey="INTERNATIONAL_WOMAN" validFrom="2019"/>
@@ -230,14 +230,14 @@ void ensuresBavarianHolidays() {
   assertFor(GERMANY)
     .hasFixedHoliday("EPIPHANY", JANUARY, 6).inSubdivision("by").and()
     .hasFixedHoliday("ALL_SAINTS", NOVEMBER, 1).inSubdivision("by").and()
-    .hasChristianHoliday("CORPUS_CHRISTI").inSubdivision("by").and()
+    .hasChristianHoliday("CORPUS_CHRISTI").inSubdivision("by")
     .check();
 }
 
 @Test
 void ensuresBadenWurttembergHolidays() {
   assertFor(GERMANY)
-    .hasFixedHoliday("EPIPHANY", JANUARY, 6).inSubdivision("bw").and()
+    .hasFixedHoliday("EPIPHANY", JANUARY, 6).inSubdivision("bw")
     .check();
 }
 
@@ -245,7 +245,7 @@ void ensuresBadenWurttembergHolidays() {
 void ensuresNestedSubdivisions() {
   // Munich is nested within Bavaria (by)
   assertFor(GERMANY)
-    .hasFixedHoliday("ASSUMPTION_DAY", AUGUST, 15).inSubdivision("by", "mu").and()
+    .hasFixedHoliday("ASSUMPTION_DAY", AUGUST, 15).inSubdivision("by", "mu")
     .check();
 }
 
@@ -253,11 +253,9 @@ void ensuresNestedSubdivisions() {
 void ensuresMultipleSubdivisions() {
   // A holiday can be valid in multiple subdivisions
   assertFor(GERMANY)
-    .hasFixedHoliday("ALL_SAINTS", NOVEMBER, 1)
-      .inSubdivision("bw")
-      .inSubdivision("by")
-      .inSubdivision("nw")
-      .and()
+    .hasFixedHoliday("ALL_SAINTS", NOVEMBER, 1).inSubdivision("bw").and()
+    .hasFixedHoliday("ALL_SAINTS", NOVEMBER, 1).inSubdivision("by").and()
+    .hasFixedHoliday("ALL_SAINTS", NOVEMBER, 1).inSubdivision("nw")
     .check();
 }
 ```
@@ -266,9 +264,8 @@ void ensuresMultipleSubdivisions() {
 
 - **Signature**: `Properties inSubdivision(final String... subdivisions)`
 - **Usage**: Chain after any holiday assertion method
-- **Multiple subdivisions**: Pass multiple codes as varargs (e.g., `inSubdivision("bw", "by", "nw")`)
 - **Nested subdivisions**: For cities within states, include both codes (e.g., `inSubdivision("by", "mu")` for Munich in Bavaria)
-- **Valid in subdivision**: The method checks that a holiday is present in the specified subdivision(s)
+- **Valid in subdivision**: The method checks that a holiday is present in the specified subdivision
 
 ### Example from HolidayDETest.java
 
@@ -292,7 +289,7 @@ void ensuresAllHolidaysFor2024() {
     .hasChristianHoliday("CORPUS_CHRISTI").inSubdivision("by").and()
     
     // Munich (nested within Bavaria)
-    .hasFixedHoliday("ASSUMPTION_DAY", AUGUST, 15).inSubdivision("by", "mu").and()
+    .hasFixedHoliday("ASSUMPTION_DAY", AUGUST, 15).inSubdivision("by", "mu")
     
     .check();
 }
@@ -301,9 +298,9 @@ void ensuresAllHolidaysFor2024() {
 ## Best Practices
 
 1. **Use ISO codes**: Always use official ISO 3166-2 subdivision codes
-2. **Clear descriptions**: Include the full region name in the `description` attribute
-3. **Document sources**: Add `<Sources>` elements for regional holiday references
-4. **Nested when appropriate**: Use nested SubConfigurations for cities within states
+2. **Clear descriptions**: Include the full subdivision name in the `description` attribute
+3. **Document sources**: Add `<Sources>` elements for subdivision holiday references
+4. **Nested when appropriate**: Use nested SubConfigurations for e.g. cities within states
 5. **Consistent ordering**: Place SubConfigurations after the main `<Holidays>` section
 6. **Validity periods**: Use `validFrom`/`validTo` for historical accuracy
 

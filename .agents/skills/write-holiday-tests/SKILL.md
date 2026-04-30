@@ -35,6 +35,7 @@ void ensuresHolidays() {
   assertFor(GERMANY)
     .hasFixedHoliday("NEW_YEAR", JANUARY, 1).and()
     .hasChristianHoliday("GOOD_FRIDAY").and()
+    .hasIslamicHoliday("ID_UL_ADHA")
     .check();
 }
 ```
@@ -54,16 +55,6 @@ void ensuresHolidays() {
 .hasFixedHoliday("REFORMATION_DAY", OCTOBER, 31, 2017, null)
 ```
 
-### Fixed Weekday Holidays
-
-```java
-// First Monday in September
-.hasFixedWeekdayHoliday("LABOUR_DAY", java.time.DayOfWeek.MONDAY, SEPTEMBER, java.time.temporal.TemporalAdjusters.firstInMonth(java.time.DayOfWeek.MONDAY))
-
-// Third Monday in January (MLK Day)
-.hasFixedWeekdayHoliday("MARTIN_LUTHER_KING", JANUARY, 3)
-```
-
 ### Christian (Easter-based) Holidays
 
 ```java
@@ -77,37 +68,25 @@ void ensuresHolidays() {
 ### Islamic Calendar Holidays
 
 ```java
-.hasIslamicHoliday("ID_AL_FITR", 2024, 10, 10)  // type, year, month, day
-.hasIslamicHoliday("ID_UL_ADHA", 2024, 6, 16)
-.hasIslamicHoliday("NEWYEAR", 2024, 7, 7)
+.hasIslamicHoliday("ID_AL_FITR")  // type, year, month, day
+.hasIslamicHoliday("ID_UL_ADHA")
+.hasIslamicHoliday("NEWYEAR")
 ```
 
 ### Regional/Subdivision Holidays
 
 ```java
 // Holiday in specific region
-.hasSubConfig("bw")
-  .hasFixedHoliday("REPELLENCE_PRAYER", NOVEMBER, 20)
-  .and()
+.hasFixedHoliday("REPELLENCE_PRAYER", NOVEMBER, 20)
+  .inSubdivision("bw")
 .check();
 
 // Multiple regions
-.hasSubConfig("by")
-  .hasFixedHoliday("EPIPHANY", JANUARY, 6)
-  .and()
-.hasSubConfig("bw")
-  .hasFixedHoliday("EPIPHANY", JANUARY, 6)
-  .and()
-.check();
-```
-
-### Not a Holiday
-
-```java
-.notHasHoliday(DECEMBER, 31)
-.notHasSubConfig("bw")
-  .hasFixedHoliday("SOME_HOLIDAY", DECEMBER, 24)
-  .and()
+.hasFixedHoliday("EPIPHANY", JANUARY, 6)
+  .inSubdivision("by")
+.and()
+.hasFixedHoliday("EPIPHANY", JANUARY, 6)
+  .inSubdivision("bw")
 .check();
 ```
 
@@ -128,25 +107,29 @@ class HolidayGETest {
   void ensuresHolidays() {
     assertFor(HolidayCalendar.GERMANY)
       // National holidays
-      .hasFixedHoliday("NEW_YEAR", JANUARY, 1)
-      .hasChristianHoliday("GOOD_FRIDAY")
-      .hasChristianHoliday("EASTER_MONDAY")
-      .hasFixedHoliday("LABOUR_DAY", MAY, 1)
-      .hasChristianHoliday("ASCENSION_DAY")
-      .hasChristianHoliday("WHIT_MONDAY")
-      .hasFixedHoliday("CHRISTMAS", DECEMBER, 25)
-      .hasFixedHoliday("SECOND_CHRISTMAS_DAY", DECEMBER, 26)
-      .and()
+      .hasFixedHoliday("NEW_YEAR", JANUARY, 1).and()
+      .hasFixedHoliday("LABOUR_DAY", MAY, 1).and()
+      .hasFixedHoliday("CHRISTMAS", DECEMBER, 25).and()
+      .hasFixedHoliday("SECOND_CHRISTMAS_DAY", DECEMBER, 26).and()
       // Regional holidays - Bavaria
-      .hasSubConfig("by")
       .hasFixedHoliday("EPIPHANY", JANUARY, 6)
+        .inSubdivision("by")
+      .and()
       .hasFixedHoliday("ASCENSION_DAY", MAY)
+        .inSubdivision("by")
       .and()
       // Regional holidays - Baden-Württemberg
-      .hasSubConfig("bw")
       .hasFixedHoliday("EPIPHANY", JANUARY, 6)
-      .hasFixedHoliday("REPELLENCE_PRAYER", NOVEMBER)
+        .inSubdivision("bw")
       .and()
+      .hasFixedHoliday("REPELLENCE_PRAYER", NOVEMBER)
+        .inSubdivision("bw")
+      .and()
+      // Christian holidays
+      .hasChristianHoliday("GOOD_FRIDAY").and()
+      .hasChristianHoliday("EASTER_MONDAY").and()
+      .hasChristianHoliday("ASCENSION_DAY").and()
+      .hasChristianHoliday("WHIT_MONDAY")
       .check();
   }
 }
@@ -161,7 +144,7 @@ class HolidayGETest {
 void ensuresMovingCondition() {
   assertFor(HolidayCalendar.US)
     // New Year falls on Saturday, shifts to Friday
-    .hasFixedHoliday("NEW_YEAR", JANUARY, 1, 2023)
+    .hasFixedHoliday("NEW_YEAR", JANUARY, 1).canBeMovedFrom(SATURDAY, FRIDAY)
     .check();
 }
 ```
@@ -173,8 +156,8 @@ void ensuresMovingCondition() {
 void ensuresHistoricalChanges() {
   assertFor(HolidayCalendar.GERMANY)
     // Reformation Day only since 2017
-    .hasFixedHoliday("REFORMATION_DAY", OCTOBER, 31, 2017)
-    .notHasHoliday(OCTOBER, 31, 2016)
+    .hasFixedHoliday("REFORMATION", OCTOBER, 31)
+      .validBetween(Year.of(2017), Year.of(2017))
     .check();
 }
 ```
@@ -185,5 +168,5 @@ void ensuresHistoricalChanges() {
 2. **Valid ranges**: Test holidays with `validFrom`/`validTo` constraints
 3. **Edge cases**: Test years where holidays fall on weekends
 4. **Clear naming**: Use descriptive test method names
-5. **Group related tests**: Use `.and()` to chain related assertions
+5. **Group related tests**: Use `.and()` to chain related assertions but not at the end of the chain before `.check()`
 
