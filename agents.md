@@ -273,15 +273,25 @@ Create XML holiday calendar configuration files for a new country or region. Cov
 - Moving conditions and validity periods
 - Regional/subdivision configurations
 
-### add-holiday-description-properties
+### add-holiday-descriptions
 
-**Location**: `.agents/skills/add-holiday-description-properties/SKILL.md`
+**Location**: `.agents/skills/add-holiday-descriptions/SKILL.md`
 
-Add holiday and country description properties for localization. Covers:
+Add holiday description properties for localization. Covers:
 - Base English descriptions in `holiday_descriptions.properties`
 - Localized descriptions (de, el, fr, nl, pt, sv)
-- Country descriptions in `country_descriptions.properties`
-- Key naming conventions
+- Key naming conventions for holiday keys
+- Common holiday keys reference
+
+### add-country-descriptions
+
+**Location**: `.agents/skills/add-country-descriptions/SKILL.md`
+
+Add country description properties for localization. Covers:
+- Base English descriptions in `country_descriptions.properties`
+- Localized country descriptions (de, el, fr, nl, pt, sv)
+- ISO 3166-1 alpha-2 country code conventions
+- Multi-language localization examples
 
 ### register-holiday-calendar
 
