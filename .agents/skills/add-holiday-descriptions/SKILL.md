@@ -1,15 +1,13 @@
 ---
-name: add-holiday-description-properties
-description: Add holiday and country description properties for localization
+name: add-holiday-descriptions
+description: Add holiday description properties for localization
 ---
 
 # How to Add Holiday Description Properties
 
 This guide explains how to add holiday descriptions to the properties files in Jollyday.
 
-## Holiday Descriptions
-
-### Base English Descriptions
+## Base English Descriptions
 
 Add entries to `jollyday-core/src/main/resources/descriptions/holiday_descriptions.properties`:
 
@@ -25,14 +23,13 @@ holiday.description.FIRST_CHRISTMAS_DAY         = First Day of Christmas
 holiday.description.SECOND_CHRISTMAS_DAY        = Second Day of Christmas
 ```
 
-### Key Naming Conventions
+## Key Naming Conventions
 
 - Use **UPPERCASE** with underscores: `NEW_YEAR`, `LABOUR_DAY`, `GOOD_FRIDAY`
 - For multi-word holidays: `FIRST_CHRISTMAS_DAY`, `SECOND_CHRISTMAS_DAY`
-- Country-specific: `REFORMATION_DAY`, `UNIFICATION_GERMANY`, `MARTIN_LUTHER_KING`
 - Always prefix with `holiday.description.`
 
-### Localized Descriptions
+## Localized Descriptions
 
 Add entries to locale-specific files:
 
@@ -55,37 +52,12 @@ holiday.description.GOOD_FRIDAY         = Karfreitag
 holiday.description.EASTER_MONDAY       = Ostermontag
 ```
 
-## Country Descriptions
-
-### Base English Country Descriptions
-
-Add entries to `jollyday-core/src/main/resources/descriptions/country_descriptions.properties`:
-
-```properties
-country.description.de = Germany
-country.description.us = United States
-country.description.fr = France
-```
-
-### Localized Country Descriptions
-
-Add entries to locale-specific files:
-
-```properties
-# country_descriptions_de.properties
-country.description.de = Deutschland
-country.description.us = Vereinigte Staaten
-country.description.fr = Frankreich
-```
-
 ## Property File Locations
 
 | File                                                    | Purpose                 |
 |---------------------------------------------------------|-------------------------|
 | `descriptions/holiday_descriptions.properties`          | English holiday names   |
 | `descriptions/holiday_descriptions_[locale].properties` | Localized holiday names |
-| `descriptions/country_descriptions.properties`          | English country names   |
-| `descriptions/country_descriptions_[locale].properties` | Localized country names |
 
 ## Complete Example
 
@@ -95,27 +67,18 @@ For adding a new holiday key `REFORMATION_DAY`:
 ```properties
 # holiday_descriptions.properties
 holiday.description.REFORMATION_DAY = Reformation Day
-
-# country_descriptions.properties
-country.description.xx = Your Country Name
 ```
 
 **2. German localization:**
 ```properties
 # holiday_descriptions_de.properties
 holiday.description.REFORMATION_DAY = Reformationsfest
-
-# country_descriptions_de.properties
-country.description.xx = Ihr Landname
 ```
 
 **3. French localization:**
 ```properties
 # holiday_descriptions_fr.properties
 holiday.description.REFORMATION_DAY = Jour de la Réformation
-
-# country_descriptions_fr.properties
-country.description.xx = Votre nom de pays
 ```
 
 ## Best Practices
@@ -129,7 +92,7 @@ country.description.xx = Votre nom de pays
 ## Common Holiday Keys
 
 | Key                          | Description             |
-|-------------------------------|---------------- --------|
+|------------------------------|-------------------------|
 | `NEW_YEAR`                   | New Year's Day          |
 | `CHRISTMAS`                  | Christmas Day           |
 | `FIRST_CHRISTMAS_DAY`        | First Day of Christmas  |
