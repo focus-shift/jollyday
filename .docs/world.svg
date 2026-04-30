@@ -1221,7 +1221,7 @@
     <path d="M626.1 383.4l-0.4 0.2-0.1 0-0.3 0.2-0.1-0.1 0.1-0.3 0.6-0.1 0.2 0.1z" name="British Virgin Islands">
     </path>
   </g>
-  <g class="country" data-iso="FK">
+  <g class="country active" data-iso="FK">
     <title>Falkland Islands</title>
     <path d="M 697.4 836.2 697.8 836.1 697.8 836.5 697 836.2 697.3 835.9 697.5 835.8 697.4 836.2 Z">
     </path>
