@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="ht" description="Haiti"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="JANUARY" day="2" descriptionPropertiesKey="ANCESTRY_DAY"/>
+    <Fixed month="JANUARY" day="6" descriptionPropertiesKey="EPIPHANY"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_AND_AGRICULTURE_DAY"/>
+    <Fixed month="MAY" day="18" descriptionPropertiesKey="FLAG_AND_UNIVERSITIES_DAY"/>
+    <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_MARY"/>
+    <Fixed month="OCTOBER" day="17" descriptionPropertiesKey="DESSALINES_DAY"/>
+    <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
+    <Fixed month="NOVEMBER" day="2" descriptionPropertiesKey="ALL_SOULS"/>
+    <Fixed month="NOVEMBER" day="18" descriptionPropertiesKey="BATTLE_OF_VERTIERES_DAY"/>
+    <Fixed month="DECEMBER" day="5" descriptionPropertiesKey="DISCOVERY_DAY"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+
+    <!-- Carnival: 48 days before Easter Sunday (Mardi Gras) and the day before -->
+    <ChristianHoliday type="SHROVE_MONDAY" descriptionPropertiesKey="christian.CARNIVAL"/>
+    <ChristianHoliday type="CARNIVAL"/>
+
+    <!-- Ash Wednesday: 46 days before Easter Sunday -->
+    <ChristianHoliday type="ASH_WEDNESDAY"/>
+
+    <!-- Catholic Christian holidays -->
+    <ChristianHoliday type="MAUNDY_THURSDAY"/>
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER"/>
+    <ChristianHoliday type="ASCENSION_DAY"/>
+    <ChristianHoliday type="CORPUS_CHRISTI"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Haiti</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:HT</Source>
+  </Sources>
+</Configuration>
