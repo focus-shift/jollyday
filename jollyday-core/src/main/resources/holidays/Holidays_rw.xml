@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration hierarchy="rw" description="Rwanda"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="JANUARY" day="2" descriptionPropertiesKey="NEW_YEAR_HOLIDAY"/>
+    <Fixed month="FEBRUARY" day="1" descriptionPropertiesKey="NATIONAL_HEROES_DAY"/>
+    <Fixed month="APRIL" day="7" descriptionPropertiesKey="TUTSI_GENOCIDE_MEMORIAL_DAY"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="JULY" day="1" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <Fixed month="JULY" day="4" descriptionPropertiesKey="LIBERATION_DAY"/>
+    <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY"/>
+
+    <FixedWeekday which="FIRST" weekday="FRIDAY" month="AUGUST" descriptionPropertiesKey="UMUGANURA_DAY"/>
+
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY"/>
+
+    <IslamicHoliday type="ID_AL_FITR"/>
+    <IslamicHoliday type="ID_UL_ADHA"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Rwanda</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:RW</Source>
+  </Sources>
+</Configuration>
