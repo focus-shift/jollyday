@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="pk" description="Pakistan"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="FEBRUARY" day="5" descriptionPropertiesKey="KASHMIR_DAY"/>
+    <Fixed month="MARCH" day="23" descriptionPropertiesKey="PAKISTAN_DAY"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="MAY" day="28" descriptionPropertiesKey="YEOM_E_TAKBEER"/>
+    <Fixed month="AUGUST" day="14" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <Fixed month="NOVEMBER" day="9" descriptionPropertiesKey="IQBAL_DAY"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="QUAIDE_AZAM_DAY"/>
+    <!-- Muharram 9th is missing -->
+    <IslamicHoliday type="ASCHURA"/>
+    <IslamicHoliday type="MAWLID_AN_NABI"/>
+    <IslamicHoliday type="ID_AL_FITR"/>
+    <IslamicHoliday type="ID_UL_ADHA"/>
+  </Holidays>
+</Configuration>
