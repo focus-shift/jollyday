@@ -1,5 +1,5 @@
 ---
-name: add-country-descriptions
+name: Country Descriptions
 description: Add country description properties for localization
 ---
 

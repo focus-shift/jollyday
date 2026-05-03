@@ -1,5 +1,5 @@
 ---
-name: register-holiday-calendar
+name: Register Holiday Calendar
 description: Register a new holiday calendar in the HolidayCalendar enum
 ---
 

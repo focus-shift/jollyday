@@ -1,5 +1,5 @@
 ---
-name: add-subdivision
+name: Add Subdivision Holiday Configurations
 description: Add subdivision holiday configurations based on ISO 3166-2 codes
 ---
 

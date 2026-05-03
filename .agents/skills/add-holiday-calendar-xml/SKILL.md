@@ -1,5 +1,5 @@
 ---
-name: add-holiday-calendar-xml
+name: Add a new Holiday Calendar
 description: Create XML holiday calendar configuration files for a new country or region
 ---
 

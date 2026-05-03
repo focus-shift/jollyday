@@ -1,5 +1,5 @@
 ---
-name: write-holiday-tests
+name: Write Holiday Tests
 description: Write country-specific holiday tests using CalendarCheckerApi
 ---
 
