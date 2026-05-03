@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration hierarchy="bi" description="Burundi"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="FEBRUARY" day="5" descriptionPropertiesKey="UNITY"/>
+    <Fixed month="APRIL" day="6" descriptionPropertiesKey="NTARYAMIRA_DAY"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="JUNE" day="8" descriptionPropertiesKey="NKURUNZIZA_DAY"/>
+    <Fixed month="JULY" day="1" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
+    <Fixed month="OCTOBER" day="13" descriptionPropertiesKey="RWAGASORE_DAY"/>
+    <Fixed month="OCTOBER" day="21" descriptionPropertiesKey="NDADAYE_DAY"/>
+    <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+    <ChristianHoliday type="ASCENSION_DAY"/>
+    <IslamicHoliday type="ID_AL_FITR"/>
+    <IslamicHoliday type="ID_UL_ADHA"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Burundi</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:BI</Source>
+  </Sources>
+</Configuration>
