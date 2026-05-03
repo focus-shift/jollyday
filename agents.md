@@ -1,17 +1,17 @@
 ---
 name: jollyday
-description: A Java library for querying public holidays supporting 130+ countries with XML-based holiday calendar configuration
+description: A Java library for querying public holidays supporting 140+ countries with XML-based holiday calendar configuration
 ---
 
 # Jollyday - Public Holiday Library
 
 ## Project Overview
 
-**Jollyday** is a Java library to query public holidays. It currently supports **over 130 countries**. The holiday data is stored in XML files (one for each country) and will be read from the classpath.
+**Jollyday** is a Java library to query public holidays. It currently supports **over 140 countries**. The holiday data is stored in XML files (one for each country) and will be read from the classpath.
 
 ### Key Features
 
-- Supports 130+ countries with public holiday data
+- Supports 140+ countries with public holiday data
 - ISO 3166-1 alpha-2 country code support
 - ISO 3166-2 subdivision support (states, provinces, regions)
 - Multiple holiday types: Fixed dates, moving holidays (Easter-based, Islamic calendar, etc.)
