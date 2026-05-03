@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="mz" description="Mozambique"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="FEBRUARY" day="3" descriptionPropertiesKey="HEROES"/>
+    <Fixed month="APRIL" day="7" descriptionPropertiesKey="MOZAMBIQUE_WOMENS_DAY"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="JUNE" day="25" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <Fixed month="SEPTEMBER" day="7" descriptionPropertiesKey="VICTORY_DAY"/>
+    <Fixed month="SEPTEMBER" day="25" descriptionPropertiesKey="ARMED_FORCES_DAY"/>
+    <Fixed month="OCTOBER" day="4" descriptionPropertiesKey="PEACE_AND_RECONCILIATION"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="FAMILY_DAY"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Mozambique</Source>
+  </Sources>
+
+</Configuration>
