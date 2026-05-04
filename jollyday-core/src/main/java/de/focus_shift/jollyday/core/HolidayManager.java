@@ -35,8 +35,9 @@ public abstract class HolidayManager {
 
   /**
    * Cache for manager instances on a per country basis.
+   * Bounded to 100 entries to prevent memory leaks.
    */
-  private static final Cache<HolidayManager> HOLIDAY_MANAGER_CACHE = new Cache<>();
+  private static final Cache<HolidayManager> HOLIDAY_MANAGER_CACHE = new Cache<>(100);
 
   /**
    * Manager for configuration providers. Delivers the jollyday configuration.

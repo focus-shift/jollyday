@@ -2,8 +2,9 @@ package de.focus_shift.jollyday.core.caching;
 
 import org.jspecify.annotations.NonNull;
 
+import java.util.Collections;
+import java.util.LinkedHashMap;
 import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Cache implementation which handles concurrent access to cached values.
@@ -12,7 +13,28 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class Cache<V> {
 
-  private final Map<String, V> cachingMap = new ConcurrentHashMap<>();
+  private final Map<String, V> cachingMap;
+
+  /**
+   * Initializes the cache with a default unbounded size.
+   */
+  public Cache() {
+    this(Integer.MAX_VALUE);
+  }
+
+  /**
+   * Initializes the cache with a maximum size.
+   *
+   * @param maxSize the maximum number of entries to keep in the cache
+   */
+  public Cache(int maxSize) {
+    this.cachingMap = Collections.synchronizedMap(new LinkedHashMap<>(16, 0.75f, true) {
+      @Override
+      protected boolean removeEldestEntry(Map.Entry<String, V> eldest) {
+        return size() > maxSize;
+      }
+    });
+  }
 
   /**
    * Returns the value defined by the {@link ValueHandler}
