@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="kg" description="Kyrgyzstan"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="JANUARY" day="7" descriptionPropertiesKey="ORTHODOX_CHRISTMAS"/>
+    <Fixed month="FEBRUARY" day="23" descriptionPropertiesKey="DEFENDER_FATHERLAND"/>
+    <Fixed month="MARCH" day="8" descriptionPropertiesKey="INTERNATIONAL_WOMAN"/>
+    <Fixed month="MARCH" day="21" descriptionPropertiesKey="NOWRUZ"/>
+    <Fixed month="APRIL" day="7" descriptionPropertiesKey="APRIL_REVOLUTION"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="MAY" day="5" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+    <Fixed month="MAY" day="9" descriptionPropertiesKey="VICTORY"/>
+    <Fixed month="AUGUST" day="31" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <Fixed month="NOVEMBER" day="7" descriptionPropertiesKey="DAYS_OF_HISTORY"/>
+    <Fixed month="NOVEMBER" day="8" descriptionPropertiesKey="DAYS_OF_HISTORY"/>
+
+    <!-- Islamic (lunar calendar) holidays -->
+    <IslamicHoliday type="ID_AL_FITR"/>
+    <IslamicHoliday type="ID_UL_ADHA"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Kyrgyzstan</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:KG</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:KG</Source>
+  </Sources>
+</Configuration>
+
