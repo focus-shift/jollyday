@@ -1,5 +1,5 @@
 ---
-name: Holiday Descriptions
+name: Add Holiday Descriptions
 description: Add holiday description properties for localization
 ---
 

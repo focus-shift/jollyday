@@ -263,9 +263,9 @@ public interface HolidayParser {
 
 ## Skills
 
-### add-holiday-calendar-xml
+### Add a new Holiday Calendar
 
-**Location**: `.agents/skills/add-holiday-calendar-xml/SKILL.md`
+**Location**: `.agents/skills/add-new-holiday-calendar/SKILL.md`
 
 Create XML holiday calendar configuration files for a new country or region. Covers:
 - Root structure with namespace declarations
@@ -273,7 +273,7 @@ Create XML holiday calendar configuration files for a new country or region. Cov
 - Moving conditions and validity periods
 - Regional/subdivision configurations
 
-### add-holiday-descriptions
+### Add Holiday Descriptions
 
 **Location**: `.agents/skills/add-holiday-descriptions/SKILL.md`
 
@@ -283,7 +283,7 @@ Add holiday description properties for localization. Covers:
 - Key naming conventions for holiday keys
 - Common holiday keys reference
 
-### add-country-descriptions
+### Add Country Descriptions
 
 **Location**: `.agents/skills/add-country-descriptions/SKILL.md`
 
@@ -293,7 +293,7 @@ Add country description properties for localization. Covers:
 - ISO 3166-1 alpha-2 country code conventions
 - Multi-language localization examples
 
-### register-holiday-calendar
+### Register Holiday Calendar
 
 **Location**: `.agents/skills/register-holiday-calendar/SKILL.md`
 
@@ -302,7 +302,7 @@ Register a new holiday calendar in the `HolidayCalendar` enum. Covers:
 - File location: `jollyday-core/src/main/java/de/focus_shift/jollyday/core/HolidayCalendar.java`
 - Entry format: `COUNTRY_NAME("ISO_CODE")`
 
-### write-holiday-tests
+### Write Holiday Tests
 
 **Location**: `.agents/skills/write-holiday-tests/SKILL.md`
 
@@ -312,7 +312,7 @@ Write country-specific holiday tests using `CalendarCheckerApi`. Covers:
 - Testing regional/subdivision holidays
 - Testing edge cases (moving conditions, historical changes)
 
-### add-subdivision
+### Add Subdivision Holiday Configurations
 
 **Location**: `.agents/skills/add-subdivision/SKILL.md`
 
@@ -322,32 +322,6 @@ Add regional/subdivision holiday configurations based on ISO 3166-2 codes. Cover
 - Nested subdivisions (cities within states)
 - Validity periods for regional holidays
 - Testing subdivisions with CalendarCheckerApi
-
-## Best Practices
-
-### Adding New Countries
-
-1. Follow existing XML file structure
-2. Use official sources for holiday data
-3. Include `validFrom`/`validTo` for historical accuracy
-4. Add comprehensive test coverage
-5. Register in `HolidayCalendar` enum alphabetically
-
-### Localization
-
-- Use `descriptionPropertiesKey` for all holidays
-- Provide English descriptions in base properties file
-- Add localized descriptions for supported languages: de, el, fr, nl, pt, sv
-
-### Holiday Type Conventions
-
-| Type           | Usage                             |
-|----------------|-----------------------------------|
-| `NEW_YEAR`     | January 1st                       |
-| `CHRISTMAS`    | December 25th                     |
-| `GOOD_FRIDAY`  | Easter Friday                     |
-| `LABOUR_DAY`   | May 1st                           |
-| `NATIONAL_DAY` | Country-specific national holiday |
 
 ## Version Requirements
 
