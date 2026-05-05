@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="af" description="Afghanistan"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+
+  <Holidays>
+    <Fixed month="FEBRUARY" day="15" descriptionPropertiesKey="LIBERATION_DAY"/>
+    <Fixed month="APRIL" day="28" descriptionPropertiesKey="MUJAHIDEEN_VICTORY_DAY"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="INTERNATIONAL_WORKERS_DAY"/>
+    <Fixed month="AUGUST" day="15" descriptionPropertiesKey="VICTORY_DAY"/>
+    <Fixed month="AUGUST" day="19" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <Fixed month="AUGUST" day="31" descriptionPropertiesKey="DEPARTURE_DAY"/>
+
+    <IslamicHoliday type="ID_AL_FITR"/>
+    <IslamicHoliday type="ARAFAAT"/>
+    <IslamicHoliday type="ID_UL_ADHA"/>
+    <IslamicHoliday type="ASCHURA"/>
+    <IslamicHoliday type="MAWLID_AN_NABI"/>
+  </Holidays>
+</Configuration>
