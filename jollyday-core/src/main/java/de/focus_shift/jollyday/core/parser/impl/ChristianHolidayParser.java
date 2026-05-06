@@ -28,13 +28,14 @@ public class ChristianHolidayParser implements HolidayParser {
         final LocalDate easterSunday = new CalculateEasterSunday(year).apply(christianHolidayConfiguration.chronology());
 
         final LocalDate actualDate = switch (christianHolidayConfiguration.type()) {
-          case EASTER -> easterSunday;
           case CLEAN_MONDAY, SHROVE_MONDAY -> easterSunday.minusDays(48);
           case MARDI_GRAS, CARNIVAL -> easterSunday.minusDays(47);
           case ASH_WEDNESDAY -> easterSunday.minusDays(46);
+          case PALM_SUNDAY -> easterSunday.minusDays(7);
           case MAUNDY_THURSDAY -> easterSunday.minusDays(3);
           case GOOD_FRIDAY -> easterSunday.minusDays(2);
           case EASTER_SATURDAY -> easterSunday.minusDays(1);
+          case EASTER -> easterSunday;
           case EASTER_MONDAY -> easterSunday.plusDays(1);
           case EASTER_TUESDAY -> easterSunday.plusDays(2);
           case GENERAL_PRAYER_DAY -> easterSunday.plusDays(26);
