@@ -13,6 +13,7 @@
     <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="SECOND_CHRISTMAS_DAY"/>
 
     <!-- Christian holidays (observed on the Orthodox/Julian chronology) -->
+    <ChristianHoliday type="PALM_SUNDAY" chronology="JULIAN"/>
     <ChristianHoliday type="EASTER" chronology="JULIAN"/>
     <ChristianHoliday type="EASTER_MONDAY" chronology="JULIAN"/>
 
@@ -21,12 +22,6 @@
     <IslamicHoliday type="MAWLID_AN_NABI"/>
     <IslamicHoliday type="ID_AL_FITR"/>
     <IslamicHoliday type="ID_UL_ADHA"/>
-
-    <!-- Palm Sunday: 7 days before Easter -->
-    <RelativeToEasterSunday descriptionPropertiesKey="christian.PALM_SUNDAY">
-      <chronology>JULIAN</chronology>
-      <days>-7</days>
-    </RelativeToEasterSunday>
 
   </Holidays>
 

@@ -33,6 +33,7 @@ public interface ChristianHolidayConfiguration extends Limited, Described, Movab
     ASCENSION_DAY,
     WHIT_MONDAY,
     CORPUS_CHRISTI,
+    PALM_SUNDAY,
     MAUNDY_THURSDAY,
     ASH_WEDNESDAY,
     MARDI_GRAS,

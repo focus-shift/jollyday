@@ -206,6 +206,7 @@
       <xsd:enumeration value="ASCENSION_DAY"/>
       <xsd:enumeration value="WHIT_MONDAY"/>
       <xsd:enumeration value="CORPUS_CHRISTI"/>
+      <xsd:enumeration value="PALM_SUNDAY"/>
       <xsd:enumeration value="MAUNDY_THURSDAY"/>
       <xsd:enumeration value="ASH_WEDNESDAY"/>
       <xsd:enumeration value="MARDI_GRAS"/>
