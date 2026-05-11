@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="iq" description="Iraq"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+
+  <Holidays>
+    <!-- Fixed date national holidays -->
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="JANUARY" day="6" descriptionPropertiesKey="ARMY_DAY"/>
+    <Fixed month="MARCH" day="21" descriptionPropertiesKey="NOWRUZ"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="OCTOBER" day="3" descriptionPropertiesKey="NATIONAL_DAY"/>
+    <Fixed month="DECEMBER" day="10" descriptionPropertiesKey="VICTORY_DAY"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+
+    <!-- Islamic holidays (Hijri calendar driven) -->
+    <!-- Muharram 1: Islamic New Year -->
+    <IslamicHoliday type="NEWYEAR"/>
+    <!-- Muharram 10: Ashura -->
+    <IslamicHoliday type="ASCHURA"/>
+    <!-- Rabi' al-Awwal 12: The Prophet's Birthday -->
+    <IslamicHoliday type="MAWLID_AN_NABI"/>
+
+    <!-- Shawwal 1: End of Ramadan (3 days) -->
+    <IslamicHoliday type="ID_AL_FITR"/>
+    <IslamicHoliday type="ID_AL_FITR_2"/>
+    <IslamicHoliday type="ID_AL_FITR_3"/>
+
+    <!-- Dhu al-Hijjah: Feast of Sacrifice (Arafat + 3-4 days) -->
+    <IslamicHoliday type="ARAFAAT"/>
+    <IslamicHoliday type="ID_UL_ADHA"/>
+    <IslamicHoliday type="ID_UL_ADHA_2"/>
+    <IslamicHoliday type="ID_UL_ADHA_3"/>
+
+    <!-- Dhu al-Hijjah 18: Eid al-Ghadir -->
+    <IslamicHoliday type="ID_AL_GHADIR"/>
+
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Iraq</Source>
+  </Sources>
+</Configuration>
+
+
