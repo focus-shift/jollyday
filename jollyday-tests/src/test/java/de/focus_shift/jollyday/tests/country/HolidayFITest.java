@@ -25,6 +25,7 @@ class HolidayFITest {
       .hasChristianHoliday("GOOD_FRIDAY").and()
       .hasChristianHoliday("EASTER_MONDAY").and()
       .hasChristianHoliday("ASCENSION_DAY").and()
+      .hasChristianHoliday("WHIT_SUNDAY").and()
       .hasFixedHoliday("SELF_GOVERNANCE", JUNE, 9)
         .inSubdivision("01")
       .and()
