@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="sy" description="Syria"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="MARCH" day="18" descriptionPropertiesKey="SYRIAN_REVOLUTION_DAY"/>
+    <Fixed month="MARCH" day="21" descriptionPropertiesKey="NEWROZ"/>
+    <Fixed month="MARCH" day="21" descriptionPropertiesKey="MOTHERS_DAY"/>
+    <Fixed month="APRIL" day="17" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="LIBERATION_DAY"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+
+    <ChristianHoliday type="EASTER"/>
+    <ChristianHoliday type="EASTER" chronology="JULIAN"/>
+
+    <IslamicHoliday type="NEWYEAR"/>
+    <IslamicHoliday type="ID_AL_FITR"/>
+    <IslamicHoliday type="ID_UL_ADHA"/>
+    <IslamicHoliday type="MAWLID_AN_NABI"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Syria</Source>
+  </Sources>
+</Configuration>
