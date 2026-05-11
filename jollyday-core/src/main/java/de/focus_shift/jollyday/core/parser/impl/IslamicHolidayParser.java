@@ -36,6 +36,19 @@ public class IslamicHolidayParser implements HolidayParser {
             new CalculateRelativeDatesFromChronologyWithinGregorianYear(1, 1, HIJRAH, 0).apply(year);
           case ASCHURA ->
             new CalculateRelativeDatesFromChronologyWithinGregorianYear(1, 10, HIJRAH, 0).apply(year);
+          case MAWLID_AN_NABI ->
+            new CalculateRelativeDatesFromChronologyWithinGregorianYear(3, 12, HIJRAH, 0).apply(year);
+          case LAILAT_AL_MIRAJ ->
+            new CalculateRelativeDatesFromChronologyWithinGregorianYear(7, 27, HIJRAH, 0).apply(year);
+          case LAILAT_AL_BARAT ->
+            new CalculateRelativeDatesFromChronologyWithinGregorianYear(8, 15, HIJRAH, 0).apply(year);
+          case RAMADAN ->
+            new CalculateRelativeDatesFromChronologyWithinGregorianYear(9, 1, HIJRAH, 0).apply(year);
+          case LAILAT_AL_QADR ->
+            new CalculateRelativeDatesFromChronologyWithinGregorianYear(9, 27, HIJRAH, 0).apply(year);
+          case JUMUATUL_WIDA ->
+            new CalculateRelativeDatesFromChronologyWithinGregorianYear(10, 1, HIJRAH, -1).apply(year)
+              .map(localDate -> localDate.with(previousOrSame(FRIDAY)));
           case RAMADAN_END ->
             new CalculateRelativeDatesFromChronologyWithinGregorianYear(10, 1, HIJRAH, -1).apply(year);
           case ID_AL_FITR ->
@@ -52,19 +65,8 @@ public class IslamicHolidayParser implements HolidayParser {
             new CalculateRelativeDatesFromChronologyWithinGregorianYear(12, 11, HIJRAH, 0).apply(year);
           case ID_UL_ADHA_3 ->
             new CalculateRelativeDatesFromChronologyWithinGregorianYear(12, 12, HIJRAH, 0).apply(year);
-          case LAILAT_AL_BARAT ->
-            new CalculateRelativeDatesFromChronologyWithinGregorianYear(8, 15, HIJRAH, 0).apply(year);
-          case LAILAT_AL_MIRAJ ->
-            new CalculateRelativeDatesFromChronologyWithinGregorianYear(7, 27, HIJRAH, 0).apply(year);
-          case LAILAT_AL_QADR ->
-            new CalculateRelativeDatesFromChronologyWithinGregorianYear(9, 27, HIJRAH, 0).apply(year);
-          case MAWLID_AN_NABI ->
-            new CalculateRelativeDatesFromChronologyWithinGregorianYear(3, 12, HIJRAH, 0).apply(year);
-          case RAMADAN ->
-            new CalculateRelativeDatesFromChronologyWithinGregorianYear(9, 1, HIJRAH, 0).apply(year);
-          case JUMUATUL_WIDA ->
-            new CalculateRelativeDatesFromChronologyWithinGregorianYear(10, 1, HIJRAH, -1).apply(year)
-            .map(localDate -> localDate.with(previousOrSame(FRIDAY)));
+          case ID_AL_GHADIR ->
+            new CalculateRelativeDatesFromChronologyWithinGregorianYear(12, 18, HIJRAH, 0).apply(year);
         };
 
         return islamicHolidays
