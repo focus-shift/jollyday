@@ -456,7 +456,7 @@
     <path d="M1652.9 259.5l0-0.6 2.5 0.2 0.6-2.8 3.6-0.4 2-0.4 0-1.5 8.3 7.5 3.3 4.2 3.4 7.4-0.5 3.5-4.3 1.2-3.1 2.7-4.6 0.5-2.1-3.5-1.1-4.8-5.3-6.6 3.4-1.1-6.1-5.5z" name="Republic of Korea">
     </path>
   </g>
-  <g class="country" data-iso="KW">
+  <g class="country active" data-iso="KW">
     <title>Kuwait</title>
     <path d="M1247.5 309.4l1.5 2.8-0.3 1.5 2.4 4.8-3.9 0.2-1.7-3.1-5-0.6 3.3-6.2 3.7 0.6z" name="Kuwait">
     </path>
