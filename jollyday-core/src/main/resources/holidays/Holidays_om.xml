@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="om" description="Oman"
+                xmlns="https://focus_shift.de/jollyday/schema/holiday"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="JANUARY" day="11" descriptionPropertiesKey="ACCESSION_DAY"/>
+    <Fixed month="JULY" day="23" descriptionPropertiesKey="RENAISSANCE_DAY"/>
+    <Fixed month="OCTOBER" day="17" descriptionPropertiesKey="WOMENS_DAY"/>
+    <Fixed month="NOVEMBER" day="20" descriptionPropertiesKey="NATIONAL_DAY"/>
+    <Fixed month="NOVEMBER" day="21" descriptionPropertiesKey="NATIONAL_DAY"/>
+    <IslamicHoliday type="NEWYEAR"/>
+    <IslamicHoliday type="MAWLID_AN_NABI"/>
+    <IslamicHoliday type="LAILAT_AL_MIRAJ"/>
+    <IslamicHoliday type="RAMADAN_END"/>
+    <IslamicHoliday type="ID_AL_FITR"/>
+    <IslamicHoliday type="ID_AL_FITR_2"/>
+    <IslamicHoliday type="ID_AL_FITR_3"/>
+    <IslamicHoliday type="ARAFAAT"/>
+    <IslamicHoliday type="ID_UL_ADHA"/>
+    <IslamicHoliday type="ID_UL_ADHA_2"/>
+    <IslamicHoliday type="ID_UL_ADHA_3"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Oman</Source>
+  </Sources>
+</Configuration>
