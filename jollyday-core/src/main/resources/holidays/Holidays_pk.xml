@@ -12,7 +12,7 @@
     <Fixed month="AUGUST" day="14" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
     <Fixed month="NOVEMBER" day="9" descriptionPropertiesKey="IQBAL_DAY"/>
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="QUAIDE_AZAM_DAY"/>
-    <!-- Muharram 9th is missing -->
+    <IslamicHoliday type="TASUA" descriptionPropertiesKey="islamic.ASCHURA"/>
     <IslamicHoliday type="ASCHURA"/>
     <IslamicHoliday type="MAWLID_AN_NABI"/>
     <IslamicHoliday type="ID_AL_FITR"/>

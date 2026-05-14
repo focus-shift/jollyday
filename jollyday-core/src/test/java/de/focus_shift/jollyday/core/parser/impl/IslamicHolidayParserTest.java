@@ -49,6 +49,7 @@ class IslamicHolidayParserTest {
        final String[] islamicHolidayDates = {
          "2022-07-30",  // NEWYEAR
          "2022-08-08",  // ASCHURA
+         "2022-08-07",  // TASUA
          "2022-10-08",  // MAWLID_AN_NABI
          "2022-02-28",  // LAILAT_AL_MIRAJ
          "2022-03-18",  // LAILAT_AL_BARAT
