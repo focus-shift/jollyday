@@ -34,6 +34,8 @@ public class IslamicHolidayParser implements HolidayParser {
         final Stream<LocalDate> islamicHolidays = switch (islamicHoliday.type()) {
           case NEWYEAR ->
             new CalculateRelativeDatesFromChronologyWithinGregorianYear(1, 1, HIJRAH, 0).apply(year);
+          case TASUA ->
+            new CalculateRelativeDatesFromChronologyWithinGregorianYear(1, 9, HIJRAH, 0).apply(year);
           case ASCHURA ->
             new CalculateRelativeDatesFromChronologyWithinGregorianYear(1, 10, HIJRAH, 0).apply(year);
           case MAWLID_AN_NABI ->

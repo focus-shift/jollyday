@@ -158,6 +158,7 @@
     <xsd:restriction base="xsd:string">
       <xsd:enumeration value="NEWYEAR"/>
       <xsd:enumeration value="ASCHURA"/>
+      <xsd:enumeration value="TASUA"/>
       <xsd:enumeration value="MAWLID_AN_NABI"/>
       <xsd:enumeration value="LAILAT_AL_MIRAJ"/>
       <xsd:enumeration value="LAILAT_AL_BARAT"/>

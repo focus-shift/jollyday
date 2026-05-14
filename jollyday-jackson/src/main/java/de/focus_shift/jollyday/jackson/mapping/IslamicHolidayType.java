@@ -4,6 +4,7 @@ public enum IslamicHolidayType {
 
   NEWYEAR,
   ASCHURA,
+  TASUA,
   MAWLID_AN_NABI,
   LAILAT_AL_MIRAJ,
   LAILAT_AL_BARAT,
