@@ -26,5 +26,8 @@
 
   <Sources>
     <Source>https://mzv.sk/en/web/en/slovakia/public-holidays</Source>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Slovakia</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:SK</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:SK</Source>
   </Sources>
 </Configuration>

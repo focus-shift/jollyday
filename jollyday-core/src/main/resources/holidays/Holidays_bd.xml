@@ -27,5 +27,7 @@
   <Sources>
     <Source>https://mopa.gov.bd/ (Official Government Gazette dated 09 November 2025)</Source>
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Bangladesh</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:BD</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:BD</Source>
   </Sources>
 </Configuration>

@@ -15,4 +15,11 @@
     <IslamicHoliday type="ID_AL_FITR"/> <!-- Ramazan / Şeker bayramı -->
     <IslamicHoliday type="ID_UL_ADHA"/> <!-- Kurban bayramı -->
   </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Turkey</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:TR</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:TR</Source>
+  </Sources>
+
 </Configuration>

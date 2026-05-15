@@ -23,5 +23,7 @@
   <Sources>
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Botswana</Source>
     <Source>https://www.playroll.com/compliance-hub/public-holiday-regulations-in-botswana</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:BW</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:BW</Source>
   </Sources>
 </Configuration>

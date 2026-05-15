@@ -81,4 +81,11 @@
     <ChristianHoliday type="EASTER_MONDAY"/>
     <ChristianHoliday type="ASCENSION_DAY" validFrom="1910" validTo="1993"/>
   </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_South Africa</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:ZA</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:ZA</Source>
+  </Sources>
+
 </Configuration>

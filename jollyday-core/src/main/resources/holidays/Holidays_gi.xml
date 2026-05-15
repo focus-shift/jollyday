@@ -48,5 +48,6 @@
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:GI</Source>
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Gibraltar</Source>
     <Source>https://www.gibraltar.gov.gi/press-releases/bank-and-public-holidays-2024-9356</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:GI</Source>
   </Sources>
 </Configuration>

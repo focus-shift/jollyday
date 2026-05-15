@@ -45,5 +45,7 @@
   <Sources>
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Guyana</Source>
     <Source>https://mola.gov.gy/laws/Volume%206%20Cap.%2018.01%20-%2023.011696968337.pdf</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:GY</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:GY</Source>
   </Sources>
 </Configuration>
