@@ -312,7 +312,7 @@ Write country-specific holiday tests using `CalendarCheckerApi`. Covers:
 - Testing regional/subdivision holidays
 - Testing edge cases (moving conditions, historical changes)
 
-### Add Subdivision Holiday Configurations
+### Add Subdivision
 
 **Location**: `.agents/skills/add-subdivision/SKILL.md`
 

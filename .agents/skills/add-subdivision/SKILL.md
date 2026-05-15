@@ -1,5 +1,5 @@
 ---
-name: Add Subdivision Holiday Configurations
+name: Add Subdivision
 description: Add subdivision holiday configurations based on ISO 3166-2 codes
 ---
 
@@ -14,6 +14,8 @@ Subdivisions allow you to define holidays that are specific to certain subdivisi
 ## File Location
 
 Edit the country's XML file: `jollyday-core/src/main/resources/holidays/Holidays_[country_code].xml`
+
+> **Important:** The `[country_code]` must be **lowercase** (e.g., `Holidays_de.xml` for Germany, `Holidays_us.xml` for United States).
 
 ## ISO 3166-2 Codes
 
