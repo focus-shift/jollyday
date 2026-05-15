@@ -11,7 +11,8 @@ module de.focus_shift.jollyday.core {
   requires java.xml;
   requires org.slf4j;
   requires org.threeten.extra;
-  requires org.jspecify;
+   requires org.jspecify;
+   requires com.github.benmanes.caffeine;
 
   exports de.focus_shift.jollyday.core;
   exports de.focus_shift.jollyday.core.spi;
