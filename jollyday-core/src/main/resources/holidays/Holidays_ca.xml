@@ -14,6 +14,13 @@
     <ChristianHoliday type="GOOD_FRIDAY"/>
   </Holidays>
 
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Canada</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:CA</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:CA</Source>
+  </Sources>
+
+
   <SubConfigurations hierarchy="on" description="Ontario">
     <Holidays>
       <Fixed month="SEPTEMBER" day="30" validFrom="2021" descriptionPropertiesKey="TRUTH_RECONCILIATION_DAY"

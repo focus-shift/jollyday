@@ -21,6 +21,13 @@
     <IslamicHoliday type="ID_UL_ADHA"/>
   </Holidays>
 
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Nigeria</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:NG</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:NG</Source>
+  </Sources>
+
+
   <SubConfigurations hierarchy="la" description="Lagos">
     <Holidays>
       <Fixed month="JUNE" day="12" descriptionPropertiesKey="ELECTION_DAY"/>

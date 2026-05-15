@@ -16,4 +16,11 @@
     <Fixed month="DECEMBER" day="16" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
     <IslamicHoliday type="ID_UL_ADHA"/>
   </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Kazakhstan</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:KZ</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:KZ</Source>
+  </Sources>
+
 </Configuration>

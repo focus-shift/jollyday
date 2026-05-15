@@ -13,5 +13,7 @@
 
   <Sources>
     <Source>https://en.wikipedia.org/wiki/Antarctica</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:AQ</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:AQ</Source>
   </Sources>
 </Configuration>

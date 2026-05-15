@@ -34,6 +34,13 @@
     <FixedWeekday which="THIRD" weekday="MONDAY" month="NOVEMBER" descriptionPropertiesKey="REVOLUTION"/>
   </Holidays>
 
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Mexico</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:MX</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:MX</Source>
+  </Sources>
+
+
   <SubConfigurations hierarchy="pue" description="Puebla">
     <Holidays>
       <Fixed month="MAY" day="5" descriptionPropertiesKey="MAY_DAY" localizedType="OBSERVANCE"/>

@@ -19,4 +19,11 @@
     <ChristianHoliday type="GOOD_FRIDAY" validFrom="2016"/>
     <ChristianHoliday type="EASTER_MONDAY"/>
   </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_the_Czech_Republic</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:CZ</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:CZ</Source>
+  </Sources>
+
 </Configuration>
