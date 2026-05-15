@@ -26,11 +26,13 @@ Create a new file at: `jollyday-core/src/main/resources/holidays/Holidays_[count
 
   <Sources>
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_[Country Name]</Source>
-    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:[country_code]</Source>
-    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:[country_code]</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:[COUNTRY_CODE]</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:[COUNTRY_CODE]</Source>
   </Sources>
 </Configuration>
 ```
+
+> **IMPORTANT**: The country code in ISO 3166 URLs (`[COUNTRY_CODE]`) must always be **UPPERCASE** (e.g., `DE`, `FR`, `US`), even though the `hierarchy` attribute uses lowercase. The ISO 3166-2 Wikipedia reference also requires uppercase.
 
 ### Root Element Attributes
 
