@@ -41,7 +41,10 @@ class HolidayITTest {
       .hasChristianHoliday("EASTER_MONDAY")
         .validFrom(Year.of(1642))
       .and()
+
+      /*Trentino-South Tyrol*/
       .hasChristianHoliday("WHIT_MONDAY").inSubdivision("32")
+
       .check();
   }
 }

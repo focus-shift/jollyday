@@ -20,9 +20,90 @@
     <ChristianHoliday type="EASTER_MONDAY" validFrom="1642"/>
   </Holidays>
 
-  <SubConfigurations hierarchy="32" description="Südtirol">
+  <Sources>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:IT</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:IT</Source>
+  </Sources>
+
+  <SubConfigurations hierarchy="21" description="Piedmont">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="23" description="Aosta Valley">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="25" description="Lombardy">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="32" description="Trentino-South Tyrol">
     <Holidays>
       <ChristianHoliday type="WHIT_MONDAY"/>
     </Holidays>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="34" description="Veneto">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="36" description="Friuli Venezia Giulia">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="42" description="Liguria">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="45" description="Emilia-Romagna">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="52" description="Tuscany">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="55" description="Umbria">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="57" description="Marche">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="62" description="Lazio">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="65" description="Abruzzo">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="67" description="Molise">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="72" description="Campania">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="75" description="Apulia">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="77" description="Basilicata">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="78" description="Calabria">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="82" description="Sicily">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="88" description="Sardinia">
+    <Holidays/>
   </SubConfigurations>
 </Configuration>
