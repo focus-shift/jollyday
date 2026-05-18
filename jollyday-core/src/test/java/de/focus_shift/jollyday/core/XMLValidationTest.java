@@ -13,6 +13,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.stream.Stream;
 
+import static java.util.stream.Collectors.joining;
+import static java.util.stream.StreamSupport.stream;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.xmlunit.validation.Languages.W3C_XML_SCHEMA_NS_URI;
 
@@ -46,7 +48,10 @@ class XMLValidationTest {
     try (final FileInputStream inputStream = new FileInputStream(path.toFile())) {
       final ValidationResult validationResult = validator.validateInstance(new StreamSource(inputStream));
       assertThat(validationResult.isValid())
-        .withFailMessage(validationResult.getProblems().toString())
+        .withFailMessage("Holiday file '" + path + "' is invalid:\n" +
+          stream(validationResult.getProblems().spliterator(), false)
+            .map(problem -> " -> " + problem.toString())
+            .collect(joining("\n")))
         .isTrue();
     } catch (IOException e) {
       throw new IllegalStateException("Cannot validate holiday file " + path);

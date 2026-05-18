@@ -21,6 +21,13 @@
     <ChristianHoliday type="CORPUS_CHRISTI"/>
   </Holidays>
 
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Brazil</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:BR</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:BR</Source>
+  </Sources>
+
+
   <SubConfigurations hierarchy="rj" description="Rio de Janeiro">
     <Holidays>
       <Fixed month="APRIL" day="23" validFrom="2007" descriptionPropertiesKey="ST_GEORGE"/>

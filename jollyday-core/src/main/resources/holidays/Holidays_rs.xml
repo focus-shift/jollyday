@@ -36,4 +36,11 @@
     <ChristianHoliday type="GOOD_FRIDAY" chronology="JULIAN"/>
     <ChristianHoliday type="EASTER_MONDAY" chronology="JULIAN"/>
   </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Serbia</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:RS</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:RS</Source>
+  </Sources>
+
 </Configuration>

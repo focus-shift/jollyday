@@ -18,4 +18,11 @@
     <ChristianHoliday type="MAUNDY_THURSDAY"/>
     <ChristianHoliday type="GOOD_FRIDAY"/>
   </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Paraguay</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:PY</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:PY</Source>
+  </Sources>
+
 </Configuration>

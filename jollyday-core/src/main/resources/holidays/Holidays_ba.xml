@@ -26,6 +26,13 @@
     <IslamicHoliday type="MAWLID_AN_NABI"/>
   </Holidays>
 
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Bosnia and Herzegovina</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:BA</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:BA</Source>
+  </Sources>
+
+
   <SubConfigurations hierarchy="srp" description="Republika Srpska">
     <Holidays>
       <Fixed month="JANUARY" day="9" descriptionPropertiesKey="REPUBLIC_DAY"/>

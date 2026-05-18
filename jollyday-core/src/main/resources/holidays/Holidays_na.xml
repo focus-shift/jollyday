@@ -64,4 +64,11 @@
     <!-- Ascension Day -->
     <ChristianHoliday type="ASCENSION_DAY"/>
   </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Namibia</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:NA</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:NA</Source>
+  </Sources>
+
 </Configuration>

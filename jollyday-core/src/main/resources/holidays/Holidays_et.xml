@@ -21,4 +21,11 @@
     <EthiopianOrthodoxHoliday type="ENKUTATASH"/>
     <EthiopianOrthodoxHoliday type="MESKEL"/>
   </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Ethiopia</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:ET</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:ET</Source>
+  </Sources>
+
 </Configuration>

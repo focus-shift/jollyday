@@ -19,6 +19,13 @@
     <ChristianHoliday type="WHIT_MONDAY" validFrom="2008"/>
   </Holidays>
 
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_France</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:FR</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:FR</Source>
+  </Sources>
+
+
   <!-- ARA - Auvergne-Rhône-Alpes-->
   <SubConfigurations hierarchy="01" description="Ain">
     <Holidays/>

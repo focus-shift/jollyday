@@ -22,5 +22,7 @@
   <Sources>
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Lesotho</Source>
     <Source>https://www.gov.ls/index.php/en/about-government/government-and-services/public-holidays</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:LS</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:LS</Source>
   </Sources>
 </Configuration>

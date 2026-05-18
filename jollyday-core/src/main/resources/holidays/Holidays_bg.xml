@@ -59,5 +59,8 @@
 
   <Sources>
     <Source of="National Day">https://www.government.bg/en/About-Bulgaria/BULGARIAN-PUBLIC-HOLIDAYS/Bulgarian-public-holidays</Source>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Bulgaria</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:BG</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:BG</Source>
   </Sources>
 </Configuration>

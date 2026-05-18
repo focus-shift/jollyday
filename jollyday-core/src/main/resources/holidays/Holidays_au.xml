@@ -44,6 +44,13 @@
     <ChristianHoliday type="EASTER_MONDAY"/>
   </Holidays>
 
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Australia</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:AU</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:AU</Source>
+  </Sources>
+
+
   <SubConfigurations hierarchy="act" description="Australian Capital Territory">
     <Holidays>
       <Fixed month="JANUARY" day="1" validFrom="2008" validTo="2019" descriptionPropertiesKey="NEW_YEAR">
