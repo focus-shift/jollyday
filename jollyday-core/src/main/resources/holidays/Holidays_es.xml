@@ -146,7 +146,7 @@
 
   <SubConfigurations hierarchy="ex" description="Extremadura">
     <Holidays>
-      <Fixed month="FEBRUARY" day="2" validFrom="2023" validTo="2023"
+      <Fixed month="FEBRUARY" day="21" validFrom="2023" validTo="2023"
              descriptionPropertiesKey="CARNIVAL"/> <!--Carnival Tuesday-->
       <Fixed month="MARCH" day="19" validFrom="2000" validTo="2014" descriptionPropertiesKey="ST_JOSEPH">
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>

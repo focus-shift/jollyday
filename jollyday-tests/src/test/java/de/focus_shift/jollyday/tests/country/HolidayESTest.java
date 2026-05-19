@@ -219,7 +219,7 @@ class HolidayESTest {
       // Ceuta
 
       // Extremadura
-      .hasFixedHoliday("CARNIVAL", FEBRUARY, 2)
+      .hasFixedHoliday("CARNIVAL", FEBRUARY, 21)
         .inSubdivision("ex")
         .validBetween(Year.of(2023), Year.of(2023))
       .and()
