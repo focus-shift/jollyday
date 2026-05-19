@@ -20,6 +20,13 @@
     <ChristianHoliday type="EASTER_MONDAY" validFrom="1642"/>
   </Holidays>
 
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Italy</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:IT</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:IT</Source>
+  </Sources>
+
+
   <SubConfigurations hierarchy="32" description="Südtirol">
     <Holidays>
       <ChristianHoliday type="WHIT_MONDAY"/>

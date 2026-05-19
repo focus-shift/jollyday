@@ -22,5 +22,6 @@
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_the_Republic_of_the_Congo</Source>
     <Source>https://www.officeholidays.com/countries/congo</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:CG</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:CG</Source>
   </Sources>
 </Configuration>

@@ -28,6 +28,7 @@
   <Sources>
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Burkina_Faso</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:BF</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:BF</Source>
   </Sources>
 
 </Configuration>

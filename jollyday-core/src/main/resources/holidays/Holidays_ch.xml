@@ -17,6 +17,7 @@
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:CH</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:CH</Source>
     <Source of="ST Berchthold as bank holiday">https://www.six-group.com/de/market-data/news-tools/trading-currency-holiday-calendar.html</Source>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Switzerland</Source>
   </Sources>
 
   <SubConfigurations hierarchy="ag" description="Aargau">

@@ -21,6 +21,13 @@
     <ChristianHoliday type="CORPUS_CHRISTI"/>
   </Holidays>
 
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Portugal</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:PT</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:PT</Source>
+  </Sources>
+
+
   <SubConfigurations hierarchy="01" description="Aveiro">
     <Holidays/>
 

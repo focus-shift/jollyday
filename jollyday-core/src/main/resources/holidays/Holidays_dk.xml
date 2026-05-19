@@ -17,4 +17,11 @@
     <ChristianHoliday type="WHIT_MONDAY"/>
     <ChristianHoliday type="PENTECOST"/>
   </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Denmark</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:DK</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:DK</Source>
+  </Sources>
+
 </Configuration>

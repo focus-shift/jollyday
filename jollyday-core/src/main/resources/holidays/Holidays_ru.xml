@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<Configuration hierarchy="ru" description="Russian Federation"
+<Configuration hierarchy="ru" description="Russia"
                xmlns="https://focus_shift.de/jollyday/schema/holiday"
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
@@ -70,4 +70,10 @@
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
   </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Russia</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:RU</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:RU</Source>
+  </Sources>
 </Configuration>

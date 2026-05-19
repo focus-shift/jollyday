@@ -19,4 +19,11 @@
     <ChristianHoliday type="EASTER"/>
     <ChristianHoliday type="EASTER_MONDAY"/>
   </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Lithuania</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:LT</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:LT</Source>
+  </Sources>
+
 </Configuration>

@@ -47,6 +47,7 @@
   <Sources>
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Zimbabwe</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:ZW</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:ZW</Source>
   </Sources>
 
   <SubConfigurations hierarchy="BU" description="Bulawayo">
