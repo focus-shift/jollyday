@@ -285,6 +285,7 @@
 
   <SubConfigurations hierarchy="vc" description="Valencia Community">
     <Holidays>
+      <Fixed month="JUNE" day="24" descriptionPropertiesKey="ST_JOHN"/>
       <Fixed month="MARCH" day="19" validFrom="2000" validTo="2016" descriptionPropertiesKey="ST_JOSEPH">
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>

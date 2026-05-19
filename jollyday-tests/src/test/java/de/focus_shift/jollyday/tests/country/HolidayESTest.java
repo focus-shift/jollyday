@@ -388,6 +388,9 @@ class HolidayESTest {
       .hasChristianHoliday("EASTER_MONDAY").inSubdivision("pv").and()
 
       // Valencia Community
+      .hasFixedHoliday("ST_JOHN", JUNE, 24)
+        .inSubdivision("vc")
+      .and()
       .hasFixedHoliday("ST_JOSEPH", MARCH, 19)
         .inSubdivision("vc")
         .canBeMovedFrom(SUNDAY, MONDAY)
