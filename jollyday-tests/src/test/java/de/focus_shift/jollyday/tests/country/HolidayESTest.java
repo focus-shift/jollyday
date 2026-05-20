@@ -32,9 +32,7 @@ class HolidayESTest {
       .and()
       .hasFixedHoliday("EPIPHANY", JANUARY, 6).and()
       .hasFixedHoliday("LABOUR_DAY", MAY, 1).and()
-      .hasFixedHoliday("ASSUMPTION_DAY", AUGUST, 15)
-        .canBeMovedFrom(SUNDAY, MONDAY)
-      .and()
+      .hasFixedHoliday("ASSUMPTION_DAY", AUGUST, 15).and()
       .hasFixedHoliday("NATIONAL_DAY", OCTOBER, 12).and()
       .hasFixedHoliday("ALL_SAINTS", NOVEMBER, 1).and()
       .hasFixedHoliday("CONSTITUTION_DAY", DECEMBER, 6)
@@ -219,7 +217,7 @@ class HolidayESTest {
       // Ceuta
 
       // Extremadura
-      .hasFixedHoliday("CARNIVAL", FEBRUARY, 2)
+      .hasFixedHoliday("CARNIVAL", FEBRUARY, 21)
         .inSubdivision("ex")
         .validBetween(Year.of(2023), Year.of(2023))
       .and()
@@ -388,6 +386,9 @@ class HolidayESTest {
       .hasChristianHoliday("EASTER_MONDAY").inSubdivision("pv").and()
 
       // Valencia Community
+      .hasFixedHoliday("ST_JOHN", JUNE, 24)
+        .inSubdivision("vc")
+      .and()
       .hasFixedHoliday("ST_JOSEPH", MARCH, 19)
         .inSubdivision("vc")
         .canBeMovedFrom(SUNDAY, MONDAY)

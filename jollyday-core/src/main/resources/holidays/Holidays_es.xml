@@ -9,9 +9,7 @@
     <Fixed month="JANUARY" day="1" validFrom="1967" descriptionPropertiesKey="NEW_YEAR"/>
     <Fixed month="JANUARY" day="6" descriptionPropertiesKey="EPIPHANY"/>
     <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
-    <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY">
-      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-    </Fixed>
+    <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
     <Fixed month="OCTOBER" day="12" descriptionPropertiesKey="NATIONAL_DAY"/>
     <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
     <Fixed month="DECEMBER" day="6" validFrom="1978" descriptionPropertiesKey="CONSTITUTION_DAY"/>
@@ -146,7 +144,7 @@
 
   <SubConfigurations hierarchy="ex" description="Extremadura">
     <Holidays>
-      <Fixed month="FEBRUARY" day="2" validFrom="2023" validTo="2023"
+      <Fixed month="FEBRUARY" day="21" validFrom="2023" validTo="2023"
              descriptionPropertiesKey="CARNIVAL"/> <!--Carnival Tuesday-->
       <Fixed month="MARCH" day="19" validFrom="2000" validTo="2014" descriptionPropertiesKey="ST_JOSEPH">
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
@@ -285,6 +283,7 @@
 
   <SubConfigurations hierarchy="vc" description="Valencia Community">
     <Holidays>
+      <Fixed month="JUNE" day="24" descriptionPropertiesKey="ST_JOHN"/>
       <Fixed month="MARCH" day="19" validFrom="2000" validTo="2016" descriptionPropertiesKey="ST_JOSEPH">
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
