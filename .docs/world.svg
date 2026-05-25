@@ -1520,7 +1520,7 @@
     <path d="M 623.8 383.8 624.2 384.1 624 384.3 623.7 384.1 623.2 384.1 623.4 383.9 623.8 383.8 Z">
     </path>
   </g>
-  <g class="country" data-iso="VU">
+  <g class="country active" data-iso="VU">
     <title>Vanuatu</title>
     <path d="M 1931.8 631.8 1931.3 631.6 1931.5 631.2 1932 631.1 1932.2 631.5 1932.1 631.7 1931.8 631.8 Z">
     </path>

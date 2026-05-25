@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="vu" description="Vanuatu"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="FEBRUARY" day="21" descriptionPropertiesKey="FATHER_WALTER_LINI_DAY"/>
+    <Fixed month="MARCH" day="5" descriptionPropertiesKey="CUSTOM_CHIEFS_DAY"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="JULY" day="24" descriptionPropertiesKey="CHILDRENS_DAY"/>
+    <Fixed month="JULY" day="30" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
+    <Fixed month="OCTOBER" day="5" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+    <Fixed month="NOVEMBER" day="29" descriptionPropertiesKey="NATIONAL_UNITY_DAY"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="FIRST_CHRISTMAS_DAY"/>
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="FAMILY_DAY"/>
+
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY"/>
+    <ChristianHoliday type="ASCENSION_DAY"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Vanuatu</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:VU</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:VU</Source>
+  </Sources>
+</Configuration>
