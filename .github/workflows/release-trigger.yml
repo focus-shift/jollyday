@@ -52,7 +52,7 @@ jobs:
           git add .chglog/*.md
           git commit -m "[skip ci] Add release notes for version ${{ github.event.inputs.releaseVersion }}"
       - name: Push Release Notes
-        uses: ad-m/github-push-action@4cc74773234f74829a8c21bc4d69dd4be9cfa599
+        uses: ad-m/github-push-action@881a6320fdb16eb5318c5054f31c218aec2b324c
         with:
           github_token: ${{ secrets.AM_PAT }}
           branch: ${{ github.ref }}
@@ -65,7 +65,7 @@ jobs:
       - name: Add release tag
         run: git tag -a -m "v${{ github.event.inputs.releaseVersion }}" v${{ github.event.inputs.releaseVersion }}
       - name: Push release version
-        uses: ad-m/github-push-action@4cc74773234f74829a8c21bc4d69dd4be9cfa599
+        uses: ad-m/github-push-action@881a6320fdb16eb5318c5054f31c218aec2b324c
         with:
           github_token: ${{ secrets.AM_PAT }}
           branch: ${{ github.ref }}
@@ -75,7 +75,7 @@ jobs:
       - name: Commit new snapshot version
         run: git add ./\*pom.xml && git commit -m "Prepare Next Snapshot Version ${{ github.event.inputs.nextVersion }}"
       - name: Push snapshot commit
-        uses: ad-m/github-push-action@4cc74773234f74829a8c21bc4d69dd4be9cfa599
+        uses: ad-m/github-push-action@881a6320fdb16eb5318c5054f31c218aec2b324c
         with:
           github_token: ${{ secrets.AM_PAT }}
           branch: ${{ github.ref }}
