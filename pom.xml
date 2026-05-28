@@ -41,7 +41,7 @@
     <junit.version>6.1.0</junit.version>
     <mockito.version>5.23.0</mockito.version>
     <assertj.version>3.27.7</assertj.version>
-    <jqwik.version>1.9.3</jqwik.version>
+    <jqwik.version>1.10.0</jqwik.version>
     <jmh.version>1.37</jmh.version>
 
     <!--suppress UnresolvedMavenProperty - for IDEA-->
