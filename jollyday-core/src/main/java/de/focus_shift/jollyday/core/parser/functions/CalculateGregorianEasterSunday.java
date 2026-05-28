@@ -13,23 +13,22 @@ public class CalculateGregorianEasterSunday implements Function<Year, LocalDate>
 
   @Override
   public @NonNull LocalDate apply(@NonNull final Year year) {
-    int a, b, c, d, e, f, g, h, i, j, k, l;
-    int x, month, day;
-    a = year.getValue() % 19;
-    b = year.getValue() / 100;
-    c = year.getValue() % 100;
-    d = b / 4;
-    e = b % 4;
-    f = (b + 8) / 25;
-    g = (b - f + 1) / 3;
-    h = (19 * a + b - d - g + 15) % 30;
-    i = c / 4;
-    j = c % 4;
-    k = (32 + 2 * e + 2 * i - h - j) % 7;
-    l = (a + 11 * h + 22 * k) / 451;
-    x = h + k - 7 * l + 114;
-    month = x / 31;
-    day = (x % 31) + 1;
+    final int yearValue = year.getValue();
+    final int goldenNumber = yearValue % 19;
+    final int century = yearValue / 100;
+    final int yearInCentury = yearValue % 100;
+    final int centuryDiv4 = century / 4;
+    final int centuryMod4 = century % 4;
+    final int centuryCorrection = (century + 8) / 25;
+    final int centuryCorrectionDiv3 = (century - centuryCorrection + 1) / 3;
+    final int epact = (19 * goldenNumber + century - centuryDiv4 - centuryCorrectionDiv3 + 15) % 30;
+    final int yearInCenturyDiv4 = yearInCentury / 4;
+    final int yearInCenturyMod4 = yearInCentury % 4;
+    final int weekdayOffset = (32 + 2 * centuryMod4 + 2 * yearInCenturyDiv4 - epact - yearInCenturyMod4) % 7;
+    final int monthCorrection = (goldenNumber + 11 * epact + 22 * weekdayOffset) / 451;
+    final int daysAfterFebruary = epact + weekdayOffset - 7 * monthCorrection + 114;
+    final int month = daysAfterFebruary / 31;
+    final int day = (daysAfterFebruary % 31) + 1;
     return LocalDate.of(year.getValue(), (month == 3 ? MARCH : APRIL), day);
   }
 }
