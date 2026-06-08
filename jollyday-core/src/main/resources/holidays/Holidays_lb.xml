@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="lb" description="Lebanon"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+
+  <Holidays>
+    <!-- Fixed date national holidays -->
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="JANUARY" day="6" descriptionPropertiesKey="EPIPHANY"/>
+    <Fixed month="FEBRUARY" day="9" descriptionPropertiesKey="SAINT_MARONS"/>
+    <Fixed month="FEBRUARY" day="14" descriptionPropertiesKey="HARIRI_MEMORIAL_DAY"/>
+    <Fixed month="MARCH" day="25" descriptionPropertiesKey="ANNUNCIATION"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="MAY" day="25" descriptionPropertiesKey="RESISTANCE_LIBERATION_DAY"/>
+    <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
+    <Fixed month="NOVEMBER" day="22" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+
+    <!-- Moveable Christian holidays (Gregorian/Western chronology) -->
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER"/>
+
+    <!-- Islamic holidays (lunar calendar driven) -->
+    <IslamicHoliday type="NEWYEAR"/>
+    <IslamicHoliday type="ASCHURA"/>
+    <IslamicHoliday type="MAWLID_AN_NABI"/>
+    <IslamicHoliday type="ID_AL_FITR"/>
+    <IslamicHoliday type="ID_UL_ADHA"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Lebanon</Source>
+  </Sources>
+</Configuration>
