@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration hierarchy="kn" description="Saint Kitts and Nevis"
+                xmlns="https://focus_shift.de/jollyday/schema/holiday"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <Fixed month="JANUARY" day="2" descriptionPropertiesKey="CARNIVAL_DAY"/>
+
+    <Fixed month="JANUARY" day="28" descriptionPropertiesKey="BUCKLYS_UPRISING_DAY"/>
+
+    <Fixed month="SEPTEMBER" day="16" descriptionPropertiesKey="NATIONAL_HEROES_DAY"/>
+
+    <Fixed month="SEPTEMBER" day="19" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY"/>
+
+    <FixedWeekday which="FIRST" weekday="MONDAY" month="MAY" descriptionPropertiesKey="LABOUR_DAY"/>
+    <FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="EMANCIPATION_DAY"/>
+    <FixedWeekday which="FIRST" weekday="TUESDAY" month="AUGUST" descriptionPropertiesKey="CULTURAMA_DAY"/>
+
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY"/>
+    <ChristianHoliday type="WHIT_MONDAY"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Saint_Kitts_and_Nevis</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:KN</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:KN</Source>
+  </Sources>
+</Configuration>
