@@ -48,7 +48,9 @@ class HolidayDescriptionTest {
     final Set<String> propertiesNames = new HashSet<>();
     for (final File descriptionFile : descriptions) {
       final Properties props = new Properties();
-      props.load(new FileInputStream(descriptionFile));
+      try (FileInputStream inputStream = new FileInputStream(descriptionFile)) {
+        props.load(inputStream);
+      }
       propertiesNames.addAll(props.stringPropertyNames());
     }
     return propertiesNames;
