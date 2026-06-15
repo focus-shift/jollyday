@@ -27,6 +27,7 @@ public abstract class BaseManagerParameter implements ManagerParameter {
     }
   }
 
+  @Override
   public @NonNull Optional<String> getProperty(@NonNull String key) {
     return Optional.ofNullable(properties.getProperty(key));
   }
