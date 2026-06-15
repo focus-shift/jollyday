@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="st" description="Sao Tome and Principe"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="FEBRUARY" day="3" descriptionPropertiesKey="MARTYRS_DAY"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="JULY" day="12" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <Fixed month="SEPTEMBER" day="6" descriptionPropertiesKey="ARMED_FORCES_DAY"/>
+    <Fixed month="SEPTEMBER" day="30" descriptionPropertiesKey="AGRICULTURAL_REFORM_DAY"/>
+    <Fixed month="DECEMBER" day="21" descriptionPropertiesKey="SAO_TOME_DAY"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Sao_Tome_and_Principe</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:ST</Source>
+  </Sources>
+</Configuration>
