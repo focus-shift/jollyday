@@ -3,6 +3,7 @@ package de.focus_shift.jollyday.core;
 import org.jspecify.annotations.NonNull;
 import org.jspecify.annotations.Nullable;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
@@ -101,7 +102,7 @@ public class CalendarHierarchy {
    * @param children the children to set
    */
   public void setChildren(final Map<String, CalendarHierarchy> children) {
-    this.children = children;
+    this.children = new HashMap<>(children);
   }
 
   /**
@@ -112,7 +113,7 @@ public class CalendarHierarchy {
    * @return the children
    */
   public @NonNull Map<String, CalendarHierarchy> getChildren() {
-    return children;
+    return Collections.unmodifiableMap(new HashMap<>(children));
   }
 
   /**
