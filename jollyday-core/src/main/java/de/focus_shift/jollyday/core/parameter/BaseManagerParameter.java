@@ -20,10 +20,11 @@ public abstract class BaseManagerParameter implements ManagerParameter {
   @Override
   public void mergeProperties(@Nullable final Properties properties) {
     if (properties != null) {
-      final Properties mergedProperties = new Properties();
-      mergedProperties.putAll(properties);
-      mergedProperties.putAll(this.properties);
-      this.properties = mergedProperties;
+      final Properties currentProperties = new Properties();
+      currentProperties.putAll(this.properties);
+      this.properties.clear();
+      this.properties.putAll(properties);
+      this.properties.putAll(currentProperties);
     }
   }
 
