@@ -50,7 +50,7 @@ public abstract class BaseManagerParameter implements ManagerParameter {
   public @NonNull String getParserImplClassName(@NonNull final String className) {
     final Optional<String> parserImplClass = getProperty(PARSER_IMPL_PREFIX + className);
     if (parserImplClass.isEmpty()) {
-      throw new IllegalStateException("Cannot create parsers. No parser implementation defined for class " + className + " in properties with key " + PARSER_IMPL_PREFIX + className);
+      throw new IllegalStateException("Cannot create parsers. No parser implementation defined for key: " + PARSER_IMPL_PREFIX + className);
     }
     return parserImplClass.get();
   }
