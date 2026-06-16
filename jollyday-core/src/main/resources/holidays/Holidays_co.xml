@@ -31,6 +31,14 @@
       <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
+    <Fixed month="JULY" day="9" descriptionPropertiesKey="DAY_OF_OUR_LADY_OF_THE_ROSARY_OF_CHIQUINQUIRA" validFrom="2026">
+      <MovingCondition substitute="TUESDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="WEDNESDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="THURSDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="FRIDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
     <Fixed month="JULY" day="20" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
     <Fixed month="AUGUST" day="7" descriptionPropertiesKey="BOYACA"/>
     <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_MARY">
