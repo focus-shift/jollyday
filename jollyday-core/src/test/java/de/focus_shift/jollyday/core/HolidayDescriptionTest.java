@@ -43,12 +43,16 @@ class HolidayDescriptionTest {
 
     // Collect all localised descriptions
     final File[] descriptions = folder.listFiles((dir, name) -> name.startsWith("holiday_descriptions_") && name.endsWith(".properties"));
+    assertThat(descriptions).isNotNull();
     assertThat(descriptions).isNotEmpty();
 
+    final File[] descriptionFiles = descriptions;
     final Set<String> propertiesNames = new HashSet<>();
-    for (final File descriptionFile : descriptions) {
+    for (final File descriptionFile : descriptionFiles) {
       final Properties props = new Properties();
-      props.load(new FileInputStream(descriptionFile));
+      try (FileInputStream inputStream = new FileInputStream(descriptionFile)) {
+        props.load(inputStream);
+      }
       propertiesNames.addAll(props.stringPropertyNames());
     }
     return propertiesNames;
