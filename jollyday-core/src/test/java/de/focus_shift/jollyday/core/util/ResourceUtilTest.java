@@ -34,7 +34,7 @@ class ResourceUtilTest {
     Locale.setDefault(Locale.GERMANY);
 
     // Request English description for Germany
-    String description = ResourceUtil.getCountryDescription(Locale.ENGLISH, "de");
+    final String description = ResourceUtil.getCountryDescription(Locale.ENGLISH, "de");
 
     // Should return English "Germany", not German "Deutschland"
     assertThat(description)
@@ -51,7 +51,7 @@ class ResourceUtilTest {
     Locale.setDefault(Locale.GERMANY);
 
     // Request English holiday description for New Year
-    String description = ResourceUtil.getHolidayDescription(Locale.ENGLISH, "NEW_YEAR");
+    final String description = ResourceUtil.getHolidayDescription(Locale.ENGLISH, "NEW_YEAR");
 
     // Should return English "New Year's Day", not German "Neujahr"
     assertThat(description)
@@ -68,7 +68,7 @@ class ResourceUtilTest {
     Locale.setDefault(Locale.GERMANY);
 
     // Request German description for Germany
-    String description = ResourceUtil.getCountryDescription(Locale.GERMANY, "de");
+    final String description = ResourceUtil.getCountryDescription(Locale.GERMANY, "de");
 
     // Should return German "Deutschland"
     assertThat(description)
@@ -85,7 +85,7 @@ class ResourceUtilTest {
     Locale.setDefault(Locale.GERMANY);
 
     // Request German holiday description for New Year
-    String description = ResourceUtil.getHolidayDescription(Locale.GERMANY, "NEW_YEAR");
+    final String description = ResourceUtil.getHolidayDescription(Locale.GERMANY, "NEW_YEAR");
 
     // Should return German "Neujahr"
     assertThat(description)
@@ -102,11 +102,11 @@ class ResourceUtilTest {
     Locale.setDefault(Locale.FRANCE);
 
     // Request English description for France
-    String description = ResourceUtil.getCountryDescription(Locale.ENGLISH, "fr");
+    final String description = ResourceUtil.getCountryDescription(Locale.ENGLISH, "fr");
 
     // Should return English "France", not French "France" (same in this case, but let's use a different one)
     // Let's use "de" to get "Germany" vs "Allemagne"
-    String germanyDescription = ResourceUtil.getCountryDescription(Locale.ENGLISH, "de");
+    final String germanyDescription = ResourceUtil.getCountryDescription(Locale.ENGLISH, "de");
     assertThat(germanyDescription)
       .as("Country description for 'de' with Locale.ENGLISH should be in English even when default locale is French")
       .isEqualTo("Germany");
@@ -119,18 +119,18 @@ class ResourceUtilTest {
 
     Locale.setDefault(Locale.GERMANY);
 
-    String countryDescription = ResourceUtil.getCountryDescription(Locale.ENGLISH, "zz");
+    final String countryDescription = ResourceUtil.getCountryDescription(Locale.ENGLISH, "zz");
     assertThat(countryDescription)
       .isEqualTo(ResourceUtil.UNDEFINED);
 
-    String holidayDescription = ResourceUtil.getHolidayDescription(Locale.ENGLISH, "NONEXISTENT_HOLIDAY");
+    final String holidayDescription = ResourceUtil.getHolidayDescription(Locale.ENGLISH, "NONEXISTENT_HOLIDAY");
     assertThat(holidayDescription)
       .isEqualTo(ResourceUtil.UNDEFINED);
   }
 
   @Test
   void ensureUndefinedIsReturnedForNullCountryKey() {
-    String description = ResourceUtil.getCountryDescription(Locale.ENGLISH, null);
+    final String description = ResourceUtil.getCountryDescription(Locale.ENGLISH, null);
     assertThat(description)
       .isEqualTo(ResourceUtil.UNDEFINED);
   }
@@ -144,7 +144,7 @@ class ResourceUtilTest {
     Locale.setDefault(Locale.US);
 
     // Request English description - should still work
-    String description = ResourceUtil.getCountryDescription(Locale.ENGLISH, "de");
+    final String description = ResourceUtil.getCountryDescription(Locale.ENGLISH, "de");
     assertThat(description)
       .isEqualTo("Germany");
   }
@@ -154,15 +154,15 @@ class ResourceUtilTest {
     clearCaches();
 
     Locale.setDefault(Locale.GERMANY);
-    String description = ResourceUtil.getCountryDescription("de");
+    final String description = ResourceUtil.getCountryDescription("de");
     assertThat(description)
       .as("getCountryDescription(String) with German default locale should return German description")
       .isEqualTo("Deutschland");
 
     clearCaches();
     Locale.setDefault(Locale.ENGLISH);
-    description = ResourceUtil.getCountryDescription("de");
-    assertThat(description)
+    final String descriptionAfterReset = ResourceUtil.getCountryDescription("de");
+    assertThat(descriptionAfterReset)
       .as("getCountryDescription(String) with English default locale should return English description")
       .isEqualTo("Germany");
   }
@@ -172,22 +172,22 @@ class ResourceUtilTest {
     clearCaches();
 
     Locale.setDefault(Locale.GERMANY);
-    String description = ResourceUtil.getHolidayDescription("NEW_YEAR");
+    final String description = ResourceUtil.getHolidayDescription("NEW_YEAR");
     assertThat(description)
       .as("getHolidayDescription(String) with German default locale should return German description")
       .isEqualTo("Neujahr");
 
     clearCaches();
     Locale.setDefault(Locale.ENGLISH);
-    description = ResourceUtil.getHolidayDescription("NEW_YEAR");
-    assertThat(description)
+    final String descriptionAfterReset = ResourceUtil.getHolidayDescription("NEW_YEAR");
+    assertThat(descriptionAfterReset)
       .as("getHolidayDescription(String) with English default locale should return English description")
       .isEqualTo("New Year's Day");
   }
 
   @Test
   void getResourceReturnsOptionalPresentForExistingResource() {
-    var resource = ResourceUtil.getResource("jollyday.properties");
+    final var resource = ResourceUtil.getResource("jollyday.properties");
     assertThat(resource)
       .as("getResource should return a present Optional for existing resource")
       .isPresent();
@@ -197,7 +197,7 @@ class ResourceUtilTest {
 
   @Test
   void getResourceReturnsOptionalEmptyForNonexistentResource() {
-    var resource = ResourceUtil.getResource("this_file_does_not_exist_12345.properties");
+    final var resource = ResourceUtil.getResource("this_file_does_not_exist_12345.properties");
     assertThat(resource)
       .as("getResource should return an empty Optional for nonexistent resource")
       .isEmpty();
@@ -206,7 +206,7 @@ class ResourceUtilTest {
   @Test
   void getResourceWithSearchOnlyInJarReturnsEmptyForClasspathResource() {
     // jollyday.properties is on the classpath, not in a JAR
-    var resource = ResourceUtil.getResource("jollyday.properties", true);
+    final var resource = ResourceUtil.getResource("jollyday.properties", true);
     assertThat(resource)
       .as("getResource with searchOnlyInJar=true should return empty for classpath resource")
       .isEmpty();
@@ -214,7 +214,7 @@ class ResourceUtilTest {
 
   @Test
   void getResourceWithSearchOnlyInJarReturnsEmptyForNonexistentResource() {
-    var resource = ResourceUtil.getResource("nonexistent.properties", true);
+    final var resource = ResourceUtil.getResource("nonexistent.properties", true);
     assertThat(resource)
       .as("getResource with searchOnlyInJar=true should return empty for nonexistent resource")
       .isEmpty();
@@ -232,7 +232,7 @@ class ResourceUtilTest {
 
     // With French default locale, calling the single-arg overload should return French text
     Locale.setDefault(Locale.FRANCE);
-    String description = ResourceUtil.getCountryDescription("de");
+    final String description = ResourceUtil.getCountryDescription("de");
     assertThat(description)
       .as("getCountryDescription(String) with French default locale should return French description")
       .isEqualTo("Allemagne");
@@ -244,7 +244,7 @@ class ResourceUtilTest {
 
     // With French default locale, calling the single-arg overload should return French text
     Locale.setDefault(Locale.FRANCE);
-    String description = ResourceUtil.getHolidayDescription("NEW_YEAR");
+    final String description = ResourceUtil.getHolidayDescription("NEW_YEAR");
     assertThat(description)
       .as("getHolidayDescription(String) with French default locale should return French description")
       .isEqualTo("Jour de l'An");
@@ -257,16 +257,16 @@ class ResourceUtilTest {
    */
   private void clearCaches() {
     try {
-      Field countryCacheField = ResourceUtil.class.getDeclaredField("COUNTRY_DESCRIPTIONS_CACHE");
+      final Field countryCacheField = ResourceUtil.class.getDeclaredField("COUNTRY_DESCRIPTIONS_CACHE");
       countryCacheField.setAccessible(true);
       @SuppressWarnings("unchecked")
-      java.util.Map<Locale, ResourceBundle> countryCache = (java.util.Map<Locale, ResourceBundle>) countryCacheField.get(null);
+      final java.util.Map<Locale, ResourceBundle> countryCache = (java.util.Map<Locale, ResourceBundle>) countryCacheField.get(null);
       countryCache.clear();
 
-      Field holidayCacheField = ResourceUtil.class.getDeclaredField("HOLIDAY_DESCRIPTION_CACHE");
+      final Field holidayCacheField = ResourceUtil.class.getDeclaredField("HOLIDAY_DESCRIPTION_CACHE");
       holidayCacheField.setAccessible(true);
       @SuppressWarnings("unchecked")
-      java.util.Map<Locale, ResourceBundle> holidayCache = (java.util.Map<Locale, ResourceBundle>) holidayCacheField.get(null);
+      final java.util.Map<Locale, ResourceBundle> holidayCache = (java.util.Map<Locale, ResourceBundle>) holidayCacheField.get(null);
       holidayCache.clear();
     } catch (NoSuchFieldException | IllegalAccessException e) {
       throw new RuntimeException("Failed to clear ResourceUtil caches", e);
