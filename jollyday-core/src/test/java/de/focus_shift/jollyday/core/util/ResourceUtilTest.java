@@ -149,6 +149,107 @@ class ResourceUtilTest {
       .isEqualTo("Germany");
   }
 
+  @Test
+  void getCountryDescriptionWithDefaultLocaleReturnsDescriptionForDefaultLocale() {
+    clearCaches();
+
+    Locale.setDefault(Locale.GERMANY);
+    String description = ResourceUtil.getCountryDescription("de");
+    assertThat(description)
+      .as("getCountryDescription(String) with German default locale should return German description")
+      .isEqualTo("Deutschland");
+
+    clearCaches();
+    Locale.setDefault(Locale.ENGLISH);
+    description = ResourceUtil.getCountryDescription("de");
+    assertThat(description)
+      .as("getCountryDescription(String) with English default locale should return English description")
+      .isEqualTo("Germany");
+  }
+
+  @Test
+  void getHolidayDescriptionWithDefaultLocaleReturnsDescriptionForDefaultLocale() {
+    clearCaches();
+
+    Locale.setDefault(Locale.GERMANY);
+    String description = ResourceUtil.getHolidayDescription("NEW_YEAR");
+    assertThat(description)
+      .as("getHolidayDescription(String) with German default locale should return German description")
+      .isEqualTo("Neujahr");
+
+    clearCaches();
+    Locale.setDefault(Locale.ENGLISH);
+    description = ResourceUtil.getHolidayDescription("NEW_YEAR");
+    assertThat(description)
+      .as("getHolidayDescription(String) with English default locale should return English description")
+      .isEqualTo("New Year's Day");
+  }
+
+  @Test
+  void getResourceReturnsOptionalPresentForExistingResource() {
+    var resource = ResourceUtil.getResource("jollyday.properties");
+    assertThat(resource)
+      .as("getResource should return a present Optional for existing resource")
+      .isPresent();
+    assertThat(resource.get().getFile())
+      .endsWith("jollyday.properties");
+  }
+
+  @Test
+  void getResourceReturnsOptionalEmptyForNonexistentResource() {
+    var resource = ResourceUtil.getResource("this_file_does_not_exist_12345.properties");
+    assertThat(resource)
+      .as("getResource should return an empty Optional for nonexistent resource")
+      .isEmpty();
+  }
+
+  @Test
+  void getResourceWithSearchOnlyInJarReturnsEmptyForClasspathResource() {
+    // jollyday.properties is on the classpath, not in a JAR
+    var resource = ResourceUtil.getResource("jollyday.properties", true);
+    assertThat(resource)
+      .as("getResource with searchOnlyInJar=true should return empty for classpath resource")
+      .isEmpty();
+  }
+
+  @Test
+  void getResourceWithSearchOnlyInJarReturnsEmptyForNonexistentResource() {
+    var resource = ResourceUtil.getResource("nonexistent.properties", true);
+    assertThat(resource)
+      .as("getResource with searchOnlyInJar=true should return empty for nonexistent resource")
+      .isEmpty();
+  }
+
+  @Test
+  void undefinedConstantHasExpectedValue() {
+    assertThat(ResourceUtil.UNDEFINED)
+      .isEqualTo("undefined");
+  }
+
+  @Test
+  void getCountryDescriptionUsesDefaultLocaleWhenNoLocaleProvided() {
+    clearCaches();
+
+    // With French default locale, calling the single-arg overload should return French text
+    Locale.setDefault(Locale.FRANCE);
+    String description = ResourceUtil.getCountryDescription("de");
+    assertThat(description)
+      .as("getCountryDescription(String) with French default locale should return French description")
+      .isEqualTo("Allemagne");
+  }
+
+  @Test
+  void getHolidayDescriptionUsesDefaultLocaleWhenNoLocaleProvided() {
+    clearCaches();
+
+    // With French default locale, calling the single-arg overload should return French text
+    Locale.setDefault(Locale.FRANCE);
+    String description = ResourceUtil.getHolidayDescription("NEW_YEAR");
+    assertThat(description)
+      .as("getHolidayDescription(String) with French default locale should return French description")
+      .isEqualTo("Jour de l'An");
+  }
+
   /**
    * Clears the static caches in ResourceUtil using reflection.
    * This is necessary to ensure tests run with a clean slate,
