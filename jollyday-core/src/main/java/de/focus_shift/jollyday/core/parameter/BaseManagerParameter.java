@@ -20,13 +20,15 @@ public abstract class BaseManagerParameter implements ManagerParameter {
   @Override
   public void mergeProperties(@Nullable final Properties properties) {
     if (properties != null) {
-      final Properties mergedProperties = new Properties();
-      mergedProperties.putAll(properties);
-      mergedProperties.putAll(this.properties);
-      this.properties = mergedProperties;
+      final Properties currentProperties = new Properties();
+      currentProperties.putAll(this.properties);
+      this.properties.clear();
+      this.properties.putAll(properties);
+      this.properties.putAll(currentProperties);
     }
   }
 
+  @Override
   public @NonNull Optional<String> getProperty(@NonNull String key) {
     return Optional.ofNullable(properties.getProperty(key));
   }
@@ -49,7 +51,7 @@ public abstract class BaseManagerParameter implements ManagerParameter {
   public @NonNull String getParserImplClassName(@NonNull final String className) {
     final Optional<String> parserImplClass = getProperty(PARSER_IMPL_PREFIX + className);
     if (parserImplClass.isEmpty()) {
-      throw new IllegalStateException("Cannot create parsers. No parser implementation defined for class " + className + " in properties with key " + PARSER_IMPL_PREFIX + className);
+      throw new IllegalStateException("Cannot create parsers. No parser implementation defined for key: " + PARSER_IMPL_PREFIX + className);
     }
     return parserImplClass.get();
   }
