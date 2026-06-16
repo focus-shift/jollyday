@@ -20,6 +20,7 @@ import static java.time.Month.MAY;
 import static java.time.Month.JUNE;
 import static java.time.Month.JULY;
 import static java.time.Month.NOVEMBER;
+import static java.time.Year.of;
 
 class HolidayCOTest {
 
@@ -45,6 +46,15 @@ class HolidayCOTest {
       .and()
       .hasFixedHoliday("LABOUR_DAY", MAY, 1).and()
       .hasFixedHoliday("ST_PETER_PAUL", JUNE, 29)
+        .canBeMovedFrom(TUESDAY, NEXT, MONDAY)
+        .canBeMovedFrom(WEDNESDAY, NEXT, MONDAY)
+        .canBeMovedFrom(THURSDAY, NEXT, MONDAY)
+        .canBeMovedFrom(FRIDAY, NEXT, MONDAY)
+        .canBeMovedFrom(SATURDAY, NEXT, MONDAY)
+        .canBeMovedFrom(SUNDAY, NEXT, MONDAY)
+      .and()
+      .hasFixedHoliday("DAY_OF_OUR_LADY_OF_THE_ROSARY_OF_CHIQUINQUIRA", JULY, 9)
+        .validFrom(of(2026))
         .canBeMovedFrom(TUESDAY, NEXT, MONDAY)
         .canBeMovedFrom(WEDNESDAY, NEXT, MONDAY)
         .canBeMovedFrom(THURSDAY, NEXT, MONDAY)
