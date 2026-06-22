@@ -44,8 +44,9 @@ public class DefaultHolidayManager extends HolidayManager {
 
   /**
    * Caches all {@link HolidayParser} instances actually used by the HolidayManager
+   * Bounded to 100 entries to prevent memory leaks.
    */
-  private final Cache<HolidayParser> parserCache = new Cache<>();
+  private final Cache<HolidayParser> parserCache = new Cache<>(100);
 
   /**
    * Caches the instance based country specific holidays so that e.g.
@@ -56,7 +57,7 @@ public class DefaultHolidayManager extends HolidayManager {
    * If it was static all holidays over all holiday manager instances would be cached,
    * but only the german holidays are important for the german holiday manager, so only save them.
    */
-  private final Cache<Set<Holiday>> holidayCache = new Cache<>();
+  private final Cache<Set<Holiday>> holidayCache = new Cache<>(100);
 
   /**
    * HolidayCalendarConfiguration parsed on initialization.
