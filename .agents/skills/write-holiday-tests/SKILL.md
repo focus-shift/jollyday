@@ -169,4 +169,5 @@ void ensuresHistoricalChanges() {
 3. **Edge cases**: Test years where holidays fall on weekends
 4. **Clear naming**: Use descriptive test method names
 5. **Group related tests**: Use `.and()` to chain related assertions but not at the end of the chain before `.check()`
+6. **Year ranges for Islamic holiday calendars**: When a calendar includes at least one **Islamic holiday**, in test files, define `YEAR_FROM = 1900` and `YEAR_TO = 2173` constants, and use `.validBetween(Year.of(YEAR_FROM), Year.of(YEAR_TO))` for all holiday assertions since the entire calendar's valid range is constrained by these attributes.
 
