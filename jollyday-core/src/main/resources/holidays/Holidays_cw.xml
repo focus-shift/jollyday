@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="cw" description="Curaçao"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+
+    <Fixed month="APRIL" day="27" descriptionPropertiesKey="KINGS_DAY"/>
+
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+
+    <Fixed month="JULY" day="2" descriptionPropertiesKey="CURACAO_NATIONAL_FLAG_AND_ANTHEM_DAY"/>
+
+    <Fixed month="OCTOBER" day="10" descriptionPropertiesKey="CURACAO_DAY"/>
+
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="SECOND_DAY_OF_CHRISTMAS"/>
+    <Fixed month="DECEMBER" day="31" descriptionPropertiesKey="NEW_YEARS_EVE"/>
+
+    <ChristianHoliday type="SHROVE_MONDAY" descriptionPropertiesKey="CARNIVAL_MONDAY"/>
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER"/>
+    <ChristianHoliday type="EASTER_MONDAY"/>
+    <ChristianHoliday type="ASCENSION_DAY"/>
+    <ChristianHoliday type="WHIT_SUNDAY"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Curaçao</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:CW</Source>
+  </Sources>
+
+</Configuration>
