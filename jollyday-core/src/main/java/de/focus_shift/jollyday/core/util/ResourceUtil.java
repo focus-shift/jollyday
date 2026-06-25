@@ -14,8 +14,6 @@ import java.util.ResourceBundle;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Stream;
 
-import static java.util.ResourceBundle.getBundle;
-
 public final class ResourceUtil {
 
   private ResourceUtil() {
@@ -40,7 +38,7 @@ public final class ResourceUtil {
    */
   private static final String HOLIDAY_PROPERTY_PREFIX = "holiday.description";
   /**
-   * The prefix of the holiday descriptions file.
+   * The prefix of the holiday description file.
    */
   private static final String HOLIDAY_DESCRIPTIONS_FILE_PREFIX = "descriptions.holiday_descriptions";
   /**
@@ -141,11 +139,35 @@ public final class ResourceUtil {
   /**
    * Returns the eventually cached ResourceBundle for the descriptions.
    *
-   * @param locale Locale to retrieve the descriptions for.
+   * @param locale        Locale to retrieve the descriptions for.
+   * @param resourceCache the cache to use
+   * @param filePrefix    the resource bundle name prefix (without locale suffix)
    * @return ResourceBundle containing the descriptions for the locale.
    */
-  private static @NonNull ResourceBundle getResourceBundle(@NonNull final Locale locale, @NonNull final Map<Locale, ResourceBundle> resourceCache, @NonNull final String filePrefix) {
-    return resourceCache.computeIfAbsent(locale, givenLocale -> getBundle(filePrefix, givenLocale, ClassLoadingUtil.getClassloader()));
+  private static @NonNull ResourceBundle getResourceBundle(
+    @NonNull final Locale locale,
+    @NonNull final Map<Locale, ResourceBundle> resourceCache,
+    @NonNull final String filePrefix
+  ) {
+    return resourceCache.computeIfAbsent(locale, givenLocale -> {
+      // ResourceBundle.getBundle() has a well-known behavior: when the requested locale bundle
+      // is not found, it falls back to Locale.getDefault() before falling back to the base bundle.
+      // This means that on a system with German default locale, requesting Locale.ENGLISH will
+      // get German descriptions instead of English (base) ones, since there is no
+      // country_descriptions_en.properties but there IS country_descriptions_de.properties.
+      //
+      // To fix this, we temporarily set the thread's default locale to Locale.ROOT during
+      // the getBundle() call. Locale.ROOT forces ResourceBundle to skip the default-locale
+      // fallback and go directly to the base bundle (which contains English descriptions).
+      // This is thread-safe because we immediately restore the original default locale.
+      final Locale originalDefault = Locale.getDefault();
+      Locale.setDefault(Locale.ROOT);
+      try {
+        return ResourceBundle.getBundle(filePrefix, givenLocale, ClassLoadingUtil.getClassloader());
+      } finally {
+        Locale.setDefault(originalDefault);
+      }
+    });
   }
 
   /**
