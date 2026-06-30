@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="az" description="Azerbaijan"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <!-- New Year's Day (2 days) -->
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="JANUARY" day="2" descriptionPropertiesKey="NEW_YEAR"/>
+
+    <!-- Martyrs' Day - Black January 1990 -->
+    <Fixed month="JANUARY" day="20" descriptionPropertiesKey="MARTYRS_DAY"/>
+
+    <!-- Women's Day -->
+    <Fixed month="MARCH" day="8" descriptionPropertiesKey="INTERNATIONAL_WOMAN"/>
+
+    <!-- Nowruz (5 days) -->
+    <Fixed month="MARCH" day="20" descriptionPropertiesKey="NOWRUZ"/>
+    <Fixed month="MARCH" day="21" descriptionPropertiesKey="NOWRUZ"/>
+    <Fixed month="MARCH" day="22" descriptionPropertiesKey="NOWRUZ"/>
+    <Fixed month="MARCH" day="23" descriptionPropertiesKey="NOWRUZ"/>
+    <Fixed month="MARCH" day="24" descriptionPropertiesKey="NOWRUZ"/>
+
+    <!-- Victory Day over Fascism -->
+    <Fixed month="MAY" day="9" descriptionPropertiesKey="DAY_OF_VICTORY_OVER_FASCISM"/>
+
+    <!-- Independence Day -->
+    <Fixed month="MAY" day="28" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+
+    <!-- National Salvation Day -->
+    <Fixed month="JUNE" day="15" descriptionPropertiesKey="NATIONAL_SALVATION_DAY"/>
+
+    <!-- Azerbaijan Armed Forces Day -->
+    <Fixed month="JUNE" day="26" descriptionPropertiesKey="ARMED_FORCES_DAY"/>
+
+    <!-- Victory Day (2020 Nagorno-Karabakh war) -->
+    <Fixed month="NOVEMBER" day="8" descriptionPropertiesKey="VICTORY_DAY"/>
+
+    <!-- State Flag Day -->
+    <Fixed month="NOVEMBER" day="9" descriptionPropertiesKey="STATE_FLAG_DAY"/>
+
+    <!-- International Solidarity Day of Azerbaijanis -->
+    <Fixed month="DECEMBER" day="31" descriptionPropertiesKey="INTERNATIONAL_SOLIDARITY_DAY"/>
+
+    <!-- Eid al-Fitr (2 days) -->
+    <IslamicHoliday type="ID_AL_FITR"/>
+    <IslamicHoliday type="ID_AL_FITR_2"/>
+
+    <!-- Eid al-Adha (2 days) -->
+    <IslamicHoliday type="ID_UL_ADHA"/>
+    <IslamicHoliday type="ID_UL_ADHA_2"/>
+  </Holidays>
+</Configuration>
