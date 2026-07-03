@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="to" description="Tonga"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <!-- New Year's Day (not mondayised) -->
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+
+    <!-- Anzac Day (not mondayised) -->
+    <Fixed month="APRIL" day="25" descriptionPropertiesKey="ANZAC"/>
+
+    <!-- Emancipation Day - mondayised (Tue/Wed to preceding Monday, Thu-Sun to following Monday) -->
+    <Fixed month="JUNE" day="4" descriptionPropertiesKey="EMANCIPATION_DAY">
+      <MovingCondition substitute="TUESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="WEDNESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="THURSDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="FRIDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- King Tupou VI Day - Birthday of the reigning Sovereign (only shifted when falling on Sunday) -->
+    <Fixed month="JULY" day="4" descriptionPropertiesKey="KING_TUPOU_VI_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- Crown Prince's Birthday - Birthday of the Heir to the Crown (only shifted when falling on Sunday) -->
+    <Fixed month="SEPTEMBER" day="17" descriptionPropertiesKey="CROWN_PRINCE_BIRTHDAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- Constitution Day - mondayised (Tue/Wed to preceding Monday, Thu-Sun to following Monday) -->
+    <Fixed month="NOVEMBER" day="4" descriptionPropertiesKey="CONSTITUTION_DAY">
+      <MovingCondition substitute="TUESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="WEDNESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="THURSDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="FRIDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- King Tupou I Day - Anniversary of the Coronation of King George Tupou I - mondayised -->
+    <Fixed month="DECEMBER" day="4" descriptionPropertiesKey="KING_TUPOU_I_DAY">
+      <MovingCondition substitute="TUESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="WEDNESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="THURSDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="FRIDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- Christmas Day (not mondayised) -->
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+
+    <!-- Boxing Day (not mondayised) -->
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY"/>
+
+    <!-- Good Friday (not mondayised) -->
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+
+    <!-- Easter Monday (not mondayised) -->
+    <ChristianHoliday type="EASTER_MONDAY"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Tonga</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:TO</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:TO</Source>
+  </Sources>
+</Configuration>
