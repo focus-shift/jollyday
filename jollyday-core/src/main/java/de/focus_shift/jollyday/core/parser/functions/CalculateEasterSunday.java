@@ -19,9 +19,9 @@ public class CalculateEasterSunday implements Function<Chronology, LocalDate> {
 
   @Override
   public @NonNull LocalDate apply(Chronology chronology) {
-    if (chronology == JulianChronology.INSTANCE) {
+    if (JulianChronology.INSTANCE.equals(chronology)) {
       return new CalculateJulianEasterSunday().apply(year);
-    } else if (chronology == IsoChronology.INSTANCE) {
+    } else if (IsoChronology.INSTANCE.equals(chronology)) {
       return new CalculateGregorianEasterSunday().apply(year);
     } else if (year.isAfter(Year.of(1583))) {
       return new CalculateGregorianEasterSunday().apply(year);
