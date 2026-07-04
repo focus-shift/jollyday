@@ -1214,7 +1214,7 @@
     <path d="M1998.9 556.6l0-0.2 0.1 0 0 0.1-0.1 0.1z" name="Tuvalu">
     </path>
   </g>
-  <g class="country" data-iso="VC">
+  <g class="country active" data-iso="VC">
     <title>Saint Vincent and the Grenadines</title>
     <path d="M642.2 417.4l-0.1 0.1-0.5-0.3 0-0.4 0.2-0.3 0.2-0.5 0.4 0 0.1 0.4-0.1 0.8-0.2 0.2z" name="Saint Vincent and the Grenadines">
     </path>
