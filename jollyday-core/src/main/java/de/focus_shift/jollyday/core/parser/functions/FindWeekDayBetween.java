@@ -24,7 +24,7 @@ public class FindWeekDayBetween implements Function<FixedWeekdayBetweenFixedHoli
   public @Nullable LocalDate apply(@NonNull final FixedWeekdayBetweenFixedHolidayConfiguration fwm) {
     return Stream.iterate(from, date -> date.plusDays(1))
       .limit(DAYS.between(from, to) + 1)
-      .filter(date -> date.getDayOfWeek() == fwm.weekday())
+      .filter(date -> date.getDayOfWeek().equals(fwm.weekday()))
       .findFirst().orElse(null);
   }
 }

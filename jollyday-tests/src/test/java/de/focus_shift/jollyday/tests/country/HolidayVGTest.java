@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Set;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.fail;
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
 class HolidayVGTest extends AbstractCountryTestBase {
 
@@ -31,7 +31,7 @@ class HolidayVGTest extends AbstractCountryTestBase {
 
   @Test
   void testManagerVGInterval() {
-    try {
+    assertDoesNotThrow(() -> {
       final HolidayManager instance = HolidayManager.getInstance(ManagerParameters.create(HolidayCalendar.BRITISH_VIRGIN_ISLANDS, null));
       final LocalDate startDateInclusive = LocalDate.of(2015, Month.OCTOBER, 1);
       final LocalDate endDateInclusive = LocalDate.of(2016, Month.JANUARY, 31);
@@ -43,8 +43,6 @@ class HolidayVGTest extends AbstractCountryTestBase {
       for (LocalDate d : expected) {
         assertThat(CalendarUtil.contains(holidays, d)).isTrue();
       }
-    } catch (Exception e) {
-      fail("Unexpected error occurred: " + e.getClass().getName() + " - " + e.getMessage());
-    }
+    });
   }
 }

@@ -42,7 +42,7 @@ class FixedToLocalDateTest {
 
       @Override
       public @NonNull MonthDay day() {
-        return MonthDay.of(2, 28);
+        return MonthDay.of(FEBRUARY, 28);
       }
 
       @Override
