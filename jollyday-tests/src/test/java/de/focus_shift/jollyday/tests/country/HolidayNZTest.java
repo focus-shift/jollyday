@@ -8,6 +8,7 @@ import net.jqwik.time.api.constraints.YearRange;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
+import java.time.Month;
 import java.time.Year;
 import java.util.Set;
 
@@ -30,7 +31,7 @@ class HolidayNZTest extends AbstractCountryTestBase {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(NEW_ZEALAND));
 
     // Monday closest to 17 January
-    final LocalDate expected = LocalDate.of(2011, 1, 17);
+    final LocalDate expected = LocalDate.of(2011, Month.JANUARY, 17);
     final Set<Holiday> holidays = holidayManager.getHolidays(Year.of(2011), "stl");
 
     boolean found = holidays.stream()
@@ -44,7 +45,7 @@ class HolidayNZTest extends AbstractCountryTestBase {
     final HolidayManager holidayManager = HolidayManager.getInstance(create(NEW_ZEALAND));
 
     // Easter Tuesday
-    final LocalDate expected = LocalDate.of(2012, 4, 10);
+    final LocalDate expected = LocalDate.of(2012, Month.APRIL, 10);
     final Set<Holiday> holidays = holidayManager.getHolidays(Year.of(2012), "stl");
 
     boolean found = holidays.stream()

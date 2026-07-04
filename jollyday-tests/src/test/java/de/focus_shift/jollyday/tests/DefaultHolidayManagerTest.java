@@ -16,6 +16,7 @@ import org.junit.jupiter.params.provider.EnumSource;
 import org.junit.jupiter.params.provider.MethodSource;
 
 import java.time.LocalDate;
+import java.time.Month;
 import java.time.Year;
 import java.util.Calendar;
 import java.util.HashSet;
@@ -115,15 +116,15 @@ class DefaultHolidayManagerTest {
   @Test
   void ensureIsHolidayMethodReturnsTrueFalseForLocalDate() {
     final HolidayManager sut = HolidayManager.getInstance(create("test"));
-    assertThat(sut.isHoliday(LocalDate.of(2010, 2, 16))).isFalse();
-    assertThat(sut.isHoliday(LocalDate.of(2010, 2, 17))).isTrue();
+    assertThat(sut.isHoliday(LocalDate.of(2010, Month.FEBRUARY, 16))).isFalse();
+    assertThat(sut.isHoliday(LocalDate.of(2010, Month.FEBRUARY, 17))).isTrue();
   }
 
   @Test
   void ensureIsHolidayMethodReturnsTrueFalseForLocalDateWithHolidayType() {
     final HolidayManager sut = HolidayManager.getInstance(create("test"));
-    assertThat(sut.isHoliday(LocalDate.of(2010, 1, 4), PUBLIC_HOLIDAY)).isFalse();
-    assertThat(sut.isHoliday(LocalDate.of(2010, 1, 4), OBSERVANCE)).isTrue();
+    assertThat(sut.isHoliday(LocalDate.of(2010, Month.JANUARY, 4), PUBLIC_HOLIDAY)).isFalse();
+    assertThat(sut.isHoliday(LocalDate.of(2010, Month.JANUARY, 4), OBSERVANCE)).isTrue();
   }
 
   @Test
@@ -177,7 +178,7 @@ class DefaultHolidayManagerTest {
     final HolidayManager sut = HolidayManager.getInstance(create("test"));
     final Set<Holiday> holidays = sut.getHolidays(Year.of(2010), OBSERVANCE);
     assertThat(holidays)
-      .containsOnly(new Holiday(LocalDate.of(2010, 1, 4), "", OBSERVANCE));
+      .containsOnly(new Holiday(LocalDate.of(2010, Month.JANUARY, 4), "", OBSERVANCE));
   }
 
   private static Stream<Arguments> firstLevel() {
@@ -215,23 +216,23 @@ class DefaultHolidayManagerTest {
   @Test
   void ensureToTestIntervalToRetrieveHolidays() {
     final HolidayManager sut = HolidayManager.getInstance(create("test"));
-    final Set<Holiday> holidays = sut.getHolidays(LocalDate.of(2010, 1, 1), LocalDate.of(2010, 1, 31), "level1_2");
+    final Set<Holiday> holidays = sut.getHolidays(LocalDate.of(2010, Month.JANUARY, 1), LocalDate.of(2010, Month.JANUARY, 31), "level1_2");
     assertThat(holidays).isNotNull();
-    assertDates(Set.of(LocalDate.of(2010, 1, 4), LocalDate.of(2010, 1, 1), LocalDate.of(2010, 1, 18)), holidays);
+    assertDates(Set.of(LocalDate.of(2010, Month.JANUARY, 4), LocalDate.of(2010, Month.JANUARY, 1), LocalDate.of(2010, Month.JANUARY, 18)), holidays);
   }
 
   @Test
   void ensureToTestIntervalToRetrieveHolidaysByType() {
     final HolidayManager sut = HolidayManager.getInstance(create("test"));
-    final Set<Holiday> holidays = sut.getHolidays(LocalDate.of(2010, 1, 1), LocalDate.of(2010, 1, 31), OBSERVANCE);
+    final Set<Holiday> holidays = sut.getHolidays(LocalDate.of(2010, Month.JANUARY, 1), LocalDate.of(2010, Month.JANUARY, 31), OBSERVANCE);
     assertThat(holidays)
-      .containsOnly(new Holiday(LocalDate.of(2010, 1, 4), "", OBSERVANCE));
+      .containsOnly(new Holiday(LocalDate.of(2010, Month.JANUARY, 4), "", OBSERVANCE));
   }
 
   @Test
   void ensureToTestIntervalToRetrieveEmptyHolidaysIfStartYearIsGreaterThenEndYear() {
-    final LocalDate startDate = LocalDate.of(2023, 1, 1);
-    final LocalDate endDate = LocalDate.of(2022, 1, 1);
+    final LocalDate startDate = LocalDate.of(2023, Month.JANUARY, 1);
+    final LocalDate endDate = LocalDate.of(2022, Month.JANUARY, 1);
 
     final Set<Holiday> holidays = HolidayManager.getInstance(create("test")).getHolidays(startDate, endDate);
     assertThat(holidays).isEmpty();

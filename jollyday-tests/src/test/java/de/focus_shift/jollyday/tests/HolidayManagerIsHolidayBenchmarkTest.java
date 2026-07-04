@@ -18,6 +18,7 @@ import org.openjdk.jmh.runner.options.Options;
 import org.openjdk.jmh.runner.options.OptionsBuilder;
 
 import java.time.LocalDate;
+import java.time.Month;
 import java.util.Collection;
 import java.util.concurrent.TimeUnit;
 
@@ -39,7 +40,7 @@ public class HolidayManagerIsHolidayBenchmarkTest extends Benchmarks {
 
   @State(Scope.Thread)
   public static class LocalDateState {
-    public final LocalDate localDate = LocalDate.of(2010, 1, 1);
+    public final LocalDate localDate = LocalDate.of(2010, Month.JANUARY, 1);
   }
 
   @Benchmark

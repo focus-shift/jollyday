@@ -19,6 +19,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;
+import java.time.Month;
 import java.time.Year;
 import java.util.List;
 import java.util.Optional;
@@ -168,7 +169,7 @@ class IslamicHolidayParserTest {
       final List<Holiday> calculatedHoliday = sut.parse(Year.of(2022), holidays);
       assertThat(calculatedHoliday).isNotEmpty();
       assertThat(calculatedHoliday.get(0).getPropertiesKey()).isEqualTo("JUMUATUL_WIDA");
-      assertThat(calculatedHoliday.get(0).getDate()).isEqualTo(LocalDate.of(2022, 4, 29));
+      assertThat(calculatedHoliday.get(0).getDate()).isEqualTo(LocalDate.of(2022, Month.APRIL, 29));
       assertThat(calculatedHoliday.get(0).getDate().getDayOfWeek()).isEqualTo(FRIDAY);
     }
 

@@ -10,6 +10,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import java.time.LocalDate;
+import java.time.Month;
 import java.time.Year;
 import java.util.List;
 import java.util.Set;
@@ -32,14 +33,14 @@ class HolidayHKTest extends AbstractCountryTestBase {
   void testManagerHKInterval() {
     try {
       final HolidayManager instance = HolidayManager.getInstance(ManagerParameters.create(HolidayCalendar.HONG_KONG, null));
-      final LocalDate startDateInclusive = LocalDate.of(2022, 10, 1);
-      final LocalDate endDateInclusive = LocalDate.of(2023, 1, 31);
+      final LocalDate startDateInclusive = LocalDate.of(2022, Month.OCTOBER, 1);
+      final LocalDate endDateInclusive = LocalDate.of(2023, Month.JANUARY, 31);
       final Set<Holiday> holidays = instance.getHolidays(startDateInclusive, endDateInclusive);
-      final List<LocalDate> expected = List.of(LocalDate.of(2022, 10, 1),
-        LocalDate.of(2022, 10, 4), LocalDate.of(2022, 12, 26),
-        LocalDate.of(2022, 12, 27), LocalDate.of(2023, 1, 2),
-        LocalDate.of(2023, 1, 23), LocalDate.of(2023, 1, 24),
-        LocalDate.of(2023, 1, 25));
+      final List<LocalDate> expected = List.of(LocalDate.of(2022, Month.OCTOBER, 1),
+        LocalDate.of(2022, Month.OCTOBER, 4), LocalDate.of(2022, Month.DECEMBER, 26),
+        LocalDate.of(2022, Month.DECEMBER, 27), LocalDate.of(2023, Month.JANUARY, 2),
+        LocalDate.of(2023, Month.JANUARY, 23), LocalDate.of(2023, Month.JANUARY, 24),
+        LocalDate.of(2023, Month.JANUARY, 25));
       assertThat(holidays).hasSameSizeAs(expected);
       for (LocalDate d : expected) {
         assertThat(CalendarUtil.contains(holidays, d)).isTrue();

@@ -11,6 +11,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;
+import java.time.Month;
 import java.time.Year;
 import java.util.Optional;
 
@@ -25,16 +26,16 @@ class FindWeekDayBetweenTest {
     "FRIDAY,2025-01-10",
   })
   void ensureToFindFirstWeekdayBetweenTwoFixedDates(final DayOfWeek dayOfWeek, final LocalDate expectedDate) {
-    final LocalDate firstMonday = LocalDate.of(2025, 1, 6);
-    final LocalDate secondFriday = LocalDate.of(2025, 1, 17);
+    final LocalDate firstMonday = LocalDate.of(2025, Month.JANUARY, 6);
+    final LocalDate secondFriday = LocalDate.of(2025, Month.JANUARY, 17);
     final LocalDate actualDate = new FindWeekDayBetween(firstMonday, secondFriday).apply(getFixedWeekdayBetweenFixed(dayOfWeek));
     assertThat(actualDate).isEqualTo(expectedDate);
   }
 
   @Test
   void ensureToReturnNullIfNoWeekdayWasFound() {
-    final LocalDate monday = LocalDate.of(2025, 1, 6);
-    final LocalDate tuesday = LocalDate.of(2025, 1, 7);
+    final LocalDate monday = LocalDate.of(2025, Month.JANUARY, 6);
+    final LocalDate tuesday = LocalDate.of(2025, Month.JANUARY, 7);
     final LocalDate actualDate = new FindWeekDayBetween(monday, tuesday).apply(getFixedWeekdayBetweenFixed(DayOfWeek.WEDNESDAY));
     assertThat(actualDate).isNull();
   }

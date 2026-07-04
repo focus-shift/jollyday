@@ -8,6 +8,7 @@ import net.jqwik.time.api.constraints.YearRange;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
+import java.time.Month;
 import java.time.Year;
 import java.util.Set;
 
@@ -46,8 +47,8 @@ class HolidayAUTest extends AbstractCountryTestBase {
     final Set<Holiday> nswHolidays2026 = manager.getHolidays(Year.of(2026), "nsw");
     assertThat(nswHolidays2026)
       .extracting(Holiday::getDate)
-      .contains(LocalDate.of(2026, 4, 25))  // Anzac Day itself
-      .contains(LocalDate.of(2026, 4, 27)); // Monday substitute
+      .contains(LocalDate.of(2026, Month.APRIL, 25))  // Anzac Day itself
+      .contains(LocalDate.of(2026, Month.APRIL, 27)); // Monday substitute
   }
 
   @Test
@@ -60,8 +61,8 @@ class HolidayAUTest extends AbstractCountryTestBase {
     final Set<Holiday> nswHolidays2021 = manager.getHolidays(Year.of(2021), "nsw");
     assertThat(nswHolidays2021)
       .extracting(Holiday::getDate)
-      .contains(LocalDate.of(2021, 4, 25))     // Anzac Day itself (Sunday)
-      .doesNotContain(LocalDate.of(2021, 4, 26)); // No Monday substitute before 2026
+      .contains(LocalDate.of(2021, Month.APRIL, 25))     // Anzac Day itself (Sunday)
+      .doesNotContain(LocalDate.of(2021, Month.APRIL, 26)); // No Monday substitute before 2026
   }
 
   @Test
@@ -73,15 +74,15 @@ class HolidayAUTest extends AbstractCountryTestBase {
     final Set<Holiday> saHolidays2026 = manager.getHolidays(Year.of(2026), "sa");
     assertThat(saHolidays2026)
       .extracting(Holiday::getDate)
-      .contains(LocalDate.of(2026, 4, 25))     // Anzac Day itself
-      .doesNotContain(LocalDate.of(2026, 4, 27)); // No Monday substitute
+      .contains(LocalDate.of(2026, Month.APRIL, 25))     // Anzac Day itself
+      .doesNotContain(LocalDate.of(2026, Month.APRIL, 27)); // No Monday substitute
 
     // 2027: Anzac Day on Sunday
     final Set<Holiday> saHolidays2027 = manager.getHolidays(Year.of(2027), "sa");
     assertThat(saHolidays2027)
       .extracting(Holiday::getDate)
-      .contains(LocalDate.of(2027, 4, 25))     // Anzac Day itself
-      .doesNotContain(LocalDate.of(2027, 4, 26)); // No Monday substitute
+      .contains(LocalDate.of(2027, Month.APRIL, 25))     // Anzac Day itself
+      .doesNotContain(LocalDate.of(2027, Month.APRIL, 26)); // No Monday substitute
   }
 
   @Test
@@ -92,8 +93,8 @@ class HolidayAUTest extends AbstractCountryTestBase {
     final Set<Holiday> nswHolidays2027 = manager.getHolidays(Year.of(2027), "nsw");
     assertThat(nswHolidays2027)
       .extracting(Holiday::getDate)
-      .contains(LocalDate.of(2027, 4, 25))  // Anzac Day itself
-      .contains(LocalDate.of(2027, 4, 26)); // Monday substitute
+      .contains(LocalDate.of(2027, Month.APRIL, 25))  // Anzac Day itself
+      .contains(LocalDate.of(2027, Month.APRIL, 26)); // Monday substitute
   }
 
   @Test
@@ -104,7 +105,7 @@ class HolidayAUTest extends AbstractCountryTestBase {
     final Set<Holiday> actHolidays2026 = manager.getHolidays(Year.of(2026), "act");
     assertThat(actHolidays2026)
       .extracting(Holiday::getDate)
-      .contains(LocalDate.of(2026, 4, 25))  // Anzac Day itself
-      .contains(LocalDate.of(2026, 4, 27)); // Monday substitute
+      .contains(LocalDate.of(2026, Month.APRIL, 25))  // Anzac Day itself
+      .contains(LocalDate.of(2026, Month.APRIL, 27)); // Monday substitute
   }
 }
