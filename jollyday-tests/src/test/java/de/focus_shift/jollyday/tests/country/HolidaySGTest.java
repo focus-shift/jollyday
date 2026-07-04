@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Set;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.fail;
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
 class HolidaySGTest extends AbstractCountryTestBase {
 
@@ -31,7 +31,7 @@ class HolidaySGTest extends AbstractCountryTestBase {
 
   @Test
   void testManagerSGInterval() {
-    try {
+    assertDoesNotThrow(() -> {
       final HolidayManager instance = HolidayManager.getInstance(ManagerParameters.create(HolidayCalendar.SINGAPORE, null));
       final LocalDate startDateInclusive = LocalDate.of(2022, Month.OCTOBER, 1);
       final LocalDate endDateInclusive = LocalDate.of(2023, Month.JANUARY, 31);
@@ -43,8 +43,6 @@ class HolidaySGTest extends AbstractCountryTestBase {
       for (LocalDate d : expected) {
         assertThat(CalendarUtil.contains(holidays, d)).isTrue();
       }
-    } catch (Exception e) {
-      fail("Unexpected error occurred: " + e.getClass().getName() + " - " + e.getMessage());
-    }
+    });
   }
 }
