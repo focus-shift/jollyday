@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="fm" description="Micronesia, Federated States Of"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="MARCH" day="31" descriptionPropertiesKey="CULTURE_DAY"/>
+    <Fixed month="MAY" day="10" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+    <Fixed month="OCTOBER" day="24" descriptionPropertiesKey="UNITED_NATIONS_DAY"/>
+    <Fixed month="NOVEMBER" day="3" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="VETERANS_DAY"/>
+    <Fixed month="NOVEMBER" day="23" descriptionPropertiesKey="PRESIDENTS_DAY"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_the_Federated_States_of_Micronesia</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:FM</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:FM</Source>
+  </Sources>
+
+  <SubConfigurations hierarchy="trk" description="Chuuk">
+    <Holidays>
+      <Fixed month="OCTOBER" day="1" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="SATOWAN_DAY"/>
+      <FixedWeekday which="SECOND" weekday="FRIDAY" month="OCTOBER" descriptionPropertiesKey="TEACHERS_APPRECIATION_DAY"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+    </Holidays>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ksa" description="Kosrae">
+    <Holidays>
+      <Fixed month="JANUARY" day="11" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="AUGUST" day="21" descriptionPropertiesKey="GOSPEL_DAY"/>
+      <Fixed month="SEPTEMBER" day="8" descriptionPropertiesKey="LIBERATION_DAY"/>
+      <FixedWeekday which="FOURTH" weekday="THURSDAY" month="NOVEMBER" descriptionPropertiesKey="THANKSGIVING"/>
+    </Holidays>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="pni" description="Pohnpei">
+    <Holidays>
+      <Fixed month="SEPTEMBER" day="11" descriptionPropertiesKey="LIBERATION_DAY"/>
+      <Fixed month="NOVEMBER" day="8" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+    </Holidays>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="yap" description="Yap">
+    <Holidays>
+      <Fixed month="MARCH" day="1" descriptionPropertiesKey="YAP_DAY"/>
+      <Fixed month="MARCH" day="2" descriptionPropertiesKey="YAP_DAY"/>
+      <Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+</Configuration>
