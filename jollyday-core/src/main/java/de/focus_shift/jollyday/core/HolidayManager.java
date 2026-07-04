@@ -180,7 +180,11 @@ public abstract class HolidayManager {
    * @param calendar {@link java.util.Calendar} to check.
    * @param args     Hierarchy to request the holidays for. i.e. args = {'ny'} -&gt; New York holidays
    * @return if the date is a holiday
+   * @deprecated since 2.13.0, for removal. The legacy {@link java.util.Calendar} API has been
+   * superseded by the modern, immutable and thread-safe {@code java.time} (JSR-310) API. Use
+   * {@link #isHoliday(LocalDate, String...)} instead.
    */
+  @Deprecated(since = "2.13.0", forRemoval = true)
   public boolean isHoliday(@NonNull final Calendar calendar, @NonNull final String... args) {
     return isHoliday(calendar, null, args);
   }
@@ -194,7 +198,11 @@ public abstract class HolidayManager {
    * @param holidayType a {@link HolidayType} to be considered
    * @param args        Hierarchy to request the holidays for. i.e. args = {'ny'} -&gt; New York holidays
    * @return if the date is a holiday
+   * @deprecated since 2.13.0, for removal. The legacy {@link java.util.Calendar} API has been
+   * superseded by the modern, immutable and thread-safe {@code java.time} (JSR-310) API. Use
+   * {@link #isHoliday(LocalDate, HolidayType, String...)} instead.
    */
+  @Deprecated(since = "2.13.0", forRemoval = true)
   public boolean isHoliday(@NonNull final Calendar calendar, @Nullable final HolidayType holidayType, @NonNull final String... args) {
     return isHoliday(new CalendarToLocalDate().apply(calendar), holidayType, args);
   }
