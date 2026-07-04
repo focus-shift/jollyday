@@ -8,6 +8,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import java.time.LocalDate;
+import java.time.Month;
 import java.time.Year;
 import java.util.Set;
 
@@ -68,8 +69,8 @@ class HolidayGBTest extends AbstractCountryTestBase {
   }
 
   private void doChristmasContainmentTest(int year, int dayOfChristmas, int dayOfBoxingday) {
-    final LocalDate christmas = LocalDate.of(year, 12, dayOfChristmas);
-    final LocalDate boxingday = LocalDate.of(year, 12, dayOfBoxingday);
+    final LocalDate christmas = LocalDate.of(year, Month.DECEMBER, dayOfChristmas);
+    final LocalDate boxingday = LocalDate.of(year, Month.DECEMBER, dayOfBoxingday);
     final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(UNITED_KINGDOM));
     final Set<Holiday> holidays = holidayManager.getHolidays(Year.of(year));
     assertThat(contains(christmas, holidays)).isTrue();

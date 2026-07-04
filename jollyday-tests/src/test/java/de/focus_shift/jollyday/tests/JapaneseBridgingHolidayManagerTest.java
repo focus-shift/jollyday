@@ -8,6 +8,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
+import java.time.Month;
 import java.time.Year;
 import java.util.Set;
 
@@ -42,12 +43,12 @@ class JapaneseBridgingHolidayManagerTest {
       .isNotNull()
       .hasSize(6)
       .containsOnly(
-        new Holiday(LocalDate.of(2000, 1, 1), "NEW_YEAR", PUBLIC_HOLIDAY),
-        new Holiday(LocalDate.of(2000, 1, 2), "BRIDGING_HOLIDAY", PUBLIC_HOLIDAY),
-        new Holiday(LocalDate.of(2000, 1, 3), "NEW_YEAR", PUBLIC_HOLIDAY),
-        new Holiday(LocalDate.of(2000, 1, 4), "NEW_YEAR", PUBLIC_HOLIDAY),
-        new Holiday(LocalDate.of(2000, 1, 5), "NEW_YEAR", PUBLIC_HOLIDAY),
-        new Holiday(LocalDate.of(2000, 1, 8), "NEW_YEAR", PUBLIC_HOLIDAY)
+        new Holiday(LocalDate.of(2000, Month.JANUARY, 1), "NEW_YEAR", PUBLIC_HOLIDAY),
+        new Holiday(LocalDate.of(2000, Month.JANUARY, 2), "BRIDGING_HOLIDAY", PUBLIC_HOLIDAY),
+        new Holiday(LocalDate.of(2000, Month.JANUARY, 3), "NEW_YEAR", PUBLIC_HOLIDAY),
+        new Holiday(LocalDate.of(2000, Month.JANUARY, 4), "NEW_YEAR", PUBLIC_HOLIDAY),
+        new Holiday(LocalDate.of(2000, Month.JANUARY, 5), "NEW_YEAR", PUBLIC_HOLIDAY),
+        new Holiday(LocalDate.of(2000, Month.JANUARY, 8), "NEW_YEAR", PUBLIC_HOLIDAY)
       );
   }
 }

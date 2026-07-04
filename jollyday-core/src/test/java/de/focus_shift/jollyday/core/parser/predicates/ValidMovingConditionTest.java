@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;
+import java.time.Month;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -31,7 +32,7 @@ class ValidMovingConditionTest {
       }
     };
 
-    final boolean isValid = new ValidMovingCondition(LocalDate.of(2024, 2, 26)).test(movingCondition);
+    final boolean isValid = new ValidMovingCondition(LocalDate.of(2024, Month.FEBRUARY, 26)).test(movingCondition);
     assertThat(isValid).isTrue();
   }
 
@@ -55,7 +56,7 @@ class ValidMovingConditionTest {
       }
     };
 
-    final boolean isValid = new ValidMovingCondition(LocalDate.of(2024, 2, 26)).test(movingCondition);
+    final boolean isValid = new ValidMovingCondition(LocalDate.of(2024, Month.FEBRUARY, 26)).test(movingCondition);
     assertThat(isValid).isFalse();
   }
 }

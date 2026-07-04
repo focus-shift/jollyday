@@ -7,6 +7,7 @@ import org.jspecify.annotations.NonNull;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
+import java.time.Month;
 
 import static java.time.Month.APRIL;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -28,7 +29,7 @@ class CreateHolidayTest {
       }
     };
 
-    final Holiday holiday = new CreateHoliday(LocalDate.of(2020, 4, 1)).apply(described);
+    final Holiday holiday = new CreateHoliday(LocalDate.of(2020, Month.APRIL, 1)).apply(described);
 
     assertThat(holiday.getDate()).hasYear(2020).hasMonth(APRIL).hasDayOfMonth(1);
     assertThat(holiday.getType()).isEqualTo(HolidayType.PUBLIC_HOLIDAY);

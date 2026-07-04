@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;
+import java.time.Month;
 import java.time.temporal.TemporalAdjusters;
 import java.util.List;
 import java.util.Optional;
@@ -42,7 +43,7 @@ class MoveDateRelativeTest {
 
     final Movable movable = () -> List.of(movingCondition);
 
-    final Optional<LocalDate> maybeMovedDate = new MoveDateRelative(LocalDate.of(2024, 2, 28)).apply(movable);
+    final Optional<LocalDate> maybeMovedDate = new MoveDateRelative(LocalDate.of(2024, Month.FEBRUARY, 28)).apply(movable);
     assertThat(maybeMovedDate).hasValue(LocalDate.of(2024, MARCH, 3));
   }
 
@@ -68,7 +69,7 @@ class MoveDateRelativeTest {
 
     final Movable movable = () -> List.of(movingCondition);
 
-    final Optional<LocalDate> maybeMovedDate = new MoveDateRelative(LocalDate.of(2024, 2, 28)).apply(movable);
+    final Optional<LocalDate> maybeMovedDate = new MoveDateRelative(LocalDate.of(2024, Month.FEBRUARY, 28)).apply(movable);
     assertThat(maybeMovedDate).hasValue(LocalDate.of(2024, FEBRUARY, 25));
   }
 
@@ -94,7 +95,7 @@ class MoveDateRelativeTest {
 
     final Movable movable = () -> List.of(movingCondition);
 
-    final Optional<LocalDate> maybeMovedDate = new MoveDateRelative(LocalDate.of(2024, 2, 28)).apply(movable);
+    final Optional<LocalDate> maybeMovedDate = new MoveDateRelative(LocalDate.of(2024, Month.FEBRUARY, 28)).apply(movable);
     assertThat(maybeMovedDate).isEmpty();
   }
 
