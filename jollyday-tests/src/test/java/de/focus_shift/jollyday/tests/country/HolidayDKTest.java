@@ -15,8 +15,8 @@ class HolidayDKTest {
   void ensuresHolidays() {
     assertFor(DENMARK)
       .hasFixedHoliday("NEW_YEAR", JANUARY, 1).and()
-      .hasFixedHoliday("CHRISTMAS", DECEMBER, 25).and()
-      .hasFixedHoliday("STEPHENS", DECEMBER, 26).and()
+      .hasFixedHoliday("FIRST_CHRISTMAS_DAY", DECEMBER, 25).and()
+      .hasFixedHoliday("SECOND_CHRISTMAS_DAY", DECEMBER, 26).and()
       .hasChristianHoliday("EASTER").and()
       .hasChristianHoliday("MAUNDY_THURSDAY").and()
       .hasChristianHoliday("GOOD_FRIDAY").and()
