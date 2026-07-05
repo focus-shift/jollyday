@@ -55,6 +55,7 @@ class IslamicHolidayParserTest {
          "2022-02-28",  // LAILAT_AL_MIRAJ
          "2022-03-18",  // LAILAT_AL_BARAT
          "2022-04-02",  // RAMADAN
+         "2022-04-18",  // NUZUL_AL_QURAN (17 Ramadan)
          "2022-04-29",  // JUMUATUL_WIDA (Friday before Ramadan ends)
          "2022-04-28",  // LAILAT_AL_QADR
          "2022-05-01",  // RAMADAN_END
