@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="gw" description="Guinea-Bissau"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="JANUARY" day="20" descriptionPropertiesKey="NATIONAL_HEROES_DAY"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="SEPTEMBER" day="24" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+
+    <IslamicHoliday type="ID_AL_FITR"/>
+    <IslamicHoliday type="ID_UL_ADHA"/>
+  </Holidays>
+
+  <Sources>
+    <!-- Feriados nacionais obrigatórios per Decreto n.º 1/2023, de 18 de Janeiro,
+         which abolished 23 January, 8 March and 3 August as national holidays. -->
+    <Source>https://bissau.embaixadaportugal.mne.gov.pt/images/feriados_para_2025.pdf</Source>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Guinea-Bissau</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:GW</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:GW</Source>
+  </Sources>
+</Configuration>
