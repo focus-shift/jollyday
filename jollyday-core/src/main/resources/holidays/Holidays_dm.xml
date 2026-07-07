@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="dm" description="Dominica"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <!-- Public Holidays Act: a holiday that falls on a Sunday is observed on the
+         following Monday. There is no substitution for Saturday. When the first of two
+         consecutive holidays falls on a Sunday it moves to the Monday, pushing the second
+         holiday (which would then fall on that Monday) to the Tuesday. -->
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="NOVEMBER" day="3" descriptionPropertiesKey="INDEPENDENCE_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="NOVEMBER" day="4" descriptionPropertiesKey="NATIONAL_DAY_OF_COMMUNITY_SERVICE">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="MONDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="MONDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+
+    <FixedWeekday which="FIRST" weekday="MONDAY" month="MAY" descriptionPropertiesKey="LABOUR_DAY"/>
+    <FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="EMANCIPATION_DAY"/>
+
+    <!-- Carnival Monday and Tuesday (the Monday and Tuesday before Ash Wednesday). -->
+    <ChristianHoliday type="SHROVE_MONDAY" descriptionPropertiesKey="CARNIVAL_MONDAY"/>
+    <ChristianHoliday type="CARNIVAL" descriptionPropertiesKey="CARNIVAL_TUESDAY"/>
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY"/>
+    <ChristianHoliday type="WHIT_MONDAY"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Dominica</Source>
+    <Source of="Government of Dominica">https://dominica.gov.dm/about-dominica/public-holidays</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:DM</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:DM</Source>
+  </Sources>
+</Configuration>
