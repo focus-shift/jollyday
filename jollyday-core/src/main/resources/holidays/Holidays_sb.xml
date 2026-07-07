@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="sb" description="Solomon Islands"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <!-- Public Holidays Act (Cap. 151). Gazette practice: a holiday that falls on a
+         Sunday is observed on the following Monday, and one that falls on a Saturday is
+         observed on the preceding Friday. The National Day of Thanksgiving (26 December)
+         is only shifted for Sunday, because its Saturday shift would collide with
+         Christmas Day. -->
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
+      <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="JULY" day="7" descriptionPropertiesKey="INDEPENDENCE_DAY">
+      <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS">
+      <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="NATIONAL_DAY_OF_THANKSGIVING">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- Sovereign's birthday: the public holiday is the Friday before the sovereign's
+         official birthday. Queen's Birthday (second Saturday of June) until 2022,
+         King's Birthday (third Saturday of June) from 2023. -->
+    <RelativeToWeekdayInMonth weekday="FRIDAY" when="BEFORE" validTo="2022" descriptionPropertiesKey="QUEENS_BIRTHDAY">
+      <FixedWeekday which="SECOND" weekday="SATURDAY" month="JUNE"/>
+    </RelativeToWeekdayInMonth>
+    <RelativeToWeekdayInMonth weekday="FRIDAY" when="BEFORE" validFrom="2023" descriptionPropertiesKey="KINGS_BIRTHDAY">
+      <FixedWeekday which="THIRD" weekday="SATURDAY" month="JUNE"/>
+    </RelativeToWeekdayInMonth>
+
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_SATURDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY"/>
+    <ChristianHoliday type="WHIT_MONDAY"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_the_Solomon_Islands</Source>
+    <Source of="Public Holidays Act (Cap. 151)">https://solomons.gov.sb/wp-content/uploads/2020/05/2020-Public-Holidays.pdf</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:SB</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:SB</Source>
+  </Sources>
+
+  <SubConfigurations hierarchy="ce" description="Central">
+    <Holidays>
+      <Fixed month="JUNE" day="29" descriptionPropertiesKey="PROVINCE_DAY">
+        <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+      </Fixed>
+    </Holidays>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ch" description="Choiseul">
+    <Holidays>
+      <Fixed month="FEBRUARY" day="25" descriptionPropertiesKey="PROVINCE_DAY">
+        <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+      </Fixed>
+    </Holidays>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="gu" description="Guadalcanal">
+    <Holidays>
+      <Fixed month="AUGUST" day="1" descriptionPropertiesKey="PROVINCE_DAY">
+        <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+      </Fixed>
+    </Holidays>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="is" description="Isabel">
+    <Holidays>
+      <Fixed month="JUNE" day="2" descriptionPropertiesKey="PROVINCE_DAY">
+        <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+      </Fixed>
+    </Holidays>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="mk" description="Makira-Ulawa">
+    <Holidays>
+      <Fixed month="AUGUST" day="3" descriptionPropertiesKey="PROVINCE_DAY">
+        <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+      </Fixed>
+    </Holidays>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ml" description="Malaita">
+    <Holidays>
+      <Fixed month="AUGUST" day="15" descriptionPropertiesKey="PROVINCE_DAY">
+        <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+      </Fixed>
+    </Holidays>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="rb" description="Rennell and Bellona">
+    <Holidays>
+      <Fixed month="JULY" day="20" descriptionPropertiesKey="PROVINCE_DAY">
+        <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+      </Fixed>
+    </Holidays>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="te" description="Temotu">
+    <Holidays>
+      <Fixed month="JUNE" day="8" descriptionPropertiesKey="PROVINCE_DAY">
+        <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+      </Fixed>
+    </Holidays>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="we" description="Western">
+    <Holidays>
+      <Fixed month="DECEMBER" day="7" descriptionPropertiesKey="PROVINCE_DAY">
+        <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+      </Fixed>
+    </Holidays>
+  </SubConfigurations>
+</Configuration>
