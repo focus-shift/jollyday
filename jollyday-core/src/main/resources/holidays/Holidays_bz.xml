@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="bz" description="Belize"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <!-- "Note 1" holidays (Holidays Act, Chapter 289): if the holiday falls on a Sunday,
+         the following Monday is observed. Otherwise the statutory date is kept. -->
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="AUGUST" day="1" validFrom="2021" descriptionPropertiesKey="EMANCIPATION_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="SEPTEMBER" day="10" descriptionPropertiesKey="SAINT_GEORGES_CAYE_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="SEPTEMBER" day="21" descriptionPropertiesKey="INDEPENDENCE_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="NOVEMBER" day="19" descriptionPropertiesKey="GARIFUNA_SETTLEMENT_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- "Note 2" holidays: if the holiday falls on Tuesday, Wednesday or Thursday it is
+         observed on the preceding Monday; if it falls on Friday or Sunday it is observed
+         on the following Monday. Saturday and Monday are kept. -->
+    <Fixed month="JANUARY" day="15" validFrom="2021" descriptionPropertiesKey="GEORGE_PRICE_DAY">
+      <MovingCondition substitute="TUESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="WEDNESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="THURSDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="FRIDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="MARCH" day="9" descriptionPropertiesKey="NATIONAL_HEROES_AND_BENEFACTORS_DAY">
+      <MovingCondition substitute="TUESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="WEDNESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="THURSDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="FRIDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="OCTOBER" day="12" descriptionPropertiesKey="INDIGENOUS_PEOPLES_RESISTANCE_DAY">
+      <MovingCondition substitute="TUESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="WEDNESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="THURSDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="FRIDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- Christmas and Boxing Day are kept on their statutory dates (not moved). -->
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY"/>
+
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_SATURDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Belize</Source>
+    <Source>https://www.pressoffice.gov.bz/public-and-bank-holidays-2025/</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:BZ</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:BZ</Source>
+  </Sources>
+</Configuration>
