@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="pg" description="Papua New Guinea"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <!-- Public Holidays Act 1953 (Cap. 321): when a public holiday (other than the
+         King's Birthday and Christmas Day) falls on a Sunday, the following Monday is
+         observed. When Christmas Day falls on a Sunday, the following Tuesday is also
+         observed. There is no substitution for holidays that fall on a Saturday. -->
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="FEBRUARY" day="26" validFrom="2022" descriptionPropertiesKey="SOMARE_REMEMBRANCE_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="JULY" day="23" descriptionPropertiesKey="REMEMBRANCE">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="AUGUST" day="26" descriptionPropertiesKey="REPENTANCE_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="SEPTEMBER" day="16" descriptionPropertiesKey="INDEPENDENCE_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- Sovereign's birthday, observed on the second Monday of June.
+         Queen's Birthday until the death of Elizabeth II in 2022, King's Birthday thereafter. -->
+    <FixedWeekday which="SECOND" weekday="MONDAY" month="JUNE" validTo="2022" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
+    <FixedWeekday which="SECOND" weekday="MONDAY" month="JUNE" validFrom="2023" descriptionPropertiesKey="KINGS_BIRTHDAY"/>
+
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_SATURDAY"/>
+    <ChristianHoliday type="EASTER"/>
+    <ChristianHoliday type="EASTER_MONDAY"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Papua_New_Guinea</Source>
+    <Source of="Public Holidays Act 1953">https://www.paclii.org/pg/legis/consol_act/pha1953163/</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:PG</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:PG</Source>
+  </Sources>
+</Configuration>
