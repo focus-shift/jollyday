@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="ps" description="Palestine"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <!-- Labour Law No. 7 of 2000 grants paid leave on religious and official holidays
+         (Article 75) and sets Friday as the weekly rest day (Article 73). The law
+         contains no rule moving a holiday that coincides with the weekly rest day, so
+         no substitution is applied. -->
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="JANUARY" day="7" descriptionPropertiesKey="ORTHODOX_CHRISTMAS"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="NOVEMBER" day="15" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+
+    <!-- Islamic holidays (Hijri calendar driven). Eid al-Fitr and Eid al-Adha are each
+         observed for three days. -->
+    <IslamicHoliday type="NEWYEAR"/>
+    <IslamicHoliday type="MAWLID_AN_NABI"/>
+    <IslamicHoliday type="LAILAT_AL_MIRAJ"/>
+    <IslamicHoliday type="ID_AL_FITR"/>
+    <IslamicHoliday type="ID_AL_FITR_2"/>
+    <IslamicHoliday type="ID_AL_FITR_3"/>
+    <IslamicHoliday type="ID_UL_ADHA"/>
+    <IslamicHoliday type="ID_UL_ADHA_2"/>
+    <IslamicHoliday type="ID_UL_ADHA_3"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Palestine</Source>
+    <Source of="Labour Law No. 7 of 2000">https://faolex.fao.org/docs/pdf/pal228232E.pdf</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:PS</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:PS</Source>
+  </Sources>
+</Configuration>
