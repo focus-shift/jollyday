@@ -1097,7 +1097,7 @@
     <path d="M 34.3 593.3 33.8 593.4 33.7 593.2 34.1 593.1 34.3 593.3 Z">
     </path>
   </g>
-  <g class="country" data-iso="MS">
+  <g class="country active" data-iso="MS">
     <title>Montserrat</title>
     <path d="M638.2 393.9l0.2 0.4 0 0.3-0.2 0.2-0.2-0.1-0.1-0.3 0.3-0.5z" name="Montserrat">
     </path>
