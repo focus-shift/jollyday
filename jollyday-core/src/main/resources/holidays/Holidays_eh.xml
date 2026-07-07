@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="eh" description="Western Sahara"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <!-- National holidays of the Sahrawi Arab Democratic Republic (SADR). No weekend
+         substitution rule is applied; the national days are observed on their fixed dates
+         and the Islamic holidays follow the Hijri calendar. -->
+    <Fixed month="FEBRUARY" day="27" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <Fixed month="MARCH" day="8" descriptionPropertiesKey="FIRST_MARTYR"/>
+    <Fixed month="MAY" day="10" descriptionPropertiesKey="POLISARIO_FRONT_FOUNDATION"/>
+    <Fixed month="MAY" day="20" descriptionPropertiesKey="TWENTY_MAY_REVOLUTION"/>
+    <Fixed month="JUNE" day="9" descriptionPropertiesKey="MARTYRS_DAY"/>
+    <Fixed month="JUNE" day="17" descriptionPropertiesKey="ZEMLA_INTIFADA"/>
+    <Fixed month="OCTOBER" day="12" descriptionPropertiesKey="NATIONAL_UNITY_DAY"/>
+
+    <IslamicHoliday type="NEWYEAR"/>
+    <IslamicHoliday type="MAWLID_AN_NABI"/>
+    <IslamicHoliday type="ID_AL_FITR"/>
+    <IslamicHoliday type="ID_UL_ADHA"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Western_Sahara</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:EH</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:EH</Source>
+  </Sources>
+</Configuration>
