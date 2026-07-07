@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="tl" description="Timor-Leste"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <!-- National public holidays under Law No. 10/2005 of 10 August, as amended by
+         Law No. 3/2016 and Law No. 10/2023. The law contains no rule transferring a
+         holiday that falls on a weekend, so no substitution is applied. -->
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="MARCH" day="3" descriptionPropertiesKey="VETERANS_DAY"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="MAY" day="20" descriptionPropertiesKey="RESTORATION_OF_INDEPENDENCE"/>
+    <Fixed month="AUGUST" day="30" descriptionPropertiesKey="POPULAR_CONSULTATION_DAY"/>
+    <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
+    <Fixed month="NOVEMBER" day="2" descriptionPropertiesKey="ALL_SOULS"/>
+    <Fixed month="NOVEMBER" day="3" descriptionPropertiesKey="NATIONAL_WOMENS_DAY"/>
+    <Fixed month="NOVEMBER" day="12" descriptionPropertiesKey="NATIONAL_YOUTH_DAY"/>
+    <Fixed month="NOVEMBER" day="28" descriptionPropertiesKey="PROCLAMATION_OF_INDEPENDENCE"/>
+    <Fixed month="DECEMBER" day="7" descriptionPropertiesKey="MEMORIAL_DAY"/>
+    <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+    <Fixed month="DECEMBER" day="31" descriptionPropertiesKey="NATIONAL_HEROES_DAY"/>
+
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="CORPUS_CHRISTI"/>
+
+    <IslamicHoliday type="ID_AL_FITR"/>
+    <IslamicHoliday type="ID_UL_ADHA"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Timor-Leste</Source>
+    <Source of="Law No. 10/2005">https://www.mj.gov.tl/jornal/?q=node/910</Source>
+    <Source of="Government of Timor-Leste">https://timor-leste.gov.tl/?p=46595&amp;lang=en</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:TL</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:TL</Source>
+  </Sources>
+</Configuration>
