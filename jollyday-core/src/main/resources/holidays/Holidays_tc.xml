@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="tc" description="Turks and Caicos Islands"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <!-- When a holiday falls on a Saturday or Sunday it is observed on the following Monday. -->
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- Slavery Abolition Act 1833 took effect 1 August 1834. -->
+    <Fixed month="AUGUST" day="1" descriptionPropertiesKey="EMANCIPATION_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- For Queen Elizabeth II's Platinum Jubilee, the regular Queen's Birthday holiday was
+         moved from its usual second-Monday-in-June date to Friday 3 June 2022, and an extra
+         one-off holiday was granted on Monday 6 June 2022. -->
+    <Fixed month="JUNE" day="3" validFrom="2022" validTo="2022" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
+    <Fixed month="JUNE" day="6" validFrom="2022" validTo="2022" descriptionPropertiesKey="QUEENS_PLATINUM_JUBILEE"/>
+
+    <!-- collides with Christmas Day's Monday substitute if both fall on a weekend, so Boxing
+         Day is bumped to Tuesday in that case, matching the convention used across other
+         British Overseas Territories (e.g. Bermuda, Cayman Islands). -->
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+      <MovingCondition substitute="MONDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+
+    <FixedWeekday which="SECOND" weekday="MONDAY" month="MARCH" descriptionPropertiesKey="COMMONWEALTH_DAY"/>
+
+    <!-- Renamed from National Heroes Day to JAGS McCartney Day in 2020, as JAGS McCartney
+         (the territory's first Chief Minister, 1976-1980) is the only official National Hero;
+         the last-Monday-in-May date did not change. -->
+    <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" validTo="2019" descriptionPropertiesKey="NATIONAL_HEROES_DAY"/>
+    <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" validFrom="2020" descriptionPropertiesKey="JAGS_MCCARTNEY_DAY"/>
+
+    <!-- The Sovereign's official birthday, observed the Monday nearest the UK's official
+         celebration. No fixed formula reliably predicts the exact Monday from year to year,
+         so only years with verified dates are modeled; data before 2018 is not available. -->
+    <FixedWeekday which="SECOND" weekday="MONDAY" month="JUNE" validFrom="2018" validTo="2021" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
+    <FixedWeekday which="SECOND" weekday="MONDAY" month="JUNE" validFrom="2023" validTo="2024" descriptionPropertiesKey="KINGS_BIRTHDAY"/>
+    <FixedWeekday which="THIRD" weekday="MONDAY" month="JUNE" validFrom="2025" descriptionPropertiesKey="KINGS_BIRTHDAY"/>
+
+    <!-- New holiday introduced from 2026, marking the 1976 Constitution. -->
+    <FixedWeekday which="LAST" weekday="MONDAY" month="AUGUST" validFrom="2026" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+
+    <!-- Moved from the fourth Friday in November (see below) to the Sunday before
+         Constitution Day from 2026 onward; it is not substituted even though it always
+         falls on a Sunday. -->
+    <FixedWeekday which="LAST" weekday="SUNDAY" month="AUGUST" validFrom="2026" descriptionPropertiesKey="NATIONAL_DAY_OF_PRAYER_AND_THANKSGIVING"/>
+
+    <FixedWeekday which="LAST" weekday="FRIDAY" month="SEPTEMBER" descriptionPropertiesKey="NATIONAL_YOUTH_DAY"/>
+
+    <!-- National Heritage Day replaced Columbus Day in 2014; the second-Monday-in-October
+         date did not change. -->
+    <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validTo="2013" descriptionPropertiesKey="COLUMBUS_DAY"/>
+    <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="2014" descriptionPropertiesKey="NATIONAL_HERITAGE_DAY"/>
+
+    <!-- Introduced in 2014 on the fourth Friday in November; moved to August from 2026 (see above). -->
+    <FixedWeekday which="FOURTH" weekday="FRIDAY" month="NOVEMBER" validFrom="2014" validTo="2025" descriptionPropertiesKey="NATIONAL_DAY_OF_PRAYER_AND_THANKSGIVING"/>
+
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_the_Turks_and_Caicos_Islands</Source>
+    <Source of="Official public holiday list">https://www.visittci.com/events/public-holidays</Source>
+    <Source of="2026 holiday changes (Constitution Day, Thanksgiving moved to August)">https://www.visittci.com/news/turks-and-caicos-public-holiday-changes-2026</Source>
+    <Source of="Emancipation Day history">https://www.tcmuseum.org/culture-history/slavery/brief-history-of-emancipation/</Source>
+    <Source of="JAGS McCartney Day history">https://tcweeklynews.com/jags-mccartney-day-turks-and-caicos-honours-its-first-chief-minister-and-p15082-155.htm</Source>
+    <Source of="2022 Platinum Jubilee extra holiday">https://tcweeklynews.com/tci-gets-extra-holiday-to-celebrate-the-queens-platinum-jubilee-p12263-127.htm</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:TC</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:TC</Source>
+  </Sources>
+</Configuration>

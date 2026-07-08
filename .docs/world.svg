@@ -1485,7 +1485,7 @@
     <path d="M 1300.4 531.5 1300.8 531.9 1300.6 532.2 1300.4 531.9 1300.1 531.7 1300.3 531.2 1300.4 531.5 Z">
     </path>
   </g>
-  <g class="country" data-iso="TC">
+  <g class="country active" data-iso="TC">
     <title>Turks and Caicos Islands</title>
     <path d="M 587.7 361.6 588.4 361.6 588.7 362 588.4 362 588.1 361.9 587.6 362 587.5 361.7 587.7 361.6 Z">
     </path>
