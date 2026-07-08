@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="ph" description="Philippines"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <!-- Regular holidays and nationwide special (non-working) days under Section 26,
+         Chapter 7, Book I of the Administrative Code of 1987 (Executive Order No. 292),
+         as amended by Republic Act No. 9492. R.A. No. 9492 nominally moves several of
+         these to the "Monday nearest" their statutory date, but the President has
+         consistently exercised the law's override clause every year observed
+         (Proclamation No. 368 s. 2023 for CY2024, No. 727 s. 2024 for CY2025 and
+         No. 1006 s. 2025 for CY2026) to keep them on their literal calendar date
+         regardless of weekday, so all fixed-date holidays below are modeled unmoved. -->
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="APRIL" day="9" descriptionPropertiesKey="ARAW_NG_KAGITINGAN"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="JUNE" day="12" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <Fixed month="AUGUST" day="21" descriptionPropertiesKey="NINOY_AQUINO_DAY"/>
+    <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
+    <Fixed month="NOVEMBER" day="30" descriptionPropertiesKey="BONIFACIO_DAY"/>
+    <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+    <Fixed month="DECEMBER" day="30" descriptionPropertiesKey="RIZAL_DAY"/>
+    <Fixed month="DECEMBER" day="31" descriptionPropertiesKey="NEW_YEARS_EVE"/>
+
+    <!-- National Heroes Day is fixed directly to a weekday occurrence, not to a
+         statutory calendar date, so it is unaffected by the override practice above. -->
+    <FixedWeekday which="LAST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="NATIONAL_HEROES_DAY"/>
+
+    <ChristianHoliday type="MAUNDY_THURSDAY"/>
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+
+    <!-- Eid'l Fitr (R.A. No. 9177) and Eid'l Adha (R.A. No. 9849) are nationwide
+         regular holidays; the exact Gregorian date is proclaimed each year once the
+         new moon is sighted. -->
+    <IslamicHoliday type="ID_AL_FITR"/>
+    <IslamicHoliday type="ID_UL_ADHA"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_the_Philippines</Source>
+    <Source of="Administrative Code of 1987, Sec. 26 as amended by R.A. No. 9492">https://www.officialgazette.gov.ph/2007/07/24/republic-act-no-9492/</Source>
+    <Source of="R.A. No. 9177 (Eid'l Fitr)">https://www.officialgazette.gov.ph/2002/11/13/republic-act-no-9177/</Source>
+    <Source of="R.A. No. 9849 (Eid'l Adha)">https://www.officialgazette.gov.ph/2009/12/11/republic-act-no-9849/</Source>
+    <Source of="R.A. No. 10966 (Immaculate Conception)">https://lawphil.net/statutes/repacts/ra2017/ra_10966_2017.html</Source>
+    <Source of="Annual holiday proclamations">https://www.officialgazette.gov.ph/nationwide-holidays/</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:PH</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:PH</Source>
+  </Sources>
+</Configuration>
