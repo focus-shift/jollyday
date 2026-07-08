@@ -12,18 +12,18 @@ import static de.focus_shift.jollyday.core.HolidayType.OBSERVANCE;
 import static de.focus_shift.jollyday.core.HolidayType.PUBLIC_HOLIDAY;
 import static de.focus_shift.jollyday.core.ManagerParameters.create;
 import static de.focus_shift.jollyday.tests.CalendarCheckerApi.assertFor;
-import static java.time.Month.JANUARY;
-import static java.time.Month.FEBRUARY;
-import static java.time.Month.MARCH;
 import static java.time.Month.APRIL;
-import static java.time.Month.MAY;
-import static java.time.Month.JUNE;
-import static java.time.Month.JULY;
 import static java.time.Month.AUGUST;
-import static java.time.Month.SEPTEMBER;
-import static java.time.Month.OCTOBER;
-import static java.time.Month.NOVEMBER;
 import static java.time.Month.DECEMBER;
+import static java.time.Month.FEBRUARY;
+import static java.time.Month.JANUARY;
+import static java.time.Month.JULY;
+import static java.time.Month.JUNE;
+import static java.time.Month.MARCH;
+import static java.time.Month.MAY;
+import static java.time.Month.NOVEMBER;
+import static java.time.Month.OCTOBER;
+import static java.time.Month.SEPTEMBER;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class HolidayPTTest {
@@ -40,7 +40,7 @@ class HolidayPTTest {
         .validTo(Year.of(2012))
         .notValidBetween(Year.of(2013), Year.of(2015))
         .validFrom(Year.of(2016))
-      .and()
+        .and()
       .hasFixedHoliday("ALL_SAINTS", NOVEMBER, 1)
         .validTo(Year.of(2012))
         .notValidBetween(Year.of(2013), Year.of(2015))
@@ -104,14 +104,14 @@ class HolidayPTTest {
       .check();
 
     // Albergaria-a-Velha
-    assertCityDayOn(LocalDate.of(2025, 8, 18), "01", "ALB");
-    assertCityDayOn(LocalDate.of(2026, 8, 17), "01", "ALB");
-    assertCityDayOn(LocalDate.of(2028, 8, 21), "01", "ALB");
+    assertCityDayOn(LocalDate.of(2025, AUGUST, 18), "01", "ALB");
+    assertCityDayOn(LocalDate.of(2026, AUGUST, 17), "01", "ALB");
+    assertCityDayOn(LocalDate.of(2028, AUGUST, 21), "01", "ALB");
 
     // Oliveira de Azeméis
-    assertCityDayOn(LocalDate.of(2025, 8, 11), "01", "OAZ");
-    assertCityDayOn(LocalDate.of(2026, 8, 10), "01", "OAZ");
-    assertCityDayOn(LocalDate.of(2028, 8, 14), "01", "OAZ");
+    assertCityDayOn(LocalDate.of(2025, AUGUST, 11), "01", "OAZ");
+    assertCityDayOn(LocalDate.of(2026, AUGUST, 10), "01", "OAZ");
+    assertCityDayOn(LocalDate.of(2028, AUGUST, 14), "01", "OAZ");
   }
 
   @Test
@@ -135,26 +135,26 @@ class HolidayPTTest {
       .check();
 
     // Santa Cruz da Graciosa
-    assertCityDayOn(LocalDate.of(2026, 8, 10), "20", "SCG");
-    assertCityDayOn(LocalDate.of(2027, 8, 9), "20", "SCG");
-    assertCityDayOn(LocalDate.of(2028, 8, 14), "20", "SCG");
+    assertCityDayOn(LocalDate.of(2026, AUGUST, 10), "20", "SCG");
+    assertCityDayOn(LocalDate.of(2027, AUGUST, 9), "20", "SCG");
+    assertCityDayOn(LocalDate.of(2028, AUGUST, 14), "20", "SCG");
 
     // Povoação
-    assertCityDayOn(LocalDate.of(2026, 6, 5), "20", "PVC");
-    assertCityDayOn(LocalDate.of(2027, 5, 28), "20", "PVC");
-    assertCityDayOn(LocalDate.of(2028, 6, 16), "20", "PVC");
+    assertCityDayOn(LocalDate.of(2026, JUNE, 5), "20", "PVC");
+    assertCityDayOn(LocalDate.of(2027, MAY, 28), "20", "PVC");
+    assertCityDayOn(LocalDate.of(2028, JUNE, 16), "20", "PVC");
 
     // Ponta Delgada
-    assertCityDayOn(LocalDate.of(2025, 5, 26), "20", "PDL");
-    assertCityDayOn(LocalDate.of(2026, 5, 11), "20", "PDL");
-    assertCityDayOn(LocalDate.of(2027, 5, 3), "20", "PDL");
-    assertCityDayOn(LocalDate.of(2028, 5, 22), "20", "PDL");
+    assertCityDayOn(LocalDate.of(2025, MAY, 26), "20", "PDL");
+    assertCityDayOn(LocalDate.of(2026, MAY, 11), "20", "PDL");
+    assertCityDayOn(LocalDate.of(2027, MAY, 3), "20", "PDL");
+    assertCityDayOn(LocalDate.of(2028, MAY, 22), "20", "PDL");
 
     // Lajes das Flores
-    assertCityDayOn(LocalDate.of(2026, 7, 20), "20", "LGF");
-    assertCityDayOn(LocalDate.of(2027, 7, 19), "20", "LGF");
-    assertCityDayOn(LocalDate.of(2028, 7, 17), "20", "LGF");
-    assertCityDayOn(LocalDate.of(2030, 7, 15), "20", "LGF");
+    assertCityDayOn(LocalDate.of(2026, JULY, 20), "20", "LGF");
+    assertCityDayOn(LocalDate.of(2027, JULY, 19), "20", "LGF");
+    assertCityDayOn(LocalDate.of(2028, JULY, 17), "20", "LGF");
+    assertCityDayOn(LocalDate.of(2030, JULY, 15), "20", "LGF");
   }
 
   @Test
@@ -196,9 +196,9 @@ class HolidayPTTest {
       .check();
 
     // Vieira do Minho
-    assertCityDayOn(LocalDate.of(2026, 10, 5), "03", "VRM");
-    assertCityDayOn(LocalDate.of(2027, 10, 4), "03", "VRM");
-    assertCityDayOn(LocalDate.of(2028, 10, 9), "03", "VRM");
+    assertCityDayOn(LocalDate.of(2026, OCTOBER, 5), "03", "VRM");
+    assertCityDayOn(LocalDate.of(2027, OCTOBER, 4), "03", "VRM");
+    assertCityDayOn(LocalDate.of(2028, OCTOBER, 9), "03", "VRM");
   }
 
   @Test
@@ -232,26 +232,26 @@ class HolidayPTTest {
       .check();
 
     // Castelo Branco
-    assertCityDayOn(LocalDate.of(2026, 4, 21), "05", "CTB");
-    assertCityDayOn(LocalDate.of(2027, 4, 13), "05", "CTB");
+    assertCityDayOn(LocalDate.of(2026, APRIL, 21), "05", "CTB");
+    assertCityDayOn(LocalDate.of(2027, APRIL, 13), "05", "CTB");
 
     // Idanha-a-Nova
-    assertCityDayOn(LocalDate.of(2025, 5, 5), "05", "IDN");
-    assertCityDayOn(LocalDate.of(2026, 4, 20), "05", "IDN");
-    assertCityDayOn(LocalDate.of(2027, 4, 12), "05", "IDN");
-    assertCityDayOn(LocalDate.of(2028, 5, 1), "05", "IDN");
+    assertCityDayOn(LocalDate.of(2025, MAY, 5), "05", "IDN");
+    assertCityDayOn(LocalDate.of(2026, APRIL, 20), "05", "IDN");
+    assertCityDayOn(LocalDate.of(2027, APRIL, 12), "05", "IDN");
+    assertCityDayOn(LocalDate.of(2028, MAY, 1), "05", "IDN");
 
     // Oleiros
-    assertCityDayOn(LocalDate.of(2025, 8, 11), "05", "OLR");
-    assertCityDayOn(LocalDate.of(2026, 8, 10), "05", "OLR");
-    assertCityDayOn(LocalDate.of(2027, 8, 9), "05", "OLR");
-    assertCityDayOn(LocalDate.of(2028, 8, 14), "05", "OLR");
+    assertCityDayOn(LocalDate.of(2025, AUGUST, 11), "05", "OLR");
+    assertCityDayOn(LocalDate.of(2026, AUGUST, 10), "05", "OLR");
+    assertCityDayOn(LocalDate.of(2027, AUGUST, 9), "05", "OLR");
+    assertCityDayOn(LocalDate.of(2028, AUGUST, 14), "05", "OLR");
 
     // Vila Velha de Ródão
-    assertCityDayOn(LocalDate.of(2025, 8, 25), "05", "VVR");
-    assertCityDayOn(LocalDate.of(2026, 8, 24), "05", "VVR");
-    assertCityDayOn(LocalDate.of(2027, 8, 23), "05", "VVR");
-    assertCityDayOn(LocalDate.of(2028, 8, 28), "05", "VVR");
+    assertCityDayOn(LocalDate.of(2025, AUGUST, 25), "05", "VVR");
+    assertCityDayOn(LocalDate.of(2026, AUGUST, 24), "05", "VVR");
+    assertCityDayOn(LocalDate.of(2027, AUGUST, 23), "05", "VVR");
+    assertCityDayOn(LocalDate.of(2028, AUGUST, 28), "05", "VVR");
   }
 
   @Test
@@ -296,9 +296,9 @@ class HolidayPTTest {
       .check();
 
     // Alandroal
-    assertCityDayOn(LocalDate.of(2026, 4, 13), "07", "ADL");
-    assertCityDayOn(LocalDate.of(2027, 4, 5), "07", "ADL");
-    assertCityDayOn(LocalDate.of(2028, 4, 24), "07", "ADL");
+    assertCityDayOn(LocalDate.of(2026, APRIL, 13), "07", "ADL");
+    assertCityDayOn(LocalDate.of(2027, APRIL, 5), "07", "ADL");
+    assertCityDayOn(LocalDate.of(2028, APRIL, 24), "07", "ADL");
   }
 
   @Test
@@ -322,8 +322,8 @@ class HolidayPTTest {
       .check();
 
     // Alcoutim
-    assertCityDayOn(LocalDate.of(2026, 9, 6), "08", "ACT");
-    assertCityDayOn(LocalDate.of(2028, 9, 3), "08", "ACT");
+    assertCityDayOn(LocalDate.of(2026, SEPTEMBER, 6), "08", "ACT");
+    assertCityDayOn(LocalDate.of(2028, SEPTEMBER, 3), "08", "ACT");
   }
 
   @Test
@@ -344,13 +344,13 @@ class HolidayPTTest {
       .check();
 
     // Gouveia
-    assertCityDayOn(LocalDate.of(2025, 8, 11), "09", "GVA");
-    assertCityDayOn(LocalDate.of(2026, 8, 10), "09", "GVA");
-    assertCityDayOn(LocalDate.of(2028, 8, 14), "09", "GVA");
+    assertCityDayOn(LocalDate.of(2025, AUGUST, 11), "09", "GVA");
+    assertCityDayOn(LocalDate.of(2026, AUGUST, 10), "09", "GVA");
+    assertCityDayOn(LocalDate.of(2028, AUGUST, 14), "09", "GVA");
 
     // Sabugal
-    assertCityDayOn(LocalDate.of(2026, 4, 13), "09", "SBG");
-    assertCityDayOn(LocalDate.of(2028, 4, 24), "09", "SBG");
+    assertCityDayOn(LocalDate.of(2026, APRIL, 13), "09", "SBG");
+    assertCityDayOn(LocalDate.of(2028, APRIL, 24), "09", "SBG");
   }
 
   @Test
@@ -374,10 +374,10 @@ class HolidayPTTest {
       .check();
 
     // Peniche
-    assertCityDayOn(LocalDate.of(2025, 8, 4), "10", "PNI");
-    assertCityDayOn(LocalDate.of(2026, 8, 3), "10", "PNI");
-    assertCityDayOn(LocalDate.of(2027, 8, 2), "10", "PNI");
-    assertCityDayOn(LocalDate.of(2028, 8, 7), "10", "PNI");
+    assertCityDayOn(LocalDate.of(2025, AUGUST, 4), "10", "PNI");
+    assertCityDayOn(LocalDate.of(2026, AUGUST, 3), "10", "PNI");
+    assertCityDayOn(LocalDate.of(2027, AUGUST, 2), "10", "PNI");
+    assertCityDayOn(LocalDate.of(2028, AUGUST, 7), "10", "PNI");
   }
 
   @Test
@@ -439,8 +439,8 @@ class HolidayPTTest {
       .check();
 
     // Monforte
-    assertCityDayOn(LocalDate.of(2026, 4, 13), "12", "MFT");
-    assertCityDayOn(LocalDate.of(2028, 4, 24), "12", "MFT");
+    assertCityDayOn(LocalDate.of(2026, APRIL, 13), "12", "MFT");
+    assertCityDayOn(LocalDate.of(2028, APRIL, 24), "12", "MFT");
   }
 
   @Test
@@ -462,32 +462,32 @@ class HolidayPTTest {
       .check();
 
     // Gondomar
-    assertCityDayOn(LocalDate.of(2025, 10, 6), "13", "GDM");
-    assertCityDayOn(LocalDate.of(2026, 10, 5), "13", "GDM");
-    assertCityDayOn(LocalDate.of(2027, 10, 4), "13", "GDM");
-    assertCityDayOn(LocalDate.of(2028, 10, 2), "13", "GDM");
+    assertCityDayOn(LocalDate.of(2025, OCTOBER, 6), "13", "GDM");
+    assertCityDayOn(LocalDate.of(2026, OCTOBER, 5), "13", "GDM");
+    assertCityDayOn(LocalDate.of(2027, OCTOBER, 4), "13", "GDM");
+    assertCityDayOn(LocalDate.of(2028, OCTOBER, 2), "13", "GDM");
 
     // Lousada
-    assertCityDayOn(LocalDate.of(2026, 7, 27), "13", "LOU");
-    assertCityDayOn(LocalDate.of(2027, 7, 26), "13", "LOU");
-    assertCityDayOn(LocalDate.of(2028, 7, 31), "13", "LOU");
+    assertCityDayOn(LocalDate.of(2026, JULY, 27), "13", "LOU");
+    assertCityDayOn(LocalDate.of(2027, JULY, 26), "13", "LOU");
+    assertCityDayOn(LocalDate.of(2028, JULY, 31), "13", "LOU");
 
     // Maia
-    assertCityDayOn(LocalDate.of(2025, 7, 14), "13", "MAI");
-    assertCityDayOn(LocalDate.of(2026, 7, 13), "13", "MAI");
-    assertCityDayOn(LocalDate.of(2027, 7, 12), "13", "MAI");
-    assertCityDayOn(LocalDate.of(2028, 7, 10), "13", "MAI");
+    assertCityDayOn(LocalDate.of(2025, JULY, 14), "13", "MAI");
+    assertCityDayOn(LocalDate.of(2026, JULY, 13), "13", "MAI");
+    assertCityDayOn(LocalDate.of(2027, JULY, 12), "13", "MAI");
+    assertCityDayOn(LocalDate.of(2028, JULY, 10), "13", "MAI");
 
     // Matosinhos
-    assertCityDayOn(LocalDate.of(2025, 6, 10), "13", "MTS");
-    assertCityDayOn(LocalDate.of(2026, 5, 26), "13", "MTS");
-    assertCityDayOn(LocalDate.of(2027, 5, 18), "13", "MTS");
-    assertCityDayOn(LocalDate.of(2028, 6, 6), "13", "MTS");
+    assertCityDayOn(LocalDate.of(2025, JUNE, 10), "13", "MTS");
+    assertCityDayOn(LocalDate.of(2026, MAY, 26), "13", "MTS");
+    assertCityDayOn(LocalDate.of(2027, MAY, 18), "13", "MTS");
+    assertCityDayOn(LocalDate.of(2028, JUNE, 6), "13", "MTS");
 
     // Paredes
-    assertCityDayOn(LocalDate.of(2026, 7, 20), "13", "PRD");
-    assertCityDayOn(LocalDate.of(2028, 7, 17), "13", "PRD");
-    assertCityDayOn(LocalDate.of(2030, 7, 22), "13", "PRD");
+    assertCityDayOn(LocalDate.of(2026, JULY, 20), "13", "PRD");
+    assertCityDayOn(LocalDate.of(2028, JULY, 17), "13", "PRD");
+    assertCityDayOn(LocalDate.of(2030, JULY, 22), "13", "PRD");
   }
 
   @Test
@@ -535,10 +535,10 @@ class HolidayPTTest {
       .check();
 
     // Moita
-    assertCityDayOn(LocalDate.of(2025, 9, 16), "15", "MTA");
-    assertCityDayOn(LocalDate.of(2026, 9, 15), "15", "MTA");
-    assertCityDayOn(LocalDate.of(2027, 9, 14), "15", "MTA");
-    assertCityDayOn(LocalDate.of(2028, 9, 12), "15", "MTA");
+    assertCityDayOn(LocalDate.of(2025, SEPTEMBER, 16), "15", "MTA");
+    assertCityDayOn(LocalDate.of(2026, SEPTEMBER, 15), "15", "MTA");
+    assertCityDayOn(LocalDate.of(2027, SEPTEMBER, 14), "15", "MTA");
+    assertCityDayOn(LocalDate.of(2028, SEPTEMBER, 12), "15", "MTA");
   }
 
   @Test
@@ -606,9 +606,9 @@ class HolidayPTTest {
       .check();
 
     // Carregal do Sal
-    assertCityDayOn(LocalDate.of(2026, 7, 20), "18", "CRS");
-    assertCityDayOn(LocalDate.of(2028, 7, 17), "18", "CRS");
-    assertCityDayOn(LocalDate.of(2030, 7, 15), "18", "CRS");
+    assertCityDayOn(LocalDate.of(2026, JULY, 20), "18", "CRS");
+    assertCityDayOn(LocalDate.of(2028, JULY, 17), "18", "CRS");
+    assertCityDayOn(LocalDate.of(2030, JULY, 15), "18", "CRS");
   }
 
   private static void assertCityDayOn(final LocalDate expectedDate, final String... subdivisions) {
