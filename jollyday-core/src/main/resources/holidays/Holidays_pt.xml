@@ -6,23 +6,36 @@
                xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
   <Holidays>
     <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
-    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
     <Fixed month="APRIL" day="25" descriptionPropertiesKey="FREEDOM_DEMOCRACY"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
     <Fixed month="JUNE" day="10" descriptionPropertiesKey="NATIONAL_DAY"/>
     <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
-    <Fixed month="OCTOBER" day="5" descriptionPropertiesKey="REPUBLIC_DAY"/>
-    <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
-    <Fixed month="DECEMBER" day="1" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <!-- Republic Day, All Saints Day, Independence Restoration Day and Corpus Christi
+         were suspended from 2013 to 2015 by Lei 23/2012 and restored by Lei 8/2016 -->
+    <Fixed month="OCTOBER" day="5" validTo="2012" descriptionPropertiesKey="REPUBLIC_DAY"/>
+    <Fixed month="OCTOBER" day="5" validFrom="2016" descriptionPropertiesKey="REPUBLIC_DAY"/>
+    <Fixed month="NOVEMBER" day="1" validTo="2012" descriptionPropertiesKey="ALL_SAINTS"/>
+    <Fixed month="NOVEMBER" day="1" validFrom="2016" descriptionPropertiesKey="ALL_SAINTS"/>
+    <Fixed month="DECEMBER" day="1" validTo="2012" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <Fixed month="DECEMBER" day="1" validFrom="2016" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
     <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-    <ChristianHoliday type="EASTER"/>
-    <ChristianHoliday type="CARNIVAL"/>
     <ChristianHoliday type="GOOD_FRIDAY"/>
-    <ChristianHoliday type="CORPUS_CHRISTI"/>
+    <ChristianHoliday type="EASTER"/>
+    <!-- Carnival Tuesday is not a statutory public holiday (Art. 235 Código do Trabalho:
+         optional, observed only by collective agreement or annual "tolerância de ponto") -->
+    <ChristianHoliday type="CARNIVAL" localizedType="OBSERVANCE"/>
+    <ChristianHoliday type="CORPUS_CHRISTI" validTo="2012"/>
+    <ChristianHoliday type="CORPUS_CHRISTI" validFrom="2016"/>
   </Holidays>
 
   <Sources>
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Portugal</Source>
+    <Source of="Código do Trabalho Art. 234/235 (Lei 7/2009)">https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?artigo_id=1047A0234&amp;nid=1047&amp;tabela=leis</Source>
+    <Source of="Lei 23/2012 (holiday suspension 2013-2015)">https://diariodarepublica.pt/dr/detalhe/lei/23-2012-178501</Source>
+    <Source of="Lei 8/2016 (holiday restoration 2016)">https://diariodarepublica.pt/dr/detalhe/lei/8-2016-74007209</Source>
+    <Source of="Dia da Autonomia (Madeira, since 2025)">https://diariodarepublica.pt/dr/detalhe/decreto-legislativo-regional/17-2024-900164436</Source>
+    <Source of="municipal holidays">https://www.aspl.pt/images/aspl_pdfs/Feriados%20Municipais%20Nacionais.pdf</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:PT</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:PT</Source>
   </Sources>
@@ -39,13 +52,15 @@
 
     <SubConfigurations hierarchy="ALB" description="Albergaria-a-Velha">
       <Holidays>
-        <!-- Monday after the third Sunday of August -->
+        <RelativeToWeekdayInMonth weekday="MONDAY" when="AFTER" descriptionPropertiesKey="CITY_DAY">
+          <FixedWeekday which="THIRD" weekday="SUNDAY" month="AUGUST"/>
+        </RelativeToWeekdayInMonth>
       </Holidays>
     </SubConfigurations>
 
     <SubConfigurations hierarchy="AND" description="Anadia">
       <Holidays>
-        <!-- ASCENSION THURSDAY -->
+        <ChristianHoliday type="ASCENSION_DAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -87,7 +102,7 @@
 
     <SubConfigurations hierarchy="MLD" description="Mealhada">
       <Holidays>
-        <!-- ASCENSION THURSDAY -->
+        <ChristianHoliday type="ASCENSION_DAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -99,7 +114,7 @@
 
     <SubConfigurations hierarchy="OAZ" description="Oliveira de Azeméis">
       <Holidays>
-        <!-- Second Monday of August -->
+        <FixedWeekday which="SECOND" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="CITY_DAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -141,13 +156,16 @@
 
     <SubConfigurations hierarchy="OBR" description="Oliveira do Bairro">
       <Holidays>
-        <!-- ASCENSION THURSDAY -->
+        <ChristianHoliday type="ASCENSION_DAY"/>
       </Holidays>
     </SubConfigurations>
   </SubConfigurations>
 
-  <SubConfigurations hierarchy="20" description="Azoren">
-    <Holidays/>
+  <SubConfigurations hierarchy="20" description="Açores">
+    <Holidays>
+      <!-- Dia da Região Autónoma dos Açores on Whit Monday (Decreto Regional 13/80/A) -->
+      <ChristianHoliday type="WHIT_MONDAY" descriptionPropertiesKey="AZORES_DAY"/>
+    </Holidays>
 
     <SubConfigurations hierarchy="VFC" description="Vila Franca do Campo">
       <Holidays>
@@ -181,7 +199,10 @@
 
     <SubConfigurations hierarchy="SCG" description="Santa Cruz da Graciosa">
       <Holidays>
-        <Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
+        <!-- Senhor Santo Cristo dos Milagres: Monday after the second Sunday of August -->
+        <RelativeToWeekdayInMonth weekday="MONDAY" when="AFTER" descriptionPropertiesKey="CITY_DAY">
+          <FixedWeekday which="SECOND" weekday="SUNDAY" month="AUGUST"/>
+        </RelativeToWeekdayInMonth>
       </Holidays>
     </SubConfigurations>
 
@@ -199,19 +220,28 @@
 
     <SubConfigurations hierarchy="PVC" description="Povoação">
       <Holidays>
-        <Fixed month="JULY" day="3" descriptionPropertiesKey="CITY_DAY"/>
+        <!-- Oitava do Corpo de Deus: Friday after Corpus Christi -->
+        <RelativeToEasterSunday descriptionPropertiesKey="CITY_DAY">
+          <chronology>GREGORIAN</chronology>
+          <days>61</days>
+        </RelativeToEasterSunday>
       </Holidays>
     </SubConfigurations>
 
     <SubConfigurations hierarchy="PDL" description="Ponta Delgada">
       <Holidays>
-        <!-- Sixth Monday after Easter -->
+        <RelativeToEasterSunday descriptionPropertiesKey="CITY_DAY">
+          <chronology>GREGORIAN</chronology>
+          <days>36</days>
+        </RelativeToEasterSunday>
       </Holidays>
     </SubConfigurations>
 
     <SubConfigurations hierarchy="NRD" description="Nordeste">
       <Holidays>
-        <Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
+        <!-- founding of the municipality on 1514-07-18; in practice often observed
+             on the Monday after the festivities weekend closest to July 18 -->
+        <Fixed month="JULY" day="18" descriptionPropertiesKey="CITY_DAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -229,7 +259,8 @@
 
     <SubConfigurations hierarchy="LGF" description="Lajes das Flores">
       <Holidays>
-        <Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
+        <!-- Nossa Senhora do Rosário: third Monday of July -->
+        <FixedWeekday which="THIRD" weekday="MONDAY" month="JULY" descriptionPropertiesKey="CITY_DAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -247,7 +278,7 @@
 
     <SubConfigurations hierarchy="CRV" description="Corvo">
       <Holidays>
-        <Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
+        <Fixed month="JUNE" day="20" descriptionPropertiesKey="CITY_DAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -269,13 +300,14 @@
 
     <SubConfigurations hierarchy="VDG" description="Vidigueira">
       <Holidays>
-        <!-- ASCENSION THURSDAY -->
+        <ChristianHoliday type="ASCENSION_DAY"/>
       </Holidays>
     </SubConfigurations>
 
     <SubConfigurations hierarchy="SRP" description="Serpa">
       <Holidays>
-        <Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
+        <!-- Nossa Senhora de Guadalupe: Easter Tuesday -->
+        <ChristianHoliday type="EASTER_TUESDAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -318,13 +350,12 @@
     <SubConfigurations hierarchy="CVR" description="Castro Verde">
       <Holidays>
         <Fixed month="JUNE" day="29" descriptionPropertiesKey="CITY_DAY"/>
-        <!-- ASCENSION THURSDAY -->
       </Holidays>
     </SubConfigurations>
 
     <SubConfigurations hierarchy="BJA" description="Beja">
       <Holidays>
-        <!-- ASCENSION THURSDAY -->
+        <ChristianHoliday type="ASCENSION_DAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -336,7 +367,7 @@
 
     <SubConfigurations hierarchy="AVT" description="Alvito">
       <Holidays>
-        <!-- ASCENSION THURSDAY -->
+        <ChristianHoliday type="ASCENSION_DAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -362,12 +393,6 @@
       </Holidays>
     </SubConfigurations>
 
-    <SubConfigurations hierarchy="ANS" description="Ansião">
-      <Holidays>
-        <!-- ASCENSION THURSDAY -->
-      </Holidays>
-    </SubConfigurations>
-
     <SubConfigurations hierarchy="BCL" description="Barcelos">
       <Holidays>
         <Fixed month="MAY" day="3" descriptionPropertiesKey="CITY_DAY"/>
@@ -380,27 +405,15 @@
       </Holidays>
     </SubConfigurations>
 
-    <SubConfigurations hierarchy="BGC" description="Bragança">
-      <Holidays>
-        <Fixed month="AUGUST" day="22" descriptionPropertiesKey="CITY_DAY"/>
-      </Holidays>
-    </SubConfigurations>
-
     <SubConfigurations hierarchy="CBC" description="Cabeceiras de Basto">
       <Holidays>
         <Fixed month="SEPTEMBER" day="29" descriptionPropertiesKey="CITY_DAY"/>
       </Holidays>
     </SubConfigurations>
 
-    <SubConfigurations hierarchy="CDV" description="Cadaval">
-      <Holidays>
-        <Fixed month="JANUARY" day="13" descriptionPropertiesKey="CITY_DAY"/>
-      </Holidays>
-    </SubConfigurations>
-
     <SubConfigurations hierarchy="CBT" description="Celorico de Basto">
       <Holidays>
-        <Fixed month="JUNE" day="29" descriptionPropertiesKey="CITY_DAY"/>
+        <Fixed month="JULY" day="25" descriptionPropertiesKey="CITY_DAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -430,13 +443,15 @@
 
     <SubConfigurations hierarchy="TBR" description="Terras de Bouro">
       <Holidays>
-        <Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
+        <Fixed month="OCTOBER" day="20" descriptionPropertiesKey="CITY_DAY"/>
       </Holidays>
     </SubConfigurations>
 
     <SubConfigurations hierarchy="VRM" description="Vieira do Minho">
       <Holidays>
-        <!-- Monday after the first Sunday of October -->
+        <RelativeToWeekdayInMonth weekday="MONDAY" when="AFTER" descriptionPropertiesKey="CITY_DAY">
+          <FixedWeekday which="FIRST" weekday="SATURDAY" month="OCTOBER"/>
+        </RelativeToWeekdayInMonth>
       </Holidays>
     </SubConfigurations>
 
@@ -464,6 +479,12 @@
     <SubConfigurations hierarchy="AFE" description="Alfândega da Fé">
       <Holidays>
         <Fixed month="JUNE" day="29" descriptionPropertiesKey="CITY_DAY"/>
+      </Holidays>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="BGC" description="Bragança">
+      <Holidays>
+        <Fixed month="AUGUST" day="22" descriptionPropertiesKey="CITY_DAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -540,7 +561,10 @@
 
     <SubConfigurations hierarchy="CTB" description="Castelo Branco">
       <Holidays>
-        <!-- Tuesday of the second week after Easter -->
+        <RelativeToEasterSunday descriptionPropertiesKey="CITY_DAY">
+          <chronology>GREGORIAN</chronology>
+          <days>16</days>
+        </RelativeToEasterSunday>
       </Holidays>
     </SubConfigurations>
 
@@ -558,13 +582,16 @@
 
     <SubConfigurations hierarchy="IDN" description="Idanha-a-Nova">
       <Holidays>
-        <!-- Third Monday after Easter -->
+        <RelativeToEasterSunday descriptionPropertiesKey="CITY_DAY">
+          <chronology>GREGORIAN</chronology>
+          <days>15</days>
+        </RelativeToEasterSunday>
       </Holidays>
     </SubConfigurations>
 
     <SubConfigurations hierarchy="OLR" description="Oleiros">
       <Holidays>
-        <!-- Second Monday of August -->
+        <FixedWeekday which="SECOND" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="CITY_DAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -588,13 +615,15 @@
 
     <SubConfigurations hierarchy="VLR" description="Vila de Rei">
       <Holidays>
-        <Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
+        <Fixed month="SEPTEMBER" day="19" descriptionPropertiesKey="CITY_DAY"/>
       </Holidays>
     </SubConfigurations>
 
     <SubConfigurations hierarchy="VVR" description="Vila Velha de Ródão">
       <Holidays>
-        <!-- Monday after the fourth Sunday of August -->
+        <RelativeToWeekdayInMonth weekday="MONDAY" when="AFTER" descriptionPropertiesKey="CITY_DAY">
+          <FixedWeekday which="FOURTH" weekday="SUNDAY" month="AUGUST"/>
+        </RelativeToWeekdayInMonth>
       </Holidays>
     </SubConfigurations>
 
@@ -710,13 +739,16 @@
     <Holidays/>
     <SubConfigurations hierarchy="ADL" description="Alandroal">
       <Holidays>
-        <!-- Second Monday after Easter -->
+        <RelativeToEasterSunday descriptionPropertiesKey="CITY_DAY">
+          <chronology>GREGORIAN</chronology>
+          <days>8</days>
+        </RelativeToEasterSunday>
       </Holidays>
     </SubConfigurations>
 
     <SubConfigurations hierarchy="ARL" description="Arraiolos">
       <Holidays>
-        <!-- ASCENSION THURSDAY -->
+        <ChristianHoliday type="ASCENSION_DAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -728,7 +760,7 @@
 
     <SubConfigurations hierarchy="ETZ" description="Estremoz">
       <Holidays>
-        <!-- ASCENSION THURSDAY -->
+        <ChristianHoliday type="ASCENSION_DAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -843,19 +875,19 @@
 
     <SubConfigurations hierarchy="LLE" description="Loulé">
       <Holidays>
-        <!-- ASCENSION THURSDAY -->
+        <ChristianHoliday type="ASCENSION_DAY"/>
       </Holidays>
     </SubConfigurations>
 
     <SubConfigurations hierarchy="MCQ" description="Monchique">
       <Holidays>
-        <!-- ASCENSION THURSDAY -->
+        <ChristianHoliday type="ASCENSION_DAY"/>
       </Holidays>
     </SubConfigurations>
 
     <SubConfigurations hierarchy="OLH" description="Olhão">
       <Holidays>
-        <Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
+        <Fixed month="JUNE" day="16" descriptionPropertiesKey="CITY_DAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -885,7 +917,7 @@
 
     <SubConfigurations hierarchy="VBP" description="Vila do Bispo">
       <Holidays>
-        <Fixed month="SEPTEMBER" day="20" descriptionPropertiesKey="CITY_DAY"/>
+        <Fixed month="JANUARY" day="22" descriptionPropertiesKey="CITY_DAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -900,7 +932,7 @@
     <Holidays/>
     <SubConfigurations hierarchy="AGB" description="Aguiar da Beira">
       <Holidays>
-        <Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
+        <Fixed month="FEBRUARY" day="10" descriptionPropertiesKey="CITY_DAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -912,7 +944,7 @@
 
     <SubConfigurations hierarchy="CLB" description="Celorico da Beira">
       <Holidays>
-        <Fixed month="MAY" day="13" descriptionPropertiesKey="CITY_DAY"/>
+        <Fixed month="MAY" day="23" descriptionPropertiesKey="CITY_DAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -930,7 +962,7 @@
 
     <SubConfigurations hierarchy="GVA" description="Gouveia">
       <Holidays>
-        <!-- Second Monday of August -->
+        <FixedWeekday which="SECOND" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="CITY_DAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -960,7 +992,10 @@
 
     <SubConfigurations hierarchy="SBG" description="Sabugal">
       <Holidays>
-        <!-- Second Monday after Easter -->
+        <RelativeToEasterSunday descriptionPropertiesKey="CITY_DAY">
+          <chronology>GREGORIAN</chronology>
+          <days>8</days>
+        </RelativeToEasterSunday>
       </Holidays>
     </SubConfigurations>
 
@@ -998,6 +1033,12 @@
       </Holidays>
     </SubConfigurations>
 
+    <SubConfigurations hierarchy="ANS" description="Ansião">
+      <Holidays>
+        <ChristianHoliday type="ASCENSION_DAY"/>
+      </Holidays>
+    </SubConfigurations>
+
     <SubConfigurations hierarchy="BTL" description="Batalha">
       <Holidays>
         <Fixed month="AUGUST" day="14" descriptionPropertiesKey="CITY_DAY"/>
@@ -1018,7 +1059,7 @@
 
     <SubConfigurations hierarchy="CPR" description="Castanheira de Pera">
       <Holidays>
-        <Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
+        <Fixed month="JULY" day="4" descriptionPropertiesKey="CITY_DAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -1036,7 +1077,7 @@
 
     <SubConfigurations hierarchy="MGR" description="Marinha Grande">
       <Holidays>
-        <!-- ASCENSION THURSDAY -->
+        <ChristianHoliday type="ASCENSION_DAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -1054,13 +1095,15 @@
 
     <SubConfigurations hierarchy="PGR" description="Pedrógão Grande">
       <Holidays>
-        <Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
+        <Fixed month="JULY" day="24" descriptionPropertiesKey="CITY_DAY"/>
       </Holidays>
     </SubConfigurations>
 
     <SubConfigurations hierarchy="PNI" description="Peniche">
       <Holidays>
-        <!-- Monday after the first Sunday of August -->
+        <RelativeToWeekdayInMonth weekday="MONDAY" when="AFTER" descriptionPropertiesKey="CITY_DAY">
+          <FixedWeekday which="FIRST" weekday="SUNDAY" month="AUGUST"/>
+        </RelativeToWeekdayInMonth>
       </Holidays>
     </SubConfigurations>
 
@@ -1077,13 +1120,12 @@
     </SubConfigurations>
   </SubConfigurations>
 
-  <SubConfigurations hierarchy="11" description="Lissabon">
+  <SubConfigurations hierarchy="11" description="Lisboa">
     <Holidays/>
 
     <SubConfigurations hierarchy="ALQ" description="Alenquer">
       <Holidays>
-        <Fixed month="JUNE" day="2" descriptionPropertiesKey="CITY_DAY"/>
-        <!-- ASCENSION THURSDAY -->
+        <ChristianHoliday type="ASCENSION_DAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -1095,13 +1137,19 @@
 
     <SubConfigurations hierarchy="ARV" description="Arruda dos Vinhos">
       <Holidays>
-        <!-- ASCENSION THURSDAY -->
+        <ChristianHoliday type="ASCENSION_DAY"/>
       </Holidays>
     </SubConfigurations>
 
     <SubConfigurations hierarchy="AZB" description="Azambuja">
       <Holidays>
-        <!-- ASCENSION THURSDAY -->
+        <ChristianHoliday type="ASCENSION_DAY"/>
+      </Holidays>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="CDV" description="Cadaval">
+      <Holidays>
+        <Fixed month="JANUARY" day="13" descriptionPropertiesKey="CITY_DAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -1131,7 +1179,7 @@
 
     <SubConfigurations hierarchy="MFR" description="Mafra">
       <Holidays>
-        <!-- ASCENSION THURSDAY -->
+        <ChristianHoliday type="ASCENSION_DAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -1155,25 +1203,32 @@
 
     <SubConfigurations hierarchy="SMA" description="Sobral de Monte Agraço">
       <Holidays>
-        <!-- ASCENSION THURSDAY -->
+        <ChristianHoliday type="ASCENSION_DAY"/>
       </Holidays>
     </SubConfigurations>
 
     <SubConfigurations hierarchy="TVD" description="Torres Vedras">
       <Holidays>
-        <Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
+        <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="CITY_DAY"/>
       </Holidays>
     </SubConfigurations>
 
     <SubConfigurations hierarchy="VFX" description="Vila Franca de Xira">
       <Holidays>
-        <!-- ASCENSION THURSDAY -->
+        <ChristianHoliday type="ASCENSION_DAY"/>
       </Holidays>
     </SubConfigurations>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="30" description="Madeira">
-    <Holidays/>
+    <Holidays>
+      <!-- Dia da Autonomia since 2025 (Decreto Legislativo Regional 17/2024/M) -->
+      <Fixed month="APRIL" day="2" validFrom="2025" descriptionPropertiesKey="AUTONOMY_DAY"/>
+      <!-- Dia da Região Autónoma da Madeira e das Comunidades Madeirenses (Decreto Regional 27/79/M) -->
+      <Fixed month="JULY" day="1" descriptionPropertiesKey="MADEIRA_DAY"/>
+      <!-- Primeira Oitava (Decreto Legislativo Regional 18/2002/M) -->
+      <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="FIRST_OCTAVE"/>
+    </Holidays>
 
     <SubConfigurations hierarchy="CLT" description="Calheta">
       <Holidays>
@@ -1183,7 +1238,7 @@
 
     <SubConfigurations hierarchy="CML" description="Câmara de Lobos">
       <Holidays>
-        <Fixed month="OCTOBER" day="16" descriptionPropertiesKey="CITY_DAY"/>
+        <Fixed month="OCTOBER" day="4" descriptionPropertiesKey="CITY_DAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -1195,7 +1250,7 @@
 
     <SubConfigurations hierarchy="MCH" description="Machico">
       <Holidays>
-        <Fixed month="OCTOBER" day="9" descriptionPropertiesKey="CITY_DAY"/>
+        <Fixed month="MAY" day="8" descriptionPropertiesKey="CITY_DAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -1247,7 +1302,7 @@
 
     <SubConfigurations hierarchy="ALT" description="Alter do Chão">
       <Holidays>
-        <!-- ASCENSION THURSDAY -->
+        <ChristianHoliday type="ASCENSION_DAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -1307,7 +1362,10 @@
 
     <SubConfigurations hierarchy="MFT" description="Monforte">
       <Holidays>
-        <!-- Second Monday after Easter -->
+        <RelativeToEasterSunday descriptionPropertiesKey="CITY_DAY">
+          <chronology>GREGORIAN</chronology>
+          <days>8</days>
+        </RelativeToEasterSunday>
       </Holidays>
     </SubConfigurations>
 
@@ -1359,19 +1417,26 @@
 
     <SubConfigurations hierarchy="GDM" description="Gondomar">
       <Holidays>
-        <!-- Monday after the first Sunday of October -->
+        <RelativeToWeekdayInMonth weekday="MONDAY" when="AFTER" descriptionPropertiesKey="CITY_DAY">
+          <FixedWeekday which="FIRST" weekday="SUNDAY" month="OCTOBER"/>
+        </RelativeToWeekdayInMonth>
       </Holidays>
     </SubConfigurations>
 
     <SubConfigurations hierarchy="LOU" description="Lousada">
       <Holidays>
-        <Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
+        <!-- Senhor dos Aflitos: Monday after the last Sunday of July -->
+        <RelativeToWeekdayInMonth weekday="MONDAY" when="AFTER" descriptionPropertiesKey="CITY_DAY">
+          <FixedWeekday which="LAST" weekday="SUNDAY" month="JULY"/>
+        </RelativeToWeekdayInMonth>
       </Holidays>
     </SubConfigurations>
 
     <SubConfigurations hierarchy="MAI" description="Maia">
       <Holidays>
-        <!-- Monday after the second Sunday of June -->
+        <RelativeToWeekdayInMonth weekday="MONDAY" when="AFTER" descriptionPropertiesKey="CITY_DAY">
+          <FixedWeekday which="SECOND" weekday="SUNDAY" month="JULY"/>
+        </RelativeToWeekdayInMonth>
       </Holidays>
     </SubConfigurations>
 
@@ -1383,7 +1448,10 @@
 
     <SubConfigurations hierarchy="MTS" description="Matosinhos">
       <Holidays>
-        <!-- Tuesday after the Pentecost Sunday -->
+        <RelativeToEasterSunday descriptionPropertiesKey="CITY_DAY">
+          <chronology>GREGORIAN</chronology>
+          <days>51</days>
+        </RelativeToEasterSunday>
       </Holidays>
     </SubConfigurations>
 
@@ -1395,7 +1463,10 @@
 
     <SubConfigurations hierarchy="PRD" description="Paredes">
       <Holidays>
-        <Fixed month="JUNE" day="20" descriptionPropertiesKey="CITY_DAY"/>
+        <!-- Divino Salvador: Monday after the third Sunday of July -->
+        <RelativeToWeekdayInMonth weekday="MONDAY" when="AFTER" descriptionPropertiesKey="CITY_DAY">
+          <FixedWeekday which="THIRD" weekday="SUNDAY" month="JULY"/>
+        </RelativeToWeekdayInMonth>
       </Holidays>
     </SubConfigurations>
 
@@ -1407,7 +1478,7 @@
 
     <SubConfigurations hierarchy="PRT" description="Porto">
       <Holidays>
-        <Fixed month="JUNE" day="1" descriptionPropertiesKey="CITY_DAY"/>
+        <Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -1459,13 +1530,13 @@
 
     <SubConfigurations hierarchy="ACN" description="Alcanena">
       <Holidays>
-        <!-- ASCENSION THURSDAY -->
+        <ChristianHoliday type="ASCENSION_DAY"/>
       </Holidays>
     </SubConfigurations>
 
     <SubConfigurations hierarchy="ALR" description="Almeirim">
       <Holidays>
-        <!-- ASCENSION THURSDAY -->
+        <ChristianHoliday type="ASCENSION_DAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -1477,19 +1548,19 @@
 
     <SubConfigurations hierarchy="BNV" description="Benavente">
       <Holidays>
-        <!-- ASCENSION THURSDAY -->
+        <ChristianHoliday type="ASCENSION_DAY"/>
       </Holidays>
     </SubConfigurations>
 
     <SubConfigurations hierarchy="CTX" description="Cartaxo">
       <Holidays>
-        <!-- ASCENSION THURSDAY -->
+        <ChristianHoliday type="ASCENSION_DAY"/>
       </Holidays>
     </SubConfigurations>
 
     <SubConfigurations hierarchy="CHM" description="Chamusca">
       <Holidays>
-        <!-- ASCENSION THURSDAY -->
+        <ChristianHoliday type="ASCENSION_DAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -1519,7 +1590,7 @@
 
     <SubConfigurations hierarchy="GLG" description="Golegã">
       <Holidays>
-        <!-- ASCENSION THURSDAY -->
+        <ChristianHoliday type="ASCENSION_DAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -1543,7 +1614,7 @@
 
     <SubConfigurations hierarchy="SMG" description="Salvaterra de Magos">
       <Holidays>
-        <!-- ASCENSION THURSDAY -->
+        <ChristianHoliday type="ASCENSION_DAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -1567,7 +1638,7 @@
 
     <SubConfigurations hierarchy="TNV" description="Torres Novas">
       <Holidays>
-        <!-- ASCENSION THURSDAY -->
+        <ChristianHoliday type="ASCENSION_DAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -1613,7 +1684,9 @@
 
     <SubConfigurations hierarchy="MTA" description="Moita">
       <Holidays>
-        <!-- Tuesday after the second Sunday of September -->
+        <RelativeToWeekdayInMonth weekday="TUESDAY" when="AFTER" descriptionPropertiesKey="CITY_DAY">
+          <FixedWeekday which="SECOND" weekday="SUNDAY" month="SEPTEMBER"/>
+        </RelativeToWeekdayInMonth>
       </Holidays>
     </SubConfigurations>
 
@@ -1664,7 +1737,7 @@
     <Holidays/>
     <SubConfigurations hierarchy="AVV" description="Arcos de Valdevez">
       <Holidays>
-        <Fixed month="JUNE" day="11" descriptionPropertiesKey="CITY_DAY"/>
+        <Fixed month="JULY" day="11" descriptionPropertiesKey="CITY_DAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -1676,13 +1749,13 @@
 
     <SubConfigurations hierarchy="MLG" description="Melgaço">
       <Holidays>
-        <!-- ASCENSION THURSDAY -->
+        <ChristianHoliday type="ASCENSION_DAY"/>
       </Holidays>
     </SubConfigurations>
 
     <SubConfigurations hierarchy="MNC" description="Monção">
       <Holidays>
-        <ChristianHoliday type="EASTER_MONDAY"/>
+        <Fixed month="MARCH" day="12" descriptionPropertiesKey="CITY_DAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -1752,7 +1825,7 @@
 
     <SubConfigurations hierarchy="MDB" description="Mondim de Basto">
       <Holidays>
-        <Fixed month="JUNE" day="25" descriptionPropertiesKey="CITY_DAY"/>
+        <Fixed month="JULY" day="25" descriptionPropertiesKey="CITY_DAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -1806,7 +1879,7 @@
 
     <SubConfigurations hierarchy="VRL" description="Vila Real">
       <Holidays>
-        <Fixed month="MAY" day="13" descriptionPropertiesKey="CITY_DAY"/>
+        <Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
       </Holidays>
     </SubConfigurations>
   </SubConfigurations>
@@ -1822,7 +1895,8 @@
 
     <SubConfigurations hierarchy="CRS" description="Carregal do Sal">
       <Holidays>
-        <Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
+        <!-- Nossa Senhora das Febres: third Monday of July -->
+        <FixedWeekday which="THIRD" weekday="MONDAY" month="JULY" descriptionPropertiesKey="CITY_DAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -1858,7 +1932,7 @@
 
     <SubConfigurations hierarchy="MRT" description="Mortágua">
       <Holidays>
-        <!-- ASCENSION THURSDAY -->
+        <ChristianHoliday type="ASCENSION_DAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -1876,7 +1950,7 @@
 
     <SubConfigurations hierarchy="PCT" description="Penalva do Castelo">
       <Holidays>
-        <Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
+        <Fixed month="AUGUST" day="25" descriptionPropertiesKey="CITY_DAY"/>
       </Holidays>
     </SubConfigurations>
 
@@ -1894,13 +1968,13 @@
 
     <SubConfigurations hierarchy="SCD" description="Santa Comba Dão">
       <Holidays>
-        <Fixed month="MAY" day="3" descriptionPropertiesKey="CITY_DAY"/>
+        <ChristianHoliday type="ASCENSION_DAY"/>
       </Holidays>
     </SubConfigurations>
 
     <SubConfigurations hierarchy="SJP" description="São João da Pesqueira">
       <Holidays>
-        <Fixed month="JUNE" day="13" descriptionPropertiesKey="CITY_DAY"/>
+        <Fixed month="JUNE" day="24" descriptionPropertiesKey="CITY_DAY"/>
       </Holidays>
     </SubConfigurations>
 
