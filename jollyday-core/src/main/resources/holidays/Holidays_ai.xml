@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="ai" description="Anguilla"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <!-- Public Holidays Regulations, R.R.A. P130-1: falling on Saturday or Sunday is taken
+         in lieu on the following Monday, unless noted otherwise below. -->
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <Fixed month="MARCH" day="2" validFrom="2010" descriptionPropertiesKey="JAMES_RONALD_WEBSTER_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- KNOWN LIMITATION: in years where Whit Monday (Easter + 50 days) would coincide with
+         30 May itself, or with the Monday this holiday would otherwise be moved to, the actual
+         government proclamation moves Anguilla Day to the Tuesday instead, to avoid two
+         holidays on the same day. Jollyday's MovingCondition cannot reference another
+         holiday's computed date, so that cross-holiday case is not modeled here; this holiday
+         always uses the plain Saturday/Sunday -> Monday rule. -->
+    <Fixed month="MAY" day="30" descriptionPropertiesKey="ANGUILLA_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- For Queen Elizabeth II's Platinum Jubilee year, the Queen's Birthday was observed on
+         Friday 3 June 2022 instead of the usual second-Monday-in-June date. The official
+         Ministry of Home Affairs circular for 2023 (dated 2 Nov 2022) lists no Queen's/King's
+         Birthday holiday at all that year - it appears to have been skipped for 2023. -->
+    <Fixed month="JUNE" day="3" validFrom="2022" validTo="2022" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
+
+    <!-- Confirmed via the official gov.ai holiday pages archived for 2024 (Mon 17 June) and
+         2025 (Mon 16 June), both the third Monday in June (see FixedWeekday below). The
+         government departed from that pattern again in 2026 (Mon 22 June, the FOURTH Monday) -
+         no reliable formula could be confirmed for 2026 or later, so only the verified 2026
+         date is modeled and later years are left unmodeled rather than guessed. -->
+    <Fixed month="JUNE" day="22" validFrom="2026" validTo="2026" descriptionPropertiesKey="KINGS_BIRTHDAY"/>
+
+    <!-- Renamed from Separation Day to National Heroes and Heroines Day (also referred to as
+         National Jollification Day) from 2011. This holiday moves to the PRECEDING Friday when
+         it falls on a weekend - the only Anguilla holiday that moves backward instead of forward. -->
+    <Fixed month="DECEMBER" day="19" validFrom="2011" descriptionPropertiesKey="NATIONAL_HEROES_AND_HEROINES_DAY">
+      <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <MovingCondition substitute="SUNDAY" with="PREVIOUS" weekday="FRIDAY"/>
+    </Fixed>
+    <Fixed month="DECEMBER" day="19" validTo="2010" descriptionPropertiesKey="SEPARATION">
+      <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <MovingCondition substitute="SUNDAY" with="PREVIOUS" weekday="FRIDAY"/>
+    </Fixed>
+
+    <!-- Christmas Day and Boxing Day each move independently based on their own raw weekday:
+         Saturday -> the following Monday, Sunday -> the following Tuesday (skipping Monday).
+         This asymmetric rule keeps the pair from ever landing on the same observed day - e.g.
+         in 2022 Christmas Day (a Sunday) was observed Tuesday 27 Dec, while Boxing Day (the
+         following Monday) was observed on its own natural date of Monday 26 Dec. -->
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+
+    <FixedWeekday which="SECOND" weekday="MONDAY" month="JUNE" validTo="2021" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
+    <FixedWeekday which="THIRD" weekday="MONDAY" month="JUNE" validFrom="2024" validTo="2025" descriptionPropertiesKey="KINGS_BIRTHDAY"/>
+    <FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="AUGUST_MONDAY"/>
+
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY"/>
+    <ChristianHoliday type="WHIT_MONDAY"/>
+
+    <!-- August Thursday and Constitution Day are the Thursday and Friday of the same week as
+         August Monday (the first Monday in August), i.e. 3 and 4 days after it respectively. -->
+    <FixedWeekdayRelativeToFixed which="FIRST" weekday="THURSDAY" when="AFTER" descriptionPropertiesKey="AUGUST_THURSDAY">
+      <day month="AUGUST" day="3"/>
+    </FixedWeekdayRelativeToFixed>
+    <FixedWeekdayRelativeToFixed which="FIRST" weekday="FRIDAY" when="AFTER" descriptionPropertiesKey="CONSTITUTION_DAY">
+      <day month="AUGUST" day="4"/>
+    </FixedWeekdayRelativeToFixed>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Anguilla</Source>
+    <Source of="Public Holidays Regulations R.R.A. P130-1 (2000 revision)">https://web.archive.org/web/20250611054639/https://laws.gov.ai/storage/pdfs/2000%20AXA%20Revised%20Statutes%20and%20Regulations/PDF%20(Regulations)/P-R.R.A.s/P130-Public%20Holidays%20Regulations.pdf</Source>
+    <Source of="Public Holidays Regulations R.R.A. P130-1 (2010 revision)">https://web.archive.org/web/20250611055143/https://laws.gov.ai/storage/pdfs/2010%20AXA%20Revised%20Statutes%20and%20Regulations/PDF%20(Regulations)/P-R.R.A.s/P130-Public%20Holidays%20Regulations.pdf</Source>
+    <Source of="Ministry of Home Affairs Circular No. 3 of 2 November 2022 - Public Holidays for 2023">http://www.gov.ai/document/Public%20Holidays%202023%20Revised%20List.pdf</Source>
+    <Source of="Government of Anguilla - Public Holidays for 2024 (archived)">https://web.archive.org/web/20241004074741/https://www.gov.ai/service/public-holidays-for-2024</Source>
+    <Source of="Government of Anguilla - Public Holidays for 2025 (archived)">https://web.archive.org/web/20250425025259/https://www.gov.ai/service/public-holidays-for-2025</Source>
+    <Source of="Government of Anguilla - Public Holidays for 2026">https://www.gov.ai/service/public-holidays-for-2026</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:AI</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:AI</Source>
+  </Sources>
+</Configuration>
