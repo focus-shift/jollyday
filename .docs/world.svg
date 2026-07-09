@@ -1114,7 +1114,7 @@
     <path d="M1933 505.3l-0.2 0-0.1-0.3 0.3 0 0 0.3z" name="Nauru">
     </path>
   </g>
-  <g class="country" data-iso="PW">
+  <g class="country active" data-iso="PW">
     <title>Palau</title>
     <path d="M1747.7 453.1l-0.2 0.4 0.1 0.1-0.2 0.6 0.1 0.2-0.5 0.2-0.2-0.7 0.3-0.2-0.2-0.2 0.3-0.6 0.3-0.1 0.2 0.3z" name="Palau">
     </path>
