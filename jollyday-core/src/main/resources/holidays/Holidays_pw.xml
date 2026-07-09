@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="pw" description="Palau"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <!-- Palau National Code, Chapter 7 (Holidays), Section 701: "If any of the holidays
+         enumerated in section 701 of this chapter falls on Sunday, the following Monday shall
+         be observed as a holiday. If any of the holidays enumerated in section 701 of this
+         chapter falls on Saturday, the preceding Friday shall be observed as a holiday." -->
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
+      <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <Fixed month="MARCH" day="15" descriptionPropertiesKey="YOUTH_DAY">
+      <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <Fixed month="MAY" day="5" descriptionPropertiesKey="SENIOR_CITIZENS_DAY">
+      <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- No record of this being a legal holiday before 2017 (Republic of Palau Public Law
+         No. 10-15), so it is assumed to start in 2018, the first full calendar year after. -->
+    <Fixed month="JUNE" day="1" validFrom="2018" descriptionPropertiesKey="PRESIDENTS_DAY">
+      <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <Fixed month="JULY" day="9" descriptionPropertiesKey="CONSTITUTION_DAY">
+      <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- No record of this being a legal holiday before 2017 (Republic of Palau Public Law
+         No. 10-15), so it is assumed to start in 2018, the first full calendar year after. -->
+    <Fixed month="OCTOBER" day="1" validFrom="2018" descriptionPropertiesKey="INDEPENDENCE_DAY">
+      <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <Fixed month="OCTOBER" day="24" descriptionPropertiesKey="UNITED_NATIONS_DAY">
+      <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- One-off public holiday declared for the 2020 U.S. presidential election. -->
+    <Fixed month="NOVEMBER" day="3" validFrom="2020" validTo="2020" descriptionPropertiesKey="NATIONAL_DAY_OF_DEMOCRACY"/>
+
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS">
+      <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- Repealed by Executive Order 336 after 2012. -->
+    <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" validFrom="2011" validTo="2012" descriptionPropertiesKey="MEMORIAL_DAY"/>
+
+    <FixedWeekday which="FIRST" weekday="MONDAY" month="SEPTEMBER" descriptionPropertiesKey="LABOUR_DAY"/>
+
+    <FixedWeekday which="FOURTH" weekday="THURSDAY" month="NOVEMBER" descriptionPropertiesKey="THANKSGIVING"/>
+
+    <!-- Established by Republic of Palau Public Law No. 10-15. -->
+    <FixedWeekday which="FOURTH" weekday="FRIDAY" month="NOVEMBER" validFrom="2017" descriptionPropertiesKey="FAMILY_DAY"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Palau</Source>
+    <Source of="Palau National Code, Chapter 7 - Holidays">https://web.archive.org/web/20250130144425/http://www.paclii.org/pw/legis/consol_act/gpt1262/</Source>
+    <Source of="RPPL No. 10-15 re. Family Day Holiday">https://web.archive.org/web/20240627055859/https://www.palaugov.pw/wp-content/uploads/2017/11/RPPL-No.-10-15-re.-Family-Day-Holiday.pdf</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:PW</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:PW</Source>
+  </Sources>
+</Configuration>
