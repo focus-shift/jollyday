@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="gd" description="Grenada"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <!-- Bank Holidays Act, Chapter 25: "When any of the above days falls on a Sunday, the
+         Monday immediately next following shall be a Bank Holiday." No Saturday rule exists. -->
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <Fixed month="FEBRUARY" day="7" descriptionPropertiesKey="INDEPENDENCE_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- 2025 was the first year Emancipation Day was observed on the fixed date of 1 August;
+         previously it was observed on the first Monday in August (see FixedWeekday below). -->
+    <Fixed month="AUGUST" day="1" validFrom="2025" descriptionPropertiesKey="EMANCIPATION_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- Declared a public holiday from 2023 onward, commemorating the 19 October 1983 killing
+         of Prime Minister Maurice Bishop and members of his cabinet. -->
+    <Fixed month="OCTOBER" day="19" validFrom="2023" descriptionPropertiesKey="NATIONAL_HEROES_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- Commemorates the 1983 United States-led invasion of Grenada. -->
+    <Fixed month="OCTOBER" day="25" descriptionPropertiesKey="THANKSGIVING">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- Superseded by the fixed 1 August date from 2025 onward (see Fixed above). -->
+    <FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST" validTo="2024" descriptionPropertiesKey="EMANCIPATION_DAY"/>
+
+    <!-- Spicemas: "The second Monday in August and from noon the day following which shall be
+         known and referred to as the Carnival August Celebrations." Modeled as two full-day
+         holidays, matching how the public holiday is actually observed in practice. -->
+    <FixedWeekday which="SECOND" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="CARNIVAL_MONDAY"/>
+    <FixedWeekday which="SECOND" weekday="TUESDAY" month="AUGUST" descriptionPropertiesKey="CARNIVAL_TUESDAY"/>
+
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY"/>
+    <ChristianHoliday type="WHIT_MONDAY"/>
+    <ChristianHoliday type="CORPUS_CHRISTI"/>
+  </Holidays>
+
+  <Sources>
+    <Source of="Bank Holidays Act, Chapter 25">https://www.laws.gov.gd/index.php/chapters/b-23-39/54-chapter-25-bank-holidays-act</Source>
+    <Source of="Government of Grenada - Public Holidays 2025">https://www.gov.gd/component/edocman/grenadas-public-holidays-2025/viewdocument/1386</Source>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Grenada</Source>
+    <Source of="Emancipation Day fixed to 1 August from 2025">https://wikigrenada.com/wiki/Grenada_Public_Holidays_2025</Source>
+    <Source of="National Heroes Day introduced 2023">https://nowgrenada.com/2023/10/proclamation-published-to-mark-inaugural-national-heroes-day/</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:GD</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:GD</Source>
+  </Sources>
+</Configuration>
