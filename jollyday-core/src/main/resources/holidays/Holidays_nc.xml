@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="nc" description="New Caledonia"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <!-- Code du travail de Nouvelle-Calédonie, Art. Lp. 232-1: exhaustive list of the twelve
+         legal public holidays, plus Art. Lp. 232-2: "Les heures de travail perdues par suite de
+         chômage des jours fériés ne donnent pas lieu à récupération" - no weekend substitution,
+         same as mainland France and French Guiana. -->
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="MAY" day="8" descriptionPropertiesKey="VICTORY_DAY"/>
+    <Fixed month="JULY" day="14" descriptionPropertiesKey="NATIONAL_DAY"/>
+    <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_MARY"/>
+    <!-- Commemorates 24 September 1853, when France took possession of New Caledonia. -->
+    <Fixed month="SEPTEMBER" day="24" descriptionPropertiesKey="NEW_CALEDONIA_DAY"/>
+    <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
+    <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="ARMISTICE"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+
+    <ChristianHoliday type="EASTER_MONDAY"/>
+    <ChristianHoliday type="ASCENSION_DAY"/>
+    <ChristianHoliday type="WHIT_MONDAY"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_New_Caledonia</Source>
+    <Source of="Code du travail de Nouvelle-Calédonie, Art. Lp. 232-1 et Lp. 232-2">https://www.paie.nc/docs/Code_du_travail_L.pdf</Source>
+    <Source of="Direction du Travail et de l'Emploi - jours fériés chômés">https://dtenc.gouv.nc/reglementation-du-travail/jours-feries-chomes</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:NC</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:NC</Source>
+  </Sources>
+</Configuration>
