@@ -5,31 +5,59 @@
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
   <Holidays>
+    <!-- Arbeidsregeling Curaçao: only Labour Day and King's Day have a codified substitution
+         rule; all other fixed holidays below are observed on their literal date even when it
+         falls on a weekend (the official government holiday page lists, e.g., 1 January 2023
+         and 2 July 2023 as observed on their actual Sunday dates, with no shift). -->
     <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
 
-    <Fixed month="APRIL" day="27" descriptionPropertiesKey="KINGS_DAY"/>
+    <!-- Dutch royal tradition: if 27 April falls on a Sunday, King's Day is moved BACKWARD to
+         the preceding Saturday rather than forward (confirmed for 2025: 27 April was a Sunday,
+         observed Saturday 26 April). -->
+    <Fixed month="APRIL" day="27" descriptionPropertiesKey="KINGS_DAY">
+      <MovingCondition substitute="SUNDAY" with="PREVIOUS" weekday="SATURDAY"/>
+    </Fixed>
 
-    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+    <!-- "Als de Dag van de Arbeid op een zondag valt ..., dan wordt de Dag van de Arbeid op de
+         eerst volgende werkdag gevierd" - confirmed for 2022 (1 May was a Sunday, observed
+         Monday 2 May). -->
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
 
     <Fixed month="JULY" day="2" descriptionPropertiesKey="CURACAO_NATIONAL_FLAG_AND_ANTHEM_DAY"/>
 
-    <Fixed month="OCTOBER" day="10" descriptionPropertiesKey="CURACAO_DAY"/>
+    <!-- Curaçao became an autonomous constituent country of the Kingdom of the Netherlands on
+         10 October 2010, when this day was first observed. -->
+    <Fixed month="OCTOBER" day="10" validFrom="2010" descriptionPropertiesKey="CURACAO_DAY"/>
 
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="SECOND_DAY_OF_CHRISTMAS"/>
-    <Fixed month="DECEMBER" day="31" descriptionPropertiesKey="NEW_YEARS_EVE"/>
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="SECOND_CHRISTMAS_DAY"/>
 
+    <!-- "Ouderjaarsavond" is explicitly listed by the government as "aantal uren" (a number of
+         hours), not a full day off, unlike every other entry above (each listed in whole days) -
+         modeled as an OBSERVANCE rather than a full PUBLIC_HOLIDAY for that reason. -->
+    <Fixed month="DECEMBER" day="31" descriptionPropertiesKey="NEW_YEARS_EVE" localizedType="OBSERVANCE"/>
+
+    <!-- Whit Sunday/Pentecost and 15 December ("Koninkrijksdag") are both absent from the
+         government's actual year-by-year holiday table, even though an older reference table on
+         the same page still nominally lists them; Dutch Wikipedia confirms Koninkrijksdag was
+         effectively superseded by Flag and Anthem Day (2 July) in 1984, and confirms Curaçao,
+         unlike the Netherlands, has no "second Pinksterdag" (Whit Monday) either. Neither is
+         modeled here - see Sources for the government table showing both omitted. -->
     <ChristianHoliday type="SHROVE_MONDAY" descriptionPropertiesKey="CARNIVAL_MONDAY"/>
     <ChristianHoliday type="GOOD_FRIDAY"/>
     <ChristianHoliday type="EASTER"/>
     <ChristianHoliday type="EASTER_MONDAY"/>
     <ChristianHoliday type="ASCENSION_DAY"/>
-    <ChristianHoliday type="WHIT_SUNDAY"/>
   </Holidays>
 
   <Sources>
-    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Curaçao</Source>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Cura%C3%A7ao</Source>
+    <Source of="Dutch Wikipedia - Feestdagen in Curaçao">https://nl.wikipedia.org/wiki/Feestdagen_in_Cura%C3%A7ao</Source>
+    <Source of="Government of Curaçao - official holiday list and substitution rule">https://loketdigital.gobiernu.cw/contact/officiele-vrije-dagen-op-curacao-nationale-feestdagen</Source>
+    <Source of="Arbeidsregeling Curaçao (Labor Regulation) - via labor law summary">https://www.korsoutintrabou.com/blog/labor-law-blogs-3/officiele-feestdagen-22</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:CW</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:CW</Source>
   </Sources>
-
 </Configuration>
