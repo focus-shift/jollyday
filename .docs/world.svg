@@ -1109,7 +1109,7 @@
     <path d="M 640.7 388.2 640.9 388.2 641.1 388.4 641.2 388.8 641.1 389.1 640.9 389.2 640.8 389 640.5 388.8 640.5 388.3 640.7 388.2 Z">
     </path>
   </g>
-  <g class="country" data-iso="NR">
+  <g class="country active" data-iso="NR">
     <title>Nauru</title>
     <path d="M1933 505.3l-0.2 0-0.1-0.3 0.3 0 0 0.3z" name="Nauru">
     </path>

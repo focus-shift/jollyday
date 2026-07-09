@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="nr" description="Nauru"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <!-- Public Service Act 2016, s. 81: "Whenever a day specified in subsection (1) except
+         Independence Day and Christmas Day, falls on a Saturday or Sunday, the following Monday
+         is a holiday. Whenever Independence Day and Christmas Day[] falls on Saturday or a Sunday
+         the following Monday and Tuesday are holidays." -->
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- Independence Day and the following day always form a pair; when Independence Day itself
+         falls on the weekend both the Monday and Tuesday become holidays (see rule above), while
+         the day following Independence Day still shifts under the plain single-day rule if it
+         alone lands on a Saturday (i.e. Independence Day fell on a Friday). -->
+    <Fixed month="JANUARY" day="31" descriptionPropertiesKey="INDEPENDENCE_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="FEBRUARY" day="1" descriptionPropertiesKey="DAY_FOLLOWING_INDEPENDENCE_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+      <MovingCondition substitute="MONDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+
+    <!-- Declared a public holiday by President Marcus Stephen from 8 March 2010. -->
+    <Fixed month="MARCH" day="8" validFrom="2010" descriptionPropertiesKey="INTERNATIONAL_WOMAN">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <Fixed month="MAY" day="17" descriptionPropertiesKey="CONSTITUTION_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- Commemorates the 1 July 1970 handover of the phosphate industry from the British
+         Phosphate Commissioners to the Nauru Phosphate Corporation (renamed RONPhos in 2005). -->
+    <Fixed month="JULY" day="1" descriptionPropertiesKey="RONPHOS_HANDOVER_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- "Ibumin Earoeni" (Day of the Tribes), honouring Nauru's twelve traditional tribes;
+         gazetted as a new annual public holiday from 2019 (Gazette No. 139, G.N. 581/2019). -->
+    <Fixed month="AUGUST" day="19" validFrom="2019" descriptionPropertiesKey="IBUMIN_EAROENI_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- 25 September is the birthday of Hammer DeRoburt, Nauru's first President. First declared
+         a public holiday in 2009 as National Youth Day; renamed Sir Hammer DeRoburt Day from 2020. -->
+    <Fixed month="SEPTEMBER" day="25" validFrom="2009" validTo="2019" descriptionPropertiesKey="NATIONAL_YOUTH_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="SEPTEMBER" day="25" validFrom="2020" descriptionPropertiesKey="SIR_HAMMER_DEROBURT_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- "Angam" (I have found my people): commemorates the recovery of the Nauruan population
+         above 1,500 after near-extinction, first in 1932 and again after World War II. -->
+    <Fixed month="OCTOBER" day="26" descriptionPropertiesKey="ANGAM_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- Christmas Day and Boxing Day form the same kind of pair as Independence Day above. -->
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+      <MovingCondition substitute="MONDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY"/>
+    <ChristianHoliday type="EASTER_TUESDAY"/>
+  </Holidays>
+
+  <Sources>
+    <Source of="Public Service Act 2016, Public Holidays 2022 Gazette">https://www.nauru.gov.nr/media/152258/gazette_07-22.pdf</Source>
+    <Source of="Public Service Act 2016, Public Holidays 2023 Gazette">https://www.nauru.gov.nr/media/191705/gazette_330-22__2_.pdf</Source>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Nauru</Source>
+    <Source of="Government of Nauru - National Days">https://www.nauru.gov.nr/about-nauru/national-days.aspx</Source>
+    <Source of="RONPhos Handover history">https://www.nauru.gov.nr/government-information-office/media-release/nauru-celebrates-50-years-of-phosphate-handover.aspx</Source>
+    <Source of="Ibumin Earoeni Day gazetted from 2019">https://www.facebook.com/republicofnauru/posts/public-holiday-ibumin-earoeni-day-day-of-the-tribes-wed-19aug2020in-accordance-w/2638264683157339/</Source>
+    <Source of="Hammer DeRoburt Day history">https://en.wikipedia.org/wiki/Hammer_DeRoburt</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:NR</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:NR</Source>
+  </Sources>
+</Configuration>
