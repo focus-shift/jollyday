@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="mh" description="Marshall Islands"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <!-- Public Holidays Act 1988 (1 MIRC Ch.9), §902: if a public holiday falls on a
+         Saturday it is observed the preceding Friday, and if it falls on a Sunday it is
+         observed the following Monday (subject to a differing direction by the Public
+         Service Commission in consultation with the Cabinet, which is not modeled here).
+         The "first/last Friday of the month" holidays below can never fall on a weekend,
+         so no substitution is needed for them. -->
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
+      <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <!-- Nuclear Victims Remembrance Day, commemorating the 1954 Castle Bravo test at Bikini Atoll. -->
+    <Fixed month="MARCH" day="1" descriptionPropertiesKey="NUCLEAR_VICTIMS_REMEMBRANCE_DAY">
+      <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="CONSTITUTION_DAY">
+      <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="NOVEMBER" day="17" descriptionPropertiesKey="PRESIDENTS_DAY">
+      <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS">
+      <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <FixedWeekday which="FIRST" weekday="FRIDAY" month="JULY" descriptionPropertiesKey="FISHERMENS_DAY"/>
+    <!-- Officially "Dri-Jerbal Day" (Marshallese for "working people"). -->
+    <FixedWeekday which="FIRST" weekday="FRIDAY" month="SEPTEMBER" descriptionPropertiesKey="LABOUR_DAY"/>
+    <FixedWeekday which="LAST" weekday="FRIDAY" month="SEPTEMBER" descriptionPropertiesKey="MANIT_DAY"/>
+    <FixedWeekday which="FIRST" weekday="FRIDAY" month="DECEMBER" descriptionPropertiesKey="GOSPEL_DAY"/>
+
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+
+    <!-- Deliberately NOT included:
+         - December 31 "New Year's Eve": listed by English Wikipedia but absent from both
+           the RMI Judiciary's and the RMI Parliament's official public-holiday listings,
+           so it is not treated as an authoritative public holiday here.
+         - "General Election Day" (3rd Monday of November of a Nitijela general-election
+           year, held every four years): a conditionally-declared holiday tied to the
+           election cycle rather than a fixed recurring one, not listed on the Wikipedia
+           page this configuration is based on, and its exact recurrence years are not
+           reliably confirmable from available sources. -->
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_the_Marshall_Islands</Source>
+    <Source of="Public Holidays Act 1988, 1 MIRC Ch.9 (schedule and weekend-substitution rule)">https://rmiparliament.org/cms/?view=article&amp;id=130:important-public-holidays&amp;catid=87</Source>
+    <Source of="RMI Judiciary - Office Hours and Public Holidays">https://rmicourts.org/office-hours-and-public-holidays/</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:MH</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:MH</Source>
+  </Sources>
+</Configuration>

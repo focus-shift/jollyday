@@ -1078,7 +1078,7 @@
     <path d="M1402.9 474.8l0 0.2-0.2-0.1 0.2-0.2 0 0.1z" name="Maldives">
     </path>
   </g>
-  <g class="country" data-iso="MH">
+  <g class="country active" data-iso="MH">
     <title>Marshall Islands</title>
     <path d="M1953.8 456l1 0.4-0.2 0-0.8-0.4z" name="Marshall Islands">
     </path>
