@@ -977,7 +977,7 @@
     <path d="M1264.1 333.3l0.3 0.1 0.2-0.1 0.4 0.7-0.1 0.2 0.1 0.9 0 0.7-0.2 0.4-0.1-0.4-0.6-0.8 0.1-0.4-0.2-0.7 0-0.4 0.1-0.2z" name="Bahrain">
     </path>
   </g>
-  <g class="country" data-iso="BL">
+  <g class="country active" data-iso="BL">
     <title>Saint-Barthélemy</title>
     <path d="M635.2 387l-0.1-0.3 0.3 0.1-0.2 0.2z" name="Saint-Barthélemy">
     </path>
