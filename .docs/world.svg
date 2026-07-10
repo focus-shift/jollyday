@@ -1068,7 +1068,7 @@
     <path d="M643.7 413.8l-0.2-0.2-0.4-0.2-0.1-0.2 0-0.6 0.1-0.2 0.7-1.1 0.3 0.2 0 0.7-0.1 0.8-0.1 0.4-0.2 0.4z" name="Saint Lucia">
     </path>
   </g>
-  <g class="country" data-iso="SX">
+  <g class="country" data-iso="MF">
     <title>Saint-Martin</title>
     <path d="M634.2 386l-0.4-0.1 0.2-0.3 0.3-0.1-0.1 0.5z" name="Saint-Martin">
     </path>
@@ -1188,7 +1188,7 @@
     <path d="M 846 391.4 846.3 391.5 846.3 391.7 846.6 392 846.4 392.4 845.8 392.7 845.4 393.1 844.7 393.2 844.7 393.1 844.7 392.6 844.5 392.4 844.5 392.2 844.7 392 844.9 392 845.1 391.8 845.8 391.4 846 391.4 Z">
     </path>
   </g>
-  <g class="country" data-iso="SX">
+  <g class="country active" data-iso="SX">
     <title>Sint Maarten</title>
     <path d="M634.2 386l0 0.1-0.4-0.1 0-0.1 0.4 0.1z" name="Sint Maarten">
     </path>
