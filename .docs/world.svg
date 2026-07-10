@@ -1068,7 +1068,7 @@
     <path d="M643.7 413.8l-0.2-0.2-0.4-0.2-0.1-0.2 0-0.6 0.1-0.2 0.7-1.1 0.3 0.2 0 0.7-0.1 0.8-0.1 0.4-0.2 0.4z" name="Saint Lucia">
     </path>
   </g>
-  <g class="country" data-iso="MF">
+  <g class="country active" data-iso="MF">
     <title>Saint-Martin</title>
     <path d="M634.2 386l-0.4-0.1 0.2-0.3 0.3-0.1-0.1 0.5z" name="Saint-Martin">
     </path>
