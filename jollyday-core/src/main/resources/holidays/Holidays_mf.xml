@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="mf" description="Saint-Martin"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <!-- The eleven national French public holidays (Code du travail, Art. L3133-1) plus
+         the commemoration of the abolition of slavery (Art. L3422-2), which is specific to
+         Saint-Martin. French law provides no weekend substitution, so holidays are observed
+         on their fixed dates. -->
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="MAY" day="8" descriptionPropertiesKey="VICTORY_DAY"/>
+    <!-- Art. L3422-2 designates 27 May for "Guadeloupe et Saint-Martin", inherited from when
+         Saint-Martin was still part of Guadeloupe. Historical research (Daniella Jeffry) showed
+         abolition was only proclaimed in Saint-Martin on 28 May 1848, one day after Guadeloupe.
+         The Conseil territorial adopted 28 May by deliberation of 5 November 2015; since this
+         could not be corrected in the Code du travail text itself ("erreur matérielle"), it was
+         authorized instead by interministerial circular of 4 May 2018 (pursuant to Loi
+         n° 2017-256 of 28 February 2017), first observed 28 May 2018 and confirmed annually
+         since (most recently the 177th anniversary on 28 May 2025). -->
+    <Fixed month="MAY" day="27" descriptionPropertiesKey="ABOLITION_OF_SLAVERY" validTo="2017"/>
+    <Fixed month="MAY" day="28" descriptionPropertiesKey="ABOLITION_OF_SLAVERY" validFrom="2018"/>
+    <Fixed month="JULY" day="14" descriptionPropertiesKey="NATIONAL_DAY"/>
+    <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_MARY"/>
+    <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
+    <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="ARMISTICE"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+
+    <ChristianHoliday type="EASTER_MONDAY"/>
+    <ChristianHoliday type="ASCENSION_DAY"/>
+    <!-- Whit Monday was not a day off from 2004 to 2007 (Journée de solidarité). -->
+    <ChristianHoliday type="WHIT_MONDAY" validTo="2003"/>
+    <ChristianHoliday type="WHIT_MONDAY" validFrom="2008"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_the_Collectivity_of_Saint_Martin</Source>
+    <Source of="Code du travail Art. L3422-2">https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000035902463</Source>
+    <Source of="Collectivité de Saint-Martin, communiqué du 28 mai 2024 (176e anniversaire)">https://www.com-saint-martin.fr/Communiqu%C3%A9-de-Presse--Mardi-28-mai-2024---Comm%C3%A9moration-du-176e-anniversaire-de-l-abolition-de-l-esclavage_Saint-Martin-Antilles_3032.html</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:MF</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:MF</Source>
+  </Sources>
+</Configuration>
