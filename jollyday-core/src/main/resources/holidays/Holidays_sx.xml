@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="sx" description="Sint Maarten"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <!-- Landsverordening houdende berekening van termijnen (P.B. 2001, no. 27), Art. 3, as
+         currently in force: eleven statutory items (one covering both Christmas days), none of
+         which include Easter Sunday or Whit Sunday/Monday - those appear on aggregator sites
+         but not in the actual ordinance text. -->
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+
+    <!-- "de dag waarop de verjaardag van de Koning officieel wordt gevierd" - Dutch royal
+         tradition: if 27 April falls on a Sunday, King's Day moves BACKWARD to the preceding
+         Saturday (confirmed for 2025: 27 April was a Sunday, observed Saturday 26 April). -->
+    <Fixed month="APRIL" day="27" descriptionPropertiesKey="KINGS_DAY">
+      <MovingCondition substitute="SUNDAY" with="PREVIOUS" weekday="SATURDAY"/>
+    </Fixed>
+
+    <!-- "de datum vallende na de gehouden Carnavalsoptocht" - statutorily the day after the
+         Carnival parade (ministerially designated each year), but consistently observed on 30
+         April in practice for every year checked. -->
+    <Fixed month="APRIL" day="30" descriptionPropertiesKey="CARNIVAL_DAY"/>
+
+    <!-- "de dag van de arbeid (1 mei) ... indien deze op zondag valt, dan wordt deze gevierd op
+         de eerstvolgende werkdag" - if Sunday, observed the following Monday. -->
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- "de Dag van de Bevrijding, dan wel Emancipation Day" - commemorates the abolition of
+         slavery on 1 July 1863; if it falls on a Sunday it is observed the following Monday. -->
+    <Fixed month="JULY" day="1" descriptionPropertiesKey="EMANCIPATION_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="ST_MARTIN"/>
+
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="SECOND_CHRISTMAS_DAY"/>
+
+    <!-- "de dag van de Constitutie, dan wel Constitution Day" - commemorates Sint Maarten
+         becoming an autonomous country within the Kingdom of the Netherlands on 10 October 2010. -->
+    <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY"/>
+    <ChristianHoliday type="ASCENSION_DAY"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Sint_Maarten</Source>
+    <Source of="Landsverordening houdende berekening van termijnen, Art. 3 (consolidated, in force since 2015-10-04)">https://lokaleregelgeving.overheid.nl/CVDR142304</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:SX</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:SX</Source>
+  </Sources>
+</Configuration>

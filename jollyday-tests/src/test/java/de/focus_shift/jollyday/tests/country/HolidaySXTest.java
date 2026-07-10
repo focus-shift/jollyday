@@ -1,0 +1,78 @@
+package de.focus_shift.jollyday.tests.country;
+
+import de.focus_shift.jollyday.core.Holiday;
+import de.focus_shift.jollyday.core.HolidayManager;
+import org.junit.jupiter.api.Test;
+
+import java.time.LocalDate;
+import java.time.Year;
+import java.util.Set;
+import java.util.stream.Collectors;
+
+import static de.focus_shift.jollyday.core.HolidayCalendar.SINT_MAARTEN;
+import static de.focus_shift.jollyday.core.ManagerParameters.create;
+import static de.focus_shift.jollyday.tests.CalendarChecker.Adjuster.PREVIOUS;
+import static de.focus_shift.jollyday.tests.CalendarCheckerApi.assertFor;
+import static java.time.DayOfWeek.MONDAY;
+import static java.time.DayOfWeek.SATURDAY;
+import static java.time.DayOfWeek.SUNDAY;
+import static java.time.Month.APRIL;
+import static java.time.Month.DECEMBER;
+import static java.time.Month.JANUARY;
+import static java.time.Month.JULY;
+import static java.time.Month.MAY;
+import static java.time.Month.NOVEMBER;
+import static java.time.Month.OCTOBER;
+import static org.assertj.core.api.Assertions.assertThat;
+
+class HolidaySXTest {
+
+  private static final Year YEAR_FROM = Year.of(1900);
+  private static final Year YEAR_TO = Year.of(2173);
+
+  @Test
+  void ensuresHolidays() {
+    assertFor(SINT_MAARTEN)
+      .hasFixedHoliday("NEW_YEAR", JANUARY, 1).validBetween(YEAR_FROM, YEAR_TO).and()
+      // Dutch royal tradition: moves backward to the preceding Saturday, not forward
+      .hasFixedHoliday("KINGS_DAY", APRIL, 27)
+        .canBeMovedFrom(SUNDAY, PREVIOUS, SATURDAY)
+        .validBetween(YEAR_FROM, YEAR_TO)
+      .and()
+      .hasFixedHoliday("CARNIVAL_DAY", APRIL, 30).validBetween(YEAR_FROM, YEAR_TO).and()
+      .hasFixedHoliday("LABOUR_DAY", MAY, 1)
+        .canBeMovedFrom(SUNDAY, MONDAY)
+        .validBetween(YEAR_FROM, YEAR_TO)
+      .and()
+      .hasFixedHoliday("EMANCIPATION_DAY", JULY, 1)
+        .canBeMovedFrom(SUNDAY, MONDAY)
+        .validBetween(YEAR_FROM, YEAR_TO)
+      .and()
+      .hasFixedHoliday("ST_MARTIN", NOVEMBER, 11).validBetween(YEAR_FROM, YEAR_TO).and()
+      .hasFixedHoliday("CHRISTMAS", DECEMBER, 25).validBetween(YEAR_FROM, YEAR_TO).and()
+      .hasFixedHoliday("SECOND_CHRISTMAS_DAY", DECEMBER, 26).validBetween(YEAR_FROM, YEAR_TO).and()
+      .hasChristianHoliday("GOOD_FRIDAY").validBetween(YEAR_FROM, YEAR_TO).and()
+      .hasChristianHoliday("EASTER_MONDAY").validBetween(YEAR_FROM, YEAR_TO).and()
+      .hasChristianHoliday("ASCENSION_DAY").validBetween(YEAR_FROM, YEAR_TO)
+      .check();
+  }
+
+  @Test
+  void ensuresFloatingHolidays() {
+    final HolidayManager manager = HolidayManager.getInstance(create(SINT_MAARTEN));
+
+    // Constitution Day: second Monday in October (confirmed via official ordinance and
+    // corroborated by the Sint Maarten government's 2026/2027 published schedules)
+    assertThat(holidayKeys(manager, Year.of(2026))).contains("CONSTITUTION_DAY");
+    assertThat(holidayDates(manager, Year.of(2026))).contains(LocalDate.of(2026, OCTOBER, 12));
+    assertThat(holidayDates(manager, Year.of(2027))).contains(LocalDate.of(2027, OCTOBER, 11));
+  }
+
+  private static Set<LocalDate> holidayDates(final HolidayManager manager, final Year year) {
+    return manager.getHolidays(year).stream().map(Holiday::getDate).collect(Collectors.toSet());
+  }
+
+  private static Set<String> holidayKeys(final HolidayManager manager, final Year year) {
+    return manager.getHolidays(year).stream().map(Holiday::getPropertiesKey).collect(Collectors.toSet());
+  }
+}
