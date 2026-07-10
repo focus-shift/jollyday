@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="as" description="American Samoa"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <!-- A.S.C.A. 1.0501 codifies 11 public holidays. Per A.S.C.A. 7.1205(b), if a holiday
+         listed in 1.0501 is observed by federal employees on a different day than specified
+         there, American Samoa Government (ASG) employees follow the federal date instead -
+         this is why Washington's Birthday and Memorial Day below use the modern federal
+         Monday-holiday formulas rather than the fixed 22 February / 30 May dates still
+         printed in 1.0501's original (1983-amended) text. In practice ASG also grants
+         several federal holidays that were never added to 1.0501 (MLK Day, Juneteenth,
+         Columbus Day), confirmed via annual Governor's General Memorandums and consistently
+         reported by officeholidays.com and qppstudio.net. Weekend substitution
+         (Saturday -> preceding Friday, Sunday -> following Monday) is not spelled out in the
+         statute text but is consistently applied in practice by ASG for fixed-date holidays,
+         confirmed for both a federal holiday (Independence Day 2026) and a territory-specific
+         one (Flag Day 2026) by officeholidays.com and qppstudio.net. -->
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
+      <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- 17 April, American Samoa Flag Day: commemorates the 1900 Deed of Cession of Tutuila. -->
+    <Fixed month="APRIL" day="17" descriptionPropertiesKey="FLAG_DAY">
+      <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <Fixed month="JUNE" day="19" validFrom="2021" descriptionPropertiesKey="JUNETEENTH">
+      <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <Fixed month="JULY" day="4" descriptionPropertiesKey="INDEPENDENCE_DAY">
+      <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- 16 July, Manu'a Islands Cession Day: commemorates the 1904 Deed of Cession of the
+         Manu'a Islands. Added to 1.0501 by Public Law 18-21 (1983). -->
+    <Fixed month="JULY" day="16" validFrom="1983" descriptionPropertiesKey="MANUA_ISLANDS_CESSION_DAY">
+      <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="VETERANS_DAY">
+      <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS">
+      <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- Not codified in 1.0501, but consistently granted to ASG employees alongside the
+         federal calendar (General Memorandum issued each year, e.g. GM 005-26 for 2026). -->
+    <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+    <!-- Washington's Birthday: fixed 22 February in 1.0501's text, but conforms to the
+         federal third-Monday-in-February date since 1971 per 7.1205(b). -->
+    <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1971" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
+    <!-- Memorial Day: fixed 30 May in 1.0501's text, but conforms to the federal
+         last-Monday-in-May date since 1971 per 7.1205(b). -->
+    <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" validFrom="1971" descriptionPropertiesKey="MEMORIAL_DAY"/>
+    <FixedWeekday which="FIRST" weekday="MONDAY" month="SEPTEMBER" descriptionPropertiesKey="LABOUR_DAY"/>
+    <!-- Not codified in 1.0501; granted alongside the federal calendar (see above). -->
+    <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1971" descriptionPropertiesKey="COLUMBUS_DAY"/>
+    <FixedWeekday which="FOURTH" weekday="THURSDAY" month="NOVEMBER" descriptionPropertiesKey="THANKSGIVING"/>
+
+    <!-- White Sunday: second Sunday in October, a longstanding Samoan Christian tradition
+         honouring children. Not substituted even though it always falls on a Sunday. -->
+    <FixedWeekday which="SECOND" weekday="SUNDAY" month="OCTOBER" descriptionPropertiesKey="WHITE_SUNDAY"/>
+
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_American_Samoa</Source>
+    <Source of="A.S.C.A. 1.0501 (original 11 codified holidays)">https://asbar.org/code-annotated/1-0501-public-holidays/</Source>
+    <Source of="A.S.C.A. 7.1205(b) (federal date conformance clause)">https://asbar.org/code-annotated/7-1205-paid-holidays/</Source>
+    <Source of="2026 holiday dates and weekend substitution">https://www.officeholidays.com/countries/american-samoa/2026</Source>
+    <Source of="2026-2027 holiday dates and weekend substitution">https://www.qppstudio.net/public-holidays/american_samoa.htm</Source>
+    <Source of="MLK Day observed as both federal and ASG holiday">https://www.samoanews.com/features/monday-martin-luther-king-jr-day-federal-and-asg-holiday</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:AS</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:AS</Source>
+  </Sources>
+</Configuration>
