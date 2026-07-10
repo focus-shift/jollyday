@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="bq" description="Bonaire, Sint Eustatius and Saba"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <!-- Rijksdienst Caribisch Nederland's official holiday list: these ten days are observed
+         territory-wide across all three public bodies (Bonaire, Sint Eustatius, Saba); the
+         island-specific days for Sint Eustatius are added via the "se" SubConfigurations below.
+         Bonaire and Saba are intentionally not modeled yet - they are tracked by their own,
+         separate GitHub issues. -->
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+
+    <!-- Dutch royal tradition: if 27 April falls on a Sunday, King's Day moves BACKWARD to the
+         preceding Saturday - confirmed for the Caribbean Netherlands for 2025 (27 April was a
+         Sunday, observed Saturday 26 April) via Rijksoverheid.nl and Caribbean Netherlands news
+         coverage. -->
+    <Fixed month="APRIL" day="27" descriptionPropertiesKey="KINGS_DAY">
+      <MovingCondition substitute="SUNDAY" with="PREVIOUS" weekday="SATURDAY"/>
+    </Fixed>
+
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="SECOND_CHRISTMAS_DAY"/>
+
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER"/>
+    <ChristianHoliday type="EASTER_MONDAY"/>
+    <ChristianHoliday type="ASCENSION_DAY"/>
+    <!-- Only Whit Sunday is observed here, unlike mainland Netherlands which also has Whit
+         Monday (PENTECOST_MONDAY) - confirmed by both Rijksdienst Caribisch Nederland and the
+         Sint Eustatius government's own official holiday page, neither of which lists a second
+         Pentecost day. -->
+    <ChristianHoliday type="WHIT_SUNDAY"/>
+  </Holidays>
+
+  <Sources>
+    <Source of="Officiële feestdagen - Rijksdienst Caribisch Nederland">https://www.rijksdienstcn.com/sociale-zaken-werk/arbeid/officiele-feestdagen</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:BQ</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:BQ</Source>
+  </Sources>
+
+  <SubConfigurations hierarchy="se" description="Sint Eustatius">
+    <Holidays>
+      <!-- Confirmed via the Openbaar Lichaam Sint Eustatius official public holiday calendar
+           (statiagovernment.com) and cross-checked against Wikipedia and Rijksdienst Caribisch
+           Nederland. No substitute-day rule is documented or observed for either date when it
+           falls on a weekend: 1 July 2025 (a Tuesday, no shift needed) and 16 November 2025 (a
+           Sunday) were both listed by aggregators on their nominal dates with no reported Monday
+           shift. -->
+      <Fixed month="JULY" day="1" descriptionPropertiesKey="EMANCIPATION_DAY"/>
+
+      <!-- Officially named "Statia Day" on the government's own calendar (also widely known as
+           "Sint Eustatius Flag Day"); commemorates "The First Salute" of 16 November 1776, when
+           Fort Oranje returned the salute of the American brig Andrew Doria. The current flag
+           was adopted in 2004 and first flown on this date, but the commemoration itself
+           predates that - no authoritative source pins an exact year the day became an official
+           public holiday, so no validFrom is set here. -->
+      <Fixed month="NOVEMBER" day="16" descriptionPropertiesKey="STATIA_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+</Configuration>
