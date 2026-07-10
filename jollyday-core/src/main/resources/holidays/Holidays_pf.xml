@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="pf" description="French Polynesia"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <!-- Code du travail de la Polynésie française, Art. Lp. 3223-1: exhaustive list of jours
+         fériés, plus 1 May which is separately designated "fête légale" by the same article.
+         Art. Lp. 3223-3: "Les heures de travail perdues, par suite de chômage des jours fériés
+         ... ne peuvent donner lieu à récupération" - no weekend substitution, same as mainland
+         France and the other French overseas collectivities. -->
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <!-- Arrivée de l'Évangile: commemorates the landing of the London Missionary Society at
+         Matavai Bay, Tahiti, on 5 March 1797. -->
+    <Fixed month="MARCH" day="5" descriptionPropertiesKey="GOSPEL_DAY"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="MAY" day="8" descriptionPropertiesKey="VICTORY_DAY"/>
+    <!-- Fête de l'autonomie: commemorated the 29 June 1880 cession of the Kingdom of Tahiti to
+         France. Instituted as a public holiday in 1985; repealed by Loi du Pays n° 2025-12 of
+         20 June 2025 (art. Lp. 1: "le 8. est abrogé"), replaced by Matari'i below from 2026. -->
+    <Fixed month="JUNE" day="29" descriptionPropertiesKey="AUTONOMY_DAY" validFrom="1985" validTo="2025"/>
+    <Fixed month="JULY" day="14" descriptionPropertiesKey="NATIONAL_DAY"/>
+    <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_MARY"/>
+    <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
+    <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="ARMISTICE"/>
+    <!-- Matari'i - fête de l'Abondance: reappearance of the Pleiades marking the start of the
+         season of abundance (Matari'i i ni'a). Inserted as jour férié no. 13 by Loi du Pays
+         n° 2025-12 of 20 June 2025, applicable from 1 January 2026, replacing 29 June above. -->
+    <Fixed month="NOVEMBER" day="20" descriptionPropertiesKey="MATARII" validFrom="2026"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY"/>
+    <ChristianHoliday type="ASCENSION_DAY"/>
+    <ChristianHoliday type="WHIT_MONDAY"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_French_Polynesia</Source>
+    <Source of="Code du travail de la Polynésie française, Art. Lp. 3223-1 à Lp. 3223-3">https://natlex.ilo.org/dyn/natlex2/natlex2/files/download/90394/FRA-90394.pdf</Source>
+    <Source of="Loi du Pays n° 2025-12 du 20 juin 2025 (suppression du 29 juin, ajout du Matari'i le 20 novembre)">https://www.assemblee.pf/travaux/downloadTexte/1724614</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:PF</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:PF</Source>
+  </Sources>
+</Configuration>
