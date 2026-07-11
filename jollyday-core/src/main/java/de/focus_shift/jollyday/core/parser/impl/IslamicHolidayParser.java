@@ -71,6 +71,10 @@ public class IslamicHolidayParser implements HolidayParser {
             new CalculateRelativeDatesFromChronologyWithinGregorianYear(12, 12, HIJRAH, 0).apply(year);
           case ID_AL_GHADIR ->
             new CalculateRelativeDatesFromChronologyWithinGregorianYear(12, 18, HIJRAH, 0).apply(year);
+          case QAUMEE_DHUVAS ->
+            new CalculateRelativeDatesFromChronologyWithinGregorianYear(3, 1, HIJRAH, 0).apply(year);
+          case EMBRACING_OF_ISLAM_DAY ->
+            new CalculateRelativeDatesFromChronologyWithinGregorianYear(4, 1, HIJRAH, 0).apply(year);
         };
 
         return islamicHolidays
