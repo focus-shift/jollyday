@@ -5,17 +5,18 @@
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
   <Holidays>
-    <!-- Rijksdienst Caribisch Nederland's official holiday list: these ten days are observed
-         territory-wide across all three public bodies (Bonaire, Sint Eustatius, Saba); the
-         island-specific days for Sint Eustatius are added via the "se" SubConfigurations below.
-         Bonaire and Saba are intentionally not modeled yet - they are tracked by their own,
-         separate GitHub issues. -->
+    <!-- Rechtspositiebesluit ambtenaren BES, Art. 37 (confirmed against Rijksdienst Caribisch
+         Nederland's official holiday list): these ten days are observed territory-wide across
+         all three public bodies (Bonaire, Sint Eustatius, Saba). Island-specific additions are
+         designated per island in Regeling feestdagen ambtenaren BES, Art. 1-3, and modeled as
+         SubConfigurations below (Sint Eustatius, "se", and Saba, "sa"; Bonaire is not yet
+         modeled and is tracked by its own separate GitHub issue). -->
     <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
 
-    <!-- Dutch royal tradition: if 27 April falls on a Sunday, King's Day moves BACKWARD to the
-         preceding Saturday - confirmed for the Caribbean Netherlands for 2025 (27 April was a
-         Sunday, observed Saturday 26 April) via Rijksoverheid.nl and Caribbean Netherlands news
-         coverage. -->
+    <!-- Dutch royal tradition: if 27 April falls on a Sunday, King's Day moves backward to the
+         preceding Saturday, but is NOT moved when it falls on a Saturday itself (confirmed for
+         the Caribbean Netherlands: 2025 - 27 April was a Sunday, observed Saturday 26 April;
+         2024 - 27 April was a Saturday, observed on that Saturday, unmoved). -->
     <Fixed month="APRIL" day="27" descriptionPropertiesKey="KINGS_DAY">
       <MovingCondition substitute="SUNDAY" with="PREVIOUS" weekday="SATURDAY"/>
     </Fixed>
@@ -29,14 +30,14 @@
     <ChristianHoliday type="EASTER"/>
     <ChristianHoliday type="EASTER_MONDAY"/>
     <ChristianHoliday type="ASCENSION_DAY"/>
-    <!-- Only Whit Sunday is observed here, unlike mainland Netherlands which also has Whit
-         Monday (PENTECOST_MONDAY) - confirmed by both Rijksdienst Caribisch Nederland and the
-         Sint Eustatius government's own official holiday page, neither of which lists a second
-         Pentecost day. -->
-    <ChristianHoliday type="WHIT_SUNDAY"/>
+    <!-- Whit Monday (Pentecost Monday) is explicitly NOT a recognized public holiday in the
+         Caribbean Netherlands, unlike mainland Netherlands - only Whit Sunday/Pentecost itself
+         is observed. Keyed as PENTECOST for consistency with Holidays_nl.xml. -->
+    <ChristianHoliday type="PENTECOST"/>
   </Holidays>
 
   <Sources>
+    <Source of="Rechtspositiebesluit ambtenaren BES, Art. 37">https://wetten.overheid.nl/BWBR0028693</Source>
     <Source of="Officiële feestdagen - Rijksdienst Caribisch Nederland">https://www.rijksdienstcn.com/sociale-zaken-werk/arbeid/officiele-feestdagen</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:BQ</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:BQ</Source>
@@ -60,5 +61,29 @@
            public holiday, so no validFrom is set here. -->
       <Fixed month="NOVEMBER" day="16" descriptionPropertiesKey="STATIA_DAY"/>
     </Holidays>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="sa" description="Saba">
+    <Holidays>
+      <!-- Regeling feestdagen ambtenaren BES, Art. 3: "de dag, vallende na de op Saba gehouden
+           carnavalsoptocht" (the day following Saba's Carnival parade); empirically consistently
+           the last Monday of July (confirmed 2022, 2023, 2025, 2026 via sabagov.nl and
+           officeholidays.com). -->
+      <FixedWeekday which="LAST" weekday="MONDAY" month="JULY" descriptionPropertiesKey="CARNIVAL_MONDAY"/>
+
+      <!-- Regeling feestdagen ambtenaren BES, Art. 3: "de eerste vrijdag van december als zijnde
+           Saba Day" (first Friday of December) - commemorates the adoption of the Saba flag in
+           December 1985. Wikipedia's "Public holidays in Saba" article incorrectly lists this as
+           a fixed date (6 December, "Saba Flag Day"); the statutory text and corroborating
+           sources (sabagov.nl, officeholidays.com, nationaltoday.com) confirm it is a floating
+           first-Friday-of-December rule, not a fixed date. -->
+      <FixedWeekday which="FIRST" weekday="FRIDAY" month="DECEMBER" descriptionPropertiesKey="SABA_DAY"/>
+    </Holidays>
+
+    <Sources>
+      <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Saba</Source>
+      <Source of="Regeling feestdagen ambtenaren BES, Art. 3">https://wetten.overheid.nl/BWBR0042980</Source>
+      <Source of="Public Entity Saba">https://www.sabagov.nl/residents-visitors/public-holidays</Source>
+    </Sources>
   </SubConfigurations>
 </Configuration>

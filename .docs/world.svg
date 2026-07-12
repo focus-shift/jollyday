@@ -1271,7 +1271,7 @@
     <path d="M634.3 389.6l-0.2 0.1 0-0.2 0.1-0.1 0.1 0.2z" name="St. Eustatius (Netherlands)">
     </path>
   </g>
-  <g class="country" data-iso="BQ">
+  <g class="country active" data-iso="BQ">
     <title>Saba (Netherlands)</title>
     <path d="M632.8 388.7l-0.1 0 0.1-0.2 0.1 0.1-0.1 0.1z" name="Saba (Netherlands)">
     </path>
