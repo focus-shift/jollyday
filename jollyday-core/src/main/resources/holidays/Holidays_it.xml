@@ -309,7 +309,14 @@
   </SubConfigurations>
 
   <SubConfigurations hierarchy="88" description="Sardinia">
-    <Holidays/>
+    <!-- Sa Die de sa Sardigna (L.R. 14 settembre 1993, n. 44) closes schools region-wide, but is
+         not a general public/office holiday, hence OBSERVANCE rather than PUBLIC_HOLIDAY. -->
+    <Holidays>
+      <Fixed month="APRIL" day="28" descriptionPropertiesKey="SARDINIA_DAY" localizedType="OBSERVANCE"/>
+    </Holidays>
+    <Sources>
+      <Source>https://www.regione.sardegna.it/notizie/sa-die-de-sa-sardigna-assessora-portas-la-giornata-di-tutto-il-popolo-sardo-celebrazione-ufficiale-con-le-scuole-in-consiglio-regionale</Source>
+    </Sources>
 
     <!-- Cagliari's officially recognized patron is Saint Saturninus (30 October). Saint Ephysius,
          whose 1 May procession is widely but mistakenly assumed to be the city's patronal

@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import java.time.Year;
 
 import static de.focus_shift.jollyday.core.HolidayCalendar.ITALY;
+import static de.focus_shift.jollyday.core.HolidayType.OBSERVANCE;
 import static de.focus_shift.jollyday.tests.CalendarCheckerApi.assertFor;
 import static java.time.Month.APRIL;
 import static java.time.Month.AUGUST;
@@ -46,6 +47,9 @@ class HolidayITTest {
 
       /*South Tyrol*/
       .hasChristianHoliday("WHIT_MONDAY").inSubdivision("32", "bz").and()
+
+      /*Sardinia*/
+      .hasFixedHoliday("SARDINIA_DAY", APRIL, 28, OBSERVANCE).inSubdivision("88").and()
 
       // patronal festivals of the regional capitals
       /*Turin*/
