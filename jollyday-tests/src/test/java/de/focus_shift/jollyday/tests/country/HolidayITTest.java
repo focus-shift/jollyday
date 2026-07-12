@@ -44,8 +44,8 @@ class HolidayITTest {
         .validFrom(Year.of(1642))
       .and()
 
-      /*Trentino-South Tyrol*/
-      .hasChristianHoliday("WHIT_MONDAY").inSubdivision("32").and()
+      /*South Tyrol*/
+      .hasChristianHoliday("WHIT_MONDAY").inSubdivision("32", "bz").and()
 
       // patronal festivals of the regional capitals
       /*Turin*/

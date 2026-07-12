@@ -73,13 +73,24 @@
     </SubConfigurations>
   </SubConfigurations>
 
+  <!-- Trentino-Alto Adige/South Tyrol comprises two autonomous provinces, each with its own
+       school calendar and local customs. Whit Monday is observed only in the province of
+       Bolzano/Bozen (a Tyrolean/Austrian-tradition carryover), not in Trento, so it is modelled
+       on the "bz" subdivision rather than at the region level. -->
   <SubConfigurations hierarchy="32" description="Trentino-South Tyrol">
-    <Holidays>
-      <ChristianHoliday type="WHIT_MONDAY"/>
-    </Holidays>
+    <Holidays/>
 
-    <!-- Bolzano/Bozen's patronal observance falls on Whit Monday, already covered by the
-         region-wide holiday above, so no separate entry is added for it here. -->
+    <!-- Bolzano/Bozen's patronal observance falls on Whit Monday, so no separate patron-saint
+         entry is added on top of it. -->
+    <SubConfigurations hierarchy="bz" description="South Tyrol">
+      <Holidays>
+        <ChristianHoliday type="WHIT_MONDAY"/>
+      </Holidays>
+      <Sources>
+        <Source>https://assets-eu-01.kc-usercontent.com/7ea6cc85-bc0d-01f3-7f75-32fd91efe5e0/b62269b2-0b7d-41e5-ae29-f042e6c96cb9/2025_2026_Calendario_Scolastico.pdf</Source>
+      </Sources>
+    </SubConfigurations>
+
     <SubConfigurations hierarchy="tn" description="Trento">
       <Holidays>
         <Fixed month="JUNE" day="26" descriptionPropertiesKey="ST_VIGILIUS"/>
