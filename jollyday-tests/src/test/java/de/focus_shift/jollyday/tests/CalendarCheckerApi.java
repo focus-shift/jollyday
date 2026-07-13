@@ -2,6 +2,7 @@ package de.focus_shift.jollyday.tests;
 
 import de.focus_shift.jollyday.core.HolidayCalendar;
 import de.focus_shift.jollyday.core.HolidayType;
+import de.focus_shift.jollyday.core.spi.Limited.YearCycle;
 import de.focus_shift.jollyday.core.spi.Occurrence;
 import de.focus_shift.jollyday.core.spi.Relation;
 import de.focus_shift.jollyday.tests.CalendarChecker.Adjuster;
@@ -299,6 +300,29 @@ public interface CalendarCheckerApi {
      * @return properties for further assertions
      */
     Properties notValidBetween(Year from, Year to);
+
+    /**
+     * Specifies that the holiday only occurs in years matching the given cycle, within whatever
+     * valid range is otherwise configured. Only valid for {@link YearCycle#EVERY_YEAR}, {@link YearCycle#ODD_YEARS},
+     * and {@link YearCycle#EVEN_YEARS}, which need no reference year; other cycles require
+     * {@link #every(YearCycle, Year)}.
+     *
+     * @param cycle the year cycle
+     * @return properties for further assertions
+     */
+    Properties every(YearCycle cycle);
+
+    /**
+     * Specifies that the holiday only occurs every Nth year, anchored at the given reference year
+     * (matching the XML's {@code validFrom}, or {@code validTo} if no {@code validFrom} is set).
+     * Required for {@link YearCycle#TWO_YEARS}, {@link YearCycle#THREE_YEARS}, {@link YearCycle#FOUR_YEARS},
+     * {@link YearCycle#FIVE_YEARS}, and {@link YearCycle#SIX_YEARS}.
+     *
+     * @param cycle         the year cycle
+     * @param referenceYear the year the cycle is anchored to
+     * @return properties for further assertions
+     */
+    Properties every(YearCycle cycle, Year referenceYear);
   }
 
   interface Shift extends Check {

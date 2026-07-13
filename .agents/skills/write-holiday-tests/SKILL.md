@@ -115,6 +115,35 @@ A fourth, related type has its own method:
 `BEFORE` vs. everything-else, so `CLOSEST` silently behaves like `AFTER` rather than computing an
 actual closest-day distance; no shipped config currently relies on that behavior.
 
+### Periodic Holidays (`every` attribute)
+
+Any holiday-bearing XML element can carry an `every="..."` attribute (`Limited.YearCycle`), restricting
+it to a subset of years within its valid range. `.every(cycle)` handles the two cycles that need no
+anchor; `.every(cycle, referenceYear)` handles the rest, anchored at the year matching the XML's
+`validFrom` (or `validTo` if there's no `validFrom`) — calling the wrong overload for a given cycle
+throws `IllegalArgumentException` immediately, rather than silently misbehaving:
+
+```java
+// EVEN_YEARS / ODD_YEARS: no reference year needed
+.hasFixedHoliday("ASSUMPTION_BLESSED_VIRGIN_MARY", AUGUST, 15)
+  .every(EVEN_YEARS)
+  .validBetween(YEAR_FROM, YEAR_TO)
+
+// TWO_YEARS/THREE_YEARS/FOUR_YEARS/FIVE_YEARS/SIX_YEARS: reference year required
+.hasFixedHoliday("SOME_HOLIDAY", MARCH, 1)
+  .every(FOUR_YEARS, Year.of(2014))
+  .validBetween(Year.of(2014), Year.of(2030))
+```
+
+For a `validBetween`/`validFrom`/`validTo` range with a cycle set, years that don't match the cycle are
+asserted **absent** (not skipped) — the check is exhaustive, not just a presence spot-check. Because of
+this, be careful with overlapping XML entries that combine to a broader pattern than any single entry's
+own cycle: if several XML entries for the same key have different (possibly complementary) cycles across
+overlapping year ranges, don't transcribe them 1:1 — instead determine the actual combined observable
+behavior (e.g. by probing the real `HolidayManager` output across the affected years) and assert that,
+since production doesn't distinguish between the underlying XML entries, only the resulting holiday
+presence per year.
+
 ### Regional/Subdivision Holidays
 
 ```java

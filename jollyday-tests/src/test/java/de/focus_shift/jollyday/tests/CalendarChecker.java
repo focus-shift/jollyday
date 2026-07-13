@@ -4,6 +4,7 @@ import de.focus_shift.jollyday.core.Holiday;
 import de.focus_shift.jollyday.core.HolidayCalendar;
 import de.focus_shift.jollyday.core.HolidayManager;
 import de.focus_shift.jollyday.core.HolidayType;
+import de.focus_shift.jollyday.core.spi.Limited.YearCycle;
 import de.focus_shift.jollyday.core.spi.Occurrence;
 import de.focus_shift.jollyday.core.spi.Relation;
 import net.jqwik.api.Arbitraries;
@@ -76,6 +77,8 @@ public class CalendarChecker implements
   private Relation when;
   private MonthDay anchor;
   private DayOfWeek anchorWeekday;
+  private YearCycle cycle = YearCycle.EVERY_YEAR;
+  private Year cycleReferenceYear;
   private String[] subdivisions = new String[]{};
   private List<YearRange> validRanges = new ArrayList<>();
   private List<YearRange> invalidRanges = new ArrayList<>();
@@ -305,6 +308,38 @@ public class CalendarChecker implements
   }
 
   @Override
+  public CalendarCheckerApi.Properties every(final YearCycle cycle) {
+    Objects.requireNonNull(cycle, "cycle is required");
+    if (requiresReferenceYear(cycle)) {
+      throw new IllegalArgumentException("Cycle " + cycle + " requires a reference year; use every(cycle, referenceYear)");
+    }
+
+    this.cycle = cycle;
+    this.cycleReferenceYear = null;
+    return this;
+  }
+
+  @Override
+  public CalendarCheckerApi.Properties every(final YearCycle cycle, final Year referenceYear) {
+    Objects.requireNonNull(cycle, "cycle is required");
+    Objects.requireNonNull(referenceYear, "referenceYear is required");
+    if (!requiresReferenceYear(cycle)) {
+      throw new IllegalArgumentException("Cycle " + cycle + " does not use a reference year; use every(cycle)");
+    }
+
+    this.cycle = cycle;
+    this.cycleReferenceYear = referenceYear;
+    return this;
+  }
+
+  private static boolean requiresReferenceYear(final YearCycle cycle) {
+    return switch (cycle) {
+      case EVERY_YEAR, ODD_YEARS, EVEN_YEARS -> false;
+      case TWO_YEARS, THREE_YEARS, FOUR_YEARS, FIVE_YEARS, SIX_YEARS -> true;
+    };
+  }
+
+  @Override
   public CalendarCheckerApi.Properties inSubdivision(String... subdivisions) {
     this.subdivisions = subdivisions;
     return this;
@@ -337,6 +372,8 @@ public class CalendarChecker implements
       this.when,
       this.anchor,
       this.anchorWeekday,
+      this.cycle,
+      this.cycleReferenceYear,
       new ArrayList<>(this.validRanges),
       new ArrayList<>(this.invalidRanges),
       new ArrayList<>(this.validShifts),
@@ -430,10 +467,31 @@ public class CalendarChecker implements
             final Set<Holiday> holidays = holidayManager.getHolidays(year, check.subdivisions());
             final LocalDate shiftLocalDate = shiftLocalDate(check, dateSupplier.apply(year));
             final Holiday holiday = new Holiday(shiftLocalDate, check.propertiesKey(), check.holidayType());
-            assertHolidayPresent(holidays, holiday, holidayManager, check.subdivisions());
+            if (matchesCycle(check.cycle(), year, check.cycleReferenceYear())) {
+              assertHolidayPresent(holidays, holiday, holidayManager, check.subdivisions());
+            } else {
+              assertHolidayNotPresent(holidays, holiday, holidayManager, check.subdivisions());
+            }
           }
         );
     }
+  }
+
+  private static boolean matchesCycle(final YearCycle cycle, final Year year, final Year referenceYear) {
+    return switch (cycle) {
+      case EVERY_YEAR -> true;
+      case ODD_YEARS -> year.getValue() % 2 != 0;
+      case EVEN_YEARS -> year.getValue() % 2 == 0;
+      case TWO_YEARS -> matchesReferencedCycle(year, referenceYear, 2);
+      case THREE_YEARS -> matchesReferencedCycle(year, referenceYear, 3);
+      case FOUR_YEARS -> matchesReferencedCycle(year, referenceYear, 4);
+      case FIVE_YEARS -> matchesReferencedCycle(year, referenceYear, 5);
+      case SIX_YEARS -> matchesReferencedCycle(year, referenceYear, 6);
+    };
+  }
+
+  private static boolean matchesReferencedCycle(final Year year, final Year referenceYear, final int cycleYears) {
+    return (year.getValue() - referenceYear.getValue()) % cycleYears == 0;
   }
 
   private static LocalDate weekdayInMonth(final Year year, final Month month, final Occurrence which, final DayOfWeek weekday) {
@@ -569,12 +627,21 @@ public class CalendarChecker implements
         .between(validRange.from().getValue(), validRange.to().getValue())
         .forEachValue(year -> {
             final Set<Holiday> holidays = holidayManager.getHolidays(year, check.subdivisions());
-            assertThat(holidays)
-              .isNotEmpty()
-              .filteredOn(holiday -> holiday.getPropertiesKey().equals(check.propertiesKey()))
-              .extracting(Holiday::getType)
-              .withFailMessage("Holiday '" + check.propertiesKey() + "' with holiday type '" + check.holidayType + "' in year '" + year + "' and in subdivision '" + Arrays.toString(check.subdivisions()) + "' not found.")
-              .contains(check.holidayType());
+            if (matchesCycle(check.cycle(), year, check.cycleReferenceYear())) {
+              assertThat(holidays)
+                .isNotEmpty()
+                .filteredOn(holiday -> holiday.getPropertiesKey().equals(check.propertiesKey()))
+                .extracting(Holiday::getType)
+                .withFailMessage("Holiday '" + check.propertiesKey() + "' with holiday type '" + check.holidayType + "' in year '" + year + "' and in subdivision '" + Arrays.toString(check.subdivisions()) + "' not found.")
+                .contains(check.holidayType());
+            } else {
+              assertThat(holidays)
+                .isNotEmpty()
+                .filteredOn(holiday -> holiday.getPropertiesKey().equals(check.propertiesKey()))
+                .extracting(Holiday::getType)
+                .withFailMessage("Holiday '" + check.propertiesKey() + "' with holiday type '" + check.holidayType + "' in year '" + year + "' unexpectedly found (off-cycle).")
+                .doesNotContain(check.holidayType());
+            }
           }
         );
     }
@@ -597,6 +664,8 @@ public class CalendarChecker implements
     this.when = null;
     this.anchor = null;
     this.anchorWeekday = null;
+    this.cycle = YearCycle.EVERY_YEAR;
+    this.cycleReferenceYear = null;
     this.subdivisions = new String[]{};
     this.validRanges = new ArrayList<>();
     this.invalidRanges = new ArrayList<>();
@@ -607,6 +676,7 @@ public class CalendarChecker implements
     HolidayCalendar calendar, String propertiesKey, Month month, int day,
     HolidayType holidayType, Occurrence which, DayOfWeek weekday,
     MonthDay from, MonthDay to, Relation when, MonthDay anchor, DayOfWeek anchorWeekday,
+    YearCycle cycle, Year cycleReferenceYear,
     List<YearRange> validRanges,
     List<YearRange> invalidRanges, List<WeekDayFromTo> validShifts,
     String[] subdivisions, Category category
@@ -618,6 +688,7 @@ public class CalendarChecker implements
       HolidayCalendar calendar,
       String propertiesKey, Month month, int day, HolidayType holidayType,
       Occurrence which, DayOfWeek weekday, MonthDay from, MonthDay to, Relation when, MonthDay anchor, DayOfWeek anchorWeekday,
+      YearCycle cycle, Year cycleReferenceYear,
       List<YearRange> validRanges, List<YearRange> invalidRanges,
       List<WeekDayFromTo> validShifts, String[] subdivisions, Category category
     ) {
@@ -633,6 +704,8 @@ public class CalendarChecker implements
       this.when = when;
       this.anchor = anchor;
       this.anchorWeekday = anchorWeekday;
+      this.cycle = cycle;
+      this.cycleReferenceYear = cycleReferenceYear;
       this.validRanges = validRanges.isEmpty() ? List.of(DEFAULT_YEAR_RANGE) : unmodifiableList(validRanges);
       this.invalidRanges = unmodifiableList(invalidRanges);
       this.validShifts = unmodifiableList(validShifts);
