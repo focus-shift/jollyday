@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="aw" description="Aruba"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <!-- Arbeidsverordening 2013 (AV 2013), Art. 22: only King's Day and Labour Day have a
+         codified substitution rule; every other fixed holiday below is observed on its literal
+         date even when it falls on a weekend (confirmed via the government's own year-by-year
+         holiday tables, e.g. 1 January 2023 and 18 March 2018 both fell on a Sunday and were
+         listed on their unshifted dates). -->
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+
+    <!-- Dia di Betico: commemorates the birth of Betico Croes, the leading advocate of Aruba's
+         "status aparte" (separation from the Netherlands Antilles), achieved in 1986. -->
+    <Fixed month="JANUARY" day="25" descriptionPropertiesKey="BETICO_CROES_DAY"/>
+
+    <!-- Dia di Himno y Bandera: commemorates the adoption of Aruba's national anthem and flag,
+         both introduced in 1976. -->
+    <Fixed month="MARCH" day="18" descriptionPropertiesKey="ARUBA_NATIONAL_ANTHEM_AND_FLAG_DAY"/>
+
+    <!-- Dutch royal tradition: if 27 April falls on a Sunday, King's Day moves BACKWARD to the
+         preceding Saturday, but is NOT moved when it falls on a Saturday itself - confirmed for
+         2014 (27 April was a Sunday, observed Saturday 26 April; the government's first King's
+         Day after Willem-Alexander's accession) and 2025 (27 April was a Sunday, observed
+         Saturday 26 April, per an explicit DAO/Department of Labor and Research announcement
+         citing AV 2013 Art. 22); 2019 (27 April was a Saturday, observed on that Saturday,
+         unmoved). -->
+    <Fixed month="APRIL" day="27" descriptionPropertiesKey="KINGS_DAY">
+      <MovingCondition substitute="SUNDAY" with="PREVIOUS" weekday="SATURDAY"/>
+    </Fixed>
+
+    <!-- AV 2013 Art. 22: Labour Day moves to the next working day when 1 May falls on a Sunday,
+         but is NOT moved when it falls on a Saturday itself - confirmed for 2022 (1 May was a
+         Sunday, observed Monday 2 May) and 2021 (1 May was a Saturday, observed on that
+         Saturday, unmoved). -->
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="SECOND_CHRISTMAS_DAY"/>
+
+    <!-- Carnival Monday: the Monday before Ash Wednesday, i.e. 48 days before Easter - modeled
+         the same way as Curaçao's identical holiday (Holidays_cw.xml). -->
+    <ChristianHoliday type="SHROVE_MONDAY" descriptionPropertiesKey="CARNIVAL_MONDAY"/>
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <!-- Easter Sunday itself is not listed as a public holiday by the Aruban government or
+         Wikipedia - only Easter Monday is observed. -->
+    <ChristianHoliday type="EASTER_MONDAY"/>
+    <ChristianHoliday type="ASCENSION_DAY"/>
+  </Holidays>
+
+  <Sources>
+    <Source of="Government of Aruba - official holiday list">https://www.gobierno.aw/en/holidays</Source>
+    <Source of="Overheid van Aruba - feestdagen (historical year-by-year tables)">https://www.gobierno.aw/nl/feestdagen</Source>
+    <Source of="DAO (Directie Arbeid en Onderzoek) - King's Day 2025 announcement, citing AV 2013 Art. 22">https://www.gobierno.aw/en/the-department-of-labor-and-research-dao-informs-that-the-kings-day-celebration-is-officially-on</Source>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Aruba</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:AW</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:AW</Source>
+  </Sources>
+</Configuration>
