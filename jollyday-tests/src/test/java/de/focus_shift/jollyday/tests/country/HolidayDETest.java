@@ -45,9 +45,9 @@ class HolidayDETest {
       /* Berlin */
 
       /* Brandenburg */
-      .hasFixedHoliday("REFORMATION_DAY", OCTOBER, 31).inSubdivision("bb").and()
-      .hasChristianHoliday("EASTER").inSubdivision("bb").and()
-      .hasChristianHoliday("PENTECOST").inSubdivision("bb").and()
+      .hasFixedHoliday("REFORMATION_DAY", OCTOBER, 31).validFrom(Year.of(1990)).inSubdivision("bb").and()
+      .hasChristianHoliday("EASTER").validFrom(Year.of(1991)).inSubdivision("bb").and()
+      .hasChristianHoliday("PENTECOST").validFrom(Year.of(1991)).inSubdivision("bb").and()
 
       /* Baden-Württemberg */
       .hasFixedHoliday("EPIPHANY", JANUARY, 6).inSubdivision("bw").and()
@@ -76,7 +76,7 @@ class HolidayDETest {
 
       /* Mecklenburg-Vorpommern */
       .hasFixedHoliday("INTERNATIONAL_WOMAN", MARCH, 8).validFrom(Year.of(2023)).inSubdivision("mv").and()
-      .hasFixedHoliday("REFORMATION_DAY", OCTOBER, 31).inSubdivision("mv").and()
+      .hasFixedHoliday("REFORMATION_DAY", OCTOBER, 31).validFrom(Year.of(1990)).inSubdivision("mv").and()
 
       /* North Rhine-Westphalia */
       .hasFixedHoliday("ALL_SAINTS", NOVEMBER, 1).inSubdivision("nw").and()
@@ -92,14 +92,14 @@ class HolidayDETest {
       .hasChristianHoliday("CORPUS_CHRISTI").inSubdivision("sl").and()
 
       /* Saxony */
-      .hasFixedHoliday("REFORMATION_DAY", OCTOBER, 31).inSubdivision("sn").and()
+      .hasFixedHoliday("REFORMATION_DAY", OCTOBER, 31).validFrom(Year.of(1990)).inSubdivision("sn").and()
 
       /* Saxony-Anhalt */
-      .hasFixedHoliday("EPIPHANY", JANUARY, 6).inSubdivision("st").and()
-      .hasFixedHoliday("REFORMATION_DAY", OCTOBER, 31).inSubdivision("st").and()
+      .hasFixedHoliday("EPIPHANY", JANUARY, 6).validFrom(Year.of(1993)).inSubdivision("st").and()
+      .hasFixedHoliday("REFORMATION_DAY", OCTOBER, 31).validFrom(Year.of(1990)).inSubdivision("st").and()
 
       /* Thuringia */
-      .hasFixedHoliday("REFORMATION_DAY", OCTOBER, 31).inSubdivision("th").and()
+      .hasFixedHoliday("REFORMATION_DAY", OCTOBER, 31).validFrom(Year.of(1990)).inSubdivision("th").and()
       .hasFixedHoliday("CHILDRENS_DAY", SEPTEMBER, 20).validFrom(Year.of(2019)).inSubdivision("th").and()
 
       /* Schleswig-Holstein */

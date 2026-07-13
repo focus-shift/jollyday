@@ -34,6 +34,7 @@
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Germany</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:DE</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:DE</Source>
+    <Source of="Reformation Day (bb, mv, sn, st, th) valid since 1990">https://www.gesetze-im-internet.de/feiertev/DDNR002480990.html</Source>
   </Sources>
 
   <SubConfigurations hierarchy="be" description="Berlin">
@@ -52,9 +53,9 @@
 
   <SubConfigurations hierarchy="bb" description="Brandenburg">
     <Holidays>
-      <Fixed month="OCTOBER" day="31" descriptionPropertiesKey="REFORMATION_DAY"/>
-      <ChristianHoliday type="EASTER"/>
-      <ChristianHoliday type="PENTECOST"/>
+      <Fixed month="OCTOBER" day="31" validFrom="1990" descriptionPropertiesKey="REFORMATION_DAY"/>
+      <ChristianHoliday type="EASTER" validFrom="1991"/>
+      <ChristianHoliday type="PENTECOST" validFrom="1991"/>
     </Holidays>
   </SubConfigurations>
 
@@ -135,7 +136,7 @@
   <SubConfigurations hierarchy="mv" description="Mecklenburg-Vorpommern">
     <Holidays>
       <Fixed month="MARCH" day="8" descriptionPropertiesKey="INTERNATIONAL_WOMAN" validFrom="2023"/>
-      <Fixed month="OCTOBER" day="31" descriptionPropertiesKey="REFORMATION_DAY"/>
+      <Fixed month="OCTOBER" day="31" validFrom="1990" descriptionPropertiesKey="REFORMATION_DAY"/>
     </Holidays>
   </SubConfigurations>
 
@@ -178,7 +179,7 @@
 
   <SubConfigurations hierarchy="sn" description="Saxony">
     <Holidays>
-      <Fixed month="OCTOBER" day="31" descriptionPropertiesKey="REFORMATION_DAY"/>
+      <Fixed month="OCTOBER" day="31" validFrom="1990" descriptionPropertiesKey="REFORMATION_DAY"/>
       <RelativeToFixed validFrom="1995" descriptionPropertiesKey="REPENTANCE_PRAYER">
         <Weekday>WEDNESDAY</Weekday>
         <When>BEFORE</When>
@@ -189,15 +190,15 @@
 
   <SubConfigurations hierarchy="st" description="Saxony-Anhalt">
     <Holidays>
-      <Fixed month="JANUARY" day="6" descriptionPropertiesKey="EPIPHANY"/>
-      <Fixed month="OCTOBER" day="31" descriptionPropertiesKey="REFORMATION_DAY"/>
+      <Fixed month="JANUARY" day="6" validFrom="1993" descriptionPropertiesKey="EPIPHANY"/>
+      <Fixed month="OCTOBER" day="31" validFrom="1990" descriptionPropertiesKey="REFORMATION_DAY"/>
     </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="th" description="Thuringia">
     <Holidays>
       <Fixed month="SEPTEMBER" day="20" descriptionPropertiesKey="CHILDRENS_DAY" validFrom="2019"/>
-      <Fixed month="OCTOBER" day="31" descriptionPropertiesKey="REFORMATION_DAY"/>
+      <Fixed month="OCTOBER" day="31" validFrom="1990" descriptionPropertiesKey="REFORMATION_DAY"/>
     </Holidays>
   </SubConfigurations>
 
