@@ -1,24 +1,25 @@
 package de.focus_shift.jollyday.tests.country;
 
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.ValueSource;
 
 import java.time.Year;
 
 import static de.focus_shift.jollyday.core.HolidayCalendar.GUERNSEY;
+import static de.focus_shift.jollyday.core.spi.Occurrence.FIRST;
+import static de.focus_shift.jollyday.core.spi.Occurrence.LAST;
 import static de.focus_shift.jollyday.tests.CalendarCheckerApi.assertFor;
 import static java.time.DayOfWeek.MONDAY;
 import static java.time.DayOfWeek.SATURDAY;
 import static java.time.DayOfWeek.SUNDAY;
 import static java.time.DayOfWeek.TUESDAY;
+import static java.time.Month.AUGUST;
 import static java.time.Month.DECEMBER;
 import static java.time.Month.JANUARY;
 import static java.time.Month.JUNE;
 import static java.time.Month.MAY;
 import static java.time.Month.SEPTEMBER;
 
-class HolidayGGTest extends AbstractCountryTestBase {
+class HolidayGGTest {
 
   @Test
   void ensuresHolidays() {
@@ -60,15 +61,21 @@ class HolidayGGTest extends AbstractCountryTestBase {
       .hasFixedHoliday("QUEENS_STATE_FUNERAL", SEPTEMBER, 19)
         .validBetween(Year.of(2022), Year.of(2022))
       .and()
+      .hasFixedWeekdayHoliday("MAY_DAY_BANK_HOLIDAY", FIRST, MONDAY, MAY)
+        .validBetween(Year.of(1900), Year.of(2019))
+        .notValidBetween(Year.of(2020), Year.of(2020))
+        .validBetween(Year.of(2021), Year.of(2500))
+      .and()
+      .hasFixedWeekdayHoliday("SPRING_BANK_HOLIDAY", LAST, MONDAY, MAY)
+        .validBetween(Year.of(1900), Year.of(2021))
+        .notValidBetween(Year.of(2022), Year.of(2022))
+        .validBetween(Year.of(2023), Year.of(2500))
+      .and()
+      .hasFixedWeekdayHoliday("SUMMER_BANK_HOLIDAY", LAST, MONDAY, AUGUST)
+      .and()
       .hasChristianHoliday("GOOD_FRIDAY").and()
       .hasChristianHoliday("EASTER_MONDAY")
       .check();
-  }
-
-  @ParameterizedTest
-  @ValueSource(strings = {"2010", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024"})
-  void testManagerGGStructure(final Year year) {
-    validateCalendarData(GUERNSEY.getId(), year, true);
   }
 }
 

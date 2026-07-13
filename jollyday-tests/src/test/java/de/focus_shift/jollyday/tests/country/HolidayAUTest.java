@@ -2,41 +2,456 @@ package de.focus_shift.jollyday.tests.country;
 
 import de.focus_shift.jollyday.core.Holiday;
 import de.focus_shift.jollyday.core.HolidayManager;
-import net.jqwik.api.ForAll;
-import net.jqwik.api.Property;
-import net.jqwik.time.api.constraints.YearRange;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
 import java.time.Month;
+import java.time.MonthDay;
 import java.time.Year;
 import java.util.Set;
 
 import static de.focus_shift.jollyday.core.HolidayCalendar.AUSTRALIA;
 import static de.focus_shift.jollyday.core.ManagerParameters.create;
+import static de.focus_shift.jollyday.core.spi.Occurrence.FIRST;
+import static de.focus_shift.jollyday.core.spi.Occurrence.LAST;
+import static de.focus_shift.jollyday.core.spi.Occurrence.SECOND;
+import static de.focus_shift.jollyday.core.spi.Relation.AFTER;
+import static de.focus_shift.jollyday.tests.CalendarCheckerApi.assertFor;
+import static java.time.DayOfWeek.FRIDAY;
+import static java.time.DayOfWeek.MONDAY;
+import static java.time.DayOfWeek.SATURDAY;
+import static java.time.DayOfWeek.SUNDAY;
+import static java.time.DayOfWeek.TUESDAY;
+import static java.time.DayOfWeek.WEDNESDAY;
+import static java.time.Month.AUGUST;
+import static java.time.Month.FEBRUARY;
+import static java.time.Month.JANUARY;
+import static java.time.Month.JUNE;
+import static java.time.Month.MARCH;
+import static java.time.Month.MAY;
+import static java.time.Month.NOVEMBER;
+import static java.time.Month.OCTOBER;
+import static java.time.Month.SEPTEMBER;
 import static org.assertj.core.api.Assertions.assertThat;
 
-class HolidayAUTest extends AbstractCountryTestBase {
+class HolidayAUTest {
 
-  private static final String ISO_CODE = "au";
-
-  @Property
-  void testManagerAUStructure(@ForAll @YearRange(min = 2019, max = 2022) Year year) {
-    validateCalendarData(ISO_CODE, year, true);
+  @Test
+  void ensuresNationalHolidays() {
+    assertFor(AUSTRALIA)
+      .hasFixedHoliday("NEW_YEAR", JANUARY, 1)
+        .validTo(Year.of(2007))
+        .canBeMovedFrom(SATURDAY, MONDAY)
+        .canBeMovedFrom(SUNDAY, MONDAY)
+      .and()
+      .hasFixedHoliday("NEW_YEAR", JANUARY, 1)
+        .validFrom(Year.of(2020))
+        .canBeMovedFrom(SATURDAY, MONDAY)
+        .canBeMovedFrom(SUNDAY, MONDAY)
+      .and()
+      .hasFixedHoliday("NATIONAL_DAY", JANUARY, 26)
+        .validTo(Year.of(2007))
+      .and()
+      .hasFixedHoliday("NATIONAL_DAY", JANUARY, 26)
+        .validFrom(Year.of(2008))
+        .canBeMovedFrom(SATURDAY, MONDAY)
+        .canBeMovedFrom(SUNDAY, MONDAY)
+      .and()
+      .hasFixedHoliday("ANZAC", Month.APRIL, 25)
+        .validTo(Year.of(2007))
+      .and()
+      .hasFixedHoliday("ANZAC", Month.APRIL, 25)
+        .validFrom(Year.of(2020))
+      .and()
+      .hasFixedHoliday("CHRISTMAS", Month.DECEMBER, 25)
+        .validTo(Year.of(2007))
+        .canBeMovedFrom(SUNDAY, MONDAY)
+      .and()
+      .hasFixedHoliday("BOXING_DAY", Month.DECEMBER, 26)
+        .validTo(Year.of(2007))
+        .canBeMovedFrom(SUNDAY, MONDAY)
+      .and()
+      .hasFixedHoliday("CHRISTMAS", Month.DECEMBER, 25)
+        .validFrom(Year.of(2020))
+        .canBeMovedFrom(SATURDAY, MONDAY)
+        .canBeMovedFrom(SUNDAY, MONDAY)
+      .and()
+      .hasFixedHoliday("BOXING_DAY", Month.DECEMBER, 26)
+        .validFrom(Year.of(2020))
+        .canBeMovedFrom(SATURDAY, MONDAY)
+        .canBeMovedFrom(SUNDAY, TUESDAY)
+        .canBeMovedFrom(MONDAY, TUESDAY)
+      .and()
+      .hasChristianHoliday("EASTER").and()
+      .hasChristianHoliday("GOOD_FRIDAY").and()
+      .hasChristianHoliday("EASTER_SATURDAY").and()
+      .hasChristianHoliday("EASTER_MONDAY")
+      .check();
   }
 
   @Test
-  void testManagerAULoadFromUrl() {
-    final HolidayManager calendarPartLoaded = HolidayManager.getInstance(create("test_au_2020"));
-    final HolidayManager urlLoaded = HolidayManager.getInstance(
-      create(AbstractCountryTestBase.class.getClassLoader().getResource("holidays/Holidays_test_au_2020.xml"))
-    );
+  void ensuresActHolidays() {
+    assertFor(AUSTRALIA)
+      .hasFixedHoliday("NEW_YEAR", JANUARY, 1)
+        .validBetween(Year.of(2008), Year.of(2019))
+        .canBeMovedFrom(SATURDAY, MONDAY)
+        .canBeMovedFrom(SUNDAY, MONDAY)
+        .inSubdivision("act")
+      .and()
+      .hasFixedHoliday("ANZAC", Month.APRIL, 25)
+        .validTo(Year.of(2007))
+        .canBeMovedFrom(SATURDAY, MONDAY)
+        .canBeMovedFrom(SUNDAY, MONDAY)
+        .inSubdivision("act")
+      .and()
+      .hasFixedHoliday("ANZAC", Month.APRIL, 25)
+        .validFrom(Year.of(2020))
+        .canBeMovedFrom(SATURDAY, MONDAY)
+        .canBeMovedFrom(SUNDAY, MONDAY)
+        .inSubdivision("act")
+      .and()
+      .hasFixedHoliday("CHRISTMAS", Month.DECEMBER, 25)
+        .validBetween(Year.of(2008), Year.of(2019))
+        .canBeMovedFrom(SATURDAY, MONDAY)
+        .canBeMovedFrom(SUNDAY, MONDAY)
+        .inSubdivision("act")
+      .and()
+      .hasFixedHoliday("BOXING_DAY", Month.DECEMBER, 26)
+        .validBetween(Year.of(2008), Year.of(2019))
+        .canBeMovedFrom(SATURDAY, MONDAY)
+        .canBeMovedFrom(SUNDAY, MONDAY)
+        .inSubdivision("act")
+      .and()
+      .hasFixedWeekdayHoliday("CANBERRA_DAY", SECOND, MONDAY, MARCH)
+        .inSubdivision("act")
+      .and()
+      .hasFixedWeekdayHoliday("QUEENS_BIRTHDAY", SECOND, MONDAY, JUNE)
+        .inSubdivision("act")
+      .and()
+      .hasFixedWeekdayHoliday("LABOUR_DAY", FIRST, MONDAY, OCTOBER)
+        .inSubdivision("act")
+      .and()
+      .hasFixedWeekdayHoliday("FAMILY_COMMUNITY", FIRST, TUESDAY, NOVEMBER)
+        .validTo(Year.of(2019))
+        .inSubdivision("act")
+      .and()
+      .hasFixedWeekdayRelativeToFixedHoliday("RECONCILIATION", FIRST, MONDAY, AFTER, MonthDay.of(MAY, 26))
+        .validFrom(Year.of(2020))
+        .inSubdivision("act")
+      .check();
+  }
 
-    final var dataHierarchy = calendarPartLoaded.getCalendarHierarchy();
-    final var testHierarchy = urlLoaded.getCalendarHierarchy();
+  @Test
+  void ensuresNswHolidays() {
+    assertFor(AUSTRALIA)
+      .hasFixedHoliday("NEW_YEAR", JANUARY, 1)
+        .validBetween(Year.of(2008), Year.of(2019))
+        .canBeMovedFrom(SUNDAY, MONDAY)
+        .inSubdivision("nsw")
+      .and()
+      .hasFixedHoliday("ANZAC", Month.APRIL, 25)
+        .validTo(Year.of(2007))
+        .canBeMovedFrom(SUNDAY, MONDAY)
+        .inSubdivision("nsw")
+      .and()
+      .hasFixedHoliday("ANZAC", Month.APRIL, 25)
+        .validFrom(Year.of(2026))
+        .canBeMovedFrom(SATURDAY, MONDAY)
+        .canBeMovedFrom(SUNDAY, MONDAY)
+        .inSubdivision("nsw")
+      .and()
+      .hasFixedHoliday("CHRISTMAS", Month.DECEMBER, 25)
+        .validBetween(Year.of(2008), Year.of(2019))
+        .canBeMovedFrom(SATURDAY, MONDAY)
+        .canBeMovedFrom(SUNDAY, MONDAY)
+        .inSubdivision("nsw")
+      .and()
+      .hasFixedHoliday("BOXING_DAY", Month.DECEMBER, 26)
+        .validBetween(Year.of(2008), Year.of(2019))
+        .canBeMovedFrom(SATURDAY, MONDAY)
+        .canBeMovedFrom(SUNDAY, MONDAY)
+        .inSubdivision("nsw")
+      .and()
+      .hasFixedWeekdayHoliday("QUEENS_BIRTHDAY", SECOND, MONDAY, JUNE)
+        .inSubdivision("nsw")
+      .and()
+      .hasFixedWeekdayHoliday("LABOUR_DAY", FIRST, MONDAY, OCTOBER)
+        .inSubdivision("nsw")
+      .and()
+      .hasFixedWeekdayHoliday("BANK_HOLIDAY", FIRST, MONDAY, AUGUST)
+        .validFrom(Year.of(2020))
+        .inSubdivision("nsw")
+      .check();
+  }
 
-    compareHierarchies(testHierarchy, dataHierarchy);
-    compareData(urlLoaded, calendarPartLoaded, Year.of(2020), true);
+  @Test
+  void ensuresNtHolidays() {
+    assertFor(AUSTRALIA)
+      .hasFixedHoliday("NEW_YEAR", JANUARY, 1)
+        .validBetween(Year.of(2008), Year.of(2019))
+        .canBeMovedFrom(SATURDAY, MONDAY)
+        .canBeMovedFrom(SUNDAY, MONDAY)
+        .inSubdivision("nt")
+      .and()
+      .hasFixedHoliday("ANZAC", Month.APRIL, 25)
+        .validTo(Year.of(2007))
+        .canBeMovedFrom(SUNDAY, MONDAY)
+        .inSubdivision("nt")
+      .and()
+      .hasFixedHoliday("ANZAC", Month.APRIL, 25)
+        .validFrom(Year.of(2020))
+        .canBeMovedFrom(SUNDAY, MONDAY)
+        .inSubdivision("nt")
+      .and()
+      .hasFixedHoliday("CHRISTMAS", Month.DECEMBER, 25)
+        .validBetween(Year.of(2008), Year.of(2019))
+        .canBeMovedFrom(SATURDAY, MONDAY)
+        .canBeMovedFrom(SUNDAY, MONDAY)
+        .inSubdivision("nt")
+      .and()
+      .hasFixedHoliday("BOXING_DAY", Month.DECEMBER, 26)
+        .validBetween(Year.of(2008), Year.of(2019))
+        .canBeMovedFrom(SATURDAY, MONDAY)
+        .canBeMovedFrom(SUNDAY, MONDAY)
+        .inSubdivision("nt")
+      .and()
+      .hasFixedWeekdayHoliday("MAY_DAY", FIRST, MONDAY, MAY)
+        .inSubdivision("nt")
+      .and()
+      .hasFixedWeekdayHoliday("QUEENS_BIRTHDAY", SECOND, MONDAY, JUNE)
+        .inSubdivision("nt")
+      .and()
+      .hasFixedWeekdayHoliday("PICNIC", FIRST, MONDAY, AUGUST)
+        .inSubdivision("nt")
+      .check();
+  }
+
+  @Test
+  void ensuresQldHolidays() {
+    assertFor(AUSTRALIA)
+      .hasFixedHoliday("NEW_YEAR", JANUARY, 1)
+        .validBetween(Year.of(2008), Year.of(2019))
+        .canBeMovedFrom(SUNDAY, MONDAY)
+        .inSubdivision("qld")
+      .and()
+      .hasFixedHoliday("ANZAC", Month.APRIL, 25)
+        .validTo(Year.of(2007))
+        .canBeMovedFrom(SUNDAY, MONDAY)
+        .inSubdivision("qld")
+      .and()
+      .hasFixedHoliday("ANZAC", Month.APRIL, 25)
+        .validFrom(Year.of(2020))
+        .canBeMovedFrom(SUNDAY, MONDAY)
+        .inSubdivision("qld")
+      .and()
+      .hasFixedHoliday("CHRISTMAS", Month.DECEMBER, 25)
+        .validBetween(Year.of(2008), Year.of(2019))
+        .canBeMovedFrom(SUNDAY, MONDAY)
+        .inSubdivision("qld")
+      .and()
+      .hasFixedHoliday("BOXING_DAY", Month.DECEMBER, 26)
+        .validBetween(Year.of(2008), Year.of(2019))
+        .canBeMovedFrom(SUNDAY, MONDAY)
+        .inSubdivision("qld")
+      .and()
+      .hasFixedWeekdayHoliday("LABOUR_DAY", FIRST, MONDAY, MAY)
+        .inSubdivision("qld")
+      .and()
+      .hasFixedWeekdayHoliday("QUEENS_BIRTHDAY", SECOND, MONDAY, JUNE)
+        .validTo(Year.of(2019))
+        .inSubdivision("qld")
+      .and()
+      .hasFixedWeekdayHoliday("QUEENS_BIRTHDAY", FIRST, MONDAY, OCTOBER)
+        .validFrom(Year.of(2020))
+        .inSubdivision("qld")
+      .and()
+      .hasFixedWeekdayBetweenFixedHoliday("EKKA", WEDNESDAY, MonthDay.of(AUGUST, 10), MonthDay.of(AUGUST, 16))
+        .validFrom(Year.of(2020))
+        .inSubdivision("qld", "br")
+      .check();
+  }
+
+  @Test
+  void ensuresSaHolidays() {
+    assertFor(AUSTRALIA)
+      .hasFixedHoliday("NEW_YEAR", JANUARY, 1)
+        .validBetween(Year.of(2008), Year.of(2019))
+        .canBeMovedFrom(SATURDAY, MONDAY)
+        .canBeMovedFrom(SUNDAY, MONDAY)
+        .inSubdivision("sa")
+      .and()
+      .hasFixedHoliday("NATIONAL_DAY", JANUARY, 26)
+        .validFrom(Year.of(2020))
+        .inSubdivision("sa")
+      .and()
+      .hasFixedHoliday("ANZAC", Month.APRIL, 25)
+        .validTo(Year.of(2007))
+        .canBeMovedFrom(SUNDAY, MONDAY)
+        .inSubdivision("sa")
+      .and()
+      .hasFixedHoliday("ANZAC", Month.APRIL, 25)
+        .validBetween(Year.of(2020), Year.of(2022))
+        .canBeMovedFrom(SUNDAY, MONDAY)
+        .inSubdivision("sa")
+      .and()
+      .hasFixedHoliday("CHRISTMAS", Month.DECEMBER, 25)
+        .validBetween(Year.of(2008), Year.of(2019))
+        .canBeMovedFrom(SATURDAY, MONDAY)
+        .canBeMovedFrom(SUNDAY, MONDAY)
+        .inSubdivision("sa")
+      .and()
+      .hasFixedHoliday("PROCLAMATION", Month.DECEMBER, 26)
+        .validBetween(Year.of(2008), Year.of(2019))
+        .canBeMovedFrom(SATURDAY, MONDAY)
+        .canBeMovedFrom(SUNDAY, MONDAY)
+        .inSubdivision("sa")
+      .and()
+      .hasFixedHoliday("PROCLAMATION", Month.DECEMBER, 26)
+        .validFrom(Year.of(2020))
+        .canBeMovedFrom(SATURDAY, MONDAY)
+        .canBeMovedFrom(SUNDAY, TUESDAY)
+        .canBeMovedFrom(MONDAY, TUESDAY)
+        .inSubdivision("sa")
+      .and()
+      .hasFixedWeekdayHoliday("ADELAIDE_CUP", SECOND, MONDAY, MARCH)
+        .inSubdivision("sa")
+      .and()
+      .hasFixedWeekdayHoliday("QUEENS_BIRTHDAY", SECOND, MONDAY, JUNE)
+        .inSubdivision("sa")
+      .and()
+      .hasFixedWeekdayHoliday("LABOUR_DAY", FIRST, MONDAY, OCTOBER)
+        .inSubdivision("sa")
+      .check();
+  }
+
+  @Test
+  void ensuresTasHolidays() {
+    assertFor(AUSTRALIA)
+      .hasFixedHoliday("ANZAC", Month.APRIL, 25)
+        .validTo(Year.of(2019))
+        .inSubdivision("tas")
+      .and()
+      .hasFixedHoliday("NEW_YEAR", JANUARY, 1)
+        .validBetween(Year.of(2008), Year.of(2019))
+        .canBeMovedFrom(SATURDAY, MONDAY)
+        .canBeMovedFrom(SUNDAY, MONDAY)
+        .inSubdivision("tas")
+      .and()
+      .hasFixedHoliday("CHRISTMAS", Month.DECEMBER, 25)
+        .validBetween(Year.of(2008), Year.of(2019))
+        .canBeMovedFrom(SATURDAY, MONDAY)
+        .canBeMovedFrom(SUNDAY, MONDAY)
+        .inSubdivision("tas")
+      .and()
+      .hasFixedHoliday("BOXING_DAY", Month.DECEMBER, 26)
+        .validBetween(Year.of(2008), Year.of(2019))
+        .canBeMovedFrom(SATURDAY, MONDAY)
+        .canBeMovedFrom(SUNDAY, MONDAY)
+        .inSubdivision("tas")
+      .and()
+      .hasFixedWeekdayHoliday("EIGHT", SECOND, MONDAY, MARCH)
+        .inSubdivision("tas")
+      .and()
+      .hasFixedWeekdayHoliday("QUEENS_BIRTHDAY", SECOND, MONDAY, JUNE)
+        .inSubdivision("tas")
+      .and()
+      .hasChristianHoliday("EASTER_TUESDAY")
+        .inSubdivision("tas")
+      .and()
+      .hasFixedWeekdayHoliday("HOBART", SECOND, MONDAY, FEBRUARY)
+        .inSubdivision("tas", "ho")
+      .and()
+      .hasFixedWeekdayHoliday("RECREATION", FIRST, MONDAY, NOVEMBER)
+        .inSubdivision("tas", "nh")
+      .check();
+  }
+
+  @Test
+  void ensuresVicHolidays() {
+    assertFor(AUSTRALIA)
+      .hasFixedHoliday("ANZAC", Month.APRIL, 25)
+        .validTo(Year.of(2019))
+        .inSubdivision("vic")
+      .and()
+      .hasFixedHoliday("NEW_YEAR", JANUARY, 1)
+        .validBetween(Year.of(2008), Year.of(2019))
+        .canBeMovedFrom(SUNDAY, MONDAY)
+        .inSubdivision("vic")
+      .and()
+      .hasFixedHoliday("CHRISTMAS", Month.DECEMBER, 25)
+        .validBetween(Year.of(2008), Year.of(2019))
+        .canBeMovedFrom(SATURDAY, MONDAY)
+        .canBeMovedFrom(SUNDAY, MONDAY)
+        .inSubdivision("vic")
+      .and()
+      .hasFixedHoliday("BOXING_DAY", Month.DECEMBER, 26)
+        .validBetween(Year.of(2008), Year.of(2019))
+        .canBeMovedFrom(SATURDAY, MONDAY)
+        .canBeMovedFrom(SUNDAY, MONDAY)
+        .inSubdivision("vic")
+      .and()
+      .hasFixedWeekdayHoliday("LABOUR_DAY", SECOND, MONDAY, MARCH)
+        .inSubdivision("vic")
+      .and()
+      .hasFixedWeekdayHoliday("QUEENS_BIRTHDAY", SECOND, MONDAY, JUNE)
+        .inSubdivision("vic")
+      .and()
+      .hasFixedWeekdayHoliday("MELBOURNE_CUP", FIRST, TUESDAY, NOVEMBER)
+        .inSubdivision("vic")
+      .and()
+      .hasFixedWeekdayHoliday("AFL", LAST, FRIDAY, SEPTEMBER)
+        .validFrom(Year.of(2020))
+        .inSubdivision("vic")
+      .check();
+  }
+
+  @Test
+  void ensuresWaHolidays() {
+    assertFor(AUSTRALIA)
+      .hasFixedHoliday("NEW_YEAR", JANUARY, 1)
+        .validBetween(Year.of(2008), Year.of(2019))
+        .canBeMovedFrom(SATURDAY, MONDAY)
+        .canBeMovedFrom(SUNDAY, MONDAY)
+        .inSubdivision("wa")
+      .and()
+      .hasFixedHoliday("ANZAC", Month.APRIL, 25)
+        .validTo(Year.of(2007))
+        .canBeMovedFrom(SATURDAY, MONDAY)
+        .canBeMovedFrom(SUNDAY, MONDAY)
+        .inSubdivision("wa")
+      .and()
+      .hasFixedHoliday("ANZAC", Month.APRIL, 25)
+        .validFrom(Year.of(2020))
+        .canBeMovedFrom(SATURDAY, MONDAY)
+        .canBeMovedFrom(SUNDAY, MONDAY)
+        .inSubdivision("wa")
+      .and()
+      .hasFixedHoliday("CHRISTMAS", Month.DECEMBER, 25)
+        .validBetween(Year.of(2008), Year.of(2019))
+        .canBeMovedFrom(SATURDAY, MONDAY)
+        .canBeMovedFrom(SUNDAY, MONDAY)
+        .inSubdivision("wa")
+      .and()
+      .hasFixedHoliday("BOXING_DAY", Month.DECEMBER, 26)
+        .validBetween(Year.of(2008), Year.of(2019))
+        .canBeMovedFrom(SATURDAY, MONDAY)
+        .canBeMovedFrom(SUNDAY, MONDAY)
+        .inSubdivision("wa")
+      .and()
+      .hasFixedWeekdayHoliday("LABOUR_DAY", FIRST, MONDAY, MARCH)
+        .inSubdivision("wa")
+      .and()
+      .hasFixedWeekdayHoliday("FOUNDATION", FIRST, MONDAY, JUNE)
+        .validTo(Year.of(2019))
+        .inSubdivision("wa")
+      .and()
+      .hasFixedWeekdayHoliday("WESTERN_AUSTRALIA", FIRST, MONDAY, JUNE)
+        .validFrom(Year.of(2020))
+        .inSubdivision("wa")
+      .and()
+      .hasFixedWeekdayHoliday("QUEENS_BIRTHDAY", LAST, MONDAY, SEPTEMBER)
+        .inSubdivision("wa")
+      .check();
   }
 
   @Test
