@@ -109,6 +109,15 @@ public interface CalendarCheckerApi {
     Properties hasIslamicHoliday(final String propertyKey);
 
     /**
+     * Checks for an Islamic holiday with the given property key.
+     *
+     * @param propertyKey             the property key of the holiday
+     * @param overriddenPropertiesKey whether the property key is overridden in the calendar properties
+     * @return properties for further assertions
+     */
+    Properties hasIslamicHoliday(final String propertyKey, boolean overriddenPropertiesKey);
+
+    /**
      * Checks for an Islamic holiday with the given property key and holiday type.
      *
      * @param propertyKey the property key of the holiday
@@ -116,6 +125,16 @@ public interface CalendarCheckerApi {
      * @return properties for further assertions
      */
     Properties hasIslamicHoliday(final String propertyKey, final HolidayType type);
+
+    /**
+     * Checks for an Islamic holiday with the given property key and holiday type.
+     *
+     * @param propertyKey             the property key of the holiday
+     * @param type                    the type of the holiday
+     * @param overriddenPropertiesKey whether the property key is overridden in the calendar properties
+     * @return properties for further assertions
+     */
+    Properties hasIslamicHoliday(final String propertyKey, final HolidayType type, boolean overriddenPropertiesKey);
 
     /**
      * Checks for an Ethiopian Orthodox holiday with the given property key.

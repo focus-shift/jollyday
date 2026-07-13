@@ -6,8 +6,6 @@ import de.focus_shift.jollyday.core.HolidayManager;
 import de.focus_shift.jollyday.core.ManagerParameters;
 import de.focus_shift.jollyday.core.util.CalendarUtil;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.ValueSource;
 
 import java.time.LocalDate;
 import java.time.Month;
@@ -33,26 +31,10 @@ import static java.time.Month.SEPTEMBER;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
-class HolidaySGTest extends AbstractCountryTestBase {
+class HolidaySGTest {
 
-  private static final String ISO_CODE = "sg";
   private static final Year YEAR_FROM = Year.of(1900);
   private static final Year YEAR_TO = Year.of(2173);
-
-  // NOTE: HARI_RAYA_PUASA (IslamicHoliday type ID_AL_FITR/ID_AL_FITR_2) and HARI_RAYA_HAJI
-  // (IslamicHoliday type ID_UL_ADHA/ID_UL_ADHA_2) are NOT covered by ensuresHolidays() below.
-  // Holidays_sg.xml overrides descriptionPropertiesKey to these plain names, but
-  // CalendarChecker.hasIslamicHoliday(key) unconditionally prefixes the key with "islamic.",
-  // unlike hasChristianHoliday which has an overriddenPropertiesKey overload for exactly this case.
-  // This is an API gap, not a Singapore-specific issue; flagging for the parent/maintainers rather
-  // than patching the shared CalendarCheckerApi/CalendarChecker from this migration.
-  // Structural coverage (including these two holidays) therefore still relies on validateCalendarData below.
-
-  @ParameterizedTest
-  @ValueSource(strings = {"2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024"})
-  void testManagerSGStructure(final Year year) {
-    validateCalendarData(ISO_CODE, year, true);
-  }
 
   @Test
   void testManagerSGInterval() {
@@ -156,6 +138,15 @@ class HolidaySGTest extends AbstractCountryTestBase {
       .and()
 
       .hasChristianHoliday("GOOD_FRIDAY")
+        .validBetween(YEAR_FROM, YEAR_TO)
+      .and()
+
+      // HARI_RAYA_PUASA/HARI_RAYA_HAJI: descriptionPropertiesKey is overridden to a plain name in the XML,
+      // regardless of which IslamicHoliday type (ID_AL_FITR/_2, ID_UL_ADHA/_2) applies in a given validity window
+      .hasIslamicHoliday("HARI_RAYA_PUASA", true)
+        .validBetween(YEAR_FROM, YEAR_TO)
+      .and()
+      .hasIslamicHoliday("HARI_RAYA_HAJI", true)
         .validBetween(YEAR_FROM, YEAR_TO)
       .check();
   }

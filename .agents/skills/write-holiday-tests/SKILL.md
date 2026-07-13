@@ -71,6 +71,10 @@ void ensuresHolidays() {
 .hasIslamicHoliday("ID_AL_FITR")  // type, year, month, day
 .hasIslamicHoliday("ID_UL_ADHA")
 .hasIslamicHoliday("NEWYEAR")
+
+// if the XML overrides descriptionPropertiesKey to a plain name instead of the default
+// "islamic."-prefixed key (e.g. Singapore's HARI_RAYA_PUASA/HARI_RAYA_HAJI), pass true:
+.hasIslamicHoliday("HARI_RAYA_PUASA", true)
 ```
 
 ### Fixed Weekday Holidays

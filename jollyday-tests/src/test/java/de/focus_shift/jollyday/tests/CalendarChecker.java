@@ -116,16 +116,26 @@ public class CalendarChecker implements
 
   @Override
   public CalendarCheckerApi.Properties hasIslamicHoliday(final String propertyKey) {
-    return hasIslamicHoliday(propertyKey, PUBLIC_HOLIDAY);
+    return hasIslamicHoliday(propertyKey, PUBLIC_HOLIDAY, false);
+  }
+
+  @Override
+  public CalendarCheckerApi.Properties hasIslamicHoliday(final String propertyKey, boolean overriddenPropertiesKey) {
+    return hasIslamicHoliday(propertyKey, PUBLIC_HOLIDAY, overriddenPropertiesKey);
   }
 
   @Override
   public CalendarCheckerApi.Properties hasIslamicHoliday(final String propertyKey, final HolidayType type) {
+    return hasIslamicHoliday(propertyKey, type, false);
+  }
+
+  @Override
+  public CalendarCheckerApi.Properties hasIslamicHoliday(final String propertyKey, final HolidayType type, boolean overriddenPropertiesKey) {
     Objects.requireNonNull(propertyKey, "propertyKey is required");
     Objects.requireNonNull(type, "holiday type is required");
 
     this.category = BY_KEY;
-    this.propertyKey = "islamic." + propertyKey;
+    this.propertyKey = overriddenPropertiesKey ? propertyKey : "islamic." + propertyKey;
     this.type = type;
 
     return this;
