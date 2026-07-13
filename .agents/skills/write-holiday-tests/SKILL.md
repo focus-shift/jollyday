@@ -73,6 +73,30 @@ void ensuresHolidays() {
 .hasIslamicHoliday("NEWYEAR")
 ```
 
+### Fixed Weekday Holidays
+
+The XSD defines three distinct "weekday-based" holiday types. Each has its own assertion method,
+which independently recomputes the expected date rather than calling into the production
+calculator — this keeps the check a genuine verification of the XML config, not a tautology
+against the same code being tested.
+
+```java
+// FixedWeekday: Nth/last weekday of a month, e.g. US Thanksgiving
+.hasFixedWeekdayHoliday("THANKSGIVING", FOURTH, THURSDAY, NOVEMBER)
+  .validFrom(Year.of(1863))
+
+// FixedWeekdayBetweenFixed: first matching weekday between two fixed dates, e.g. Iceland's Husband's Day
+.hasFixedWeekdayBetweenFixedHoliday("HUSBANDS_DAY", FRIDAY, MonthDay.of(JANUARY, 19), MonthDay.of(JANUARY, 25))
+
+// FixedWeekdayRelativeToFixed: Nth weekday before/after/closest-to a fixed anchor date, e.g. Iceland's First Day of Summer
+.hasFixedWeekdayRelativeToFixedHoliday("FIRST_DAY_SUMMER", FIRST, THURSDAY, AFTER, MonthDay.of(APRIL, 18))
+```
+
+`Occurrence` (`FIRST`/`SECOND`/`THIRD`/`FOURTH`/`LAST`) and `Relation` (`BEFORE`/`AFTER`/`CLOSEST`) come from
+`de.focus_shift.jollyday.core.spi`. Note: `Occurrence.LAST` is **not supported** for
+`hasFixedWeekdayRelativeToFixedHoliday` (throws `UnsupportedOperationException`) — production's
+day-offset calculation has no defined behavior for `LAST` in that specific holiday type.
+
 ### Regional/Subdivision Holidays
 
 ```java

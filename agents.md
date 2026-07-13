@@ -308,7 +308,8 @@ Register a new holiday calendar in the `HolidayCalendar` enum. Covers:
 
 Write country-specific holiday tests using `CalendarCheckerApi`. Covers:
 - Test file location and naming conventions
-- Assertion methods for all holiday types
+- Assertion methods for all holiday types, including the three FixedWeekday variants
+  (`FixedWeekday`, `FixedWeekdayBetweenFixed`, `FixedWeekdayRelativeToFixed`)
 - Testing regional/subdivision holidays
 - Testing edge cases (moving conditions, historical changes)
 
