@@ -1,4 +1,4 @@
-package de.focus_shift.jollyday.tests;
+package de.focus_shift.jollyday.tests.country;
 
 import org.junit.jupiter.api.Test;
 
@@ -11,7 +11,7 @@ import static java.time.Month.MAY;
 import static java.time.Month.NOVEMBER;
 import static java.time.Month.OCTOBER;
 
-class HTHolidayTest {
+class HolidayHTTest {
 
   @Test
   void ensuresHolidays() {
