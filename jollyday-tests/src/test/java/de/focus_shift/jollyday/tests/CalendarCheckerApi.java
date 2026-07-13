@@ -31,7 +31,8 @@ public interface CalendarCheckerApi {
    *   .hasChristianHoliday("WHIT_MONDAY").and()
    *   .hasFixedWeekdayHoliday("THANKSGIVING", FOURTH, THURSDAY, NOVEMBER).and()
    *   .hasFixedWeekdayBetweenFixedHoliday("EKKA", WEDNESDAY, MonthDay.of(AUGUST, 10), MonthDay.of(AUGUST, 16)).and()
-   *   .hasFixedWeekdayRelativeToFixedHoliday("FIRST_DAY_SUMMER", FIRST, THURSDAY, AFTER, MonthDay.of(APRIL, 18))
+   *   .hasFixedWeekdayRelativeToFixedHoliday("FIRST_DAY_SUMMER", FIRST, THURSDAY, AFTER, MonthDay.of(APRIL, 18)).and()
+   *   .hasRelativeToWeekdayInMonthHoliday("SERVICE_REDUCTION", FRIDAY, BEFORE, LAST, MONDAY, MAY)
    *   .check();</code></pre>
    *
    * @param calendar the calendar that should be used for the holiday assertions
@@ -203,6 +204,33 @@ public interface CalendarCheckerApi {
      * @return properties for further assertions
      */
     Properties hasFixedWeekdayRelativeToFixedHoliday(final String propertyKey, final Occurrence which, final DayOfWeek weekday, final Relation when, final MonthDay anchor, final HolidayType type);
+
+    /**
+     * Checks for a holiday on the given weekday before/after a weekday-in-month anchor, e.g. the Friday before the last Monday in May.
+     *
+     * @param propertyKey    the property key of the holiday
+     * @param weekday        the weekday of the holiday
+     * @param when           the relation (before, after) to the anchor
+     * @param anchorWhich    the occurrence of the anchor weekday within its month
+     * @param anchorWeekday  the weekday of the anchor
+     * @param anchorMonth    the month of the anchor
+     * @return properties for further assertions
+     */
+    Properties hasRelativeToWeekdayInMonthHoliday(final String propertyKey, final DayOfWeek weekday, final Relation when, final Occurrence anchorWhich, final DayOfWeek anchorWeekday, final Month anchorMonth);
+
+    /**
+     * Checks for a holiday on the given weekday before/after a weekday-in-month anchor, e.g. the Friday before the last Monday in May.
+     *
+     * @param propertyKey    the property key of the holiday
+     * @param weekday        the weekday of the holiday
+     * @param when           the relation (before, after) to the anchor
+     * @param anchorWhich    the occurrence of the anchor weekday within its month
+     * @param anchorWeekday  the weekday of the anchor
+     * @param anchorMonth    the month of the anchor
+     * @param type           the type of the holiday
+     * @return properties for further assertions
+     */
+    Properties hasRelativeToWeekdayInMonthHoliday(final String propertyKey, final DayOfWeek weekday, final Relation when, final Occurrence anchorWhich, final DayOfWeek anchorWeekday, final Month anchorMonth, final HolidayType type);
   }
 
   interface Properties extends Subdivision, Between, Shift, Check {

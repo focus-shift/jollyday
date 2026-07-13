@@ -19,8 +19,11 @@ import static de.focus_shift.jollyday.core.ManagerParameters.create;
 import static de.focus_shift.jollyday.core.spi.Occurrence.FIRST;
 import static de.focus_shift.jollyday.core.spi.Occurrence.FOURTH;
 import static de.focus_shift.jollyday.core.spi.Occurrence.SECOND;
+import static de.focus_shift.jollyday.core.spi.Relation.AFTER;
+import static de.focus_shift.jollyday.core.spi.Relation.BEFORE;
 import static de.focus_shift.jollyday.core.spi.Relation.CLOSEST;
 import static de.focus_shift.jollyday.tests.CalendarCheckerApi.assertFor;
+import static java.time.DayOfWeek.FRIDAY;
 import static java.time.DayOfWeek.MONDAY;
 import static java.time.DayOfWeek.SATURDAY;
 import static java.time.DayOfWeek.SUNDAY;
@@ -37,16 +40,7 @@ import static java.time.Month.OCTOBER;
 import static java.time.Month.SEPTEMBER;
 import static org.assertj.core.api.Assertions.assertThat;
 
-class HolidayNZTest extends AbstractCountryTestBase {
-
-  // NOTE: the "hkb" (Hawke's Bay) and "mbh" (Marlborough) subdivisions use the <RelativeToWeekdayInMonth>
-  // XML element (a weekday before/after another FixedWeekday holiday), which CalendarCheckerApi does not
-  // yet support. Keeping the old snapshot-based structural test as a safety net for those two subdivisions;
-  // everything else below is independently verified via CalendarCheckerApi.
-  @Test
-  void testManagerNZStructure() {
-    validateCalendarData("nz", Year.of(2018));
-  }
+class HolidayNZTest {
 
   @Test
   void ensuresHolidays() {
@@ -175,6 +169,12 @@ class HolidayNZTest extends AbstractCountryTestBase {
       .and()
       .hasFixedWeekdayRelativeToFixedHoliday("WESTLAND_ANNIVERSARY", FIRST, MONDAY, CLOSEST, MonthDay.of(DECEMBER, 1))
         .inSubdivision("wtc")
+      .and()
+      .hasRelativeToWeekdayInMonthHoliday("HAWKES_BAY_ANNIVERSARY", FRIDAY, BEFORE, FOURTH, MONDAY, OCTOBER)
+        .inSubdivision("hkb")
+      .and()
+      .hasRelativeToWeekdayInMonthHoliday("MARLBOROUGH_ANNIVERSARY", MONDAY, AFTER, FOURTH, MONDAY, OCTOBER)
+        .inSubdivision("mbh")
       .check();
   }
 

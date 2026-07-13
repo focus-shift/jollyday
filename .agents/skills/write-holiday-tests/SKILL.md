@@ -97,6 +97,20 @@ against the same code being tested.
 `hasFixedWeekdayRelativeToFixedHoliday` (throws `UnsupportedOperationException`) — production's
 day-offset calculation has no defined behavior for `LAST` in that specific holiday type.
 
+A fourth, related type has its own method:
+
+```java
+// RelativeToWeekdayInMonth: a weekday before/after a *computed* weekday-in-month anchor,
+// e.g. Maryland's Service Reduction Day (the Friday before the last Monday in May)
+.hasRelativeToWeekdayInMonthHoliday("SERVICE_REDUCTION", FRIDAY, BEFORE, LAST, MONDAY, MAY, OBSERVANCE)
+  .inSubdivision("md")
+```
+
+`Relation.CLOSEST` is **not supported** for `hasRelativeToWeekdayInMonthHoliday` (throws
+`UnsupportedOperationException`) — production's `RelativeToWeekdayInMonthParser` only branches on
+`BEFORE` vs. everything-else, so `CLOSEST` silently behaves like `AFTER` rather than computing an
+actual closest-day distance; no shipped config currently relies on that behavior.
+
 ### Regional/Subdivision Holidays
 
 ```java

@@ -21,6 +21,7 @@ import static de.focus_shift.jollyday.core.spi.Occurrence.FIRST;
 import static de.focus_shift.jollyday.core.spi.Occurrence.SECOND;
 import static de.focus_shift.jollyday.core.spi.Occurrence.THIRD;
 import static de.focus_shift.jollyday.core.spi.Occurrence.FOURTH;
+import static de.focus_shift.jollyday.core.spi.Relation.AFTER;
 import static java.time.DayOfWeek.MONDAY;
 import static java.time.DayOfWeek.TUESDAY;
 import static java.time.DayOfWeek.WEDNESDAY;
@@ -38,7 +39,6 @@ import static java.time.Month.JULY;
 import static java.time.Month.OCTOBER;
 import static java.time.Month.NOVEMBER;
 import static java.time.Month.DECEMBER;
-import static java.time.temporal.TemporalAdjusters.dayOfWeekInMonth;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
@@ -194,33 +194,20 @@ class HolidayVGTest {
       .and()
       .hasChristianHoliday("GOOD_FRIDAY").and()
       .hasChristianHoliday("EASTER_MONDAY").and()
-      .hasChristianHoliday("WHIT_MONDAY")
+      .hasChristianHoliday("WHIT_MONDAY").and()
+
+      .hasRelativeToWeekdayInMonthHoliday("FESTIVAL_TUESDAY", TUESDAY, AFTER, FIRST, MONDAY, AUGUST)
+        .validTo(Year.of(2020))
+      .and()
+      .hasRelativeToWeekdayInMonthHoliday("FESTIVAL_WEDNESDAY", WEDNESDAY, AFTER, FIRST, MONDAY, AUGUST)
+        .validTo(Year.of(2020))
+      .and()
+      .hasRelativeToWeekdayInMonthHoliday("EMANCIPATION_TUESDAY", TUESDAY, AFTER, FIRST, MONDAY, AUGUST)
+        .validFrom(Year.of(2021))
+      .and()
+      .hasRelativeToWeekdayInMonthHoliday("EMANCIPATION_WEDNESDAY", WEDNESDAY, AFTER, FIRST, MONDAY, AUGUST)
+        .validFrom(Year.of(2021))
       .check();
-  }
-
-  /**
-   * CalendarCheckerApi has no assertion method yet for the XSD's {@code RelativeToWeekdayInMonth} type
-   * (a weekday relative to a *computed* FixedWeekdayInMonth anchor, as opposed to a fixed date). These four
-   * holidays are the only usage of that type in this calendar, so they are verified directly against
-   * HolidayManager instead.
-   */
-  @Test
-  void ensuresHolidaysRelativeToWeekdayInMonth() {
-    final HolidayManager manager = HolidayManager.getInstance(ManagerParameters.create(BRITISH_VIRGIN_ISLANDS));
-
-    for (int year : new int[]{2018, 2019, 2020}) {
-      final LocalDate firstMondayInAugust = LocalDate.of(year, AUGUST, 1).with(dayOfWeekInMonth(1, MONDAY));
-      final Set<Holiday> holidays = manager.getHolidays(Year.of(year));
-      assertThat(holidays).contains(new Holiday(firstMondayInAugust.plusDays(1), "FESTIVAL_TUESDAY", HolidayType.PUBLIC_HOLIDAY));
-      assertThat(holidays).contains(new Holiday(firstMondayInAugust.plusDays(2), "FESTIVAL_WEDNESDAY", HolidayType.PUBLIC_HOLIDAY));
-    }
-
-    for (int year : new int[]{2021, 2022, 2023}) {
-      final LocalDate firstMondayInAugust = LocalDate.of(year, AUGUST, 1).with(dayOfWeekInMonth(1, MONDAY));
-      final Set<Holiday> holidays = manager.getHolidays(Year.of(year));
-      assertThat(holidays).contains(new Holiday(firstMondayInAugust.plusDays(1), "EMANCIPATION_TUESDAY", HolidayType.PUBLIC_HOLIDAY));
-      assertThat(holidays).contains(new Holiday(firstMondayInAugust.plusDays(2), "EMANCIPATION_WEDNESDAY", HolidayType.PUBLIC_HOLIDAY));
-    }
   }
 
   @Test

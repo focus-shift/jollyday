@@ -1,24 +1,18 @@
 package de.focus_shift.jollyday.tests.country;
 
-import de.focus_shift.jollyday.core.Holiday;
-import de.focus_shift.jollyday.core.HolidayManager;
 import org.junit.jupiter.api.Test;
 
-import java.time.DayOfWeek;
-import java.time.LocalDate;
-import java.time.Month;
 import java.time.Year;
-import java.time.temporal.TemporalAdjusters;
-import java.util.Set;
 
 import static de.focus_shift.jollyday.core.HolidayCalendar.UNITED_STATES;
 import static de.focus_shift.jollyday.core.HolidayType.OBSERVANCE;
-import static de.focus_shift.jollyday.core.ManagerParameters.create;
 import static de.focus_shift.jollyday.core.spi.Occurrence.FIRST;
 import static de.focus_shift.jollyday.core.spi.Occurrence.FOURTH;
 import static de.focus_shift.jollyday.core.spi.Occurrence.LAST;
 import static de.focus_shift.jollyday.core.spi.Occurrence.SECOND;
 import static de.focus_shift.jollyday.core.spi.Occurrence.THIRD;
+import static de.focus_shift.jollyday.core.spi.Relation.AFTER;
+import static de.focus_shift.jollyday.core.spi.Relation.BEFORE;
 import static de.focus_shift.jollyday.tests.CalendarCheckerApi.assertFor;
 import static de.focus_shift.jollyday.tests.CalendarChecker.Adjuster.PREVIOUS;
 import static java.time.DayOfWeek.FRIDAY;
@@ -26,6 +20,7 @@ import static java.time.DayOfWeek.MONDAY;
 import static java.time.DayOfWeek.SATURDAY;
 import static java.time.DayOfWeek.SUNDAY;
 import static java.time.DayOfWeek.THURSDAY;
+import static java.time.DayOfWeek.TUESDAY;
 import static java.time.Month.APRIL;
 import static java.time.Month.AUGUST;
 import static java.time.Month.DECEMBER;
@@ -38,7 +33,6 @@ import static java.time.Month.MAY;
 import static java.time.Month.NOVEMBER;
 import static java.time.Month.OCTOBER;
 import static java.time.Month.SEPTEMBER;
-import static org.assertj.core.api.Assertions.assertThat;
 
 class HolidayUSTest {
 
@@ -528,8 +522,10 @@ class HolidayUSTest {
       .and()
       .hasFixedWeekdayHoliday("AMERICAN_INDIAN_HERITAGE_DAY", FOURTH, FRIDAY, NOVEMBER)
         .inSubdivision("md")
+      .and()
+      .hasRelativeToWeekdayInMonthHoliday("SERVICE_REDUCTION", FRIDAY, BEFORE, LAST, MONDAY, MAY, OBSERVANCE)
+        .inSubdivision("md")
       .check();
-    // SERVICE_REDUCTION (RelativeToWeekdayInMonth) is covered in ensuresRelativeToWeekdayInMonthHolidays()
   }
 
   @Test
@@ -673,8 +669,10 @@ class HolidayUSTest {
       .hasFixedWeekdayHoliday("COLUMBUS_DAY", SECOND, MONDAY, OCTOBER)
         .validFrom(Year.of(1934))
         .inSubdivision("mt")
+      .and()
+      .hasRelativeToWeekdayInMonthHoliday("THANKSGIVING", TUESDAY, AFTER, FIRST, MONDAY, NOVEMBER, OBSERVANCE)
+        .inSubdivision("mt")
       .check();
-    // THANKSGIVING (RelativeToWeekdayInMonth observance) is covered in ensuresRelativeToWeekdayInMonthHolidays()
   }
 
   @Test
@@ -1132,8 +1130,11 @@ class HolidayUSTest {
       .hasFixedWeekdayHoliday("INDIGENOUS_PEOPLES_DAY", SECOND, MONDAY, OCTOBER)
         .validFrom(Year.of(2020))
         .inSubdivision("va")
+      .and()
+      .hasRelativeToWeekdayInMonthHoliday("LEE_JACKSON", FRIDAY, BEFORE, THIRD, MONDAY, JANUARY, OBSERVANCE)
+        .validTo(Year.of(2019))
+        .inSubdivision("va")
       .check();
-    // LEE_JACKSON (RelativeToWeekdayInMonth observance, validTo 2019) is covered in ensuresRelativeToWeekdayInMonthHolidays()
   }
 
   @Test
@@ -1225,49 +1226,5 @@ class HolidayUSTest {
         .validFrom(Year.of(2019))
         .inSubdivision("dc")
       .check();
-  }
-
-  /**
-   * {@code RelativeToWeekdayInMonth} is a 4th weekday-based holiday type (anchor = a computed
-   * FixedWeekday date, not a fixed MonthDay) that {@code CalendarCheckerApi} does not yet support.
-   * These three states use it, so they're verified directly against the HolidayManager instead,
-   * computing the expected date independently via TemporalAdjusters (not by calling into jollyday's
-   * own FindWeekDayInMonth/RelativeToWeekdayInMonthParser).
-   */
-  @Test
-  void ensuresRelativeToWeekdayInMonthHolidays() {
-    final HolidayManager manager = HolidayManager.getInstance(create(UNITED_STATES));
-
-    // Maryland: SERVICE_REDUCTION is the Friday before Memorial Day (last Monday in May)
-    final Year mdYear = Year.of(2024);
-    final Set<Holiday> mdHolidays = manager.getHolidays(mdYear, "md");
-    final LocalDate memorialDay2024 = mdHolidays.stream()
-      .filter(h -> h.getPropertiesKey().equals("MEMORIAL_DAY"))
-      .findFirst()
-      .orElseThrow()
-      .getDate();
-    assertThat(mdHolidays).contains(new Holiday(memorialDay2024.minusDays(3), "SERVICE_REDUCTION", OBSERVANCE));
-
-    // Montana: THANKSGIVING (observance) is the Tuesday after the first Monday in November
-    final Year mtYear = Year.of(2027);
-    final LocalDate mtFirstMondayNovember = LocalDate.of(mtYear.getValue(), Month.NOVEMBER, 1)
-      .with(TemporalAdjusters.dayOfWeekInMonth(1, DayOfWeek.MONDAY));
-    final LocalDate mtThanksgivingObservance = mtFirstMondayNovember.with(TemporalAdjusters.next(DayOfWeek.TUESDAY));
-    final Set<Holiday> mtHolidays = manager.getHolidays(mtYear, "mt");
-    assertThat(mtHolidays).contains(new Holiday(mtThanksgivingObservance, "THANKSGIVING", OBSERVANCE));
-
-    // Virginia: LEE_JACKSON (observance, until 2019) is the Friday before Martin Luther King Day (third Monday in January)
-    final Year vaYearValid = Year.of(2015);
-    final LocalDate vaMlkDay2015 = LocalDate.of(vaYearValid.getValue(), Month.JANUARY, 1)
-      .with(TemporalAdjusters.dayOfWeekInMonth(3, DayOfWeek.MONDAY));
-    final LocalDate vaLeeJackson2015 = vaMlkDay2015.with(TemporalAdjusters.previous(DayOfWeek.FRIDAY));
-    final Set<Holiday> vaHolidaysValid = manager.getHolidays(vaYearValid, "va");
-    assertThat(vaHolidaysValid).contains(new Holiday(vaLeeJackson2015, "LEE_JACKSON", OBSERVANCE));
-
-    final Year vaYearInvalid = Year.of(2020);
-    final Set<Holiday> vaHolidaysInvalid = manager.getHolidays(vaYearInvalid, "va");
-    assertThat(vaHolidaysInvalid)
-      .extracting(Holiday::getPropertiesKey)
-      .doesNotContain("LEE_JACKSON");
   }
 }
