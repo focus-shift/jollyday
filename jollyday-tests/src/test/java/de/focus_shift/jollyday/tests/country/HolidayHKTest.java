@@ -1,17 +1,8 @@
 package de.focus_shift.jollyday.tests.country;
 
-import de.focus_shift.jollyday.core.Holiday;
-import de.focus_shift.jollyday.core.HolidayCalendar;
-import de.focus_shift.jollyday.core.HolidayManager;
-import de.focus_shift.jollyday.core.ManagerParameters;
-import de.focus_shift.jollyday.core.util.CalendarUtil;
 import org.junit.jupiter.api.Test;
 
-import java.time.LocalDate;
-import java.time.Month;
 import java.time.Year;
-import java.util.List;
-import java.util.Set;
 
 import static de.focus_shift.jollyday.core.HolidayCalendar.HONG_KONG;
 import static de.focus_shift.jollyday.tests.CalendarChecker.Adjuster.PREVIOUS;
@@ -30,8 +21,6 @@ import static java.time.Month.JUNE;
 import static java.time.Month.MAY;
 import static java.time.Month.OCTOBER;
 import static java.time.Month.SEPTEMBER;
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
 class HolidayHKTest {
 
@@ -39,6 +28,8 @@ class HolidayHKTest {
   void ensuresHolidays() {
     assertFor(HONG_KONG)
       .hasFixedHoliday("FIRST_DAY_OF_JANUARY", JANUARY, 1)
+        // 1 Jan 2023 is a Sunday, so observed Monday 2 Jan
+        .validBetween(Year.of(2023), Year.of(2023))
         .canBeMovedFrom(SUNDAY, MONDAY)
       .and()
       .hasFixedHoliday("LUNAR_NEW_YEARS_DAY", FEBRUARY, 18)
@@ -606,12 +597,18 @@ class HolidayHKTest {
       .and()
       .hasFixedHoliday("NATIONAL_DAY", OCTOBER, 1)
         .validFrom(Year.of(2013))
+        // 1 Oct 2022 is a Saturday, so observed unmoved
+        .validBetween(Year.of(2022), Year.of(2022))
         .canBeMovedFrom(SUNDAY, MONDAY)
       .and()
       .hasFixedHoliday("CHRISTMAS", DECEMBER, 25)
+        // 25 Dec 2022 is a Sunday, so observed Tuesday 27 Dec (Monday already taken by the day after Christmas)
+        .validBetween(Year.of(2022), Year.of(2022))
         .canBeMovedFrom(SUNDAY, TUESDAY)
       .and()
       .hasFixedHoliday("FIRST_WEEKDAY_AFTER_CHRISTMAS", DECEMBER, 26)
+        // 26 Dec 2022 is a Monday, so observed unmoved
+        .validBetween(Year.of(2022), Year.of(2022))
         .canBeMovedFrom(SUNDAY, MONDAY)
       .and()
       .hasChristianHoliday("GOOD_FRIDAY")
@@ -633,24 +630,5 @@ class HolidayHKTest {
       .hasChristianHoliday("EASTER_MONDAY")
         .validFrom(Year.of(2022))
       .check();
-  }
-
-  @Test
-  void testManagerHKInterval() {
-    assertDoesNotThrow(() -> {
-      final HolidayManager instance = HolidayManager.getInstance(ManagerParameters.create(HolidayCalendar.HONG_KONG, null));
-      final LocalDate startDateInclusive = LocalDate.of(2022, Month.OCTOBER, 1);
-      final LocalDate endDateInclusive = LocalDate.of(2023, Month.JANUARY, 31);
-      final Set<Holiday> holidays = instance.getHolidays(startDateInclusive, endDateInclusive);
-      final List<LocalDate> expected = List.of(LocalDate.of(2022, Month.OCTOBER, 1),
-        LocalDate.of(2022, Month.OCTOBER, 4), LocalDate.of(2022, Month.DECEMBER, 26),
-        LocalDate.of(2022, Month.DECEMBER, 27), LocalDate.of(2023, Month.JANUARY, 2),
-        LocalDate.of(2023, Month.JANUARY, 23), LocalDate.of(2023, Month.JANUARY, 24),
-        LocalDate.of(2023, Month.JANUARY, 25));
-      assertThat(holidays).hasSameSizeAs(expected);
-      for (LocalDate d : expected) {
-        assertThat(CalendarUtil.contains(holidays, d)).isTrue();
-      }
-    });
   }
 }

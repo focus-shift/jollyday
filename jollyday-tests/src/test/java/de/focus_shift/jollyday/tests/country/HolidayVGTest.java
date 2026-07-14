@@ -1,18 +1,8 @@
 package de.focus_shift.jollyday.tests.country;
 
-import de.focus_shift.jollyday.core.Holiday;
-import de.focus_shift.jollyday.core.HolidayCalendar;
-import de.focus_shift.jollyday.core.HolidayManager;
-import de.focus_shift.jollyday.core.HolidayType;
-import de.focus_shift.jollyday.core.ManagerParameters;
-import de.focus_shift.jollyday.core.util.CalendarUtil;
 import org.junit.jupiter.api.Test;
 
-import java.time.LocalDate;
-import java.time.Month;
 import java.time.Year;
-import java.util.List;
-import java.util.Set;
 
 import static de.focus_shift.jollyday.core.HolidayCalendar.BRITISH_VIRGIN_ISLANDS;
 import static de.focus_shift.jollyday.tests.CalendarChecker.Adjuster.PREVIOUS;
@@ -39,8 +29,6 @@ import static java.time.Month.JULY;
 import static java.time.Month.OCTOBER;
 import static java.time.Month.NOVEMBER;
 import static java.time.Month.DECEMBER;
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
 class HolidayVGTest {
 
@@ -49,6 +37,8 @@ class HolidayVGTest {
 
     assertFor(BRITISH_VIRGIN_ISLANDS)
       .hasFixedHoliday("NEW_YEAR", JANUARY, 1)
+        // 1 Jan 2016 is a Friday, so observed unmoved
+        .validBetween(Year.of(2016), Year.of(2016))
         .canBeMovedFrom(SATURDAY, MONDAY)
         .canBeMovedFrom(SUNDAY, MONDAY)
       .and()
@@ -114,6 +104,8 @@ class HolidayVGTest {
       // assumed that the holidays before where following this rule too due to missing data for Wednesdays
       .hasFixedHoliday("ST_URSULA", OCTOBER, 21)
         .validBetween(Year.of(1900), Year.of(2015))
+        // 21 Oct 2015 is a Wednesday, so observed the preceding Monday 19 Oct
+        .validBetween(Year.of(2015), Year.of(2015))
         .canBeMovedFrom(WEDNESDAY, PREVIOUS, MONDAY)
         .canBeMovedFrom(SATURDAY, PREVIOUS, FRIDAY)
         .canBeMovedFrom(SUNDAY, MONDAY)
@@ -131,6 +123,8 @@ class HolidayVGTest {
       // assume that 2016 was an outlier
       .hasFixedHoliday("CHRISTMAS", DECEMBER, 25)
         .validBetween(Year.of(1900), Year.of(2015))
+        // 25 Dec 2015 is a Friday, so observed unmoved
+        .validBetween(Year.of(2015), Year.of(2015))
         .canBeMovedFrom(SATURDAY, MONDAY)
         .canBeMovedFrom(SUNDAY, TUESDAY)
       .and()
@@ -147,6 +141,8 @@ class HolidayVGTest {
       // assume that 2016 was an outlier
       .hasFixedHoliday("BOXING_DAY", DECEMBER, 26)
         .validBetween(Year.of(1900), Year.of(2015))
+        // 26 Dec 2015 is a Saturday, so observed Monday 28 Dec
+        .validBetween(Year.of(2015), Year.of(2015))
         .canBeMovedFrom(SATURDAY, MONDAY)
         .canBeMovedFrom(SUNDAY, TUESDAY)
       .and()
@@ -208,22 +204,5 @@ class HolidayVGTest {
       .hasRelativeToWeekdayInMonthHoliday("EMANCIPATION_WEDNESDAY", WEDNESDAY, AFTER, FIRST, MONDAY, AUGUST)
         .validFrom(Year.of(2021))
       .check();
-  }
-
-  @Test
-  void testManagerVGInterval() {
-    assertDoesNotThrow(() -> {
-      final HolidayManager instance = HolidayManager.getInstance(ManagerParameters.create(HolidayCalendar.BRITISH_VIRGIN_ISLANDS, null));
-      final LocalDate startDateInclusive = LocalDate.of(2015, Month.OCTOBER, 1);
-      final LocalDate endDateInclusive = LocalDate.of(2016, Month.JANUARY, 31);
-      final Set<Holiday> holidays = instance.getHolidays(startDateInclusive, endDateInclusive);
-      final List<LocalDate> expected = List.of(LocalDate.of(2015, Month.DECEMBER, 25),
-        LocalDate.of(2015, Month.DECEMBER, 28), LocalDate.of(2015, Month.OCTOBER, 19),
-        LocalDate.of(2016, Month.JANUARY, 1));
-      assertThat(holidays).hasSameSizeAs(expected);
-      for (LocalDate d : expected) {
-        assertThat(CalendarUtil.contains(holidays, d)).isTrue();
-      }
-    });
   }
 }

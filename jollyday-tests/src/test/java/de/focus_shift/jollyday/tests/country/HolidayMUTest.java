@@ -1,17 +1,8 @@
 package de.focus_shift.jollyday.tests.country;
 
-import de.focus_shift.jollyday.core.Holiday;
-import de.focus_shift.jollyday.core.HolidayCalendar;
-import de.focus_shift.jollyday.core.HolidayManager;
-import de.focus_shift.jollyday.core.ManagerParameters;
-import de.focus_shift.jollyday.core.util.CalendarUtil;
 import org.junit.jupiter.api.Test;
 
-import java.time.LocalDate;
-import java.time.Month;
 import java.time.Year;
-import java.util.List;
-import java.util.Set;
 
 import static de.focus_shift.jollyday.core.HolidayCalendar.MAURITIUS;
 import static de.focus_shift.jollyday.core.spi.Limited.YearCycle.EVEN_YEARS;
@@ -27,8 +18,6 @@ import static java.time.Month.MAY;
 import static java.time.Month.NOVEMBER;
 import static java.time.Month.OCTOBER;
 import static java.time.Month.SEPTEMBER;
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
 class HolidayMUTest {
 
@@ -39,8 +28,8 @@ class HolidayMUTest {
   void ensuresHolidays() {
 
     assertFor(MAURITIUS)
-      .hasFixedHoliday("NEW_YEAR", JANUARY, 1).validBetween(YEAR_FROM, YEAR_TO).and()
-      .hasFixedHoliday("NEW_YEAR", JANUARY, 2).validBetween(YEAR_FROM, YEAR_TO).and()
+      .hasFixedHoliday("NEW_YEAR", JANUARY, 1).validBetween(YEAR_FROM, YEAR_TO).validBetween(Year.of(2023), Year.of(2023)).and()
+      .hasFixedHoliday("NEW_YEAR", JANUARY, 2).validBetween(YEAR_FROM, YEAR_TO).validBetween(Year.of(2023), Year.of(2023)).and()
       .hasFixedHoliday("PUBLIC_HOLIDAY", JANUARY, 3).validBetween(Year.of(2023), Year.of(2023)).and()
 
       // CHINESE_SPRING_FESTIVAL: lunar-calendar date, hardcoded per year
@@ -146,9 +135,9 @@ class HolidayMUTest {
         .validBetween(YEAR_FROM, YEAR_TO)
       .and()
 
-      .hasFixedHoliday("ARRIVAL_OF_INDENTURED_LABORERS", NOVEMBER, 2).validBetween(YEAR_FROM, YEAR_TO).and()
+      .hasFixedHoliday("ARRIVAL_OF_INDENTURED_LABORERS", NOVEMBER, 2).validBetween(YEAR_FROM, YEAR_TO).validBetween(Year.of(2022), Year.of(2022)).and()
 
-      .hasFixedHoliday("CHRISTMAS", DECEMBER, 25).validBetween(YEAR_FROM, YEAR_TO).and()
+      .hasFixedHoliday("CHRISTMAS", DECEMBER, 25).validBetween(YEAR_FROM, YEAR_TO).validBetween(Year.of(2022), Year.of(2022)).and()
 
       // ID_AL_FITR: 5 overlapping Fixed-weekday/cycle entries in the XML (some typed ID_AL_FITR, some
       // ID_AL_FITR_2, an artifact of a historical day-shift quirk), but they collectively tile every
@@ -157,23 +146,5 @@ class HolidayMUTest {
       .hasIslamicHoliday("ID_AL_FITR")
         .validBetween(YEAR_FROM, YEAR_TO)
       .check();
-  }
-
-  @Test
-  void testManagerMUInterval() {
-    assertDoesNotThrow(() -> {
-      final HolidayManager instance = HolidayManager.getInstance(ManagerParameters.create(HolidayCalendar.MAURITIUS, null));
-      final LocalDate startDateInclusive = LocalDate.of(2022, Month.OCTOBER, 1);
-      final LocalDate endDateInclusive = LocalDate.of(2023, Month.JANUARY, 31);
-      final Set<Holiday> holidays = instance.getHolidays(startDateInclusive, endDateInclusive);
-      final List<LocalDate> expected = List.of(LocalDate.of(2022, Month.OCTOBER, 24),
-        LocalDate.of(2022, Month.NOVEMBER, 2), LocalDate.of(2022, Month.DECEMBER, 25),
-        LocalDate.of(2023, Month.JANUARY, 1), LocalDate.of(2023, Month.JANUARY, 2),
-        LocalDate.of(2023, Month.JANUARY, 3), LocalDate.of(2023, Month.JANUARY, 22));
-      assertThat(holidays).hasSameSizeAs(expected);
-      for (LocalDate d : expected) {
-        assertThat(CalendarUtil.contains(holidays, d)).isTrue();
-      }
-    });
   }
 }
