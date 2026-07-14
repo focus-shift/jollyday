@@ -107,13 +107,10 @@ class ResourceUtilTest {
     // Set default locale to French
     Locale.setDefault(Locale.FRANCE);
 
-    // Request English description for France
-    final String description = ResourceUtil.getCountryDescription(Locale.ENGLISH, "fr");
-
-    // Should return English "France", not French "France" (same in this case, but let's use a different one)
-    // Let's use "de" to get "Germany" vs "Allemagne"
-    final String germanyDescription = ResourceUtil.getCountryDescription(Locale.ENGLISH, "de");
-    assertThat(germanyDescription)
+    // "fr" would read as "France" in both English and French, so use "de" instead to get a
+    // distinguishable "Germany" vs "Allemagne"
+    final String description = ResourceUtil.getCountryDescription(Locale.ENGLISH, "de");
+    assertThat(description)
       .as("Country description for 'de' with Locale.ENGLISH should be in English even when default locale is French")
       .isEqualTo("Germany");
   }
