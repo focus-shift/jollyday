@@ -131,7 +131,9 @@ class HolidayPTTest {
       .hasFixedHoliday("CITY_DAY", JUNE, 24).inSubdivision("20", "HRT").and()
       .hasFixedHoliday("CITY_DAY", JUNE, 20).inSubdivision("20", "CRV").and()
       .hasFixedHoliday("CITY_DAY", NOVEMBER, 25).inSubdivision("20", "CHT").and()
-      .hasFixedHoliday("CITY_DAY", JUNE, 24).inSubdivision("20", "AGH")
+      .hasFixedHoliday("CITY_DAY", JUNE, 24).inSubdivision("20", "AGH").and()
+      .hasRelativeToEasterSundayHoliday("CITY_DAY").inSubdivision("20", "PVC").and()
+      .hasRelativeToEasterSundayHoliday("CITY_DAY").inSubdivision("20", "PDL")
       .check();
 
     // Santa Cruz da Graciosa
@@ -228,7 +230,9 @@ class HolidayPTTest {
       .hasChristianHoliday("EASTER_MONDAY").inSubdivision("05", "PNC").and()
       .hasFixedHoliday("CITY_DAY", JUNE, 13).inSubdivision("05", "PNV").and()
       .hasFixedHoliday("CITY_DAY", JUNE, 24).inSubdivision("05", "SRT").and()
-      .hasFixedHoliday("CITY_DAY", SEPTEMBER, 19).inSubdivision("05", "VLR")
+      .hasFixedHoliday("CITY_DAY", SEPTEMBER, 19).inSubdivision("05", "VLR").and()
+      .hasRelativeToEasterSundayHoliday("CITY_DAY").inSubdivision("05", "CTB").and()
+      .hasRelativeToEasterSundayHoliday("CITY_DAY").inSubdivision("05", "IDN")
       .check();
 
     // Castelo Branco
@@ -292,7 +296,8 @@ class HolidayPTTest {
       .hasFixedHoliday("CITY_DAY", JUNE, 13).inSubdivision("07", "RMZ").and()
       .hasFixedHoliday("CITY_DAY", SEPTEMBER, 7).inSubdivision("07", "VND").and()
       .hasFixedHoliday("CITY_DAY", JANUARY, 13).inSubdivision("07", "VNT").and()
-      .hasFixedHoliday("CITY_DAY", AUGUST, 16).inSubdivision("07", "VVC")
+      .hasFixedHoliday("CITY_DAY", AUGUST, 16).inSubdivision("07", "VVC").and()
+      .hasRelativeToEasterSundayHoliday("CITY_DAY").inSubdivision("07", "ADL")
       .check();
 
     // Alandroal
@@ -340,7 +345,8 @@ class HolidayPTTest {
       .hasFixedHoliday("CITY_DAY", AUGUST, 25).inSubdivision("09", "PNH").and()
       .hasFixedHoliday("CITY_DAY", JULY, 3).inSubdivision("09", "SEI").and()
       .hasFixedHoliday("CITY_DAY", MAY, 29).inSubdivision("09", "TCR").and()
-      .hasFixedHoliday("CITY_DAY", MAY, 21).inSubdivision("09", "VLF")
+      .hasFixedHoliday("CITY_DAY", MAY, 21).inSubdivision("09", "VLF").and()
+      .hasRelativeToEasterSundayHoliday("CITY_DAY").inSubdivision("09", "SBG")
       .check();
 
     // Gouveia
@@ -435,7 +441,8 @@ class HolidayPTTest {
       .hasChristianHoliday("EASTER_MONDAY").inSubdivision("12", "NIS").and()
       .hasChristianHoliday("EASTER_MONDAY").inSubdivision("12", "PSR").and()
       .hasFixedHoliday("CITY_DAY", MAY, 23).inSubdivision("12", "PTG").and()
-      .hasChristianHoliday("EASTER_MONDAY").inSubdivision("12", "SSL")
+      .hasChristianHoliday("EASTER_MONDAY").inSubdivision("12", "SSL").and()
+      .hasRelativeToEasterSundayHoliday("CITY_DAY").inSubdivision("12", "MFT")
       .check();
 
     // Monforte
@@ -458,7 +465,8 @@ class HolidayPTTest {
       .hasFixedHoliday("CITY_DAY", NOVEMBER, 19).inSubdivision("13", "TRF").and()
       .hasFixedHoliday("CITY_DAY", JUNE, 24).inSubdivision("13", "VLG").and()
       .hasFixedHoliday("CITY_DAY", JUNE, 24).inSubdivision("13", "VCD").and()
-      .hasFixedHoliday("CITY_DAY", JUNE, 24).inSubdivision("13", "VNG")
+      .hasFixedHoliday("CITY_DAY", JUNE, 24).inSubdivision("13", "VNG").and()
+      .hasRelativeToEasterSundayHoliday("CITY_DAY").inSubdivision("13", "MTS")
       .check();
 
     // Gondomar
