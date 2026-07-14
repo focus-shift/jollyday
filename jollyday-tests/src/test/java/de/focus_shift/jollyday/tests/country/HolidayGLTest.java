@@ -28,7 +28,8 @@ class HolidayGLTest {
       .hasChristianHoliday("EASTER_MONDAY").and()
       .hasChristianHoliday("ASCENSION_DAY").and()
       .hasChristianHoliday("PENTECOST").and()
-      .hasChristianHoliday("WHIT_MONDAY")
+      .hasChristianHoliday("WHIT_MONDAY").and()
+      .hasRelativeToEasterSundayHoliday("BANK_HOLIDAY", OBSERVANCE)
       .check();
   }
 }
