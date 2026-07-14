@@ -2,10 +2,14 @@ package de.focus_shift.jollyday.tests;
 
 import de.focus_shift.jollyday.core.HolidayCalendar;
 import de.focus_shift.jollyday.core.HolidayType;
+import de.focus_shift.jollyday.core.spi.Limited.YearCycle;
+import de.focus_shift.jollyday.core.spi.Occurrence;
+import de.focus_shift.jollyday.core.spi.Relation;
 import de.focus_shift.jollyday.tests.CalendarChecker.Adjuster;
 
 import java.time.DayOfWeek;
 import java.time.Month;
+import java.time.MonthDay;
 import java.time.Year;
 
 public interface CalendarCheckerApi {
@@ -25,7 +29,11 @@ public interface CalendarCheckerApi {
    *     .notValidBetween(Year.of(1991), Year.of(2500))
    *   .and()
    *   .hasChristianHoliday("ASCENSION_DAY").and()
-   *   .hasChristianHoliday("WHIT_MONDAY")
+   *   .hasChristianHoliday("WHIT_MONDAY").and()
+   *   .hasFixedWeekdayHoliday("THANKSGIVING", FOURTH, THURSDAY, NOVEMBER).and()
+   *   .hasFixedWeekdayBetweenFixedHoliday("EKKA", WEDNESDAY, MonthDay.of(AUGUST, 10), MonthDay.of(AUGUST, 16)).and()
+   *   .hasFixedWeekdayRelativeToFixedHoliday("FIRST_DAY_SUMMER", FIRST, THURSDAY, AFTER, MonthDay.of(APRIL, 18)).and()
+   *   .hasRelativeToWeekdayInMonthHoliday("SERVICE_REDUCTION", FRIDAY, BEFORE, LAST, MONDAY, MAY)
    *   .check();</code></pre>
    *
    * @param calendar the calendar that should be used for the holiday assertions
@@ -102,6 +110,15 @@ public interface CalendarCheckerApi {
     Properties hasIslamicHoliday(final String propertyKey);
 
     /**
+     * Checks for an Islamic holiday with the given property key.
+     *
+     * @param propertyKey             the property key of the holiday
+     * @param overriddenPropertiesKey whether the property key is overridden in the calendar properties
+     * @return properties for further assertions
+     */
+    Properties hasIslamicHoliday(final String propertyKey, boolean overriddenPropertiesKey);
+
+    /**
      * Checks for an Islamic holiday with the given property key and holiday type.
      *
      * @param propertyKey the property key of the holiday
@@ -109,6 +126,16 @@ public interface CalendarCheckerApi {
      * @return properties for further assertions
      */
     Properties hasIslamicHoliday(final String propertyKey, final HolidayType type);
+
+    /**
+     * Checks for an Islamic holiday with the given property key and holiday type.
+     *
+     * @param propertyKey             the property key of the holiday
+     * @param type                    the type of the holiday
+     * @param overriddenPropertiesKey whether the property key is overridden in the calendar properties
+     * @return properties for further assertions
+     */
+    Properties hasIslamicHoliday(final String propertyKey, final HolidayType type, boolean overriddenPropertiesKey);
 
     /**
      * Checks for an Ethiopian Orthodox holiday with the given property key.
@@ -126,6 +153,167 @@ public interface CalendarCheckerApi {
      * @return properties for further assertions
      */
     Properties hasEthiopianOrthodoxHoliday(final String propertyKey, final HolidayType type);
+
+    /**
+     * Checks for a holiday relative to Easter Sunday with the given property key.
+     *
+     * @param propertyKey the property key of the holiday
+     * @return properties for further assertions
+     */
+    Properties hasRelativeToEasterSundayHoliday(final String propertyKey);
+
+    /**
+     * Checks for a holiday relative to Easter Sunday with the given property key and holiday type.
+     *
+     * @param propertyKey the property key of the holiday
+     * @param type        the type of the holiday
+     * @return properties for further assertions
+     */
+    Properties hasRelativeToEasterSundayHoliday(final String propertyKey, final HolidayType type);
+
+    /**
+     * Checks for a holiday on the given occurrence of a weekday within a month, e.g. the fourth Thursday in November.
+     *
+     * @param propertyKey the property key of the holiday
+     * @param which       the occurrence of the weekday within the month
+     * @param weekday     the weekday of the holiday
+     * @param month       the month of the holiday
+     * @return properties for further assertions
+     */
+    Properties hasFixedWeekdayHoliday(final String propertyKey, final Occurrence which, final DayOfWeek weekday, final Month month);
+
+    /**
+     * Checks for a holiday on the given occurrence of a weekday within a month, e.g. the fourth Thursday in November.
+     *
+     * @param propertyKey the property key of the holiday
+     * @param which       the occurrence of the weekday within the month
+     * @param weekday     the weekday of the holiday
+     * @param month       the month of the holiday
+     * @param type        the type of the holiday
+     * @return properties for further assertions
+     */
+    Properties hasFixedWeekdayHoliday(final String propertyKey, final Occurrence which, final DayOfWeek weekday, final Month month, final HolidayType type);
+
+    /**
+     * Checks for a holiday on the first occurrence of the given weekday between two fixed dates.
+     *
+     * @param propertyKey the property key of the holiday
+     * @param weekday     the weekday of the holiday
+     * @param from        the start of the date range in which the weekday occurs
+     * @param to          the end of the date range in which the weekday occurs
+     * @return properties for further assertions
+     */
+    Properties hasFixedWeekdayBetweenFixedHoliday(final String propertyKey, final DayOfWeek weekday, final MonthDay from, final MonthDay to);
+
+    /**
+     * Checks for a holiday on the first occurrence of the given weekday between two fixed dates.
+     *
+     * @param propertyKey the property key of the holiday
+     * @param weekday     the weekday of the holiday
+     * @param from        the start of the date range in which the weekday occurs
+     * @param to          the end of the date range in which the weekday occurs
+     * @param type        the type of the holiday
+     * @return properties for further assertions
+     */
+    Properties hasFixedWeekdayBetweenFixedHoliday(final String propertyKey, final DayOfWeek weekday, final MonthDay from, final MonthDay to, final HolidayType type);
+
+    /**
+     * Checks for a holiday on the given occurrence of a weekday before/after/closest to a fixed anchor date.
+     *
+     * @param propertyKey the property key of the holiday
+     * @param which       the occurrence of the weekday relative to the anchor date
+     * @param weekday     the weekday of the holiday
+     * @param when        the relation (before, after, closest) to the anchor date
+     * @param anchor      the fixed anchor date
+     * @return properties for further assertions
+     */
+    Properties hasFixedWeekdayRelativeToFixedHoliday(final String propertyKey, final Occurrence which, final DayOfWeek weekday, final Relation when, final MonthDay anchor);
+
+    /**
+     * Checks for a holiday on the given occurrence of a weekday before/after/closest to a fixed anchor date.
+     *
+     * @param propertyKey the property key of the holiday
+     * @param which       the occurrence of the weekday relative to the anchor date
+     * @param weekday     the weekday of the holiday
+     * @param when        the relation (before, after, closest) to the anchor date
+     * @param anchor      the fixed anchor date
+     * @param type        the type of the holiday
+     * @return properties for further assertions
+     */
+    Properties hasFixedWeekdayRelativeToFixedHoliday(final String propertyKey, final Occurrence which, final DayOfWeek weekday, final Relation when, final MonthDay anchor, final HolidayType type);
+
+    /**
+     * Checks for a holiday on the given weekday before/after a weekday-in-month anchor, e.g. the Friday before the last Monday in May.
+     *
+     * @param propertyKey    the property key of the holiday
+     * @param weekday        the weekday of the holiday
+     * @param when           the relation (before, after) to the anchor
+     * @param anchorWhich    the occurrence of the anchor weekday within its month
+     * @param anchorWeekday  the weekday of the anchor
+     * @param anchorMonth    the month of the anchor
+     * @return properties for further assertions
+     */
+    Properties hasRelativeToWeekdayInMonthHoliday(final String propertyKey, final DayOfWeek weekday, final Relation when, final Occurrence anchorWhich, final DayOfWeek anchorWeekday, final Month anchorMonth);
+
+    /**
+     * Checks for a holiday on the given weekday before/after a weekday-in-month anchor, e.g. the Friday before the last Monday in May.
+     *
+     * @param propertyKey    the property key of the holiday
+     * @param weekday        the weekday of the holiday
+     * @param when           the relation (before, after) to the anchor
+     * @param anchorWhich    the occurrence of the anchor weekday within its month
+     * @param anchorWeekday  the weekday of the anchor
+     * @param anchorMonth    the month of the anchor
+     * @param type           the type of the holiday
+     * @return properties for further assertions
+     */
+    Properties hasRelativeToWeekdayInMonthHoliday(final String propertyKey, final DayOfWeek weekday, final Relation when, final Occurrence anchorWhich, final DayOfWeek anchorWeekday, final Month anchorMonth, final HolidayType type);
+
+    /**
+     * Checks for a holiday on the given weekday before/after a fixed anchor date, e.g. the Wednesday before November 23rd.
+     *
+     * @param propertyKey the property key of the holiday
+     * @param weekday     the weekday of the holiday
+     * @param when        the relation (before, after) to the anchor date
+     * @param anchor      the fixed anchor date
+     * @return properties for further assertions
+     */
+    Properties hasRelativeToFixedHoliday(final String propertyKey, final DayOfWeek weekday, final Relation when, final MonthDay anchor);
+
+    /**
+     * Checks for a holiday on the given weekday before/after a fixed anchor date, e.g. the Wednesday before November 23rd.
+     *
+     * @param propertyKey the property key of the holiday
+     * @param weekday     the weekday of the holiday
+     * @param when        the relation (before, after) to the anchor date
+     * @param anchor      the fixed anchor date
+     * @param type        the type of the holiday
+     * @return properties for further assertions
+     */
+    Properties hasRelativeToFixedHoliday(final String propertyKey, final DayOfWeek weekday, final Relation when, final MonthDay anchor, final HolidayType type);
+
+    /**
+     * Checks for a holiday a given number of days before/after a fixed anchor date.
+     *
+     * @param propertyKey the property key of the holiday
+     * @param days        the number of days to shift from the anchor date
+     * @param when        the relation (before, after) to the anchor date
+     * @param anchor      the fixed anchor date
+     * @return properties for further assertions
+     */
+    Properties hasRelativeToFixedHoliday(final String propertyKey, final int days, final Relation when, final MonthDay anchor);
+
+    /**
+     * Checks for a holiday a given number of days before/after a fixed anchor date.
+     *
+     * @param propertyKey the property key of the holiday
+     * @param days        the number of days to shift from the anchor date
+     * @param when        the relation (before, after) to the anchor date
+     * @param anchor      the fixed anchor date
+     * @param type        the type of the holiday
+     * @return properties for further assertions
+     */
+    Properties hasRelativeToFixedHoliday(final String propertyKey, final int days, final Relation when, final MonthDay anchor, final HolidayType type);
   }
 
   interface Properties extends Subdivision, Between, Shift, Check {
@@ -175,6 +363,29 @@ public interface CalendarCheckerApi {
      * @return properties for further assertions
      */
     Properties notValidBetween(Year from, Year to);
+
+    /**
+     * Specifies that the holiday only occurs in years matching the given cycle, within whatever
+     * valid range is otherwise configured. Only valid for {@link YearCycle#EVERY_YEAR}, {@link YearCycle#ODD_YEARS},
+     * and {@link YearCycle#EVEN_YEARS}, which need no reference year; other cycles require
+     * {@link #every(YearCycle, Year)}.
+     *
+     * @param cycle the year cycle
+     * @return properties for further assertions
+     */
+    Properties every(YearCycle cycle);
+
+    /**
+     * Specifies that the holiday only occurs every Nth year, anchored at the given reference year
+     * (matching the XML's {@code validFrom}, or {@code validTo} if no {@code validFrom} is set).
+     * Required for {@link YearCycle#TWO_YEARS}, {@link YearCycle#THREE_YEARS}, {@link YearCycle#FOUR_YEARS},
+     * {@link YearCycle#FIVE_YEARS}, and {@link YearCycle#SIX_YEARS}.
+     *
+     * @param cycle         the year cycle
+     * @param referenceYear the year the cycle is anchored to
+     * @return properties for further assertions
+     */
+    Properties every(YearCycle cycle, Year referenceYear);
   }
 
   interface Shift extends Check {

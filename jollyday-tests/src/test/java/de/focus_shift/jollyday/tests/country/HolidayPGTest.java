@@ -1,17 +1,11 @@
 package de.focus_shift.jollyday.tests.country;
 
-import de.focus_shift.jollyday.core.Holiday;
-import de.focus_shift.jollyday.core.HolidayManager;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.ValueSource;
 
-import java.time.LocalDate;
 import java.time.Year;
-import java.util.Set;
 
 import static de.focus_shift.jollyday.core.HolidayCalendar.PAPUA_NEW_GUINEA;
-import static de.focus_shift.jollyday.core.ManagerParameters.create;
+import static de.focus_shift.jollyday.core.spi.Occurrence.SECOND;
 import static de.focus_shift.jollyday.tests.CalendarCheckerApi.assertFor;
 import static java.time.DayOfWeek.MONDAY;
 import static java.time.DayOfWeek.SUNDAY;
@@ -23,8 +17,6 @@ import static java.time.Month.JANUARY;
 import static java.time.Month.JUNE;
 import static java.time.Month.JULY;
 import static java.time.Month.SEPTEMBER;
-import static java.time.temporal.TemporalAdjusters.dayOfWeekInMonth;
-import static org.assertj.core.api.Assertions.assertThat;
 
 class HolidayPGTest {
 
@@ -44,59 +36,9 @@ class HolidayPGTest {
       .hasChristianHoliday("GOOD_FRIDAY").validBetween(YEAR_FROM, YEAR_TO).and()
       .hasChristianHoliday("EASTER_SATURDAY").validBetween(YEAR_FROM, YEAR_TO).and()
       .hasChristianHoliday("EASTER").validBetween(YEAR_FROM, YEAR_TO).and()
-      .hasChristianHoliday("EASTER_MONDAY").validBetween(YEAR_FROM, YEAR_TO)
+      .hasChristianHoliday("EASTER_MONDAY").validBetween(YEAR_FROM, YEAR_TO).and()
+      .hasFixedWeekdayHoliday("QUEENS_BIRTHDAY", SECOND, MONDAY, JUNE).validTo(Year.of(2022)).and()
+      .hasFixedWeekdayHoliday("KINGS_BIRTHDAY", SECOND, MONDAY, JUNE).validFrom(Year.of(2023))
       .check();
-  }
-
-  @ParameterizedTest
-  @ValueSource(ints = {2020, 2021, 2022})
-  void ensuresQueensBirthdayOnSecondMondayOfJuneUntil2022(final int year) {
-    final HolidayManager holidayManager = HolidayManager.getInstance(create(PAPUA_NEW_GUINEA));
-    final Set<Holiday> holidays = holidayManager.getHolidays(Year.of(year));
-
-    final LocalDate secondMondayOfJune = LocalDate.of(year, JUNE, 1).with(dayOfWeekInMonth(2, MONDAY));
-
-    assertThat(holidays)
-      .filteredOn(holiday -> holiday.getPropertiesKey().equals("QUEENS_BIRTHDAY"))
-      .extracting(Holiday::getDate)
-      .containsExactly(secondMondayOfJune);
-  }
-
-  @ParameterizedTest
-  @ValueSource(ints = {2023, 2024, 2025, 2026, 2027})
-  void ensuresKingsBirthdayOnSecondMondayOfJuneFrom2023(final int year) {
-    final HolidayManager holidayManager = HolidayManager.getInstance(create(PAPUA_NEW_GUINEA));
-    final Set<Holiday> holidays = holidayManager.getHolidays(Year.of(year));
-
-    final LocalDate secondMondayOfJune = LocalDate.of(year, JUNE, 1).with(dayOfWeekInMonth(2, MONDAY));
-
-    assertThat(holidays)
-      .filteredOn(holiday -> holiday.getPropertiesKey().equals("KINGS_BIRTHDAY"))
-      .extracting(Holiday::getDate)
-      .containsExactly(secondMondayOfJune);
-  }
-
-  @Test
-  void ensuresChristmasOnSundayIsObservedOnFollowingTuesday() {
-    // 25 December 2022 fell on a Sunday, so Christmas is observed on Tuesday 27 December
-    // while Boxing Day is observed on Monday 26 December.
-    final HolidayManager holidayManager = HolidayManager.getInstance(create(PAPUA_NEW_GUINEA));
-    final Set<Holiday> holidays = holidayManager.getHolidays(Year.of(2022));
-
-    assertThat(holidays)
-      .extracting(Holiday::getDate)
-      .contains(LocalDate.of(2022, DECEMBER, 26))  // Boxing Day (Monday)
-      .contains(LocalDate.of(2022, DECEMBER, 27)); // Christmas observed (Tuesday)
-  }
-
-  @Test
-  void ensuresIndependenceDayOnSundayIsObservedOnFollowingMonday() {
-    // 16 September 2018 fell on a Sunday, so Independence Day is observed on Monday 17 September
-    final HolidayManager holidayManager = HolidayManager.getInstance(create(PAPUA_NEW_GUINEA));
-    final Set<Holiday> holidays = holidayManager.getHolidays(Year.of(2018));
-
-    assertThat(holidays)
-      .extracting(Holiday::getDate)
-      .contains(LocalDate.of(2018, SEPTEMBER, 17));
   }
 }

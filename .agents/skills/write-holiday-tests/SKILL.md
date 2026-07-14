@@ -71,7 +71,78 @@ void ensuresHolidays() {
 .hasIslamicHoliday("ID_AL_FITR")  // type, year, month, day
 .hasIslamicHoliday("ID_UL_ADHA")
 .hasIslamicHoliday("NEWYEAR")
+
+// if the XML overrides descriptionPropertiesKey to a plain name instead of the default
+// "islamic."-prefixed key (e.g. Singapore's HARI_RAYA_PUASA/HARI_RAYA_HAJI), pass true:
+.hasIslamicHoliday("HARI_RAYA_PUASA", true)
 ```
+
+### Fixed Weekday Holidays
+
+The XSD defines three distinct "weekday-based" holiday types. Each has its own assertion method,
+which independently recomputes the expected date rather than calling into the production
+calculator — this keeps the check a genuine verification of the XML config, not a tautology
+against the same code being tested.
+
+```java
+// FixedWeekday: Nth/last weekday of a month, e.g. US Thanksgiving
+.hasFixedWeekdayHoliday("THANKSGIVING", FOURTH, THURSDAY, NOVEMBER)
+  .validFrom(Year.of(1863))
+
+// FixedWeekdayBetweenFixed: first matching weekday between two fixed dates, e.g. Iceland's Husband's Day
+.hasFixedWeekdayBetweenFixedHoliday("HUSBANDS_DAY", FRIDAY, MonthDay.of(JANUARY, 19), MonthDay.of(JANUARY, 25))
+
+// FixedWeekdayRelativeToFixed: Nth weekday before/after/closest-to a fixed anchor date, e.g. Iceland's First Day of Summer
+.hasFixedWeekdayRelativeToFixedHoliday("FIRST_DAY_SUMMER", FIRST, THURSDAY, AFTER, MonthDay.of(APRIL, 18))
+```
+
+`Occurrence` (`FIRST`/`SECOND`/`THIRD`/`FOURTH`/`LAST`) and `Relation` (`BEFORE`/`AFTER`/`CLOSEST`) come from
+`de.focus_shift.jollyday.core.spi`. Note: `Occurrence.LAST` is **not supported** for
+`hasFixedWeekdayRelativeToFixedHoliday` (throws `UnsupportedOperationException`) — production's
+day-offset calculation has no defined behavior for `LAST` in that specific holiday type.
+
+A fourth, related type has its own method:
+
+```java
+// RelativeToWeekdayInMonth: a weekday before/after a *computed* weekday-in-month anchor,
+// e.g. Maryland's Service Reduction Day (the Friday before the last Monday in May)
+.hasRelativeToWeekdayInMonthHoliday("SERVICE_REDUCTION", FRIDAY, BEFORE, LAST, MONDAY, MAY, OBSERVANCE)
+  .inSubdivision("md")
+```
+
+`Relation.CLOSEST` is **not supported** for `hasRelativeToWeekdayInMonthHoliday` (throws
+`UnsupportedOperationException`) — production's `RelativeToWeekdayInMonthParser` only branches on
+`BEFORE` vs. everything-else, so `CLOSEST` silently behaves like `AFTER` rather than computing an
+actual closest-day distance; no shipped config currently relies on that behavior.
+
+### Periodic Holidays (`every` attribute)
+
+Any holiday-bearing XML element can carry an `every="..."` attribute (`Limited.YearCycle`), restricting
+it to a subset of years within its valid range. `.every(cycle)` handles the two cycles that need no
+anchor; `.every(cycle, referenceYear)` handles the rest, anchored at the year matching the XML's
+`validFrom` (or `validTo` if there's no `validFrom`) — calling the wrong overload for a given cycle
+throws `IllegalArgumentException` immediately, rather than silently misbehaving:
+
+```java
+// EVEN_YEARS / ODD_YEARS: no reference year needed
+.hasFixedHoliday("ASSUMPTION_BLESSED_VIRGIN_MARY", AUGUST, 15)
+  .every(EVEN_YEARS)
+  .validBetween(YEAR_FROM, YEAR_TO)
+
+// TWO_YEARS/THREE_YEARS/FOUR_YEARS/FIVE_YEARS/SIX_YEARS: reference year required
+.hasFixedHoliday("SOME_HOLIDAY", MARCH, 1)
+  .every(FOUR_YEARS, Year.of(2014))
+  .validBetween(Year.of(2014), Year.of(2030))
+```
+
+For a `validBetween`/`validFrom`/`validTo` range with a cycle set, years that don't match the cycle are
+asserted **absent** (not skipped) — the check is exhaustive, not just a presence spot-check. Because of
+this, be careful with overlapping XML entries that combine to a broader pattern than any single entry's
+own cycle: if several XML entries for the same key have different (possibly complementary) cycles across
+overlapping year ranges, don't transcribe them 1:1 — instead determine the actual combined observable
+behavior (e.g. by probing the real `HolidayManager` output across the affected years) and assert that,
+since production doesn't distinguish between the underlying XML entries, only the resulting holiday
+presence per year.
 
 ### Regional/Subdivision Holidays
 

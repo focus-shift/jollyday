@@ -1,17 +1,14 @@
 package de.focus_shift.jollyday.tests.country;
 
-import de.focus_shift.jollyday.core.Holiday;
-import de.focus_shift.jollyday.core.HolidayManager;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.ValueSource;
 
-import java.time.LocalDate;
 import java.time.Year;
-import java.util.Set;
 
 import static de.focus_shift.jollyday.core.HolidayCalendar.GUAM;
-import static de.focus_shift.jollyday.core.ManagerParameters.create;
+import static de.focus_shift.jollyday.core.spi.Occurrence.FIRST;
+import static de.focus_shift.jollyday.core.spi.Occurrence.FOURTH;
+import static de.focus_shift.jollyday.core.spi.Occurrence.LAST;
+import static de.focus_shift.jollyday.core.spi.Occurrence.THIRD;
 import static de.focus_shift.jollyday.tests.CalendarChecker.Adjuster.PREVIOUS;
 import static de.focus_shift.jollyday.tests.CalendarCheckerApi.assertFor;
 import static java.time.DayOfWeek.FRIDAY;
@@ -26,9 +23,6 @@ import static java.time.Month.MARCH;
 import static java.time.Month.MAY;
 import static java.time.Month.NOVEMBER;
 import static java.time.Month.SEPTEMBER;
-import static java.time.temporal.TemporalAdjusters.dayOfWeekInMonth;
-import static java.time.temporal.TemporalAdjusters.lastInMonth;
-import static org.assertj.core.api.Assertions.assertThat;
 
 class HolidayGUTest {
 
@@ -63,26 +57,12 @@ class HolidayGUTest {
       .hasFixedHoliday("CHRISTMAS", DECEMBER, 25)
         .canBeMovedFrom(SATURDAY, PREVIOUS, FRIDAY)
         .canBeMovedFrom(SUNDAY, MONDAY)
+      .and()
+      .hasFixedWeekdayHoliday("MARTIN_LUTHER_KING", THIRD, MONDAY, JANUARY).validFrom(Year.of(1986)).and()
+      .hasFixedWeekdayHoliday("GUAM_HISTORY_AND_CHAMORRO_HERITAGE_DAY", FIRST, MONDAY, MARCH).and()
+      .hasFixedWeekdayHoliday("MEMORIAL_DAY", LAST, MONDAY, MAY).and()
+      .hasFixedWeekdayHoliday("LABOUR_DAY", FIRST, MONDAY, SEPTEMBER).and()
+      .hasFixedWeekdayHoliday("THANKSGIVING", FOURTH, THURSDAY, NOVEMBER)
       .check();
-  }
-
-  @ParameterizedTest
-  @ValueSource(ints = {2022, 2023, 2024, 2025, 2026})
-  void ensuresFixedWeekdayHolidays(final int year) {
-    final HolidayManager holidayManager = HolidayManager.getInstance(create(GUAM));
-    final Set<Holiday> holidays = holidayManager.getHolidays(Year.of(year));
-
-    assertHolidayOn(holidays, "MARTIN_LUTHER_KING", LocalDate.of(year, JANUARY, 1).with(dayOfWeekInMonth(3, MONDAY)));
-    assertHolidayOn(holidays, "GUAM_HISTORY_AND_CHAMORRO_HERITAGE_DAY", LocalDate.of(year, MARCH, 1).with(dayOfWeekInMonth(1, MONDAY)));
-    assertHolidayOn(holidays, "MEMORIAL_DAY", LocalDate.of(year, MAY, 1).with(lastInMonth(MONDAY)));
-    assertHolidayOn(holidays, "LABOUR_DAY", LocalDate.of(year, SEPTEMBER, 1).with(dayOfWeekInMonth(1, MONDAY)));
-    assertHolidayOn(holidays, "THANKSGIVING", LocalDate.of(year, NOVEMBER, 1).with(dayOfWeekInMonth(4, THURSDAY)));
-  }
-
-  private static void assertHolidayOn(final Set<Holiday> holidays, final String propertyKey, final LocalDate date) {
-    assertThat(holidays)
-      .filteredOn(holiday -> holiday.getPropertiesKey().equals(propertyKey))
-      .extracting(Holiday::getDate)
-      .containsExactly(date);
   }
 }
