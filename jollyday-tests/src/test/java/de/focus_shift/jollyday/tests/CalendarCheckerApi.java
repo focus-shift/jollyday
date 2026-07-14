@@ -251,6 +251,52 @@ public interface CalendarCheckerApi {
      * @return properties for further assertions
      */
     Properties hasRelativeToWeekdayInMonthHoliday(final String propertyKey, final DayOfWeek weekday, final Relation when, final Occurrence anchorWhich, final DayOfWeek anchorWeekday, final Month anchorMonth, final HolidayType type);
+
+    /**
+     * Checks for a holiday on the given weekday before/after a fixed anchor date, e.g. the Wednesday before November 23rd.
+     *
+     * @param propertyKey the property key of the holiday
+     * @param weekday     the weekday of the holiday
+     * @param when        the relation (before, after) to the anchor date
+     * @param anchor      the fixed anchor date
+     * @return properties for further assertions
+     */
+    Properties hasRelativeToFixedHoliday(final String propertyKey, final DayOfWeek weekday, final Relation when, final MonthDay anchor);
+
+    /**
+     * Checks for a holiday on the given weekday before/after a fixed anchor date, e.g. the Wednesday before November 23rd.
+     *
+     * @param propertyKey the property key of the holiday
+     * @param weekday     the weekday of the holiday
+     * @param when        the relation (before, after) to the anchor date
+     * @param anchor      the fixed anchor date
+     * @param type        the type of the holiday
+     * @return properties for further assertions
+     */
+    Properties hasRelativeToFixedHoliday(final String propertyKey, final DayOfWeek weekday, final Relation when, final MonthDay anchor, final HolidayType type);
+
+    /**
+     * Checks for a holiday a given number of days before/after a fixed anchor date.
+     *
+     * @param propertyKey the property key of the holiday
+     * @param days        the number of days to shift from the anchor date
+     * @param when        the relation (before, after) to the anchor date
+     * @param anchor      the fixed anchor date
+     * @return properties for further assertions
+     */
+    Properties hasRelativeToFixedHoliday(final String propertyKey, final int days, final Relation when, final MonthDay anchor);
+
+    /**
+     * Checks for a holiday a given number of days before/after a fixed anchor date.
+     *
+     * @param propertyKey the property key of the holiday
+     * @param days        the number of days to shift from the anchor date
+     * @param when        the relation (before, after) to the anchor date
+     * @param anchor      the fixed anchor date
+     * @param type        the type of the holiday
+     * @return properties for further assertions
+     */
+    Properties hasRelativeToFixedHoliday(final String propertyKey, final int days, final Relation when, final MonthDay anchor, final HolidayType type);
   }
 
   interface Properties extends Subdivision, Between, Shift, Check {

@@ -2,10 +2,13 @@ package de.focus_shift.jollyday.tests.country;
 
 import org.junit.jupiter.api.Test;
 
+import java.time.MonthDay;
 import java.time.Year;
 
 import static de.focus_shift.jollyday.core.HolidayCalendar.GERMANY;
+import static de.focus_shift.jollyday.core.spi.Relation.BEFORE;
 import static de.focus_shift.jollyday.tests.CalendarCheckerApi.assertFor;
+import static java.time.DayOfWeek.WEDNESDAY;
 import static java.time.Month.AUGUST;
 import static java.time.Month.DECEMBER;
 import static java.time.Month.JANUARY;
@@ -93,6 +96,7 @@ class HolidayDETest {
 
       /* Saxony */
       .hasFixedHoliday("REFORMATION_DAY", OCTOBER, 31).validFrom(Year.of(1990)).inSubdivision("sn").and()
+      .hasRelativeToFixedHoliday("REPENTANCE_PRAYER", WEDNESDAY, BEFORE, MonthDay.of(NOVEMBER, 23)).validFrom(Year.of(1995)).inSubdivision("sn").and()
 
       /* Saxony-Anhalt */
       .hasFixedHoliday("EPIPHANY", JANUARY, 6).validFrom(Year.of(1993)).inSubdivision("st").and()
