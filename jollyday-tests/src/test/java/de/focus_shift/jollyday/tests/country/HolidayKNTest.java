@@ -11,6 +11,7 @@ import java.util.Set;
 import static de.focus_shift.jollyday.core.HolidayCalendar.SAINT_KITTS_AND_NEVIS;
 import static de.focus_shift.jollyday.core.HolidayType.PUBLIC_HOLIDAY;
 import static de.focus_shift.jollyday.core.ManagerParameters.create;
+import static de.focus_shift.jollyday.core.spi.Occurrence.FIRST;
 import static de.focus_shift.jollyday.tests.CalendarCheckerApi.assertFor;
 import static java.time.DayOfWeek.MONDAY;
 import static java.time.DayOfWeek.SATURDAY;
@@ -42,68 +43,11 @@ class HolidayKNTest {
       .hasFixedHoliday("BOXING_DAY", DECEMBER, 26).and()
       .hasChristianHoliday("GOOD_FRIDAY").and()
       .hasChristianHoliday("EASTER_MONDAY").and()
-      .hasChristianHoliday("WHIT_MONDAY")
+      .hasChristianHoliday("WHIT_MONDAY").and()
+      .hasFixedWeekdayHoliday("LABOUR_DAY", FIRST, MONDAY, MAY).and()
+      .hasFixedWeekdayHoliday("EMANCIPATION_DAY", FIRST, MONDAY, AUGUST).and()
+      .hasFixedWeekdayHoliday("CULTURAMA_DAY", FIRST, TUESDAY, AUGUST)
       .check();
-  }
-
-  @Test
-  void ensuresLabourDayIsFirstMondayInMay() {
-    final HolidayManager holidayManager = HolidayManager.getInstance(create(SAINT_KITTS_AND_NEVIS));
-
-    // 2024: May 1 is Wednesday, first Monday is May 6
-    final Set<Holiday> holidays2024 = holidayManager.getHolidays(Year.of(2024));
-    assertThat(holidays2024)
-      .contains(new Holiday(LocalDate.of(2024, MAY, 6), "LABOUR_DAY", PUBLIC_HOLIDAY));
-
-    // 2025: May 1 is Thursday, first Monday is May 5
-    final Set<Holiday> holidays2025 = holidayManager.getHolidays(Year.of(2025));
-    assertThat(holidays2025)
-      .contains(new Holiday(LocalDate.of(2025, MAY, 5), "LABOUR_DAY", PUBLIC_HOLIDAY));
-
-    // 2022: May 1 is Sunday, first Monday is May 2
-    final Set<Holiday> holidays2022 = holidayManager.getHolidays(Year.of(2022));
-    assertThat(holidays2022)
-      .contains(new Holiday(LocalDate.of(2022, MAY, 2), "LABOUR_DAY", PUBLIC_HOLIDAY));
-  }
-
-  @Test
-  void ensuresEmancipationDayIsFirstMondayInAugust() {
-    final HolidayManager holidayManager = HolidayManager.getInstance(create(SAINT_KITTS_AND_NEVIS));
-
-    // 2024: Aug 1 is Thursday, first Monday is Aug 5
-    final Set<Holiday> holidays2024 = holidayManager.getHolidays(Year.of(2024));
-    assertThat(holidays2024)
-      .contains(new Holiday(LocalDate.of(2024, AUGUST, 5), "EMANCIPATION_DAY", PUBLIC_HOLIDAY));
-
-    // 2025: Aug 1 is Friday, first Monday is Aug 4
-    final Set<Holiday> holidays2025 = holidayManager.getHolidays(Year.of(2025));
-    assertThat(holidays2025)
-      .contains(new Holiday(LocalDate.of(2025, AUGUST, 4), "EMANCIPATION_DAY", PUBLIC_HOLIDAY));
-
-    // 2022: Aug 1 is Monday, first Monday is Aug 1
-    final Set<Holiday> holidays2022 = holidayManager.getHolidays(Year.of(2022));
-    assertThat(holidays2022)
-      .contains(new Holiday(LocalDate.of(2022, AUGUST, 1), "EMANCIPATION_DAY", PUBLIC_HOLIDAY));
-  }
-
-  @Test
-  void ensuresCulturamaDayIsFirstTuesdayInAugust() {
-    final HolidayManager holidayManager = HolidayManager.getInstance(create(SAINT_KITTS_AND_NEVIS));
-
-    // 2024: first Tuesday is Aug 6
-    final Set<Holiday> holidays2024 = holidayManager.getHolidays(Year.of(2024));
-    assertThat(holidays2024)
-      .contains(new Holiday(LocalDate.of(2024, AUGUST, 6), "CULTURAMA_DAY", PUBLIC_HOLIDAY));
-
-    // 2025: first Tuesday is Aug 5
-    final Set<Holiday> holidays2025 = holidayManager.getHolidays(Year.of(2025));
-    assertThat(holidays2025)
-      .contains(new Holiday(LocalDate.of(2025, AUGUST, 5), "CULTURAMA_DAY", PUBLIC_HOLIDAY));
-
-    // 2022: first Tuesday is Aug 2
-    final Set<Holiday> holidays2022 = holidayManager.getHolidays(Year.of(2022));
-    assertThat(holidays2022)
-      .contains(new Holiday(LocalDate.of(2022, AUGUST, 2), "CULTURAMA_DAY", PUBLIC_HOLIDAY));
   }
 
   @Test

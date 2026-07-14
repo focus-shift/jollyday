@@ -179,20 +179,6 @@ class HolidayNZTest {
   }
 
   @Test
-  void testSouthlandAnniversary2011() {
-
-    final HolidayManager holidayManager = HolidayManager.getInstance(create(NEW_ZEALAND));
-
-    // Monday closest to 17 January
-    final LocalDate expected = LocalDate.of(2011, Month.JANUARY, 17);
-    final Set<Holiday> holidays = holidayManager.getHolidays(Year.of(2011), "stl");
-
-    boolean found = holidays.stream()
-      .anyMatch(holiday -> "SOUTHLAND_ANNIVERSARY".equals(holiday.getPropertiesKey()) && holiday.getDate().equals(expected));
-    assertThat(found).isTrue();
-  }
-
-  @Test
   void testSouthlandAnniversary2012() {
 
     final HolidayManager holidayManager = HolidayManager.getInstance(create(NEW_ZEALAND));

@@ -11,6 +11,8 @@ import java.util.stream.Collectors;
 
 import static de.focus_shift.jollyday.core.HolidayCalendar.MARSHALL_ISLANDS;
 import static de.focus_shift.jollyday.core.ManagerParameters.create;
+import static de.focus_shift.jollyday.core.spi.Occurrence.FIRST;
+import static de.focus_shift.jollyday.core.spi.Occurrence.LAST;
 import static de.focus_shift.jollyday.tests.CalendarChecker.Adjuster.PREVIOUS;
 import static de.focus_shift.jollyday.tests.CalendarCheckerApi.assertFor;
 import static java.time.DayOfWeek.FRIDAY;
@@ -60,28 +62,17 @@ class HolidayMHTest {
         .canBeMovedFrom(SATURDAY, PREVIOUS, FRIDAY)
         .canBeMovedFrom(SUNDAY, MONDAY)
         .validBetween(YEAR_FROM, YEAR_TO)
+      .and()
+      .hasFixedWeekdayHoliday("FISHERMENS_DAY", FIRST, FRIDAY, JULY).and()
+      .hasFixedWeekdayHoliday("LABOUR_DAY", FIRST, FRIDAY, SEPTEMBER).and()
+      .hasFixedWeekdayHoliday("MANIT_DAY", LAST, FRIDAY, SEPTEMBER).and()
+      .hasFixedWeekdayHoliday("GOSPEL_DAY", FIRST, FRIDAY, DECEMBER)
       .check();
   }
 
   @Test
   void ensuresFloatingHolidays() {
     final HolidayManager manager = HolidayManager.getInstance(create(MARSHALL_ISLANDS));
-
-    // Fishermen's Day: first Friday in July
-    assertThat(holidayDates(manager, Year.of(2024))).contains(LocalDate.of(2024, JULY, 5));
-    assertThat(holidayDates(manager, Year.of(2026))).contains(LocalDate.of(2026, JULY, 3));
-
-    // Labour Day / "Dri-Jerbal Day": first Friday in September
-    assertThat(holidayDates(manager, Year.of(2024))).contains(LocalDate.of(2024, SEPTEMBER, 6));
-    assertThat(holidayDates(manager, Year.of(2026))).contains(LocalDate.of(2026, SEPTEMBER, 4));
-
-    // Manit Day: last Friday in September
-    assertThat(holidayDates(manager, Year.of(2024))).contains(LocalDate.of(2024, SEPTEMBER, 27));
-    assertThat(holidayDates(manager, Year.of(2026))).contains(LocalDate.of(2026, SEPTEMBER, 25));
-
-    // Gospel Day: first Friday in December
-    assertThat(holidayDates(manager, Year.of(2024))).contains(LocalDate.of(2024, DECEMBER, 6));
-    assertThat(holidayDates(manager, Year.of(2026))).contains(LocalDate.of(2026, DECEMBER, 4));
 
     // New Year's Day: 1 Jan 2022 is a Saturday -> observed the preceding Friday, 31 Dec 2021,
     // which is returned when querying year 2022 (the year the un-shifted 1 January falls in)

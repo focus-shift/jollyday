@@ -11,8 +11,12 @@ import java.util.stream.Collectors;
 
 import static de.focus_shift.jollyday.core.HolidayCalendar.BONAIRE_SINT_EUSTATIUS_AND_SABA;
 import static de.focus_shift.jollyday.core.ManagerParameters.create;
+import static de.focus_shift.jollyday.core.spi.Occurrence.FIRST;
+import static de.focus_shift.jollyday.core.spi.Occurrence.LAST;
 import static de.focus_shift.jollyday.tests.CalendarChecker.Adjuster.PREVIOUS;
 import static de.focus_shift.jollyday.tests.CalendarCheckerApi.assertFor;
+import static java.time.DayOfWeek.FRIDAY;
+import static java.time.DayOfWeek.MONDAY;
 import static java.time.DayOfWeek.SATURDAY;
 import static java.time.DayOfWeek.SUNDAY;
 import static java.time.Month.APRIL;
@@ -55,6 +59,11 @@ class HolidayBQTest {
       .hasFixedHoliday("STATIA_DAY", NOVEMBER, 16)
         .inSubdivision("se")
         .validBetween(YEAR_FROM, YEAR_TO)
+      .and()
+
+      /* Saba */
+      .hasFixedWeekdayHoliday("CARNIVAL_MONDAY", LAST, MONDAY, JULY).inSubdivision("sa").and()
+      .hasFixedWeekdayHoliday("SABA_DAY", FIRST, FRIDAY, DECEMBER).inSubdivision("sa")
       .check();
   }
 

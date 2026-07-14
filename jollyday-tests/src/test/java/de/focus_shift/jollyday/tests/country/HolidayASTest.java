@@ -4,19 +4,24 @@ import de.focus_shift.jollyday.core.Holiday;
 import de.focus_shift.jollyday.core.HolidayManager;
 import org.junit.jupiter.api.Test;
 
-import java.time.LocalDate;
 import java.time.Year;
 import java.util.Set;
 import java.util.stream.Collectors;
 
 import static de.focus_shift.jollyday.core.HolidayCalendar.AMERICAN_SAMOA;
 import static de.focus_shift.jollyday.core.ManagerParameters.create;
+import static de.focus_shift.jollyday.core.spi.Occurrence.FIRST;
+import static de.focus_shift.jollyday.core.spi.Occurrence.FOURTH;
+import static de.focus_shift.jollyday.core.spi.Occurrence.LAST;
+import static de.focus_shift.jollyday.core.spi.Occurrence.SECOND;
+import static de.focus_shift.jollyday.core.spi.Occurrence.THIRD;
 import static de.focus_shift.jollyday.tests.CalendarChecker.Adjuster.PREVIOUS;
 import static de.focus_shift.jollyday.tests.CalendarCheckerApi.assertFor;
 import static java.time.DayOfWeek.FRIDAY;
 import static java.time.DayOfWeek.MONDAY;
 import static java.time.DayOfWeek.SATURDAY;
 import static java.time.DayOfWeek.SUNDAY;
+import static java.time.DayOfWeek.THURSDAY;
 import static java.time.Month.APRIL;
 import static java.time.Month.DECEMBER;
 import static java.time.Month.FEBRUARY;
@@ -69,41 +74,29 @@ class HolidayASTest {
         .canBeMovedFrom(SATURDAY, PREVIOUS, FRIDAY)
         .canBeMovedFrom(SUNDAY, MONDAY)
       .and()
+      // Not codified in 1.0501, but consistently granted to ASG employees alongside the federal calendar.
+      .hasFixedWeekdayHoliday("MARTIN_LUTHER_KING", THIRD, MONDAY, JANUARY).validFrom(Year.of(1986)).and()
+      // Fixed 22 February in 1.0501's text, but conforms to the federal third-Monday-in-February date since 1971.
+      .hasFixedWeekdayHoliday("WASHINGTONS_BIRTHDAY", THIRD, MONDAY, FEBRUARY).validFrom(Year.of(1971)).and()
+      // Fixed 30 May in 1.0501's text, but conforms to the federal last-Monday-in-May date since 1971.
+      .hasFixedWeekdayHoliday("MEMORIAL_DAY", LAST, MONDAY, MAY).validFrom(Year.of(1971)).and()
+      .hasFixedWeekdayHoliday("LABOUR_DAY", FIRST, MONDAY, SEPTEMBER).and()
+      // Not codified in 1.0501; granted alongside the federal calendar.
+      .hasFixedWeekdayHoliday("COLUMBUS_DAY", SECOND, MONDAY, OCTOBER).validFrom(Year.of(1971)).and()
+      .hasFixedWeekdayHoliday("THANKSGIVING", FOURTH, THURSDAY, NOVEMBER).and()
+      // White Sunday: a longstanding Samoan Christian tradition honouring children -
+      // not substituted even though it always falls on a Sunday.
+      .hasFixedWeekdayHoliday("WHITE_SUNDAY", SECOND, SUNDAY, OCTOBER).and()
       .hasChristianHoliday("GOOD_FRIDAY").validBetween(YEAR_FROM, YEAR_TO)
       .check();
   }
 
   @Test
-  void ensuresFloatingHolidays() {
-    final HolidayManager manager = HolidayManager.getInstance(create(AMERICAN_SAMOA));
-
+  void ensuresMartinLutherKingDayNotGrantedBefore1986() {
     // Martin Luther King Jr. Day: not codified in A.S.C.A. 1.0501, but granted alongside the
     // federal calendar since 1986 (third Monday in January)
+    final HolidayManager manager = HolidayManager.getInstance(create(AMERICAN_SAMOA));
     assertThat(holidayKeys(manager, Year.of(1985))).doesNotContain("MARTIN_LUTHER_KING");
-    assertThat(holidayDates(manager, Year.of(2026))).contains(LocalDate.of(2026, JANUARY, 19));
-
-    // Washington's Birthday: fixed 22 February in 1.0501's text, but conforms to the federal
-    // third-Monday-in-February date since 1971 per A.S.C.A. 7.1205(b)
-    assertThat(holidayDates(manager, Year.of(2026))).contains(LocalDate.of(2026, FEBRUARY, 16));
-
-    // Memorial Day: fixed 30 May in 1.0501's text, but conforms to the federal
-    // last-Monday-in-May date since 1971 per A.S.C.A. 7.1205(b)
-    assertThat(holidayDates(manager, Year.of(2026))).contains(LocalDate.of(2026, MAY, 25));
-
-    assertThat(holidayDates(manager, Year.of(2026))).contains(LocalDate.of(2026, SEPTEMBER, 7));
-
-    // Columbus Day: not codified in 1.0501, but granted alongside the federal calendar
-    assertThat(holidayDates(manager, Year.of(2026))).contains(LocalDate.of(2026, OCTOBER, 12));
-
-    // White Sunday: second Sunday in October, a longstanding Samoan Christian tradition
-    // honouring children - not substituted even though it always falls on a Sunday
-    assertThat(holidayDates(manager, Year.of(2026))).contains(LocalDate.of(2026, OCTOBER, 11));
-
-    assertThat(holidayDates(manager, Year.of(2026))).contains(LocalDate.of(2026, NOVEMBER, 26));
-  }
-
-  private static Set<LocalDate> holidayDates(final HolidayManager manager, final Year year) {
-    return manager.getHolidays(year).stream().map(Holiday::getDate).collect(Collectors.toSet());
   }
 
   private static Set<String> holidayKeys(final HolidayManager manager, final Year year) {

@@ -15,6 +15,7 @@ import java.util.List;
 import java.util.Set;
 
 import static de.focus_shift.jollyday.core.HolidayCalendar.CAYMAN_ISLANDS;
+import static de.focus_shift.jollyday.core.spi.Limited.YearCycle.FOUR_YEARS;
 import static de.focus_shift.jollyday.core.spi.Occurrence.FIRST;
 import static de.focus_shift.jollyday.core.spi.Occurrence.FOURTH;
 import static de.focus_shift.jollyday.core.spi.Occurrence.SECOND;
@@ -24,6 +25,8 @@ import static java.time.DayOfWeek.MONDAY;
 import static java.time.DayOfWeek.SATURDAY;
 import static java.time.DayOfWeek.SUNDAY;
 import static java.time.DayOfWeek.TUESDAY;
+import static java.time.DayOfWeek.WEDNESDAY;
+import static java.time.Month.APRIL;
 import static java.time.Month.DECEMBER;
 import static java.time.Month.JANUARY;
 import static java.time.Month.JULY;
@@ -113,12 +116,15 @@ class HolidayKYTest {
       .hasChristianHoliday("EASTER_MONDAY").and()
       .hasFixedWeekdayBetweenFixedHoliday("REMEMBRANCE", MONDAY, MonthDay.of(NOVEMBER, 9), MonthDay.of(NOVEMBER, 15))
         .validFrom(Year.of(1919))
+      .and()
+      .hasFixedWeekdayHoliday("ELECTION_DAY", SECOND, WEDNESDAY, APRIL)
+        .validFrom(Year.of(2021))
+        .every(FOUR_YEARS, Year.of(2021))
+      .and()
+      .hasFixedWeekdayHoliday("ELECTION_DAY", FOURTH, WEDNESDAY, MAY)
+        .validBetween(Year.of(2013), Year.of(2017))
+        .every(FOUR_YEARS, Year.of(2013))
       .check();
-
-    // NOTE: two "ELECTION_DAY" FixedWeekday entries (2nd Wednesday of April from 2021, and
-    // 4th Wednesday of May 2013-2017) are configured with every="FOUR_YEARS" in Holidays_ky.xml.
-    // CalendarCheckerApi/CalendarChecker has no way to express a year-cycle restriction
-    // (Limited.YearCycle) today, so those two entries are intentionally left unasserted here.
   }
 
   @Test

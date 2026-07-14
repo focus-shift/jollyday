@@ -5,18 +5,24 @@ import de.focus_shift.jollyday.core.HolidayManager;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
+import java.time.MonthDay;
 import java.time.Year;
 import java.util.Set;
 import java.util.stream.Collectors;
 
 import static de.focus_shift.jollyday.core.HolidayCalendar.ANGUILLA;
 import static de.focus_shift.jollyday.core.ManagerParameters.create;
+import static de.focus_shift.jollyday.core.spi.Occurrence.FIRST;
+import static de.focus_shift.jollyday.core.spi.Occurrence.SECOND;
+import static de.focus_shift.jollyday.core.spi.Occurrence.THIRD;
+import static de.focus_shift.jollyday.core.spi.Relation.AFTER;
 import static de.focus_shift.jollyday.tests.CalendarChecker.Adjuster.PREVIOUS;
 import static de.focus_shift.jollyday.tests.CalendarCheckerApi.assertFor;
 import static java.time.DayOfWeek.FRIDAY;
 import static java.time.DayOfWeek.MONDAY;
 import static java.time.DayOfWeek.SATURDAY;
 import static java.time.DayOfWeek.SUNDAY;
+import static java.time.DayOfWeek.THURSDAY;
 import static java.time.DayOfWeek.TUESDAY;
 import static java.time.Month.AUGUST;
 import static java.time.Month.DECEMBER;
@@ -60,6 +66,11 @@ class HolidayAITest {
       // 2022 Platinum Jubilee one-off; 2026 breaks the "third Monday" pattern (see ensuresFloatingHolidays)
       .hasFixedHoliday("QUEENS_BIRTHDAY", JUNE, 3).validBetween(of(2022), of(2022)).and()
       .hasFixedHoliday("KINGS_BIRTHDAY", JUNE, 22).validBetween(of(2026), of(2026)).and()
+      .hasFixedWeekdayHoliday("QUEENS_BIRTHDAY", SECOND, MONDAY, JUNE).validTo(of(2021)).and()
+      .hasFixedWeekdayHoliday("KINGS_BIRTHDAY", THIRD, MONDAY, JUNE).validBetween(of(2024), of(2025)).and()
+      .hasFixedWeekdayHoliday("AUGUST_MONDAY", FIRST, MONDAY, AUGUST).and()
+      .hasFixedWeekdayRelativeToFixedHoliday("AUGUST_THURSDAY", FIRST, THURSDAY, AFTER, MonthDay.of(AUGUST, 3)).and()
+      .hasFixedWeekdayRelativeToFixedHoliday("CONSTITUTION_DAY", FIRST, FRIDAY, AFTER, MonthDay.of(AUGUST, 4)).and()
       // The only Anguilla holiday that moves BACKWARD to the preceding Friday when it falls on a weekend
       .hasFixedHoliday("NATIONAL_HEROES_AND_HEROINES_DAY", DECEMBER, 19)
         .canBeMovedFrom(SATURDAY, PREVIOUS, FRIDAY)
@@ -91,10 +102,6 @@ class HolidayAITest {
   void ensuresFloatingHolidays() {
     final HolidayManager manager = HolidayManager.getInstance(create(ANGUILLA));
 
-    // Queen's Birthday: second Monday in June through 2021
-    assertThat(holidayDates(manager, Year.of(2020))).contains(LocalDate.of(2020, JUNE, 8));
-    assertThat(holidayDates(manager, Year.of(2021))).contains(LocalDate.of(2021, JUNE, 14));
-
     // 2022 Platinum Jubilee: fixed Friday 3 June instead of the usual formula
     assertThat(holidayDates(manager, Year.of(2022))).contains(LocalDate.of(2022, JUNE, 3));
 
@@ -102,21 +109,10 @@ class HolidayAITest {
     // Birthday holiday at all for 2023
     assertThat(holidayKeys(manager, Year.of(2023))).doesNotContain("QUEENS_BIRTHDAY", "KINGS_BIRTHDAY");
 
-    // King's Birthday confirmed third Monday in June for 2024 and 2025 via archived gov.ai pages
-    assertThat(holidayDates(manager, Year.of(2024))).contains(LocalDate.of(2024, JUNE, 17));
-    assertThat(holidayDates(manager, Year.of(2025))).contains(LocalDate.of(2025, JUNE, 16));
-
     // 2026 breaks the third-Monday pattern (confirmed fourth Monday, 22 June); no formula could
     // be confirmed for 2027 onward so it is deliberately left unmodeled
     assertThat(holidayDates(manager, Year.of(2026))).contains(LocalDate.of(2026, JUNE, 22));
     assertThat(holidayKeys(manager, Year.of(2027))).doesNotContain("KINGS_BIRTHDAY");
-
-    // August Monday/Thursday and Constitution Day: confirmed via the official 2023 circular
-    // (Mon 7, Thu 10, Fri 11 Aug) and the 2026 official page (Mon 3, Thu 6, Fri 7 Aug)
-    assertThat(holidayDates(manager, Year.of(2023)))
-      .contains(LocalDate.of(2023, AUGUST, 7), LocalDate.of(2023, AUGUST, 10), LocalDate.of(2023, AUGUST, 11));
-    assertThat(holidayDates(manager, Year.of(2026)))
-      .contains(LocalDate.of(2026, AUGUST, 3), LocalDate.of(2026, AUGUST, 6), LocalDate.of(2026, AUGUST, 7));
 
     // Renamed from Separation Day to National Heroes and Heroines Day from 2011
     assertThat(holidayKeys(manager, Year.of(2010))).contains("SEPARATION");
