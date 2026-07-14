@@ -1,7 +1,11 @@
 package de.focus_shift.jollyday.core;
 
+import de.focus_shift.jollyday.core.util.ResourceUtil;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.lang.reflect.Field;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
@@ -9,6 +13,20 @@ import java.util.Map;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class CalendarHierarchyTest {
+
+  private Locale previousDefault;
+
+  @BeforeEach
+  void setUp() {
+    previousDefault = Locale.getDefault();
+    clearCountryDescriptionsCache();
+  }
+
+  @AfterEach
+  void tearDown() {
+    Locale.setDefault(previousDefault);
+    clearCountryDescriptionsCache();
+  }
 
   @Test
   void ensureGetId() {
@@ -54,5 +72,36 @@ class CalendarHierarchyTest {
       .isNotEqualTo(null);
 
     assertThat(sut.hashCode()).isEqualTo(same.hashCode());
+  }
+
+  @Test
+  void ensureEnglishDescriptionIsNotOverriddenByGermanJvmDefaultLocale() {
+    // CalendarHierarchy.getDescription(Locale) delegates to
+    // ResourceUtil.getCountryDescription(Locale, String), which is affected by the same
+    // default-locale fallback as Holiday.getDescription(Locale). See #1294.
+    Locale.setDefault(Locale.GERMANY);
+
+    final CalendarHierarchy hierarchy = new CalendarHierarchy(null, "de");
+
+    assertThat(hierarchy.getDescription(Locale.ENGLISH)).isEqualTo("Germany");
+  }
+
+  @Test
+  void ensureGermanDescriptionIsStillReturnedWithGermanJvmDefaultLocale() {
+    Locale.setDefault(Locale.GERMANY);
+
+    final CalendarHierarchy hierarchy = new CalendarHierarchy(null, "de");
+
+    assertThat(hierarchy.getDescription(Locale.GERMAN)).isEqualTo("Deutschland");
+  }
+
+  private static void clearCountryDescriptionsCache() {
+    try {
+      final Field field = ResourceUtil.class.getDeclaredField("COUNTRY_DESCRIPTIONS_CACHE");
+      field.setAccessible(true);
+      ((Map<?, ?>) field.get(null)).clear();
+    } catch (NoSuchFieldException | IllegalAccessException e) {
+      throw new RuntimeException("Failed to clear ResourceUtil cache: COUNTRY_DESCRIPTIONS_CACHE", e);
+    }
   }
 }
