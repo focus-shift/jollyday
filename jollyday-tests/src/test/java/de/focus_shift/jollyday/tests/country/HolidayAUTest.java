@@ -1,17 +1,12 @@
 package de.focus_shift.jollyday.tests.country;
 
-import de.focus_shift.jollyday.core.Holiday;
-import de.focus_shift.jollyday.core.HolidayManager;
 import org.junit.jupiter.api.Test;
 
-import java.time.LocalDate;
 import java.time.Month;
 import java.time.MonthDay;
 import java.time.Year;
-import java.util.Set;
 
 import static de.focus_shift.jollyday.core.HolidayCalendar.AUSTRALIA;
-import static de.focus_shift.jollyday.core.ManagerParameters.create;
 import static de.focus_shift.jollyday.core.spi.Occurrence.FIRST;
 import static de.focus_shift.jollyday.core.spi.Occurrence.LAST;
 import static de.focus_shift.jollyday.core.spi.Occurrence.SECOND;
@@ -32,7 +27,6 @@ import static java.time.Month.MAY;
 import static java.time.Month.NOVEMBER;
 import static java.time.Month.OCTOBER;
 import static java.time.Month.SEPTEMBER;
-import static org.assertj.core.api.Assertions.assertThat;
 
 class HolidayAUTest {
 
@@ -152,6 +146,12 @@ class HolidayAUTest {
       .hasFixedHoliday("ANZAC", Month.APRIL, 25)
         .validTo(Year.of(2007))
         .canBeMovedFrom(SUNDAY, MONDAY)
+        .inSubdivision("nsw")
+      .and()
+      // No NSW-specific entry (and no national fallback) 2008-2019; the plain national
+      // rule resumes from 2020 with no substitute until NSW gets its own again in 2026.
+      .hasFixedHoliday("ANZAC", Month.APRIL, 25)
+        .validBetween(Year.of(2020), Year.of(2025))
         .inSubdivision("nsw")
       .and()
       .hasFixedHoliday("ANZAC", Month.APRIL, 25)
@@ -292,6 +292,10 @@ class HolidayAUTest {
       .hasFixedHoliday("ANZAC", Month.APRIL, 25)
         .validBetween(Year.of(2020), Year.of(2022))
         .canBeMovedFrom(SUNDAY, MONDAY)
+        .inSubdivision("sa")
+      .and()
+      .hasFixedHoliday("ANZAC", Month.APRIL, 25)
+        .validFrom(Year.of(2023))
         .inSubdivision("sa")
       .and()
       .hasFixedHoliday("CHRISTMAS", Month.DECEMBER, 25)
@@ -452,75 +456,5 @@ class HolidayAUTest {
       .hasFixedWeekdayHoliday("QUEENS_BIRTHDAY", LAST, MONDAY, SEPTEMBER)
         .inSubdivision("wa")
       .check();
-  }
-
-  @Test
-  void ensuresNswAnzacDaySubstituteWhenSaturdayFrom2026() {
-    // Anzac Day 2026 falls on Saturday — NSW should get Monday substitute from 2026
-    final HolidayManager manager = HolidayManager.getInstance(create(AUSTRALIA));
-
-    final Set<Holiday> nswHolidays2026 = manager.getHolidays(Year.of(2026), "nsw");
-    assertThat(nswHolidays2026)
-      .extracting(Holiday::getDate)
-      .contains(LocalDate.of(2026, Month.APRIL, 25))  // Anzac Day itself
-      .contains(LocalDate.of(2026, Month.APRIL, 27)); // Monday substitute
-  }
-
-  @Test
-  void ensuresNswAnzacDayNoSubstituteBefore2026() {
-    // Anzac Day 2025 falls on Friday — no substitute needed, but also confirm
-    // that the validFrom=2026 boundary is respected by checking a year where
-    // Anzac Day falls on Sunday (2021) — NSW should NOT get a Monday substitute before 2026
-    final HolidayManager manager = HolidayManager.getInstance(create(AUSTRALIA));
-
-    final Set<Holiday> nswHolidays2021 = manager.getHolidays(Year.of(2021), "nsw");
-    assertThat(nswHolidays2021)
-      .extracting(Holiday::getDate)
-      .contains(LocalDate.of(2021, Month.APRIL, 25))     // Anzac Day itself (Sunday)
-      .doesNotContain(LocalDate.of(2021, Month.APRIL, 26)); // No Monday substitute before 2026
-  }
-
-  @Test
-  void ensuresSaAnzacDayNoSubstitute() {
-    // SA does not provide a substitute holiday when Anzac Day falls on a weekend
-    final HolidayManager manager = HolidayManager.getInstance(create(AUSTRALIA));
-
-    // 2026: Anzac Day on Saturday
-    final Set<Holiday> saHolidays2026 = manager.getHolidays(Year.of(2026), "sa");
-    assertThat(saHolidays2026)
-      .extracting(Holiday::getDate)
-      .contains(LocalDate.of(2026, Month.APRIL, 25))     // Anzac Day itself
-      .doesNotContain(LocalDate.of(2026, Month.APRIL, 27)); // No Monday substitute
-
-    // 2027: Anzac Day on Sunday
-    final Set<Holiday> saHolidays2027 = manager.getHolidays(Year.of(2027), "sa");
-    assertThat(saHolidays2027)
-      .extracting(Holiday::getDate)
-      .contains(LocalDate.of(2027, Month.APRIL, 25))     // Anzac Day itself
-      .doesNotContain(LocalDate.of(2027, Month.APRIL, 26)); // No Monday substitute
-  }
-
-  @Test
-  void ensuresNswAnzacDaySubstituteWhenSundayFrom2026() {
-    // Anzac Day 2027 falls on Sunday — NSW should get Monday substitute
-    final HolidayManager manager = HolidayManager.getInstance(create(AUSTRALIA));
-
-    final Set<Holiday> nswHolidays2027 = manager.getHolidays(Year.of(2027), "nsw");
-    assertThat(nswHolidays2027)
-      .extracting(Holiday::getDate)
-      .contains(LocalDate.of(2027, Month.APRIL, 25))  // Anzac Day itself
-      .contains(LocalDate.of(2027, Month.APRIL, 26)); // Monday substitute
-  }
-
-  @Test
-  void ensuresActAnzacDaySubstituteStillWorks() {
-    // ACT has long-standing Sat/Sun substitution — regression check
-    final HolidayManager manager = HolidayManager.getInstance(create(AUSTRALIA));
-
-    final Set<Holiday> actHolidays2026 = manager.getHolidays(Year.of(2026), "act");
-    assertThat(actHolidays2026)
-      .extracting(Holiday::getDate)
-      .contains(LocalDate.of(2026, Month.APRIL, 25))  // Anzac Day itself
-      .contains(LocalDate.of(2026, Month.APRIL, 27)); // Monday substitute
   }
 }

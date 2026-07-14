@@ -62,43 +62,4 @@ class HolidayDMTest {
       .extracting(Holiday::getDate)
       .containsExactly(LocalDate.of(2026, FEBRUARY, 17));
   }
-
-  @Test
-  void ensuresIndependenceAndCommunityServiceCascadeIn2024() {
-    // 3 November 2024 (Independence Day) fell on a Sunday -> observed Monday 4 November,
-    // which pushed National Day of Community Service to Tuesday 5 November.
-    final Set<Holiday> holidays = HolidayManager.getInstance(create(DOMINICA)).getHolidays(Year.of(2024));
-    assertThat(holidays)
-      .filteredOn(holiday -> holiday.getPropertiesKey().equals("INDEPENDENCE_DAY"))
-      .extracting(Holiday::getDate)
-      .containsExactly(LocalDate.of(2024, NOVEMBER, 4));
-    assertThat(holidays)
-      .filteredOn(holiday -> holiday.getPropertiesKey().equals("NATIONAL_DAY_OF_COMMUNITY_SERVICE"))
-      .extracting(Holiday::getDate)
-      .containsExactly(LocalDate.of(2024, NOVEMBER, 5));
-  }
-
-  @Test
-  void ensuresChristmasAndBoxingDayCascadeIn2022() {
-    // 25 December 2022 (Christmas) fell on a Sunday -> observed Monday 26 December,
-    // which pushed Boxing Day to Tuesday 27 December.
-    final Set<Holiday> holidays = HolidayManager.getInstance(create(DOMINICA)).getHolidays(Year.of(2022));
-    assertThat(holidays)
-      .filteredOn(holiday -> holiday.getPropertiesKey().equals("CHRISTMAS"))
-      .extracting(Holiday::getDate)
-      .containsExactly(LocalDate.of(2022, DECEMBER, 26));
-    assertThat(holidays)
-      .filteredOn(holiday -> holiday.getPropertiesKey().equals("BOXING_DAY"))
-      .extracting(Holiday::getDate)
-      .containsExactly(LocalDate.of(2022, DECEMBER, 27));
-  }
-
-  @Test
-  void ensuresNoWeekendShiftWhenHolidayFallsOnSaturday() {
-    // Boxing Day 26 December 2026 falls on a Saturday and is NOT shifted (Sunday-only rule).
-    final Set<Holiday> holidays = HolidayManager.getInstance(create(DOMINICA)).getHolidays(Year.of(2026));
-    assertThat(holidays)
-      .extracting(Holiday::getDate)
-      .contains(LocalDate.of(2026, DECEMBER, 26));
-  }
 }

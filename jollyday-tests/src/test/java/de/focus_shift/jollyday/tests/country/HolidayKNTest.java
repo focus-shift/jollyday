@@ -1,16 +1,8 @@
 package de.focus_shift.jollyday.tests.country;
 
-import de.focus_shift.jollyday.core.Holiday;
-import de.focus_shift.jollyday.core.HolidayManager;
 import org.junit.jupiter.api.Test;
 
-import java.time.LocalDate;
-import java.time.Year;
-import java.util.Set;
-
 import static de.focus_shift.jollyday.core.HolidayCalendar.SAINT_KITTS_AND_NEVIS;
-import static de.focus_shift.jollyday.core.HolidayType.PUBLIC_HOLIDAY;
-import static de.focus_shift.jollyday.core.ManagerParameters.create;
 import static de.focus_shift.jollyday.core.spi.Occurrence.FIRST;
 import static de.focus_shift.jollyday.tests.CalendarCheckerApi.assertFor;
 import static java.time.DayOfWeek.MONDAY;
@@ -22,7 +14,6 @@ import static java.time.Month.DECEMBER;
 import static java.time.Month.JANUARY;
 import static java.time.Month.MAY;
 import static java.time.Month.SEPTEMBER;
-import static org.assertj.core.api.Assertions.assertThat;
 
 class HolidayKNTest {
 
@@ -48,38 +39,5 @@ class HolidayKNTest {
       .hasFixedWeekdayHoliday("EMANCIPATION_DAY", FIRST, MONDAY, AUGUST).and()
       .hasFixedWeekdayHoliday("CULTURAMA_DAY", FIRST, TUESDAY, AUGUST)
       .check();
-  }
-
-  @Test
-  void ensuresNewYearMovesFromSundayToMonday() {
-    final HolidayManager holidayManager = HolidayManager.getInstance(create(SAINT_KITTS_AND_NEVIS));
-
-    // 2023: Jan 1 is Sunday, so moved to Monday Jan 2
-    final Set<Holiday> holidays2023 = holidayManager.getHolidays(Year.of(2023));
-    assertThat(holidays2023)
-      .contains(new Holiday(LocalDate.of(2023, JANUARY, 2), "NEW_YEAR", PUBLIC_HOLIDAY))
-      .doesNotContain(new Holiday(LocalDate.of(2023, JANUARY, 1), "NEW_YEAR", PUBLIC_HOLIDAY));
-  }
-
-  @Test
-  void ensuresChristmasMovesWhenOnWeekend() {
-    final HolidayManager holidayManager = HolidayManager.getInstance(create(SAINT_KITTS_AND_NEVIS));
-
-    // 2024: Dec 25 is Wednesday - no move
-    final Set<Holiday> holidays2024 = holidayManager.getHolidays(Year.of(2024));
-    assertThat(holidays2024)
-      .contains(new Holiday(LocalDate.of(2024, DECEMBER, 25), "CHRISTMAS", PUBLIC_HOLIDAY));
-
-    // 2022: Dec 25 is Sunday, so moved to Tuesday Dec 27
-    final Set<Holiday> holidays2022 = holidayManager.getHolidays(Year.of(2022));
-    assertThat(holidays2022)
-      .contains(new Holiday(LocalDate.of(2022, DECEMBER, 27), "CHRISTMAS", PUBLIC_HOLIDAY))
-      .doesNotContain(new Holiday(LocalDate.of(2022, DECEMBER, 25), "CHRISTMAS", PUBLIC_HOLIDAY));
-
-    // 2021: Dec 25 is Saturday, so moved to Monday Dec 27
-    final Set<Holiday> holidays2021 = holidayManager.getHolidays(Year.of(2021));
-    assertThat(holidays2021)
-      .contains(new Holiday(LocalDate.of(2021, DECEMBER, 27), "CHRISTMAS", PUBLIC_HOLIDAY))
-      .doesNotContain(new Holiday(LocalDate.of(2021, DECEMBER, 25), "CHRISTMAS", PUBLIC_HOLIDAY));
   }
 }

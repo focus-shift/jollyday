@@ -1,15 +1,10 @@
 package de.focus_shift.jollyday.tests.country;
 
-import de.focus_shift.jollyday.core.Holiday;
-import de.focus_shift.jollyday.core.HolidayManager;
 import org.junit.jupiter.api.Test;
 
 import java.time.Year;
-import java.util.Set;
-import java.util.stream.Collectors;
 
 import static de.focus_shift.jollyday.core.HolidayCalendar.AMERICAN_SAMOA;
-import static de.focus_shift.jollyday.core.ManagerParameters.create;
 import static de.focus_shift.jollyday.core.spi.Occurrence.FIRST;
 import static de.focus_shift.jollyday.core.spi.Occurrence.FOURTH;
 import static de.focus_shift.jollyday.core.spi.Occurrence.LAST;
@@ -32,7 +27,6 @@ import static java.time.Month.MAY;
 import static java.time.Month.NOVEMBER;
 import static java.time.Month.OCTOBER;
 import static java.time.Month.SEPTEMBER;
-import static org.assertj.core.api.Assertions.assertThat;
 
 class HolidayASTest {
 
@@ -75,7 +69,10 @@ class HolidayASTest {
         .canBeMovedFrom(SUNDAY, MONDAY)
       .and()
       // Not codified in 1.0501, but consistently granted to ASG employees alongside the federal calendar.
-      .hasFixedWeekdayHoliday("MARTIN_LUTHER_KING", THIRD, MONDAY, JANUARY).validFrom(Year.of(1986)).and()
+      .hasFixedWeekdayHoliday("MARTIN_LUTHER_KING", THIRD, MONDAY, JANUARY)
+        .validFrom(Year.of(1986))
+        .notValidBetween(YEAR_FROM, Year.of(1985))
+      .and()
       // Fixed 22 February in 1.0501's text, but conforms to the federal third-Monday-in-February date since 1971.
       .hasFixedWeekdayHoliday("WASHINGTONS_BIRTHDAY", THIRD, MONDAY, FEBRUARY).validFrom(Year.of(1971)).and()
       // Fixed 30 May in 1.0501's text, but conforms to the federal last-Monday-in-May date since 1971.
@@ -89,17 +86,5 @@ class HolidayASTest {
       .hasFixedWeekdayHoliday("WHITE_SUNDAY", SECOND, SUNDAY, OCTOBER).and()
       .hasChristianHoliday("GOOD_FRIDAY").validBetween(YEAR_FROM, YEAR_TO)
       .check();
-  }
-
-  @Test
-  void ensuresMartinLutherKingDayNotGrantedBefore1986() {
-    // Martin Luther King Jr. Day: not codified in A.S.C.A. 1.0501, but granted alongside the
-    // federal calendar since 1986 (third Monday in January)
-    final HolidayManager manager = HolidayManager.getInstance(create(AMERICAN_SAMOA));
-    assertThat(holidayKeys(manager, Year.of(1985))).doesNotContain("MARTIN_LUTHER_KING");
-  }
-
-  private static Set<String> holidayKeys(final HolidayManager manager, final Year year) {
-    return manager.getHolidays(year).stream().map(Holiday::getPropertiesKey).collect(Collectors.toSet());
   }
 }

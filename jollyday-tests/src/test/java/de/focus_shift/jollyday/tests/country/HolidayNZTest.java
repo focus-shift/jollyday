@@ -2,9 +2,6 @@ package de.focus_shift.jollyday.tests.country;
 
 import de.focus_shift.jollyday.core.Holiday;
 import de.focus_shift.jollyday.core.HolidayManager;
-import net.jqwik.api.ForAll;
-import net.jqwik.api.Property;
-import net.jqwik.time.api.constraints.YearRange;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
@@ -14,7 +11,6 @@ import java.time.Year;
 import java.util.Set;
 
 import static de.focus_shift.jollyday.core.HolidayCalendar.NEW_ZEALAND;
-import static de.focus_shift.jollyday.core.HolidayType.PUBLIC_HOLIDAY;
 import static de.focus_shift.jollyday.core.ManagerParameters.create;
 import static de.focus_shift.jollyday.core.spi.Occurrence.FIRST;
 import static de.focus_shift.jollyday.core.spi.Occurrence.FOURTH;
@@ -41,6 +37,9 @@ import static java.time.Month.SEPTEMBER;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class HolidayNZTest {
+
+  private static final Year YEAR_FROM = Year.of(1900);
+  private static final Year YEAR_TO = Year.of(2173);
 
   @Test
   void ensuresHolidays() {
@@ -71,7 +70,9 @@ class HolidayNZTest {
         .canBeMovedFrom(SUNDAY, MONDAY)
       .and()
       .hasFixedHoliday("QUEEN_ELIZABETH_II_MEMORIAL_DAY", SEPTEMBER, 26)
+        .notValidBetween(YEAR_FROM, Year.of(2021))
         .validBetween(Year.of(2022), Year.of(2022))
+        .notValidBetween(Year.of(2023), YEAR_TO)
       .and()
       .hasFixedHoliday("CHRISTMAS", DECEMBER, 25)
         .canBeMovedFrom(SATURDAY, MONDAY)
@@ -190,32 +191,5 @@ class HolidayNZTest {
     boolean found = holidays.stream()
       .anyMatch(holiday -> "SOUTHLAND_ANNIVERSARY".equals(holiday.getPropertiesKey()) && holiday.getDate().equals(expected));
     assertThat(found).isTrue();
-  }
-
-  @Property
-  void ensuresThatQueenElisabethIIMemorialDayIsNotConfiguredUntil2021(@ForAll @YearRange(max = 2021) Year year) {
-    final HolidayManager holidayManager = HolidayManager.getInstance(create(NEW_ZEALAND));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year);
-    assertThat(holidays)
-      .isNotEmpty()
-      .doesNotContain(new Holiday(LocalDate.of(year.getValue(), SEPTEMBER, 26), "QUEEN_ELIZABETH_II_MEMORIAL_DAY", PUBLIC_HOLIDAY));
-  }
-
-  @Property
-  void ensuresThatQueenElisabethIIMemorialDayIsConfiguredIn2022(@ForAll @YearRange(min = 2022, max = 2022) Year year) {
-    final HolidayManager holidayManager = HolidayManager.getInstance(create(NEW_ZEALAND));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year);
-    assertThat(holidays)
-      .isNotEmpty()
-      .contains(new Holiday(LocalDate.of(year.getValue(), SEPTEMBER, 26), "QUEEN_ELIZABETH_II_MEMORIAL_DAY", PUBLIC_HOLIDAY));
-  }
-
-  @Property
-  void ensuresThatQueenElisabethIIMemorialDayIsConfiguredSince2023(@ForAll @YearRange(min = 2023) Year year) {
-    final HolidayManager holidayManager = HolidayManager.getInstance(create(NEW_ZEALAND));
-    final Set<Holiday> holidays = holidayManager.getHolidays(year);
-    assertThat(holidays)
-      .isNotEmpty()
-      .doesNotContain(new Holiday(LocalDate.of(year.getValue(), SEPTEMBER, 26), "QUEEN_ELIZABETH_II_MEMORIAL_DAY", PUBLIC_HOLIDAY));
   }
 }

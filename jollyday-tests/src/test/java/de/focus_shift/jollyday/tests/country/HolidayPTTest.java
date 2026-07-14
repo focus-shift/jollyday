@@ -1,17 +1,23 @@
 package de.focus_shift.jollyday.tests.country;
 
-import de.focus_shift.jollyday.core.Holiday;
-import de.focus_shift.jollyday.core.HolidayManager;
 import org.junit.jupiter.api.Test;
 
-import java.time.LocalDate;
 import java.time.Year;
 
 import static de.focus_shift.jollyday.core.HolidayCalendar.PORTUGAL;
 import static de.focus_shift.jollyday.core.HolidayType.OBSERVANCE;
-import static de.focus_shift.jollyday.core.HolidayType.PUBLIC_HOLIDAY;
-import static de.focus_shift.jollyday.core.ManagerParameters.create;
+import static de.focus_shift.jollyday.core.spi.Occurrence.FIRST;
+import static de.focus_shift.jollyday.core.spi.Occurrence.SECOND;
+import static de.focus_shift.jollyday.core.spi.Occurrence.THIRD;
+import static de.focus_shift.jollyday.core.spi.Occurrence.FOURTH;
+import static de.focus_shift.jollyday.core.spi.Occurrence.LAST;
+import static de.focus_shift.jollyday.core.spi.Relation.AFTER;
 import static de.focus_shift.jollyday.tests.CalendarCheckerApi.assertFor;
+import static java.time.DayOfWeek.MONDAY;
+import static java.time.DayOfWeek.TUESDAY;
+import static java.time.DayOfWeek.FRIDAY;
+import static java.time.DayOfWeek.SATURDAY;
+import static java.time.DayOfWeek.SUNDAY;
 import static java.time.Month.APRIL;
 import static java.time.Month.AUGUST;
 import static java.time.Month.DECEMBER;
@@ -24,7 +30,6 @@ import static java.time.Month.MAY;
 import static java.time.Month.NOVEMBER;
 import static java.time.Month.OCTOBER;
 import static java.time.Month.SEPTEMBER;
-import static org.assertj.core.api.Assertions.assertThat;
 
 class HolidayPTTest {
 
@@ -78,8 +83,6 @@ class HolidayPTTest {
   }
 
   // Municipal holidays (city days) of all 308 municipalities.
-  // Movable city days are asserted on externally verified dates.
-
 
   @Test
   void ensuresCityDaysInAveiro() {
@@ -100,18 +103,12 @@ class HolidayPTTest {
       .hasFixedHoliday("CITY_DAY", OCTOBER, 11).inSubdivision("01", "SJM").and()
       .hasFixedHoliday("CITY_DAY", JANUARY, 20).inSubdivision("01", "VFR").and()
       .hasFixedHoliday("CITY_DAY", JULY, 25).inSubdivision("01", "OVR").and()
-      .hasChristianHoliday("ASCENSION_DAY").inSubdivision("01", "OBR")
+      .hasChristianHoliday("ASCENSION_DAY").inSubdivision("01", "OBR").and()
+      // Albergaria-a-Velha: Monday after the third Sunday of August
+      .hasRelativeToWeekdayInMonthHoliday("CITY_DAY", MONDAY, AFTER, THIRD, SUNDAY, AUGUST).inSubdivision("01", "ALB").and()
+      // Oliveira de Azeméis: second Monday of August
+      .hasFixedWeekdayHoliday("CITY_DAY", SECOND, MONDAY, AUGUST).inSubdivision("01", "OAZ")
       .check();
-
-    // Albergaria-a-Velha
-    assertCityDayOn(LocalDate.of(2025, AUGUST, 18), "01", "ALB");
-    assertCityDayOn(LocalDate.of(2026, AUGUST, 17), "01", "ALB");
-    assertCityDayOn(LocalDate.of(2028, AUGUST, 21), "01", "ALB");
-
-    // Oliveira de Azeméis
-    assertCityDayOn(LocalDate.of(2025, AUGUST, 11), "01", "OAZ");
-    assertCityDayOn(LocalDate.of(2026, AUGUST, 10), "01", "OAZ");
-    assertCityDayOn(LocalDate.of(2028, AUGUST, 14), "01", "OAZ");
   }
 
   @Test
@@ -133,30 +130,12 @@ class HolidayPTTest {
       .hasFixedHoliday("CITY_DAY", NOVEMBER, 25).inSubdivision("20", "CHT").and()
       .hasFixedHoliday("CITY_DAY", JUNE, 24).inSubdivision("20", "AGH").and()
       .hasRelativeToEasterSundayHoliday("CITY_DAY").inSubdivision("20", "PVC").and()
-      .hasRelativeToEasterSundayHoliday("CITY_DAY").inSubdivision("20", "PDL")
+      .hasRelativeToEasterSundayHoliday("CITY_DAY").inSubdivision("20", "PDL").and()
+      // Santa Cruz da Graciosa: Monday after the second Sunday of August
+      .hasRelativeToWeekdayInMonthHoliday("CITY_DAY", MONDAY, AFTER, SECOND, SUNDAY, AUGUST).inSubdivision("20", "SCG").and()
+      // Lajes das Flores: third Monday of July
+      .hasFixedWeekdayHoliday("CITY_DAY", THIRD, MONDAY, JULY).inSubdivision("20", "LGF")
       .check();
-
-    // Santa Cruz da Graciosa
-    assertCityDayOn(LocalDate.of(2026, AUGUST, 10), "20", "SCG");
-    assertCityDayOn(LocalDate.of(2027, AUGUST, 9), "20", "SCG");
-    assertCityDayOn(LocalDate.of(2028, AUGUST, 14), "20", "SCG");
-
-    // Povoação
-    assertCityDayOn(LocalDate.of(2026, JUNE, 5), "20", "PVC");
-    assertCityDayOn(LocalDate.of(2027, MAY, 28), "20", "PVC");
-    assertCityDayOn(LocalDate.of(2028, JUNE, 16), "20", "PVC");
-
-    // Ponta Delgada
-    assertCityDayOn(LocalDate.of(2025, MAY, 26), "20", "PDL");
-    assertCityDayOn(LocalDate.of(2026, MAY, 11), "20", "PDL");
-    assertCityDayOn(LocalDate.of(2027, MAY, 3), "20", "PDL");
-    assertCityDayOn(LocalDate.of(2028, MAY, 22), "20", "PDL");
-
-    // Lajes das Flores
-    assertCityDayOn(LocalDate.of(2026, JULY, 20), "20", "LGF");
-    assertCityDayOn(LocalDate.of(2027, JULY, 19), "20", "LGF");
-    assertCityDayOn(LocalDate.of(2028, JULY, 17), "20", "LGF");
-    assertCityDayOn(LocalDate.of(2030, JULY, 15), "20", "LGF");
   }
 
   @Test
@@ -194,13 +173,10 @@ class HolidayPTTest {
       .hasFixedHoliday("CITY_DAY", OCTOBER, 20).inSubdivision("03", "TBR").and()
       .hasFixedHoliday("CITY_DAY", JUNE, 13).inSubdivision("03", "VNF").and()
       .hasFixedHoliday("CITY_DAY", JUNE, 13).inSubdivision("03", "VVD").and()
-      .hasFixedHoliday("CITY_DAY", MARCH, 19).inSubdivision("03", "VIZ")
+      .hasFixedHoliday("CITY_DAY", MARCH, 19).inSubdivision("03", "VIZ").and()
+      // Vieira do Minho: Monday after the first Saturday of October
+      .hasRelativeToWeekdayInMonthHoliday("CITY_DAY", MONDAY, AFTER, FIRST, SATURDAY, OCTOBER).inSubdivision("03", "VRM")
       .check();
-
-    // Vieira do Minho
-    assertCityDayOn(LocalDate.of(2026, OCTOBER, 5), "03", "VRM");
-    assertCityDayOn(LocalDate.of(2027, OCTOBER, 4), "03", "VRM");
-    assertCityDayOn(LocalDate.of(2028, OCTOBER, 9), "03", "VRM");
   }
 
   @Test
@@ -232,30 +208,12 @@ class HolidayPTTest {
       .hasFixedHoliday("CITY_DAY", JUNE, 24).inSubdivision("05", "SRT").and()
       .hasFixedHoliday("CITY_DAY", SEPTEMBER, 19).inSubdivision("05", "VLR").and()
       .hasRelativeToEasterSundayHoliday("CITY_DAY").inSubdivision("05", "CTB").and()
-      .hasRelativeToEasterSundayHoliday("CITY_DAY").inSubdivision("05", "IDN")
+      .hasRelativeToEasterSundayHoliday("CITY_DAY").inSubdivision("05", "IDN").and()
+      // Oleiros: second Monday of August
+      .hasFixedWeekdayHoliday("CITY_DAY", SECOND, MONDAY, AUGUST).inSubdivision("05", "OLR").and()
+      // Vila Velha de Ródão: Monday after the fourth Sunday of August
+      .hasRelativeToWeekdayInMonthHoliday("CITY_DAY", MONDAY, AFTER, FOURTH, SUNDAY, AUGUST).inSubdivision("05", "VVR")
       .check();
-
-    // Castelo Branco
-    assertCityDayOn(LocalDate.of(2026, APRIL, 21), "05", "CTB");
-    assertCityDayOn(LocalDate.of(2027, APRIL, 13), "05", "CTB");
-
-    // Idanha-a-Nova
-    assertCityDayOn(LocalDate.of(2025, MAY, 5), "05", "IDN");
-    assertCityDayOn(LocalDate.of(2026, APRIL, 20), "05", "IDN");
-    assertCityDayOn(LocalDate.of(2027, APRIL, 12), "05", "IDN");
-    assertCityDayOn(LocalDate.of(2028, MAY, 1), "05", "IDN");
-
-    // Oleiros
-    assertCityDayOn(LocalDate.of(2025, AUGUST, 11), "05", "OLR");
-    assertCityDayOn(LocalDate.of(2026, AUGUST, 10), "05", "OLR");
-    assertCityDayOn(LocalDate.of(2027, AUGUST, 9), "05", "OLR");
-    assertCityDayOn(LocalDate.of(2028, AUGUST, 14), "05", "OLR");
-
-    // Vila Velha de Ródão
-    assertCityDayOn(LocalDate.of(2025, AUGUST, 25), "05", "VVR");
-    assertCityDayOn(LocalDate.of(2026, AUGUST, 24), "05", "VVR");
-    assertCityDayOn(LocalDate.of(2027, AUGUST, 23), "05", "VVR");
-    assertCityDayOn(LocalDate.of(2028, AUGUST, 28), "05", "VVR");
   }
 
   @Test
@@ -299,11 +257,6 @@ class HolidayPTTest {
       .hasFixedHoliday("CITY_DAY", AUGUST, 16).inSubdivision("07", "VVC").and()
       .hasRelativeToEasterSundayHoliday("CITY_DAY").inSubdivision("07", "ADL")
       .check();
-
-    // Alandroal
-    assertCityDayOn(LocalDate.of(2026, APRIL, 13), "07", "ADL");
-    assertCityDayOn(LocalDate.of(2027, APRIL, 5), "07", "ADL");
-    assertCityDayOn(LocalDate.of(2028, APRIL, 24), "07", "ADL");
   }
 
   @Test
@@ -323,12 +276,10 @@ class HolidayPTTest {
       .hasFixedHoliday("CITY_DAY", SEPTEMBER, 3).inSubdivision("08", "SLV").and()
       .hasFixedHoliday("CITY_DAY", JUNE, 24).inSubdivision("08", "TVR").and()
       .hasFixedHoliday("CITY_DAY", JANUARY, 22).inSubdivision("08", "VBP").and()
-      .hasFixedHoliday("CITY_DAY", MAY, 13).inSubdivision("08", "VRS")
+      .hasFixedHoliday("CITY_DAY", MAY, 13).inSubdivision("08", "VRS").and()
+      // Alcoutim: Sunday after the first Friday of September
+      .hasRelativeToWeekdayInMonthHoliday("CITY_DAY", SUNDAY, AFTER, FIRST, FRIDAY, SEPTEMBER).inSubdivision("08", "ACT")
       .check();
-
-    // Alcoutim
-    assertCityDayOn(LocalDate.of(2026, SEPTEMBER, 6), "08", "ACT");
-    assertCityDayOn(LocalDate.of(2028, SEPTEMBER, 3), "08", "ACT");
   }
 
   @Test
@@ -346,17 +297,10 @@ class HolidayPTTest {
       .hasFixedHoliday("CITY_DAY", JULY, 3).inSubdivision("09", "SEI").and()
       .hasFixedHoliday("CITY_DAY", MAY, 29).inSubdivision("09", "TCR").and()
       .hasFixedHoliday("CITY_DAY", MAY, 21).inSubdivision("09", "VLF").and()
-      .hasRelativeToEasterSundayHoliday("CITY_DAY").inSubdivision("09", "SBG")
+      .hasRelativeToEasterSundayHoliday("CITY_DAY").inSubdivision("09", "SBG").and()
+      // Gouveia: second Monday of August
+      .hasFixedWeekdayHoliday("CITY_DAY", SECOND, MONDAY, AUGUST).inSubdivision("09", "GVA")
       .check();
-
-    // Gouveia
-    assertCityDayOn(LocalDate.of(2025, AUGUST, 11), "09", "GVA");
-    assertCityDayOn(LocalDate.of(2026, AUGUST, 10), "09", "GVA");
-    assertCityDayOn(LocalDate.of(2028, AUGUST, 14), "09", "GVA");
-
-    // Sabugal
-    assertCityDayOn(LocalDate.of(2026, APRIL, 13), "09", "SBG");
-    assertCityDayOn(LocalDate.of(2028, APRIL, 24), "09", "SBG");
   }
 
   @Test
@@ -376,14 +320,10 @@ class HolidayPTTest {
       .hasFixedHoliday("CITY_DAY", JANUARY, 11).inSubdivision("10", "OBD").and()
       .hasFixedHoliday("CITY_DAY", JULY, 24).inSubdivision("10", "PGR").and()
       .hasFixedHoliday("CITY_DAY", NOVEMBER, 11).inSubdivision("10", "PBL").and()
-      .hasFixedHoliday("CITY_DAY", JUNE, 29).inSubdivision("10", "PMS")
+      .hasFixedHoliday("CITY_DAY", JUNE, 29).inSubdivision("10", "PMS").and()
+      // Peniche: Monday after the first Sunday of August
+      .hasRelativeToWeekdayInMonthHoliday("CITY_DAY", MONDAY, AFTER, FIRST, SUNDAY, AUGUST).inSubdivision("10", "PNI")
       .check();
-
-    // Peniche
-    assertCityDayOn(LocalDate.of(2025, AUGUST, 4), "10", "PNI");
-    assertCityDayOn(LocalDate.of(2026, AUGUST, 3), "10", "PNI");
-    assertCityDayOn(LocalDate.of(2027, AUGUST, 2), "10", "PNI");
-    assertCityDayOn(LocalDate.of(2028, AUGUST, 7), "10", "PNI");
   }
 
   @Test
@@ -444,10 +384,6 @@ class HolidayPTTest {
       .hasChristianHoliday("EASTER_MONDAY").inSubdivision("12", "SSL").and()
       .hasRelativeToEasterSundayHoliday("CITY_DAY").inSubdivision("12", "MFT")
       .check();
-
-    // Monforte
-    assertCityDayOn(LocalDate.of(2026, APRIL, 13), "12", "MFT");
-    assertCityDayOn(LocalDate.of(2028, APRIL, 24), "12", "MFT");
   }
 
   @Test
@@ -466,36 +402,16 @@ class HolidayPTTest {
       .hasFixedHoliday("CITY_DAY", JUNE, 24).inSubdivision("13", "VLG").and()
       .hasFixedHoliday("CITY_DAY", JUNE, 24).inSubdivision("13", "VCD").and()
       .hasFixedHoliday("CITY_DAY", JUNE, 24).inSubdivision("13", "VNG").and()
-      .hasRelativeToEasterSundayHoliday("CITY_DAY").inSubdivision("13", "MTS")
+      .hasRelativeToEasterSundayHoliday("CITY_DAY").inSubdivision("13", "MTS").and()
+      // Gondomar: Monday after the first Sunday of October
+      .hasRelativeToWeekdayInMonthHoliday("CITY_DAY", MONDAY, AFTER, FIRST, SUNDAY, OCTOBER).inSubdivision("13", "GDM").and()
+      // Lousada: Monday after the last Sunday of July
+      .hasRelativeToWeekdayInMonthHoliday("CITY_DAY", MONDAY, AFTER, LAST, SUNDAY, JULY).inSubdivision("13", "LOU").and()
+      // Maia: Monday after the second Sunday of July
+      .hasRelativeToWeekdayInMonthHoliday("CITY_DAY", MONDAY, AFTER, SECOND, SUNDAY, JULY).inSubdivision("13", "MAI").and()
+      // Paredes: Monday after the third Sunday of July
+      .hasRelativeToWeekdayInMonthHoliday("CITY_DAY", MONDAY, AFTER, THIRD, SUNDAY, JULY).inSubdivision("13", "PRD")
       .check();
-
-    // Gondomar
-    assertCityDayOn(LocalDate.of(2025, OCTOBER, 6), "13", "GDM");
-    assertCityDayOn(LocalDate.of(2026, OCTOBER, 5), "13", "GDM");
-    assertCityDayOn(LocalDate.of(2027, OCTOBER, 4), "13", "GDM");
-    assertCityDayOn(LocalDate.of(2028, OCTOBER, 2), "13", "GDM");
-
-    // Lousada
-    assertCityDayOn(LocalDate.of(2026, JULY, 27), "13", "LOU");
-    assertCityDayOn(LocalDate.of(2027, JULY, 26), "13", "LOU");
-    assertCityDayOn(LocalDate.of(2028, JULY, 31), "13", "LOU");
-
-    // Maia
-    assertCityDayOn(LocalDate.of(2025, JULY, 14), "13", "MAI");
-    assertCityDayOn(LocalDate.of(2026, JULY, 13), "13", "MAI");
-    assertCityDayOn(LocalDate.of(2027, JULY, 12), "13", "MAI");
-    assertCityDayOn(LocalDate.of(2028, JULY, 10), "13", "MAI");
-
-    // Matosinhos
-    assertCityDayOn(LocalDate.of(2025, JUNE, 10), "13", "MTS");
-    assertCityDayOn(LocalDate.of(2026, MAY, 26), "13", "MTS");
-    assertCityDayOn(LocalDate.of(2027, MAY, 18), "13", "MTS");
-    assertCityDayOn(LocalDate.of(2028, JUNE, 6), "13", "MTS");
-
-    // Paredes
-    assertCityDayOn(LocalDate.of(2026, JULY, 20), "13", "PRD");
-    assertCityDayOn(LocalDate.of(2028, JULY, 17), "13", "PRD");
-    assertCityDayOn(LocalDate.of(2030, JULY, 22), "13", "PRD");
   }
 
   @Test
@@ -539,14 +455,10 @@ class HolidayPTTest {
       .hasFixedHoliday("CITY_DAY", JUNE, 29).inSubdivision("15", "SXL").and()
       .hasFixedHoliday("CITY_DAY", MAY, 4).inSubdivision("15", "SSB").and()
       .hasFixedHoliday("CITY_DAY", SEPTEMBER, 15).inSubdivision("15", "STB").and()
-      .hasFixedHoliday("CITY_DAY", NOVEMBER, 24).inSubdivision("15", "SNS")
+      .hasFixedHoliday("CITY_DAY", NOVEMBER, 24).inSubdivision("15", "SNS").and()
+      // Moita: Tuesday after the second Sunday of September
+      .hasRelativeToWeekdayInMonthHoliday("CITY_DAY", TUESDAY, AFTER, SECOND, SUNDAY, SEPTEMBER).inSubdivision("15", "MTA")
       .check();
-
-    // Moita
-    assertCityDayOn(LocalDate.of(2025, SEPTEMBER, 16), "15", "MTA");
-    assertCityDayOn(LocalDate.of(2026, SEPTEMBER, 15), "15", "MTA");
-    assertCityDayOn(LocalDate.of(2027, SEPTEMBER, 14), "15", "MTA");
-    assertCityDayOn(LocalDate.of(2028, SEPTEMBER, 12), "15", "MTA");
   }
 
   @Test
@@ -610,18 +522,9 @@ class HolidayPTTest {
       .hasFixedHoliday("CITY_DAY", SEPTEMBER, 16).inSubdivision("18", "TND").and()
       .hasFixedHoliday("CITY_DAY", MARCH, 2).inSubdivision("18", "VNP").and()
       .hasFixedHoliday("CITY_DAY", SEPTEMBER, 21).inSubdivision("18", "VIS").and()
-      .hasFixedHoliday("CITY_DAY", MAY, 14).inSubdivision("18", "VZL")
+      .hasFixedHoliday("CITY_DAY", MAY, 14).inSubdivision("18", "VZL").and()
+      // Carregal do Sal: third Monday of July
+      .hasFixedWeekdayHoliday("CITY_DAY", THIRD, MONDAY, JULY).inSubdivision("18", "CRS")
       .check();
-
-    // Carregal do Sal
-    assertCityDayOn(LocalDate.of(2026, JULY, 20), "18", "CRS");
-    assertCityDayOn(LocalDate.of(2028, JULY, 17), "18", "CRS");
-    assertCityDayOn(LocalDate.of(2030, JULY, 15), "18", "CRS");
-  }
-
-  private static void assertCityDayOn(final LocalDate expectedDate, final String... subdivisions) {
-    final HolidayManager holidayManager = HolidayManager.getInstance(create(PORTUGAL));
-    assertThat(holidayManager.getHolidays(Year.of(expectedDate.getYear()), subdivisions))
-      .contains(new Holiday(expectedDate, "CITY_DAY", PUBLIC_HOLIDAY));
   }
 }
