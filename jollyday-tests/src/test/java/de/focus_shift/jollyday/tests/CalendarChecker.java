@@ -503,7 +503,7 @@ public class CalendarChecker implements
     final LocalDate start = from.atYear(year.getValue());
     final LocalDate end = to.atYear(year.getValue());
     return start.datesUntil(end.plusDays(1))
-      .filter(date -> date.getDayOfWeek() == weekday)
+      .filter(date -> date.getDayOfWeek().equals(weekday))
       .findFirst()
       .orElseThrow(() -> new IllegalStateException("No " + weekday + " found between " + start + " and " + end));
   }
