@@ -44,8 +44,13 @@ class HolidayDETest {
       .hasChristianHoliday("EASTER_MONDAY").and()
       .hasChristianHoliday("ASCENSION_DAY").and()
       .hasChristianHoliday("WHIT_MONDAY").and()
+      .hasRelativeToFixedHoliday("REPENTANCE_PRAYER", WEDNESDAY, BEFORE, MonthDay.of(NOVEMBER, 23))
+        .validBetween(Year.of(1934), Year.of(1938))
+        .validBetween(Year.of(1990), Year.of(1994))
+      .and()
 
       /* Berlin */
+      .hasRelativeToFixedHoliday("REPENTANCE_PRAYER", WEDNESDAY, BEFORE, MonthDay.of(NOVEMBER, 23)).validBetween(Year.of(1945), Year.of(1989)).inSubdivision("be").and()
 
       /* Brandenburg */
       .hasFixedHoliday("REFORMATION_DAY", OCTOBER, 31).validFrom(Year.of(1990)).inSubdivision("bb").and()
@@ -55,11 +60,13 @@ class HolidayDETest {
       /* Baden-Württemberg */
       .hasFixedHoliday("EPIPHANY", JANUARY, 6).inSubdivision("bw").and()
       .hasFixedHoliday("ALL_SAINTS", NOVEMBER, 1).inSubdivision("bw").and()
+      .hasRelativeToFixedHoliday("REPENTANCE_PRAYER", WEDNESDAY, BEFORE, MonthDay.of(NOVEMBER, 23)).validBetween(Year.of(1945), Year.of(1989)).inSubdivision("bw").and()
       .hasChristianHoliday("CORPUS_CHRISTI").inSubdivision("bw").and()
 
       /* Bavaria */
       .hasFixedHoliday("EPIPHANY", JANUARY, 6).inSubdivision("by").and()
       .hasFixedHoliday("ALL_SAINTS", NOVEMBER, 1).inSubdivision("by").and()
+      .hasRelativeToFixedHoliday("REPENTANCE_PRAYER", WEDNESDAY, BEFORE, MonthDay.of(NOVEMBER, 23)).validBetween(Year.of(1981), Year.of(1989)).inSubdivision("by").and()
       .hasChristianHoliday("CORPUS_CHRISTI").inSubdivision("by").and()
 
       /* Munich */
@@ -75,6 +82,7 @@ class HolidayDETest {
       .hasFixedHoliday("ASSUMPTION_DAY", AUGUST, 15).inSubdivision("by", "in").and()
 
       /* Hessen */
+      .hasRelativeToFixedHoliday("REPENTANCE_PRAYER", WEDNESDAY, BEFORE, MonthDay.of(NOVEMBER, 23)).validBetween(Year.of(1945), Year.of(1989)).inSubdivision("he").and()
       .hasChristianHoliday("CORPUS_CHRISTI").inSubdivision("he").and()
 
       /* Mecklenburg-Vorpommern */
@@ -83,15 +91,18 @@ class HolidayDETest {
 
       /* North Rhine-Westphalia */
       .hasFixedHoliday("ALL_SAINTS", NOVEMBER, 1).inSubdivision("nw").and()
+      .hasRelativeToFixedHoliday("REPENTANCE_PRAYER", WEDNESDAY, BEFORE, MonthDay.of(NOVEMBER, 23)).validBetween(Year.of(1945), Year.of(1989)).inSubdivision("nw").and()
       .hasChristianHoliday("CORPUS_CHRISTI").inSubdivision("nw").and()
 
       /* Rhineland-Palatinate */
       .hasFixedHoliday("ALL_SAINTS", NOVEMBER, 1).inSubdivision("rp").and()
+      .hasRelativeToFixedHoliday("REPENTANCE_PRAYER", WEDNESDAY, BEFORE, MonthDay.of(NOVEMBER, 23)).validBetween(Year.of(1945), Year.of(1989)).inSubdivision("rp").and()
       .hasChristianHoliday("CORPUS_CHRISTI").inSubdivision("rp").and()
 
       /* Saarland */
       .hasFixedHoliday("ALL_SAINTS", NOVEMBER, 1).inSubdivision("sl").and()
       .hasFixedHoliday("ASSUMPTION_DAY", AUGUST, 15).inSubdivision("sl").and()
+      .hasRelativeToFixedHoliday("REPENTANCE_PRAYER", WEDNESDAY, BEFORE, MonthDay.of(NOVEMBER, 23)).validBetween(Year.of(1945), Year.of(1989)).inSubdivision("sl").and()
       .hasChristianHoliday("CORPUS_CHRISTI").inSubdivision("sl").and()
 
       /* Saxony */
@@ -108,15 +119,19 @@ class HolidayDETest {
 
       /* Schleswig-Holstein */
       .hasFixedHoliday("REFORMATION_DAY", OCTOBER, 31).validFrom(Year.of(2018)).inSubdivision("sh").and()
+      .hasRelativeToFixedHoliday("REPENTANCE_PRAYER", WEDNESDAY, BEFORE, MonthDay.of(NOVEMBER, 23)).validBetween(Year.of(1945), Year.of(1989)).inSubdivision("sh").and()
 
       /* Hamburg */
       .hasFixedHoliday("REFORMATION_DAY", OCTOBER, 31).validFrom(Year.of(2018)).inSubdivision("hh").and()
+      .hasRelativeToFixedHoliday("REPENTANCE_PRAYER", WEDNESDAY, BEFORE, MonthDay.of(NOVEMBER, 23)).validBetween(Year.of(1945), Year.of(1989)).inSubdivision("hh").and()
 
       /* Bremen */
       .hasFixedHoliday("REFORMATION_DAY", OCTOBER, 31).validFrom(Year.of(2018)).inSubdivision("hb").and()
+      .hasRelativeToFixedHoliday("REPENTANCE_PRAYER", WEDNESDAY, BEFORE, MonthDay.of(NOVEMBER, 23)).validBetween(Year.of(1945), Year.of(1989)).inSubdivision("hb").and()
 
       /* Lower-Saxony */
-      .hasFixedHoliday("REFORMATION_DAY", OCTOBER, 31).validFrom(Year.of(2018)).inSubdivision("ni")
+      .hasFixedHoliday("REFORMATION_DAY", OCTOBER, 31).validFrom(Year.of(2018)).inSubdivision("ni").and()
+      .hasRelativeToFixedHoliday("REPENTANCE_PRAYER", WEDNESDAY, BEFORE, MonthDay.of(NOVEMBER, 23)).validBetween(Year.of(1945), Year.of(1989)).inSubdivision("ni")
 
       .check();
   }
