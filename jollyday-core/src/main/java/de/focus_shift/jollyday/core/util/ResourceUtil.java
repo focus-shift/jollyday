@@ -14,8 +14,6 @@ import java.util.ResourceBundle;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Stream;
 
-import static java.util.ResourceBundle.getBundle;
-
 public final class ResourceUtil {
 
   private ResourceUtil() {
@@ -40,7 +38,7 @@ public final class ResourceUtil {
    */
   private static final String HOLIDAY_PROPERTY_PREFIX = "holiday.description";
   /**
-   * The prefix of the holiday descriptions file.
+   * The prefix of the holiday description file.
    */
   private static final String HOLIDAY_DESCRIPTIONS_FILE_PREFIX = "descriptions.holiday_descriptions";
   /**
@@ -141,11 +139,34 @@ public final class ResourceUtil {
   /**
    * Returns the eventually cached ResourceBundle for the descriptions.
    *
-   * @param locale Locale to retrieve the descriptions for.
+   * @param locale        Locale to retrieve the descriptions for.
+   * @param resourceCache the cache to use
+   * @param filePrefix    the resource bundle name prefix (without locale suffix)
    * @return ResourceBundle containing the descriptions for the locale.
    */
-  private static @NonNull ResourceBundle getResourceBundle(@NonNull final Locale locale, @NonNull final Map<Locale, ResourceBundle> resourceCache, @NonNull final String filePrefix) {
-    return resourceCache.computeIfAbsent(locale, givenLocale -> getBundle(filePrefix, givenLocale, ClassLoadingUtil.getClassloader()));
+  private static @NonNull ResourceBundle getResourceBundle(
+    @NonNull final Locale locale,
+    @NonNull final Map<Locale, ResourceBundle> resourceCache,
+    @NonNull final String filePrefix
+  ) {
+    return resourceCache.computeIfAbsent(locale, givenLocale -> {
+      final ResourceBundle bundle = ResourceBundle.getBundle(filePrefix, givenLocale, ClassLoadingUtil.getClassloader());
+
+      // ResourceBundle.getBundle(baseName, locale) consults Locale.getDefault() whenever the
+      // requested locale itself has no dedicated resource file - even though a root/base bundle
+      // further down the candidate chain would otherwise satisfy the request. In other words,
+      // requesting e.g. Locale.ENGLISH or Locale.ITALIAN (neither has a dedicated properties file
+      // here) on a JVM whose default locale happens to be one we DO ship a translation for
+      // (de, el, fr, nl, pt, sv) silently returns that translation instead of the base (English)
+      // bundle. A resolved bundle whose locale doesn't match the requested locale's language - and
+      // isn't the root locale itself - is exactly this misfire. Requesting Locale.ROOT directly is
+      // never subject to this default-locale fallback, so re-querying with it recovers the
+      // intended base bundle without mutating any shared/global state.
+      if (!Locale.ROOT.equals(bundle.getLocale()) && !bundle.getLocale().getLanguage().equals(givenLocale.getLanguage())) {
+        return ResourceBundle.getBundle(filePrefix, Locale.ROOT, ClassLoadingUtil.getClassloader());
+      }
+      return bundle;
+    });
   }
 
   /**
