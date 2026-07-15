@@ -17,8 +17,6 @@ module de.focus_shift.jollyday.jackson {
   requires org.threeten.extra;
   requires org.jspecify;
 
-  exports de.focus_shift.jollyday.jackson to
-    de.focus_shift.jollyday.core;
   exports de.focus_shift.jollyday.jackson.mapping to
     tools.jackson.databind;
 }
