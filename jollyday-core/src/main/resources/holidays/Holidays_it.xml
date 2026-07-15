@@ -26,10 +26,309 @@
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:IT</Source>
   </Sources>
 
+  <!-- Patronal festivals: besides the national holidays, Italian law recognizes a local public
+       holiday on the feast day of a comune's patron saint (L. 27 maggio 1949, n. 260, art. 5 as
+       amended by L. 31 marzo 1954, n. 90). Only Rome's is codified directly in statute (D.P.R.
+       28 dicembre 1985, n. 792); elsewhere the day off rests on long-standing local custom
+       recognized through collective labour agreements, but is a genuine non-working day for
+       schools and most offices all the same. Only the regional capital is modelled here for
+       each region. -->
 
-  <SubConfigurations hierarchy="32" description="Südtirol">
+  <SubConfigurations hierarchy="21" description="Piedmont">
+    <Holidays/>
+
+    <SubConfigurations hierarchy="to" description="Turin">
+      <Holidays>
+        <Fixed month="JUNE" day="24" descriptionPropertiesKey="ST_JOHN"/>
+      </Holidays>
+      <Sources>
+        <Source>https://www.comune.torino.it/schede-informative/festa-san-giovanni</Source>
+      </Sources>
+    </SubConfigurations>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="23" description="Aosta Valley">
+    <Holidays/>
+
+    <SubConfigurations hierarchy="ao" description="Aosta">
+      <Holidays>
+        <Fixed month="SEPTEMBER" day="7" descriptionPropertiesKey="ST_GRATUS"/>
+      </Holidays>
+      <Sources>
+        <Source>https://www.aostainforma.it/www/index.php/ita/articolo/2/1205/aosta-il-7-settembre-celebra-il-santo-patrono-san-grato</Source>
+      </Sources>
+    </SubConfigurations>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="25" description="Lombardy">
+    <Holidays/>
+
+    <SubConfigurations hierarchy="mi" description="Milan">
+      <Holidays>
+        <Fixed month="DECEMBER" day="7" descriptionPropertiesKey="ST_AMBROSE"/>
+      </Holidays>
+      <Sources>
+        <Source>https://www.ilpost.it/2023/12/07/milano-santambrogio/</Source>
+      </Sources>
+    </SubConfigurations>
+  </SubConfigurations>
+
+  <!-- Trentino-Alto Adige/South Tyrol comprises two autonomous provinces, each with its own
+       school calendar and local customs. Whit Monday is observed only in the province of
+       Bolzano/Bozen (a Tyrolean/Austrian-tradition carryover), not in Trento, so it is modelled
+       on the "bz" subdivision rather than at the region level. -->
+  <SubConfigurations hierarchy="32" description="Trentino-South Tyrol">
+    <Holidays/>
+
+    <!-- Bolzano/Bozen's patronal observance falls on Whit Monday, so no separate patron-saint
+         entry is added on top of it. -->
+    <SubConfigurations hierarchy="bz" description="South Tyrol">
+      <Holidays>
+        <ChristianHoliday type="WHIT_MONDAY"/>
+      </Holidays>
+      <Sources>
+        <Source>https://assets-eu-01.kc-usercontent.com/7ea6cc85-bc0d-01f3-7f75-32fd91efe5e0/b62269b2-0b7d-41e5-ae29-f042e6c96cb9/2025_2026_Calendario_Scolastico.pdf</Source>
+      </Sources>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="tn" description="Trento">
+      <Holidays>
+        <Fixed month="JUNE" day="26" descriptionPropertiesKey="ST_VIGILIUS"/>
+      </Holidays>
+      <Sources>
+        <Source>https://www.tn.camcom.it/bandi-di-gara-e-concorsi/altri-bandi-e-avvisi/26-giugno-festa-di-san-vigilio</Source>
+      </Sources>
+    </SubConfigurations>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="34" description="Veneto">
+    <Holidays/>
+
+    <!-- Venice's traditional patron is Saint Mark (25 April), but that date is also Italy's
+         national Liberation Day, so the comune observes its local patronal holiday instead on
+         21 November, the Festa della Madonna della Salute. -->
+    <SubConfigurations hierarchy="ve" description="Venice">
+      <Holidays>
+        <Fixed month="NOVEMBER" day="21" descriptionPropertiesKey="MADONNA_DELLA_SALUTE"/>
+      </Holidays>
+      <Sources>
+        <Source>https://it.wikipedia.org/wiki/Festa_della_Madonna_della_Salute</Source>
+      </Sources>
+    </SubConfigurations>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="36" description="Friuli Venezia Giulia">
+    <Holidays/>
+
+    <SubConfigurations hierarchy="ts" description="Trieste">
+      <Holidays>
+        <Fixed month="NOVEMBER" day="3" descriptionPropertiesKey="ST_JUST"/>
+      </Holidays>
+      <Sources>
+        <Source>https://www.comune.trieste.it/it/martedi-3-novembre-san-giusto-patrono-della-citta-11323</Source>
+      </Sources>
+    </SubConfigurations>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="42" description="Liguria">
+    <Holidays/>
+
+    <SubConfigurations hierarchy="ge" description="Genoa">
+      <Holidays>
+        <Fixed month="JUNE" day="24" descriptionPropertiesKey="ST_JOHN"/>
+      </Holidays>
+      <Sources>
+        <Source>https://www2.comune.genova.it/content/la-festa-del-patrono-di-genova-san-giovanni-battista</Source>
+      </Sources>
+    </SubConfigurations>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="45" description="Emilia-Romagna">
+    <Holidays/>
+
+    <SubConfigurations hierarchy="bo" description="Bologna">
+      <Holidays>
+        <Fixed month="OCTOBER" day="4" descriptionPropertiesKey="ST_PETRONIUS"/>
+      </Holidays>
+      <Sources>
+        <Source>https://www.ilrestodelcarlino.it/bologna/cultura/san-petronio-festa-patrono-77fc3b92</Source>
+      </Sources>
+    </SubConfigurations>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="52" description="Tuscany">
+    <Holidays/>
+
+    <SubConfigurations hierarchy="fi" description="Florence">
+      <Holidays>
+        <Fixed month="JUNE" day="24" descriptionPropertiesKey="ST_JOHN"/>
+      </Holidays>
+      <Sources>
+        <Source>https://www.comune.firenze.it/novita/notizie/24-giugno-san-giovanni-santo-patrono-di-firenze</Source>
+      </Sources>
+    </SubConfigurations>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="55" description="Umbria">
+    <Holidays/>
+
+    <SubConfigurations hierarchy="pg" description="Perugia">
+      <Holidays>
+        <Fixed month="JANUARY" day="29" descriptionPropertiesKey="ST_CONSTANTIUS"/>
+      </Holidays>
+      <Sources>
+        <Source>https://turismo.comune.perugia.it/pagine/festivita-del-patrono-san-costanzo</Source>
+      </Sources>
+    </SubConfigurations>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="57" description="Marche">
+    <Holidays/>
+
+    <SubConfigurations hierarchy="an" description="Ancona">
+      <Holidays>
+        <Fixed month="MAY" day="4" descriptionPropertiesKey="ST_CYRIACUS"/>
+      </Holidays>
+      <Sources>
+        <Source>https://www.comune.ancona.it/it/news/fiera-di-san-ciriaco-2026</Source>
+      </Sources>
+    </SubConfigurations>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="62" description="Lazio">
+    <Holidays/>
+
+    <!-- Rome is the only Italian comune whose patronal holiday is codified directly in
+         statute: D.P.R. 28 dicembre 1985, n. 792, art. 1. -->
+    <SubConfigurations hierarchy="rm" description="Rome">
+      <Holidays>
+        <Fixed month="JUNE" day="29" descriptionPropertiesKey="ST_PETER_PAUL"/>
+      </Holidays>
+      <Sources>
+        <Source>https://www.fiscooggi.it/portale/-/ricorrenza-dei-santi-pietro-e-paolo-festivit%C3%A0-a-tutti-gli-effetti</Source>
+      </Sources>
+    </SubConfigurations>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="65" description="Abruzzo">
+    <Holidays/>
+
+    <!-- L'Aquila's civically observed patron is Saint Maximus of Aveia (10 June); the more
+         famous Saint Bernardine of Siena (20 May, the Perdonanza celebration) is venerated
+         solemnly but does not itself trigger an office closure. -->
+    <SubConfigurations hierarchy="aq" description="L'Aquila">
+      <Holidays>
+        <Fixed month="JUNE" day="10" descriptionPropertiesKey="ST_MAXIMUS"/>
+      </Holidays>
+      <Sources>
+        <Source>https://www.comune.laquila.it/archivio3_notizie-e-comunicati_0_3693.html</Source>
+      </Sources>
+    </SubConfigurations>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="67" description="Molise">
+    <Holidays/>
+
+    <SubConfigurations hierarchy="cb" description="Campobasso">
+      <Holidays>
+        <Fixed month="APRIL" day="23" descriptionPropertiesKey="ST_GEORGE"/>
+      </Holidays>
+      <Sources>
+        <Source>https://www.primonumero.it/2025/12/campobasso-inserisce-san-giorgio-nello-statuto-il-23-aprile-diventa-giornata-solenne-ufficiale/1530884040/</Source>
+      </Sources>
+    </SubConfigurations>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="72" description="Campania">
+    <Holidays/>
+
+    <SubConfigurations hierarchy="na" description="Naples">
+      <Holidays>
+        <Fixed month="SEPTEMBER" day="19" descriptionPropertiesKey="ST_JANUARIUS"/>
+      </Holidays>
+      <Sources>
+        <Source>https://napoli.fanpage.it/festa-san-gennaro-19-settembre-napoli/</Source>
+      </Sources>
+    </SubConfigurations>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="75" description="Apulia">
+    <Holidays/>
+
+    <!-- Bari's civically observed patronal date is 8 May, commemorating the 1087 arrival of
+         Saint Nicholas' relics, rather than his 6 December liturgical feast. -->
+    <SubConfigurations hierarchy="ba" description="Bari">
+      <Holidays>
+        <Fixed month="MAY" day="8" descriptionPropertiesKey="ST_NICHOLAS"/>
+      </Holidays>
+      <Sources>
+        <Source>https://wwwt.agenziaentrate.gov.it/servizi/UfficiProvinciali/avviso.htm?av=2&amp;iduff=BA1&amp;pr=Bari&amp;r=Puglia&amp;titoloAvviso=8+maggio+-+Servizi+garantiti+per+la+festivita+del+Santo+Patrono.</Source>
+      </Sources>
+    </SubConfigurations>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="77" description="Basilicata">
+    <Holidays/>
+
+    <SubConfigurations hierarchy="pz" description="Potenza">
+      <Holidays>
+        <Fixed month="MAY" day="30" descriptionPropertiesKey="ST_GERARD"/>
+      </Holidays>
+      <Sources>
+        <Source>https://www.comune.potenza.it/?p=2281</Source>
+      </Sources>
+    </SubConfigurations>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="78" description="Calabria">
+    <Holidays/>
+
+    <SubConfigurations hierarchy="cz" description="Catanzaro">
+      <Holidays>
+        <Fixed month="JULY" day="16" descriptionPropertiesKey="ST_VITALIAN"/>
+      </Holidays>
+      <Sources>
+        <Source>https://www.diocesicatanzarosquillace.it/i-santi-patroni/san-vitaliano/</Source>
+      </Sources>
+    </SubConfigurations>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="82" description="Sicily">
+    <Holidays/>
+
+    <!-- The Festino's climactic celebrations culminate on the night of 14 July, but the
+         civic holiday itself is observed the following day, 15 July. -->
+    <SubConfigurations hierarchy="pa" description="Palermo">
+      <Holidays>
+        <Fixed month="JULY" day="15" descriptionPropertiesKey="ST_ROSALIA"/>
+      </Holidays>
+      <Sources>
+        <Source>https://pa.usr.sicilia.it/avviso-di-chiusura-uffici-per-festivita-del-santo-patrono-15-luglio-2026/</Source>
+      </Sources>
+    </SubConfigurations>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="88" description="Sardinia">
+    <!-- Sa Die de sa Sardigna (L.R. 14 settembre 1993, n. 44) closes schools region-wide, but is
+         not a general public/office holiday, hence OBSERVANCE rather than PUBLIC_HOLIDAY. -->
     <Holidays>
-      <ChristianHoliday type="WHIT_MONDAY"/>
+      <Fixed month="APRIL" day="28" descriptionPropertiesKey="SARDINIA_DAY" localizedType="OBSERVANCE"/>
     </Holidays>
+    <Sources>
+      <Source>https://www.regione.sardegna.it/notizie/sa-die-de-sa-sardigna-assessora-portas-la-giornata-di-tutto-il-popolo-sardo-celebrazione-ufficiale-con-le-scuole-in-consiglio-regionale</Source>
+    </Sources>
+
+    <!-- Cagliari's officially recognized patron is Saint Saturninus (30 October). Saint Ephysius,
+         whose 1 May procession is widely but mistakenly assumed to be the city's patronal
+         festival, is only a co-patron by a 1652 popular vow; that date's holiday status is
+         already fully accounted for by the national Labour Day. -->
+    <SubConfigurations hierarchy="ca" description="Cagliari">
+      <Holidays>
+        <Fixed month="OCTOBER" day="30" descriptionPropertiesKey="ST_SATURNINUS"/>
+      </Holidays>
+      <Sources>
+        <Source>https://www.comune.cagliari.it/portale/page/it/dal_25_ottobre_le_celebrazioni_per_san_saturnino?contentId=NVT12527</Source>
+      </Sources>
+    </SubConfigurations>
   </SubConfigurations>
 </Configuration>
