@@ -90,4 +90,12 @@ class HolidayTest {
     final Holiday h4 = new Holiday(LocalDate.of(2011, Month.FEBRUARY, 2), "CHRISTMAS", OBSERVANCE);
     assertThat(h1).isNotEqualTo(h4);
   }
+
+  @Test
+  void ensureToString() {
+    Locale.setDefault(ENGLISH);
+
+    final Holiday holiday = new Holiday(LocalDate.of(2011, Month.FEBRUARY, 2), "CHRISTMAS", PUBLIC_HOLIDAY);
+    assertThat(holiday.toString()).isEqualTo("2011-02-02 (Christmas)");
+  }
 }

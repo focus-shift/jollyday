@@ -50,6 +50,20 @@ class RelativeToFixedParserTest {
     assertThat(calculatedHoliday.get(0).getDate()).isEqualTo(expectedLocalDate);
   }
 
+  @Test
+  void ensureThatRelativeToFixedWithWeekdayAfterWrapsAroundToNextWeekWhenTargetDayIsNotAfterFixedDay() {
+
+    final Year year = Year.of(2025);
+    // 2025-01-09 is a Thursday, Wednesday is not after it, so it must wrap around to the following week
+    final RelativeToFixedHolidayConfiguration relativeToFixed = getRelativeToFixed(MonthDay.of(JANUARY, 9), WEDNESDAY, null, Relation.AFTER, year, year);
+
+    final RelativeToFixedParser sut = new RelativeToFixedParser();
+    when(holidays.relativeToFixed()).thenReturn(List.of(relativeToFixed));
+
+    final List<Holiday> calculatedHoliday = sut.parse(year, holidays);
+    assertThat(calculatedHoliday.get(0).getDate()).isEqualTo(LocalDate.of(2025, JANUARY, 15));
+  }
+
   @ParameterizedTest
   @CsvSource({"BEFORE,2025-01-04", "AFTER,2025-01-08"})
   void ensureThatRelativeToFixedAIsValidWithDays(final Relation relation, final LocalDate expectedLocalDate) {

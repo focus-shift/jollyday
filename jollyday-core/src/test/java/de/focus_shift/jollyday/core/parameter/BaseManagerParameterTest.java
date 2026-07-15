@@ -7,6 +7,7 @@ import java.net.URL;
 import java.util.Properties;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatIllegalStateException;
 import static org.mockito.Mockito.mock;
 
 class BaseManagerParameterTest {
@@ -58,6 +59,51 @@ class BaseManagerParameterTest {
 
     final TestBaseManagerParameter sut = new TestBaseManagerParameter(properties);
     assertThat(sut.getManagerImplClassName()).isEqualTo("managerImplClassName");
+  }
+
+  @Test
+  void ensureGetManagerImplClassNameThrowsWhenMissing() {
+    final TestBaseManagerParameter sut = new TestBaseManagerParameter(new Properties());
+
+    assertThatIllegalStateException()
+      .isThrownBy(sut::getManagerImplClassName)
+      .withMessageContaining("manager.impl");
+  }
+
+  @Test
+  void ensureGetParserImplClassName() {
+    final Properties properties = new Properties();
+    properties.setProperty("parser.impl.holidayClass", "parserImplClassName");
+
+    final TestBaseManagerParameter sut = new TestBaseManagerParameter(properties);
+    assertThat(sut.getParserImplClassName("holidayClass")).isEqualTo("parserImplClassName");
+  }
+
+  @Test
+  void ensureGetParserImplClassNameThrowsWhenMissing() {
+    final TestBaseManagerParameter sut = new TestBaseManagerParameter(new Properties());
+
+    assertThatIllegalStateException()
+      .isThrownBy(() -> sut.getParserImplClassName("holidayClass"))
+      .withMessageContaining("holidayClass");
+  }
+
+  @Test
+  void ensureGetConfigurationServiceImplClassName() {
+    final Properties properties = new Properties();
+    properties.setProperty("configuration.service.impl", "configurationServiceImplClassName");
+
+    final TestBaseManagerParameter sut = new TestBaseManagerParameter(properties);
+    assertThat(sut.getConfigurationServiceImplClassName()).isEqualTo("configurationServiceImplClassName");
+  }
+
+  @Test
+  void ensureGetConfigurationServiceImplClassNameThrowsWhenMissing() {
+    final TestBaseManagerParameter sut = new TestBaseManagerParameter(new Properties());
+
+    assertThatIllegalStateException()
+      .isThrownBy(sut::getConfigurationServiceImplClassName)
+      .withMessageContaining("configuration.service.impl");
   }
 
   private static class TestBaseManagerParameter extends BaseManagerParameter {

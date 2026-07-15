@@ -35,4 +35,28 @@ class CreateHolidayTest {
     assertThat(holiday.getType()).isEqualTo(HolidayType.PUBLIC_HOLIDAY);
     assertThat(holiday.getPropertiesKey()).isEqualTo("propertiesKey");
   }
+
+  @Test
+  void ensuresGivenPropertiesKeyOverridesTheDescribedPropertiesKey() {
+
+    final Described described = new Described() {
+      @Override
+      public @NonNull String descriptionPropertiesKey() {
+        return "describedPropertiesKey";
+      }
+
+      @Override
+      public @NonNull HolidayType holidayType() {
+        return HolidayType.PUBLIC_HOLIDAY;
+      }
+    };
+
+    final LocalDate actualDate = LocalDate.of(2020, Month.APRIL, 1);
+    final LocalDate observedDate = LocalDate.of(2020, Month.APRIL, 3);
+
+    final Holiday holiday = new CreateHoliday(actualDate, observedDate, "overriddenPropertiesKey").apply(described);
+
+    assertThat(holiday.getPropertiesKey()).isEqualTo("overriddenPropertiesKey");
+    assertThat(holiday.getDate()).isEqualTo(observedDate);
+  }
 }
