@@ -66,7 +66,9 @@ class IslamicHolidayParserTest {
          "2022-07-10",  // ID_UL_ADHA_2
          "2022-07-11",  // ID_UL_ADHA_3
          "2022-07-17",   // ID_AL_GHADIR
-         "2022-09-14"   // GRAND_MAGAL_OF_TOUBA
+         "2022-09-14",  // GRAND_MAGAL_OF_TOUBA
+         "2022-09-27",  // QAUMEE_DHUVAS
+         "2022-10-26"   // EMBRACING_OF_ISLAM_DAY
        };
 
        return IntStream.range(0, islamicHolidayTypes.length)

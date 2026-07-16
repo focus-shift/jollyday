@@ -175,6 +175,8 @@
       <xsd:enumeration value="ID_UL_ADHA_3"/>
       <xsd:enumeration value="ID_AL_GHADIR"/>
       <xsd:enumeration value="GRAND_MAGAL_OF_TOUBA"/>
+      <xsd:enumeration value="QAUMEE_DHUVAS"/>
+      <xsd:enumeration value="EMBRACING_OF_ISLAM_DAY"/>
     </xsd:restriction>
   </xsd:simpleType>
 

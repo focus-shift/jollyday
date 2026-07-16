@@ -1073,7 +1073,7 @@
     <path d="M634.2 386l-0.4-0.1 0.2-0.3 0.3-0.1-0.1 0.5z" name="Saint-Martin">
     </path>
   </g>
-  <g class="country" data-iso="MV">
+  <g class="country active" data-iso="MV">
     <title>Maldives</title>
     <path d="M1402.9 474.8l0 0.2-0.2-0.1 0.2-0.2 0 0.1z" name="Maldives">
     </path>

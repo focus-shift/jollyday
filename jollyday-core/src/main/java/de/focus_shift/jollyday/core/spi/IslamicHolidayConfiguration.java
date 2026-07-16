@@ -36,7 +36,9 @@ public interface IslamicHolidayConfiguration extends Described, Limited, Movable
     ID_UL_ADHA_2,
     ID_UL_ADHA_3,
     ID_AL_GHADIR,
-    GRAND_MAGAL_OF_TOUBA
+    GRAND_MAGAL_OF_TOUBA,
+    QAUMEE_DHUVAS,
+    EMBRACING_OF_ISLAM_DAY
   }
 
   /**

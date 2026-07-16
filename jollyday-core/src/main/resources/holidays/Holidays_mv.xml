@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="mv" description="Maldives"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <!-- Employment Act (Law No. 2/2008), Section 97, defines "public holiday" as Fridays plus
+         a named list: Mawlid, Day Maldives Embraced Islam, Independence Day, National Day,
+         First Day of Ramadan, Eid-ul-Fitr, Victory Day, Republic Day, Hajj Day and
+         Eid-ul-Adha. New Year's Day and Islamic New Year below are NOT in that statutory
+         list but are universally observed as government/bank closures in practice - included
+         here as they are non-working days nationwide, not because the statute names them.
+
+         No weekend-substitution rule exists anywhere in the Act, nor in any other regulation
+         found: when a named holiday coincides with the Friday/Saturday weekend, the
+         President's Office instead issues one-off "Government Holiday" proclamations on a
+         case-by-case basis (e.g. Republic Day 2024, Independence Day 2022/2025) - an
+         unpredictable annual decision, not an algorithmic rule, so no MovingCondition is
+         encoded here. -->
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+
+    <!-- Not in Employment Act Section 97 (as of the 8th Amendment); added by the 9th
+         Amendment (ratified 14 March 2026), but already observed as a government/bank
+         closure well before that. -->
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+
+    <!-- Independence Day: statute names a single day without a count; 26-27 July is the
+         standing 2-day practice. Some years get further ad hoc extension by presidential
+         decree (e.g. 26-30 July 2022, 26-28 July 2025) which is not modelled here. -->
+    <Fixed month="JULY" day="26" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <Fixed month="JULY" day="27" descriptionPropertiesKey="INDEPENDENCE_DAY_2"/>
+
+    <!-- Commemorates the failure of the 3 November 1988 coup attempt. -->
+    <Fixed month="NOVEMBER" day="3" descriptionPropertiesKey="VICTORY_DAY"/>
+
+    <!-- Commemorates the founding of the Second Republic on 11 November 1968. -->
+    <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="REPUBLIC_DAY"/>
+
+    <!-- Not in Employment Act Section 97; observed as a government/bank closure in practice
+         but has no statutory basis. -->
+    <IslamicHoliday type="NEWYEAR"/>
+
+    <!-- National Day (Qaumee Dhuvas), 1 Rabi al-Awwal: commemorates Muhammad Thakurufaanu's
+         1573 victory over the Portuguese occupation. Statutory (Employment Act s.97). -->
+    <IslamicHoliday type="QAUMEE_DHUVAS"/>
+
+    <!-- Mawlid, 12 Rabi al-Awwal: the Prophet Muhammad's birthday. Statutory. -->
+    <IslamicHoliday type="MAWLID_AN_NABI"/>
+
+    <!-- The Day Maldives Embraced Islam, 1 Rabi al-Thani. Statutory. -->
+    <IslamicHoliday type="EMBRACING_OF_ISLAM_DAY"/>
+
+    <!-- First Day of Ramadan, 1 Ramadan: statutory as a full day off; the remainder of the
+         month is shortened working hours only (not modelled as a holiday here). Since 2024
+         the government has additionally closed for the last ten days of Ramadan by annual
+         directive (e.g. Directive 02/2024) - a recent, non-statutory practice not encoded
+         here as it is not guaranteed to recur in the same form every year. -->
+    <IslamicHoliday type="RAMADAN"/>
+
+    <!-- Eid-ul-Fitr (Kuda Eid): statute guarantees 1 day (1 Shawwal); 3 days (1-3 Shawwal) is
+         the long-standing administrative convention, occasionally extended further by
+         decree depending on the confirmed start of Shawwal. -->
+    <IslamicHoliday type="ID_AL_FITR"/>
+    <IslamicHoliday type="ID_AL_FITR_2"/>
+    <IslamicHoliday type="ID_AL_FITR_3"/>
+
+    <!-- Hajj Day / Day of Arafat, 9 Dhu al-Hijjah. Statutory. -->
+    <IslamicHoliday type="ARAFAAT"/>
+
+    <!-- Eid-ul-Adha (Bodu Eid): statute guarantees Hajj Day plus 1 Eid day (10 Dhu al-Hijjah);
+         4 consecutive days (Arafat + 10-12 Dhu al-Hijjah) is the common administrative
+         convention, though actual practice has ranged from no extension at all (2026) to 6
+         continuous days (2024) depending on annual presidential decree. -->
+    <IslamicHoliday type="ID_UL_ADHA"/>
+    <IslamicHoliday type="ID_UL_ADHA_2"/>
+    <IslamicHoliday type="ID_UL_ADHA_3"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_the_Maldives</Source>
+    <Source of="Employment Act (Law No. 2/2008), Section 97 - statutory public holiday list">https://lra.gov.mv/wp-content/uploads/2020/07/Employment-Act-Unofficial-English-Translation.pdf</Source>
+    <Source of="National Day (Qaumee Dhuvas)">https://en.wikipedia.org/wiki/National_Day_(Maldives)</Source>
+    <Source of="No codified weekend-substitution rule; ad hoc decrees only, e.g. Republic Day 2024">https://atolltimes.mv/post/news/10190</Source>
+    <Source of="Independence Day extension example, 2025">https://atolltimes.mv/post/news/12711</Source>
+    <Source of="Independence Day extension example, 2022">https://presidency.gov.mv/Press/Article/26954</Source>
+    <Source of="9th Amendment to the Employment Act adding Labour Day, March 2026">https://presidency.gov.mv/Press/Article/36329</Source>
+    <Source of="2026 holiday dates and weekend structure">https://www.officeholidays.com/countries/maldives/2026</Source>
+    <Source of="2023-2026 holiday dates">https://www.qppstudio.net/public-holidays/maldives.htm</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:MV</Source>
+  </Sources>
+</Configuration>
