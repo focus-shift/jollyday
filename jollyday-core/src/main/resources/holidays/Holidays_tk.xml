@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="tk" description="Tokelau"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <!-- Interpretation Rules 2003, rule 2: "holiday" means Sunday, Christmas Day, Boxing Day,
+         New Year's Day, Good Friday, Easter Monday, Tokehega Day, and any day declared by a
+         village to be a public holiday - unchanged in the rules as consolidated to 2016, the
+         most recent reprint available. Sunday and village-declared days are not modelled here:
+         Sunday recurs weekly rather than being a "public holiday" in the sense this library
+         tracks, and village declarations have no fixed date - it is chosen locally each time.
+         Wikipedia's "Public holidays in Tokelau" article additionally lists Mother's Day,
+         Father's Day and White Sunday as if they were part of this same statutory definition;
+         they are not present in either the original 2003 text or the 2016 consolidation, so
+         they are deliberately left out pending a citable primary source. -->
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <!-- Tokehega Day: the Treaty of Tokehega, settling sovereignty over Tokelau's three atolls
+         between New Zealand and the United States, came into effect on 3 September 1983. -->
+    <Fixed month="SEPTEMBER" day="3" descriptionPropertiesKey="TOKEHEGA_DAY"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY"/>
+
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Tokelau</Source>
+    <Source of="Interpretation Rules 2003, rule 2 (as consolidated to 2016)">https://www.paclii.org/tk/legis/consol_act_2016/ir2003240.rtf</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:TK</Source>
+  </Sources>
+</Configuration>
