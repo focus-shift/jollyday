@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- No public holidays are modelled: the French Southern and Antarctic Lands have no
+     permanent population, only 150-310 rotating military, scientific and support staff at
+     any time, no local legislature, and no citable public-holiday list of any kind (checked
+     taaf.fr, the French overseas ministry, and a 2022 Cour des comptes report on the
+     territory - none exists). See https://github.com/focus-shift/jollyday/issues/1392. -->
+<Configuration hierarchy="tf" description="French Southern and Antarctic Lands"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays/>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/French_Southern_and_Antarctic_Lands</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:TF</Source>
+  </Sources>
+</Configuration>
