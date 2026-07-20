@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="nu" description="Niue"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+    <Fixed month="JANUARY" day="2" descriptionPropertiesKey="TAKAI_COMMISSION_HOLIDAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+    <Fixed month="APRIL" day="25" descriptionPropertiesKey="ANZAC">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="OCTOBER" day="19" validFrom="1974" descriptionPropertiesKey="CONSTITUTION_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+    <Fixed month="OCTOBER" day="20" validFrom="1974" descriptionPropertiesKey="CONSTITUTION_DAY_HOLIDAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+
+    <FixedWeekday which="THIRD" weekday="MONDAY" month="OCTOBER" validTo="1973" descriptionPropertiesKey="ANNEXATION_DAY"/>
+    <FixedWeekday which="FOURTH" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="PENIAMINA_GOSPEL_DAY"/>
+    <FixedWeekday which="FIRST" weekday="MONDAY" month="JUNE" validTo="2022" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
+    <FixedWeekday which="FIRST" weekday="MONDAY" month="JUNE" validFrom="2023" descriptionPropertiesKey="KINGS_BIRTHDAY"/>
+
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Niue</Source>
+    <Source>https://web.archive.org/web/20250102100637/http://www.paclii.org/nu/legis/num_act/nipho1961314.pdf</Source>
+    <Source>https://www.gov.nu/media/pages/public-service-circulars/b3ee130f10-1764012470/public-service-circular-constitution-holidays-and-peniamina-day-2025.pdf</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:NU</Source>
+  </Sources>
+</Configuration>
