@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="pn" description="Pitcairn Islands"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <!-- Per the Government of the Pitcairn Islands' "Public Holidays & Commemoration Days" policy
+         (last reviewed 19 June 2024). The policy separately lists ANZAC Day (25 April) and
+         Remembrance Day (11 November) as "Commemoration Days", distinct from "Public Holidays",
+         so they are not modelled here. The policy contains no weekend-substitution rule. -->
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <!-- Bounty Day: commemorates the burning of HMS Bounty in Bounty Bay on 23 January 1790 by
+         the Bounty mutineers who settled Pitcairn. -->
+    <Fixed month="JANUARY" day="23" descriptionPropertiesKey="BOUNTY_DAY"/>
+    <!-- Pitcairn Day: commemorates the island's discovery on 2 July 1767 by the crew of HMS Swallow. -->
+    <Fixed month="JULY" day="2" descriptionPropertiesKey="PITCAIRN_DAY"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY"/>
+
+    <FixedWeekday which="FIRST" weekday="MONDAY" month="JUNE" descriptionPropertiesKey="KINGS_BIRTHDAY"/>
+
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_the_Pitcairn_Islands</Source>
+    <Source of="Government of the Pitcairn Islands - Public Holidays &amp; Commemoration Days policy (June 2024)">https://www.government.pn/s/GPI_Policy_Public_Holidays__Commemoration_Days_June_2024.pdf</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:PN</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:PN</Source>
+  </Sources>
+</Configuration>
