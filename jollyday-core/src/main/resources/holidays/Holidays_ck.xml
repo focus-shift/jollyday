@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="ck" description="Cook Islands"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+    <Fixed month="JANUARY" day="2" descriptionPropertiesKey="DAY_AFTER_NEW_YEAR">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+    <Fixed month="APRIL" day="25" descriptionPropertiesKey="ANZAC"/>
+    <Fixed month="JUNE" day="6" validFrom="2012" validTo="2012" descriptionPropertiesKey="RA_O_TE_UI_ARIKI"/>
+    <Fixed month="AUGUST" day="4" descriptionPropertiesKey="CONSTITUTION_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="OCTOBER" day="26" descriptionPropertiesKey="GOSPEL_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+
+    <FixedWeekday which="FIRST" weekday="MONDAY" month="JUNE" validTo="2022" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
+    <FixedWeekday which="FIRST" weekday="MONDAY" month="JUNE" validFrom="2023" descriptionPropertiesKey="KINGS_BIRTHDAY"/>
+    <FixedWeekday which="FIRST" weekday="FRIDAY" month="JULY" validFrom="2013" descriptionPropertiesKey="RA_O_TE_UI_ARIKI"/>
+
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_the_Cook_Islands</Source>
+    <Source>https://www.intaff.gov.ck/wp-content/uploads/2020/07/Public-Holidays-20140501.pdf</Source>
+    <Source>https://parliament.gov.ck/wp-content/uploads/2022/05/Public-Holidays-Amdt-No.-17.pdf</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:CK</Source>
+  </Sources>
+</Configuration>
