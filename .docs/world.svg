@@ -1976,7 +1976,7 @@
     <path d="M 9.8 557 9.8 556.9 9.8 556.8 9.8 556.9 9.9 556.9 9.9 557 9.8 557.1 9.8 557.1 Z">
     </path>
   </g>
-  <g class="country" data-iso="UM">
+  <g class="country active" data-iso="UM">
     <title>United States Minor Outlying Islands</title>
     <path d="M 32.2 394 32.2 394 32.3 394 32.2 394 32.2 394 32.2 394 32.1 394 32.1 394 32.2 394 Z">
     </path>
