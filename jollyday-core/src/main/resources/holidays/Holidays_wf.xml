@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="wf" description="Wallis and Futuna"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <!-- Code du travail applicable à Wallis-et-Futuna, Art. 120 bis: only 1 May is statutorily
+         "jour férié et chômé". The remaining days are the yearly Préfet's arrêté "fixant les
+         jours fériés, chômés et payés" (e.g. arrêté n° 2022-1071 du 28 décembre 2022 for 2023),
+         which lists the same 11 national days plus 3 local "fêtes locales" every year and shows
+         no substitution when a date falls on a weekend (1 January 2023 fell on a Sunday and
+         11 November 2023 on a Saturday, both listed on their calendar date with no alternate
+         day) - same practice as mainland France and the other French overseas collectivities. -->
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <!-- Saint Pierre-Chanel: commemorates the 1841 martyrdom of Saint Pierre Chanel, patron
+         saint of Oceania and of Futuna. -->
+    <Fixed month="APRIL" day="28" descriptionPropertiesKey="SAINT_PIERRE_CHANEL"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="MAY" day="8" descriptionPropertiesKey="VICTORY_DAY"/>
+    <Fixed month="JUNE" day="29" descriptionPropertiesKey="ST_PETER_PAUL"/>
+    <Fixed month="JULY" day="14" descriptionPropertiesKey="NATIONAL_DAY"/>
+    <!-- Fête du Territoire: commemorates the 29 July 1961 vote establishing Wallis and Futuna
+         as a French overseas territory. -->
+    <Fixed month="JULY" day="29" descriptionPropertiesKey="TERRITORY_DAY"/>
+    <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_MARY"/>
+    <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
+    <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="ARMISTICE"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+
+    <ChristianHoliday type="EASTER_MONDAY"/>
+    <ChristianHoliday type="ASCENSION_DAY"/>
+    <ChristianHoliday type="WHIT_MONDAY"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Wallis_and_Futuna</Source>
+    <Source of="Code du travail applicable à Wallis-et-Futuna, Art. 120 bis">https://www.wallis-et-futuna.gouv.fr/Publications/Publications-administratives/Reglementation-du-Travail/Code-du-Travail-applicable-a-WF</Source>
+    <Source of="Arrêté n° 2022-1071 du 28 décembre 2022 fixant les jours fériés, chômés et payés au cours de l'année 2023">https://www.wallis-et-futuna.gouv.fr/Actualites/Presentation-de-Wallis-et-Futuna/Calendrier-des-ponts-et-jours-feries/2023</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:WF</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:WF</Source>
+  </Sources>
+</Configuration>
