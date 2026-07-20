@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="hm" description="Heard Island and McDonald Islands"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <!--
+    Heard Island and McDonald Islands are uninhabited and managed as a strict nature
+    reserve by the Australian Antarctic Division. There is no permanent population or
+    local government and therefore no official public holidays.
+    -->
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Heard_Island_and_McDonald_Islands</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:HM</Source>
+  </Sources>
+</Configuration>
