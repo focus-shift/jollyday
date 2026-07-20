@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="um" description="United States Minor Outlying Islands"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <!--
+    None of the islands have permanent residents, only temporarily posted military,
+    U.S. Fish and Wildlife Service, and research staff. There is no local government
+    and therefore no official public holidays.
+    -->
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/United_States_Minor_Outlying_Islands</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:UM</Source>
+  </Sources>
+</Configuration>
