@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="ki" description="Kiribati"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <!-- Public holidays are appointed under the Public Holidays Ordinance (Cap. 81) (originally the
+         Public Holidays Act 2002); the actual observed date each year is published by the Public
+         Service Office (PSO) in an annual notice/gazette and does NOT follow one single fixed
+         weekend-substitution formula - different holidays, and even the same holiday in different
+         years, have been observed with a forward shift to the following Monday, a backward shift to
+         the preceding Friday, or (for the National Day cluster in July) a cascading shift of several
+         days to avoid clashing with an adjacent holiday. This has been verified from three
+         primary-source PSO yearly notices (2022, 2025, 2026; see Sources). Confirmed years are
+         modeled explicitly below; the nominal/legislated date (unshifted) is used as the fallback for
+         all other years since no reliable general formula could be confirmed. -->
+
+    <!-- 2022: 1 January (Saturday) observed Monday 3 January. -->
+    <Fixed month="JANUARY" day="1" validTo="2021" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="JANUARY" day="3" validFrom="2022" validTo="2022" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="JANUARY" day="1" validFrom="2023" descriptionPropertiesKey="NEW_YEAR"/>
+
+    <!-- International Women's Day. 2022 (Tuesday) unshifted. 2025: nominal Saturday 8 March observed
+         the PRECEDING Friday 7 March. 2026: nominal Sunday 8 March observed the FOLLOWING Monday 9
+         March. The two confirmed weekend cases shift in opposite directions, confirming there is no
+         single formula. -->
+    <Fixed month="MARCH" day="8" validTo="2024" descriptionPropertiesKey="WOMENS_DAY"/>
+    <Fixed month="MARCH" day="7" validFrom="2025" validTo="2025" descriptionPropertiesKey="WOMENS_DAY"/>
+    <Fixed month="MARCH" day="9" validFrom="2026" validTo="2026" descriptionPropertiesKey="WOMENS_DAY"/>
+    <Fixed month="MARCH" day="8" validFrom="2027" descriptionPropertiesKey="WOMENS_DAY"/>
+
+    <!-- Observed as "World Health Day" on 8 April up to and including 2022; the 2025 and 2026 PSO
+         notices instead show it renamed "National Health Day" and fixed on 7 April (confirmed
+         unshifted in both years). The exact year of the change could not be confirmed, so 2023 (the
+         earliest year not already confirmed as the old holiday) is used as validFrom rather than
+         guessing an earlier year. -->
+    <Fixed month="APRIL" day="8" validTo="2022" descriptionPropertiesKey="WORLD_HEALTH_DAY"/>
+    <Fixed month="APRIL" day="7" validFrom="2023" descriptionPropertiesKey="NATIONAL_HEALTH_DAY"/>
+
+    <!-- International Labour Day. 2022: nominal Sunday 1 May observed following Monday 2 May. 2025:
+         nominal Thursday 1 May observed Friday 2 May (a weekday-to-weekday bridge-day shift, per the
+         primary-source PSO notice - not a weekend substitution). 2026: nominal Friday 1 May
+         unshifted. -->
+    <Fixed month="MAY" day="1" validTo="2021" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="MAY" day="2" validFrom="2022" validTo="2022" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="MAY" day="1" validFrom="2023" validTo="2024" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="MAY" day="2" validFrom="2025" validTo="2025" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="MAY" day="1" validFrom="2026" descriptionPropertiesKey="LABOUR_DAY"/>
+
+    <!-- National Police Day does not appear in the 2022 PSO notice at all, so it is modeled from 2025
+         (the earliest year it is directly confirmed) rather than guessing when it was introduced.
+         Nominal date is 20 June per Wikipedia; both confirmed years were in fact observed on the
+         Monday on/after 20 June (2025: Friday 20 June observed Monday 23 June; 2026: Saturday 20 June
+         observed Monday 22 June) - only these two confirmed years are modeled explicitly, the nominal
+         date is left unshifted as the fallback since no reliable general formula could be confirmed. -->
+    <Fixed month="JUNE" day="23" validFrom="2025" validTo="2025" descriptionPropertiesKey="POLICE_DAY"/>
+    <Fixed month="JUNE" day="22" validFrom="2026" validTo="2026" descriptionPropertiesKey="POLICE_DAY"/>
+    <Fixed month="JUNE" day="20" validFrom="2027" descriptionPropertiesKey="POLICE_DAY"/>
+
+    <!-- The four-day cluster around National Day (Kiribati's independence from the UK on 12 July
+         1979): Gospel Day, National Culture and Senior Citizens Day, National Day itself, and Kiribati
+         Special Day. Nominal dates are 10/11/12/13 July. When National Day (12 July) falls on a
+         weekend it is shifted to the following Monday, and Gospel Day, National Culture and Senior
+         Citizens Day and/or Kiribati Special Day are then cascaded forward or backward as needed so no
+         two of the four holidays land on the same day - the cascade is NOT a fixed formula, it is
+         re-decided (and re-gazetted) each year, so only the years directly confirmed from a
+         primary-source PSO notice are modeled explicitly. -->
+
+    <!-- Gospel Day: nominal Sunday in 2022 observed the PRECEDING Friday 8 July (so as to stay ahead
+         of the rest of the cluster); nominal weekday in 2025/2026, unshifted. -->
+    <Fixed month="JULY" day="10" validTo="2021" descriptionPropertiesKey="GOSPEL_DAY"/>
+    <Fixed month="JULY" day="8" validFrom="2022" validTo="2022" descriptionPropertiesKey="GOSPEL_DAY"/>
+    <Fixed month="JULY" day="10" validFrom="2023" descriptionPropertiesKey="GOSPEL_DAY"/>
+
+    <!-- National Culture and Senior Citizens Day (renamed "Kiribati Culture and Senior Citizens Day"
+         in the 2026 notice): nominal Monday/Friday in 2022/2025, unshifted. In 2026 its nominal
+         Saturday 11 July was cascaded to Tuesday 14 July, since Monday 13 July was already taken by
+         National Day's own shift that year. -->
+    <Fixed month="JULY" day="11" validTo="2025" descriptionPropertiesKey="NATIONAL_CULTURE_AND_SENIOR_CITIZENS_DAY"/>
+    <Fixed month="JULY" day="14" validFrom="2026" validTo="2026" descriptionPropertiesKey="NATIONAL_CULTURE_AND_SENIOR_CITIZENS_DAY"/>
+    <Fixed month="JULY" day="11" validFrom="2027" descriptionPropertiesKey="NATIONAL_CULTURE_AND_SENIOR_CITIZENS_DAY"/>
+
+    <!-- National Day (Independence Day), 12 July 1979. 2022: nominal Tuesday, unshifted. 2025: nominal
+         Saturday observed following Monday 14 July. 2026: nominal Sunday observed following Monday 13
+         July. -->
+    <Fixed month="JULY" day="12" validTo="2024" descriptionPropertiesKey="NATIONAL_DAY"/>
+    <Fixed month="JULY" day="14" validFrom="2025" validTo="2025" descriptionPropertiesKey="NATIONAL_DAY"/>
+    <Fixed month="JULY" day="13" validFrom="2026" validTo="2026" descriptionPropertiesKey="NATIONAL_DAY"/>
+    <Fixed month="JULY" day="12" validFrom="2027" descriptionPropertiesKey="NATIONAL_DAY"/>
+
+    <!-- Kiribati Special Day: nominal Wednesday in 2022, unshifted. In 2025 and 2026 its own nominal
+         date (Sunday 13 July / Monday 13 July respectively) collided with National Day's shifted date,
+         so it cascaded one or two further days to Tuesday 15 July (2025) and Wednesday 15 July
+         (2026). -->
+    <Fixed month="JULY" day="13" validTo="2024" descriptionPropertiesKey="SPECIAL_DAY"/>
+    <Fixed month="JULY" day="15" validFrom="2025" validTo="2026" descriptionPropertiesKey="SPECIAL_DAY"/>
+    <Fixed month="JULY" day="13" validFrom="2027" descriptionPropertiesKey="SPECIAL_DAY"/>
+
+    <!-- National Youth and Children's Day: fixed on 1 August from 2023 (see the FixedWeekday element
+         below for the older "first Friday of August" rule confirmed only for 2022). The 2025 and 2026
+         notices show it fixed on 1 August with a forward shift to Monday when 1 August falls on a
+         weekend (2025: Friday 1 August unshifted; 2026: Saturday 1 August observed Monday 3 August). -->
+    <Fixed month="AUGUST" day="1" validFrom="2023" validTo="2025" descriptionPropertiesKey="NATIONAL_YOUTH_AND_CHILDRENS_DAY"/>
+    <Fixed month="AUGUST" day="3" validFrom="2026" validTo="2026" descriptionPropertiesKey="NATIONAL_YOUTH_AND_CHILDRENS_DAY"/>
+    <Fixed month="AUGUST" day="1" validFrom="2027" descriptionPropertiesKey="NATIONAL_YOUTH_AND_CHILDRENS_DAY"/>
+
+    <!-- World Teachers' Day. 2022: nominal Wednesday, unshifted. 2025: nominal Sunday observed
+         following Monday 6 October. 2026: nominal Monday, unshifted. -->
+    <Fixed month="OCTOBER" day="5" validTo="2024" descriptionPropertiesKey="WORLD_TEACHERS_DAY"/>
+    <Fixed month="OCTOBER" day="6" validFrom="2025" validTo="2025" descriptionPropertiesKey="WORLD_TEACHERS_DAY"/>
+    <Fixed month="OCTOBER" day="5" validFrom="2026" descriptionPropertiesKey="WORLD_TEACHERS_DAY"/>
+
+    <!-- Human Rights Day (Wikipedia: "Human Rights and Peace Day"; the PSO notices consistently just
+         say "Human Rights Day"). 2022/2025: nominal weekday, unshifted. 2026: nominal Saturday 12
+         December observed the PRECEDING Friday 11 December. -->
+    <Fixed month="DECEMBER" day="12" validTo="2025" descriptionPropertiesKey="HUMAN_RIGHTS"/>
+    <Fixed month="DECEMBER" day="11" validFrom="2026" validTo="2026" descriptionPropertiesKey="HUMAN_RIGHTS"/>
+    <Fixed month="DECEMBER" day="12" validFrom="2027" descriptionPropertiesKey="HUMAN_RIGHTS"/>
+
+    <!-- Christmas Day. 2022: nominal Sunday observed following Monday 26 December (Boxing Day then
+         cascades to 27 December, see below). 2025/2026: nominal weekday, unshifted. -->
+    <Fixed month="DECEMBER" day="25" validTo="2021" descriptionPropertiesKey="CHRISTMAS"/>
+    <Fixed month="DECEMBER" day="26" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS"/>
+    <Fixed month="DECEMBER" day="25" validFrom="2023" descriptionPropertiesKey="CHRISTMAS"/>
+
+    <!-- Boxing Day (Gift Day). 2022: nominal Monday 26 December collided with Christmas Day's own
+         shift onto that date, so it cascaded to Tuesday 27 December. 2025: nominal weekday, unshifted.
+         2026: nominal Saturday observed following Monday 28 December. -->
+    <Fixed month="DECEMBER" day="26" validTo="2021" descriptionPropertiesKey="BOXING_DAY"/>
+    <Fixed month="DECEMBER" day="27" validFrom="2022" validTo="2022" descriptionPropertiesKey="BOXING_DAY"/>
+    <Fixed month="DECEMBER" day="26" validFrom="2023" validTo="2025" descriptionPropertiesKey="BOXING_DAY"/>
+    <Fixed month="DECEMBER" day="28" validFrom="2026" validTo="2026" descriptionPropertiesKey="BOXING_DAY"/>
+    <Fixed month="DECEMBER" day="26" validFrom="2027" descriptionPropertiesKey="BOXING_DAY"/>
+
+    <!-- National Youth and Children's Day, old rule: the 2022 PSO notice observed it on Friday
+         5 August, which matches "first Friday of August" (1 August 2022 was a Monday). Only 2022 is
+         confirmed to follow this rule, so 2023 (the earliest year not already confirmed as following
+         it) is used as the changeover point to the fixed-1-August rule above, rather than guessing an
+         earlier year. -->
+    <FixedWeekday which="FIRST" weekday="FRIDAY" month="AUGUST" validTo="2022" descriptionPropertiesKey="NATIONAL_YOUTH_AND_CHILDRENS_DAY"/>
+
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Kiribati</Source>
+    <Source of="Public Holidays Act 2002 / Public Holidays Ordinance (Cap. 81)">http://www.paclii.org/ki/legis/num_act/pha2002243/</Source>
+    <Source of="PSO National Public Holidays 2022 notice">https://www.pso.gov.ki/public-holidays/</Source>
+    <Source of="PSO Kiribati National Public Holidays 2025 notice">https://www.pso.gov.ki/kiribati-national-public-holidays-2025/</Source>
+    <Source of="PSO Kiribati National Public Holidays for 2026 notice">https://www.pso.gov.ki/wp-content/uploads/2025/12/Public-Holidays-for-2026.pdf</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:KI</Source>
+  </Sources>
+</Configuration>
