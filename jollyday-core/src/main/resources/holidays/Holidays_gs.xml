@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="gs" description="South Georgia and the South Sandwich Islands"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <!-- South Georgia and the South Sandwich Islands (SGSSI) has no permanent population; a small
+         non-permanent government/BAS/fisheries staff resides on South Georgia. Public holidays are
+         appointed year by year under section 73 of the Interpretation and General Clauses Ordinance
+         1977 ("The Governor in Council may from time to time, by notice in the Gazette, appoint any
+         day to be a public holiday.") - there is no statutory weekend-substitution formula. Each
+         year's exact dates (including any "in lieu of" substitutions) are confirmed below from the
+         primary-source SGSSI Gazette notices for 2023-2026; see Sources. -->
+
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- Commemorates Captain Cook's landing and taking possession of South Georgia for Britain
+         on 17 January 1775. -->
+    <Fixed month="JANUARY" day="17" descriptionPropertiesKey="POSSESSION_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- One-off UK-wide public holiday for the coronation of King Charles III, also observed in
+         SGSSI (Gazette Public Holidays 2023 notice, 25 April 2023). -->
+    <Fixed month="MAY" day="8" validFrom="2023" validTo="2023" descriptionPropertiesKey="KINGS_CORONATION"/>
+
+    <!-- Commemorates the anniversary of Sir Ernest Shackleton's death and burial on South Georgia
+         in 1922. This holiday does not follow a simple weekend-substitution rule: the confirmed 2023
+         instance (Saturday 20 May) was moved to the PRECEDING Friday 19 May, not forward to the
+         Monday - the only reliable formula found in the sourced gazettes is "case by case, per the
+         annual notice". No other year in the sourced gazettes (2024-2026) had 20 May fall on a
+         weekend, so the base rule below is left unshifted and only the confirmed 2023 exception is
+         modeled explicitly. -->
+    <Fixed month="MAY" day="20" validTo="2022" descriptionPropertiesKey="SHACKLETON_DAY"/>
+    <Fixed month="MAY" day="19" validFrom="2023" validTo="2023" descriptionPropertiesKey="SHACKLETON_DAY"/>
+    <Fixed month="MAY" day="20" validFrom="2024" descriptionPropertiesKey="SHACKLETON_DAY"/>
+
+    <!-- One-off holiday celebrating King Charles III's birthday, held in SGSSI only in 2023 (Gazette
+         Public Holidays 2023 notice, 25 April 2023); not repeated in the 2024-2026 gazetted lists. -->
+    <Fixed month="NOVEMBER" day="14" validFrom="2023" validTo="2023" descriptionPropertiesKey="KINGS_BIRTHDAY"/>
+
+    <!-- Marks the liberation of South Georgia from the Argentine occupying force during the
+         Falklands War on 25 April 1982. -->
+    <Fixed month="APRIL" day="25" descriptionPropertiesKey="LIBERATION_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- Marks the winter solstice in the southern hemisphere (21 June). Like Shackleton Day, this
+         does not follow a simple weekend-substitution rule: the confirmed 2025 instance (Saturday 21
+         June) was moved to the PRECEDING Friday 20 June, while the confirmed 2026 instance (Sunday 21
+         June) was moved FORWARD to Monday 22 June. Both confirmed exceptions are modeled explicitly;
+         the base rule is left unshifted for all other years since no reliable general formula could
+         be confirmed. -->
+    <Fixed month="JUNE" day="21" validTo="2024" descriptionPropertiesKey="MID_WINTER_DAY"/>
+    <Fixed month="JUNE" day="20" validFrom="2025" validTo="2025" descriptionPropertiesKey="MID_WINTER_DAY"/>
+    <Fixed month="JUNE" day="22" validFrom="2026" validTo="2026" descriptionPropertiesKey="MID_WINTER_DAY"/>
+    <Fixed month="JUNE" day="21" validFrom="2027" descriptionPropertiesKey="MID_WINTER_DAY"/>
+
+    <!-- Replaced Toothfish Day (4 September, marking the end of the toothfish fishing season - see
+         Wikipedia and MercoPress) in the gazetted lists by 2023 at the latest; the exact year of the
+         change could not be confirmed from a primary source, so 2023 (the earliest year directly
+         confirmed via a SGSSI Gazette) is used as validFrom rather than guessing. Toothfish Day
+         itself is NOT modeled here since no primary-source gazette confirming its exact historical
+         dates/years could be found - only secondary sources (Wikipedia, MercoPress), which is not
+         sufficient to encode as fact. 30 October has not fallen on a weekend in any confirmed year
+         (2023-2026), so no substitution behaviour is documented for it either way. -->
+    <Fixed month="OCTOBER" day="30" validFrom="2023" descriptionPropertiesKey="ENVIRONMENT_DAY"/>
+
+    <!-- 25 December has not fallen on a weekend in any of the confirmed gazette years (2023-2026),
+         so no substitution rule could be confirmed either way; left unshifted. -->
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+
+    <!-- The confirmed 2026 instance (Saturday 26 December) was moved forward to Monday 28 December,
+         consistent with the other "shift forward to Monday" holidays above (New Year's/Possession/
+         Liberation Day); the Sunday case has not been directly observed but is assumed to follow the
+         same forward-shifting pattern. -->
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/South_Georgia_and_the_South_Sandwich_Islands</Source>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_South_Georgia_and_the_South_Sandwich_Islands</Source>
+    <Source of="Interpretation and General Clauses Ordinance 1977, section 73">https://laws.gov.gs/wp-content/uploads/2022/06/1977-14-Interpretation-and-General-Clauses-Ordinance-1977.pdf</Source>
+    <Source of="SGSSI Gazette Public Holidays 2023 notice (25 April 2023)">https://laws.gov.gs/wp-content/uploads/2025/10/2024-SG-Gazettes.pdf</Source>
+    <Source of="SGSSI Gazette No. 1, Public Holidays 2024 notice (9 January 2024)">https://laws.gov.gs/wp-content/uploads/2025/10/2024-SG-Gazettes.pdf</Source>
+    <Source of="SGSSI Gazette No. 1, Public Holidays 2025 notice (16 January 2025)">https://laws.gov.gs/wp-content/uploads/2025/01/SGSSI-Gazette-No-1-dated-30-January-2025.pdf</Source>
+    <Source of="SGSSI Gazette No. 1, Public Holidays 2026 notice (23 January 2026)">https://laws.gov.gs/wp-content/uploads/2026/01/SGSSI-Gazette-No-1-dated-27-January-2026.pdf</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:GS</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:GS</Source>
+  </Sources>
+</Configuration>
