@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="sh" description="Saint Helena, Ascension and Tristan da Cunha"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="TUESDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY"/>
+
+    <FixedWeekday which="SECOND" weekday="MONDAY" month="JUNE" validTo="2022" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
+
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY"/>
+    <ChristianHoliday type="WHIT_MONDAY"/>
+
+    <FixedWeekdayRelativeToFixed which="FIRST" weekday="FRIDAY" when="CLOSEST" validFrom="2023" descriptionPropertiesKey="KINGS_BIRTHDAY">
+      <day month="NOVEMBER" day="14"/>
+    </FixedWeekdayRelativeToFixed>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Saint_Helena,_Ascension_and_Tristan_da_Cunha</Source>
+    <Source>https://www.sainthelena.gov.sh/documents/Public-Holidays-Ordinance.pdf</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:SH</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:SH</Source>
+  </Sources>
+
+  <SubConfigurations hierarchy="hl" description="Saint Helena">
+    <Holidays>
+      <Fixed month="MAY" day="21" descriptionPropertiesKey="ST_HELENA_DAY"/>
+      <FixedWeekday which="LAST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="AUGUST_BANK_HOLIDAY"/>
+    </Holidays>
+
+    <Sources>
+      <Source>https://www.sainthelena.gov.sh/app/uploads/2025/11/Public-Notice-Public-Holidays-2026.pdf</Source>
+    </Sources>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ac" description="Ascension Island">
+    <Holidays>
+      <FixedWeekday which="LAST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="AUGUST_BANK_HOLIDAY"/>
+      <ChristianHoliday type="ASCENSION_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ta" description="Tristan da Cunha">
+    <Holidays>
+      <Fixed month="AUGUST" day="14" descriptionPropertiesKey="ANNIVERSARY_DAY"/>
+      <ChristianHoliday type="ASCENSION_DAY"/>
+    </Holidays>
+  </SubConfigurations>
+</Configuration>
