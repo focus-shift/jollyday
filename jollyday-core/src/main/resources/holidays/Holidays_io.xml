@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="io" description="British Indian Ocean Territory"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <!--
+    The British Indian Ocean Territory has no permanent civilian population, only around
+    2,000 military personnel and contractors stationed on Diego Garcia. It has no
+    legislature and therefore no official public holidays.
+    -->
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/British_Indian_Ocean_Territory</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:IO</Source>
+  </Sources>
+</Configuration>
