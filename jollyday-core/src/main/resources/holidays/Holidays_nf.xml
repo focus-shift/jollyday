@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="nf" description="Norfolk Island"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <!-- Norfolk Island has applied the laws of New South Wales since 1 July 2018, and its national
+         public holidays (as opposed to the four Norfolk Island specific holidays below) coincide with
+         those observed in NSW, including NSW's weekend-substitution practice. -->
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="JANUARY" day="26" descriptionPropertiesKey="NATIONAL_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <!-- Foundation Day: commemorates the arrival of the first British settlers on 6 March 1788.
+         No documented weekend-substitution rule was found for this Norfolk Island specific holiday;
+         it is modelled here the same as Bounty Day below, on the basis that both are administered
+         identically by the Norfolk Island Regional Council. -->
+    <Fixed month="MARCH" day="6" descriptionPropertiesKey="FOUNDATION">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="APRIL" day="25" descriptionPropertiesKey="ANZAC">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <!-- Bounty Day (Anniversary Day): commemorates the arrival of the Pitcairn Islanders on
+         8 June 1856. Confirmed Saturday/Sunday to Monday substitution in both 2024 and 2025. -->
+    <Fixed month="JUNE" day="8" descriptionPropertiesKey="BOUNTY_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+      <MovingCondition substitute="MONDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+
+    <FixedWeekday which="SECOND" weekday="MONDAY" month="JUNE" descriptionPropertiesKey="KINGS_BIRTHDAY"/>
+    <!-- Norfolk Island Agricultural Show Day. -->
+    <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="AGRICULTURAL_SHOW"/>
+    <!-- Thanksgiving Day: Wikipedia states the "fourth Wednesday in November", but this is incorrect -
+         e.g. 2023's Thanksgiving Day fell on 29 November, the fifth Wednesday of that month. The
+         correct rule, confirmed against several years of gazetted dates, is the last Wednesday in
+         November. -->
+    <FixedWeekday which="LAST" weekday="WEDNESDAY" month="NOVEMBER" descriptionPropertiesKey="THANKSGIVING"/>
+
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Norfolk_Island</Source>
+    <Source>https://www.norfolkisland.com.au/events/event/51-anniversary-bounty-day-public-holiday</Source>
+    <Source>https://www.norfolkonlinenews.com/article/anniversary-day-weekend-norfolk-island--bounty-day-2025</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:NF</Source>
+  </Sources>
+</Configuration>
