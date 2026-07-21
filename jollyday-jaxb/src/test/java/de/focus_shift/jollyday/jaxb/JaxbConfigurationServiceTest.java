@@ -30,7 +30,7 @@ class JaxbConfigurationServiceTest {
     final URL url = mock(URL.class);
     when(parameter.createResourceUrl()).thenReturn(url);
     // Provide a minimal valid XML for unmarshalling with correct namespace
-    final String xml = "<Configuration xmlns=\"https://focus_shift.de/jollyday/schema/holiday\"></Configuration>";
+    final String xml = "<Configuration xmlns=\"https://focus_shift.de/jollyday/schema/holiday\"><Holidays/></Configuration>";
     final InputStream stream = new ByteArrayInputStream(xml.getBytes());
     when(url.openStream()).thenReturn(stream);
 
