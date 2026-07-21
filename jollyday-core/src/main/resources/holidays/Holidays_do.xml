@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="do" description="Dominican Republic"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+
+    <Fixed month="JANUARY" day="6" descriptionPropertiesKey="EPIPHANY">
+      <MovingCondition substitute="TUESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="WEDNESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="THURSDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="FRIDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <Fixed month="JANUARY" day="21" descriptionPropertiesKey="OUR_LADY_OF_ALTAGRACIA"/>
+
+    <Fixed month="JANUARY" day="26" descriptionPropertiesKey="DUARTE">
+      <MovingCondition substitute="TUESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="WEDNESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="THURSDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="FRIDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <Fixed month="FEBRUARY" day="27" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY">
+      <MovingCondition substitute="TUESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="WEDNESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="THURSDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="FRIDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <Fixed month="AUGUST" day="16" descriptionPropertiesKey="RESTORATION_DAY"/>
+
+    <Fixed month="SEPTEMBER" day="24" descriptionPropertiesKey="OUR_LADY_OF_MERCEDES"/>
+
+    <Fixed month="NOVEMBER" day="6" descriptionPropertiesKey="CONSTITUTION_DAY">
+      <MovingCondition substitute="TUESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="WEDNESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="THURSDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="FRIDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="CORPUS_CHRISTI"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_the_Dominican_Republic</Source>
+    <Source of="Ley No. 139-97 amendment (2013)">https://memoriahistorica.senadord.gob.do/bitstreams/e28f658d-8489-4510-bb7e-a5bc788f6d60/download</Source>
+    <Source of="Ministerio de Trabajo - Restoration Day is constitutionally fixed (2023)">https://presidencia.gob.do/noticias/ministerio-de-trabajo-reitera-16-de-agosto-dia-de-la-restauracion-no-se-cambia</Source>
+    <Source of="Presidencia - Epiphany moved to Monday (2026)">https://presidencia.gob.do/noticias/ministerio-de-trabajo-informa-feriado-del-dia-de-los-santos-reyes-se-cambia-para-el-lunes</Source>
+    <Source of="Presidencia - holidays for 2024">https://presidencia.gob.do/noticias/ministerio-de-trabajo-informa-dias-feriados-correspondientes-al-ano-2024</Source>
+    <Source of="Listin Diario - Constitution Day moved to Monday (2025)">https://listindiario.com/la-republica/20251103/ministerio-trabajo-recuerda-feriado-dia-constitucion-sera-10-noviembre_880804.html</Source>
+    <Source of="Diario Libre - Duarte's Day moved to Monday (2024)">https://www.diariolibre.com/economia/empleo/2024/01/25/feriado-por-natalicio-de-duarte-se-mueve-al-lunes-29-de-enero/2587530</Source>
+    <Source of="El Jaya - op-ed on inconsistent application of Ley 139-97 (2017)">https://www.eljaya.com/43101/la-vergonzante-aplicacion-de-la-ley-139-97/</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:DO</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:DO</Source>
+  </Sources>
+
+</Configuration>
