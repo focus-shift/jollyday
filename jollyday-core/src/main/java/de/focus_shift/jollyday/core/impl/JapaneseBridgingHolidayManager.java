@@ -42,7 +42,8 @@ public class JapaneseBridgingHolidayManager extends DefaultHolidayManager {
       }
     }
 
-    holidays.addAll(bridgingHolidays);
-    return holidays;
+    final Set<Holiday> allHolidays = new HashSet<>(holidays);
+    allHolidays.addAll(bridgingHolidays);
+    return Set.copyOf(allHolidays);
   }
 }

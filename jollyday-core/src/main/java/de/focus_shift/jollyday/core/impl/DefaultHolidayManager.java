@@ -109,7 +109,7 @@ public class DefaultHolidayManager extends HolidayManager {
       }
     };
 
-    return holidayCache.get(holidayValueHandler);
+    return Set.copyOf(holidayCache.get(holidayValueHandler));
   }
 
   /**

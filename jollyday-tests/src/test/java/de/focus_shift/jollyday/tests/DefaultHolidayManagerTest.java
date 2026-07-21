@@ -85,6 +85,20 @@ class DefaultHolidayManagerTest {
   }
 
   @Test
+  void ensureGetHolidaysReturnsAnUnmodifiableSetSoCallersCannotCorruptTheSharedCache() {
+    final HolidayManager sut = HolidayManager.getInstance(create("test"));
+    final Year year = Year.of(2010);
+
+    final Set<Holiday> holidays = sut.getHolidays(year);
+    assertThat(holidays).isNotEmpty();
+
+    assertThatThrownBy(holidays::clear).isInstanceOf(UnsupportedOperationException.class);
+
+    // a second call must still see the full, uncorrupted set of holidays
+    assertThat(sut.getHolidays(year)).isEqualTo(holidays);
+  }
+
+  @Test
   void ensureIsHolidayMethodReturnsTrueFalseForCalendarChronology() {
     final HolidayManager sut = HolidayManager.getInstance(create("test"));
 
