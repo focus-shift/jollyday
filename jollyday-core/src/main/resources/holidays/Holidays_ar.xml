@@ -19,7 +19,8 @@
       <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
-    <Fixed month="OCTOBER" day="27" validFrom="2010" validTo="2010"/>
+    <Fixed month="OCTOBER" day="27" validFrom="2010" validTo="2010"
+           descriptionPropertiesKey="NATIONAL_DAY_OF_MOURNING_KIRCHNER" localizedType="OBSERVANCE"/>
     <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
     <Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CHRISTMAS_EVE"/>
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>

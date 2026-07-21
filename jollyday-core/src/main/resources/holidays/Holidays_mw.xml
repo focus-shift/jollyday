@@ -23,7 +23,7 @@
     <Fixed month="JULY" day="6" descriptionPropertiesKey="INDEPENDENCE_DAY">
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
-    <Fixed month="OCTOBER" day="15" descriptionPropertiesKey="MOTHERS">
+    <Fixed month="OCTOBER" day="15" descriptionPropertiesKey="MOTHERS_DAY">
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS">

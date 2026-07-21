@@ -21,7 +21,7 @@ class HolidayGQTest {
       .hasFixedHoliday("NEW_YEAR", JANUARY, 1).canBeMovedFrom(SUNDAY, MONDAY).and()
       .hasFixedHoliday("LABOUR_DAY", MAY, 1).canBeMovedFrom(SUNDAY, MONDAY).and()
       .hasFixedHoliday("PRESIDENTS_DAY", JUNE, 5).canBeMovedFrom(SUNDAY, MONDAY).and()
-      .hasFixedHoliday("FREEDOM_DAY", AUGUST, 3).canBeMovedFrom(SUNDAY, MONDAY).and()
+      .hasFixedHoliday("FREEDOM", AUGUST, 3).canBeMovedFrom(SUNDAY, MONDAY).and()
       .hasFixedHoliday("CONSTITUTION_DAY", AUGUST, 15).canBeMovedFrom(SUNDAY, MONDAY).and()
       .hasFixedHoliday("INDEPENDENCE_DAY", OCTOBER, 12).canBeMovedFrom(SUNDAY, MONDAY).and()
       .hasFixedHoliday("IMMACULATE_CONCEPTION", DECEMBER, 8).canBeMovedFrom(SUNDAY, MONDAY).and()
