@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="cc" description="Cocos (Keeling) Islands"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <!-- Public and Bank Holidays Act 1972 (WA)(CKI), applied to the Territory via s.8A of the Cocos
+         (Keeling) Islands Act 1955. The base Act's Second Schedule fixes New Year's Day, Australia
+         Day, Anzac Day, Christmas Day and Boxing Day with a clear weekend-substitution formula
+         (confirmed directly from the Act text: New Year's/Anzac/Christmas Sat-or-Sun -> next Monday;
+         Boxing Day Sat -> next Monday, Sun-or-Mon -> next Tuesday). All other holidays below (Act of
+         Self Determination Day, King's/Queen's Birthday, the three Hari Raya/Maulaud Islamic
+         holidays) are instead individually gazetted every year as "special public holidays" by the
+         Administrator under s.8A - confirmed from five consecutive years of primary-source
+         Administrator community bulletins/proclamations (2022-2026, see Sources) which show no
+         single stable date formula for any of them (one-off ceremonial date changes, an Easter
+         Monday collision, and a mid-series change from a fixed date to a "second Monday" rule are
+         all directly documented below). Wikipedia's "Islamic New Year" entry for CKI is NOT included
+         here - it does not appear in any of the five years of official gazettes checked. -->
+
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <Fixed month="JANUARY" day="26" descriptionPropertiesKey="NATIONAL_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- Act of Self Determination Day, nominal 6 April (the 1984 Act of Self-Determination). Gazetted
+         individually each year - no stable substitution formula:
+         2022 (Wed, unshifted), 2023 (Thu, unshifted): plain nominal date.
+         2024: originally gazetted for Monday 8 April (in lieu of Saturday 6 April, the ordinary
+         Sat->Mon rule), but a later bulletin (No 01/2024, 5 Jan 2024) moved it to Monday 29 April
+         2024 instead, a ONE-OFF change requested by the Shire of CKI to mark the 40th anniversary of
+         self-determination - not to be read as a recurring "last Monday of April" rule.
+         2025: Monday 7 April (in lieu of Sunday 6 April) - ordinary Sun->Mon rule.
+         2026: Tuesday 7 April - NOT a weekend substitution (6 April 2026 is a Monday); that Monday is
+         also Easter Monday that year, so Self Determination Day is cascaded one day to avoid
+         colliding with it. This is a fixed-holiday-vs-movable-feast collision that cannot be
+         expressed with MovingCondition (which only inspects a holiday's own raw weekday, not another
+         independently-computed holiday's date) - same documented architectural gap as Anguilla Day
+         vs Whit Monday. Only the five directly-confirmed years are modeled; the plain nominal date is
+         used as the fallback for all other years. -->
+    <Fixed month="APRIL" day="6" validTo="2023" descriptionPropertiesKey="ACT_OF_SELF_DETERMINATION_DAY"/>
+    <Fixed month="APRIL" day="29" validFrom="2024" validTo="2024" descriptionPropertiesKey="ACT_OF_SELF_DETERMINATION_DAY"/>
+    <Fixed month="APRIL" day="7" validFrom="2025" validTo="2026" descriptionPropertiesKey="ACT_OF_SELF_DETERMINATION_DAY"/>
+    <Fixed month="APRIL" day="6" validFrom="2027" descriptionPropertiesKey="ACT_OF_SELF_DETERMINATION_DAY"/>
+
+    <Fixed month="APRIL" day="25" descriptionPropertiesKey="ANZAC">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- Hari Raya Puasa (Eid al-Fitr): individually gazetted every year based on the Public Service's
+         own moon-sighting confirmation (the bulletins explicitly warn the date "may vary by one or
+         two days"); no lunar-calendar engine is used, so only the five directly-confirmed years are
+         modeled (same idiom as Chinese New Year in Holidays_sg.xml/Holidays_bn.xml). -->
+    <Fixed month="MAY" day="2" validFrom="2022" validTo="2022" descriptionPropertiesKey="HARI_RAYA_PUASA"/>
+    <Fixed month="APRIL" day="24" validFrom="2023" validTo="2023" descriptionPropertiesKey="HARI_RAYA_PUASA"/>
+    <Fixed month="APRIL" day="10" validFrom="2024" validTo="2024" descriptionPropertiesKey="HARI_RAYA_PUASA"/>
+    <Fixed month="MARCH" day="31" validFrom="2025" validTo="2025" descriptionPropertiesKey="HARI_RAYA_PUASA"/>
+    <Fixed month="MARCH" day="20" validFrom="2026" validTo="2026" descriptionPropertiesKey="HARI_RAYA_PUASA"/>
+
+    <!-- Hari Raya Haji (Eid al-Adha): same yearly-gazetted, moon-sighting-dependent basis as Hari Raya
+         Puasa above; only the five directly-confirmed years are modeled. -->
+    <Fixed month="JULY" day="11" validFrom="2022" validTo="2022" descriptionPropertiesKey="HARI_RAYA_HAJI"/>
+    <Fixed month="JUNE" day="29" validFrom="2023" validTo="2023" descriptionPropertiesKey="HARI_RAYA_HAJI"/>
+    <Fixed month="JUNE" day="17" validFrom="2024" validTo="2024" descriptionPropertiesKey="HARI_RAYA_HAJI"/>
+    <Fixed month="JUNE" day="6" validFrom="2025" validTo="2025" descriptionPropertiesKey="HARI_RAYA_HAJI"/>
+    <Fixed month="MAY" day="27" validFrom="2026" validTo="2026" descriptionPropertiesKey="HARI_RAYA_HAJI"/>
+
+    <!-- Hari Maulaud Nabi (Mawlid an-Nabi, the Prophet's birthday): same yearly-gazetted,
+         moon-sighting-dependent basis as the two Hari Raya holidays above; only the five
+         directly-confirmed years are modeled. -->
+    <Fixed month="OCTOBER" day="10" validFrom="2022" validTo="2022" descriptionPropertiesKey="HARI_MAULAUD_NABI"/>
+    <Fixed month="SEPTEMBER" day="27" validFrom="2023" validTo="2023" descriptionPropertiesKey="HARI_MAULAUD_NABI"/>
+    <Fixed month="SEPTEMBER" day="16" validFrom="2024" validTo="2024" descriptionPropertiesKey="HARI_MAULAUD_NABI"/>
+    <Fixed month="SEPTEMBER" day="5" validFrom="2025" validTo="2025" descriptionPropertiesKey="HARI_MAULAUD_NABI"/>
+    <Fixed month="AUGUST" day="26" validFrom="2026" validTo="2026" descriptionPropertiesKey="HARI_MAULAUD_NABI"/>
+
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- Boxing Day: SATURDAY->MONDAY is its own plain weekend shift (confirmed 2026: Sat 26 Dec ->
+         Mon 28 Dec). SUNDAY->TUESDAY and MONDAY->TUESDAY exist to avoid colliding with Christmas
+         Day's own Sat/Sun->Monday substitute above (confirmed 2022: Christmas Sunday 25 Dec shifted
+         to Monday 26 Dec, so Boxing Day's own nominal Monday 26 Dec was bumped to Tuesday 27 Dec). -->
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+      <MovingCondition substitute="MONDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+
+    <!-- King's/Queen's Birthday: fixed on 6 June regardless of weekday up to and including 2024
+         (confirmed 2022 Mon, 2023 Tue, 2024 Thu - genuinely no mondayisation during this period), then
+         changed to the second Monday of June from 2025 (confirmed 2025: Mon 9 June; 2026: Mon 8 June).
+         The 2022/2023 bulletins style it "Birthday of Reigning Sovereign"/"Queen's Birthday"; renamed
+         "King's Birthday" from the 2024 bulletin onward. -->
+    <Fixed month="JUNE" day="6" validTo="2023" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
+    <Fixed month="JUNE" day="6" validFrom="2024" validTo="2024" descriptionPropertiesKey="KINGS_BIRTHDAY"/>
+    <FixedWeekday which="SECOND" weekday="MONDAY" month="JUNE" validFrom="2025" descriptionPropertiesKey="KINGS_BIRTHDAY"/>
+
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_the_Cocos_(Keeling)_Islands</Source>
+    <Source of="Public and Bank Holidays Act 1972 (WA)">https://www.legislation.wa.gov.au/legislation/statutes.nsf/RedirectURL?OpenAgent=&amp;query=mrdoc_44571.pdf</Source>
+    <Source of="Cocos (Keeling) Islands Act 1955, s.8A">https://www.legislation.gov.au/Details/C2016C00764</Source>
+    <Source of="2022 Public Holidays, Cocos (Keeling) Islands (No A33/2021)">https://www.infrastructure.gov.au/sites/default/files/documents/a33-2021-2022-public-holidays-cocos-keeling-islands.pdf</Source>
+    <Source of="2023 Special Public &amp; Bank Holidays proclamation (No 03/2022)">https://www.infrastructure.gov.au/sites/default/files/documents/A07-2022-notice-proclamation-special-public-bank-holidays-2023-cki.pdf</Source>
+    <Source of="2024 Public Holidays, Cocos (Keeling) Islands (No A12/2023)">https://www.infrastructure.gov.au/sites/default/files/documents/a12-2023-2024-public-holidays-cocos-k-islands.pdf</Source>
+    <Source of="2024 Act of Self Determination Day date change (No A01/2024)">https://www.infrastructure.gov.au/sites/default/files/documents/a01-of-2024-community-bulletin-cki-public-holiday-2024-change-and-proclamation.pdf</Source>
+    <Source of="2025 Public Holidays, Cocos (Keeling) Islands (No A21/2024)">https://www.infrastructure.gov.au/sites/default/files/documents/a21-2024-administrator-community-bulletin-cki-public-holidays-2025.pdf</Source>
+    <Source of="2026 Public Holidays, Cocos (Keeling) Islands (No A21/2025)">https://www.infrastructure.gov.au/sites/default/files/documents/community-bulletin-cki-public-holidays-2026.pdf</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:CC</Source>
+  </Sources>
+</Configuration>
