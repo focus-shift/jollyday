@@ -1658,7 +1658,7 @@
     <path d="M 1078.7 117.3 1078.6 117.5 1078.6 117.3 Z">
     </path>
   </g>
-  <g class="country" data-iso="BV">
+  <g class="country active" data-iso="BV">
     <title>Bouvet Island</title>
     <path d="M 1000.3 854.3 1000.4 854.6 999.8 854.7 999.7 854.5 1000.1 854.2 Z">
     </path>

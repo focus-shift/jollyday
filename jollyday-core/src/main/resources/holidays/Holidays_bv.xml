@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="bv" description="Bouvet Island"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <!--
+    Bouvet Island is an uninhabited Norwegian dependency (population 0) administered directly by
+    the Polar Affairs Department of Norway's Ministry of Justice and the Police under the
+    Dependency Act of 24 March 1933. The only human presence is seasonal researchers at the
+    Nyrøysa station during the summer; there is no permanent population and no local legislature,
+    so there are no official public holidays.
+    -->
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Bouvet_Island</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:BV</Source>
+  </Sources>
+</Configuration>
