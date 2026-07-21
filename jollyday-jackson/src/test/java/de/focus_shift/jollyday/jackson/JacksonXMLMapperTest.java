@@ -1,12 +1,16 @@
 package de.focus_shift.jollyday.jackson;
 
 import de.focus_shift.jollyday.jackson.mapping.Configuration;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
+import java.io.ByteArrayInputStream;
 import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 class JacksonXMLMapperTest {
 
@@ -17,5 +21,18 @@ class JacksonXMLMapperTest {
     final InputStream inputStream = getClass().getClassLoader().getResourceAsStream("holidays/" + holidayFileName);
     final Configuration configuration = sut.unmarshallConfiguration(inputStream);
     assertThat(configuration.getHolidays()).isNotNull();
+  }
+
+  @Test
+  void rejectsXmlWithDoctypeToPreventXxe() {
+    final JacksonXMLMapper sut = new JacksonXMLMapper();
+    final String maliciousXml =
+      "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
+        + "<!DOCTYPE Configuration [<!ENTITY xxe SYSTEM \"file:///etc/passwd\">]>\n"
+        + "<Configuration hierarchy=\"test\" description=\"&xxe;\"></Configuration>";
+    final InputStream inputStream = new ByteArrayInputStream(maliciousXml.getBytes(StandardCharsets.UTF_8));
+
+    assertThatThrownBy(() -> sut.unmarshallConfiguration(inputStream))
+      .isInstanceOf(IllegalStateException.class);
   }
 }
