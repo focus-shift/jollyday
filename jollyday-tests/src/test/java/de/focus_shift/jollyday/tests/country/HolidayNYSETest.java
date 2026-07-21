@@ -16,6 +16,7 @@ import static java.time.Month.JANUARY;
 import static java.time.Month.JULY;
 import static java.time.Month.JUNE;
 import static java.time.Month.OCTOBER;
+import static java.time.Month.SEPTEMBER;
 
 class HolidayNYSETest {
 
@@ -24,7 +25,6 @@ class HolidayNYSETest {
 
     assertFor(NYSE)
       .hasFixedHoliday("NEW_YEAR", JANUARY, 1)
-        .canBeMovedFrom(SATURDAY, PREVIOUS, FRIDAY)
         .canBeMovedFrom(SUNDAY, MONDAY)
       .and()
       .hasFixedHoliday("JUNETEENTH", JUNE, 19)
@@ -40,6 +40,26 @@ class HolidayNYSETest {
       .hasFixedHoliday("CHRISTMAS", DECEMBER, 25)
         .canBeMovedFrom(SATURDAY, PREVIOUS, FRIDAY)
         .canBeMovedFrom(SUNDAY, MONDAY)
+      .and()
+      .hasFixedHoliday("SEPTEMBER_11_ATTACKS", SEPTEMBER, 11)
+        .notValidBetween(Year.of(1900), Year.of(2000))
+        .validBetween(Year.of(2001), Year.of(2001))
+        .notValidBetween(Year.of(2002), Year.of(2500))
+      .and()
+      .hasFixedHoliday("SEPTEMBER_11_ATTACKS", SEPTEMBER, 12)
+        .notValidBetween(Year.of(1900), Year.of(2000))
+        .validBetween(Year.of(2001), Year.of(2001))
+        .notValidBetween(Year.of(2002), Year.of(2500))
+      .and()
+      .hasFixedHoliday("SEPTEMBER_11_ATTACKS", SEPTEMBER, 13)
+        .notValidBetween(Year.of(1900), Year.of(2000))
+        .validBetween(Year.of(2001), Year.of(2001))
+        .notValidBetween(Year.of(2002), Year.of(2500))
+      .and()
+      .hasFixedHoliday("SEPTEMBER_11_ATTACKS", SEPTEMBER, 14)
+        .notValidBetween(Year.of(1900), Year.of(2000))
+        .validBetween(Year.of(2001), Year.of(2001))
+        .notValidBetween(Year.of(2002), Year.of(2500))
       .and()
       .hasFixedHoliday("FUNERAL_OF_PRESIDENT_REAGAN", JUNE, 11)
         .notValidBetween(Year.of(1900), Year.of(2003))
@@ -60,6 +80,16 @@ class HolidayNYSETest {
         .notValidBetween(Year.of(1900), Year.of(2011))
         .validBetween(Year.of(2012), Year.of(2012))
         .notValidBetween(Year.of(2013), Year.of(2500))
+      .and()
+      .hasFixedHoliday("NATIONAL_DAY_OF_MOURNING_BUSH", DECEMBER, 5)
+        .notValidBetween(Year.of(1900), Year.of(2017))
+        .validBetween(Year.of(2018), Year.of(2018))
+        .notValidBetween(Year.of(2019), Year.of(2500))
+      .and()
+      .hasFixedHoliday("NATIONAL_DAY_OF_MOURNING_CARTER", JANUARY, 9)
+        .notValidBetween(Year.of(1900), Year.of(2024))
+        .validBetween(Year.of(2025), Year.of(2025))
+        .notValidBetween(Year.of(2026), Year.of(2500))
       .and()
       .hasChristianHoliday("GOOD_FRIDAY")
       .check();

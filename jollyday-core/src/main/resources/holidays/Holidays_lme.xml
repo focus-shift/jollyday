@@ -5,23 +5,39 @@
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
   <Holidays>
-    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
-    <Fixed month="AUGUST" day="28" descriptionPropertiesKey="BANK_HOLIDAY"/>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
     <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY">
       <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
       <MovingCondition substitute="MONDAY" with="NEXT" weekday="TUESDAY"/>
     </Fixed>
-    <Fixed month="DECEMBER" day="31" descriptionPropertiesKey="NEW_YEARS_EVE"/>
-    <Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CHRISTMAS_EVE">
-    </Fixed>
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS">
       <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
-    <FixedWeekday which="FIRST" weekday="MONDAY" month="MAY" descriptionPropertiesKey="BANK_HOLIDAY"/>
-    <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" descriptionPropertiesKey="BANK_HOLIDAY"/>
-    <ChristianHoliday type="EASTER"/>
+    <!-- The 2020 Early May bank holiday was moved from the 4th to the 8th of May to mark the 75th anniversary of VE Day -->
+    <Fixed month="MAY" day="8" validFrom="2020" validTo="2020" descriptionPropertiesKey="BANK_HOLIDAY"/>
+    <Fixed month="MAY" day="8" validFrom="2023" validTo="2023" descriptionPropertiesKey="KINGS_CORONATION"/>
+    <!-- The 2012 late May bank holiday was moved to Monday 4 June 2012 for the Queen's Diamond Jubilee -->
+    <Fixed month="JUNE" day="4" validFrom="2012" validTo="2012" descriptionPropertiesKey="BANK_HOLIDAY"/>
+    <!-- The 2022 late May bank holiday was moved from the 30th of May to the 2nd of June for the Queen's Platinum Jubilee -->
+    <Fixed month="JUNE" day="2" validFrom="2022" validTo="2022" descriptionPropertiesKey="BANK_HOLIDAY"/>
+    <Fixed month="JUNE" day="3" validFrom="2022" validTo="2022" descriptionPropertiesKey="QUEENS_PLATINUM_JUBILEE"/>
+    <FixedWeekday which="FIRST" weekday="MONDAY" month="MAY" validTo="2019" descriptionPropertiesKey="BANK_HOLIDAY"/>
+    <FixedWeekday which="FIRST" weekday="MONDAY" month="MAY" validFrom="2021" descriptionPropertiesKey="BANK_HOLIDAY"/>
+    <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" validTo="2011" descriptionPropertiesKey="BANK_HOLIDAY"/>
+    <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" validFrom="2013" validTo="2021" descriptionPropertiesKey="BANK_HOLIDAY"/>
+    <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" validFrom="2023" descriptionPropertiesKey="BANK_HOLIDAY"/>
+    <FixedWeekday which="LAST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="BANK_HOLIDAY"/>
     <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY"/>
   </Holidays>
+
+  <Sources>
+    <Source>https://www.lme.com/trading/trading-venues/trading-times</Source>
+    <Source>https://www.lme.com/-/media/Files/Trading/LME-Trading-Calendar-2025-2035.pdf</Source>
+  </Sources>
 </Configuration>

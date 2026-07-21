@@ -13,6 +13,8 @@
   </Holidays>
 
   <Sources>
+    <Source>https://www.ecb.europa.eu/paym/groups/shared/docs/35c5c-ami-pay-2017-12-06-joint-ami-pay-ami-seco-item-3-t2s-on-target2-closing-days.pdf</Source>
+    <Source>https://www.clearstream.com/clearstream-en/res-library/settlement/t2s-and-t2-downtimes-on-public-holidays--3726990</Source>
     <Source>https://www.bundesbank.de/de/aufgaben/unbarer-zahlungsverkehr/target2-securities</Source>
     <Source>https://www.bundesbank.de/resource/blob/749314/edbf269e7e236ff9dcf3e95dab122a0b/472B63F073F071307366337C94F8C870/feiertage-in-deutschland-1-data.pdf</Source>
   </Sources>

@@ -6,9 +6,15 @@
                xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
   <Holidays>
     <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="CHRISTMAS"/>
-    <ChristianHoliday type="ASCENSION_DAY"/>
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
+    <ChristianHoliday type="GOOD_FRIDAY"/>
     <ChristianHoliday type="EASTER_MONDAY"/>
   </Holidays>
+
+  <Sources>
+    <Source>https://www.euronext.com/en/about/media/euronext-press-releases/nyse-euronext-announces-its-2013-holiday-calendar-and-early</Source>
+    <Source>https://www.euronext.com/en/trading/trading-hours-holidays</Source>
+  </Sources>
 </Configuration>
