@@ -125,6 +125,6 @@ class HolidayTest {
     Locale.setDefault(ENGLISH);
 
     final Holiday holiday = new Holiday(LocalDate.of(2011, Month.FEBRUARY, 2), "CHRISTMAS", PUBLIC_HOLIDAY);
-    assertThat(holiday.toString()).isEqualTo("2011-02-02 (Christmas)");
+    assertThat(holiday).hasToString("2011-02-02 (Christmas)");
   }
 }

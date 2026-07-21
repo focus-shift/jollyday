@@ -11,6 +11,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;
+import java.time.Month;
 import java.time.Year;
 import java.util.Optional;
 
@@ -33,7 +34,7 @@ class FindWeekDayRelativeToDateTest {
     "CLOSEST, FIRST, 2024-01-03",
   })
   void ensureAppliesRelationAndOccurrenceToWeekday(final Relation relation, final Occurrence occurrence, final LocalDate expected) {
-    final LocalDate anchor = LocalDate.of(2024, 1, 1);
+    final LocalDate anchor = LocalDate.of(2024, Month.JANUARY, 1);
     final FindWeekDayRelativeToDate sut = new FindWeekDayRelativeToDate(anchor);
 
     final LocalDate result = sut.apply(config(WEDNESDAY, occurrence, relation));

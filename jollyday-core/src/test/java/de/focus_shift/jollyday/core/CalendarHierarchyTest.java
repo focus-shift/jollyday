@@ -71,7 +71,7 @@ class CalendarHierarchyTest {
       .isNotEqualTo(new Object())
       .isNotEqualTo(null);
 
-    assertThat(sut.hashCode()).isEqualTo(same.hashCode());
+    assertThat(sut).hasSameHashCodeAs(same);
   }
 
   @Test

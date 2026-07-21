@@ -19,6 +19,7 @@ import static java.time.DayOfWeek.FRIDAY;
 import static java.time.DayOfWeek.MONDAY;
 import static java.time.DayOfWeek.SATURDAY;
 import static java.time.DayOfWeek.SUNDAY;
+import static java.time.Month.APRIL;
 import static java.time.Month.AUGUST;
 import static java.time.Month.DECEMBER;
 import static java.time.Month.FEBRUARY;
@@ -77,9 +78,9 @@ class HolidaySBTest {
 
     final Set<Holiday> national = holidayManager.getHolidays(Year.of(2020));
     assertThat(national).extracting(Holiday::getDate).contains(
-      LocalDate.of(2020, 4, 10),  // Good Friday
-      LocalDate.of(2020, 4, 11),  // Holy Saturday
-      LocalDate.of(2020, 4, 13),  // Easter Monday
+      LocalDate.of(2020, APRIL, 10),  // Good Friday
+      LocalDate.of(2020, APRIL, 11),  // Holy Saturday
+      LocalDate.of(2020, APRIL, 13),  // Easter Monday
       LocalDate.of(2020, JUNE, 1) // Whit Monday
     );
   }
