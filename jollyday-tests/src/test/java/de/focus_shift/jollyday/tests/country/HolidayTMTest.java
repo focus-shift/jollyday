@@ -39,7 +39,7 @@ class HolidayTMTest {
       .hasFixedHoliday("INDEPENDENCE_DAY", SEPTEMBER, 27)
         .validBetween(YEAR_FROM, YEAR_TO)
       .and()
-      .hasFixedHoliday("DAY_OF_REMEMBRANCE", OCTOBER, 6)
+      .hasFixedHoliday("DAY_OF_REMEMBRANCE_TM", OCTOBER, 6)
         .validBetween(YEAR_FROM, YEAR_TO)
       .and()
       .hasFixedHoliday("DAY_OF_NEUTRALITY", DECEMBER, 12)

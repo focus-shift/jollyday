@@ -14,7 +14,7 @@
     <Fixed month="JUNE" day="5" descriptionPropertiesKey="PRESIDENTS_DAY">
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
-    <Fixed month="AUGUST" day="3" descriptionPropertiesKey="FREEDOM_DAY">
+    <Fixed month="AUGUST" day="3" descriptionPropertiesKey="FREEDOM">
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
     <Fixed month="AUGUST" day="15" descriptionPropertiesKey="CONSTITUTION_DAY">

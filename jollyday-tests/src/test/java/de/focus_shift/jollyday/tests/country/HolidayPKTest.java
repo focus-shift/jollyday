@@ -22,7 +22,7 @@ class HolidayPKTest {
       .hasFixedHoliday("YEOM_E_TAKBEER", MAY, 28).validBetween(YEAR_FROM, YEAR_TO).and()
       .hasFixedHoliday("INDEPENDENCE_DAY", AUGUST, 14).validBetween(YEAR_FROM, YEAR_TO).and()
       .hasFixedHoliday("IQBAL_DAY", NOVEMBER, 9).validBetween(YEAR_FROM, YEAR_TO).and()
-      .hasFixedHoliday("QUAIDE_AZAM_DAY", DECEMBER, 25).validBetween(YEAR_FROM, YEAR_TO).and()
+      .hasFixedHoliday("QUAID_E_AZAM_DAY", DECEMBER, 25).validBetween(YEAR_FROM, YEAR_TO).and()
       .hasIslamicHoliday("ASCHURA").validBetween(YEAR_FROM, YEAR_TO).and()
       .hasIslamicHoliday("MAWLID_AN_NABI").validBetween(YEAR_FROM, YEAR_TO).and()
       .hasIslamicHoliday("ID_AL_FITR").validBetween(YEAR_FROM, YEAR_TO).and()

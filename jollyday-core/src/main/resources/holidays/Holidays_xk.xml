@@ -15,7 +15,7 @@
 
     <Fixed month="APRIL" day="23" descriptionPropertiesKey="DAY_OF_THE_TURKS"/>
 
-    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOR_DAY"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
     <Fixed month="MAY" day="6" descriptionPropertiesKey="DAY_OF_THE_GORANS"/>
     <Fixed month="MAY" day="9" descriptionPropertiesKey="EUROPE_DAY"/>
 

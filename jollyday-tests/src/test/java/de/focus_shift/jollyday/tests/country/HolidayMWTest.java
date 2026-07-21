@@ -29,7 +29,7 @@ class HolidayMWTest {
       .hasFixedHoliday("LABOUR_DAY", MAY, 1).canBeMovedFrom(SUNDAY, MONDAY).validBetween(YEAR_FROM, YEAR_TO).and()
       .hasFixedHoliday("KAMUZU_BANDA", MAY, 14).canBeMovedFrom(SUNDAY, MONDAY).validBetween(YEAR_FROM, YEAR_TO).and()
       .hasFixedHoliday("INDEPENDENCE_DAY", JULY, 6).canBeMovedFrom(SUNDAY, MONDAY).validBetween(YEAR_FROM, YEAR_TO).and()
-      .hasFixedHoliday("MOTHERS", OCTOBER, 15).canBeMovedFrom(SUNDAY, MONDAY).validBetween(YEAR_FROM, YEAR_TO).and()
+      .hasFixedHoliday("MOTHERS_DAY", OCTOBER, 15).canBeMovedFrom(SUNDAY, MONDAY).validBetween(YEAR_FROM, YEAR_TO).and()
       .hasFixedHoliday("CHRISTMAS", DECEMBER, 25).canBeMovedFrom(SUNDAY, MONDAY).validBetween(YEAR_FROM, YEAR_TO).and()
       .hasFixedHoliday("BOXING_DAY", DECEMBER, 26).canBeMovedFrom(SUNDAY, MONDAY).validBetween(YEAR_FROM, YEAR_TO).and()
       .hasChristianHoliday("GOOD_FRIDAY").validBetween(YEAR_FROM, YEAR_TO).and()

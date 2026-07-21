@@ -25,7 +25,7 @@ class HolidayXKTest {
       .hasFixedHoliday("VETERANS_DAY", MARCH, 6).and()
       .hasFixedHoliday("ROMA_DAY", MARCH, 8).and()
       .hasFixedHoliday("DAY_OF_THE_TURKS", APRIL, 23).and()
-      .hasFixedHoliday("LABOR_DAY", MAY, 1).and()
+      .hasFixedHoliday("LABOUR_DAY", MAY, 1).and()
       .hasFixedHoliday("DAY_OF_THE_GORANS", MAY, 6).and()
       .hasFixedHoliday("EUROPE_DAY", MAY, 9).and()
       .hasFixedHoliday("DAY_OF_PEACE", JUNE, 12).and()

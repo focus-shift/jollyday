@@ -31,7 +31,7 @@
 
     <SubConfigurations hierarchy="clu" description="City of Luxembourg">
       <Holidays>
-        <Fixed month="FEBRUARY" day="15" descriptionPropertiesKey="CARNIVAL"/>
+        <Fixed month="FEBRUARY" day="15" descriptionPropertiesKey="CARNIVAL_DAY"/>
       </Holidays>
     </SubConfigurations>
   </SubConfigurations>

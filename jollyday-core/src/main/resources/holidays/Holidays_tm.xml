@@ -11,7 +11,7 @@
     <Fixed month="MARCH" day="22" descriptionPropertiesKey="NOWRUZ"/>
     <Fixed month="MAY" day="18" descriptionPropertiesKey="STATE_FLAG_AND_CONSTITUTION_DAY"/>
     <Fixed month="SEPTEMBER" day="27" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
-    <Fixed month="OCTOBER" day="6" descriptionPropertiesKey="DAY_OF_REMEMBRANCE"/>
+    <Fixed month="OCTOBER" day="6" descriptionPropertiesKey="DAY_OF_REMEMBRANCE_TM"/>
     <Fixed month="DECEMBER" day="12" descriptionPropertiesKey="DAY_OF_NEUTRALITY"/>
     <IslamicHoliday type="ID_AL_FITR"/>
     <IslamicHoliday type="ID_UL_ADHA"/>

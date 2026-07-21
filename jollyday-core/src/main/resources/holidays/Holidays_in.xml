@@ -31,7 +31,7 @@
 
   <SubConfigurations hierarchy="ap" description="Andhra Pradesh">
     <Holidays>
-      <Fixed month="APRIL" day="14"/>
+      <Fixed month="APRIL" day="14" descriptionPropertiesKey="AMBEDKAR_JAYANTI"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
       <ChristianHoliday type="GOOD_FRIDAY"/>
       <IslamicHoliday type="ASCHURA"/>
@@ -63,7 +63,7 @@
   <SubConfigurations hierarchy="br" description="Bihār">
     <Holidays>
       <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
-      <Fixed month="APRIL" day="14"/>
+      <Fixed month="APRIL" day="14" descriptionPropertiesKey="AMBEDKAR_JAYANTI"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
       <ChristianHoliday type="EASTER"/>
       <ChristianHoliday type="GOOD_FRIDAY"/>
@@ -74,7 +74,7 @@
 
   <SubConfigurations hierarchy="ch" description="Chandīgarh">
     <Holidays>
-      <Fixed month="APRIL" day="14"/>
+      <Fixed month="APRIL" day="14" descriptionPropertiesKey="AMBEDKAR_JAYANTI"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
       <ChristianHoliday type="EASTER"/>
       <ChristianHoliday type="GOOD_FRIDAY"/>
@@ -114,7 +114,7 @@
   <SubConfigurations hierarchy="ga" description="Goa">
     <Holidays>
       <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
-      <Fixed month="DECEMBER" day="3"/>
+      <Fixed month="DECEMBER" day="3" descriptionPropertiesKey="ST_FRANCIS_XAVIER"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
       <ChristianHoliday type="EASTER"/>
       <ChristianHoliday type="GOOD_FRIDAY"/>
@@ -123,7 +123,7 @@
 
   <SubConfigurations hierarchy="gj" description="Gujarāt">
     <Holidays>
-      <Fixed month="APRIL" day="14"/>
+      <Fixed month="APRIL" day="14" descriptionPropertiesKey="AMBEDKAR_JAYANTI"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
       <IslamicHoliday type="ID_UL_ADHA"/>
     </Holidays>
@@ -131,7 +131,7 @@
 
   <SubConfigurations hierarchy="hr" description="Haryāna">
     <Holidays>
-      <Fixed month="APRIL" day="14"/>
+      <Fixed month="APRIL" day="14" descriptionPropertiesKey="AMBEDKAR_JAYANTI"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
     </Holidays>
   </SubConfigurations>
@@ -145,7 +145,7 @@
 
   <SubConfigurations hierarchy="jk" description="Jammu and Kashmīr">
     <Holidays>
-      <Fixed month="APRIL" day="14"/>
+      <Fixed month="APRIL" day="14" descriptionPropertiesKey="AMBEDKAR_JAYANTI"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
       <IslamicHoliday type="ASCHURA"/>
       <IslamicHoliday type="ID_UL_ADHA"/>
@@ -163,8 +163,8 @@
   <SubConfigurations hierarchy="ka" description="Karnātaka">
     <Holidays>
       <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
-      <Fixed month="APRIL" day="14"/>
-      <Fixed month="NOVEMBER" day="1"/>
+      <Fixed month="APRIL" day="14" descriptionPropertiesKey="AMBEDKAR_JAYANTI"/>
+      <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="KARNATAKA_RAJYOTSAVA"/>
       <Fixed month="NOVEMBER" day="5"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
       <ChristianHoliday type="EASTER"/>
@@ -178,7 +178,7 @@
   <SubConfigurations hierarchy="kl" description="Kerala">
     <Holidays>
       <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
-      <Fixed month="APRIL" day="14"/>
+      <Fixed month="APRIL" day="14" descriptionPropertiesKey="AMBEDKAR_JAYANTI"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
       <ChristianHoliday type="EASTER"/>
       <ChristianHoliday type="GOOD_FRIDAY"/>
@@ -211,8 +211,8 @@
   <SubConfigurations hierarchy="mh" description="Mahārāshtra">
     <Holidays>
       <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
-      <Fixed month="APRIL" day="14"/>
-      <Fixed month="FEBRUARY" day="19"/>
+      <Fixed month="APRIL" day="14" descriptionPropertiesKey="AMBEDKAR_JAYANTI"/>
+      <Fixed month="FEBRUARY" day="19" descriptionPropertiesKey="SHIVAJI_JAYANTI"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
       <IslamicHoliday type="ASCHURA"/>
       <IslamicHoliday type="MAWLID_AN_NABI"/>
@@ -263,7 +263,7 @@
 
   <SubConfigurations hierarchy="od" description="Odisha">
     <Holidays>
-      <Fixed month="APRIL" day="14"/>
+      <Fixed month="APRIL" day="14" descriptionPropertiesKey="AMBEDKAR_JAYANTI"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
       <IslamicHoliday type="ASCHURA"/>
       <IslamicHoliday type="ID_UL_ADHA"/>
@@ -273,7 +273,7 @@
   <SubConfigurations hierarchy="py" description="Puducherry">
     <Holidays>
       <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
-      <Fixed month="APRIL" day="14"/>
+      <Fixed month="APRIL" day="14" descriptionPropertiesKey="AMBEDKAR_JAYANTI"/>
       <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
       <ChristianHoliday type="EASTER"/>
@@ -300,7 +300,7 @@
 
   <SubConfigurations hierarchy="sk" description="Sikkim">
     <Holidays>
-      <Fixed month="MAY" day="16"/>
+      <Fixed month="MAY" day="16" descriptionPropertiesKey="STATEHOOD"/>
       <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
       <ChristianHoliday type="EASTER"/>
@@ -311,7 +311,7 @@
   <SubConfigurations hierarchy="tn" description="Tamil Nādu">
     <Holidays>
       <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
-      <Fixed month="APRIL" day="14"/>
+      <Fixed month="APRIL" day="14" descriptionPropertiesKey="AMBEDKAR_JAYANTI"/>
       <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
       <ChristianHoliday type="EASTER"/>
@@ -329,7 +329,7 @@
   <SubConfigurations hierarchy="tr" description="Tripura">
     <Holidays>
       <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
-      <Fixed month="JANUARY" day="23"/>
+      <Fixed month="JANUARY" day="23" descriptionPropertiesKey="SUBHAS_CHANDRA_BOSE_JAYANTI"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
       <IslamicHoliday type="ID_UL_ADHA"/>
     </Holidays>
@@ -337,7 +337,7 @@
 
   <SubConfigurations hierarchy="up" description="Uttar Pradesh">
     <Holidays>
-      <Fixed month="APRIL" day="14"/>
+      <Fixed month="APRIL" day="14" descriptionPropertiesKey="AMBEDKAR_JAYANTI"/>
       <Fixed month="MARCH" day="15"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
       <ChristianHoliday type="EASTER"/>
@@ -350,7 +350,7 @@
 
   <SubConfigurations hierarchy="uk" description="Uttarākhand">
     <Holidays>
-      <Fixed month="APRIL" day="14"/>
+      <Fixed month="APRIL" day="14" descriptionPropertiesKey="AMBEDKAR_JAYANTI"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
       <ChristianHoliday type="EASTER"/>
       <ChristianHoliday type="GOOD_FRIDAY"/>
@@ -363,7 +363,7 @@
   <SubConfigurations hierarchy="wb" description="West Bengal">
     <Holidays>
       <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
-      <Fixed month="JANUARY" day="23"/>
+      <Fixed month="JANUARY" day="23" descriptionPropertiesKey="SUBHAS_CHANDRA_BOSE_JAYANTI"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
       <ChristianHoliday type="EASTER"/>
       <ChristianHoliday type="GOOD_FRIDAY"/>

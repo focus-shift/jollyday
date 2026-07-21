@@ -33,7 +33,7 @@
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
     </Fixed>
 
-    <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="2022" descriptionPropertiesKey="WINTER_MID_TERM_BANK_HOLIDAY"/>
+    <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="2022" descriptionPropertiesKey="WINTER_MIDTERM_BANK_HOLIDAY"/>
     <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" validFrom="1971" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
     <FixedWeekday which="LAST" weekday="MONDAY" month="AUGUST" validFrom="1971" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
 
