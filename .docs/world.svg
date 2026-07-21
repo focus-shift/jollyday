@@ -1663,7 +1663,7 @@
     <path d="M 1000.3 854.3 1000.4 854.6 999.8 854.7 999.7 854.5 1000.1 854.2 Z">
     </path>
   </g>
-  <g class="country" data-iso="CC">
+  <g class="country active" data-iso="CC">
     <title>Cocos (Keeling) Islands</title>
     <path d="M 1526.4 578.2 1526.2 578.2 1526.2 577.8 1526.3 578.2 Z">
     </path>
