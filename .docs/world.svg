@@ -1315,7 +1315,7 @@
     </path>
   </g>
   <circle cx="997.9" cy="189.1" />
-  <g class="country" data-iso="MP">
+  <g class="country active" data-iso="MP">
     <title>Northern Mariana Islands</title>
     <path d="M 1802.5 411.1 1802.4 411.2 1802.2 411.1 1802.1 410.9 1802.6 410.7 1802.8 410.9 1802.5 411.1 Z">
     </path>

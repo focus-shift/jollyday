@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="mp" description="Northern Mariana Islands"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <!-- 1 CMC § 311 declares the legal holidays below. A holiday falling on a Saturday or
+         Sunday is, in consistent practice under Governor's Office proclamations, observed
+         following the federal pattern: Saturday -> preceding Friday, Sunday -> following
+         Monday (confirmed both directions by the 2022 and 2023 proclamations, and the
+         Saturday case again for 2026). -->
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
+      <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <!-- 24 March, Commonwealth Covenant Day: combines the former separate Commonwealth Day
+         and Covenant Day into one holiday, per PL 15-4 (effective 2006-04-11). -->
+    <Fixed month="MARCH" day="24" validFrom="2006" descriptionPropertiesKey="COMMONWEALTH_COVENANT_DAY">
+      <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <!-- Not (yet) codified in 1 CMC § 311's text, but granted every year since the 2021
+         federal enactment, confirmed by the 2022, 2025 and 2026 Governor's Office
+         proclamations. -->
+    <Fixed month="JUNE" day="19" validFrom="2021" descriptionPropertiesKey="JUNETEENTH">
+      <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="JULY" day="4" descriptionPropertiesKey="INDEPENDENCE_DAY">
+      <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <!-- 4 November, Citizenship Day: commemorates the 1986 date CNMI residents became U.S.
+         citizens/nationals. Also separately designated by 1 CMC § 323. -->
+    <Fixed month="NOVEMBER" day="4" descriptionPropertiesKey="CITIZENSHIP_DAY">
+      <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="VETERANS_DAY">
+      <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="CONSTITUTION_DAY">
+      <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS">
+      <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- Floating holidays that are always defined by weekday, so no weekend shift applies. -->
+    <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="2006" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+    <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" descriptionPropertiesKey="PRESIDENTS_DAY"/>
+    <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" descriptionPropertiesKey="MEMORIAL_DAY"/>
+    <FixedWeekday which="FIRST" weekday="MONDAY" month="SEPTEMBER" descriptionPropertiesKey="LABOUR_DAY"/>
+    <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="COMMONWEALTH_CULTURAL_DAY"/>
+    <FixedWeekday which="FOURTH" weekday="THURSDAY" month="NOVEMBER" descriptionPropertiesKey="THANKSGIVING"/>
+
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_the_Northern_Mariana_Islands</Source>
+    <Source of="1 CMC § 311 (statutory list of legal holidays)">https://cnmilaw.org/pdf/cmc_section/T1/311.pdf</Source>
+    <Source of="1 CMC § 323 (Citizenship Day designation)">https://cnmilaw.org/pdf/cmc_section/T1/323.pdf</Source>
+    <Source of="2026 Legal Holidays memorandum (Saturday -> preceding Friday shift for Independence Day; Juneteenth)">https://opm.cnmi.gov/assets/docs/legal-holidays--2026.pdf</Source>
+    <Source of="2022 Legal Holidays memorandum (both Saturday -> Friday and Sunday -> Monday shifts; Juneteenth)">https://governor.cnmi.gov/archived-news/executive-actions-archive/memorandum-2022-legal-holidays/</Source>
+    <Source of="2023 Legal Holidays memorandum (Sunday -> following Monday shift for New Year's Day)">https://governor.cnmi.gov/archived-news/executive-actions-archive/memo-2023-legal-holidays/</Source>
+    <Source of="2025 Legal Holidays memorandum">https://governor.cnmi.gov/news/2025-legal-holidays/</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:MP</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:MP</Source>
+  </Sources>
+
+</Configuration>
