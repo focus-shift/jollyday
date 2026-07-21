@@ -324,6 +324,20 @@ To access the public holidays of a subdivision of a country, e.g. Baden-Württem
 | Subdivisions ([ISO 3166-2])    | Yes       |
 | City Holiday                   | Yes       |
 
+## Financial market calendars
+
+Besides countries, jollyday also supports the closing days of a few financial markets/systems. These are addressed
+via the constants of `HolidayCalendar` (not via an ISO 3166 code) and can be used like any other calendar, e.g.
+`HolidayManager.getInstance(ManagerParameters.create(HolidayCalendar.NYSE))`.
+
+| Calendar                                                                             | `HolidayCalendar` constant | Hierarchy key        |
+|--------------------------------------------------------------------------------------|----------------------------|----------------------|
+| New York Stock Exchange (NYSE)                                                       | `NYSE`                     | `nyse`               |
+| New York Stock Exchange Euronext                                                     | `NYSE_EURONEXT`            | `nyse-euronext`      |
+| London Metal Exchange (LME)                                                          | `LONDON_METAL_EXCHANGE`    | `lme`                |
+| TARGET (Trans-European Automated Real-time Gross settlement Express Transfer system) | `TARGET`                   | `target`             |
+| TARGET2-Securities (T2S)                                                             | `TARGET2_SECURITIES`       | `target2-securities` |
+
 ## Holiday types
 
 The following holiday types are supported:

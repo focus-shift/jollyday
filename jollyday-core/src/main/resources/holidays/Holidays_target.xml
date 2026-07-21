@@ -8,10 +8,17 @@
     <Fixed validFrom="2000" month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
     <Fixed validFrom="2000" month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
     <Fixed validFrom="1999" month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-    <Fixed validFrom="1999" month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
+    <Fixed validFrom="2000" month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
     <Fixed validFrom="2001" validTo="2001" month="DECEMBER" day="31" descriptionPropertiesKey="NEW_YEARS_EVE"/>
     <Fixed validFrom="1999" validTo="1999" month="DECEMBER" day="31" descriptionPropertiesKey="NEW_YEARS_EVE"/>
     <ChristianHoliday validFrom="2000" type="GOOD_FRIDAY"/>
     <ChristianHoliday validFrom="2000" type="EASTER_MONDAY"/>
   </Holidays>
+
+  <Sources>
+    <Source>https://www.ecb.europa.eu/press/pr/date/1999/html/pr990331.en.html</Source>
+    <Source>https://www.ecb.europa.eu/press/pr/date/1999/html/pr990715_1.en.html</Source>
+    <Source>https://www.ecb.europa.eu/press/pr/date/2000/html/pr000525_2.en.html</Source>
+    <Source>https://www.ecb.europa.eu/press/pr/date/2000/html/pr001214_4.en.html</Source>
+  </Sources>
 </Configuration>

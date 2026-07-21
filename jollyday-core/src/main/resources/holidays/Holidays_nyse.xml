@@ -6,7 +6,6 @@
                xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
   <Holidays>
     <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
-      <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
     <Fixed month="JUNE" day="19" validFrom="2022" descriptionPropertiesKey="JUNETEENTH">
@@ -21,10 +20,16 @@
       <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
+    <Fixed month="SEPTEMBER" day="11" validFrom="2001" validTo="2001" descriptionPropertiesKey="SEPTEMBER_11_ATTACKS"/>
+    <Fixed month="SEPTEMBER" day="12" validFrom="2001" validTo="2001" descriptionPropertiesKey="SEPTEMBER_11_ATTACKS"/>
+    <Fixed month="SEPTEMBER" day="13" validFrom="2001" validTo="2001" descriptionPropertiesKey="SEPTEMBER_11_ATTACKS"/>
+    <Fixed month="SEPTEMBER" day="14" validFrom="2001" validTo="2001" descriptionPropertiesKey="SEPTEMBER_11_ATTACKS"/>
     <Fixed month="JUNE" day="11" validFrom="2004" validTo="2004" descriptionPropertiesKey="FUNERAL_OF_PRESIDENT_REAGAN"/>
     <Fixed month="JANUARY" day="2" validFrom="2007" validTo="2007" descriptionPropertiesKey="REMEMBERANCE_OF_PRESIDENT_FORD"/>
     <Fixed month="OCTOBER" day="29" validFrom="2012" validTo="2012" descriptionPropertiesKey="HURRICANE_SANDY"/>
     <Fixed month="OCTOBER" day="30" validFrom="2012" validTo="2012" descriptionPropertiesKey="HURRICANE_SANDY"/>
+    <Fixed month="DECEMBER" day="5" validFrom="2018" validTo="2018" descriptionPropertiesKey="NATIONAL_DAY_OF_MOURNING_BUSH"/>
+    <Fixed month="JANUARY" day="9" validFrom="2025" validTo="2025" descriptionPropertiesKey="NATIONAL_DAY_OF_MOURNING_CARTER"/>
     <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
     <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
     <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" descriptionPropertiesKey="MEMORIAL_DAY"/>
