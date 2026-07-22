@@ -27,6 +27,7 @@
   <Sources>
     <Source>https://www.wien.gv.at/amtshelfer/feiertage/</Source>
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Austria</Source>
+    <Source of="24/31 December status and no weekend substitution">https://de.wikipedia.org/wiki/Feiertage_in_%C3%96sterreich</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:AT</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:AT</Source>
   </Sources>
