@@ -124,4 +124,14 @@ class JacksonFixedWeekdayInMonth implements FixedWeekdayInMonthHolidayConfigurat
       .map(Movable.MovingCondition.class::cast)
       .toList();
   }
+
+  /**
+   * {@inheritDoc}
+   *
+   * @return {@inheritDoc}
+   */
+  @Override
+  public boolean avoidHolyWeek() {
+    return fixedWeekdayInMonth.isAvoidHolyWeek();
+  }
 }

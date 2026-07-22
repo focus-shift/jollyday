@@ -10,6 +10,8 @@ public class FixedWeekdayInMonth extends MoveableHoliday {
   protected Weekday weekday;
   @JacksonXmlProperty(localName = "month", isAttribute = true)
   protected Month month;
+  @JacksonXmlProperty(localName = "avoidHolyWeek", isAttribute = true)
+  protected Boolean avoidHolyWeek;
 
   /**
    * Gets the value of the which property.
@@ -69,6 +71,26 @@ public class FixedWeekdayInMonth extends MoveableHoliday {
    */
   public void setMonth(Month value) {
     this.month = value;
+  }
+
+  /**
+   * Gets the value of the avoidHolyWeek property.
+   *
+   * @return possible object is
+   * {@link Boolean }
+   */
+  public Boolean isAvoidHolyWeek() {
+    return avoidHolyWeek == null ? Boolean.FALSE : avoidHolyWeek;
+  }
+
+  /**
+   * Sets the value of the avoidHolyWeek property.
+   *
+   * @param value allowed object is
+   *              {@link Boolean }
+   */
+  public void setAvoidHolyWeek(Boolean value) {
+    this.avoidHolyWeek = value;
   }
 
 }

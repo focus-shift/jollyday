@@ -1,12 +1,19 @@
 package de.focus_shift.jollyday.tests.country;
 
+import de.focus_shift.jollyday.core.Holiday;
+import de.focus_shift.jollyday.core.HolidayManager;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
+import java.time.LocalDate;
 import java.time.Year;
+import java.util.Set;
 
 import static de.focus_shift.jollyday.core.HolidayCalendar.SWITZERLAND;
 import static de.focus_shift.jollyday.core.HolidayType.BANK_HOLIDAY;
 import static de.focus_shift.jollyday.core.HolidayType.OBSERVANCE;
+import static de.focus_shift.jollyday.core.ManagerParameters.create;
 import static de.focus_shift.jollyday.tests.CalendarCheckerApi.assertFor;
 import static java.time.Month.AUGUST;
 import static java.time.Month.DECEMBER;
@@ -16,6 +23,7 @@ import static java.time.Month.MARCH;
 import static java.time.Month.MAY;
 import static java.time.Month.NOVEMBER;
 import static java.time.Month.SEPTEMBER;
+import static org.assertj.core.api.Assertions.assertThat;
 
 
 class HolidayCHTest {
@@ -267,5 +275,33 @@ class HolidayCHTest {
       .hasChristianHoliday("WHIT_MONDAY").inSubdivision("zh")
 
       .check();
+  }
+
+  /**
+   * Näfelser Fahrt in Glarus is the first Thursday in April, unless that Thursday falls within
+   * Holy Week (between, inclusive, Easter Sunday minus 7 days and Easter Sunday itself), in which
+   * case it moves one week later to the second Thursday in April instead. See issue #657.
+   * <p>
+   * Expected dates cross-checked against <a href="https://www.ferienwiki.ch/feiertage/naefelser-fahrt">ferienwiki.ch</a>
+   * for 2026 (Apr 9, shifted) and 2027 (Apr 1, not shifted).
+   */
+  @ParameterizedTest
+  @CsvSource({
+    "2007, 2007-04-12", // Easter 2007-04-08 -> shifted from 2007-04-05
+    "2010, 2010-04-08", // Easter 2010-04-04 -> shifted from 2010-04-01
+    "2024, 2024-04-04", // Easter 2024-03-31 -> not shifted
+    "2025, 2025-04-03", // Easter 2025-04-20 -> not shifted
+    "2026, 2026-04-09", // Easter 2026-04-05 -> shifted from 2026-04-02
+    "2027, 2027-04-01", // Easter 2027-03-28 -> not shifted
+    "2028, 2028-04-06", // Easter 2028-04-16 -> not shifted
+  })
+  void ensuresNaefelserFahrtAvoidsHolyWeek(final int year, final LocalDate expectedDate) {
+    final HolidayManager holidayManager = HolidayManager.getInstance(create(SWITZERLAND));
+    final Set<Holiday> holidays = holidayManager.getHolidays(Year.of(year), "gl");
+
+    assertThat(holidays)
+      .filteredOn(holiday -> "NAEFELS_TRIP".equals(holiday.getPropertiesKey()))
+      .extracting(Holiday::getDate)
+      .containsExactly(expectedDate);
   }
 }

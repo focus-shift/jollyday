@@ -18,6 +18,7 @@
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:CH</Source>
     <Source of="ST Berchthold as bank holiday">https://www.six-group.com/de/market-data/news-tools/trading-currency-holiday-calendar.html</Source>
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Switzerland</Source>
+    <Source of="Näfelser Fahrt Holy Week rule">https://www.ferienwiki.ch/feiertage/naefelser-fahrt</Source>
   </Sources>
 
   <SubConfigurations hierarchy="ag" description="Aargau">
@@ -117,7 +118,7 @@
     <Holidays>
       <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
       <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
-      <FixedWeekday which="FIRST" weekday="THURSDAY" month="APRIL" descriptionPropertiesKey="NAEFELS_TRIP"/>
+      <FixedWeekday which="FIRST" weekday="THURSDAY" month="APRIL" avoidHolyWeek="true" descriptionPropertiesKey="NAEFELS_TRIP"/>
       <ChristianHoliday type="GOOD_FRIDAY"/>
       <ChristianHoliday type="EASTER_MONDAY"/>
       <ChristianHoliday type="WHIT_MONDAY"/>

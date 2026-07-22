@@ -25,10 +25,21 @@ public class FindWeekDayInMonth implements Function<FixedWeekdayInMonthHolidayCo
     final LocalDate date = LocalDate.of(year.getValue(), fixedWeekdayInMonth.month(), 1);
     final DayOfWeek weekday = fixedWeekdayInMonth.weekday();
 
+    final LocalDate computedDate;
     if (LAST == fixedWeekdayInMonth.which()) {
-      return date.with(lastInMonth(weekday));
+      computedDate = date.with(lastInMonth(weekday));
+    } else {
+      computedDate = date.with(dayOfWeekInMonth(fixedWeekdayInMonth.which().ordinal() + 1, weekday));
     }
 
-    return date.with(dayOfWeekInMonth(fixedWeekdayInMonth.which().ordinal() + 1, weekday));
+    if (fixedWeekdayInMonth.avoidHolyWeek()) {
+      final LocalDate easterSunday = new CalculateGregorianEasterSunday().apply(year);
+      final LocalDate holyWeekStart = easterSunday.minusDays(7);
+      if (!computedDate.isBefore(holyWeekStart) && !computedDate.isAfter(easterSunday)) {
+        return computedDate.plusWeeks(1);
+      }
+    }
+
+    return computedDate;
   }
 }

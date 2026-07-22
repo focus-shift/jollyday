@@ -41,4 +41,19 @@ public interface FixedWeekdayInMonthHolidayConfiguration extends Described, Limi
    */
   @NonNull Occurrence which();
 
+  /**
+   * Describes whether the holiday is moved one week later (same weekday) if it would otherwise
+   * fall within Holy Week, i.e. between (inclusive) the Sunday before Easter Sunday minus 7 days
+   * and Easter Sunday itself.
+   * <p>
+   * Example: Näfelser Fahrt in the canton of Glarus, Switzerland, is the first Thursday in April,
+   * unless that Thursday falls within Holy Week, in which case it is observed on the second
+   * Thursday in April instead.
+   *
+   * @return {@code true} if the holiday avoids Holy Week, {@code false} otherwise (default)
+   */
+  default boolean avoidHolyWeek() {
+    return false;
+  }
+
 }

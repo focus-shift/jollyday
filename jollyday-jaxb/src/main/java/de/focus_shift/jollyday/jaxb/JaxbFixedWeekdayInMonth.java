@@ -83,4 +83,14 @@ class JaxbFixedWeekdayInMonth implements FixedWeekdayInMonthHolidayConfiguration
       .map(MovingCondition.class::cast)
       .toList();
   }
+
+  /**
+   * {@inheritDoc}
+   *
+   * @return {@inheritDoc}
+   */
+  @Override
+  public boolean avoidHolyWeek() {
+    return fixedWeekdayInMonth.isAvoidHolyWeek();
+  }
 }

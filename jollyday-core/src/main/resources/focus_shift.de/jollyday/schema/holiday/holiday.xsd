@@ -120,6 +120,7 @@
         <xsd:attribute name="which" type="Which"/>
         <xsd:attribute name="weekday" type="Weekday"/>
         <xsd:attribute name="month" type="Month"/>
+        <xsd:attribute name="avoidHolyWeek" type="xsd:boolean" default="false"/>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>

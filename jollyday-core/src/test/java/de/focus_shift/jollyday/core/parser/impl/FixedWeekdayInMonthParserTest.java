@@ -103,6 +103,42 @@ class FixedWeekdayInMonthParserTest {
     }
   }
 
+  @Nested
+  class AvoidHolyWeekTests {
+
+    @Test
+    void ensureThatFirstThursdayOfAprilMovesToSecondThursdayWhenWithinHolyWeek() {
+
+      // Easter Sunday 2026 is April 5, 2026; the first Thursday of April 2026 (April 2) falls
+      // within Holy Week (March 29 - April 5), so the holiday must move to April 9, 2026.
+      final Year year = Year.of(2026);
+      final FixedWeekdayInMonthHolidayConfiguration fixedWeekdayInMonth =
+        getFixedWeekdayInMonthAvoidingHolyWeek(DayOfWeek.THURSDAY, Month.APRIL, Occurrence.FIRST, year, year);
+
+      final FixedWeekdayInMonthParser sut = new FixedWeekdayInMonthParser();
+      when(holidays.fixedWeekdays()).thenReturn(List.of(fixedWeekdayInMonth));
+
+      final List<Holiday> calculatedHoliday = sut.parse(year, holidays);
+      assertThat(calculatedHoliday.get(0).getDate()).isEqualTo(LocalDate.of(2026, Month.APRIL, 9));
+    }
+
+    @Test
+    void ensureThatFirstThursdayOfAprilStaysUnchangedWhenNotWithinHolyWeek() {
+
+      // Easter Sunday 2027 is March 28, 2027; the first Thursday of April 2027 (April 1) is not
+      // within Holy Week (March 21 - March 28), so the holiday stays on April 1, 2027.
+      final Year year = Year.of(2027);
+      final FixedWeekdayInMonthHolidayConfiguration fixedWeekdayInMonth =
+        getFixedWeekdayInMonthAvoidingHolyWeek(DayOfWeek.THURSDAY, Month.APRIL, Occurrence.FIRST, year, year);
+
+      final FixedWeekdayInMonthParser sut = new FixedWeekdayInMonthParser();
+      when(holidays.fixedWeekdays()).thenReturn(List.of(fixedWeekdayInMonth));
+
+      final List<Holiday> calculatedHoliday = sut.parse(year, holidays);
+      assertThat(calculatedHoliday.get(0).getDate()).isEqualTo(LocalDate.of(2027, Month.APRIL, 1));
+    }
+  }
+
   private static FixedWeekdayInMonthHolidayConfiguration getFixedWeekdayInMonth(
     final DayOfWeek dayOfWeek,
     final Month month,
@@ -166,6 +202,70 @@ class FixedWeekdayInMonthParserTest {
       @Override
       public @NonNull YearCycle cycle() {
         return EVERY_YEAR;
+      }
+    };
+  }
+
+  private static FixedWeekdayInMonthHolidayConfiguration getFixedWeekdayInMonthAvoidingHolyWeek(
+    final DayOfWeek dayOfWeek,
+    final Month month,
+    final Occurrence occurrence,
+    final Year validFrom,
+    final Year validTo
+  ) {
+    final FixedWeekdayInMonthHolidayConfiguration delegate =
+      getFixedWeekdayInMonth(dayOfWeek, month, occurrence, validFrom, validTo, null);
+
+    return new FixedWeekdayInMonthHolidayConfiguration() {
+
+      @Override
+      public @NonNull List<MovingCondition> conditions() {
+        return delegate.conditions();
+      }
+
+      @Override
+      public @NonNull DayOfWeek weekday() {
+        return delegate.weekday();
+      }
+
+      @Override
+      public @NonNull Month month() {
+        return delegate.month();
+      }
+
+      @Override
+      public @NonNull Occurrence which() {
+        return delegate.which();
+      }
+
+      @Override
+      public @NonNull String descriptionPropertiesKey() {
+        return delegate.descriptionPropertiesKey();
+      }
+
+      @Override
+      public @NonNull HolidayType holidayType() {
+        return delegate.holidayType();
+      }
+
+      @Override
+      public @NonNull Optional<Year> validFrom() {
+        return delegate.validFrom();
+      }
+
+      @Override
+      public @NonNull Optional<Year> validTo() {
+        return delegate.validTo();
+      }
+
+      @Override
+      public @NonNull YearCycle cycle() {
+        return delegate.cycle();
+      }
+
+      @Override
+      public boolean avoidHolyWeek() {
+        return true;
       }
     };
   }
