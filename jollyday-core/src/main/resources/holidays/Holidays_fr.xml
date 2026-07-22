@@ -7,7 +7,7 @@
   <Holidays>
     <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
     <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
-    <Fixed month="MAY" day="8" descriptionPropertiesKey="VICTORY_DAY"/>
+    <Fixed month="MAY" day="8" validFrom="1981" descriptionPropertiesKey="VICTORY_DAY"/>
     <Fixed month="JULY" day="14" descriptionPropertiesKey="NATIONAL_DAY"/>
     <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_MARY"/>
     <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
@@ -21,6 +21,8 @@
 
   <Sources>
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_France</Source>
+    <Source>https://www.service-public.gouv.fr/particuliers/vosdroits/F2405</Source>
+    <Source>https://fr.wikipedia.org/wiki/8_mai_1945</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:FR</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:FR</Source>
   </Sources>

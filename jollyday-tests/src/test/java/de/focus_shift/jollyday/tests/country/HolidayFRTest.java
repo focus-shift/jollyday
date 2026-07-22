@@ -20,7 +20,7 @@ class HolidayFRTest {
     assertFor(FRANCE)
       .hasFixedHoliday("NEW_YEAR", JANUARY, 1).and()
       .hasFixedHoliday("LABOUR_DAY", MAY, 1).and()
-      .hasFixedHoliday("VICTORY_DAY", MAY, 8).and()
+      .hasFixedHoliday("VICTORY_DAY", MAY, 8).validFrom(Year.of(1981)).and()
       .hasFixedHoliday("NATIONAL_DAY", JULY, 14).and()
       .hasFixedHoliday("ASSUMPTION_MARY", AUGUST, 15).and()
       .hasFixedHoliday("ALL_SAINTS", NOVEMBER, 1).and()
