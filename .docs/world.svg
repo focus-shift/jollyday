@@ -1514,7 +1514,7 @@
     <path d="M 645.2 429 645.1 429.5 644.8 429.6 644.4 429.9 644.2 429.9 643.5 430.3 643.3 430.1 643.6 429.8 644.3 429.3 645.2 429 Z">
     </path>
   </g>
-  <g class="country" data-iso="VI">
+  <g class="country active" data-iso="VI">
     <title>United States Virgin Islands</title>
     <path d="M 624.5 387.8 624.8 388.1 623.7 388.3 623.6 387.8 624.3 387.6 624.5 387.8 Z">
     </path>

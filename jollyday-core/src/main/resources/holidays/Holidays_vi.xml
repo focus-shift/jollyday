@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="vi" description="Virgin Islands (U.S.)"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <!-- Fixed date holidays that are also observed as U.S. federal holidays follow the federal
+         Saturday/Sunday mondianisation practice (5 U.S.C. § 6103): Saturday -> preceding Friday,
+         Sunday -> following Monday. Confirmed e.g. for Veterans Day 2023 (Nov 11 fell on a
+         Saturday, government offices closed Friday, Nov 10, 2023). -->
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
+      <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="JUNE" day="19" validFrom="2023" descriptionPropertiesKey="JUNETEENTH">
+      <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="JULY" day="4" descriptionPropertiesKey="INDEPENDENCE_DAY">
+      <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="VETERANS_DAY">
+      <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS">
+      <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- Fixed date holidays that only exist locally (not federally recognized) are not moved
+         when they fall on a weekend. Confirmed e.g. for Three Kings Day 2024 (Jan 6 fell on a
+         Saturday and was not observed with a government closure on a different day). -->
+    <Fixed month="JANUARY" day="6" descriptionPropertiesKey="THREE_KINGS_DAY"/>
+    <Fixed month="MARCH" day="31" descriptionPropertiesKey="TRANSFER_DAY"/>
+    <Fixed month="JULY" day="3" descriptionPropertiesKey="EMANCIPATION_DAY"/>
+    <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="D_HAMILTON_JACKSON_DAY"/>
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY"/>
+
+    <!-- Holidays that already fall on a fixed weekday, so no weekend shift applies. -->
+    <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
+    <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" descriptionPropertiesKey="PRESIDENTS_DAY"/>
+    <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" descriptionPropertiesKey="MEMORIAL_DAY"/>
+    <FixedWeekday which="FIRST" weekday="MONDAY" month="SEPTEMBER" descriptionPropertiesKey="LABOUR_DAY"/>
+    <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" descriptionPropertiesKey="PUERTO_RICO_FRIENDSHIP_DAY"/>
+    <FixedWeekday which="FOURTH" weekday="THURSDAY" month="NOVEMBER" descriptionPropertiesKey="THANKSGIVING"/>
+
+    <!-- Easter-relative holidays; always Thursday/Friday/Monday, so no weekend shift applies. -->
+    <ChristianHoliday type="MAUNDY_THURSDAY"/>
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_the_United_States_Virgin_Islands</Source>
+    <Source of="1 V.I.C. § 171">https://law.justia.com/codes/virgin-islands/2019/title-1/chapter-11/171</Source>
+    <Source>https://visuperiorcourt.hosted.civiclive.com/about_the_court/holidays</Source>
+    <Source>https://www.vi.gov/governor-bryan-announces-2023-holiday-schedule/</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:VI</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:VI</Source>
+  </Sources>
+</Configuration>
