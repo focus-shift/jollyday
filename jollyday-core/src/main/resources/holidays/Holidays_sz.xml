@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="sz" description="Eswatini"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <!-- Public Holidays Act, 1938 (in force since 1939): a fixed-date holiday falling on a
+         Sunday is observed on the following Monday. Confirmed for both a pre- and post-2020
+         occurrence (King's Birthday and Independence Day both fell on Sunday in 2020 and were
+         observed the following Monday), so this is modeled without a validFrom restriction. -->
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="APRIL" day="19" validFrom="1987" descriptionPropertiesKey="KINGS_BIRTHDAY">
+      <!-- King Mswati III's birthday. The Act shifts this to the following Tuesday instead of
+           Monday in the rare case that 19 April itself is Easter Sunday (since Easter Monday
+           would already occupy the Monday) - not modeled here as jollyday's MovingCondition
+           cannot express a shift conditional on another holiday's computed date. -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="APRIL" day="25" validFrom="1969" descriptionPropertiesKey="FLAG_DAY">
+      <!-- Same rare Easter-Sunday-coincidence caveat as King's Birthday applies here too. -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="JULY" day="22" validFrom="1983" descriptionPropertiesKey="KING_SOBHUZA_BIRTHDAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="SEPTEMBER" day="6" descriptionPropertiesKey="INDEPENDENCE_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+      <!-- When Christmas Day (25 Dec) falls on Sunday and is observed the following Monday,
+           Boxing Day would naturally fall on that same Monday. The Act resolves the clash by
+           moving Boxing Day on to the Tuesday instead. -->
+      <MovingCondition substitute="MONDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+    <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY"/>
+    <ChristianHoliday type="ASCENSION_DAY"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Eswatini</Source>
+    <Source of="Public Holidays Act, 1938 (via vacanza/holidays library, primary text Cloudflare-blocked)">https://github.com/vacanza/holidays/blob/dev/holidays/countries/eswatini.py</Source>
+    <Source of="2020 substitute-Monday precedent (King's Birthday, Independence Day)">https://www.officeholidays.com/countries/swaziland/2020</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:SZ</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:SZ</Source>
+  </Sources>
+</Configuration>
