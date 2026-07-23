@@ -9,7 +9,7 @@
       <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
-    <Fixed month="MAY" day="30" validFrom="1869" validTo="1967" descriptionPropertiesKey="MEMORIAL_DAY"/>
+    <Fixed month="MAY" day="30" validFrom="1869" validTo="1970" descriptionPropertiesKey="MEMORIAL_DAY"/>
     <Fixed month="JUNE" day="19" validFrom="2021" descriptionPropertiesKey="JUNETEENTH">
       <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
@@ -28,7 +28,7 @@
     </Fixed>
     <FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
     <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1971" descriptionPropertiesKey="PRESIDENTS_DAY"/>
-    <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" validFrom="1968" descriptionPropertiesKey="MEMORIAL_DAY"/>
+    <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" validFrom="1971" descriptionPropertiesKey="MEMORIAL_DAY"/>
     <FixedWeekday which="FIRST" weekday="MONDAY" month="SEPTEMBER" validFrom="1895" descriptionPropertiesKey="LABOUR_DAY"/>
     <FixedWeekday which="FOURTH" weekday="THURSDAY" month="NOVEMBER" validFrom="1863" descriptionPropertiesKey="THANKSGIVING"/>
   </Holidays>
@@ -37,6 +37,7 @@
     <Source>https://en.wikipedia.org/wiki/Federal_holidays_in_the_United_States</Source>
     <Source>https://en.wikipedia.org/wiki/Indigenous_Peoples%27_Day_(United_States)#Indigenous_Peoples_Day_observers</Source>
     <Source>https://en.wikipedia.org/wiki/Confederate_Memorial_Day</Source>
+    <Source of="Legal basis (5 U.S.C. 6103, Uniform Monday Holiday Act)">https://www.govinfo.gov/content/pkg/USCODE-2024-title5/html/USCODE-2024-title5-partIII-subpartE-chap61-subchapI-sec6103.htm</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:US</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:US</Source>
   </Sources>
