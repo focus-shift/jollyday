@@ -23,12 +23,21 @@
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Spain</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:ES</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:ES</Source>
+    <Source of="Legal basis for Sunday substitution (Art. 45.2/45.3)">https://www.boe.es/buscar/act.php?id=BOE-A-1983-20906</Source>
+    <Source of="Official calendar 2026">https://www.boe.es/diario_boe/txt.php?id=BOE-A-2025-21667</Source>
   </Sources>
 
   <SubConfigurations hierarchy="an" description="Andalusia">
     <Holidays>
       <Fixed month="JANUARY" day="2" validFrom="2023" validTo="2023" descriptionPropertiesKey="NEW_YEAR"/>
       <Fixed month="FEBRUARY" day="28" descriptionPropertiesKey="REGIONAL"/> <!--Day of Andalucía-->
+      <Fixed month="FEBRUARY" day="29" validFrom="2016" validTo="2016" descriptionPropertiesKey="REGIONAL"/> <!--Day of Andalucía moved from Sunday 28 Feb-->
+      <Fixed month="MARCH" day="1" validFrom="2021" validTo="2021" descriptionPropertiesKey="REGIONAL"/> <!--Day of Andalucía moved from Sunday 28 Feb-->
+      <Fixed month="MARCH" day="1" validFrom="2027" validTo="2027" descriptionPropertiesKey="REGIONAL"/> <!--Day of Andalucía moved from Sunday 28 Feb-->
+      <Fixed month="AUGUST" day="16" validFrom="2021" validTo="2021" descriptionPropertiesKey="ASSUMPTION_DAY"/>
+      <Fixed month="AUGUST" day="16" validFrom="2027" validTo="2027" descriptionPropertiesKey="ASSUMPTION_DAY"/>
+      <Fixed month="NOVEMBER" day="2" validFrom="2026" validTo="2026" descriptionPropertiesKey="ALL_SAINTS"/>
+      <Fixed month="DECEMBER" day="7" validFrom="2026" validTo="2026" descriptionPropertiesKey="CONSTITUTION_DAY"/>
       <Fixed month="DECEMBER" day="25" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS">
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
@@ -45,6 +54,9 @@
       <Fixed month="APRIL" day="23" descriptionPropertiesKey="REGIONAL"> <!--Day of Aragón-->
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
+      <Fixed month="AUGUST" day="16" validFrom="2021" validTo="2021" descriptionPropertiesKey="ASSUMPTION_DAY"/>
+      <Fixed month="NOVEMBER" day="2" validFrom="2026" validTo="2026" descriptionPropertiesKey="ALL_SAINTS"/>
+      <Fixed month="DECEMBER" day="7" validFrom="2026" validTo="2026" descriptionPropertiesKey="CONSTITUTION_DAY"/>
       <Fixed month="DECEMBER" day="25" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS">
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
@@ -56,6 +68,9 @@
     <Holidays>
       <Fixed month="JANUARY" day="2" validFrom="2023" validTo="2023" descriptionPropertiesKey="NEW_YEAR"/>
       <Fixed month="SEPTEMBER" day="8" descriptionPropertiesKey="REGIONAL"/> <!--Day of Asturias-->
+      <Fixed month="AUGUST" day="16" validFrom="2021" validTo="2021" descriptionPropertiesKey="ASSUMPTION_DAY"/>
+      <Fixed month="NOVEMBER" day="2" validFrom="2026" validTo="2026" descriptionPropertiesKey="ALL_SAINTS"/>
+      <Fixed month="DECEMBER" day="7" validFrom="2026" validTo="2026" descriptionPropertiesKey="CONSTITUTION_DAY"/>
       <Fixed month="DECEMBER" day="25" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS">
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
@@ -67,6 +82,8 @@
     <Holidays>
       <Fixed month="MAY" day="30" descriptionPropertiesKey="REGIONAL"/> <!--Day of the Canary Islands-->
       <Fixed month="JULY" day="25" validFrom="2017" validTo="2017" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="AUGUST" day="16" validFrom="2021" validTo="2021" descriptionPropertiesKey="ASSUMPTION_DAY"/>
+      <Fixed month="NOVEMBER" day="2" validFrom="2026" validTo="2026" descriptionPropertiesKey="ALL_SAINTS"/>
       <Fixed month="DECEMBER" day="25" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS">
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
@@ -78,6 +95,7 @@
     <Holidays>
       <Fixed month="JULY" day="28" descriptionPropertiesKey="REGIONAL"/> <!--Day of the Cantabrian Institutions-->
       <Fixed month="SEPTEMBER" day="15" descriptionPropertiesKey="APARECIDA"/>
+      <Fixed month="DECEMBER" day="7" validFrom="2026" validTo="2026" descriptionPropertiesKey="CONSTITUTION_DAY"/>
       <Fixed month="DECEMBER" day="25" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS">
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
@@ -95,6 +113,10 @@
       <Fixed month="APRIL" day="23" validFrom="2024" descriptionPropertiesKey="REGIONAL"/> <!--Castile and León Day-->
       <Fixed month="JULY" day="25" validFrom="2017" validTo="2017" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
       <Fixed month="JULY" day="25" validFrom="2023" validTo="2023" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="AUGUST" day="16" validFrom="2021" validTo="2021" descriptionPropertiesKey="ASSUMPTION_DAY"/>
+      <Fixed month="AUGUST" day="16" validFrom="2027" validTo="2027" descriptionPropertiesKey="ASSUMPTION_DAY"/>
+      <Fixed month="NOVEMBER" day="2" validFrom="2026" validTo="2026" descriptionPropertiesKey="ALL_SAINTS"/>
+      <Fixed month="DECEMBER" day="7" validFrom="2026" validTo="2026" descriptionPropertiesKey="CONSTITUTION_DAY"/>
       <Fixed month="DECEMBER" day="25" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS">
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
@@ -111,6 +133,7 @@
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
       <Fixed month="MAY" day="31" descriptionPropertiesKey="REGIONAL"/> <!--Day of Castilla-La Mancha-->
+      <Fixed month="NOVEMBER" day="2" validFrom="2026" validTo="2026" descriptionPropertiesKey="ALL_SAINTS"/>
       <Fixed month="DECEMBER" day="25" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS">
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
@@ -156,6 +179,8 @@
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
       <Fixed month="SEPTEMBER" day="8" descriptionPropertiesKey="REGIONAL"/> <!--Day of Extremadura-->
+      <Fixed month="NOVEMBER" day="2" validFrom="2026" validTo="2026" descriptionPropertiesKey="ALL_SAINTS"/>
+      <Fixed month="DECEMBER" day="7" validFrom="2026" validTo="2026" descriptionPropertiesKey="CONSTITUTION_DAY"/>
       <Fixed month="DECEMBER" day="25" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS">
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
@@ -174,9 +199,6 @@
       <Fixed month="MAY" day="17" descriptionPropertiesKey="GALICIAN_LITERATURE"/>
       <Fixed month="JULY" day="25" validFrom="2017" validTo="2020" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
       <Fixed month="JULY" day="25" validFrom="2022" validTo="2027" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
-      <Fixed month="DECEMBER" day="25" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS">
-        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-      </Fixed>
       <ChristianHoliday type="MAUNDY_THURSDAY"/>
     </Holidays>
   </SubConfigurations>
@@ -195,6 +217,7 @@
   <SubConfigurations hierarchy="ri" description="La Rioja">
     <Holidays>
       <Fixed month="JUNE" day="9" descriptionPropertiesKey="REGIONAL"/> <!--Day of La Rioja-->
+      <Fixed month="DECEMBER" day="7" validFrom="2026" validTo="2026" descriptionPropertiesKey="CONSTITUTION_DAY"/>
       <Fixed month="DECEMBER" day="25" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS">
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
@@ -222,6 +245,8 @@
       </Fixed>
       <Fixed month="JULY" day="25" validFrom="2017" validTo="2017" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
       <Fixed month="JULY" day="25" validFrom="2022" validTo="2022" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="NOVEMBER" day="2" validFrom="2026" validTo="2026" descriptionPropertiesKey="ALL_SAINTS"/>
+      <Fixed month="DECEMBER" day="7" validFrom="2026" validTo="2026" descriptionPropertiesKey="CONSTITUTION_DAY"/>
       <Fixed month="DECEMBER" day="25" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS">
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
@@ -238,6 +263,10 @@
 
   <SubConfigurations hierarchy="ml" description="Melilla">
     <Holidays>
+      <Fixed month="DECEMBER" day="7" validFrom="2026" validTo="2026" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="DECEMBER" day="25" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS">
+        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+      </Fixed>
       <IslamicHoliday type="ID_UL_ADHA" validFrom="2010"/>
     </Holidays>
   </SubConfigurations>
@@ -246,6 +275,7 @@
     <Holidays>
       <Fixed month="JANUARY" day="2" validFrom="2023" validTo="2023" descriptionPropertiesKey="NEW_YEAR"/>
       <Fixed month="JUNE" day="9" descriptionPropertiesKey="REGIONAL"/> <!--Day of Murcia-->
+      <Fixed month="DECEMBER" day="7" validFrom="2026" validTo="2026" descriptionPropertiesKey="CONSTITUTION_DAY"/>
       <Fixed month="DECEMBER" day="25" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS">
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
@@ -259,6 +289,7 @@
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
       <Fixed month="JULY" day="25" validFrom="2023" validTo="2023" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="NOVEMBER" day="2" validFrom="2026" validTo="2026" descriptionPropertiesKey="ALL_SAINTS"/>
       <ChristianHoliday type="MAUNDY_THURSDAY"/>
       <ChristianHoliday type="EASTER_MONDAY"/>
     </Holidays>
