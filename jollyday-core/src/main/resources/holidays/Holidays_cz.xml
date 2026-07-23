@@ -24,6 +24,7 @@
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_the_Czech_Republic</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:CZ</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:CZ</Source>
+    <Source of="Legal basis (no weekend-substitution rule exists)">https://ppropo.mpsv.cz/zakon_245_2000</Source>
   </Sources>
 
 </Configuration>
