@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="qa" description="Qatar"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <!-- Qatar's weekend is Friday-Saturday. Gregorian New Year's Day (1 January) is not an
+         official public holiday in Qatar: it is absent from the gazetted holiday list and is
+         only observed separately as a bank holiday by the Qatar Central Bank. -->
+    <Fixed month="SEPTEMBER" day="3" validTo="2006" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <!-- National Day moved from 3 September (marking 1971 independence) to 18 December (marking
+         the 1878 accession of founder Sheikh Jassim bin Mohammed Al Thani) by Law No. 11 of 2007.
+         When 18 Dec falls on a Saturday, it has consistently been shifted to the following Sunday
+         in both occurrences since the 2007 change (2010, 2021). When it falls on a Friday, the
+         government has handled it inconsistently year to year via ad-hoc Amiri Diwan announcement
+         (shifted to the preceding Thursday in 2009 and 2020, but to the following Sunday in 2015),
+         so no Friday shift is modeled here. -->
+    <Fixed month="DECEMBER" day="18" validFrom="2007" descriptionPropertiesKey="NATIONAL_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="SUNDAY"/>
+    </Fixed>
+    <FixedWeekday which="SECOND" weekday="TUESDAY" month="FEBRUARY" validFrom="2012" descriptionPropertiesKey="SPORTS_DAY"/>
+    <IslamicHoliday type="ID_AL_FITR"/>
+    <IslamicHoliday type="ID_AL_FITR_2"/>
+    <IslamicHoliday type="ID_AL_FITR_3"/>
+    <IslamicHoliday type="ARAFAAT"/>
+    <IslamicHoliday type="ID_UL_ADHA"/>
+    <IslamicHoliday type="ID_UL_ADHA_2"/>
+    <IslamicHoliday type="ID_UL_ADHA_3"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Qatar</Source>
+    <Source>https://en.wikipedia.org/wiki/Qatar_National_Day</Source>
+    <Source of="National Day weekend-shift precedent (2020, Friday -> preceding Thursday)">https://thepeninsulaqatar.com/article/14/12/2020/Amiri-Diwan-announces-official-holiday-for-Qatar-National-Day-2020</Source>
+    <Source of="National Day weekend-shift precedent (2021, Saturday -> following Sunday)">https://www.diwan.gov.qa/briefing-room/news/general/statements/2021/december/15/amiri-diwan-announces-qatar-national-day-holiday?sc_lang=en</Source>
+    <Source of="National Sports Day">https://diwan.gov.qa/en/briefing-room/news/general/statements/2026/february/amiri-diwan-announces-national-sports-day-holiday</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:QA</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:QA</Source>
+  </Sources>
+</Configuration>
