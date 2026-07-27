@@ -61,6 +61,7 @@
       <xsd:element name="FixedWeekdayRelativeToFixed" type="FixedWeekdayRelativeToFixed" maxOccurs="unbounded" minOccurs="0"/>
       <xsd:element name="EthiopianOrthodoxHoliday" type="EthiopianOrthodoxHoliday" maxOccurs="unbounded" minOccurs="0"/>
       <xsd:element name="RelativeToEasterSunday" type="RelativeToEasterSunday" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="HebrewHoliday" type="HebrewHoliday" maxOccurs="unbounded" minOccurs="0"/>
     </xsd:sequence>
   </xsd:complexType>
 
@@ -334,4 +335,26 @@
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
+
+  <xsd:complexType name="HebrewHoliday">
+    <xsd:complexContent>
+      <xsd:extension base="Holiday">
+        <xsd:attribute name="type" type="HebrewHolidayType"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:simpleType name="HebrewHolidayType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="ROSH_HASHANA"/>
+      <xsd:enumeration value="ROSH_HASHANA_II"/>
+      <xsd:enumeration value="YOM_KIPPUR"/>
+      <xsd:enumeration value="SUKKOT"/>
+      <xsd:enumeration value="SHEMINI_ATZERET"/>
+      <xsd:enumeration value="PESACH"/>
+      <xsd:enumeration value="PESACH_VII"/>
+      <xsd:enumeration value="SHAVUOT"/>
+      <xsd:enumeration value="YOM_HAATZMAUT"/>
+    </xsd:restriction>
+  </xsd:simpleType>
 </xsd:schema>

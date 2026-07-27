@@ -27,6 +27,8 @@ public class Holidays {
   protected List<EthiopianOrthodoxHoliday> ethiopianOrthodoxHoliday;
   @JacksonXmlElementWrapper(useWrapping = false)
   protected List<RelativeToEasterSunday> relativeToEasterSunday;
+  @JacksonXmlElementWrapper(useWrapping = false)
+  protected List<HebrewHoliday> hebrewHoliday;
 
   /**
    * Gets the value of the fixed property.
@@ -296,6 +298,33 @@ public class Holidays {
       relativeToEasterSunday = new ArrayList<>();
     }
     return this.relativeToEasterSunday;
+  }
+
+  /**
+   * Gets the value of the hebrewHoliday property.
+   *
+   * <p>
+   * This accessor method returns a reference to the live list,
+   * not a snapshot. Therefore any modification you make to the
+   * returned list will be present inside the Jakarta XML Binding object.
+   * This is why there is not a <CODE>set</CODE> method for the hebrewHoliday property.
+   *
+   * <p>
+   * For example, to add a new item, do as follows:
+   * <pre>
+   *    getHebrewHoliday().add(newItem);
+   * </pre>
+   *
+   *
+   * <p>
+   * Objects of the following type(s) are allowed in the list
+   * {@link HebrewHoliday }
+   */
+  public List<HebrewHoliday> getHebrewHoliday() {
+    if (hebrewHoliday == null) {
+      hebrewHoliday = new ArrayList<>();
+    }
+    return this.hebrewHoliday;
   }
 
 }

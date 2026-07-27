@@ -25,6 +25,7 @@ class ApplicationClasspathConfigurationProviderContentTest {
                 "parser.impl.de.focus_shift.jollyday.core.spi.FixedWeekdayRelativeToFixedHolidayConfiguration",
                 "parser.impl.de.focus_shift.jollyday.core.spi.EthiopianOrthodoxHolidayConfiguration",
                 "parser.impl.de.focus_shift.jollyday.core.spi.RelativeToEasterSundayHolidayConfiguration",
+                "parser.impl.de.focus_shift.jollyday.core.spi.HebrewHolidayConfiguration",
                 "configuration.service.impl"
         );
     }

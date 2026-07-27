@@ -6,6 +6,7 @@ import de.focus_shift.jollyday.core.spi.FixedHolidayConfiguration;
 import de.focus_shift.jollyday.core.spi.FixedWeekdayBetweenFixedHolidayConfiguration;
 import de.focus_shift.jollyday.core.spi.FixedWeekdayInMonthHolidayConfiguration;
 import de.focus_shift.jollyday.core.spi.FixedWeekdayRelativeToFixedHolidayConfiguration;
+import de.focus_shift.jollyday.core.spi.HebrewHolidayConfiguration;
 import de.focus_shift.jollyday.core.spi.HolidayConfigurations;
 import de.focus_shift.jollyday.core.spi.IslamicHolidayConfiguration;
 import de.focus_shift.jollyday.core.spi.RelativeToEasterSundayHolidayConfiguration;
@@ -153,6 +154,19 @@ public class JacksonHolidays implements HolidayConfigurations {
     return holidays.getRelativeToEasterSunday().stream()
       .map(JacksonRelativeToEasterSunday::new)
       .map(RelativeToEasterSundayHolidayConfiguration.class::cast)
+      .toList();
+  }
+
+  /**
+   * {@inheritDoc}
+   *
+   * @return {@inheritDoc}
+   */
+  @Override
+  public @NonNull List<HebrewHolidayConfiguration> hebrewHolidays() {
+    return holidays.getHebrewHoliday().stream()
+      .map(JacksonHebrewHoliday::new)
+      .map(HebrewHolidayConfiguration.class::cast)
       .toList();
   }
 }

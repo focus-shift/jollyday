@@ -80,4 +80,11 @@ public interface HolidayConfigurations {
    */
   @NonNull List<RelativeToEasterSundayHolidayConfiguration> relativeToEasterSunday();
 
+    /**
+   * see {@link HebrewHolidayConfiguration}
+   *
+   * @return list of all hebrewHolidays configurations
+   */
+  @NonNull List<HebrewHolidayConfiguration> hebrewHolidays();
+
 }

@@ -166,6 +166,23 @@ public class CalendarChecker implements
   }
 
   @Override
+  public CalendarCheckerApi.Properties hasHebrewHoliday(final String propertyKey) {
+    return hasHebrewHoliday(propertyKey, PUBLIC_HOLIDAY);
+  }
+
+  @Override
+  public CalendarCheckerApi.Properties hasHebrewHoliday(final String propertyKey, final HolidayType type) {
+    Objects.requireNonNull(propertyKey, "propertyKey is required");
+    Objects.requireNonNull(type, "holiday type is required");
+
+    this.category = BY_KEY;
+    this.propertyKey = "hebrew." + propertyKey;
+    this.type = type;
+
+    return this;
+  }
+
+  @Override
   public CalendarCheckerApi.Properties hasRelativeToEasterSundayHoliday(final String propertyKey) {
     return hasRelativeToEasterSundayHoliday(propertyKey, PUBLIC_HOLIDAY);
   }

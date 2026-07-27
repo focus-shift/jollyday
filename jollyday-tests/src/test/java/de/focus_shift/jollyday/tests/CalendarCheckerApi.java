@@ -155,6 +155,23 @@ public interface CalendarCheckerApi {
     Properties hasEthiopianOrthodoxHoliday(final String propertyKey, final HolidayType type);
 
     /**
+     * Checks for a hebrew (Jewish lunisolar calendar) holiday with the given property key.
+     *
+     * @param propertyKey the property key of the holiday
+     * @return properties for further assertions
+     */
+    Properties hasHebrewHoliday(final String propertyKey);
+
+    /**
+     * Checks for a hebrew (Jewish lunisolar calendar) holiday with the given property key and holiday type.
+     *
+     * @param propertyKey the property key of the holiday
+     * @param type        the type of the holiday
+     * @return properties for further assertions
+     */
+    Properties hasHebrewHoliday(final String propertyKey, final HolidayType type);
+
+    /**
      * Checks for a holiday relative to Easter Sunday with the given property key.
      *
      * @param propertyKey the property key of the holiday
