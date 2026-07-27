@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="il" description="Israel"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+
+  <Holidays>
+    <!-- Tishrei 1-2: Rosh Hashanah (Jewish New Year) -->
+    <HebrewHoliday type="ROSH_HASHANA" validFrom="1948"/>
+    <HebrewHoliday type="ROSH_HASHANA_II" validFrom="1948"/>
+    <!-- Tishrei 10: Yom Kippur (Day of Atonement) -->
+    <HebrewHoliday type="YOM_KIPPUR" validFrom="1948"/>
+    <!-- Tishrei 15: Sukkot (Feast of Tabernacles) -->
+    <HebrewHoliday type="SUKKOT" validFrom="1948"/>
+    <!-- Tishrei 22: Shemini Atzeret / Simchat Torah -->
+    <HebrewHoliday type="SHEMINI_ATZERET" validFrom="1948"/>
+    <!-- Nisan 15: Pesach (Passover). 1948's occurrence (24 April) preceded the declaration
+         of independence (14 May 1948), so the first Israeli Pesach is 1949 -->
+    <HebrewHoliday type="PESACH" validFrom="1949"/>
+    <!-- Nisan 21: Seventh day of Pesach (same 1948/1949 reasoning as above) -->
+    <HebrewHoliday type="PESACH_VII" validFrom="1949"/>
+    <!-- Sivan 6: Shavuot -->
+    <HebrewHoliday type="SHAVUOT" validFrom="1948"/>
+    <!-- Iyar 5: Yom Ha'atzmaut (Independence Day), first observed in 1949 -->
+    <HebrewHoliday type="YOM_HAATZMAUT" validFrom="1949"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Israel</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:IL</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:IL</Source>
+  </Sources>
+</Configuration>
