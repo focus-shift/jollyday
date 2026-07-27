@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="ir" description="Iran"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+
+  <Holidays>
+    <!-- Solar Hijri calendar national holidays (fixed Gregorian equivalents) -->
+    <!-- Bahman 22: Anniversary of the victory of the Islamic Revolution (1979) -->
+    <Fixed month="FEBRUARY" day="11" descriptionPropertiesKey="VICTORY_OF_ISLAMIC_REVOLUTION"/>
+    <!-- Esfand 29: Nationalization of the Iranian oil industry (1951) -->
+    <Fixed month="MARCH" day="20" descriptionPropertiesKey="OIL_INDUSTRY_NATIONALIZATION_DAY"/>
+    <!-- Farvardin 1-4: Nowruz, the Iranian New Year -->
+    <Fixed month="MARCH" day="21" descriptionPropertiesKey="NOWRUZ"/>
+    <Fixed month="MARCH" day="22" descriptionPropertiesKey="NOWRUZ"/>
+    <Fixed month="MARCH" day="23" descriptionPropertiesKey="NOWRUZ"/>
+    <Fixed month="MARCH" day="24" descriptionPropertiesKey="NOWRUZ"/>
+    <!-- Farvardin 12: Islamic Republic Day (1979 referendum) -->
+    <Fixed month="APRIL" day="1" descriptionPropertiesKey="ISLAMIC_REPUBLIC_DAY"/>
+    <!-- Farvardin 13: Sizdah Bedar (Nature Day) -->
+    <Fixed month="APRIL" day="2" descriptionPropertiesKey="SIZDAH_BEDAR"/>
+    <!-- Khordad 14: Demise of Imam Khomeini (1989) -->
+    <Fixed month="JUNE" day="4" descriptionPropertiesKey="DEMISE_OF_IMAM_KHOMEINI"/>
+    <!-- Khordad 15: Uprising of 15 Khordad (1963) -->
+    <Fixed month="JUNE" day="5" descriptionPropertiesKey="FIFTEENTH_OF_KHORDAD_UPRISING"/>
+
+    <!-- Islamic (Lunar Hijri) calendar religious holidays -->
+    <!-- Muharram 9: Tasua -->
+    <IslamicHoliday type="TASUA"/>
+    <!-- Muharram 10: Ashura -->
+    <IslamicHoliday type="ASCHURA"/>
+    <!-- Safar 20: Arbaeen -->
+    <IslamicHoliday type="ARBAEEN"/>
+    <!-- Safar 28: Death of Muhammad and Hasan ibn Ali (Mujtaba) -->
+    <IslamicHoliday type="DEATH_OF_MUHAMMAD_AND_HASAN_MOJTABA"/>
+    <!-- Safar 29: Death of Imam Reza -->
+    <IslamicHoliday type="DEATH_OF_IMAM_REZA"/>
+    <!-- Rabi al-Awwal 8: Death of Imam Hasan al-Askari -->
+    <IslamicHoliday type="DEATH_OF_IMAM_HASAN_ASKARI"/>
+    <!-- Rabi al-Awwal 17: Birth of Muhammad and Imam Ja'far al-Sadiq -->
+    <IslamicHoliday type="BIRTH_OF_MUHAMMAD_AND_IMAM_SADIQ"/>
+    <!-- Jumada al-Thani 3: Death of Fatima -->
+    <IslamicHoliday type="DEATH_OF_FATIMA"/>
+    <!-- Rajab 13: Birth of Imam Ali -->
+    <IslamicHoliday type="BIRTH_OF_IMAM_ALI"/>
+    <!-- Rajab 27: Eid al-Mab'ath (Muhammad's appointment as prophet) -->
+    <IslamicHoliday type="LAILAT_AL_MIRAJ" descriptionPropertiesKey="EID_E_MABATH"/>
+    <!-- Sha'ban 15: Birth of Imam Mahdi -->
+    <IslamicHoliday type="LAILAT_AL_BARAT" descriptionPropertiesKey="BIRTH_OF_IMAM_MAHDI"/>
+    <!-- Ramadan 21: Death of Imam Ali -->
+    <IslamicHoliday type="DEATH_OF_IMAM_ALI"/>
+    <!-- Shawwal 1-2: Eid ul-Fitr -->
+    <IslamicHoliday type="ID_AL_FITR"/>
+    <IslamicHoliday type="ID_AL_FITR_2"/>
+    <!-- Shawwal 25: Death of Imam Ja'far al-Sadiq -->
+    <IslamicHoliday type="DEATH_OF_IMAM_SADIQ"/>
+    <!-- Dhu al-Hijjah 10: Eid ul-Adha -->
+    <IslamicHoliday type="ID_UL_ADHA"/>
+    <!-- Dhu al-Hijjah 18: Eid al-Ghadir -->
+    <IslamicHoliday type="ID_AL_GHADIR"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Iran</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:IR</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:IR</Source>
+  </Sources>
+</Configuration>

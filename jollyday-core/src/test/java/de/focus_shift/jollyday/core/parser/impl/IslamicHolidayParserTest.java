@@ -68,7 +68,16 @@ class IslamicHolidayParserTest {
          "2022-07-17",   // ID_AL_GHADIR
          "2022-09-14",  // GRAND_MAGAL_OF_TOUBA
          "2022-09-27",  // QAUMEE_DHUVAS
-         "2022-10-26"   // EMBRACING_OF_ISLAM_DAY
+         "2022-10-26",  // EMBRACING_OF_ISLAM_DAY
+         "2022-09-16",  // ARBAEEN
+         "2022-09-24",  // DEATH_OF_MUHAMMAD_AND_HASAN_MOJTABA
+         "2022-09-25",  // DEATH_OF_IMAM_REZA
+         "2022-10-04",  // DEATH_OF_IMAM_HASAN_ASKARI
+         "2022-10-13",  // BIRTH_OF_MUHAMMAD_AND_IMAM_SADIQ
+         "2022-01-06",  // DEATH_OF_FATIMA (occurs twice in 2022, first occurrence expected here)
+         "2022-02-14",  // BIRTH_OF_IMAM_ALI
+         "2022-04-22",  // DEATH_OF_IMAM_ALI
+         "2022-05-26"   // DEATH_OF_IMAM_SADIQ
        };
 
        return IntStream.range(0, islamicHolidayTypes.length)

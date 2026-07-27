@@ -177,6 +177,15 @@
       <xsd:enumeration value="GRAND_MAGAL_OF_TOUBA"/>
       <xsd:enumeration value="QAUMEE_DHUVAS"/>
       <xsd:enumeration value="EMBRACING_OF_ISLAM_DAY"/>
+      <xsd:enumeration value="ARBAEEN"/>
+      <xsd:enumeration value="DEATH_OF_MUHAMMAD_AND_HASAN_MOJTABA"/>
+      <xsd:enumeration value="DEATH_OF_IMAM_REZA"/>
+      <xsd:enumeration value="DEATH_OF_IMAM_HASAN_ASKARI"/>
+      <xsd:enumeration value="BIRTH_OF_MUHAMMAD_AND_IMAM_SADIQ"/>
+      <xsd:enumeration value="DEATH_OF_FATIMA"/>
+      <xsd:enumeration value="BIRTH_OF_IMAM_ALI"/>
+      <xsd:enumeration value="DEATH_OF_IMAM_ALI"/>
+      <xsd:enumeration value="DEATH_OF_IMAM_SADIQ"/>
     </xsd:restriction>
   </xsd:simpleType>
 

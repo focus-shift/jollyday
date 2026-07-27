@@ -75,6 +75,24 @@ public class IslamicHolidayParser implements HolidayParser {
             new CalculateRelativeDatesFromChronologyWithinGregorianYear(3, 1, HIJRAH, 0).apply(year);
           case EMBRACING_OF_ISLAM_DAY ->
             new CalculateRelativeDatesFromChronologyWithinGregorianYear(4, 1, HIJRAH, 0).apply(year);
+          case ARBAEEN ->
+            new CalculateRelativeDatesFromChronologyWithinGregorianYear(2, 20, HIJRAH, 0).apply(year);
+          case DEATH_OF_MUHAMMAD_AND_HASAN_MOJTABA ->
+            new CalculateRelativeDatesFromChronologyWithinGregorianYear(2, 28, HIJRAH, 0).apply(year);
+          case DEATH_OF_IMAM_REZA ->
+            new CalculateRelativeDatesFromChronologyWithinGregorianYear(2, 29, HIJRAH, 0).apply(year);
+          case DEATH_OF_IMAM_HASAN_ASKARI ->
+            new CalculateRelativeDatesFromChronologyWithinGregorianYear(3, 8, HIJRAH, 0).apply(year);
+          case BIRTH_OF_MUHAMMAD_AND_IMAM_SADIQ ->
+            new CalculateRelativeDatesFromChronologyWithinGregorianYear(3, 17, HIJRAH, 0).apply(year);
+          case DEATH_OF_FATIMA ->
+            new CalculateRelativeDatesFromChronologyWithinGregorianYear(6, 3, HIJRAH, 0).apply(year);
+          case BIRTH_OF_IMAM_ALI ->
+            new CalculateRelativeDatesFromChronologyWithinGregorianYear(7, 13, HIJRAH, 0).apply(year);
+          case DEATH_OF_IMAM_ALI ->
+            new CalculateRelativeDatesFromChronologyWithinGregorianYear(9, 21, HIJRAH, 0).apply(year);
+          case DEATH_OF_IMAM_SADIQ ->
+            new CalculateRelativeDatesFromChronologyWithinGregorianYear(10, 25, HIJRAH, 0).apply(year);
         };
 
         return islamicHolidays
