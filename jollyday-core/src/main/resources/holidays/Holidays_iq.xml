@@ -39,8 +39,12 @@
 
   </Holidays>
 
+  <Weekend weekday="FRIDAY"/>
+  <Weekend weekday="SATURDAY"/>
+
   <Sources>
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Iraq</Source>
+    <Source of="Weekend">https://www.npr.org/2005/03/18/4540715/mulling-workdays-weekends-in-iraq</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:IQ</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:IQ</Source>
   </Sources>

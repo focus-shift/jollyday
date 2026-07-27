@@ -22,8 +22,14 @@
     <IslamicHoliday type="ID_UL_ADHA_3"/>
   </Holidays>
 
+  <Weekend weekday="THURSDAY" validFrom="1976" validTo="2008"/>
+  <Weekend weekday="FRIDAY" validFrom="1976" validTo="2008"/>
+  <Weekend weekday="FRIDAY" validFrom="2009"/>
+  <Weekend weekday="SATURDAY" validFrom="2009"/>
+
   <Sources>
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Algeria</Source>
+    <Source of="Weekend">https://gulfnews.com/world/mena/algeria-government-issues-decree-shifting-weekend-days-1.502315</Source>
     <Source>https://mofa.gov.pk/algiers-holidays</Source>
     <Source>https://www.mosaicnorthafrica.com/holidays-in-algeria/</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:DZ</Source>
