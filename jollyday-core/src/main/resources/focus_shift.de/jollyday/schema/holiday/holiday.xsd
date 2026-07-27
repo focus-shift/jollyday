@@ -69,11 +69,18 @@
   <xsd:complexType name="Configuration">
     <xsd:sequence>
       <xsd:element name="Holidays" type="Holidays"/>
+      <xsd:element name="Weekend" type="Weekend" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element name="Sources" type="Sources" minOccurs="0"/>
       <xsd:element name="SubConfigurations" type="Configuration" minOccurs="0" maxOccurs="unbounded"/>
     </xsd:sequence>
     <xsd:attribute name="hierarchy" type="xsd:string"/>
     <xsd:attribute name="description" type="xsd:string"/>
+  </xsd:complexType>
+
+  <xsd:complexType name="Weekend">
+    <xsd:attribute name="weekday" type="Weekday" use="required"/>
+    <xsd:attribute name="validFrom" type="xsd:int"/>
+    <xsd:attribute name="validTo" type="xsd:int"/>
   </xsd:complexType>
 
   <xsd:complexType name="Source">

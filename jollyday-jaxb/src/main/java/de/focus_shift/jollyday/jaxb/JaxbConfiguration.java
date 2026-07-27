@@ -2,6 +2,7 @@ package de.focus_shift.jollyday.jaxb;
 
 import de.focus_shift.jollyday.core.spi.HolidayCalendarConfiguration;
 import de.focus_shift.jollyday.core.spi.HolidayConfigurations;
+import de.focus_shift.jollyday.core.spi.WeekendConfiguration;
 import de.focus_shift.jollyday.jaxb.mapping.Configuration;
 import org.jspecify.annotations.NonNull;
 
@@ -26,6 +27,11 @@ class JaxbConfiguration implements HolidayCalendarConfiguration {
   @Override
   public @NonNull Stream<HolidayCalendarConfiguration> subConfigurations() {
     return xmlConfiguration.getSubConfigurations().stream().map(JaxbConfiguration::new);
+  }
+
+  @Override
+  public @NonNull Stream<WeekendConfiguration> weekends() {
+    return xmlConfiguration.getWeekend().stream().map(JaxbWeekend::new).map(WeekendConfiguration.class::cast);
   }
 
   @Override
