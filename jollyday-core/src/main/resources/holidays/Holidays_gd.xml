@@ -68,4 +68,32 @@
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:GD</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:GD</Source>
   </Sources>
+
+  <SubConfigurations hierarchy="01" description="Saint Andrew">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="02" description="Saint David">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="03" description="Saint George">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="04" description="Saint John">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="05" description="Saint Mark">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="06" description="Saint Patrick">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="10" description="Southern Grenadine Islands">
+    <Holidays/>
+  </SubConfigurations>
 </Configuration>

@@ -54,4 +54,17 @@
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:SZ</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:SZ</Source>
   </Sources>
+
+  <SubConfigurations hierarchy="hh" description="Hhohho">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="lu" description="Lubombo">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ma" description="Manzini">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="sh" description="Shiselweni">
+    <Holidays/>
+  </SubConfigurations>
 </Configuration>

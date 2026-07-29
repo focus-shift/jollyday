@@ -26,4 +26,20 @@
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:SL</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:SL</Source>
   </Sources>
+
+  <SubConfigurations hierarchy="e" description="Eastern">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="n" description="Northern">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="nw" description="North Western">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="s" description="Southern">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="w" description="Western Area">
+    <Holidays/>
+  </SubConfigurations>
 </Configuration>

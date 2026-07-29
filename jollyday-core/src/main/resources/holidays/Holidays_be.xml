@@ -28,4 +28,56 @@
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:BE</Source>
   </Sources>
 
+  <SubConfigurations hierarchy="bru" description="Brussels">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="van" description="Antwerp">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="vbr" description="Flemish Brabant">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="vlg" description="Flanders">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="vli" description="Limburg">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="vov" description="East Flanders">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="vwv" description="West Flanders">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="wal" description="Wallonia">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="wbr" description="Walloon Brabant">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="wht" description="Hainaut">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="wlg" description="Liège">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="wlx" description="Luxembourg">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="wna" description="Namur">
+    <Holidays/>
+  </SubConfigurations>
+
 </Configuration>

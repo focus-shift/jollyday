@@ -110,4 +110,104 @@
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:CO</Source>
   </Sources>
 
+  <SubConfigurations hierarchy="ama" description="Amazonas">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ant" description="Antioquia">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ara" description="Arauca">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="atl" description="Atlántico">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="bol" description="Bolívar">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="boy" description="Boyacá">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="cal" description="Caldas">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="caq" description="Caquetá">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="cas" description="Casanare">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="cau" description="Cauca">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ces" description="Cesar">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="cho" description="Chocó">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="cor" description="Córdoba">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="cun" description="Cundinamarca">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="dc" description="Distrito Capital de Bogotá">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="gua" description="Guainía">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="guv" description="Guaviare">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="hui" description="Huila">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="lag" description="La Guajira">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="mag" description="Magdalena">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="met" description="Meta">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="nar" description="Nariño">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="nsa" description="Norte de Santander">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="put" description="Putumayo">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="qui" description="Quindío">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ris" description="Risaralda">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="san" description="Santander">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="sap" description="San Andrés, Providencia y Santa Catalina">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="suc" description="Sucre">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="tol" description="Tolima">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="vac" description="Valle del Cauca">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="vau" description="Vaupés">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="vid" description="Vichada">
+    <Holidays/>
+  </SubConfigurations>
+
 </Configuration>

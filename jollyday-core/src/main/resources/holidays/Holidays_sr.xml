@@ -84,4 +84,35 @@
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:SR</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:SR</Source>
   </Sources>
+
+  <SubConfigurations hierarchy="br" description="Brokopondo">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="cm" description="Commewijne">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="cr" description="Coronie">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ma" description="Marowijne">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ni" description="Nickerie">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="pm" description="Paramaribo">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="pr" description="Para">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="sa" description="Saramacca">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="si" description="Sipaliwini">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="wa" description="Wanica">
+    <Holidays/>
+  </SubConfigurations>
 </Configuration>

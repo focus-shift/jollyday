@@ -24,4 +24,38 @@
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:CG</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:CG</Source>
   </Sources>
+
+  <SubConfigurations hierarchy="2" description="Lékoumou">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="7" description="Likouala">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="8" description="Cuvette">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="9" description="Niari">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="11" description="Bouenza">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="12" description="Pool">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="13" description="Sangha">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="14" description="Plateaux">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="15" description="Cuvette-Ouest">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="16" description="Pointe-Noire">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="bzv" description="Brazzaville">
+    <Holidays/>
+  </SubConfigurations>
 </Configuration>

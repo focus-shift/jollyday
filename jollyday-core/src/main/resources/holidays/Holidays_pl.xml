@@ -27,4 +27,68 @@
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:PL</Source>
   </Sources>
 
+  <SubConfigurations hierarchy="02" description="Dolnośląskie">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="04" description="Kujawsko-Pomorskie">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="06" description="Lubelskie">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="08" description="Lubuskie">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="10" description="Łódzkie">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="12" description="Małopolskie">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="14" description="Mazowieckie">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="16" description="Opolskie">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="18" description="Podkarpackie">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="20" description="Podlaskie">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="22" description="Pomorskie">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="24" description="Śląskie">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="26" description="Świętokrzyskie">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="28" description="Warmińsko-Mazurskie">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="30" description="Wielkopolskie">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="32" description="Zachodniopomorskie">
+    <Holidays/>
+  </SubConfigurations>
+
 </Configuration>

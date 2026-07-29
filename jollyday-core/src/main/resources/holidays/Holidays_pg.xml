@@ -48,4 +48,71 @@
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:PG</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:PG</Source>
   </Sources>
+
+  <SubConfigurations hierarchy="cpk" description="Chimbu">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="cpm" description="Central">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ebr" description="East New Britain">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ehg" description="Eastern Highlands">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="epw" description="Enga">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="esw" description="East Sepik">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="gpk" description="Gulf">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="hla" description="Hela">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="jwk" description="Jiwaka">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="mba" description="Milne Bay">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="mpl" description="Morobe">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="mpm" description="Madang">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="mrl" description="Manus">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ncd" description="National Capital District">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="nik" description="New Ireland">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="npp" description="Northern">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="nsb" description="Bougainville">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="san" description="West Sepik">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="shm" description="Southern Highlands">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="wbk" description="West New Britain">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="whm" description="Western Highlands">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="wpd" description="Western">
+    <Holidays/>
+  </SubConfigurations>
 </Configuration>

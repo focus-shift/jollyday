@@ -27,4 +27,59 @@
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:AO</Source>
   </Sources>
 
+  <SubConfigurations hierarchy="bgo" description="Bengo">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="bgu" description="Benguela">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="bie" description="Bié">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="cab" description="Cabinda">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ccu" description="Cuando Cubango">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="cnn" description="Cunene">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="cno" description="Cuanza-Norte">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="cus" description="Cuanza-Sul">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="hua" description="Huambo">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="hui" description="Huíla">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="lno" description="Lunda-Norte">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="lsu" description="Lunda-Sul">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="lua" description="Luanda">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="mal" description="Malange">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="mox" description="Moxico">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="nam" description="Namibe">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="uig" description="Uíge">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="zai" description="Zaire">
+    <Holidays/>
+  </SubConfigurations>
+
 </Configuration>

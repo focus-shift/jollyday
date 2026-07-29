@@ -66,4 +66,23 @@
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:BZ</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:BZ</Source>
   </Sources>
+
+  <SubConfigurations hierarchy="bz" description="Belize">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="cy" description="Cayo">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="czl" description="Corozal">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ow" description="Orange Walk">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="sc" description="Stann Creek">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="tol" description="Toledo">
+    <Holidays/>
+  </SubConfigurations>
 </Configuration>

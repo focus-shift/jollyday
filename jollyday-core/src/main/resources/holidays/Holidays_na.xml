@@ -71,4 +71,60 @@
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:NA</Source>
   </Sources>
 
+  <SubConfigurations hierarchy="ca" description="Zambezi">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="er" description="Erongo">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ha" description="Hardap">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ka" description="ǁKaras">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ke" description="Kavango East">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="kh" description="Khomas">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ku" description="Kunene">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="kw" description="Kavango West">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="od" description="Otjozondjupa">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="oh" description="Omaheke">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="on" description="Oshana">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="os" description="Omusati">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ot" description="Oshikoto">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ow" description="Ohangwena">
+    <Holidays/>
+  </SubConfigurations>
+
 </Configuration>

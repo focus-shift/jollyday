@@ -30,4 +30,179 @@
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:DZ</Source>
   </Sources>
 
+  <SubConfigurations hierarchy="01" description="Adrar">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="02" description="Chlef">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="03" description="Laghouat">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="04" description="Oum el Bouaghi">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="05" description="Batna">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="06" description="Béjaïa">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="07" description="Biskra">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="08" description="Béchar">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="09" description="Blida">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="10" description="Bouira">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="11" description="Tamanrasset">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="12" description="Tébessa">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="13" description="Tlemcen">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="14" description="Tiaret">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="15" description="Tizi Ouzou">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="16" description="Alger">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="17" description="Djelfa">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="18" description="Jijel">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="19" description="Sétif">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="20" description="Saïda">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="21" description="Skikda">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="22" description="Sidi Bel Abbès">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="23" description="Annaba">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="24" description="Guelma">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="25" description="Constantine">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="26" description="Médéa">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="27" description="Mostaganem">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="28" description="M'sila">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="29" description="Mascara">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="30" description="Ouargla">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="31" description="Oran">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="32" description="El Bayadh">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="33" description="Illizi">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="34" description="Bordj Bou Arréridj">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="35" description="Boumerdès">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="36" description="El Tarf">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="37" description="Tindouf">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="38" description="Tissemsilt">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="39" description="El Oued">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="40" description="Khenchela">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="41" description="Souk Ahras">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="42" description="Tipaza">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="43" description="Mila">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="44" description="Aïn Defla">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="45" description="Naama">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="46" description="Aïn Témouchent">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="47" description="Ghardaïa">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="48" description="Relizane">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="49" description="Timimoun">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="50" description="Bordj Badji Mokhtar">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="51" description="Ouled Djellal">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="52" description="Béni Abbès">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="53" description="In Salah">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="54" description="In Guezzam">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="55" description="Touggourt">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="56" description="Djanet">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="57" description="El Meghaier">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="58" description="El Meniaa">
+    <Holidays/>
+  </SubConfigurations>
+
 </Configuration>

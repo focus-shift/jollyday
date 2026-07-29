@@ -30,4 +30,29 @@
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:BD</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:BD</Source>
   </Sources>
+
+  <SubConfigurations hierarchy="a" description="Barishal">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="b" description="Chattogram">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="c" description="Dhaka">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="d" description="Khulna">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="e" description="Rajshahi">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="f" description="Rangpur">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="g" description="Sylhet">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="h" description="Mymensingh">
+    <Holidays/>
+  </SubConfigurations>
 </Configuration>

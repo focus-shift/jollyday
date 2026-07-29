@@ -67,6 +67,10 @@
     </Holidays>
   </SubConfigurations>
 
+  <SubConfigurations hierarchy="ct" description="Capital Territory">
+    <Holidays/>
+  </SubConfigurations>
+
   <SubConfigurations hierarchy="gu" description="Guadalcanal">
     <Holidays>
       <Fixed month="AUGUST" day="1" descriptionPropertiesKey="PROVINCE_DAY">

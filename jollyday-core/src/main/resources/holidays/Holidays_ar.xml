@@ -40,4 +40,77 @@
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:AR</Source>
   </Sources>
 
+  <SubConfigurations hierarchy="a" description="Salta">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="b" description="Buenos Aires">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="c" description="Ciudad Autónoma de Buenos Aires">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="d" description="San Luis">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="e" description="Entre Ríos">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="f" description="La Rioja">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="g" description="Santiago del Estero">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="h" description="Chaco">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="j" description="San Juan">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="k" description="Catamarca">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="l" description="La Pampa">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="m" description="Mendoza">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="n" description="Misiones">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="p" description="Formosa">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="q" description="Neuquén">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="r" description="Río Negro">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="s" description="Santa Fe">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="t" description="Tucumán">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="u" description="Chubut">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="v" description="Tierra del Fuego">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="w" description="Corrientes">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="x" description="Córdoba">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="y" description="Jujuy">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="z" description="Santa Cruz">
+    <Holidays/>
+  </SubConfigurations>
+
 </Configuration>

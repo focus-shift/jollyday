@@ -74,4 +74,68 @@
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:PW</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:PW</Source>
   </Sources>
+
+  <SubConfigurations hierarchy="002" description="Aimeliik">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="004" description="Airai">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="010" description="Angaur">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="050" description="Hatohobei">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="100" description="Kayangel">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="150" description="Koror">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="212" description="Melekeok">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="214" description="Ngaraard">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="218" description="Ngarchelong">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="222" description="Ngardmau">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="224" description="Ngatpang">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="226" description="Ngchesar">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="227" description="Ngeremlengui">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="228" description="Ngiwal">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="350" description="Peleliu">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="370" description="Sonsorol">
+    <Holidays/>
+  </SubConfigurations>
 </Configuration>

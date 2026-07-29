@@ -22,4 +22,26 @@
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:BY</Source>
   </Sources>
 
+  <SubConfigurations hierarchy="br" description="Brest">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="hm" description="Minsk City">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ho" description="Gomel">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="hr" description="Grodno">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ma" description="Mogilev">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="mi" description="Minsk Region">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="vi" description="Vitebsk">
+    <Holidays/>
+  </SubConfigurations>
+
 </Configuration>

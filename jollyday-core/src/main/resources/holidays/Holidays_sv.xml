@@ -72,4 +72,60 @@
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:SV</Source>
   </Sources>
 
+  <SubConfigurations hierarchy="ah" description="Ahuachapán">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ca" description="Cabañas">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ch" description="Chalatenango">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="cu" description="Cuscatlán">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="li" description="La Libertad">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="mo" description="Morazán">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="pa" description="La Paz">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="sa" description="Santa Ana">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="sm" description="San Miguel">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="so" description="Sonsonate">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ss" description="San Salvador">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="sv" description="San Vicente">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="un" description="La Unión">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="us" description="Usulután">
+    <Holidays/>
+  </SubConfigurations>
+
 </Configuration>

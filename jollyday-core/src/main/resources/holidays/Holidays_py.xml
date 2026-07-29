@@ -25,4 +25,59 @@
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:PY</Source>
   </Sources>
 
+  <SubConfigurations hierarchy="1" description="Concepción">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="2" description="San Pedro">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="3" description="Cordillera">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="4" description="Guairá">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="5" description="Caaguazú">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="6" description="Caazapá">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="7" description="Itapúa">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="8" description="Misiones">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="9" description="Paraguarí">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="10" description="Alto Paraná">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="11" description="Central">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="12" description="Ñeembucú">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="13" description="Amambay">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="14" description="Canindeyú">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="15" description="Presidente Hayes">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="16" description="Alto Paraguay">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="19" description="Boquerón">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="asu" description="Asunción">
+    <Holidays/>
+  </SubConfigurations>
+
 </Configuration>

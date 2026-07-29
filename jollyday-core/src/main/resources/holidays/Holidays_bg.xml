@@ -63,4 +63,89 @@
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:BG</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:BG</Source>
   </Sources>
+
+  <SubConfigurations hierarchy="01" description="Blagoevgrad">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="02" description="Burgas">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="03" description="Varna">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="04" description="Veliko Tarnovo">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="05" description="Vidin">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="06" description="Vratsa">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="07" description="Gabrovo">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="08" description="Dobrich">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="09" description="Kardzhali">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="10" description="Kyustendil">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="11" description="Lovech">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="12" description="Montana">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="13" description="Pazardzhik">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="14" description="Pernik">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="15" description="Pleven">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="16" description="Plovdiv">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="17" description="Razgrad">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="18" description="Ruse">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="19" description="Silistra">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="20" description="Sliven">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="21" description="Smolyan">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="22" description="Sofia (stolitsa)">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="23" description="Sofia">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="24" description="Stara Zagora">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="25" description="Targovishte">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="26" description="Haskovo">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="27" description="Shumen">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="28" description="Yambol">
+    <Holidays/>
+  </SubConfigurations>
 </Configuration>

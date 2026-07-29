@@ -51,4 +51,239 @@
     <IslamicHoliday type="ID_UL_ADHA"/>
     <IslamicHoliday type="ID_UL_ADHA_2"/>
   </Holidays>
+
+  <SubConfigurations hierarchy="abs" description="Absheron">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="aga" description="Aghstafa">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="agc" description="Aghjabadi">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="agm" description="Aghdam">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ags" description="Agdash">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="agu" description="Aghsu">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ast" description="Astara">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ba" description="Baku">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="bab" description="Babek">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="bal" description="Balakan">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="bar" description="Barda">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="bey" description="Beylagan">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="bil" description="Bilasuvar">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="cab" description="Jabrayil">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="cal" description="Jalilabad">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="cul" description="Julfa">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="das" description="Dashkasan">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="fuz" description="Fuzuli">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ga" description="Ganja">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="gad" description="Gadabay">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="gor" description="Goranboy">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="goy" description="Goychay">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="gyg" description="Goygol">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="hac" description="Hajigabul">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="imi" description="Imishli">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ism" description="Ismayilli">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="kal" description="Kalbajar">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="kan" description="Kangarli">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="kur" description="Kurdamir">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="la" description="Lankaran City">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="lac" description="Lachin">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="lan" description="Lankaran">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ler" description="Lerik">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="mas" description="Masally">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="mi" description="Mingachevir">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="na" description="Naftalan">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="nef" description="Neftchala">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="nv" description="Nakhchivan City">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="nx" description="Nakhchivan">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ogu" description="Oghuz">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ord" description="Ordubad">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="qab" description="Gabala">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="qax" description="Gakh">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="qaz" description="Gazakh">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="qba" description="Guba">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="qbi" description="Gubadlı">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="qob" description="Gobustan">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="qus" description="Gusar">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="sa" description="Shaki City">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="sab" description="Sabirabad">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="sad" description="Sadarak">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="sah" description="Shahbuz">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="sak" description="Shaki">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="sal" description="Salyan">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="sar" description="Sharur">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="sat" description="Saatly">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="sbn" description="Shabran">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="siy" description="Siyazan">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="skr" description="Shamkir">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="sm" description="Sumgayit">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="smi" description="Shamakhi">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="smx" description="Samukh">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="sr" description="Shirvan">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="sus" description="Shusha">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="tar" description="Tartar">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="tov" description="Tovuz">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="uca" description="Ujar">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="xa" description="Khankendi">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="xac" description="Khachmaz">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="xci" description="Khojaly">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="xiz" description="Khizi">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="xvd" description="Khojavend">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="yar" description="Yardimli">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ye" description="Yevlakh City">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="yev" description="Yevlakh">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="zan" description="Zangilan">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="zaq" description="Zagatala">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="zar" description="Zardab">
+    <Holidays/>
+  </SubConfigurations>
 </Configuration>

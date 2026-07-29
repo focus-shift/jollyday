@@ -25,4 +25,32 @@
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:PK</Source>
   </Sources>
 
+  <SubConfigurations hierarchy="ba" description="Balochistan">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="gb" description="Gilgit-Baltistan">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="is" description="Islamabad">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="jk" description="Azad Jammu and Kashmir">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="kp" description="Khyber Pakhtunkhwa">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="pb" description="Punjab">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="sd" description="Sindh">
+    <Holidays/>
+  </SubConfigurations>
+
 </Configuration>
