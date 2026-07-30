@@ -48,4 +48,35 @@
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:GY</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:GY</Source>
   </Sources>
+
+  <SubConfigurations hierarchy="ba" description="Barima-Waini">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="cu" description="Cuyuni-Mazaruni">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="de" description="Demerara-Mahaica">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="eb" description="East Berbice-Corentyne">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="es" description="Essequibo Islands-West Demerara">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ma" description="Mahaica-Berbice">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="pm" description="Pomeroon-Supenaam">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="pt" description="Potaro-Siparuni">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ud" description="Upper Demerara-Berbice">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ut" description="Upper Takutu-Upper Essequibo">
+    <Holidays/>
+  </SubConfigurations>
 </Configuration>

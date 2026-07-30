@@ -26,4 +26,53 @@
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:BW</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:BW</Source>
   </Sources>
+
+  <SubConfigurations hierarchy="ce" description="Central">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ch" description="Chobe">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="fr" description="Francistown">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ga" description="Gaborone">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="gh" description="Ghanzi">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="jw" description="Jwaneng">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="kg" description="Kgalagadi">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="kl" description="Kgatleng">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="kw" description="Kweneng">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="lo" description="Lobatse">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ne" description="North East">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="nw" description="North West">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="se" description="South East">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="so" description="Southern">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="sp" description="Selibe Phikwe">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="st" description="Sowa Town">
+    <Holidays/>
+  </SubConfigurations>
 </Configuration>

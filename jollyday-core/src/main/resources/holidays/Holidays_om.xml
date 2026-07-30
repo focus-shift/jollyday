@@ -29,4 +29,38 @@
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:OM</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:OM</Source>
   </Sources>
+
+  <SubConfigurations hierarchy="bj" description="Al Batinah South">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="bs" description="Al Batinah North">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="bu" description="Al Buraimi">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="da" description="Ad Dakhiliyah">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ma" description="Muscat">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="mu" description="Musandam">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="sj" description="Ash Sharqiyah South">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ss" description="Ash Sharqiyah North">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="wu" description="Al Wusta">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="za" description="Ad Dhahirah">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="zu" description="Dhofar">
+    <Holidays/>
+  </SubConfigurations>
 </Configuration>

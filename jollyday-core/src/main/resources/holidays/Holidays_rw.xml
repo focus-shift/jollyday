@@ -29,4 +29,20 @@
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:RW</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:RW</Source>
   </Sources>
+
+  <SubConfigurations hierarchy="01" description="City of Kigali">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="02" description="Eastern">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="03" description="Northern">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="04" description="Western">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="05" description="Southern">
+    <Holidays/>
+  </SubConfigurations>
 </Configuration>

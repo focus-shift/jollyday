@@ -38,4 +38,29 @@
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:QA</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:QA</Source>
   </Sources>
+
+  <SubConfigurations hierarchy="da" description="Doha">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="kh" description="Khor">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ms" description="North">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ra" description="Rayyan">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="sh" description="Shahaniya">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="us" description="Umm Salal">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="wa" description="Wakra">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="za" description="Daayen">
+    <Holidays/>
+  </SubConfigurations>
 </Configuration>

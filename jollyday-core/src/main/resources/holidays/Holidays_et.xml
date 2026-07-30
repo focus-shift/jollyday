@@ -28,4 +28,44 @@
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:ET</Source>
   </Sources>
 
+  <SubConfigurations hierarchy="aa" description="Addis Ababa">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="af" description="Afar">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="am" description="Amara">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="be" description="Benshangul-Gumaz">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="dd" description="Dire Dawa">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ga" description="Gambela Peoples">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ha" description="Harari People">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="or" description="Oromia">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="si" description="Sidama">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="sn" description="Southern Nations, Nationalities and Peoples">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="so" description="Somali">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="sw" description="Southwest Ethiopia Peoples">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ti" description="Tigrai">
+    <Holidays/>
+  </SubConfigurations>
+
 </Configuration>

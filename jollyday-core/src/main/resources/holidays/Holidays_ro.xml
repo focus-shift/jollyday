@@ -30,4 +30,131 @@
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:RO</Source>
   </Sources>
 
+  <SubConfigurations hierarchy="ab" description="Alba">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ag" description="Argeș">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ar" description="Arad">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="b" description="București">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="bc" description="Bacău">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="bh" description="Bihor">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="bn" description="Bistrița-Năsăud">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="br" description="Brăila">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="bt" description="Botoșani">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="bv" description="Brașov">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="bz" description="Buzău">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="cj" description="Cluj">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="cl" description="Călărași">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="cs" description="Caraș-Severin">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ct" description="Constanța">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="cv" description="Covasna">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="db" description="Dâmbovița">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="dj" description="Dolj">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="gj" description="Gorj">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="gl" description="Galați">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="gr" description="Giurgiu">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="hd" description="Hunedoara">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="hr" description="Harghita">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="if" description="Ilfov">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="il" description="Ialomița">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="is" description="Iași">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="mh" description="Mehedinți">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="mm" description="Maramureș">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ms" description="Mureș">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="nt" description="Neamț">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ot" description="Olt">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ph" description="Prahova">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="sb" description="Sibiu">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="sj" description="Sălaj">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="sm" description="Satu Mare">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="sv" description="Suceava">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="tl" description="Tulcea">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="tm" description="Timiș">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="tr" description="Teleorman">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="vl" description="Vâlcea">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="vn" description="Vrancea">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="vs" description="Vaslui">
+    <Holidays/>
+  </SubConfigurations>
+
 </Configuration>

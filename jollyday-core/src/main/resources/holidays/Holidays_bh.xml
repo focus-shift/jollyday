@@ -27,4 +27,17 @@
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Bahrain</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:BH</Source>
   </Sources>
+
+  <SubConfigurations hierarchy="13" description="Capital Governorate">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="14" description="Southern Governorate">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="15" description="Muharraq Governorate">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="17" description="Northern Governorate">
+    <Holidays/>
+  </SubConfigurations>
 </Configuration>

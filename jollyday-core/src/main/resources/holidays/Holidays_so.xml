@@ -22,4 +22,59 @@
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:SO</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:SO</Source>
   </Sources>
+
+  <SubConfigurations hierarchy="aw" description="Awdal">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="bk" description="Bakool">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="bn" description="Banaadir">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="br" description="Bari">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="by" description="Bay">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ga" description="Galguduud">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ge" description="Gedo">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="hi" description="Hiiraan">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="jd" description="Jubbada Dhexe">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="jh" description="Jubbada Hoose">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="mu" description="Mudug">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="nu" description="Nugaal">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="sa" description="Sanaag">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="sd" description="Shabeellaha Dhexe">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="sh" description="Shabeellaha Hoose">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="so" description="Sool">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="to" description="Togdheer">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="wo" description="Woqooyi Galbeed">
+    <Holidays/>
+  </SubConfigurations>
 </Configuration>

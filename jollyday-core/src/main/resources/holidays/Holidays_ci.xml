@@ -29,4 +29,47 @@
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:CI</Source>
   </Sources>
 
+  <SubConfigurations hierarchy="ab" description="Abidjan">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="bs" description="Bas-Sassandra">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="cm" description="Comoé">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="dn" description="Denguélé">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="gd" description="Gôh-Djiboua">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="lc" description="Lacs">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="lg" description="Lagunes">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="mg" description="Montagnes">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="sm" description="Sassandra-Marahoué">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="sv" description="Savanes">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="vb" description="Vallée du Bandama">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="wr" description="Woroba">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ym" description="Yamoussoukro">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="zz" description="Zanzan">
+    <Holidays/>
+  </SubConfigurations>
+
 </Configuration>

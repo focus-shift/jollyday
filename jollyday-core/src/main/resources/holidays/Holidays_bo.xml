@@ -22,4 +22,32 @@
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:BO</Source>
   </Sources>
 
+  <SubConfigurations hierarchy="b" description="El Beni">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="c" description="Cochabamba">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="h" description="Chuquisaca">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="l" description="La Paz">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="n" description="Pando">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="o" description="Oruro">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="p" description="Potosí">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="s" description="Santa Cruz">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="t" description="Tarija">
+    <Holidays/>
+  </SubConfigurations>
+
 </Configuration>

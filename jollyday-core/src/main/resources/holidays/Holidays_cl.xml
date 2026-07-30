@@ -32,4 +32,53 @@
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:CL</Source>
   </Sources>
 
+  <SubConfigurations hierarchy="ai" description="Aisén del General Carlos Ibañez del Campo">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="an" description="Antofagasta">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ap" description="Arica y Parinacota">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ar" description="La Araucanía">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="at" description="Atacama">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="bi" description="Biobío">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="co" description="Coquimbo">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="li" description="Libertador General Bernardo O'Higgins">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ll" description="Los Lagos">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="lr" description="Los Ríos">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ma" description="Magallanes">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ml" description="Maule">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="nb" description="Ñuble">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="rm" description="Región Metropolitana de Santiago">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ta" description="Tarapacá">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="vs" description="Valparaíso">
+    <Holidays/>
+  </SubConfigurations>
+
 </Configuration>

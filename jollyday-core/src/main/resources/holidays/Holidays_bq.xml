@@ -43,6 +43,10 @@
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:BQ</Source>
   </Sources>
 
+  <SubConfigurations hierarchy="bo" description="Bonaire">
+    <Holidays/>
+  </SubConfigurations>
+
   <SubConfigurations hierarchy="se" description="Sint Eustatius">
     <Holidays>
       <!-- Confirmed via the Openbaar Lichaam Sint Eustatius official public holiday calendar

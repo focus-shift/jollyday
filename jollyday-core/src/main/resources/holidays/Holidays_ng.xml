@@ -28,9 +28,117 @@
   </Sources>
 
 
+  <SubConfigurations hierarchy="ab" description="Abia">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ad" description="Adamawa">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ak" description="Akwa Ibom">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="an" description="Anambra">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ba" description="Bauchi">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="be" description="Benue">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="bo" description="Borno">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="by" description="Bayelsa">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="cr" description="Cross River">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="de" description="Delta">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="eb" description="Ebonyi">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ed" description="Edo">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ek" description="Ekiti">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="en" description="Enugu">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="fc" description="Abuja Federal Capital Territory">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="go" description="Gombe">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="im" description="Imo">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ji" description="Jigawa">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="kd" description="Kaduna">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ke" description="Kebbi">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="kn" description="Kano">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ko" description="Kogi">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="kt" description="Katsina">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="kw" description="Kwara">
+    <Holidays/>
+  </SubConfigurations>
   <SubConfigurations hierarchy="la" description="Lagos">
     <Holidays>
       <Fixed month="JUNE" day="12" descriptionPropertiesKey="ELECTION_DAY"/>
     </Holidays>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="na" description="Nasarawa">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ni" description="Niger">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="og" description="Ogun">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="on" description="Ondo">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="os" description="Osun">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="oy" description="Oyo">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="pl" description="Plateau">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ri" description="Rivers">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="so" description="Sokoto">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ta" description="Taraba">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="yo" description="Yobe">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="za" description="Zamfara">
+    <Holidays/>
   </SubConfigurations>
 </Configuration>

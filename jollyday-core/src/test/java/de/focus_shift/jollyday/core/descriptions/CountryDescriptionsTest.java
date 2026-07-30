@@ -18,7 +18,7 @@ import static org.junit.jupiter.api.Assertions.fail;
 
 class CountryDescriptionsTest {
 
-  private static final int NUMBER_OF_ISO_COUNTRIES = 249;
+  private static final int NUMBER_OF_ISO_COUNTRIES = 250;
 
   @Test
   void ensureThatAllISOCodesAreAvailableInResourceBundleGenerally() {

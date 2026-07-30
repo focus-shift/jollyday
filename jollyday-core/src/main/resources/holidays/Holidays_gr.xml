@@ -29,4 +29,47 @@
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:GR</Source>
   </Sources>
 
+  <SubConfigurations hierarchy="a" description="Eastern Macedonia and Thrace">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="b" description="Central Macedonia">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="c" description="Western Macedonia">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="d" description="Epirus">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="e" description="Thessaly">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="f" description="Ionian Islands">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="g" description="Western Greece">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="h" description="Central Greece">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="i" description="Attica">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="j" description="Peloponnese">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="k" description="North Aegean">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="l" description="South Aegean">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="m" description="Crete">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="69" description="Mount Athos">
+    <Holidays/>
+  </SubConfigurations>
+
 </Configuration>

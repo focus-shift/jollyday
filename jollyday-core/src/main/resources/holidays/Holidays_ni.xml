@@ -27,10 +27,34 @@
   </Sources>
 
 
+  <SubConfigurations hierarchy="an" description="Costa Caribe Norte">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="as" description="Costa Caribe Sur">
+    <Holidays/>
+  </SubConfigurations>
+
   <SubConfigurations hierarchy="bo" description="Boaco">
     <Holidays>
       <Fixed month="JULY" day="25" descriptionPropertiesKey="SANTIAGO"/>
     </Holidays>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ca" description="Carazo">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ci" description="Chinandega">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="co" description="Chontales">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="es" description="Estelí">
+    <Holidays/>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="gr" description="Granada">
@@ -41,6 +65,14 @@
         <Fixed month="JULY" day="26" descriptionPropertiesKey="SANTA_ANA"/>
       </Holidays>
     </SubConfigurations>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ji" description="Jinotega">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="le" description="León">
+    <Holidays/>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="md" description="Madriz">
@@ -70,6 +102,14 @@
     </SubConfigurations>
   </SubConfigurations>
 
+  <SubConfigurations hierarchy="mt" description="Matagalpa">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ns" description="Nueva Segovia">
+    <Holidays/>
+  </SubConfigurations>
+
   <SubConfigurations hierarchy="ri" description="Rivas">
     <Holidays/>
 
@@ -84,5 +124,9 @@
         <Fixed month="JULY" day="26" descriptionPropertiesKey="SANTA_ANA"/>
       </Holidays>
     </SubConfigurations>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="sj" description="Río San Juan">
+    <Holidays/>
   </SubConfigurations>
 </Configuration>

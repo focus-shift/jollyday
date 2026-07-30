@@ -34,4 +34,53 @@
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:PS</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:PS</Source>
   </Sources>
+
+  <SubConfigurations hierarchy="bth" description="Bethlehem">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="deb" description="Deir El Balah">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="gza" description="Gaza">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="hbn" description="Hebron">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="jem" description="Jerusalem">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="jen" description="Jenin">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="jrh" description="Jericho and Al Aghwar">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="kys" description="Khan Yunis">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="nbs" description="Nablus">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ngz" description="North Gaza">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="qqa" description="Qalqilya">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="rbh" description="Ramallah">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="rfh" description="Rafah">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="slt" description="Salfit">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="tbs" description="Tubas">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="tkm" description="Tulkarm">
+    <Holidays/>
+  </SubConfigurations>
 </Configuration>

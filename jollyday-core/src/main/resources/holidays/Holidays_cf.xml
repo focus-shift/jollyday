@@ -26,4 +26,56 @@
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:CF</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:CF</Source>
   </Sources>
+
+  <SubConfigurations hierarchy="ac" description="Ouham">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="bb" description="Bamingui-Bangoran">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="bgf" description="Bangui">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="bk" description="Basse-Kotto">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="hk" description="Haute-Kotto">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="hm" description="Haut-Mbomou">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="hs" description="Haute-Sangha / Mambéré-Kadéï">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="kb" description="Gribingui">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="kg" description="Kémo-Gribingui">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="lb" description="Lobaye">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="mb" description="Mbomou">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="mp" description="Ombella-Mpoko">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="nm" description="Nana-Mambéré">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="op" description="Ouham-Pendé">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="se" description="Sangha">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="uk" description="Ouaka">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="vk" description="Vakaga">
+    <Holidays/>
+  </SubConfigurations>
 </Configuration>

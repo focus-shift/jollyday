@@ -26,4 +26,107 @@
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:AF</Source>
   </Sources>
 
+  <SubConfigurations hierarchy="bal" description="Balkh">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="bam" description="Bamyan">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="bdg" description="Badghis">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="bds" description="Badakhshan">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="bgl" description="Baghlan">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="day" description="Daykundi">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="fra" description="Farah">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="fyb" description="Faryab">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="gha" description="Ghazni">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="gho" description="Ghōr">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="hel" description="Helmand">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="her" description="Herat">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="jow" description="Jowzjan">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="kab" description="Kabul">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="kan" description="Kandahar">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="kap" description="Kapisa">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="kdz" description="Kunduz">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="kho" description="Khost">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="knr" description="Kunar">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="lag" description="Laghman">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="log" description="Logar">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="nan" description="Nangarhar">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="nim" description="Nimruz">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="nur" description="Nuristan">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="pan" description="Panjshir">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="par" description="Parwan">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="pia" description="Paktia">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="pka" description="Paktika">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="sam" description="Samangan">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="sar" description="Sar-e Pol">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="tak" description="Takhar">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="uru" description="Urozgan">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="war" description="Maidan Wardak">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="zab" description="Zabul">
+    <Holidays/>
+  </SubConfigurations>
+
 </Configuration>
