@@ -48,6 +48,8 @@ public class IslamicHolidayParser implements HolidayParser {
             new CalculateRelativeDatesFromChronologyWithinGregorianYear(8, 15, HIJRAH, 0).apply(year);
           case RAMADAN ->
             new CalculateRelativeDatesFromChronologyWithinGregorianYear(9, 1, HIJRAH, 0).apply(year);
+          case NUZUL_AL_QURAN ->
+            new CalculateRelativeDatesFromChronologyWithinGregorianYear(9, 17, HIJRAH, 0).apply(year);
           case LAILAT_AL_QADR ->
             new CalculateRelativeDatesFromChronologyWithinGregorianYear(9, 27, HIJRAH, 0).apply(year);
           case JUMUATUL_WIDA ->
