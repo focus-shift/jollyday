@@ -27,4 +27,276 @@
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:MT</Source>
   </Sources>
 
+  <SubConfigurations hierarchy="01" description="Attard">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="02" description="Balzan">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="03" description="Birgu">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="04" description="Birkirkara">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="05" description="Birżebbuġa">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="06" description="Bormla">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="07" description="Dingli">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="08" description="Fgura">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="09" description="Floriana">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="10" description="Fontana">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="11" description="Gudja">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="12" description="Gżira">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="13" description="Għajnsielem">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="14" description="Għarb">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="15" description="Għargħur">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="16" description="Għasri">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="17" description="Għaxaq">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="18" description="Ħamrun">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="19" description="Iklin">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="20" description="Isla">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="21" description="Kalkara">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="22" description="Kerċem">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="23" description="Kirkop">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="24" description="Lija">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="25" description="Luqa">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="26" description="Marsa">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="27" description="Marsaskala">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="28" description="Marsaxlokk">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="29" description="Mdina">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="30" description="Mellieħa">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="31" description="Mġarr">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="32" description="Mosta">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="33" description="Mqabba">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="34" description="Msida">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="35" description="Mtarfa">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="36" description="Munxar">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="37" description="Nadur">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="38" description="Naxxar">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="39" description="Paola">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="40" description="Pembroke">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="41" description="Pietà">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="42" description="Qala">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="43" description="Qormi">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="44" description="Qrendi">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="45" description="Rabat Gozo">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="46" description="Rabat Malta">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="47" description="Safi">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="48" description="Saint Julian's">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="49" description="Saint John">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="50" description="Saint Lawrence">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="51" description="Saint Paul's Bay">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="52" description="Sannat">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="53" description="Saint Lucia's">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="54" description="Santa Venera">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="55" description="Siġġiewi">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="56" description="Sliema">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="57" description="Swieqi">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="58" description="Ta' Xbiex">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="59" description="Tarxien">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="60" description="Valletta">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="61" description="Xagħra">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="62" description="Xewkija">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="63" description="Xgħajra">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="64" description="Żabbar">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="65" description="Żebbuġ Gozo">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="66" description="Żebbuġ Malta">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="67" description="Żejtun">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="68" description="Żurrieq">
+    <Holidays/>
+  </SubConfigurations>
+
 </Configuration>

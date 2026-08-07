@@ -60,4 +60,112 @@
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:UA</Source>
   </Sources>
 
+  <SubConfigurations hierarchy="05" description="Vinnytsia">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="07" description="Volyn">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="09" description="Luhansk">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="12" description="Dnipropetrovsk">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="14" description="Donetsk">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="18" description="Zhytomyr">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="21" description="Transcarpathia">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="23" description="Zaporizhzhia">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="26" description="Ivano-Frankivsk">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="30" description="Kyiv City">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="32" description="Kyiv">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="35" description="Kirovohrad">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="40" description="Sevastopol">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="43" description="Crimea">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="46" description="Lviv">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="48" description="Mykolaiv">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="51" description="Odesa">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="53" description="Poltava">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="56" description="Rivne">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="59" description="Sumy">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="61" description="Ternopil">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="63" description="Kharkiv">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="65" description="Kherson">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="68" description="Khmelnytskyi">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="71" description="Cherkasy">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="74" description="Chernihiv">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="77" description="Chernivtsi">
+    <Holidays/>
+  </SubConfigurations>
+
 </Configuration>

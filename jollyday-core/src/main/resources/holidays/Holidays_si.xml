@@ -31,4 +31,852 @@
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:SI</Source>
   </Sources>
 
+  <SubConfigurations hierarchy="001" description="Ajdovščina">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="002" description="Beltinci">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="003" description="Bled">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="004" description="Bohinj">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="005" description="Borovnica">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="006" description="Bovec">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="007" description="Brda">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="008" description="Brezovica">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="009" description="Brežice">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="010" description="Tišina">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="011" description="Celje">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="012" description="Cerklje na Gorenjskem">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="013" description="Cerknica">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="014" description="Cerkno">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="015" description="Črenšovci">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="016" description="Črna na Koroškem">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="017" description="Črnomelj">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="018" description="Destrnik">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="019" description="Divača">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="020" description="Dobrepolje">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="021" description="Dobrova-Polhov Gradec">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="022" description="Dol pri Ljubljani">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="023" description="Domžale">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="024" description="Dornava">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="025" description="Dravograd">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="026" description="Duplek">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="027" description="Gorenja vas-Poljane">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="028" description="Gorišnica">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="029" description="Gornja Radgona">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="030" description="Gornji Grad">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="031" description="Gornji Petrovci">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="032" description="Grosuplje">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="033" description="Šalovci">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="034" description="Hrastnik">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="035" description="Hrpelje-Kozina">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="036" description="Idrija">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="037" description="Ig">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="038" description="Ilirska Bistrica">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="039" description="Ivančna Gorica">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="040" description="Izola">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="041" description="Jesenice">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="042" description="Juršinci">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="043" description="Kamnik">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="044" description="Kanal ob Soči">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="045" description="Kidričevo">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="046" description="Kobarid">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="047" description="Kobilje">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="048" description="Kočevje">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="049" description="Komen">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="050" description="Koper">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="051" description="Kozje">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="052" description="Kranj">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="053" description="Kranjska Gora">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="054" description="Krško">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="055" description="Kungota">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="056" description="Kuzma">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="057" description="Laško">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="058" description="Lenart">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="059" description="Lendava">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="060" description="Litija">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="061" description="Ljubljana">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="062" description="Ljubno">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="063" description="Ljutomer">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="064" description="Logatec">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="065" description="Loška dolina">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="066" description="Loški Potok">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="067" description="Luče">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="068" description="Lukovica">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="069" description="Majšperk">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="070" description="Maribor">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="071" description="Medvode">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="072" description="Mengeš">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="073" description="Metlika">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="074" description="Mežica">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="075" description="Miren-Kostanjevica">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="076" description="Mislinja">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="077" description="Moravče">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="078" description="Moravske Toplice">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="079" description="Mozirje">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="080" description="Murska Sobota">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="081" description="Muta">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="082" description="Naklo">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="083" description="Nazarje">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="084" description="Nova Gorica">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="085" description="Novo Mesto">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="086" description="Odranci">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="087" description="Ormož">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="088" description="Osilnica">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="089" description="Pesnica">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="090" description="Piran">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="091" description="Pivka">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="092" description="Podčetrtek">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="093" description="Podvelka">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="094" description="Postojna">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="095" description="Preddvor">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="096" description="Ptuj">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="097" description="Puconci">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="098" description="Rače-Fram">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="099" description="Radeče">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="100" description="Radenci">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="101" description="Radlje ob Dravi">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="102" description="Radovljica">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="103" description="Ravne na Koroškem">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="104" description="Ribnica">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="105" description="Rogašovci">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="106" description="Rogaška Slatina">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="107" description="Rogatec">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="108" description="Ruše">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="109" description="Semič">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="110" description="Sevnica">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="111" description="Sežana">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="112" description="Slovenj Gradec">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="113" description="Slovenska Bistrica">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="114" description="Slovenske Konjice">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="115" description="Starše">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="116" description="Sveti Jurij ob Ščavnici">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="117" description="Šenčur">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="118" description="Šentilj">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="119" description="Šentjernej">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="120" description="Šentjur">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="121" description="Škocjan">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="122" description="Škofja Loka">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="123" description="Škofljica">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="124" description="Šmarje pri Jelšah">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="125" description="Šmartno ob Paki">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="126" description="Šoštanj">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="127" description="Štore">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="128" description="Tolmin">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="129" description="Trbovlje">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="130" description="Trebnje">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="131" description="Tržič">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="132" description="Turnišče">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="133" description="Velenje">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="134" description="Velike Lašče">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="135" description="Videm">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="136" description="Vipava">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="137" description="Vitanje">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="138" description="Vodice">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="139" description="Vojnik">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="140" description="Vrhnika">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="141" description="Vuzenica">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="142" description="Zagorje ob Savi">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="143" description="Zavrč">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="144" description="Zreče">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="146" description="Železniki">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="147" description="Žiri">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="148" description="Benedikt">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="149" description="Bistrica ob Sotli">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="150" description="Bloke">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="151" description="Braslovče">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="152" description="Cankova">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="153" description="Cerkvenjak">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="154" description="Dobje">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="155" description="Dobrna">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="156" description="Dobrovnik">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="157" description="Dolenjske Toplice">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="158" description="Grad">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="159" description="Hajdina">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="160" description="Hoče-Slivnica">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="161" description="Hodoš">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="162" description="Horjul">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="163" description="Jezersko">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="164" description="Komenda">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="165" description="Kostel">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="166" description="Križevci">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="167" description="Lovrenc na Pohorju">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="168" description="Markovci">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="169" description="Miklavž na Dravskem polju">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="170" description="Mirna Peč">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="171" description="Oplotnica">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="172" description="Podlehnik">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="173" description="Polzela">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="174" description="Prebold">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="175" description="Prevalje">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="176" description="Razkrižje">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="177" description="Ribnica na Pohorju">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="178" description="Selnica ob Dravi">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="179" description="Sodražica">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="180" description="Solčava">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="181" description="Sveta Ana">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="182" description="Sveti Andraž v Slovenskih goricah">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="183" description="Šempeter-Vrtojba">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="184" description="Tabor">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="185" description="Trnovska Vas">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="186" description="Trzin">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="187" description="Velika Polana">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="188" description="Veržej">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="189" description="Vransko">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="190" description="Žalec">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="191" description="Žetale">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="192" description="Žirovnica">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="193" description="Žužemberk">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="194" description="Šmartno pri Litiji">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="195" description="Apače">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="196" description="Cirkulane">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="197" description="Kostanjevica na Krki">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="198" description="Makole">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="199" description="Mokronog-Trebelno">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="200" description="Poljčane">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="201" description="Renče-Vogrsko">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="202" description="Središče ob Dravi">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="203" description="Straža">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="204" description="Sveta Trojica v Slovenskih goricah">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="205" description="Sveti Tomaž">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="206" description="Šmarješke Toplice">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="207" description="Gorje">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="208" description="Log-Dragomer">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="209" description="Rečica ob Savinji">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="210" description="Sveti Jurij v Slovenskih goricah">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="211" description="Šentrupert">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="212" description="Mirna">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="213" description="Ankaran">
+    <Holidays/>
+  </SubConfigurations>
+
 </Configuration>

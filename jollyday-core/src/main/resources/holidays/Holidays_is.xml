@@ -37,4 +37,292 @@
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:IS</Source>
   </Sources>
 
+  <SubConfigurations hierarchy="1" description="Capital Region">
+    <Holidays/>
+
+    <SubConfigurations hierarchy="gar" description="Garðabær">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="haf" description="Hafnarfjarðarkaupstaður">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="kjo" description="Kjósarhreppur">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="kop" description="Kópavogsbær">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="mos" description="Mosfellsbær">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="rkv" description="Reykjavíkurborg">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="sel" description="Seltjarnarnesbær">
+      <Holidays/>
+    </SubConfigurations>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="2" description="Southern Peninsula">
+    <Holidays/>
+
+    <SubConfigurations hierarchy="grn" description="Grindavíkurbær">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="rkn" description="Reykjanesbær">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="sdn" description="Suðurnesjabær">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="svg" description="Sveitarfélagið Vogar">
+      <Holidays/>
+    </SubConfigurations>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="3" description="Western Region">
+    <Holidays/>
+
+    <SubConfigurations hierarchy="akn" description="Akraneskaupstaður">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="bog" description="Borgarbyggð">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="dab" description="Dalabyggð">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="eom" description="Eyja-og Miklaholtshreppur">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="gru" description="Grundarfjarðarbær">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="hva" description="Hvalfjarðarsveit">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="sko" description="Skorradalshreppur">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="snf" description="Snæfellsbær">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="sty" description="Stykkishólmsbær">
+      <Holidays/>
+    </SubConfigurations>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="4" description="Westfjords">
+    <Holidays/>
+
+    <SubConfigurations hierarchy="arn" description="Árneshreppur">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="bol" description="Bolungarvíkurkaupstaður">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="isa" description="Ísafjarðarbær">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="kal" description="Kaldrananeshreppur">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="rhh" description="Reykhólahreppur">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="sdv" description="Súðavíkurhreppur">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="str" description="Strandabyggð">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="tal" description="Tálknafjarðarhreppur">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="ver" description="Vesturbyggð">
+      <Holidays/>
+    </SubConfigurations>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="5" description="Northwestern Region">
+    <Holidays/>
+
+    <SubConfigurations hierarchy="hug" description="Húnabyggð">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="huv" description="Húnaþing vestra">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="skg" description="Skagabyggð">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="skr" description="Skagafjörður">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="sss" description="Sveitarfélagið Skagaströnd">
+      <Holidays/>
+    </SubConfigurations>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="6" description="Northeastern Region">
+    <Holidays/>
+
+    <SubConfigurations hierarchy="aku" description="Akureyrarbær">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="dav" description="Dalvíkurbyggð">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="eyf" description="Eyjafjarðarsveit">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="fjl" description="Fjallabyggð">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="gry" description="Grýtubakkahreppur">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="hrg" description="Hörgársveit">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="lan" description="Langanesbyggð">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="nor" description="Norðurþing">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="sbt" description="Svalbarðsstrandarhreppur">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="thg" description="Þingeyjarsveit">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="tjo" description="Tjörneshreppur">
+      <Holidays/>
+    </SubConfigurations>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="7" description="Eastern Region">
+    <Holidays/>
+
+    <SubConfigurations hierarchy="fjd" description="Fjarðabyggð">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="flr" description="Fljótsdalshreppur">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="mul" description="Múlaþing">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="shf" description="Sveitarfélagið Hornafjörður">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="vop" description="Vopnafjarðarhreppur">
+      <Holidays/>
+    </SubConfigurations>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="8" description="Southern Region">
+    <Holidays/>
+
+    <SubConfigurations hierarchy="asa" description="Ásahreppur">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="bla" description="Bláskógabyggð">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="fla" description="Flóahreppur">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="gog" description="Grímsnes-og Grafningshreppur">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="hru" description="Hrunamannahreppur">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="hve" description="Hveragerðisbær">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="myr" description="Mýrdalshreppur">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="rge" description="Rangárþing eystra">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="rgy" description="Rangárþing ytra">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="sfa" description="Sveitarfélagið Árborg">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="skf" description="Skaftárhreppur">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="sog" description="Skeiða-og Gnúpverjahreppur">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="sol" description="Sveitarfélagið Ölfus">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="vem" description="Vestmannaeyjabær">
+      <Holidays/>
+    </SubConfigurations>
+  </SubConfigurations>
+
 </Configuration>

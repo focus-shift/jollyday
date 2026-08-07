@@ -33,4 +33,125 @@
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:IE</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:IE</Source>
   </Sources>
+
+  <SubConfigurations hierarchy="c" description="Connaught">
+    <Holidays/>
+
+    <SubConfigurations hierarchy="g" description="Galway">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="lm" description="Leitrim">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="mo" description="Mayo">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="rn" description="Roscommon">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="so" description="Sligo">
+      <Holidays/>
+    </SubConfigurations>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="l" description="Leinster">
+    <Holidays/>
+
+    <SubConfigurations hierarchy="cw" description="Carlow">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="d" description="Dublin">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="ke" description="Kildare">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="kk" description="Kilkenny">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="ld" description="Longford">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="lh" description="Louth">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="ls" description="Laois">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="mh" description="Meath">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="oy" description="Offaly">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="wh" description="Westmeath">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="ww" description="Wicklow">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="wx" description="Wexford">
+      <Holidays/>
+    </SubConfigurations>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="m" description="Munster">
+    <Holidays/>
+
+    <SubConfigurations hierarchy="ce" description="Clare">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="co" description="Cork">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="ky" description="Kerry">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="lk" description="Limerick">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="ta" description="Tipperary">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="wd" description="Waterford">
+      <Holidays/>
+    </SubConfigurations>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="u" description="Ulster">
+    <Holidays/>
+
+    <SubConfigurations hierarchy="cn" description="Cavan">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="dl" description="Donegal">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="mn" description="Monaghan">
+      <Holidays/>
+    </SubConfigurations>
+  </SubConfigurations>
+
 </Configuration>
