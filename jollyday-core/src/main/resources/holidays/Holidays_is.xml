@@ -35,7 +35,14 @@
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Iceland</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:IS</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:IS</Source>
+    <Source of="Lög nr. 88/1971 um 40 stunda vinnuviku, 6. gr.">https://www.althingi.is/lagas/nuna/1971088.html</Source>
   </Sources>
+
+  <!-- Section 6 of law 88/1971 sets the non-working days nationally. Its only derogation,
+       in section 7, runs through nationally confirmed collective agreements rather than
+       territory, and the sveitarfelog have no competence of their own. Thjodhatid i
+       Vestmannaeyjum falls on the already national first weekend of August and has no
+       separate legal standing. -->
 
   <SubConfigurations hierarchy="1" description="Capital Region">
     <Holidays/>

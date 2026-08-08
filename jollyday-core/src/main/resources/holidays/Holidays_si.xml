@@ -29,7 +29,13 @@
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Slovenia</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:SI</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:SI</Source>
+    <Source of="Zakon o praznikih in dela prostih dnevih (ZPDPD)">https://pisrs.si/pregledPredpisa?id=ZAKO865</Source>
   </Sources>
+
+  <!-- The ZPDPD list is nationwide and no obcina may add to it. Two prazniki read as
+       regional but are national and remain working days, so they are not modelled here:
+       Dan zdruzitve prekmurskih Slovencev (17 August) and Dan vrnitve Primorske
+       (15 September). -->
 
   <SubConfigurations hierarchy="001" description="Ajdovščina">
     <Holidays/>

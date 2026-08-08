@@ -25,7 +25,14 @@
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_North_Macedonia</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:MK</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:MK</Source>
+    <Source of="Закон за празниците, Сл. весник на РМ 21/1998, 18/2007">https://www.mtsp.gov.mk/wbstorage/files/zakon_praznici.pdf</Source>
   </Sources>
+
+  <!-- Article 4 grants extra non-working days by declared religion or ethnicity, never
+       by territory: an Albanian in Skopje gets 22 November, a Macedonian in Tetovo does
+       not. These communities are geographically concentrated, which makes this look
+       territorial, but the law has no geographic criterion, so none of Article 4 is
+       modelled as a subdivision. -->
 
   <SubConfigurations hierarchy="101" description="Veles">
     <Holidays/>

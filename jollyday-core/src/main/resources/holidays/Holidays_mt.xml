@@ -25,7 +25,14 @@
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Malta</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:MT</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:MT</Source>
+    <Source of="National Holidays and Other Public Holidays Act, Cap. 252">https://legislation.mt/eli/cap/252/eng</Source>
   </Sources>
+
+  <!-- Cap. 252 mentions neither Gozo nor any locality, and its only delegation is a
+       Prime Ministerial power that is national in scope. The Local Councils Act,
+       Cap. 363, which constitutes these 68 councils, uses the word holiday only in
+       procedural deadline rules. Village festi are not work-free; the four saints days
+       that are work-free are nationwide. -->
 
   <SubConfigurations hierarchy="01" description="Attard">
     <Holidays/>

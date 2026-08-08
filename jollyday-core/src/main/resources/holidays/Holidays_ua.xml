@@ -58,7 +58,16 @@
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Ukraine</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:UA</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:UA</Source>
+    <Source of="Кодекс законів про працю України, Стаття 73">https://zakon.rada.gov.ua/laws/show/322-08</Source>
+    <Source of="Law 3258-IX of 14.07.2023 amending Article 73">https://zakon.rada.gov.ua/laws/show/3258-20</Source>
   </Sources>
+
+  <!-- Article 73 delegates nothing to the oblasts, and Article 92(1)(6) of the
+       Constitution reserves labour regulation to national law, so local councils cannot
+       create work-free days. The non-Orthodox clause of Article 73 gives individual
+       believers up to three days off, granted by the employer and worked back, so it is
+       neither a public holiday nor territorial. In Ukrainian law Crimea and Sevastopol
+       follow the national calendar unchanged. -->
 
   <SubConfigurations hierarchy="05" description="Vinnytsia">
     <Holidays/>

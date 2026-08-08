@@ -20,7 +20,12 @@
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Montenegro</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:ME</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:ME</Source>
+    <Source of="Zakon o državnim i drugim praznicima, Sl. list RCG 27/07">https://metrologija.me/wp-content/uploads/zakonodavstvo/ostalo/Zakon-o-drzavnim-i-drugim-praznicima.pdf</Source>
   </Sources>
+
+  <!-- The statute runs to seven articles and contains no municipality provision at all.
+       Religious holidays for Catholics, Muslims and Jews are paid leave under the
+       Zakon o radu, which follows the person rather than the municipality. -->
 
   <SubConfigurations hierarchy="01" description="Andrijevica">
     <Holidays/>

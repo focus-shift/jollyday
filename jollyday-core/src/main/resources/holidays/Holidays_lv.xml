@@ -24,7 +24,13 @@
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Latvia</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:LV</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:LV</Source>
+    <Source of="Par svētku, atceres un atzīmējamām dienām, 1. pants">https://likumi.lv/ta/id/72608-par-svetku-atceres-un-atzimejamam-dienam</Source>
   </Sources>
+
+  <!-- Section 1 of Par svetku, atceres un atzimejamam dienam is national and carries no
+       delegation clause; even the one off free days were added by amending it. Pilsetas
+       svetki impose no obligation on employers, and the annual Cabinet order on
+       parceltas darba dienas only moves working days, it never creates a holiday. -->
 
   <SubConfigurations hierarchy="002" description="Aizkraukle">
     <Holidays/>

@@ -20,7 +20,11 @@
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Turkey</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:TR</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:TR</Source>
+    <Source of="Ulusal Bayram ve Genel Tatiller Hakkında Kanun No. 2429">https://www.lexpera.com.tr/mevzuat/kanunlar/ulusal-bayram-ve-genel-tatiller-hakkinda-kanun-2429</Source>
   </Sources>
+
+  <!-- Law 2429 is nationwide and delegates nothing to the provinces. The provincial
+       kurtulus gunu liberation days are commemorations and are not work-free. -->
 
   <SubConfigurations hierarchy="01" description="Adana">
     <Holidays/>

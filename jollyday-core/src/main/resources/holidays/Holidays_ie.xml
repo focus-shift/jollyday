@@ -32,7 +32,14 @@
     <Source>https://www.citizensinformation.ie/en/employment/employment-rights-and-conditions/leave-and-holidays/public-holidays/</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:IE</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:IE</Source>
+    <Source of="Organisation of Working Time Act 1997, Second Schedule">https://www.irishstatutebook.ie/eli/1997/act/20/schedule/2/enacted/en/html</Source>
   </Sources>
+
+  <!-- Only the Minister may vary the Second Schedule; no county or regional body may.
+       The Church holidays in paragraph 4 are not public holidays, only a substitute an
+       employer may elect under paragraph 3, and are nationwide in any case. Puck Fair,
+       the Galway and Listowel races and the county fair days have no statutory
+       work-free status. -->
 
   <SubConfigurations hierarchy="c" description="Connaught">
     <Holidays/>

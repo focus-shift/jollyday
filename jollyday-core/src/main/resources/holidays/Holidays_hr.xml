@@ -28,7 +28,13 @@
     <Source of="INDEPENDENCE_DAY">https://en.wikipedia.org/wiki/Independence_Day_(Croatia)</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:HR</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:HR</Source>
+    <Source of="Zakon o blagdanima, spomendanima i neradnim danima, NN 110/2019">https://narodne-novine.nn.hr/clanci/sluzbeni/2019_11_110_2212.html</Source>
   </Sources>
+
+  <!-- Every blagdan in NN 110/2019 is nationwide; no zupanija, city or opcina may
+       declare a work-free day. Article 3 gives members of the Orthodox, Muslim and
+       Jewish communities a right to their own holidays, but that follows the person
+       rather than the county, so it is not a subdivision holiday. -->
 
   <SubConfigurations hierarchy="01" description="Zagreb County">
     <Holidays/>

@@ -24,7 +24,12 @@
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Hungary</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:HU</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:HU</Source>
+    <Source of="2012. évi I. törvény a munka törvénykönyvéről, § 102">https://net.jogtar.hu/jogszabaly?docid=a1200001.tv</Source>
   </Sources>
+
+  <!-- The list in section 102 of the 2012 Labour Code is exhaustive and nationwide.
+       Subsection (5) only lets the minister reshuffle work schedules around a holiday;
+       counties and cities with county rights have no holiday-declaring power. -->
 
   <SubConfigurations hierarchy="ba" description="Baranya">
     <Holidays/>

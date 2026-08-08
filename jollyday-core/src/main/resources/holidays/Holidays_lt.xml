@@ -24,7 +24,13 @@
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Lithuania</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:LT</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:LT</Source>
+    <Source of="Darbo kodeksas (Nr. XII-2603), 123 straipsnis">https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/10c6bfd07bd511e6a0f68fd135e6f40c/asr</Source>
   </Sources>
+
+  <!-- Article 123 of the Darbo kodeksas is an exhaustive national list with no territorial
+       qualifier and no delegation to the savivaldybes. Miesto dienos and the atmintinos
+       dienos are not work-free. Note that the claim that Uzgavenes becomes non-working
+       from 2026 is false; it appears in no version of Article 123. -->
 
   <SubConfigurations hierarchy="al" description="Alytus County">
     <Holidays/>

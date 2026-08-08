@@ -29,7 +29,13 @@
     <Source>https://www.llb.li/de/kontakt/bankfeiertage</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:LI</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:LI</Source>
+    <Source of="Arbeitsgesetz, LGBl. 1967 Nr. 6 / LR 822.10, Art. 18 Abs. 2">https://www.gesetze.li/konso/pdf/1967006000</Source>
   </Sources>
+
+  <!-- Article 18(2) of the Arbeitsgesetz is an exhaustive national list. The
+       Gemeindegesetz mentions neither Feiertag nor Ruhetag nor Patrozinium, so the
+       communes have no holiday setting power; Patrozinium observances are local
+       Festanlaesse only. -->
 
   <SubConfigurations hierarchy="01" description="Balzers">
     <Holidays/>
