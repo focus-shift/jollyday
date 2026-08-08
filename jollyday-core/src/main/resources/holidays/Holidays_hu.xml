@@ -24,6 +24,183 @@
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Hungary</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:HU</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:HU</Source>
+    <Source of="2012. évi I. törvény a munka törvénykönyvéről, § 102">https://net.jogtar.hu/jogszabaly?docid=a1200001.tv</Source>
   </Sources>
+
+  <!-- The list in section 102 of the 2012 Labour Code is exhaustive and nationwide.
+       Subsection (5) only lets the minister reshuffle work schedules around a holiday;
+       counties and cities with county rights have no holiday-declaring power. -->
+
+  <SubConfigurations hierarchy="ba" description="Baranya">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="bc" description="Békéscsaba">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="be" description="Békés">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="bk" description="Bács-Kiskun">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="bu" description="Budapest">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="bz" description="Borsod-Abaúj-Zemplén">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="cs" description="Csongrád-Csanád">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="de" description="Debrecen">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="du" description="Dunaújváros">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="eg" description="Eger">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="er" description="Érd">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="fe" description="Fejér">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="gs" description="Győr-Moson-Sopron">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="gy" description="Győr">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="hb" description="Hajdú-Bihar">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="he" description="Heves">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="hv" description="Hódmezővásárhely">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="jn" description="Jász-Nagykun-Szolnok">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ke" description="Komárom-Esztergom">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="km" description="Kecskemét">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="kv" description="Kaposvár">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="mi" description="Miskolc">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="nk" description="Nagykanizsa">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="no" description="Nógrád">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ny" description="Nyíregyháza">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="pe" description="Pest">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ps" description="Pécs">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="sd" description="Szeged">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="sf" description="Székesfehérvár">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="sh" description="Szombathely">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="sk" description="Szolnok">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="sn" description="Sopron">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="so" description="Somogy">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ss" description="Szekszárd">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="st" description="Salgótarján">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="sz" description="Szabolcs-Szatmár-Bereg">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="tb" description="Tatabánya">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="to" description="Tolna">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="va" description="Vas">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ve" description="Veszprém">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="vm" description="Veszprém City">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="za" description="Zala">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ze" description="Zalaegerszeg">
+    <Holidays/>
+  </SubConfigurations>
 
 </Configuration>

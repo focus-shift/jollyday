@@ -20,6 +20,334 @@
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Turkey</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:TR</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:TR</Source>
+    <Source of="Ulusal Bayram ve Genel Tatiller Hakkında Kanun No. 2429">https://www.lexpera.com.tr/mevzuat/kanunlar/ulusal-bayram-ve-genel-tatiller-hakkinda-kanun-2429</Source>
   </Sources>
+
+  <!-- Law 2429 is nationwide and delegates nothing to the provinces. The provincial
+       kurtulus gunu liberation days are commemorations and are not work-free. -->
+
+  <SubConfigurations hierarchy="01" description="Adana">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="02" description="Adıyaman">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="03" description="Afyonkarahisar">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="04" description="Ağrı">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="05" description="Amasya">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="06" description="Ankara">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="07" description="Antalya">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="08" description="Artvin">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="09" description="Aydın">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="10" description="Balıkesir">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="11" description="Bilecik">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="12" description="Bingöl">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="13" description="Bitlis">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="14" description="Bolu">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="15" description="Burdur">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="16" description="Bursa">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="17" description="Çanakkale">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="18" description="Çankırı">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="19" description="Çorum">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="20" description="Denizli">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="21" description="Diyarbakır">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="22" description="Edirne">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="23" description="Elazığ">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="24" description="Erzincan">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="25" description="Erzurum">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="26" description="Eskişehir">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="27" description="Gaziantep">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="28" description="Giresun">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="29" description="Gümüşhane">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="30" description="Hakkâri">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="31" description="Hatay">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="32" description="Isparta">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="33" description="Mersin">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="34" description="İstanbul">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="35" description="İzmir">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="36" description="Kars">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="37" description="Kastamonu">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="38" description="Kayseri">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="39" description="Kırklareli">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="40" description="Kırşehir">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="41" description="Kocaeli">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="42" description="Konya">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="43" description="Kütahya">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="44" description="Malatya">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="45" description="Manisa">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="46" description="Kahramanmaraş">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="47" description="Mardin">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="48" description="Muğla">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="49" description="Muş">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="50" description="Nevşehir">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="51" description="Niğde">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="52" description="Ordu">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="53" description="Rize">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="54" description="Sakarya">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="55" description="Samsun">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="56" description="Siirt">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="57" description="Sinop">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="58" description="Sivas">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="59" description="Tekirdağ">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="60" description="Tokat">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="61" description="Trabzon">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="62" description="Tunceli">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="63" description="Şanlıurfa">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="64" description="Uşak">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="65" description="Van">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="66" description="Yozgat">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="67" description="Zonguldak">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="68" description="Aksaray">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="69" description="Bayburt">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="70" description="Karaman">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="71" description="Kırıkkale">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="72" description="Batman">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="73" description="Şırnak">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="74" description="Bartın">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="75" description="Ardahan">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="76" description="Iğdır">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="77" description="Yalova">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="78" description="Karabük">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="79" description="Kilis">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="80" description="Osmaniye">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="81" description="Düzce">
+    <Holidays/>
+  </SubConfigurations>
 
 </Configuration>

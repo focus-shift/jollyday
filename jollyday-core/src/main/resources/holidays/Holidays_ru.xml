@@ -76,4 +76,428 @@
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:RU</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:RU</Source>
   </Sources>
+
+  <SubConfigurations hierarchy="ad" description="Adygea">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="al" description="Gorno-Altai">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="alt" description="Altai">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="amu" description="Amur">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ark" description="Arkhangelsk">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ast" description="Astrakhan">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ba" description="Bashkortostan">
+    <Holidays>
+      <Fixed month="OCTOBER" day="11" descriptionPropertiesKey="REPUBLIC_DAY">
+        <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+      </Fixed>
+      <IslamicHoliday type="ID_AL_FITR">
+        <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+      </IslamicHoliday>
+      <IslamicHoliday type="ID_UL_ADHA">
+        <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+      </IslamicHoliday>
+    </Holidays>
+    <Sources>
+      <Source of="Закон Республики Башкортостан N ВС-10/21 от 27.02.1992">https://docs.cntd.ru/document/935100821</Source>
+    </Sources>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="bel" description="Belgorod">
+    <Holidays>
+      <Fixed month="JULY" day="12" descriptionPropertiesKey="PROKHOROVKA_FIELD_DAY">
+        <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+      </Fixed>
+    </Holidays>
+    <Sources>
+      <Source of="Закон Белгородской области N 462 от 30.04.2020">https://docs.cntd.ru/document/570010921</Source>
+    </Sources>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="bry" description="Bryansk">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="bu" description="Buryatia">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ce" description="Chechnya">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="che" description="Chelyabinsk">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="chu" description="Chukotka">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="cu" description="Chuvashia">
+    <Holidays>
+      <Fixed month="JUNE" day="24" descriptionPropertiesKey="REPUBLIC_DAY">
+        <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+      </Fixed>
+    </Holidays>
+    <Sources>
+      <Source of="Закон Чувашской Республики N 4 от 04.05.2000">https://docs.cntd.ru/document/804900215</Source>
+    </Sources>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="da" description="Dagestan">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="in" description="Ingushetia">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="irk" description="Irkutsk">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="iva" description="Ivanovo">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="kam" description="Kamchatka">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="kb" description="Kabardino-Balkaria">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="kc" description="Karachay-Cherkessia">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="kda" description="Krasnodar">
+    <Holidays>
+      <RelativeToEasterSunday descriptionPropertiesKey="RADONITSA">
+        <chronology>JULIAN</chronology>
+        <days>9</days>
+      </RelativeToEasterSunday>
+    </Holidays>
+    <Sources>
+      <Source of="Закон Краснодарского края N 4909-кз от 02.06.2023">https://docs.cntd.ru/document/406326996</Source>
+    </Sources>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="kem" description="Kemerovo">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="kgd" description="Kaliningrad">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="kgn" description="Kurgan">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="kha" description="Khabarovsk">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="khm" description="Yugoria">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="kir" description="Kirov">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="kk" description="Khakassia">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="kl" description="Kalmykia">
+    <Holidays>
+      <Fixed month="JULY" day="5" descriptionPropertiesKey="REPUBLIC_DAY">
+        <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+      </Fixed>
+      <Fixed month="DECEMBER" day="28" descriptionPropertiesKey="DEPORTATION_VICTIMS_MEMORIAL_DAY">
+        <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+      </Fixed>
+    </Holidays>
+    <Sources>
+      <Source of="Закон Республики Калмыкия N 156-III-З от 13.10.2004">https://docs.cntd.ru/document/802025275</Source>
+    </Sources>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="klu" description="Kaluga">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ko" description="Komi">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="kos" description="Kostroma">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="kr" description="Karelia">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="krs" description="Kursk">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="kya" description="Krasnoyarsk">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="len" description="Leningrad">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="lip" description="Lipetsk">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="mag" description="Magadan">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="me" description="Mari El">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="mo" description="Mordovia">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="mos" description="Moscow">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="mow" description="Moscow City">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="mur" description="Murmansk">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="nen" description="Nenetsia">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ngr" description="Novgorod">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="niz" description="Nizhny Novgorod">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="nvs" description="Novosibirsk">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="oms" description="Omsk">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ore" description="Orenburg">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="orl" description="Oryol">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="per" description="Perm">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="pnz" description="Penza">
+    <Holidays>
+      <RelativeToEasterSunday descriptionPropertiesKey="RADONITSA">
+        <chronology>JULIAN</chronology>
+        <days>9</days>
+      </RelativeToEasterSunday>
+    </Holidays>
+    <Sources>
+      <Source of="Закон Пензенской области N 2700-ЗПО от 10.04.2015">https://docs.cntd.ru/document/949400096</Source>
+    </Sources>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="pri" description="Primorye">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="psk" description="Pskov">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ros" description="Rostov">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="rya" description="Ryazan">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="sa" description="Yakutia">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="sak" description="Sakhalin">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="sam" description="Samara">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="sar" description="Saratov">
+    <Holidays>
+      <RelativeToEasterSunday descriptionPropertiesKey="RADONITSA">
+        <chronology>JULIAN</chronology>
+        <days>9</days>
+      </RelativeToEasterSunday>
+    </Holidays>
+    <Sources>
+      <Source of="Закон Саратовской области N 26-ЗСО от 22.03.2012">https://docs.cntd.ru/document/933023331</Source>
+    </Sources>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="se" description="North Ossetia">
+    <Holidays>
+      <FixedWeekdayRelativeToFixed which="FIRST" weekday="MONDAY" when="BEFORE" descriptionPropertiesKey="DJEORGUYBA">
+        <day month="NOVEMBER" day="25"/>
+      </FixedWeekdayRelativeToFixed>
+    </Holidays>
+    <Sources>
+      <Source of="Закон Республики Северная Осетия-Алания N 61-РЗ от 02.10.2018">https://docs.cntd.ru/document/550216442</Source>
+    </Sources>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="smo" description="Smolensk">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="spe" description="Saint Petersburg">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="sta" description="Stavropol">
+    <Holidays>
+      <RelativeToEasterSunday descriptionPropertiesKey="RADONITSA">
+        <chronology>JULIAN</chronology>
+        <days>9</days>
+      </RelativeToEasterSunday>
+    </Holidays>
+    <Sources>
+      <Source of="Закон Ставропольского края N 60-кз от 23.06.2016">https://docs.cntd.ru/document/430121608</Source>
+    </Sources>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="sve" description="Sverdlovsk">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ta" description="Tatarstan">
+    <Holidays>
+      <Fixed month="AUGUST" day="30" descriptionPropertiesKey="REPUBLIC_DAY"/>
+      <Fixed month="NOVEMBER" day="6" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <IslamicHoliday type="ID_AL_FITR"/>
+      <IslamicHoliday type="ID_UL_ADHA"/>
+    </Holidays>
+    <Sources>
+      <Source of="Закон Республики Татарстан N 1448-XII от 19.02.1992">https://docs.cntd.ru/document/917000064</Source>
+    </Sources>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="tam" description="Tambov">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="tom" description="Tomsk">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="tul" description="Tula">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="tve" description="Tver">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ty" description="Tuva">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="tyu" description="Tyumen">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ud" description="Udmurtia">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="uly" description="Ulyanovsk">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="vgg" description="Volgograd">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="vla" description="Vladimir">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="vlg" description="Vologda">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="vor" description="Voronezh">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="yan" description="Yamalia">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="yar" description="Yaroslavl">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="yev" description="Jewish Autonomous Oblast">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="zab" description="Transbaikalia">
+    <Holidays/>
+  </SubConfigurations>
+
 </Configuration>

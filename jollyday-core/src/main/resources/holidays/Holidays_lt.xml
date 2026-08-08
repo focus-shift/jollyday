@@ -24,6 +24,292 @@
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Lithuania</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:LT</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:LT</Source>
+    <Source of="Darbo kodeksas (Nr. XII-2603), 123 straipsnis">https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/10c6bfd07bd511e6a0f68fd135e6f40c/asr</Source>
   </Sources>
+
+  <!-- Article 123 of the Darbo kodeksas is an exhaustive national list with no territorial
+       qualifier and no delegation to the savivaldybes. Miesto dienos and the atmintinos
+       dienos are not work-free. Note that the claim that Uzgavenes becomes non-working
+       from 2026 is false; it appears in no version of Article 123. -->
+
+  <SubConfigurations hierarchy="al" description="Alytus County">
+    <Holidays/>
+
+    <SubConfigurations hierarchy="02" description="Alytaus miestas">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="03" description="Alytus">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="07" description="Druskininkai">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="24" description="Lazdijai">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="55" description="Varėna">
+      <Holidays/>
+    </SubConfigurations>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="kl" description="Klaipėda County">
+    <Holidays/>
+
+    <SubConfigurations hierarchy="20" description="Klaipėdos miestas">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="21" description="Klaipėda">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="22" description="Kretinga">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="28" description="Neringa">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="31" description="Palangos miestas">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="46" description="Šilutė">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="48" description="Skuodas">
+      <Holidays/>
+    </SubConfigurations>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ku" description="Kaunas County">
+    <Holidays/>
+
+    <SubConfigurations hierarchy="05" description="Birštonas">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="10" description="Jonava">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="13" description="Kaišiadorys">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="15" description="Kauno miestas">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="16" description="Kaunas">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="18" description="Kėdainiai">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="36" description="Prienai">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="38" description="Raseiniai">
+      <Holidays/>
+    </SubConfigurations>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="mr" description="Marijampolė County">
+    <Holidays/>
+
+    <SubConfigurations hierarchy="14" description="Kalvarija">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="17" description="Kazlų Rūdos">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="25" description="Marijampolė">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="41" description="Šakiai">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="56" description="Vilkaviškis">
+      <Holidays/>
+    </SubConfigurations>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="pn" description="Panevėžys County">
+    <Holidays/>
+
+    <SubConfigurations hierarchy="06" description="Biržai">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="23" description="Kupiškis">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="32" description="Panevėžio miestas">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="33" description="Panevėžys">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="34" description="Pasvalys">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="40" description="Rokiškis">
+      <Holidays/>
+    </SubConfigurations>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="sa" description="Šiauliai County">
+    <Holidays/>
+
+    <SubConfigurations hierarchy="01" description="Akmenė">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="11" description="Joniškis">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="19" description="Kelmė">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="30" description="Pakruojis">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="37" description="Radviliškis">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="43" description="Šiaulių miestas">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="44" description="Šiauliai">
+      <Holidays/>
+    </SubConfigurations>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ta" description="Tauragė County">
+    <Holidays/>
+
+    <SubConfigurations hierarchy="12" description="Jurbarkas">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="29" description="Pagėgiai">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="45" description="Šilalė">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="50" description="Tauragė">
+      <Holidays/>
+    </SubConfigurations>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="te" description="Telšiai County">
+    <Holidays/>
+
+    <SubConfigurations hierarchy="26" description="Mažeikiai">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="35" description="Plungė">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="39" description="Rietavas">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="51" description="Telšiai">
+      <Holidays/>
+    </SubConfigurations>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ut" description="Utena County">
+    <Holidays/>
+
+    <SubConfigurations hierarchy="04" description="Anykščiai">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="09" description="Ignalina">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="27" description="Molėtai">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="54" description="Utena">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="59" description="Visaginas">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="60" description="Zarasai">
+      <Holidays/>
+    </SubConfigurations>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="vl" description="Vilnius County">
+    <Holidays/>
+
+    <SubConfigurations hierarchy="08" description="Elektrėnai">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="42" description="Šalčininkai">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="47" description="Širvintos">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="49" description="Švenčionys">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="52" description="Trakai">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="53" description="Ukmergė">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="57" description="Vilniaus miestas">
+      <Holidays/>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="58" description="Vilnius">
+      <Holidays/>
+    </SubConfigurations>
+  </SubConfigurations>
 
 </Configuration>
