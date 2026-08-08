@@ -102,11 +102,35 @@
   </SubConfigurations>
 
   <SubConfigurations hierarchy="ba" description="Bashkortostan">
-    <Holidays/>
+    <Holidays>
+      <Fixed month="OCTOBER" day="11" descriptionPropertiesKey="REPUBLIC_DAY">
+        <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+      </Fixed>
+      <IslamicHoliday type="ID_AL_FITR">
+        <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+      </IslamicHoliday>
+      <IslamicHoliday type="ID_UL_ADHA">
+        <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+      </IslamicHoliday>
+    </Holidays>
+    <Sources>
+      <Source of="Закон Республики Башкортостан N ВС-10/21 от 27.02.1992">https://docs.cntd.ru/document/935100821</Source>
+    </Sources>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="bel" description="Belgorod">
-    <Holidays/>
+    <Holidays>
+      <Fixed month="JULY" day="12" descriptionPropertiesKey="PROKHOROVKA_FIELD_DAY">
+        <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+      </Fixed>
+    </Holidays>
+    <Sources>
+      <Source of="Закон Белгородской области N 462 от 30.04.2020">https://docs.cntd.ru/document/570010921</Source>
+    </Sources>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="bry" description="Bryansk">
@@ -130,7 +154,15 @@
   </SubConfigurations>
 
   <SubConfigurations hierarchy="cu" description="Chuvashia">
-    <Holidays/>
+    <Holidays>
+      <Fixed month="JUNE" day="24" descriptionPropertiesKey="REPUBLIC_DAY">
+        <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+      </Fixed>
+    </Holidays>
+    <Sources>
+      <Source of="Закон Чувашской Республики N 4 от 04.05.2000">https://docs.cntd.ru/document/804900215</Source>
+    </Sources>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="da" description="Dagestan">
@@ -162,7 +194,15 @@
   </SubConfigurations>
 
   <SubConfigurations hierarchy="kda" description="Krasnodar">
-    <Holidays/>
+    <Holidays>
+      <RelativeToEasterSunday descriptionPropertiesKey="RADONITSA">
+        <chronology>JULIAN</chronology>
+        <days>9</days>
+      </RelativeToEasterSunday>
+    </Holidays>
+    <Sources>
+      <Source of="Закон Краснодарского края N 4909-кз от 02.06.2023">https://docs.cntd.ru/document/406326996</Source>
+    </Sources>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="kem" description="Kemerovo">
@@ -194,7 +234,19 @@
   </SubConfigurations>
 
   <SubConfigurations hierarchy="kl" description="Kalmykia">
-    <Holidays/>
+    <Holidays>
+      <Fixed month="JULY" day="5" descriptionPropertiesKey="REPUBLIC_DAY">
+        <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+      </Fixed>
+      <Fixed month="DECEMBER" day="28" descriptionPropertiesKey="DEPORTATION_VICTIMS_MEMORIAL_DAY">
+        <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+      </Fixed>
+    </Holidays>
+    <Sources>
+      <Source of="Закон Республики Калмыкия N 156-III-З от 13.10.2004">https://docs.cntd.ru/document/802025275</Source>
+    </Sources>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="klu" description="Kaluga">
@@ -286,7 +338,15 @@
   </SubConfigurations>
 
   <SubConfigurations hierarchy="pnz" description="Penza">
-    <Holidays/>
+    <Holidays>
+      <RelativeToEasterSunday descriptionPropertiesKey="RADONITSA">
+        <chronology>JULIAN</chronology>
+        <days>9</days>
+      </RelativeToEasterSunday>
+    </Holidays>
+    <Sources>
+      <Source of="Закон Пензенской области N 2700-ЗПО от 10.04.2015">https://docs.cntd.ru/document/949400096</Source>
+    </Sources>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="pri" description="Primorye">
@@ -318,11 +378,26 @@
   </SubConfigurations>
 
   <SubConfigurations hierarchy="sar" description="Saratov">
-    <Holidays/>
+    <Holidays>
+      <RelativeToEasterSunday descriptionPropertiesKey="RADONITSA">
+        <chronology>JULIAN</chronology>
+        <days>9</days>
+      </RelativeToEasterSunday>
+    </Holidays>
+    <Sources>
+      <Source of="Закон Саратовской области N 26-ЗСО от 22.03.2012">https://docs.cntd.ru/document/933023331</Source>
+    </Sources>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="se" description="North Ossetia">
-    <Holidays/>
+    <Holidays>
+      <FixedWeekdayRelativeToFixed which="FIRST" weekday="MONDAY" when="BEFORE" descriptionPropertiesKey="DJEORGUYBA">
+        <day month="NOVEMBER" day="25"/>
+      </FixedWeekdayRelativeToFixed>
+    </Holidays>
+    <Sources>
+      <Source of="Закон Республики Северная Осетия-Алания N 61-РЗ от 02.10.2018">https://docs.cntd.ru/document/550216442</Source>
+    </Sources>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="smo" description="Smolensk">
@@ -334,7 +409,15 @@
   </SubConfigurations>
 
   <SubConfigurations hierarchy="sta" description="Stavropol">
-    <Holidays/>
+    <Holidays>
+      <RelativeToEasterSunday descriptionPropertiesKey="RADONITSA">
+        <chronology>JULIAN</chronology>
+        <days>9</days>
+      </RelativeToEasterSunday>
+    </Holidays>
+    <Sources>
+      <Source of="Закон Ставропольского края N 60-кз от 23.06.2016">https://docs.cntd.ru/document/430121608</Source>
+    </Sources>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="sve" description="Sverdlovsk">
@@ -342,7 +425,15 @@
   </SubConfigurations>
 
   <SubConfigurations hierarchy="ta" description="Tatarstan">
-    <Holidays/>
+    <Holidays>
+      <Fixed month="AUGUST" day="30" descriptionPropertiesKey="REPUBLIC_DAY"/>
+      <Fixed month="NOVEMBER" day="6" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <IslamicHoliday type="ID_AL_FITR"/>
+      <IslamicHoliday type="ID_UL_ADHA"/>
+    </Holidays>
+    <Sources>
+      <Source of="Закон Республики Татарстан N 1448-XII от 19.02.1992">https://docs.cntd.ru/document/917000064</Source>
+    </Sources>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="tam" description="Tambov">
