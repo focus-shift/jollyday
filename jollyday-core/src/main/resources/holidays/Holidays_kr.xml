@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="kr" description="Republic of Korea"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <!-- New Year's Day - the substitute holiday rule does not apply -->
+    <Fixed month="JANUARY" day="1" validFrom="1949" descriptionPropertiesKey="NEW_YEAR"/>
+    <!-- 2 and 3 January were also public holidays until 1998 and 1989 respectively -->
+    <Fixed month="JANUARY" day="2" validFrom="1949" validTo="1998" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="JANUARY" day="3" validFrom="1949" validTo="1989" descriptionPropertiesKey="NEW_YEAR"/>
+
+    <!-- Independence Movement Day - substitute holiday rule applies since August 2021 -->
+    <Fixed month="MARCH" day="1" validFrom="1949" validTo="2020" descriptionPropertiesKey="INDEPENDENCE_MOVEMENT_DAY"/>
+    <Fixed month="MARCH" day="1" validFrom="2021" descriptionPropertiesKey="INDEPENDENCE_MOVEMENT_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- Arbor Day - was a public holiday until 2005 -->
+    <Fixed month="APRIL" day="5" validFrom="1949" validTo="2005" descriptionPropertiesKey="ARBOR"/>
+
+    <!-- Children's Day - public holiday since 1975, substitute holiday rule applies since 2014 -->
+    <Fixed month="MAY" day="5" validFrom="1975" validTo="2013" descriptionPropertiesKey="CHILDRENS_DAY"/>
+    <Fixed month="MAY" day="5" validFrom="2014" descriptionPropertiesKey="CHILDRENS_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- Memorial Day - the substitute holiday rule does not apply -->
+    <Fixed month="JUNE" day="6" validFrom="1956" descriptionPropertiesKey="MEMORIAL_DAY"/>
+
+    <!-- Constitution Day - public holiday until 2007, reinstated as a public holiday from 2026 -->
+    <Fixed month="JULY" day="17" validFrom="1950" validTo="2007" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+    <Fixed month="JULY" day="17" validFrom="2026" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+
+    <!-- Liberation Day - substitute holiday rule applies since August 2021 -->
+    <Fixed month="AUGUST" day="15" validFrom="1949" validTo="2020" descriptionPropertiesKey="LIBERATION_DAY"/>
+    <Fixed month="AUGUST" day="15" validFrom="2021" descriptionPropertiesKey="LIBERATION_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- Armed Forces Day - was a public holiday 1976 to 1990 -->
+    <Fixed month="OCTOBER" day="1" validFrom="1976" validTo="1990" descriptionPropertiesKey="ARMED_FORCES_DAY"/>
+
+    <!-- National Foundation Day - substitute holiday rule applies since August 2021 -->
+    <Fixed month="OCTOBER" day="3" validFrom="1949" validTo="2020" descriptionPropertiesKey="NATIONAL_FOUNDATION_DAY"/>
+    <Fixed month="OCTOBER" day="3" validFrom="2021" descriptionPropertiesKey="NATIONAL_FOUNDATION_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- Hangeul Day - public holiday until 1990, reinstated 2013, substitute holiday rule applies since August 2021 -->
+    <Fixed month="OCTOBER" day="9" validFrom="1949" validTo="1990" descriptionPropertiesKey="HANGEUL_DAY"/>
+    <Fixed month="OCTOBER" day="9" validFrom="2013" validTo="2020" descriptionPropertiesKey="HANGEUL_DAY"/>
+    <Fixed month="OCTOBER" day="9" validFrom="2021" descriptionPropertiesKey="HANGEUL_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- Christmas Day - substitute holiday rule applies since May 2023 -->
+    <Fixed month="DECEMBER" day="25" validFrom="1949" validTo="2022" descriptionPropertiesKey="CHRISTMAS"/>
+    <Fixed month="DECEMBER" day="25" validFrom="2023" descriptionPropertiesKey="CHRISTMAS">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- ==================================================================================
+         Lunar-calendar holidays: Seollal (Korean New Year, three days), Buddha's Birthday,
+         and Chuseok (Korean harvest festival, three days).
+         The schema has no lunar-calendar holiday type, so - like Hong Kong - these are
+         defined per year with the officially observed Gregorian dates. Substitute days
+         (when a day of the Seollal/Chuseok period falls on a Sunday, or Buddha's Birthday
+         falls on a weekend since May 2023) are expressed as MovingConditions targeting
+         the actually observed substitute weekday.
+         Verified against KASI (Korea Astronomy and Space Science Institute) public data.
+         ================================================================================== -->
+
+    <!-- 2018 -->
+    <Fixed month="FEBRUARY" day="15" validFrom="2018" validTo="2018" descriptionPropertiesKey="DAY_PRECEDING_LUNAR_NEW_YEAR"/>
+    <Fixed month="FEBRUARY" day="16" validFrom="2018" validTo="2018" descriptionPropertiesKey="LUNAR_NEW_YEARS_DAY"/>
+    <Fixed month="FEBRUARY" day="17" validFrom="2018" validTo="2018" descriptionPropertiesKey="DAY_FOLLOWING_LUNAR_NEW_YEAR"/>
+    <Fixed month="MAY" day="22" validFrom="2018" validTo="2018" descriptionPropertiesKey="BIRTHDAY_OF_THE_BUDDHA"/>
+    <Fixed month="SEPTEMBER" day="23" validFrom="2018" validTo="2018" descriptionPropertiesKey="DAY_PRECEDING_CHUSEOK">
+      <!-- fell on a Sunday, substitute holiday observed on Wednesday 26 September -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="WEDNESDAY"/>
+    </Fixed>
+    <Fixed month="SEPTEMBER" day="24" validFrom="2018" validTo="2018" descriptionPropertiesKey="CHUSEOK"/>
+    <Fixed month="SEPTEMBER" day="25" validFrom="2018" validTo="2018" descriptionPropertiesKey="DAY_FOLLOWING_CHUSEOK"/>
+
+    <!-- 2019 -->
+    <Fixed month="FEBRUARY" day="4" validFrom="2019" validTo="2019" descriptionPropertiesKey="DAY_PRECEDING_LUNAR_NEW_YEAR"/>
+    <Fixed month="FEBRUARY" day="5" validFrom="2019" validTo="2019" descriptionPropertiesKey="LUNAR_NEW_YEARS_DAY"/>
+    <Fixed month="FEBRUARY" day="6" validFrom="2019" validTo="2019" descriptionPropertiesKey="DAY_FOLLOWING_LUNAR_NEW_YEAR"/>
+    <Fixed month="MAY" day="12" validFrom="2019" validTo="2019" descriptionPropertiesKey="BIRTHDAY_OF_THE_BUDDHA"/>
+    <Fixed month="SEPTEMBER" day="12" validFrom="2019" validTo="2019" descriptionPropertiesKey="DAY_PRECEDING_CHUSEOK"/>
+    <Fixed month="SEPTEMBER" day="13" validFrom="2019" validTo="2019" descriptionPropertiesKey="CHUSEOK"/>
+    <Fixed month="SEPTEMBER" day="14" validFrom="2019" validTo="2019" descriptionPropertiesKey="DAY_FOLLOWING_CHUSEOK"/>
+
+    <!-- 2020 -->
+    <Fixed month="JANUARY" day="24" validFrom="2020" validTo="2020" descriptionPropertiesKey="DAY_PRECEDING_LUNAR_NEW_YEAR"/>
+    <Fixed month="JANUARY" day="25" validFrom="2020" validTo="2020" descriptionPropertiesKey="LUNAR_NEW_YEARS_DAY"/>
+    <Fixed month="JANUARY" day="26" validFrom="2020" validTo="2020" descriptionPropertiesKey="DAY_FOLLOWING_LUNAR_NEW_YEAR">
+      <!-- fell on a Sunday, substitute holiday observed on Monday 27 January -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="APRIL" day="30" validFrom="2020" validTo="2020" descriptionPropertiesKey="BIRTHDAY_OF_THE_BUDDHA"/>
+    <Fixed month="SEPTEMBER" day="30" validFrom="2020" validTo="2020" descriptionPropertiesKey="DAY_PRECEDING_CHUSEOK"/>
+    <Fixed month="OCTOBER" day="1" validFrom="2020" validTo="2020" descriptionPropertiesKey="CHUSEOK"/>
+    <Fixed month="OCTOBER" day="2" validFrom="2020" validTo="2020" descriptionPropertiesKey="DAY_FOLLOWING_CHUSEOK"/>
+
+    <!-- 2021 -->
+    <Fixed month="FEBRUARY" day="11" validFrom="2021" validTo="2021" descriptionPropertiesKey="DAY_PRECEDING_LUNAR_NEW_YEAR"/>
+    <Fixed month="FEBRUARY" day="12" validFrom="2021" validTo="2021" descriptionPropertiesKey="LUNAR_NEW_YEARS_DAY"/>
+    <Fixed month="FEBRUARY" day="13" validFrom="2021" validTo="2021" descriptionPropertiesKey="DAY_FOLLOWING_LUNAR_NEW_YEAR"/>
+    <Fixed month="MAY" day="19" validFrom="2021" validTo="2021" descriptionPropertiesKey="BIRTHDAY_OF_THE_BUDDHA"/>
+    <Fixed month="SEPTEMBER" day="20" validFrom="2021" validTo="2021" descriptionPropertiesKey="DAY_PRECEDING_CHUSEOK"/>
+    <Fixed month="SEPTEMBER" day="21" validFrom="2021" validTo="2021" descriptionPropertiesKey="CHUSEOK"/>
+    <Fixed month="SEPTEMBER" day="22" validFrom="2021" validTo="2021" descriptionPropertiesKey="DAY_FOLLOWING_CHUSEOK"/>
+
+    <!-- 2022 -->
+    <Fixed month="JANUARY" day="31" validFrom="2022" validTo="2022" descriptionPropertiesKey="DAY_PRECEDING_LUNAR_NEW_YEAR"/>
+    <Fixed month="FEBRUARY" day="1" validFrom="2022" validTo="2022" descriptionPropertiesKey="LUNAR_NEW_YEARS_DAY"/>
+    <Fixed month="FEBRUARY" day="2" validFrom="2022" validTo="2022" descriptionPropertiesKey="DAY_FOLLOWING_LUNAR_NEW_YEAR"/>
+    <Fixed month="MAY" day="8" validFrom="2022" validTo="2022" descriptionPropertiesKey="BIRTHDAY_OF_THE_BUDDHA"/>
+    <Fixed month="SEPTEMBER" day="9" validFrom="2022" validTo="2022" descriptionPropertiesKey="DAY_PRECEDING_CHUSEOK"/>
+    <Fixed month="SEPTEMBER" day="10" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHUSEOK"/>
+    <Fixed month="SEPTEMBER" day="11" validFrom="2022" validTo="2022" descriptionPropertiesKey="DAY_FOLLOWING_CHUSEOK">
+      <!-- fell on a Sunday, substitute holiday observed on Monday 12 September -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- 2023 -->
+    <Fixed month="JANUARY" day="21" validFrom="2023" validTo="2023" descriptionPropertiesKey="DAY_PRECEDING_LUNAR_NEW_YEAR"/>
+    <Fixed month="JANUARY" day="22" validFrom="2023" validTo="2023" descriptionPropertiesKey="LUNAR_NEW_YEARS_DAY">
+      <!-- fell on a Sunday, substitute holiday observed on Tuesday 24 January -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+    <Fixed month="JANUARY" day="23" validFrom="2023" validTo="2023" descriptionPropertiesKey="DAY_FOLLOWING_LUNAR_NEW_YEAR"/>
+    <Fixed month="MAY" day="27" validFrom="2023" validTo="2023" descriptionPropertiesKey="BIRTHDAY_OF_THE_BUDDHA">
+      <!-- fell on a Saturday, substitute holiday observed on Monday 29 May -->
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="SEPTEMBER" day="28" validFrom="2023" validTo="2023" descriptionPropertiesKey="DAY_PRECEDING_CHUSEOK"/>
+    <Fixed month="SEPTEMBER" day="29" validFrom="2023" validTo="2023" descriptionPropertiesKey="CHUSEOK"/>
+    <Fixed month="SEPTEMBER" day="30" validFrom="2023" validTo="2023" descriptionPropertiesKey="DAY_FOLLOWING_CHUSEOK"/>
+
+    <!-- 2024 -->
+    <Fixed month="FEBRUARY" day="9" validFrom="2024" validTo="2024" descriptionPropertiesKey="DAY_PRECEDING_LUNAR_NEW_YEAR"/>
+    <Fixed month="FEBRUARY" day="10" validFrom="2024" validTo="2024" descriptionPropertiesKey="LUNAR_NEW_YEARS_DAY"/>
+    <Fixed month="FEBRUARY" day="11" validFrom="2024" validTo="2024" descriptionPropertiesKey="DAY_FOLLOWING_LUNAR_NEW_YEAR">
+      <!-- fell on a Sunday, substitute holiday observed on Monday 12 February -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="MAY" day="15" validFrom="2024" validTo="2024" descriptionPropertiesKey="BIRTHDAY_OF_THE_BUDDHA"/>
+    <Fixed month="SEPTEMBER" day="16" validFrom="2024" validTo="2024" descriptionPropertiesKey="DAY_PRECEDING_CHUSEOK"/>
+    <Fixed month="SEPTEMBER" day="17" validFrom="2024" validTo="2024" descriptionPropertiesKey="CHUSEOK"/>
+    <Fixed month="SEPTEMBER" day="18" validFrom="2024" validTo="2024" descriptionPropertiesKey="DAY_FOLLOWING_CHUSEOK"/>
+
+    <!-- 2025 -->
+    <Fixed month="JANUARY" day="28" validFrom="2025" validTo="2025" descriptionPropertiesKey="DAY_PRECEDING_LUNAR_NEW_YEAR"/>
+    <Fixed month="JANUARY" day="29" validFrom="2025" validTo="2025" descriptionPropertiesKey="LUNAR_NEW_YEARS_DAY"/>
+    <Fixed month="JANUARY" day="30" validFrom="2025" validTo="2025" descriptionPropertiesKey="DAY_FOLLOWING_LUNAR_NEW_YEAR"/>
+    <Fixed month="MAY" day="5" validFrom="2025" validTo="2025" descriptionPropertiesKey="BIRTHDAY_OF_THE_BUDDHA"/>
+    <!-- Buddha's Birthday coincided with Children's Day, substitute holiday observed on Tuesday 6 May -->
+    <Fixed month="MAY" day="6" validFrom="2025" validTo="2025" descriptionPropertiesKey="BIRTHDAY_OF_THE_BUDDHA"/>
+    <Fixed month="OCTOBER" day="5" validFrom="2025" validTo="2025" descriptionPropertiesKey="DAY_PRECEDING_CHUSEOK">
+      <!-- fell on a Sunday, substitute holiday observed on Wednesday 8 October -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="WEDNESDAY"/>
+    </Fixed>
+    <Fixed month="OCTOBER" day="6" validFrom="2025" validTo="2025" descriptionPropertiesKey="CHUSEOK"/>
+    <Fixed month="OCTOBER" day="7" validFrom="2025" validTo="2025" descriptionPropertiesKey="DAY_FOLLOWING_CHUSEOK"/>
+
+    <!-- 2026 -->
+    <Fixed month="FEBRUARY" day="16" validFrom="2026" validTo="2026" descriptionPropertiesKey="DAY_PRECEDING_LUNAR_NEW_YEAR"/>
+    <Fixed month="FEBRUARY" day="17" validFrom="2026" validTo="2026" descriptionPropertiesKey="LUNAR_NEW_YEARS_DAY"/>
+    <Fixed month="FEBRUARY" day="18" validFrom="2026" validTo="2026" descriptionPropertiesKey="DAY_FOLLOWING_LUNAR_NEW_YEAR"/>
+    <Fixed month="MAY" day="24" validFrom="2026" validTo="2026" descriptionPropertiesKey="BIRTHDAY_OF_THE_BUDDHA">
+      <!-- fell on a Sunday, substitute holiday observed on Monday 25 May -->
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="SEPTEMBER" day="24" validFrom="2026" validTo="2026" descriptionPropertiesKey="DAY_PRECEDING_CHUSEOK"/>
+    <Fixed month="SEPTEMBER" day="25" validFrom="2026" validTo="2026" descriptionPropertiesKey="CHUSEOK"/>
+    <Fixed month="SEPTEMBER" day="26" validFrom="2026" validTo="2026" descriptionPropertiesKey="DAY_FOLLOWING_CHUSEOK"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_South_Korea</Source>
+    <Source>https://www.data.go.kr/data/15012690/openapi.do</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:KR</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:KR</Source>
+  </Sources>
+</Configuration>
