@@ -46,4 +46,76 @@
       <Source>https://en.wikipedia.org/wiki/Public_holidays_in_%C3%85land</Source>
     </Sources>
   </SubConfigurations>
+
+  <SubConfigurations hierarchy="02" description="South Karelia">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="03" description="South Ostrobothnia">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="04" description="South Savo">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="05" description="Kainuu">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="06" description="Kanta-Häme">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="07" description="Central Ostrobothnia">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="08" description="Central Finland">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="09" description="Kymenlaakso">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="10" description="Lapland">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="11" description="Pirkanmaa">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="12" description="Ostrobothnia">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="13" description="North Karelia">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="14" description="North Ostrobothnia">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="15" description="North Savo">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="16" description="Päijät-Häme">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="17" description="Satakunta">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="18" description="Uusimaa">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="19" description="Southwest Finland">
+    <Holidays/>
+  </SubConfigurations>
 </Configuration>

@@ -25,4 +25,47 @@
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:PA</Source>
   </Sources>
 
+  <SubConfigurations hierarchy="1" description="Bocas del Toro">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="2" description="Coclé">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="3" description="Colón">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="4" description="Chiriquí">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="5" description="Darién">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="6" description="Herrera">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="7" description="Los Santos">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="8" description="Panamá">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="9" description="Veraguas">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="10" description="Panamá Oeste">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="em" description="Emberá">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ky" description="Guna Yala">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="nb" description="Ngäbe-Buglé">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="nt" description="Naso Tjër Di">
+    <Holidays/>
+  </SubConfigurations>
+
 </Configuration>

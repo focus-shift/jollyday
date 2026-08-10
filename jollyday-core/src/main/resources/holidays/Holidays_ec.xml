@@ -27,4 +27,77 @@
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:EC</Source>
   </Sources>
 
+  <SubConfigurations hierarchy="a" description="Azuay">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="b" description="Bolívar">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="c" description="Carchi">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="d" description="Orellana">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="e" description="Esmeraldas">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="f" description="Cañar">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="g" description="Guayas">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="h" description="Chimborazo">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="i" description="Imbabura">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="l" description="Loja">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="m" description="Manabí">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="n" description="Napo">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="o" description="El Oro">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="p" description="Pichincha">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="r" description="Los Ríos">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="s" description="Morona Santiago">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="sd" description="Santo Domingo de los Tsáchilas">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="se" description="Santa Elena">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="t" description="Tungurahua">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="u" description="Sucumbíos">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="w" description="Galápagos">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="x" description="Cotopaxi">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="y" description="Pastaza">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="z" description="Zamora Chinchipe">
+    <Holidays/>
+  </SubConfigurations>
+
 </Configuration>

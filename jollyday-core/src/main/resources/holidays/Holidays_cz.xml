@@ -27,4 +27,47 @@
     <Source of="Legal basis (no weekend-substitution rule exists)">https://ppropo.mpsv.cz/zakon_245_2000</Source>
   </Sources>
 
+  <SubConfigurations hierarchy="10" description="Prague">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="20" description="Central Bohemia">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="31" description="South Bohemia">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="32" description="Plzeň">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="41" description="Karlovy Vary">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="42" description="Ústí nad Labem">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="51" description="Liberec">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="52" description="Hradec Králové">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="53" description="Pardubice">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="63" description="Vysočina">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="64" description="South Moravia">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="71" description="Olomouc">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="72" description="Zlín">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="80" description="Moravia-Silesia">
+    <Holidays/>
+  </SubConfigurations>
+
 </Configuration>

@@ -23,4 +23,35 @@
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:CM</Source>
   </Sources>
 
+  <SubConfigurations hierarchy="ad" description="Adamaoua">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ce" description="Centre">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="en" description="Far North">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="es" description="East">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="lt" description="Littoral">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="no" description="North">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="nw" description="North-West">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ou" description="West">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="su" description="South">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="sw" description="South-West">
+    <Holidays/>
+  </SubConfigurations>
+
 </Configuration>

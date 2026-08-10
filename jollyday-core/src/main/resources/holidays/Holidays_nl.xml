@@ -34,4 +34,52 @@
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:NL</Source>
   </Sources>
 
+  <SubConfigurations hierarchy="dr" description="Drenthe">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="fl" description="Flevoland">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="fr" description="Friesland">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ge" description="Gelderland">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="gr" description="Groningen">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="li" description="Limburg">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="nb" description="North Brabant">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="nh" description="North Holland">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ov" description="Overijssel">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ut" description="Utrecht">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ze" description="Zeeland">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="zh" description="South Holland">
+    <Holidays/>
+  </SubConfigurations>
+
 </Configuration>

@@ -28,4 +28,47 @@
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:SY</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:SY</Source>
   </Sources>
+
+  <SubConfigurations hierarchy="di" description="Damascus">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="dr" description="Daraa">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="dy" description="Deir Ezzor">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ha" description="Hasaka">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="hi" description="Homs">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="hl" description="Aleppo">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="hm" description="Hama">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="id" description="Idlib">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="la" description="Latakia">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="qu" description="Quneitra">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ra" description="Raqqa">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="rd" description="Damascus Countryside">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="su" description="Suwayda">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ta" description="Tartus">
+    <Holidays/>
+  </SubConfigurations>
 </Configuration>

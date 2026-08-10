@@ -25,4 +25,59 @@
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:BI</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:BI</Source>
   </Sources>
+
+  <SubConfigurations hierarchy="bb" description="Bubanza">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="bl" description="Bujumbura Rural">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="bm" description="Bujumbura Mairie">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="br" description="Bururi">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ca" description="Cankuzo">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ci" description="Cibitoke">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="gi" description="Gitega">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ki" description="Kirundo">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="kr" description="Karuzi">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ky" description="Kayanza">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ma" description="Makamba">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="mu" description="Muramvya">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="mw" description="Mwaro">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="my" description="Muyinga">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ng" description="Ngozi">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="rm" description="Rumonge">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="rt" description="Rutana">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ry" description="Ruyigi">
+    <Holidays/>
+  </SubConfigurations>
 </Configuration>

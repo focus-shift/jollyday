@@ -23,4 +23,23 @@
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Djibouti</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:DJ</Source>
   </Sources>
+
+  <SubConfigurations hierarchy="ar" description="Arta">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="as" description="Ali Sabieh">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="di" description="Dikhil">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="dj" description="Djibouti">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ob" description="Obock">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ta" description="Tadjourah">
+    <Holidays/>
+  </SubConfigurations>
 </Configuration>

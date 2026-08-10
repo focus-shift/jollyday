@@ -68,4 +68,8 @@
   <SubConfigurations hierarchy="wd" description="Western Equatoria">
     <Holidays/>
   </SubConfigurations>
+
+  <SubConfigurations hierarchy="lk" description="Lakes">
+    <Holidays/>
+  </SubConfigurations>
 </Configuration>

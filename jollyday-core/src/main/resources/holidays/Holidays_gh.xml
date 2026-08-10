@@ -46,4 +46,53 @@
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:GH</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:GH</Source>
   </Sources>
+
+  <SubConfigurations hierarchy="aa" description="Greater Accra">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="af" description="Ahafo">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ah" description="Ashanti">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="be" description="Bono East">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="bo" description="Bono">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="cp" description="Central">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ep" description="Eastern">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ne" description="North East">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="np" description="Northern">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ot" description="Oti">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="sv" description="Savannah">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="tv" description="Volta">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ue" description="Upper East">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="uw" description="Upper West">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="wn" description="Western North">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="wp" description="Western">
+    <Holidays/>
+  </SubConfigurations>
 </Configuration>

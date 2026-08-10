@@ -25,4 +25,48 @@
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:NO</Source>
   </Sources>
 
+  <SubConfigurations hierarchy="03" description="Oslo">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="11" description="Rogaland">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="15" description="Møre og Romsdal">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="18" description="Nordland">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="30" description="Viken">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="34" description="Innlandet">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="38" description="Vestfold og Telemark">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="42" description="Agder">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="46" description="Vestland">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="50" description="Trøndelag">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="54" description="Troms og Finnmark">
+    <Holidays/>
+  </SubConfigurations>
+
 </Configuration>

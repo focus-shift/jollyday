@@ -19,4 +19,26 @@
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Sao_Tome_and_Principe</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:ST</Source>
   </Sources>
+
+  <SubConfigurations hierarchy="01" description="Água Grande">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="02" description="Cantagalo">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="03" description="Caué">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="04" description="Lembá">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="05" description="Lobata">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="06" description="Mé-Zóchi">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="p" description="Príncipe">
+    <Holidays/>
+  </SubConfigurations>
 </Configuration>

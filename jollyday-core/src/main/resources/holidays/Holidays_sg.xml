@@ -246,4 +246,20 @@
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:SG</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:SG</Source>
   </Sources>
+
+  <SubConfigurations hierarchy="01" description="Central Singapore">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="02" description="North East">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="03" description="North West">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="04" description="South East">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="05" description="South West">
+    <Holidays/>
+  </SubConfigurations>
 </Configuration>

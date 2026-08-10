@@ -29,4 +29,41 @@
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:BJ</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:BJ</Source>
   </Sources>
+
+  <SubConfigurations hierarchy="ak" description="Atacora">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="al" description="Alibori">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="aq" description="Atlantique">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="bo" description="Borgou">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="co" description="Collines">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="do" description="Donga">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ko" description="Couffo">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="li" description="Littoral">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="mo" description="Mono">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ou" description="Ouémé">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="pl" description="Plateau">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="zo" description="Zou">
+    <Holidays/>
+  </SubConfigurations>
 </Configuration>

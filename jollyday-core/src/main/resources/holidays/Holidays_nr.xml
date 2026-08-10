@@ -98,4 +98,47 @@
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:NR</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:NR</Source>
   </Sources>
+
+  <SubConfigurations hierarchy="01" description="Aiwo">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="02" description="Anabar">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="03" description="Anetan">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="04" description="Anibare">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="05" description="Baitsi">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="06" description="Boe">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="07" description="Buada">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="08" description="Denigomodu">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="09" description="Ewa">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="10" description="Ijuw">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="11" description="Meneng">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="12" description="Nibok">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="13" description="Uaboe">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="14" description="Yaren">
+    <Holidays/>
+  </SubConfigurations>
 </Configuration>

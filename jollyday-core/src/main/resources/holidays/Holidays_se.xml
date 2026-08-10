@@ -38,4 +38,68 @@
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:SE</Source>
   </Sources>
 
+  <SubConfigurations hierarchy="ab" description="Stockholm">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ac" description="Västerbotten">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="bd" description="Norrbotten">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="c" description="Uppsala">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="d" description="Södermanland">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="e" description="Östergötland">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="f" description="Jönköping">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="g" description="Kronoberg">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="h" description="Kalmar">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="i" description="Gotland">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="k" description="Blekinge">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="m" description="Scania">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="n" description="Halland">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="o" description="Västra Götaland">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="s" description="Värmland">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="t" description="Örebro">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="u" description="Västmanland">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="w" description="Dalarna">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="x" description="Gävleborg">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="y" description="Västernorrland">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="z" description="Jämtland">
+    <Holidays/>
+  </SubConfigurations>
+
 </Configuration>

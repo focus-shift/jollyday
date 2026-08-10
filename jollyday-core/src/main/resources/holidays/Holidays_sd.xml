@@ -49,6 +49,10 @@
     <Holidays/>
   </SubConfigurations>
 
+  <SubConfigurations hierarchy="gk" description="West Kordofan">
+    <Holidays/>
+  </SubConfigurations>
+
   <SubConfigurations hierarchy="gz" description="Gedarif">
     <Holidays/>
   </SubConfigurations>

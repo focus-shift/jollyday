@@ -28,4 +28,23 @@
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:GM</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:GM</Source>
   </Sources>
+
+  <SubConfigurations hierarchy="b" description="Banjul">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="l" description="Lower River">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="m" description="Central River">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="n" description="North Bank">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="u" description="Upper River">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="w" description="Western">
+    <Holidays/>
+  </SubConfigurations>
 </Configuration>

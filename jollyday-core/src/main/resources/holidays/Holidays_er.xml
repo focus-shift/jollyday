@@ -25,4 +25,23 @@
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:ER</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:ER</Source>
   </Sources>
+
+  <SubConfigurations hierarchy="an" description="Anseba">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="dk" description="Southern Red Sea">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="du" description="Southern">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="gb" description="Gash-Barka">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ma" description="Central">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="sk" description="Northern Red Sea">
+    <Holidays/>
+  </SubConfigurations>
 </Configuration>

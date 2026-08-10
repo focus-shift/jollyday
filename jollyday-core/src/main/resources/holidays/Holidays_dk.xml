@@ -24,4 +24,20 @@
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:DK</Source>
   </Sources>
 
+  <SubConfigurations hierarchy="81" description="Nordjylland">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="82" description="Midtjylland">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="83" description="Syddanmark">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="84" description="Hovedstaden">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="85" description="Sjælland">
+    <Holidays/>
+  </SubConfigurations>
+
 </Configuration>

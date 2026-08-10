@@ -26,4 +26,32 @@
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:GA</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:GA</Source>
   </Sources>
+
+  <SubConfigurations hierarchy="1" description="Estuaire">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="2" description="Haut-Ogooué">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="3" description="Moyen-Ogooué">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="4" description="Ngounié">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="5" description="Nyanga">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="6" description="Ogooué-Ivindo">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="7" description="Ogooué-Lolo">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="8" description="Ogooué-Maritime">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="9" description="Woleu-Ntem">
+    <Holidays/>
+  </SubConfigurations>
 </Configuration>

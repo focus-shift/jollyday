@@ -25,4 +25,50 @@
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:EE</Source>
   </Sources>
 
+  <SubConfigurations hierarchy="37" description="Harjumaa">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="39" description="Hiiumaa">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="45" description="Ida-Virumaa">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="50" description="Jõgevamaa">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="52" description="Järvamaa">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="56" description="Läänemaa">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="60" description="Lääne-Virumaa">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="64" description="Põlvamaa">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="68" description="Pärnumaa">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="71" description="Raplamaa">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="74" description="Saaremaa">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="79" description="Tartumaa">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="81" description="Valgamaa">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="84" description="Viljandimaa">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="87" description="Võrumaa">
+    <Holidays/>
+  </SubConfigurations>
+
 </Configuration>

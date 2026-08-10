@@ -60,4 +60,132 @@
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:BS</Source>
   </Sources>
 
+  <SubConfigurations hierarchy="ak" description="Acklins">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="bi" description="Bimini">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="bp" description="Black Point">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="by" description="Berry Islands">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ce" description="Central Eleuthera">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ci" description="Cat Island">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ck" description="Crooked Island and Long Cay">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="co" description="Central Abaco">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="cs" description="Central Andros">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="eg" description="East Grand Bahama">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ex" description="Exuma">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="fp" description="City of Freeport">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="gc" description="Grand Cay">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="hi" description="Harbour Island">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ht" description="Hope Town">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="in" description="Inagua">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="li" description="Long Island">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="mc" description="Mangrove Cay">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="mg" description="Mayaguana">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="mi" description="Moore's Island">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ne" description="North Eleuthera">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="no" description="North Abaco">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="np" description="New Providence">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ns" description="North Andros">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="rc" description="Rum Cay">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ri" description="Ragged Island">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="sa" description="South Andros">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="se" description="South Eleuthera">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="so" description="South Abaco">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ss" description="San Salvador">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="sw" description="Spanish Wells">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="wg" description="West Grand Bahama">
+    <Holidays/>
+  </SubConfigurations>
+
 </Configuration>

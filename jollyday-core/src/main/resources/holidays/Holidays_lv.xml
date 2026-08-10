@@ -24,6 +24,184 @@
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Latvia</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:LV</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:LV</Source>
+    <Source of="Par svētku, atceres un atzīmējamām dienām, 1. pants">https://likumi.lv/ta/id/72608-par-svetku-atceres-un-atzimejamam-dienam</Source>
   </Sources>
+
+  <!-- Section 1 of Par svetku, atceres un atzimejamam dienam is national and carries no
+       delegation clause; even the one off free days were added by amending it. Pilsetas
+       svetki impose no obligation on employers, and the annual Cabinet order on
+       parceltas darba dienas only moves working days, it never creates a holiday. -->
+
+  <SubConfigurations hierarchy="002" description="Aizkraukle">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="007" description="Alūksne">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="011" description="Ādaži">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="015" description="Balvi">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="016" description="Bauska">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="022" description="Cēsis">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="026" description="Dobele">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="033" description="Gulbene">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="041" description="Jelgava Municipality">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="042" description="Jēkabpils">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="047" description="Krāslava">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="050" description="Kuldīga">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="052" description="Ķekava">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="054" description="Limbaži">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="056" description="Līvāni">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="058" description="Ludza">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="059" description="Madona">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="062" description="Mārupe">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="067" description="Ogre">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="068" description="Olaine">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="073" description="Preiļi">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="077" description="Rēzekne Municipality">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="080" description="Ropaži">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="087" description="Salaspils">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="088" description="Saldus">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="089" description="Saulkrasti">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="091" description="Sigulda">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="094" description="Smiltene">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="097" description="Talsi">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="099" description="Tukums">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="101" description="Valka">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="102" description="Varakļāni">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="106" description="Ventspils Municipality">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="111" description="Augšdaugava">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="112" description="Dienvidkurzeme">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="113" description="Valmiera">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="dgv" description="Daugavpils">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="jel" description="Jelgava City">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="jur" description="Jūrmala">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="lpx" description="Liepāja">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="rez" description="Rēzekne City">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="rix" description="Rīga">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ven" description="Ventspils City">
+    <Holidays/>
+  </SubConfigurations>
 
 </Configuration>

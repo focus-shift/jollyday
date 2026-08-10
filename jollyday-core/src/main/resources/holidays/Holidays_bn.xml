@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="bn" description="Brunei Darussalam"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <Holidays>
+    <!-- Fixed Gregorian holidays -->
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="FEBRUARY" day="23" descriptionPropertiesKey="NATIONAL_DAY"/>
+    <Fixed month="MAY" day="31" descriptionPropertiesKey="ARMED_FORCES_DAY"/>
+    <Fixed month="JULY" day="15" descriptionPropertiesKey="SULTANS_BIRTHDAY"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+
+    <!-- Chinese New Year. jollyday has no lunar calendar, so the first day of the Chinese
+         New Year is enumerated per year using its Gregorian date. -->
+    <Fixed month="FEBRUARY" day="10" validFrom="2013" validTo="2013" descriptionPropertiesKey="CHINESE_NEW_YEAR"/>
+    <Fixed month="JANUARY" day="31" validFrom="2014" validTo="2014" descriptionPropertiesKey="CHINESE_NEW_YEAR"/>
+    <Fixed month="FEBRUARY" day="19" validFrom="2015" validTo="2015" descriptionPropertiesKey="CHINESE_NEW_YEAR"/>
+    <Fixed month="FEBRUARY" day="8" validFrom="2016" validTo="2016" descriptionPropertiesKey="CHINESE_NEW_YEAR"/>
+    <Fixed month="JANUARY" day="28" validFrom="2017" validTo="2017" descriptionPropertiesKey="CHINESE_NEW_YEAR"/>
+    <Fixed month="FEBRUARY" day="16" validFrom="2018" validTo="2018" descriptionPropertiesKey="CHINESE_NEW_YEAR"/>
+    <Fixed month="FEBRUARY" day="5" validFrom="2019" validTo="2019" descriptionPropertiesKey="CHINESE_NEW_YEAR"/>
+    <Fixed month="JANUARY" day="25" validFrom="2020" validTo="2020" descriptionPropertiesKey="CHINESE_NEW_YEAR"/>
+    <Fixed month="FEBRUARY" day="12" validFrom="2021" validTo="2021" descriptionPropertiesKey="CHINESE_NEW_YEAR"/>
+    <Fixed month="FEBRUARY" day="1" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHINESE_NEW_YEAR"/>
+    <Fixed month="JANUARY" day="22" validFrom="2023" validTo="2023" descriptionPropertiesKey="CHINESE_NEW_YEAR"/>
+    <Fixed month="FEBRUARY" day="10" validFrom="2024" validTo="2024" descriptionPropertiesKey="CHINESE_NEW_YEAR"/>
+    <Fixed month="JANUARY" day="29" validFrom="2025" validTo="2025" descriptionPropertiesKey="CHINESE_NEW_YEAR"/>
+    <Fixed month="FEBRUARY" day="17" validFrom="2026" validTo="2026" descriptionPropertiesKey="CHINESE_NEW_YEAR"/>
+    <Fixed month="FEBRUARY" day="6" validFrom="2027" validTo="2027" descriptionPropertiesKey="CHINESE_NEW_YEAR"/>
+    <Fixed month="JANUARY" day="26" validFrom="2028" validTo="2028" descriptionPropertiesKey="CHINESE_NEW_YEAR"/>
+    <Fixed month="FEBRUARY" day="13" validFrom="2029" validTo="2029" descriptionPropertiesKey="CHINESE_NEW_YEAR"/>
+    <Fixed month="FEBRUARY" day="3" validFrom="2030" validTo="2030" descriptionPropertiesKey="CHINESE_NEW_YEAR"/>
+    <Fixed month="JANUARY" day="23" validFrom="2031" validTo="2031" descriptionPropertiesKey="CHINESE_NEW_YEAR"/>
+    <Fixed month="FEBRUARY" day="11" validFrom="2032" validTo="2032" descriptionPropertiesKey="CHINESE_NEW_YEAR"/>
+    <Fixed month="JANUARY" day="31" validFrom="2033" validTo="2033" descriptionPropertiesKey="CHINESE_NEW_YEAR"/>
+    <Fixed month="FEBRUARY" day="19" validFrom="2034" validTo="2034" descriptionPropertiesKey="CHINESE_NEW_YEAR"/>
+    <Fixed month="FEBRUARY" day="8" validFrom="2035" validTo="2035" descriptionPropertiesKey="CHINESE_NEW_YEAR"/>
+    <Fixed month="JANUARY" day="28" validFrom="2036" validTo="2036" descriptionPropertiesKey="CHINESE_NEW_YEAR"/>
+    <Fixed month="FEBRUARY" day="15" validFrom="2037" validTo="2037" descriptionPropertiesKey="CHINESE_NEW_YEAR"/>
+
+    <!-- Islamic (Hijri) holidays. Actual Gregorian dates are computed from the Hijri calendar
+         and may differ by a day or two from the officially gazetted dates (moon sighting). -->
+    <IslamicHoliday type="NEWYEAR"/>
+    <IslamicHoliday type="MAWLID_AN_NABI"/>
+    <IslamicHoliday type="LAILAT_AL_MIRAJ"/>
+    <IslamicHoliday type="RAMADAN"/>
+    <IslamicHoliday type="NUZUL_AL_QURAN"/>
+    <IslamicHoliday type="ID_AL_FITR"/>
+    <IslamicHoliday type="ID_AL_FITR_2"/>
+    <IslamicHoliday type="ID_AL_FITR_3"/>
+    <IslamicHoliday type="ID_UL_ADHA"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Brunei</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:BN</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:BN</Source>
+  </Sources>
+</Configuration>

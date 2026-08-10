@@ -26,4 +26,26 @@
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:AE</Source>
   </Sources>
 
+  <SubConfigurations hierarchy="aj" description="Ajman">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="az" description="Abu Dhabi">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="du" description="Dubai">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="fu" description="Fujairah">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="rk" description="Ras Al Khaimah">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="sh" description="Sharjah">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="uq" description="Umm Al Quwain">
+    <Holidays/>
+  </SubConfigurations>
+
 </Configuration>

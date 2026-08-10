@@ -139,4 +139,72 @@
       </Holidays>
     </SubConfigurations>
   </SubConfigurations>
+
+  <SubConfigurations hierarchy="ac" description="Acre">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="al" description="Alagoas">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="am" description="Amazonas">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ap" description="Amapá">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ba" description="Bahia">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ce" description="Ceará">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="df" description="Distrito Federal">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="es" description="Espírito Santo">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ma" description="Maranhão">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="mt" description="Mato Grosso">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="pa" description="Pará">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="pi" description="Piauí">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="ro" description="Rondônia">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="rr" description="Roraima">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="sc" description="Santa Catarina">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="se" description="Sergipe">
+    <Holidays/>
+  </SubConfigurations>
+
+  <SubConfigurations hierarchy="to" description="Tocantins">
+    <Holidays/>
+  </SubConfigurations>
 </Configuration>

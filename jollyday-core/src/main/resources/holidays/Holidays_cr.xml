@@ -23,4 +23,26 @@
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:CR</Source>
   </Sources>
 
+  <SubConfigurations hierarchy="a" description="Alajuela">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="c" description="Cartago">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="g" description="Guanacaste">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="h" description="Heredia">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="l" description="Limón">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="p" description="Puntarenas">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="sj" description="San José">
+    <Holidays/>
+  </SubConfigurations>
+
 </Configuration>

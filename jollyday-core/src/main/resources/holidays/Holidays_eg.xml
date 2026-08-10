@@ -30,4 +30,86 @@
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:EG</Source>
   </Sources>
 
+  <SubConfigurations hierarchy="alx" description="Alexandria">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="asn" description="Aswan">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ast" description="Asyut">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ba" description="Red Sea">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="bh" description="Beheira">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="bns" description="Beni Suef">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="c" description="Cairo">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="dk" description="Dakahlia">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="dt" description="Damietta">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="fym" description="Faiyum">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="gh" description="Gharbia">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="gz" description="Giza">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="is" description="Ismailia">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="js" description="South Sinai">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="kb" description="Qalyubia">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="kfs" description="Kafr el-Sheikh">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="kn" description="Qena">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="lx" description="Luxor">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="mn" description="Minya">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="mnf" description="Monufia">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="mt" description="Matrouh">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="pts" description="Port Said">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="shg" description="Sohag">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="shr" description="Al Sharqia">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="sin" description="North Sinai">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="suz" description="Suez">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="wad" description="New Valley">
+    <Holidays/>
+  </SubConfigurations>
+
 </Configuration>

@@ -30,4 +30,29 @@
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:SK</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:SK</Source>
   </Sources>
+
+  <SubConfigurations hierarchy="bc" description="Banská Bystrica">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="bl" description="Bratislava">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ki" description="Košice">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ni" description="Nitra">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="pv" description="Prešov">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ta" description="Trnava">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="tc" description="Trenčín">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="zi" description="Žilina">
+    <Holidays/>
+  </SubConfigurations>
 </Configuration>

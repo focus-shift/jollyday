@@ -26,4 +26,83 @@
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:PE</Source>
   </Sources>
 
+  <SubConfigurations hierarchy="ama" description="Amazonas">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="anc" description="Ancash">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="apu" description="Apurímac">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="are" description="Arequipa">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="aya" description="Ayacucho">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="caj" description="Cajamarca">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="cal" description="El Callao">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="cus" description="Cusco">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="huc" description="Huánuco">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="huv" description="Huancavelica">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ica" description="Ica">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="jun" description="Junín">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="lal" description="La Libertad">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="lam" description="Lambayeque">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="lim" description="Lima">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="lma" description="Municipalidad Metropolitana de Lima">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="lor" description="Loreto">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="mdd" description="Madre de Dios">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="moq" description="Moquegua">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="pas" description="Pasco">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="piu" description="Piura">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="pun" description="Puno">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="sam" description="San Martín">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="tac" description="Tacna">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="tum" description="Tumbes">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="uca" description="Ucayali">
+    <Holidays/>
+  </SubConfigurations>
+
 </Configuration>

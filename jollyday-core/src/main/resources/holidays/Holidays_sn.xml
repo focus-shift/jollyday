@@ -29,4 +29,47 @@
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:SN</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:SN</Source>
   </Sources>
+
+  <SubConfigurations hierarchy="db" description="Diourbel">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="dk" description="Dakar">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="fk" description="Fatick">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ka" description="Kaffrine">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="kd" description="Kolda">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="ke" description="Kédougou">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="kl" description="Kaolack">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="lg" description="Louga">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="mt" description="Matam">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="se" description="Sédhiou">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="sl" description="Saint-Louis">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="tc" description="Tambacounda">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="th" description="Thiès">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="zg" description="Ziguinchor">
+    <Holidays/>
+  </SubConfigurations>
 </Configuration>
