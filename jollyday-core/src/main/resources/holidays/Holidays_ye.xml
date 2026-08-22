@@ -20,8 +20,13 @@
     <IslamicHoliday type="MAWLID_AN_NABI"/>
   </Holidays>
 
+  <Weekend weekday="THURSDAY" validTo="2011"/>
+  <Weekend weekday="FRIDAY"/>
+  <Weekend weekday="SATURDAY" validFrom="2012"/>
+
   <Sources>
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Yemen</Source>
+    <Source of="Weekend">https://www.albawaba.com/editorchoice/yemen-have-friday-saturday-weekend-408239</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:YE</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:YE</Source>
   </Sources>
