@@ -11,7 +11,13 @@ import org.jspecify.annotations.NonNull;
 import org.jspecify.annotations.Nullable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.xml.sax.SAXException;
 
+import javax.xml.XMLConstants;
+import javax.xml.transform.stream.StreamSource;
+import javax.xml.validation.Schema;
+import javax.xml.validation.SchemaFactory;
+import java.io.IOException;
 import java.io.InputStream;
 
 public class JaxbXMLMapper {
@@ -21,9 +27,16 @@ public class JaxbXMLMapper {
    */
   private static final String PACKAGE = "de.focus_shift.jollyday.jaxb.mapping";
 
+  /**
+   * classpath location of the XSD that bundled and consumer-supplied holiday XML is validated against.
+   */
+  private static final String SCHEMA_RESOURCE = "focus_shift.de/jollyday/schema/holiday/holiday.xsd";
+
   private static final Logger LOG = LoggerFactory.getLogger(JaxbXMLMapper.class);
 
   private static final JAXBContext jaxbContext = new JAXBContextCreator().create();
+
+  private static final Schema holidaySchema = loadSchema();
 
   /**
    * Unmarshalls the configuration from the stream. Uses <code>JAXB</code> for
@@ -39,10 +52,23 @@ public class JaxbXMLMapper {
 
     try {
       final Unmarshaller um = jaxbContext.createUnmarshaller();
+      um.setSchema(holidaySchema);
       @SuppressWarnings("unchecked") final JAXBElement<Configuration> jaxbElement = (JAXBElement<Configuration>) um.unmarshal(stream);
       return jaxbElement.getValue();
     } catch (JAXBException exception) {
       throw new IllegalStateException("Cannot parse holidays XML file.", exception);
+    }
+  }
+
+  private static @NonNull Schema loadSchema() {
+    try (InputStream schemaStream = ClassLoadingUtil.getClassloader().getResourceAsStream(SCHEMA_RESOURCE)) {
+      if (schemaStream == null) {
+        throw new IllegalStateException("Cannot find holiday schema on the classpath: " + SCHEMA_RESOURCE);
+      }
+      final SchemaFactory schemaFactory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
+      return schemaFactory.newSchema(new StreamSource(schemaStream));
+    } catch (IOException | SAXException exception) {
+      throw new IllegalStateException("Cannot load holiday schema: " + SCHEMA_RESOURCE, exception);
     }
   }
 
