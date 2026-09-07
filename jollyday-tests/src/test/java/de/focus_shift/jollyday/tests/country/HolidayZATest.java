@@ -13,6 +13,7 @@ import static java.time.Month.JANUARY;
 import static java.time.Month.JUNE;
 import static java.time.Month.MARCH;
 import static java.time.Month.MAY;
+import static java.time.Month.NOVEMBER;
 import static java.time.Month.OCTOBER;
 import static java.time.Month.SEPTEMBER;
 import static java.time.Year.of;
@@ -21,6 +22,10 @@ class HolidayZATest {
   @Test
   void ensuresHolidays() {
     assertFor(SOUTH_AFRICA)
+      .hasFixedHoliday("ELECTION_DAY", NOVEMBER, 1)
+        .validBetween(of(2021), of(2021)).and()
+      .hasFixedHoliday("ELECTION_DAY", NOVEMBER, 4)
+        .validBetween(of(2026), of(2026)).and()
       .hasFixedHoliday("NEW_YEAR", JANUARY, 1)
         .canBeMovedFrom(SUNDAY, MONDAY).and()
       .hasFixedHoliday("HUMAN_RIGHTS", MARCH, 21)
