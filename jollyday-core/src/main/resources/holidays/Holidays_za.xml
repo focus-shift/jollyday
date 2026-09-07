@@ -15,6 +15,8 @@
     <Fixed month="MAY" day="29" validFrom="2024" validTo="2024" descriptionPropertiesKey="ELECTION_DAY"/>
     <Fixed month="AUGUST" day="3" validFrom="2016" validTo="2016" descriptionPropertiesKey="ELECTION_DAY"/>
     <Fixed month="MAY" day="8" validFrom="2019" validTo="2019" descriptionPropertiesKey="ELECTION_DAY"/>
+    <Fixed month="NOVEMBER" day="1" validFrom="2021" validTo="2021" descriptionPropertiesKey="ELECTION_DAY"/>
+    <Fixed month="NOVEMBER" day="4" validFrom="2026" validTo="2026" descriptionPropertiesKey="ELECTION_DAY"/>
 
     <Fixed month="DECEMBER" day="31" validFrom="1999" validTo="1999" descriptionPropertiesKey="NEW_YEAR">
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
@@ -84,6 +86,8 @@
 
   <Sources>
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_South_Africa</Source>
+    <Source of="ELECTION_DAY 2021">https://www.gov.za/news/media-statements/president-cyril-ramaphosa-declares-election-day-1-november-2021-public</Source>
+    <Source of="ELECTION_DAY 2026">https://www.elections.org.za/content/About-Us/News/Electoral-Commission-welcomes-announcement-of-4-November-2026-as-Local-Government-Elections-date/</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:ZA</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:ZA</Source>
   </Sources>

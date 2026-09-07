@@ -13,6 +13,7 @@ import static java.time.Month.JANUARY;
 import static java.time.Month.JUNE;
 import static java.time.Month.MARCH;
 import static java.time.Month.MAY;
+import static java.time.Month.NOVEMBER;
 import static java.time.Month.OCTOBER;
 import static java.time.Month.SEPTEMBER;
 import static java.time.Year.of;
@@ -21,6 +22,28 @@ class HolidayZATest {
   @Test
   void ensuresHolidays() {
     assertFor(SOUTH_AFRICA)
+      .hasFixedHoliday("ELECTION_DAY", JUNE, 2)
+        .validBetween(of(1999), of(1999)).and()
+      .hasFixedHoliday("ELECTION_DAY", APRIL, 14)
+        .validBetween(of(2004), of(2004)).and()
+      .hasFixedHoliday("ELECTION_DAY", MARCH, 1)
+        .validBetween(of(2006), of(2006)).and()
+      .hasFixedHoliday("ELECTION_DAY", APRIL, 22)
+        .validBetween(of(2009), of(2009)).and()
+      .hasFixedHoliday("ELECTION_DAY", MAY, 18)
+        .validBetween(of(2011), of(2011)).and()
+      .hasFixedHoliday("ELECTION_DAY", MAY, 7)
+        .validBetween(of(2014), of(2014)).and()
+      .hasFixedHoliday("ELECTION_DAY", AUGUST, 3)
+        .validBetween(of(2016), of(2016)).and()
+      .hasFixedHoliday("ELECTION_DAY", MAY, 8)
+        .validBetween(of(2019), of(2019)).and()
+      .hasFixedHoliday("ELECTION_DAY", NOVEMBER, 1)
+        .validBetween(of(2021), of(2021)).and()
+      .hasFixedHoliday("ELECTION_DAY", MAY, 29)
+        .validBetween(of(2024), of(2024)).and()
+      .hasFixedHoliday("ELECTION_DAY", NOVEMBER, 4)
+        .validBetween(of(2026), of(2026)).and()
       .hasFixedHoliday("NEW_YEAR", JANUARY, 1)
         .canBeMovedFrom(SUNDAY, MONDAY).and()
       .hasFixedHoliday("HUMAN_RIGHTS", MARCH, 21)
