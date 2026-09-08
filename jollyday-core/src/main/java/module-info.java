@@ -7,6 +7,7 @@ module de.focus_shift.jollyday.core {
   opens de.focus_shift.jollyday.core.util;
   opens descriptions;
   opens holidays;
+  opens focus_shift.de.jollyday.schema.holiday;
 
   requires java.xml;
   requires org.slf4j;
