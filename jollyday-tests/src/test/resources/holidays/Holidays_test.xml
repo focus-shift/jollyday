@@ -29,10 +29,14 @@
     <ChristianHoliday type="ASH_WEDNESDAY"/>
   </Holidays>
 
+  <Weekend weekday="FRIDAY"/>
+  <Weekend weekday="SATURDAY"/>
+
   <SubConfigurations hierarchy="level1_1">
     <Holidays>
       <Fixed month="JANUARY" day="2"/>
     </Holidays>
+    <Weekend weekday="SUNDAY"/>
     <SubConfigurations hierarchy="level1_1_l2">
       <Holidays>
         <Fixed month="JANUARY" day="3"/>

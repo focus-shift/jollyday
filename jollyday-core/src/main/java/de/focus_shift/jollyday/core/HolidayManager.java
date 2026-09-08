@@ -12,6 +12,7 @@ import org.jspecify.annotations.Nullable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.Year;
 import java.util.Calendar;
@@ -315,4 +316,28 @@ public abstract class HolidayManager {
    * @return Current calendars hierarchy
    */
   public abstract @NonNull CalendarHierarchy getCalendarHierarchy();
+
+  /**
+   * Returns the weekdays that are non-working/rest days (the "weekend") for the requested
+   * year and hierarchy structure. Falls back to Saturday and Sunday if neither the requested
+   * calendar nor any of its ancestors define their own weekend.
+   *
+   * @param year i.e. 2010
+   * @param args i.e. args = {'ny'}. returns US/New York weekend. No args means the weekend of the whole country
+   * @return the weekend days for the requested year
+   */
+  public abstract @NonNull Set<DayOfWeek> getWeekendDays(@NonNull final Year year, @NonNull final String... args);
+
+  /**
+   * Returns true if the requested date is a non-working day: either a weekend day
+   * (see {@link #getWeekendDays(Year, String...)}) or a holiday (see {@link #isHoliday(LocalDate, String...)}).
+   *
+   * @param localDate The potential non-working day.
+   * @param args      Hierarchy to request the weekend/holidays for. i.e. args = {'ny'} -&gt; US/New York
+   * @return true if the given date is a weekend day or a holiday in the state/region and below, otherwise false
+   */
+  public boolean isNonWorkingDay(@NonNull final LocalDate localDate, @NonNull final String... args) {
+    final boolean isWeekend = getWeekendDays(Year.of(localDate.getYear()), args).contains(DayOfWeek.from(localDate));
+    return isWeekend || isHoliday(localDate, args);
+  }
 }
