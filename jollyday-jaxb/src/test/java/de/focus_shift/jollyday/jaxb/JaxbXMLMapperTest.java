@@ -25,10 +25,11 @@ class JaxbXMLMapperTest {
 
   @Test
   void rejectsXmlWithDoctypeToPreventXxe() {
-    final String maliciousXml =
-      "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
-        + "<!DOCTYPE Configuration [<!ENTITY xxe SYSTEM \"file:///etc/passwd\">]>\n"
-        + "<Configuration hierarchy=\"test\" description=\"&xxe;\"></Configuration>";
+    final String maliciousXml = """
+      <?xml version="1.0" encoding="UTF-8"?>
+      <!DOCTYPE Configuration [<!ENTITY xxe SYSTEM "file:///etc/passwd">]>
+      <Configuration hierarchy="test" description="&xxe;"></Configuration>
+      """;
     final InputStream inputStream = new ByteArrayInputStream(maliciousXml.getBytes(StandardCharsets.UTF_8));
 
     assertThatThrownBy(() -> sut.unmarshallConfiguration(inputStream))
