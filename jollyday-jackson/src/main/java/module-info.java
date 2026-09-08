@@ -10,6 +10,7 @@ module de.focus_shift.jollyday.jackson {
     com.fasterxml.jackson.annotation,
     tools.jackson.databind;
 
+  requires java.xml;
   requires tools.jackson.databind;
   requires tools.jackson.dataformat.xml;
   requires de.focus_shift.jollyday.core;
