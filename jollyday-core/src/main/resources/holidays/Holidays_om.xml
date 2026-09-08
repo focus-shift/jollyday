@@ -24,8 +24,12 @@
     <IslamicHoliday type="ID_UL_ADHA_3"/>
   </Holidays>
 
+  <Weekend weekday="FRIDAY"/>
+  <Weekend weekday="SATURDAY"/>
+
   <Sources>
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Oman</Source>
+    <Source of="Weekend">https://gulfnews.com/world/gulf/oman/oman-to-follow-uniform-friday-saturday-weekend-1.1167447</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:OM</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:OM</Source>
   </Sources>
