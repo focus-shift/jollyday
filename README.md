@@ -160,6 +160,50 @@ Returns true or false if a date is a public holidays in Baden-Württemberg in Ge
 </details>
 
 <details>
+  <summary>Retrieve the weekend days / check if a date is a non-working day (click to expand)</summary>
+
+Weekends are not public holidays, but in most applications they are non-working days too. Which weekdays make up
+the "weekend" differs by country: most western countries use Saturday/Sunday, but e.g. Saudi Arabia uses
+Friday/Saturday and Iran uses only Friday. `getWeekendDays` returns the weekend for a given calendar and year;
+`isNonWorkingDay` combines that with `isHoliday` to answer "is this a day off" in one call.
+
+Countries and subdivisions that don't define their own weekend inherit it from their parent calendar and,
+ultimately, default to Saturday/Sunday.
+
+Returns the weekend days for Saudi Arabia (Friday and Saturday) and Germany (Saturday and Sunday, the default).
+  ```java
+  import de.focus_shift.jollyday.core.HolidayManager;
+  import de.focus_shift.jollyday.core.ManagerParameters;
+
+  import java.time.DayOfWeek;
+  import java.time.Year;
+  import java.util.Set;
+
+  import static de.focus_shift.jollyday.core.HolidayCalendar.GERMANY;
+  import static de.focus_shift.jollyday.core.HolidayCalendar.SAUDI_ARABIA;
+
+  final Set<DayOfWeek> saudiWeekend = HolidayManager.getInstance(ManagerParameters.create(SAUDI_ARABIA)).getWeekendDays(Year.of(2024));
+  // [FRIDAY, SATURDAY]
+
+  final Set<DayOfWeek> germanWeekend = HolidayManager.getInstance(ManagerParameters.create(GERMANY)).getWeekendDays(Year.of(2024));
+  // [SATURDAY, SUNDAY]
+  ```
+
+Returns true or false if a date is a non-working day (weekend day or public holiday) in Saudi Arabia.
+  ```java
+  import de.focus_shift.jollyday.core.HolidayManager;
+  import de.focus_shift.jollyday.core.ManagerParameters;
+
+  import java.time.LocalDate;
+
+  import static de.focus_shift.jollyday.core.HolidayCalendar.SAUDI_ARABIA;
+
+  final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(SAUDI_ARABIA));
+  final boolean isNonWorkingDay = holidayManager.isNonWorkingDay(LocalDate.of(2024, 1, 5)); // a Friday
+  ```
+</details>
+
+<details>
   <summary>Override an existing country (click to expand)</summary>
 
 If you want to override the public holidays of a provided country like **Germany**, you need to put a holiday file
