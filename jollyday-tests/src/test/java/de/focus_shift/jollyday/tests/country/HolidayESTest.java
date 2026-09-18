@@ -454,6 +454,10 @@ class HolidayESTest {
       .hasChristianHoliday("MAUNDY_THURSDAY")
         .inSubdivision("mc")
       .and()
+      .hasFixedHoliday("ST_JOSEPH", MARCH, 19)
+        .inSubdivision("mc")
+        .validBetween(Year.of(2027), Year.of(2027))
+      .and()
 
       // Chartered Community of Navarre
       .hasFixedHoliday("CHRISTMAS", DECEMBER, 25)
