@@ -2,6 +2,7 @@ package de.focus_shift.jollyday.jackson;
 
 import de.focus_shift.jollyday.core.spi.HolidayCalendarConfiguration;
 import de.focus_shift.jollyday.core.spi.HolidayConfigurations;
+import de.focus_shift.jollyday.core.spi.WeekendConfiguration;
 import de.focus_shift.jollyday.jackson.mapping.Configuration;
 import org.jspecify.annotations.NonNull;
 
@@ -36,6 +37,16 @@ public class JacksonConfiguration implements HolidayCalendarConfiguration {
   @Override
   public @NonNull Stream<HolidayCalendarConfiguration> subConfigurations() {
     return xmlConfiguration.getSubConfigurations().stream().map(JacksonConfiguration::new);
+  }
+
+  /**
+   * {@inheritDoc}
+   *
+   * @return {@inheritDoc}
+   */
+  @Override
+  public @NonNull Stream<WeekendConfiguration> weekends() {
+    return xmlConfiguration.getWeekend().stream().map(JacksonWeekend::new).map(WeekendConfiguration.class::cast);
   }
   /**
    * {@inheritDoc}
