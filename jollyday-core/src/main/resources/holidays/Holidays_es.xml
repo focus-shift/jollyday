@@ -274,7 +274,9 @@
   <SubConfigurations hierarchy="mc" description="Region of Murcia">
     <Holidays>
       <Fixed month="JANUARY" day="2" validFrom="2023" validTo="2023" descriptionPropertiesKey="NEW_YEAR"/>
-      <Fixed month="MARCH" day="19" validFrom="2027" validTo="2027" descriptionPropertiesKey="ST_JOSEPH"/>
+      <Fixed month="MARCH" day="19" validFrom="2010" validTo="2016" descriptionPropertiesKey="ST_JOSEPH"/>
+      <Fixed month="MARCH" day="19" validFrom="2018" validTo="2021" descriptionPropertiesKey="ST_JOSEPH"/>
+      <Fixed month="MARCH" day="19" validFrom="2024" validTo="2027" descriptionPropertiesKey="ST_JOSEPH"/>
       <Fixed month="JUNE" day="9" descriptionPropertiesKey="REGIONAL"/> <!--Day of Murcia-->
       <Fixed month="DECEMBER" day="7" validFrom="2026" validTo="2026" descriptionPropertiesKey="CONSTITUTION_DAY"/>
       <Fixed month="DECEMBER" day="25" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS">

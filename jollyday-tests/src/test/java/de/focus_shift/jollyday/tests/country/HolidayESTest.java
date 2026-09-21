@@ -439,6 +439,12 @@ class HolidayESTest {
         .inSubdivision("mc")
         .validBetween(Year.of(2023), Year.of(2023))
       .and()
+      .hasFixedHoliday("ST_JOSEPH", MARCH, 19)
+        .inSubdivision("mc")
+        .validBetween(Year.of(2010), Year.of(2016))
+        .validBetween(Year.of(2018), Year.of(2021))
+        .validBetween(Year.of(2024), Year.of(2027))
+      .and()
       .hasFixedHoliday("REGIONAL", JUNE, 9)
         .inSubdivision("mc")
       .and()
@@ -453,10 +459,6 @@ class HolidayESTest {
       .and()
       .hasChristianHoliday("MAUNDY_THURSDAY")
         .inSubdivision("mc")
-      .and()
-      .hasFixedHoliday("ST_JOSEPH", MARCH, 19)
-        .inSubdivision("mc")
-        .validBetween(Year.of(2027), Year.of(2027))
       .and()
 
       // Chartered Community of Navarre
