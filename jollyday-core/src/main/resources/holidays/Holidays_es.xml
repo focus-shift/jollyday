@@ -24,6 +24,8 @@
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:ES</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:ES</Source>
     <Source of="Legal basis for Sunday substitution (Art. 45.2/45.3)">https://www.boe.es/buscar/act.php?id=BOE-A-1983-20906</Source>
+    <Source of="Official calendar 2019">https://www.boe.es/diario_boe/txt.php?id=BOE-A-2018-14369</Source>
+    <Source of="Official calendar 2024">https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-22014</Source>
     <Source of="Official calendar 2026">https://www.boe.es/diario_boe/txt.php?id=BOE-A-2025-21667</Source>
   </Sources>
 
@@ -216,7 +218,11 @@
 
   <SubConfigurations hierarchy="ri" description="La Rioja">
     <Holidays>
-      <Fixed month="JUNE" day="9" descriptionPropertiesKey="REGIONAL"/> <!--Day of La Rioja-->
+      <Fixed month="JUNE" day="9" validTo="2001" descriptionPropertiesKey="REGIONAL"/> <!--Day of La Rioja-->
+      <!--Since 2002 La Rioja observes the day on the following Monday when 9 June falls on a Sunday (2002, 2013, 2019, 2024); it did not do so in 1991 and 1996-->
+      <Fixed month="JUNE" day="9" validFrom="2002" descriptionPropertiesKey="REGIONAL"> <!--Day of La Rioja-->
+        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+      </Fixed>
       <Fixed month="DECEMBER" day="7" validFrom="2026" validTo="2026" descriptionPropertiesKey="CONSTITUTION_DAY"/>
       <Fixed month="DECEMBER" day="25" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS">
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
@@ -278,6 +284,9 @@
       <Fixed month="MARCH" day="19" validFrom="2018" validTo="2021" descriptionPropertiesKey="ST_JOSEPH"/>
       <Fixed month="MARCH" day="19" validFrom="2024" validTo="2027" descriptionPropertiesKey="ST_JOSEPH"/>
       <Fixed month="JUNE" day="9" descriptionPropertiesKey="REGIONAL"/> <!--Day of Murcia-->
+      <!--Murcia moved the day to the following Monday only in 2002 and 2019, not in the other years where 9 June fell on a Sunday (1991, 1996, 2013, 2024)-->
+      <Fixed month="JUNE" day="10" validFrom="2002" validTo="2002" descriptionPropertiesKey="REGIONAL"/> <!--Day of Murcia moved from Sunday 9 June-->
+      <Fixed month="JUNE" day="10" validFrom="2019" validTo="2019" descriptionPropertiesKey="REGIONAL"/> <!--Day of Murcia moved from Sunday 9 June-->
       <Fixed month="DECEMBER" day="7" validFrom="2026" validTo="2026" descriptionPropertiesKey="CONSTITUTION_DAY"/>
       <Fixed month="DECEMBER" day="25" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS">
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
