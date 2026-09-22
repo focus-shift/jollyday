@@ -9,11 +9,13 @@ fi
 # Extract the current branch name
 BRANCH_NAME=$(git rev-parse --abbrev-ref HEAD)
 
-# Identify the issue number from the branch name
-ISSUE_NUMBER=$(echo "$BRANCH_NAME" | grep -oE '[0-9]+')
+# Identify the issue number from the branch name. Branches are named <issue>-<slug>, so
+# only the leading digits are the issue number - any other digit in the slug, e.g. in
+# 1492-june-9-monday-substitute-spain, must not be picked up as well.
+ISSUE_NUMBER=$(echo "$BRANCH_NAME" | grep -oE '^[0-9]+')
 
-# Prepend the issue number to the commit message if found
-if [ -n "$ISSUE_NUMBER" ]; then
+# Append the issue number to the commit message if found and not already referenced
+if [ -n "$ISSUE_NUMBER" ] && ! grep -qiE "^closes #$ISSUE_NUMBER\$" "$1"; then
     COMMIT_MSG=$(cat "$1")
     echo -e "$COMMIT_MSG\n\ncloses #$ISSUE_NUMBER" > "$1"
 fi
