@@ -36,7 +36,16 @@
 
   <SubConfigurations hierarchy="an" description="Andalusia">
     <Holidays>
+      <Fixed month="JANUARY" day="2" validFrom="1995" validTo="1995" descriptionPropertiesKey="NEW_YEAR"/>
+      <Fixed month="JANUARY" day="2" validFrom="2006" validTo="2006" descriptionPropertiesKey="NEW_YEAR"/>
+      <Fixed month="JANUARY" day="2" validFrom="2012" validTo="2012" descriptionPropertiesKey="NEW_YEAR"/>
+      <Fixed month="JANUARY" day="2" validFrom="2017" validTo="2017" descriptionPropertiesKey="NEW_YEAR"/>
       <Fixed month="JANUARY" day="2" validFrom="2023" validTo="2023" descriptionPropertiesKey="NEW_YEAR"/>
+      <Fixed month="JANUARY" day="7" validFrom="1991" validTo="1991" descriptionPropertiesKey="EPIPHANY"/>
+      <Fixed month="JANUARY" day="7" validFrom="2002" validTo="2002" descriptionPropertiesKey="EPIPHANY"/>
+      <Fixed month="JANUARY" day="7" validFrom="2008" validTo="2008" descriptionPropertiesKey="EPIPHANY"/>
+      <Fixed month="JANUARY" day="7" validFrom="2013" validTo="2013" descriptionPropertiesKey="EPIPHANY"/>
+      <Fixed month="JANUARY" day="7" validFrom="2019" validTo="2019" descriptionPropertiesKey="EPIPHANY"/>
       <Fixed month="FEBRUARY" day="28" descriptionPropertiesKey="REGIONAL"/> <!--Day of Andalucía-->
       <Fixed month="FEBRUARY" day="29" validFrom="2016" validTo="2016" descriptionPropertiesKey="REGIONAL"/> <!--Day of Andalucía moved from Sunday 28 Feb-->
       <Fixed month="MARCH" day="1" validFrom="2021" validTo="2021" descriptionPropertiesKey="REGIONAL"/> <!--Day of Andalucía moved from Sunday 28 Feb-->
@@ -46,23 +55,55 @@
       <Fixed month="MAY" day="2" validFrom="2011" validTo="2011" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
       <Fixed month="MAY" day="2" validFrom="2016" validTo="2016" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
       <Fixed month="MAY" day="2" validFrom="2022" validTo="2022" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
+      <Fixed month="AUGUST" day="16" validFrom="1999" validTo="1999" descriptionPropertiesKey="ASSUMPTION_DAY"/>
+      <Fixed month="AUGUST" day="16" validFrom="2004" validTo="2004" descriptionPropertiesKey="ASSUMPTION_DAY"/>
+      <Fixed month="AUGUST" day="16" validFrom="2010" validTo="2010" descriptionPropertiesKey="ASSUMPTION_DAY"/>
       <Fixed month="AUGUST" day="16" validFrom="2021" validTo="2021" descriptionPropertiesKey="ASSUMPTION_DAY"/>
       <Fixed month="AUGUST" day="16" validFrom="2027" validTo="2027" descriptionPropertiesKey="ASSUMPTION_DAY"/>
+      <Fixed month="OCTOBER" day="13" validFrom="1997" validTo="1997" descriptionPropertiesKey="NATIONAL_DAY"/>
+      <Fixed month="OCTOBER" day="13" validFrom="2003" validTo="2003" descriptionPropertiesKey="NATIONAL_DAY"/>
+      <Fixed month="OCTOBER" day="13" validFrom="2008" validTo="2008" descriptionPropertiesKey="NATIONAL_DAY"/>
+      <Fixed month="OCTOBER" day="13" validFrom="2014" validTo="2014" descriptionPropertiesKey="NATIONAL_DAY"/>
+      <Fixed month="OCTOBER" day="13" validFrom="2025" validTo="2025" descriptionPropertiesKey="NATIONAL_DAY"/>
+      <Fixed month="NOVEMBER" day="2" validFrom="1998" validTo="1998" descriptionPropertiesKey="ALL_SAINTS"/>
+      <Fixed month="NOVEMBER" day="2" validFrom="2009" validTo="2009" descriptionPropertiesKey="ALL_SAINTS"/>
+      <Fixed month="NOVEMBER" day="2" validFrom="2015" validTo="2015" descriptionPropertiesKey="ALL_SAINTS"/>
+      <Fixed month="NOVEMBER" day="2" validFrom="2020" validTo="2020" descriptionPropertiesKey="ALL_SAINTS"/>
       <Fixed month="NOVEMBER" day="2" validFrom="2026" validTo="2026" descriptionPropertiesKey="ALL_SAINTS"/>
+      <Fixed month="DECEMBER" day="7" validFrom="1992" validTo="1992" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="DECEMBER" day="7" validFrom="1998" validTo="1998" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="DECEMBER" day="7" validFrom="2009" validTo="2009" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="DECEMBER" day="7" validFrom="2015" validTo="2015" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="DECEMBER" day="7" validFrom="2020" validTo="2020" descriptionPropertiesKey="CONSTITUTION_DAY"/>
       <Fixed month="DECEMBER" day="7" validFrom="2026" validTo="2026" descriptionPropertiesKey="CONSTITUTION_DAY"/>
-      <Fixed month="DECEMBER" day="25" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS">
-        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-      </Fixed>
+      <Fixed month="DECEMBER" day="9" validFrom="1996" validTo="1996" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+      <Fixed month="DECEMBER" day="9" validFrom="2002" validTo="2002" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+      <Fixed month="DECEMBER" day="9" validFrom="2013" validTo="2013" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+      <Fixed month="DECEMBER" day="9" validFrom="2019" validTo="2019" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+      <Fixed month="DECEMBER" day="9" validFrom="2024" validTo="2024" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+      <Fixed month="DECEMBER" day="26" validFrom="1994" validTo="1994" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="DECEMBER" day="26" validFrom="2005" validTo="2005" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="DECEMBER" day="26" validFrom="2011" validTo="2011" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="DECEMBER" day="26" validFrom="2016" validTo="2016" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="DECEMBER" day="26" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS"/>
       <ChristianHoliday type="MAUNDY_THURSDAY"/>
     </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="ar" description="Aragon">
     <Holidays>
+      <Fixed month="JANUARY" day="2" validFrom="1995" validTo="1995" descriptionPropertiesKey="NEW_YEAR"/>
+      <Fixed month="JANUARY" day="2" validFrom="2006" validTo="2006" descriptionPropertiesKey="NEW_YEAR"/>
+      <Fixed month="JANUARY" day="2" validFrom="2012" validTo="2012" descriptionPropertiesKey="NEW_YEAR"/>
+      <Fixed month="JANUARY" day="2" validFrom="2017" validTo="2017" descriptionPropertiesKey="NEW_YEAR"/>
       <Fixed month="JANUARY" day="2" validFrom="2023" validTo="2023" descriptionPropertiesKey="NEW_YEAR"/>
-      <Fixed month="MARCH" day="19" validFrom="2000" validTo="2014" descriptionPropertiesKey="ST_JOSEPH">
+      <Fixed month="JANUARY" day="7" validFrom="2008" validTo="2008" descriptionPropertiesKey="EPIPHANY"/>
+      <Fixed month="JANUARY" day="7" validFrom="2013" validTo="2013" descriptionPropertiesKey="EPIPHANY"/>
+      <Fixed month="JANUARY" day="7" validFrom="2019" validTo="2019" descriptionPropertiesKey="EPIPHANY"/>
+      <Fixed month="MARCH" day="19" validFrom="2000" validTo="2005" descriptionPropertiesKey="ST_JOSEPH">
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
+      <Fixed month="MARCH" day="19" validFrom="2007" validTo="2014" descriptionPropertiesKey="ST_JOSEPH"/>
       <Fixed month="APRIL" day="23" descriptionPropertiesKey="REGIONAL"> <!--Day of Aragón-->
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
@@ -70,103 +111,236 @@
       <Fixed month="MAY" day="2" validFrom="2011" validTo="2011" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
       <Fixed month="MAY" day="2" validFrom="2016" validTo="2016" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
       <Fixed month="MAY" day="2" validFrom="2022" validTo="2022" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
+      <Fixed month="JULY" day="25" validFrom="1991" validTo="1992" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="25" validFrom="1994" validTo="1995" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="25" validFrom="2002" validTo="2002" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="AUGUST" day="16" validFrom="2010" validTo="2010" descriptionPropertiesKey="ASSUMPTION_DAY"/>
       <Fixed month="AUGUST" day="16" validFrom="2021" validTo="2021" descriptionPropertiesKey="ASSUMPTION_DAY"/>
+      <Fixed month="OCTOBER" day="13" validFrom="1997" validTo="1997" descriptionPropertiesKey="NATIONAL_DAY"/>
+      <Fixed month="OCTOBER" day="13" validFrom="2003" validTo="2003" descriptionPropertiesKey="NATIONAL_DAY"/>
+      <Fixed month="OCTOBER" day="13" validFrom="2008" validTo="2008" descriptionPropertiesKey="NATIONAL_DAY"/>
+      <Fixed month="OCTOBER" day="13" validFrom="2014" validTo="2014" descriptionPropertiesKey="NATIONAL_DAY"/>
+      <Fixed month="OCTOBER" day="13" validFrom="2025" validTo="2025" descriptionPropertiesKey="NATIONAL_DAY"/>
+      <Fixed month="NOVEMBER" day="2" validFrom="1998" validTo="1998" descriptionPropertiesKey="ALL_SAINTS"/>
+      <Fixed month="NOVEMBER" day="2" validFrom="2009" validTo="2009" descriptionPropertiesKey="ALL_SAINTS"/>
+      <Fixed month="NOVEMBER" day="2" validFrom="2015" validTo="2015" descriptionPropertiesKey="ALL_SAINTS"/>
+      <Fixed month="NOVEMBER" day="2" validFrom="2020" validTo="2020" descriptionPropertiesKey="ALL_SAINTS"/>
       <Fixed month="NOVEMBER" day="2" validFrom="2026" validTo="2026" descriptionPropertiesKey="ALL_SAINTS"/>
+      <Fixed month="DECEMBER" day="7" validFrom="1998" validTo="1998" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="DECEMBER" day="7" validFrom="2009" validTo="2009" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="DECEMBER" day="7" validFrom="2015" validTo="2015" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="DECEMBER" day="7" validFrom="2020" validTo="2020" descriptionPropertiesKey="CONSTITUTION_DAY"/>
       <Fixed month="DECEMBER" day="7" validFrom="2026" validTo="2026" descriptionPropertiesKey="CONSTITUTION_DAY"/>
-      <Fixed month="DECEMBER" day="25" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS">
-        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-      </Fixed>
+      <Fixed month="DECEMBER" day="9" validFrom="1996" validTo="1996" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+      <Fixed month="DECEMBER" day="9" validFrom="2002" validTo="2002" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+      <Fixed month="DECEMBER" day="9" validFrom="2013" validTo="2013" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+      <Fixed month="DECEMBER" day="9" validFrom="2019" validTo="2019" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+      <Fixed month="DECEMBER" day="9" validFrom="2024" validTo="2024" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+      <Fixed month="DECEMBER" day="26" validFrom="1994" validTo="1994" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="DECEMBER" day="26" validFrom="2005" validTo="2005" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="DECEMBER" day="26" validFrom="2011" validTo="2011" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="DECEMBER" day="26" validFrom="2016" validTo="2016" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="DECEMBER" day="26" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS"/>
       <ChristianHoliday type="MAUNDY_THURSDAY"/>
     </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="as" description="Principality of Asturias">
     <Holidays>
+      <Fixed month="JANUARY" day="2" validFrom="1995" validTo="1995" descriptionPropertiesKey="NEW_YEAR"/>
+      <Fixed month="JANUARY" day="2" validFrom="2006" validTo="2006" descriptionPropertiesKey="NEW_YEAR"/>
+      <Fixed month="JANUARY" day="2" validFrom="2012" validTo="2012" descriptionPropertiesKey="NEW_YEAR"/>
+      <Fixed month="JANUARY" day="2" validFrom="2017" validTo="2017" descriptionPropertiesKey="NEW_YEAR"/>
       <Fixed month="JANUARY" day="2" validFrom="2023" validTo="2023" descriptionPropertiesKey="NEW_YEAR"/>
+      <Fixed month="JANUARY" day="7" validFrom="1991" validTo="1991" descriptionPropertiesKey="EPIPHANY"/>
+      <Fixed month="JANUARY" day="7" validFrom="2002" validTo="2002" descriptionPropertiesKey="EPIPHANY"/>
+      <Fixed month="JANUARY" day="7" validFrom="2008" validTo="2008" descriptionPropertiesKey="EPIPHANY"/>
+      <Fixed month="JANUARY" day="7" validFrom="2013" validTo="2013" descriptionPropertiesKey="EPIPHANY"/>
+      <Fixed month="JANUARY" day="7" validFrom="2019" validTo="2019" descriptionPropertiesKey="EPIPHANY"/>
       <Fixed month="MAY" day="2" validFrom="1994" validTo="1994" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
       <Fixed month="MAY" day="2" validFrom="2005" validTo="2005" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
       <Fixed month="MAY" day="2" validFrom="2011" validTo="2011" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
       <Fixed month="MAY" day="2" validFrom="2016" validTo="2016" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
       <Fixed month="MAY" day="2" validFrom="2022" validTo="2022" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
+      <Fixed month="JULY" day="25" validFrom="1996" validTo="1996" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="AUGUST" day="16" validFrom="1993" validTo="1993" descriptionPropertiesKey="ASSUMPTION_DAY"/>
+      <Fixed month="AUGUST" day="16" validFrom="1999" validTo="1999" descriptionPropertiesKey="ASSUMPTION_DAY"/>
+      <Fixed month="AUGUST" day="16" validFrom="2004" validTo="2004" descriptionPropertiesKey="ASSUMPTION_DAY"/>
+      <Fixed month="AUGUST" day="16" validFrom="2010" validTo="2010" descriptionPropertiesKey="ASSUMPTION_DAY"/>
       <Fixed month="SEPTEMBER" day="8" descriptionPropertiesKey="REGIONAL"/> <!--Day of Asturias-->
       <Fixed month="AUGUST" day="16" validFrom="2021" validTo="2021" descriptionPropertiesKey="ASSUMPTION_DAY"/>
+      <Fixed month="OCTOBER" day="13" validFrom="1997" validTo="1997" descriptionPropertiesKey="NATIONAL_DAY"/>
+      <Fixed month="OCTOBER" day="13" validFrom="2003" validTo="2003" descriptionPropertiesKey="NATIONAL_DAY"/>
+      <Fixed month="OCTOBER" day="13" validFrom="2008" validTo="2008" descriptionPropertiesKey="NATIONAL_DAY"/>
+      <Fixed month="OCTOBER" day="13" validFrom="2014" validTo="2014" descriptionPropertiesKey="NATIONAL_DAY"/>
+      <Fixed month="OCTOBER" day="13" validFrom="2025" validTo="2025" descriptionPropertiesKey="NATIONAL_DAY"/>
+      <Fixed month="NOVEMBER" day="2" validFrom="1992" validTo="1992" descriptionPropertiesKey="ALL_SAINTS"/>
+      <Fixed month="NOVEMBER" day="2" validFrom="1998" validTo="1998" descriptionPropertiesKey="ALL_SAINTS"/>
+      <Fixed month="NOVEMBER" day="2" validFrom="2009" validTo="2009" descriptionPropertiesKey="ALL_SAINTS"/>
+      <Fixed month="NOVEMBER" day="2" validFrom="2015" validTo="2015" descriptionPropertiesKey="ALL_SAINTS"/>
+      <Fixed month="NOVEMBER" day="2" validFrom="2020" validTo="2020" descriptionPropertiesKey="ALL_SAINTS"/>
       <Fixed month="NOVEMBER" day="2" validFrom="2026" validTo="2026" descriptionPropertiesKey="ALL_SAINTS"/>
+      <Fixed month="DECEMBER" day="7" validFrom="1992" validTo="1992" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="DECEMBER" day="7" validFrom="1998" validTo="1998" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="DECEMBER" day="7" validFrom="2009" validTo="2009" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="DECEMBER" day="7" validFrom="2015" validTo="2015" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="DECEMBER" day="7" validFrom="2020" validTo="2020" descriptionPropertiesKey="CONSTITUTION_DAY"/>
       <Fixed month="DECEMBER" day="7" validFrom="2026" validTo="2026" descriptionPropertiesKey="CONSTITUTION_DAY"/>
-      <Fixed month="DECEMBER" day="25" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS">
-        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-      </Fixed>
+      <Fixed month="DECEMBER" day="9" validFrom="1991" validTo="1991" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+      <Fixed month="DECEMBER" day="9" validFrom="1996" validTo="1996" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+      <Fixed month="DECEMBER" day="9" validFrom="2002" validTo="2002" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+      <Fixed month="DECEMBER" day="9" validFrom="2013" validTo="2013" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+      <Fixed month="DECEMBER" day="9" validFrom="2019" validTo="2019" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+      <Fixed month="DECEMBER" day="9" validFrom="2024" validTo="2024" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+      <Fixed month="DECEMBER" day="26" validFrom="1994" validTo="1994" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="DECEMBER" day="26" validFrom="2005" validTo="2005" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="DECEMBER" day="26" validFrom="2011" validTo="2011" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="DECEMBER" day="26" validFrom="2016" validTo="2016" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="DECEMBER" day="26" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS"/>
       <ChristianHoliday type="MAUNDY_THURSDAY"/>
     </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="cn" description="Canary Islands">
     <Holidays>
+      <Fixed month="JANUARY" day="2" validFrom="1995" validTo="1995" descriptionPropertiesKey="NEW_YEAR"/>
+      <Fixed month="JANUARY" day="7" validFrom="2008" validTo="2008" descriptionPropertiesKey="EPIPHANY"/>
+      <Fixed month="JANUARY" day="7" validFrom="2013" validTo="2013" descriptionPropertiesKey="EPIPHANY"/>
+      <Fixed month="JANUARY" day="7" validFrom="2019" validTo="2019" descriptionPropertiesKey="EPIPHANY"/>
       <Fixed month="MAY" day="2" validFrom="1994" validTo="1994" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
       <Fixed month="MAY" day="2" validFrom="2005" validTo="2005" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
       <Fixed month="MAY" day="2" validFrom="2016" validTo="2016" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
       <Fixed month="MAY" day="30" descriptionPropertiesKey="REGIONAL"/> <!--Day of the Canary Islands-->
-      <Fixed month="JULY" day="25" validFrom="2017" validTo="2017" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="25" validFrom="1991" validTo="1991" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="25" validFrom="1994" validTo="1998" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="25" validFrom="2002" validTo="2003" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="25" validFrom="2005" validTo="2005" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="26" validFrom="1993" validTo="1993" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="26" validFrom="1999" validTo="1999" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="AUGUST" day="16" validFrom="1999" validTo="1999" descriptionPropertiesKey="ASSUMPTION_DAY"/>
+      <Fixed month="AUGUST" day="16" validFrom="2004" validTo="2004" descriptionPropertiesKey="ASSUMPTION_DAY"/>
       <Fixed month="AUGUST" day="16" validFrom="2021" validTo="2021" descriptionPropertiesKey="ASSUMPTION_DAY"/>
+      <Fixed month="NOVEMBER" day="2" validFrom="1992" validTo="1992" descriptionPropertiesKey="ALL_SAINTS"/>
+      <Fixed month="NOVEMBER" day="2" validFrom="2015" validTo="2015" descriptionPropertiesKey="ALL_SAINTS"/>
       <Fixed month="NOVEMBER" day="2" validFrom="2026" validTo="2026" descriptionPropertiesKey="ALL_SAINTS"/>
-      <Fixed month="DECEMBER" day="25" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS">
-        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-      </Fixed>
+      <Fixed month="DECEMBER" day="7" validFrom="1992" validTo="1992" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="DECEMBER" day="7" validFrom="1998" validTo="1998" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="DECEMBER" day="7" validFrom="2009" validTo="2009" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="DECEMBER" day="7" validFrom="2020" validTo="2020" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="DECEMBER" day="9" validFrom="1991" validTo="1991" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+      <Fixed month="DECEMBER" day="9" validFrom="2002" validTo="2002" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+      <Fixed month="DECEMBER" day="26" validFrom="1994" validTo="1994" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="DECEMBER" day="26" validFrom="2011" validTo="2011" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="DECEMBER" day="26" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS"/>
       <ChristianHoliday type="MAUNDY_THURSDAY"/>
     </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="cb" description="Cantabria">
     <Holidays>
+      <Fixed month="JANUARY" day="7" validFrom="1991" validTo="1991" descriptionPropertiesKey="EPIPHANY"/>
+      <Fixed month="JANUARY" day="7" validFrom="2002" validTo="2002" descriptionPropertiesKey="EPIPHANY"/>
+      <Fixed month="JANUARY" day="7" validFrom="2013" validTo="2013" descriptionPropertiesKey="EPIPHANY"/>
+      <Fixed month="MARCH" day="20" validFrom="1995" validTo="1995" descriptionPropertiesKey="ST_JOSEPH"/>
       <Fixed month="MAY" day="2" validFrom="2005" validTo="2005" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
       <Fixed month="MAY" day="2" validFrom="2011" validTo="2011" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
+      <Fixed month="JULY" day="25" validFrom="1994" validTo="1994" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="25" validFrom="1996" validTo="1997" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="25" validFrom="2002" validTo="2003" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="25" validFrom="2012" validTo="2014" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="25" validFrom="2019" validTo="2019" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="25" validFrom="2024" validTo="2024" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
       <Fixed month="JULY" day="28" descriptionPropertiesKey="REGIONAL"/> <!--Day of the Cantabrian Institutions-->
+      <Fixed month="AUGUST" day="16" validFrom="2004" validTo="2004" descriptionPropertiesKey="ASSUMPTION_DAY"/>
       <Fixed month="SEPTEMBER" day="15" descriptionPropertiesKey="APARECIDA"/>
+      <Fixed month="OCTOBER" day="13" validFrom="2008" validTo="2008" descriptionPropertiesKey="NATIONAL_DAY"/>
+      <Fixed month="NOVEMBER" day="2" validFrom="1992" validTo="1992" descriptionPropertiesKey="ALL_SAINTS"/>
+      <Fixed month="NOVEMBER" day="2" validFrom="2015" validTo="2015" descriptionPropertiesKey="ALL_SAINTS"/>
+      <Fixed month="DECEMBER" day="7" validFrom="1992" validTo="1992" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="DECEMBER" day="7" validFrom="1998" validTo="1998" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="DECEMBER" day="7" validFrom="2009" validTo="2009" descriptionPropertiesKey="CONSTITUTION_DAY"/>
       <Fixed month="DECEMBER" day="7" validFrom="2026" validTo="2026" descriptionPropertiesKey="CONSTITUTION_DAY"/>
-      <Fixed month="DECEMBER" day="25" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS">
-        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-      </Fixed>
+      <Fixed month="DECEMBER" day="9" validFrom="1991" validTo="1991" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+      <Fixed month="DECEMBER" day="9" validFrom="2002" validTo="2002" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+      <Fixed month="DECEMBER" day="9" validFrom="2019" validTo="2019" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+      <Fixed month="DECEMBER" day="26" validFrom="1994" validTo="1994" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="DECEMBER" day="26" validFrom="2016" validTo="2016" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="DECEMBER" day="26" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS"/>
       <ChristianHoliday type="MAUNDY_THURSDAY"/>
     </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="cl" description="Castile and León">
     <Holidays>
+      <Fixed month="JANUARY" day="2" validFrom="2017" validTo="2017" descriptionPropertiesKey="NEW_YEAR"/>
       <Fixed month="JANUARY" day="2" validFrom="2023" validTo="2023" descriptionPropertiesKey="NEW_YEAR"/>
-      <Fixed month="MARCH" day="19" validFrom="2000" validTo="2014" descriptionPropertiesKey="ST_JOSEPH">
-        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-      </Fixed>
+      <Fixed month="JANUARY" day="7" validFrom="2008" validTo="2008" descriptionPropertiesKey="EPIPHANY"/>
+      <Fixed month="JANUARY" day="7" validFrom="2013" validTo="2013" descriptionPropertiesKey="EPIPHANY"/>
+      <Fixed month="JANUARY" day="7" validFrom="2019" validTo="2019" descriptionPropertiesKey="EPIPHANY"/>
+      <Fixed month="MARCH" day="19" validFrom="2001" validTo="2005" descriptionPropertiesKey="ST_JOSEPH"/>
+      <Fixed month="MARCH" day="19" validFrom="2007" validTo="2014" descriptionPropertiesKey="ST_JOSEPH"/>
+      <Fixed month="MARCH" day="20" validFrom="1995" validTo="1995" descriptionPropertiesKey="ST_JOSEPH"/>
       <Fixed month="APRIL" day="23" validTo="2022" descriptionPropertiesKey="REGIONAL"/> <!--Castile and León Day-->
       <Fixed month="APRIL" day="23" validFrom="2024" descriptionPropertiesKey="REGIONAL"/> <!--Castile and León Day-->
       <Fixed month="MAY" day="2" validFrom="2005" validTo="2005" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
       <Fixed month="MAY" day="2" validFrom="2016" validTo="2016" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
       <Fixed month="MAY" day="2" validFrom="2022" validTo="2022" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
-      <Fixed month="JULY" day="25" validFrom="2017" validTo="2017" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="25" validFrom="1991" validTo="1991" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="25" validFrom="1994" validTo="1995" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="25" validFrom="1997" validTo="1997" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="25" validFrom="2000" validTo="2000" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="25" validFrom="2005" validTo="2006" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="25" validFrom="2011" validTo="2011" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
       <Fixed month="JULY" day="25" validFrom="2023" validTo="2023" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
       <Fixed month="AUGUST" day="16" validFrom="2021" validTo="2021" descriptionPropertiesKey="ASSUMPTION_DAY"/>
       <Fixed month="AUGUST" day="16" validFrom="2027" validTo="2027" descriptionPropertiesKey="ASSUMPTION_DAY"/>
+      <Fixed month="OCTOBER" day="13" validFrom="2008" validTo="2008" descriptionPropertiesKey="NATIONAL_DAY"/>
+      <Fixed month="OCTOBER" day="13" validFrom="2014" validTo="2014" descriptionPropertiesKey="NATIONAL_DAY"/>
+      <Fixed month="OCTOBER" day="13" validFrom="2025" validTo="2025" descriptionPropertiesKey="NATIONAL_DAY"/>
+      <Fixed month="NOVEMBER" day="2" validFrom="2009" validTo="2009" descriptionPropertiesKey="ALL_SAINTS"/>
+      <Fixed month="NOVEMBER" day="2" validFrom="2015" validTo="2015" descriptionPropertiesKey="ALL_SAINTS"/>
+      <Fixed month="NOVEMBER" day="2" validFrom="2020" validTo="2020" descriptionPropertiesKey="ALL_SAINTS"/>
       <Fixed month="NOVEMBER" day="2" validFrom="2026" validTo="2026" descriptionPropertiesKey="ALL_SAINTS"/>
+      <Fixed month="DECEMBER" day="7" validFrom="1998" validTo="1998" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="DECEMBER" day="7" validFrom="2015" validTo="2015" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="DECEMBER" day="7" validFrom="2020" validTo="2020" descriptionPropertiesKey="CONSTITUTION_DAY"/>
       <Fixed month="DECEMBER" day="7" validFrom="2026" validTo="2026" descriptionPropertiesKey="CONSTITUTION_DAY"/>
-      <Fixed month="DECEMBER" day="25" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS">
-        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-      </Fixed>
+      <Fixed month="DECEMBER" day="9" validFrom="2002" validTo="2002" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+      <Fixed month="DECEMBER" day="9" validFrom="2013" validTo="2013" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+      <Fixed month="DECEMBER" day="9" validFrom="2019" validTo="2019" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+      <Fixed month="DECEMBER" day="9" validFrom="2024" validTo="2024" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+      <Fixed month="DECEMBER" day="26" validFrom="2011" validTo="2011" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="DECEMBER" day="26" validFrom="2016" validTo="2016" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="DECEMBER" day="26" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS"/>
       <ChristianHoliday type="MAUNDY_THURSDAY"/>
     </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="cm" description="Castile-La Mancha">
     <Holidays>
-      <Fixed month="MARCH" day="19" validFrom="2000" validTo="2015" descriptionPropertiesKey="ST_JOSEPH">
+      <Fixed month="JANUARY" day="7" validFrom="1991" validTo="1991" descriptionPropertiesKey="EPIPHANY"/>
+      <Fixed month="JANUARY" day="7" validFrom="2002" validTo="2002" descriptionPropertiesKey="EPIPHANY"/>
+      <Fixed month="JANUARY" day="7" validFrom="2008" validTo="2008" descriptionPropertiesKey="EPIPHANY"/>
+      <Fixed month="JANUARY" day="7" validFrom="2013" validTo="2013" descriptionPropertiesKey="EPIPHANY"/>
+      <Fixed month="MARCH" day="19" validFrom="2001" validTo="2015" descriptionPropertiesKey="ST_JOSEPH">
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
       <Fixed month="MARCH" day="19" validFrom="2020" validTo="2020" descriptionPropertiesKey="ST_JOSEPH">
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
+      <Fixed month="MARCH" day="20" validFrom="1995" validTo="1995" descriptionPropertiesKey="ST_JOSEPH"/>
       <Fixed month="MAY" day="2" validFrom="1994" validTo="1994" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
       <Fixed month="MAY" day="31" descriptionPropertiesKey="REGIONAL"/> <!--Day of Castilla-La Mancha-->
+      <Fixed month="NOVEMBER" day="2" validFrom="1992" validTo="1992" descriptionPropertiesKey="ALL_SAINTS"/>
+      <Fixed month="NOVEMBER" day="2" validFrom="1998" validTo="1998" descriptionPropertiesKey="ALL_SAINTS"/>
       <Fixed month="NOVEMBER" day="2" validFrom="2026" validTo="2026" descriptionPropertiesKey="ALL_SAINTS"/>
-      <Fixed month="DECEMBER" day="25" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS">
-        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-      </Fixed>
+      <Fixed month="DECEMBER" day="7" validFrom="1992" validTo="1992" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="DECEMBER" day="7" validFrom="1998" validTo="1998" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="DECEMBER" day="7" validFrom="2009" validTo="2009" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="DECEMBER" day="7" validFrom="2015" validTo="2015" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="DECEMBER" day="26" validFrom="2005" validTo="2005" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="DECEMBER" day="26" validFrom="2016" validTo="2016" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="DECEMBER" day="26" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS"/>
       <ChristianHoliday type="CORPUS_CHRISTI"/>
       <ChristianHoliday type="MAUNDY_THURSDAY"/>
     </Holidays>
@@ -190,20 +364,50 @@
 
   <SubConfigurations hierarchy="ce" description="Ceuta">
     <Holidays>
+      <Fixed month="JANUARY" day="2" validFrom="2006" validTo="2006" descriptionPropertiesKey="NEW_YEAR"/>
+      <Fixed month="JANUARY" day="2" validFrom="2012" validTo="2012" descriptionPropertiesKey="NEW_YEAR"/>
+      <Fixed month="JANUARY" day="7" validFrom="2002" validTo="2002" descriptionPropertiesKey="EPIPHANY"/>
+      <Fixed month="JANUARY" day="7" validFrom="2008" validTo="2008" descriptionPropertiesKey="EPIPHANY"/>
+      <Fixed month="JANUARY" day="7" validFrom="2013" validTo="2013" descriptionPropertiesKey="EPIPHANY"/>
+      <Fixed month="JANUARY" day="7" validFrom="2019" validTo="2019" descriptionPropertiesKey="EPIPHANY"/>
       <Fixed month="MAY" day="2" validFrom="2005" validTo="2005" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
       <Fixed month="MAY" day="2" validFrom="2011" validTo="2011" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
+      <Fixed month="AUGUST" day="16" validFrom="1999" validTo="1999" descriptionPropertiesKey="ASSUMPTION_DAY"/>
+      <Fixed month="AUGUST" day="16" validFrom="2004" validTo="2004" descriptionPropertiesKey="ASSUMPTION_DAY"/>
       <Fixed month="SEPTEMBER" day="2" descriptionPropertiesKey="REGIONAL"/>
+      <Fixed month="OCTOBER" day="13" validFrom="1997" validTo="1997" descriptionPropertiesKey="NATIONAL_DAY"/>
+      <Fixed month="OCTOBER" day="13" validFrom="2003" validTo="2003" descriptionPropertiesKey="NATIONAL_DAY"/>
+      <Fixed month="OCTOBER" day="13" validFrom="2008" validTo="2008" descriptionPropertiesKey="NATIONAL_DAY"/>
+      <Fixed month="OCTOBER" day="13" validFrom="2014" validTo="2014" descriptionPropertiesKey="NATIONAL_DAY"/>
+      <Fixed month="NOVEMBER" day="2" validFrom="1998" validTo="1998" descriptionPropertiesKey="ALL_SAINTS"/>
+      <Fixed month="NOVEMBER" day="2" validFrom="2009" validTo="2009" descriptionPropertiesKey="ALL_SAINTS"/>
+      <Fixed month="NOVEMBER" day="2" validFrom="2015" validTo="2015" descriptionPropertiesKey="ALL_SAINTS"/>
+      <Fixed month="DECEMBER" day="7" validFrom="1998" validTo="1998" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="DECEMBER" day="7" validFrom="2009" validTo="2009" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="DECEMBER" day="7" validFrom="2015" validTo="2015" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="DECEMBER" day="7" validFrom="2020" validTo="2020" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="DECEMBER" day="9" validFrom="2002" validTo="2002" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+      <Fixed month="DECEMBER" day="9" validFrom="2013" validTo="2013" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+      <Fixed month="DECEMBER" day="26" validFrom="2005" validTo="2005" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="DECEMBER" day="26" validFrom="2011" validTo="2011" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="DECEMBER" day="26" validFrom="2016" validTo="2016" descriptionPropertiesKey="CHRISTMAS"/>
       <IslamicHoliday type="ID_UL_ADHA" validFrom="2010"/>
     </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="ex" description="Extremadura">
     <Holidays>
+      <Fixed month="JANUARY" day="2" validFrom="1995" validTo="1995" descriptionPropertiesKey="NEW_YEAR"/>
+      <Fixed month="JANUARY" day="2" validFrom="2006" validTo="2006" descriptionPropertiesKey="NEW_YEAR"/>
+      <Fixed month="JANUARY" day="2" validFrom="2012" validTo="2012" descriptionPropertiesKey="NEW_YEAR"/>
+      <Fixed month="JANUARY" day="7" validFrom="1991" validTo="1991" descriptionPropertiesKey="EPIPHANY"/>
+      <Fixed month="JANUARY" day="7" validFrom="2008" validTo="2008" descriptionPropertiesKey="EPIPHANY"/>
+      <Fixed month="JANUARY" day="7" validFrom="2013" validTo="2013" descriptionPropertiesKey="EPIPHANY"/>
+      <Fixed month="JANUARY" day="7" validFrom="2019" validTo="2019" descriptionPropertiesKey="EPIPHANY"/>
       <Fixed month="FEBRUARY" day="21" validFrom="2023" validTo="2023"
              descriptionPropertiesKey="CARNIVAL_TUESDAY"/> <!--Carnival Tuesday-->
-      <Fixed month="MARCH" day="19" validFrom="2000" validTo="2014" descriptionPropertiesKey="ST_JOSEPH">
-        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-      </Fixed>
+      <Fixed month="MARCH" day="19" validFrom="2001" validTo="2005" descriptionPropertiesKey="ST_JOSEPH"/>
+      <Fixed month="MARCH" day="19" validFrom="2007" validTo="2014" descriptionPropertiesKey="ST_JOSEPH"/>
       <Fixed month="MARCH" day="19" validFrom="2017" validTo="2017" descriptionPropertiesKey="ST_JOSEPH">
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
@@ -215,27 +419,50 @@
       <Fixed month="MAY" day="2" validFrom="2011" validTo="2011" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
       <Fixed month="MAY" day="2" validFrom="2016" validTo="2016" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
       <Fixed month="MAY" day="2" validFrom="2022" validTo="2022" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
+      <Fixed month="AUGUST" day="16" validFrom="1993" validTo="1993" descriptionPropertiesKey="ASSUMPTION_DAY"/>
       <Fixed month="SEPTEMBER" day="8" descriptionPropertiesKey="REGIONAL"/> <!--Day of Extremadura-->
+      <Fixed month="OCTOBER" day="13" validFrom="2003" validTo="2003" descriptionPropertiesKey="NATIONAL_DAY"/>
+      <Fixed month="OCTOBER" day="13" validFrom="2008" validTo="2008" descriptionPropertiesKey="NATIONAL_DAY"/>
+      <Fixed month="OCTOBER" day="13" validFrom="2014" validTo="2014" descriptionPropertiesKey="NATIONAL_DAY"/>
+      <Fixed month="OCTOBER" day="13" validFrom="2025" validTo="2025" descriptionPropertiesKey="NATIONAL_DAY"/>
+      <Fixed month="NOVEMBER" day="2" validFrom="1992" validTo="1992" descriptionPropertiesKey="ALL_SAINTS"/>
+      <Fixed month="NOVEMBER" day="2" validFrom="2009" validTo="2009" descriptionPropertiesKey="ALL_SAINTS"/>
+      <Fixed month="NOVEMBER" day="2" validFrom="2015" validTo="2015" descriptionPropertiesKey="ALL_SAINTS"/>
+      <Fixed month="NOVEMBER" day="2" validFrom="2020" validTo="2020" descriptionPropertiesKey="ALL_SAINTS"/>
       <Fixed month="NOVEMBER" day="2" validFrom="2026" validTo="2026" descriptionPropertiesKey="ALL_SAINTS"/>
+      <Fixed month="DECEMBER" day="7" validFrom="1992" validTo="1992" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="DECEMBER" day="7" validFrom="1998" validTo="1998" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="DECEMBER" day="7" validFrom="2009" validTo="2009" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="DECEMBER" day="7" validFrom="2015" validTo="2015" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="DECEMBER" day="7" validFrom="2020" validTo="2020" descriptionPropertiesKey="CONSTITUTION_DAY"/>
       <Fixed month="DECEMBER" day="7" validFrom="2026" validTo="2026" descriptionPropertiesKey="CONSTITUTION_DAY"/>
-      <Fixed month="DECEMBER" day="25" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS">
-        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-      </Fixed>
+      <Fixed month="DECEMBER" day="9" validFrom="1991" validTo="1991" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+      <Fixed month="DECEMBER" day="9" validFrom="2002" validTo="2002" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+      <Fixed month="DECEMBER" day="9" validFrom="2013" validTo="2013" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+      <Fixed month="DECEMBER" day="9" validFrom="2019" validTo="2019" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+      <Fixed month="DECEMBER" day="9" validFrom="2024" validTo="2024" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+      <Fixed month="DECEMBER" day="26" validFrom="1994" validTo="1994" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="DECEMBER" day="26" validFrom="2005" validTo="2005" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="DECEMBER" day="26" validFrom="2011" validTo="2011" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="DECEMBER" day="26" validFrom="2016" validTo="2016" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="DECEMBER" day="26" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS"/>
       <ChristianHoliday type="MAUNDY_THURSDAY"/>
     </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="ga" description="Galicia">
     <Holidays>
-      <Fixed month="MARCH" day="19" validFrom="2000" validTo="2014" descriptionPropertiesKey="ST_JOSEPH">
-        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-      </Fixed>
+      <Fixed month="MARCH" day="19" validFrom="2001" validTo="2005" descriptionPropertiesKey="ST_JOSEPH"/>
+      <Fixed month="MARCH" day="19" validFrom="2007" validTo="2014" descriptionPropertiesKey="ST_JOSEPH"/>
       <Fixed month="MARCH" day="19" validFrom="2018" validTo="2021" descriptionPropertiesKey="ST_JOSEPH">
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
       <Fixed month="MAY" day="17" descriptionPropertiesKey="GALICIAN_LITERATURE"/>
-      <Fixed month="JULY" day="25" validFrom="2017" validTo="2020" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
-      <Fixed month="JULY" day="25" validFrom="2022" validTo="2027" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="25" validFrom="1991" validTo="2027" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="NOVEMBER" day="2" validFrom="2015" validTo="2015" descriptionPropertiesKey="ALL_SAINTS"/>
+      <Fixed month="DECEMBER" day="7" validFrom="1992" validTo="1992" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="DECEMBER" day="7" validFrom="1998" validTo="1998" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="DECEMBER" day="7" validFrom="2009" validTo="2009" descriptionPropertiesKey="CONSTITUTION_DAY"/>
       <ChristianHoliday type="MAUNDY_THURSDAY"/>
     </Holidays>
   </SubConfigurations>
@@ -244,9 +471,23 @@
     <Holidays>
       <Fixed month="MARCH" day="1" descriptionPropertiesKey="REGIONAL"/> <!--Day of the Balearic Islands-->
       <Fixed month="MAY" day="2" validFrom="2005" validTo="2005" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
-      <Fixed month="DECEMBER" day="25" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS">
-        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-      </Fixed>
+      <Fixed month="JULY" day="25" validFrom="1991" validTo="1992" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="25" validFrom="1994" validTo="1998" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="25" validFrom="2002" validTo="2002" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="AUGUST" day="16" validFrom="1993" validTo="1993" descriptionPropertiesKey="ASSUMPTION_DAY"/>
+      <Fixed month="OCTOBER" day="13" validFrom="2008" validTo="2008" descriptionPropertiesKey="NATIONAL_DAY"/>
+      <Fixed month="NOVEMBER" day="2" validFrom="2015" validTo="2015" descriptionPropertiesKey="ALL_SAINTS"/>
+      <Fixed month="DECEMBER" day="7" validFrom="1992" validTo="1992" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="DECEMBER" day="7" validFrom="1998" validTo="1998" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="DECEMBER" day="7" validFrom="2009" validTo="2009" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="DECEMBER" day="7" validFrom="2015" validTo="2015" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="DECEMBER" day="7" validFrom="2020" validTo="2020" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="DECEMBER" day="9" validFrom="1991" validTo="1991" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+      <Fixed month="DECEMBER" day="26" validFrom="2005" validTo="2005" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="DECEMBER" day="26" validFrom="2011" validTo="2011" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="DECEMBER" day="26" validFrom="2016" validTo="2016" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="DECEMBER" day="26" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="DECEMBER" day="27" validFrom="1994" validTo="1994" descriptionPropertiesKey="CHRISTMAS"/>
       <ChristianHoliday type="EASTER_MONDAY"/>
       <ChristianHoliday type="MAUNDY_THURSDAY"/>
     </Holidays>
@@ -259,10 +500,21 @@
       <Fixed month="JUNE" day="9" validFrom="2002" descriptionPropertiesKey="REGIONAL"> <!--Day of La Rioja-->
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
+      <Fixed month="JULY" day="25" validFrom="1991" validTo="1991" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="25" validFrom="1994" validTo="1994" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="25" validFrom="1996" validTo="1998" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="25" validFrom="2002" validTo="2002" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="25" validFrom="2005" validTo="2005" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="25" validFrom="2008" validTo="2008" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="25" validFrom="2011" validTo="2011" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="25" validFrom="2016" validTo="2016" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="DECEMBER" day="7" validFrom="2009" validTo="2009" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="DECEMBER" day="7" validFrom="2015" validTo="2015" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="DECEMBER" day="7" validFrom="2020" validTo="2020" descriptionPropertiesKey="CONSTITUTION_DAY"/>
       <Fixed month="DECEMBER" day="7" validFrom="2026" validTo="2026" descriptionPropertiesKey="CONSTITUTION_DAY"/>
-      <Fixed month="DECEMBER" day="25" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS">
-        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-      </Fixed>
+      <Fixed month="DECEMBER" day="9" validFrom="2013" validTo="2013" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+      <Fixed month="DECEMBER" day="9" validFrom="2019" validTo="2019" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+      <Fixed month="DECEMBER" day="26" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS"/>
       <ChristianHoliday type="EASTER_MONDAY"/>
       <ChristianHoliday type="MAUNDY_THURSDAY"/>
     </Holidays>
@@ -270,7 +522,11 @@
 
   <SubConfigurations hierarchy="md" description="Community of Madrid">
     <Holidays>
-      <Fixed month="MARCH" day="19" validFrom="2000" validTo="2015" descriptionPropertiesKey="ST_JOSEPH">
+      <Fixed month="JANUARY" day="7" validFrom="2002" validTo="2002" descriptionPropertiesKey="EPIPHANY"/>
+      <Fixed month="JANUARY" day="7" validFrom="2008" validTo="2008" descriptionPropertiesKey="EPIPHANY"/>
+      <Fixed month="JANUARY" day="7" validFrom="2013" validTo="2013" descriptionPropertiesKey="EPIPHANY"/>
+      <Fixed month="JANUARY" day="7" validFrom="2019" validTo="2019" descriptionPropertiesKey="EPIPHANY"/>
+      <Fixed month="MARCH" day="19" validFrom="2001" validTo="2015" descriptionPropertiesKey="ST_JOSEPH">
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
       <Fixed month="MARCH" day="19" validFrom="2017" validTo="2017" descriptionPropertiesKey="ST_JOSEPH">
@@ -282,16 +538,32 @@
       <Fixed month="MARCH" day="19" validFrom="2023" validTo="2023" descriptionPropertiesKey="ST_JOSEPH">
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
+      <Fixed month="MARCH" day="20" validFrom="1995" validTo="1995" descriptionPropertiesKey="ST_JOSEPH"/>
       <Fixed month="MAY" day="2" descriptionPropertiesKey="REGIONAL"><!--Rename to day of madrid-->
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
-      <Fixed month="JULY" day="25" validFrom="2017" validTo="2017" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="25" validFrom="1994" validTo="1994" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="25" validFrom="1997" validTo="1997" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="25" validFrom="2005" validTo="2005" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="25" validFrom="2008" validTo="2008" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="25" validFrom="2011" validTo="2011" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="25" validFrom="2016" validTo="2016" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
       <Fixed month="JULY" day="25" validFrom="2022" validTo="2022" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="25" validFrom="2024" validTo="2025" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="AUGUST" day="16" validFrom="1993" validTo="1993" descriptionPropertiesKey="ASSUMPTION_DAY"/>
+      <Fixed month="AUGUST" day="16" validFrom="1999" validTo="1999" descriptionPropertiesKey="ASSUMPTION_DAY"/>
+      <Fixed month="AUGUST" day="16" validFrom="2004" validTo="2004" descriptionPropertiesKey="ASSUMPTION_DAY"/>
+      <Fixed month="NOVEMBER" day="2" validFrom="1998" validTo="1998" descriptionPropertiesKey="ALL_SAINTS"/>
+      <Fixed month="NOVEMBER" day="2" validFrom="2020" validTo="2020" descriptionPropertiesKey="ALL_SAINTS"/>
       <Fixed month="NOVEMBER" day="2" validFrom="2026" validTo="2026" descriptionPropertiesKey="ALL_SAINTS"/>
+      <Fixed month="DECEMBER" day="7" validFrom="1992" validTo="1992" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="DECEMBER" day="7" validFrom="2020" validTo="2020" descriptionPropertiesKey="CONSTITUTION_DAY"/>
       <Fixed month="DECEMBER" day="7" validFrom="2026" validTo="2026" descriptionPropertiesKey="CONSTITUTION_DAY"/>
-      <Fixed month="DECEMBER" day="25" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS">
-        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-      </Fixed>
+      <Fixed month="DECEMBER" day="9" validFrom="1991" validTo="1991" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+      <Fixed month="DECEMBER" day="9" validFrom="2019" validTo="2019" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+      <Fixed month="DECEMBER" day="26" validFrom="1994" validTo="1994" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="DECEMBER" day="26" validFrom="2016" validTo="2016" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="DECEMBER" day="26" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS"/>
       <ChristianHoliday type="MAUNDY_THURSDAY"/>
     </Holidays>
 
@@ -305,21 +577,49 @@
 
   <SubConfigurations hierarchy="ml" description="Melilla">
     <Holidays>
+      <Fixed month="JANUARY" day="2" validFrom="2006" validTo="2006" descriptionPropertiesKey="NEW_YEAR"/>
+      <Fixed month="JANUARY" day="2" validFrom="2017" validTo="2017" descriptionPropertiesKey="NEW_YEAR"/>
+      <Fixed month="JANUARY" day="7" validFrom="2002" validTo="2002" descriptionPropertiesKey="EPIPHANY"/>
+      <Fixed month="JANUARY" day="7" validFrom="2008" validTo="2008" descriptionPropertiesKey="EPIPHANY"/>
+      <Fixed month="JANUARY" day="7" validFrom="2013" validTo="2013" descriptionPropertiesKey="EPIPHANY"/>
+      <Fixed month="JANUARY" day="7" validFrom="2019" validTo="2019" descriptionPropertiesKey="EPIPHANY"/>
+      <Fixed month="MARCH" day="20" validFrom="2000" validTo="2000" descriptionPropertiesKey="ST_JOSEPH"/>
+      <Fixed month="MARCH" day="20" validFrom="2006" validTo="2006" descriptionPropertiesKey="ST_JOSEPH"/>
       <Fixed month="MAY" day="2" validFrom="2005" validTo="2005" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
+      <Fixed month="AUGUST" day="16" validFrom="1999" validTo="1999" descriptionPropertiesKey="ASSUMPTION_DAY"/>
+      <Fixed month="AUGUST" day="16" validFrom="2004" validTo="2004" descriptionPropertiesKey="ASSUMPTION_DAY"/>
+      <Fixed month="OCTOBER" day="13" validFrom="1997" validTo="1997" descriptionPropertiesKey="NATIONAL_DAY"/>
+      <Fixed month="OCTOBER" day="13" validFrom="2003" validTo="2003" descriptionPropertiesKey="NATIONAL_DAY"/>
+      <Fixed month="OCTOBER" day="13" validFrom="2008" validTo="2008" descriptionPropertiesKey="NATIONAL_DAY"/>
+      <Fixed month="NOVEMBER" day="2" validFrom="1998" validTo="1998" descriptionPropertiesKey="ALL_SAINTS"/>
+      <Fixed month="NOVEMBER" day="2" validFrom="2009" validTo="2009" descriptionPropertiesKey="ALL_SAINTS"/>
+      <Fixed month="DECEMBER" day="7" validFrom="1998" validTo="1998" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="DECEMBER" day="7" validFrom="2009" validTo="2009" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="DECEMBER" day="7" validFrom="2015" validTo="2015" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="DECEMBER" day="7" validFrom="2020" validTo="2020" descriptionPropertiesKey="CONSTITUTION_DAY"/>
       <Fixed month="DECEMBER" day="7" validFrom="2026" validTo="2026" descriptionPropertiesKey="CONSTITUTION_DAY"/>
-      <Fixed month="DECEMBER" day="25" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS">
-        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-      </Fixed>
+      <Fixed month="DECEMBER" day="9" validFrom="2002" validTo="2002" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+      <Fixed month="DECEMBER" day="9" validFrom="2019" validTo="2019" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+      <Fixed month="DECEMBER" day="9" validFrom="2024" validTo="2024" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+      <Fixed month="DECEMBER" day="26" validFrom="2005" validTo="2005" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="DECEMBER" day="26" validFrom="2011" validTo="2011" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="DECEMBER" day="26" validFrom="2016" validTo="2016" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="DECEMBER" day="26" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS"/>
       <IslamicHoliday type="ID_UL_ADHA" validFrom="2010"/>
     </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="mc" description="Region of Murcia">
     <Holidays>
+      <Fixed month="JANUARY" day="2" validFrom="2017" validTo="2017" descriptionPropertiesKey="NEW_YEAR"/>
       <Fixed month="JANUARY" day="2" validFrom="2023" validTo="2023" descriptionPropertiesKey="NEW_YEAR"/>
+      <Fixed month="JANUARY" day="7" validFrom="1991" validTo="1991" descriptionPropertiesKey="EPIPHANY"/>
+      <Fixed month="JANUARY" day="7" validFrom="2013" validTo="2013" descriptionPropertiesKey="EPIPHANY"/>
+      <Fixed month="JANUARY" day="7" validFrom="2019" validTo="2019" descriptionPropertiesKey="EPIPHANY"/>
       <Fixed month="MARCH" day="19" validFrom="2010" validTo="2016" descriptionPropertiesKey="ST_JOSEPH"/>
       <Fixed month="MARCH" day="19" validFrom="2018" validTo="2021" descriptionPropertiesKey="ST_JOSEPH"/>
       <Fixed month="MARCH" day="19" validFrom="2024" validTo="2027" descriptionPropertiesKey="ST_JOSEPH"/>
+      <Fixed month="MARCH" day="20" validFrom="2006" validTo="2006" descriptionPropertiesKey="ST_JOSEPH"/>
       <Fixed month="MAY" day="2" validFrom="1994" validTo="1994" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
       <Fixed month="MAY" day="2" validFrom="2005" validTo="2005" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
       <Fixed month="MAY" day="2" validFrom="2011" validTo="2011" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
@@ -328,20 +628,47 @@
       <!--Murcia moved the day to the following Monday only in 2002 and 2019, not in the other years where 9 June fell on a Sunday (1991, 1996, 2013, 2024)-->
       <Fixed month="JUNE" day="10" validFrom="2002" validTo="2002" descriptionPropertiesKey="REGIONAL"/> <!--Day of Murcia moved from Sunday 9 June-->
       <Fixed month="JUNE" day="10" validFrom="2019" validTo="2019" descriptionPropertiesKey="REGIONAL"/> <!--Day of Murcia moved from Sunday 9 June-->
+      <Fixed month="JULY" day="25" validFrom="1995" validTo="1995" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="AUGUST" day="16" validFrom="1993" validTo="1993" descriptionPropertiesKey="ASSUMPTION_DAY"/>
+      <Fixed month="OCTOBER" day="13" validFrom="2008" validTo="2008" descriptionPropertiesKey="NATIONAL_DAY"/>
+      <Fixed month="NOVEMBER" day="2" validFrom="1992" validTo="1992" descriptionPropertiesKey="ALL_SAINTS"/>
+      <Fixed month="DECEMBER" day="7" validFrom="1992" validTo="1992" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="DECEMBER" day="7" validFrom="1998" validTo="1998" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="DECEMBER" day="7" validFrom="2009" validTo="2009" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="DECEMBER" day="7" validFrom="2015" validTo="2015" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="DECEMBER" day="7" validFrom="2020" validTo="2020" descriptionPropertiesKey="CONSTITUTION_DAY"/>
       <Fixed month="DECEMBER" day="7" validFrom="2026" validTo="2026" descriptionPropertiesKey="CONSTITUTION_DAY"/>
-      <Fixed month="DECEMBER" day="25" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS">
-        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-      </Fixed>
+      <Fixed month="DECEMBER" day="9" validFrom="1991" validTo="1991" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+      <Fixed month="DECEMBER" day="9" validFrom="1996" validTo="1996" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+      <Fixed month="DECEMBER" day="9" validFrom="2002" validTo="2002" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+      <Fixed month="DECEMBER" day="9" validFrom="2013" validTo="2013" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+      <Fixed month="DECEMBER" day="9" validFrom="2024" validTo="2024" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+      <Fixed month="DECEMBER" day="26" validFrom="2016" validTo="2016" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="DECEMBER" day="26" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS"/>
       <ChristianHoliday type="MAUNDY_THURSDAY"/>
     </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="nc" description="Chartered Community of Navarre">
     <Holidays>
-      <Fixed month="DECEMBER" day="25" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS">
-        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-      </Fixed>
-      <Fixed month="JULY" day="25" validFrom="2023" validTo="2023" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JANUARY" day="7" validFrom="2013" validTo="2013" descriptionPropertiesKey="EPIPHANY"/>
+      <Fixed month="JANUARY" day="7" validFrom="2019" validTo="2019" descriptionPropertiesKey="EPIPHANY"/>
+      <Fixed month="JULY" day="25" validFrom="1991" validTo="1992" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="25" validFrom="1994" validTo="1995" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="25" validFrom="1998" validTo="1998" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="25" validFrom="2000" validTo="2000" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="25" validFrom="2002" validTo="2003" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="25" validFrom="2005" validTo="2006" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="25" validFrom="2008" validTo="2009" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="25" validFrom="2011" validTo="2011" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="25" validFrom="2013" validTo="2013" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="25" validFrom="2015" validTo="2017" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="25" validFrom="2022" validTo="2025" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="DECEMBER" day="7" validFrom="1992" validTo="1992" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="DECEMBER" day="7" validFrom="2020" validTo="2020" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="DECEMBER" day="26" validFrom="2011" validTo="2011" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="DECEMBER" day="26" validFrom="2016" validTo="2016" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="DECEMBER" day="26" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS"/>
       <Fixed month="NOVEMBER" day="2" validFrom="2026" validTo="2026" descriptionPropertiesKey="ALL_SAINTS"/>
       <ChristianHoliday type="MAUNDY_THURSDAY"/>
       <ChristianHoliday type="EASTER_MONDAY"/>
@@ -350,17 +677,24 @@
 
   <SubConfigurations hierarchy="pv" description="Basque Country">
     <Holidays>
-      <Fixed month="MARCH" day="19" validFrom="2000" validTo="2016" descriptionPropertiesKey="ST_JOSEPH">
-        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-      </Fixed>
+      <Fixed month="MARCH" day="19" validFrom="2001" validTo="2005" descriptionPropertiesKey="ST_JOSEPH"/>
+      <Fixed month="MARCH" day="19" validFrom="2007" validTo="2016" descriptionPropertiesKey="ST_JOSEPH"/>
       <Fixed month="MARCH" day="19" validFrom="2018" validTo="2021" descriptionPropertiesKey="ST_JOSEPH">
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
       <Fixed month="MAY" day="2" validFrom="2005" validTo="2005" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
-      <Fixed month="JULY" day="25" validFrom="2017" validTo="2017" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="25" validFrom="1991" validTo="1991" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="25" validFrom="1994" validTo="1998" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="25" validFrom="2000" validTo="2003" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="25" validFrom="2005" validTo="2006" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="25" validFrom="2008" validTo="2009" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="25" validFrom="2011" validTo="2011" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="25" validFrom="2013" validTo="2013" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
+      <Fixed month="JULY" day="25" validFrom="2015" validTo="2017" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
       <Fixed month="JULY" day="25" validFrom="2019" validTo="2020" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
       <Fixed month="JULY" day="25" validFrom="2022" validTo="2027" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
       <Fixed month="OCTOBER" day="25" validFrom="2011" descriptionPropertiesKey="NATIONAL_DAY"/>
+      <Fixed month="DECEMBER" day="7" validFrom="1992" validTo="1992" descriptionPropertiesKey="CONSTITUTION_DAY"/>
       <ChristianHoliday type="MAUNDY_THURSDAY"/>
       <ChristianHoliday type="EASTER_MONDAY"/>
     </Holidays>
@@ -369,15 +703,16 @@
   <SubConfigurations hierarchy="vc" description="Valencia Community">
     <Holidays>
       <Fixed month="JUNE" day="24" descriptionPropertiesKey="ST_JOHN"/>
-      <Fixed month="MARCH" day="19" validFrom="2000" validTo="2016" descriptionPropertiesKey="ST_JOSEPH">
-        <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-      </Fixed>
+      <Fixed month="MARCH" day="19" validFrom="2001" validTo="2005" descriptionPropertiesKey="ST_JOSEPH"/>
+      <Fixed month="MARCH" day="19" validFrom="2007" validTo="2016" descriptionPropertiesKey="ST_JOSEPH"/>
       <Fixed month="MARCH" day="19" validFrom="2018" validTo="2022" descriptionPropertiesKey="ST_JOSEPH">
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
       <Fixed month="MAY" day="2" validFrom="2005" validTo="2005" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
       <Fixed month="MAY" day="2" validFrom="2011" validTo="2011" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
       <Fixed month="OCTOBER" day="9" descriptionPropertiesKey="REGIONAL"/> <!--Day of the Valencian Community-->
+      <Fixed month="DECEMBER" day="7" validFrom="2015" validTo="2015" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+      <Fixed month="DECEMBER" day="26" validFrom="2016" validTo="2016" descriptionPropertiesKey="CHRISTMAS"/>
       <ChristianHoliday type="EASTER_MONDAY"/>
     </Holidays>
   </SubConfigurations>
