@@ -24,7 +24,12 @@
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:ES</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:ES</Source>
     <Source of="Legal basis for Sunday substitution (Art. 45.2/45.3)">https://www.boe.es/buscar/act.php?id=BOE-A-1983-20906</Source>
+    <Source of="Official calendar 1994">https://www.boe.es/diario_boe/txt.php?id=BOE-A-1993-27514</Source>
+    <Source of="Official calendar 2005">https://www.boe.es/diario_boe/txt.php?id=BOE-A-2004-18115</Source>
+    <Source of="Official calendar 2011">https://www.boe.es/diario_boe/txt.php?id=BOE-A-2010-15722</Source>
+    <Source of="Official calendar 2016">https://www.boe.es/diario_boe/txt.php?id=BOE-A-2015-11348</Source>
     <Source of="Official calendar 2019">https://www.boe.es/diario_boe/txt.php?id=BOE-A-2018-14369</Source>
+    <Source of="Official calendar 2022">https://www.boe.es/diario_boe/txt.php?id=BOE-A-2021-17113</Source>
     <Source of="Official calendar 2024">https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-22014</Source>
     <Source of="Official calendar 2026">https://www.boe.es/diario_boe/txt.php?id=BOE-A-2025-21667</Source>
   </Sources>
@@ -36,6 +41,11 @@
       <Fixed month="FEBRUARY" day="29" validFrom="2016" validTo="2016" descriptionPropertiesKey="REGIONAL"/> <!--Day of Andalucía moved from Sunday 28 Feb-->
       <Fixed month="MARCH" day="1" validFrom="2021" validTo="2021" descriptionPropertiesKey="REGIONAL"/> <!--Day of Andalucía moved from Sunday 28 Feb-->
       <Fixed month="MARCH" day="1" validFrom="2027" validTo="2027" descriptionPropertiesKey="REGIONAL"/> <!--Day of Andalucía moved from Sunday 28 Feb-->
+      <Fixed month="MAY" day="2" validFrom="1994" validTo="1994" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
+      <Fixed month="MAY" day="2" validFrom="2005" validTo="2005" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
+      <Fixed month="MAY" day="2" validFrom="2011" validTo="2011" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
+      <Fixed month="MAY" day="2" validFrom="2016" validTo="2016" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
+      <Fixed month="MAY" day="2" validFrom="2022" validTo="2022" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
       <Fixed month="AUGUST" day="16" validFrom="2021" validTo="2021" descriptionPropertiesKey="ASSUMPTION_DAY"/>
       <Fixed month="AUGUST" day="16" validFrom="2027" validTo="2027" descriptionPropertiesKey="ASSUMPTION_DAY"/>
       <Fixed month="NOVEMBER" day="2" validFrom="2026" validTo="2026" descriptionPropertiesKey="ALL_SAINTS"/>
@@ -56,6 +66,10 @@
       <Fixed month="APRIL" day="23" descriptionPropertiesKey="REGIONAL"> <!--Day of Aragón-->
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
+      <Fixed month="MAY" day="2" validFrom="2005" validTo="2005" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
+      <Fixed month="MAY" day="2" validFrom="2011" validTo="2011" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
+      <Fixed month="MAY" day="2" validFrom="2016" validTo="2016" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
+      <Fixed month="MAY" day="2" validFrom="2022" validTo="2022" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
       <Fixed month="AUGUST" day="16" validFrom="2021" validTo="2021" descriptionPropertiesKey="ASSUMPTION_DAY"/>
       <Fixed month="NOVEMBER" day="2" validFrom="2026" validTo="2026" descriptionPropertiesKey="ALL_SAINTS"/>
       <Fixed month="DECEMBER" day="7" validFrom="2026" validTo="2026" descriptionPropertiesKey="CONSTITUTION_DAY"/>
@@ -69,6 +83,11 @@
   <SubConfigurations hierarchy="as" description="Principality of Asturias">
     <Holidays>
       <Fixed month="JANUARY" day="2" validFrom="2023" validTo="2023" descriptionPropertiesKey="NEW_YEAR"/>
+      <Fixed month="MAY" day="2" validFrom="1994" validTo="1994" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
+      <Fixed month="MAY" day="2" validFrom="2005" validTo="2005" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
+      <Fixed month="MAY" day="2" validFrom="2011" validTo="2011" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
+      <Fixed month="MAY" day="2" validFrom="2016" validTo="2016" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
+      <Fixed month="MAY" day="2" validFrom="2022" validTo="2022" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
       <Fixed month="SEPTEMBER" day="8" descriptionPropertiesKey="REGIONAL"/> <!--Day of Asturias-->
       <Fixed month="AUGUST" day="16" validFrom="2021" validTo="2021" descriptionPropertiesKey="ASSUMPTION_DAY"/>
       <Fixed month="NOVEMBER" day="2" validFrom="2026" validTo="2026" descriptionPropertiesKey="ALL_SAINTS"/>
@@ -82,6 +101,9 @@
 
   <SubConfigurations hierarchy="cn" description="Canary Islands">
     <Holidays>
+      <Fixed month="MAY" day="2" validFrom="1994" validTo="1994" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
+      <Fixed month="MAY" day="2" validFrom="2005" validTo="2005" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
+      <Fixed month="MAY" day="2" validFrom="2016" validTo="2016" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
       <Fixed month="MAY" day="30" descriptionPropertiesKey="REGIONAL"/> <!--Day of the Canary Islands-->
       <Fixed month="JULY" day="25" validFrom="2017" validTo="2017" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
       <Fixed month="AUGUST" day="16" validFrom="2021" validTo="2021" descriptionPropertiesKey="ASSUMPTION_DAY"/>
@@ -95,6 +117,8 @@
 
   <SubConfigurations hierarchy="cb" description="Cantabria">
     <Holidays>
+      <Fixed month="MAY" day="2" validFrom="2005" validTo="2005" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
+      <Fixed month="MAY" day="2" validFrom="2011" validTo="2011" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
       <Fixed month="JULY" day="28" descriptionPropertiesKey="REGIONAL"/> <!--Day of the Cantabrian Institutions-->
       <Fixed month="SEPTEMBER" day="15" descriptionPropertiesKey="APARECIDA"/>
       <Fixed month="DECEMBER" day="7" validFrom="2026" validTo="2026" descriptionPropertiesKey="CONSTITUTION_DAY"/>
@@ -113,6 +137,9 @@
       </Fixed>
       <Fixed month="APRIL" day="23" validTo="2022" descriptionPropertiesKey="REGIONAL"/> <!--Castile and León Day-->
       <Fixed month="APRIL" day="23" validFrom="2024" descriptionPropertiesKey="REGIONAL"/> <!--Castile and León Day-->
+      <Fixed month="MAY" day="2" validFrom="2005" validTo="2005" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
+      <Fixed month="MAY" day="2" validFrom="2016" validTo="2016" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
+      <Fixed month="MAY" day="2" validFrom="2022" validTo="2022" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
       <Fixed month="JULY" day="25" validFrom="2017" validTo="2017" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
       <Fixed month="JULY" day="25" validFrom="2023" validTo="2023" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
       <Fixed month="AUGUST" day="16" validFrom="2021" validTo="2021" descriptionPropertiesKey="ASSUMPTION_DAY"/>
@@ -134,6 +161,7 @@
       <Fixed month="MARCH" day="19" validFrom="2020" validTo="2020" descriptionPropertiesKey="ST_JOSEPH">
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
+      <Fixed month="MAY" day="2" validFrom="1994" validTo="1994" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
       <Fixed month="MAY" day="31" descriptionPropertiesKey="REGIONAL"/> <!--Day of Castilla-La Mancha-->
       <Fixed month="NOVEMBER" day="2" validFrom="2026" validTo="2026" descriptionPropertiesKey="ALL_SAINTS"/>
       <Fixed month="DECEMBER" day="25" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS">
@@ -162,6 +190,8 @@
 
   <SubConfigurations hierarchy="ce" description="Ceuta">
     <Holidays>
+      <Fixed month="MAY" day="2" validFrom="2005" validTo="2005" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
+      <Fixed month="MAY" day="2" validFrom="2011" validTo="2011" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
       <Fixed month="SEPTEMBER" day="2" descriptionPropertiesKey="REGIONAL"/>
       <IslamicHoliday type="ID_UL_ADHA" validFrom="2010"/>
     </Holidays>
@@ -180,6 +210,11 @@
       <Fixed month="MARCH" day="19" validFrom="2021" validTo="2021" descriptionPropertiesKey="ST_JOSEPH">
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
+      <Fixed month="MAY" day="2" validFrom="1994" validTo="1994" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
+      <Fixed month="MAY" day="2" validFrom="2005" validTo="2005" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
+      <Fixed month="MAY" day="2" validFrom="2011" validTo="2011" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
+      <Fixed month="MAY" day="2" validFrom="2016" validTo="2016" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
+      <Fixed month="MAY" day="2" validFrom="2022" validTo="2022" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
       <Fixed month="SEPTEMBER" day="8" descriptionPropertiesKey="REGIONAL"/> <!--Day of Extremadura-->
       <Fixed month="NOVEMBER" day="2" validFrom="2026" validTo="2026" descriptionPropertiesKey="ALL_SAINTS"/>
       <Fixed month="DECEMBER" day="7" validFrom="2026" validTo="2026" descriptionPropertiesKey="CONSTITUTION_DAY"/>
@@ -208,6 +243,7 @@
   <SubConfigurations hierarchy="ib" description="Balearic Island">
     <Holidays>
       <Fixed month="MARCH" day="1" descriptionPropertiesKey="REGIONAL"/> <!--Day of the Balearic Islands-->
+      <Fixed month="MAY" day="2" validFrom="2005" validTo="2005" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
       <Fixed month="DECEMBER" day="25" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS">
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
@@ -269,6 +305,7 @@
 
   <SubConfigurations hierarchy="ml" description="Melilla">
     <Holidays>
+      <Fixed month="MAY" day="2" validFrom="2005" validTo="2005" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
       <Fixed month="DECEMBER" day="7" validFrom="2026" validTo="2026" descriptionPropertiesKey="CONSTITUTION_DAY"/>
       <Fixed month="DECEMBER" day="25" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHRISTMAS">
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
@@ -283,6 +320,10 @@
       <Fixed month="MARCH" day="19" validFrom="2010" validTo="2016" descriptionPropertiesKey="ST_JOSEPH"/>
       <Fixed month="MARCH" day="19" validFrom="2018" validTo="2021" descriptionPropertiesKey="ST_JOSEPH"/>
       <Fixed month="MARCH" day="19" validFrom="2024" validTo="2027" descriptionPropertiesKey="ST_JOSEPH"/>
+      <Fixed month="MAY" day="2" validFrom="1994" validTo="1994" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
+      <Fixed month="MAY" day="2" validFrom="2005" validTo="2005" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
+      <Fixed month="MAY" day="2" validFrom="2011" validTo="2011" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
+      <Fixed month="MAY" day="2" validFrom="2022" validTo="2022" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
       <Fixed month="JUNE" day="9" descriptionPropertiesKey="REGIONAL"/> <!--Day of Murcia-->
       <!--Murcia moved the day to the following Monday only in 2002 and 2019, not in the other years where 9 June fell on a Sunday (1991, 1996, 2013, 2024)-->
       <Fixed month="JUNE" day="10" validFrom="2002" validTo="2002" descriptionPropertiesKey="REGIONAL"/> <!--Day of Murcia moved from Sunday 9 June-->
@@ -315,6 +356,7 @@
       <Fixed month="MARCH" day="19" validFrom="2018" validTo="2021" descriptionPropertiesKey="ST_JOSEPH">
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
+      <Fixed month="MAY" day="2" validFrom="2005" validTo="2005" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
       <Fixed month="JULY" day="25" validFrom="2017" validTo="2017" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
       <Fixed month="JULY" day="25" validFrom="2019" validTo="2020" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
       <Fixed month="JULY" day="25" validFrom="2022" validTo="2027" descriptionPropertiesKey="SANTIAGO_APOSTOL"/>
@@ -333,6 +375,8 @@
       <Fixed month="MARCH" day="19" validFrom="2018" validTo="2022" descriptionPropertiesKey="ST_JOSEPH">
         <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
       </Fixed>
+      <Fixed month="MAY" day="2" validFrom="2005" validTo="2005" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
+      <Fixed month="MAY" day="2" validFrom="2011" validTo="2011" descriptionPropertiesKey="LABOUR_DAY"/> <!--Labour Day moved from Sunday 1 May-->
       <Fixed month="OCTOBER" day="9" descriptionPropertiesKey="REGIONAL"/> <!--Day of the Valencian Community-->
       <ChristianHoliday type="EASTER_MONDAY"/>
     </Holidays>
