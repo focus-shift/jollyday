@@ -8,19 +8,77 @@
     <Fixed month="FEBRUARY" day="5" descriptionPropertiesKey="KASHMIR_DAY"/>
     <Fixed month="MARCH" day="23" descriptionPropertiesKey="PAKISTAN_DAY"/>
     <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
-    <Fixed month="MAY" day="28" descriptionPropertiesKey="YEOM_E_TAKBEER"/>
+    <!-- first declared by the Prime Minister for 2024, part of the annual Cabinet Division list since 2025 -->
+    <Fixed month="MAY" day="28" validFrom="2024" descriptionPropertiesKey="YEOM_E_TAKBEER"/>
     <Fixed month="AUGUST" day="14" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
     <Fixed month="NOVEMBER" day="9" descriptionPropertiesKey="IQBAL_DAY"/>
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="QUAID_E_AZAM_DAY"/>
-    <IslamicHoliday type="TASUA" descriptionPropertiesKey="islamic.ASCHURA"/>
-    <IslamicHoliday type="ASCHURA"/>
-    <IslamicHoliday type="MAWLID_AN_NABI"/>
-    <IslamicHoliday type="ID_AL_FITR"/>
-    <IslamicHoliday type="ID_UL_ADHA"/>
+
+    <!--
+      Islamic holidays depend on the sighting of the moon. For 2023 to 2026 the dates are taken from the
+      Cabinet Division notifications issued after the moon sighting; all other years use the calculated
+      dates below. Where a notification lists an extra Saturday for offices observing a six-day working
+      week (Eid-ul-Azha 2023, Eid-ul-Fitr 2024), that Saturday is included.
+    -->
+    <!-- 2023 -->
+    <Fixed month="APRIL" day="21" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+    <Fixed month="APRIL" day="22" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+    <Fixed month="APRIL" day="23" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+    <Fixed month="APRIL" day="24" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+    <Fixed month="APRIL" day="25" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+    <Fixed month="JUNE" day="28" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
+    <Fixed month="JUNE" day="29" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
+    <Fixed month="JUNE" day="30" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
+    <Fixed month="JULY" day="1" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
+    <Fixed month="JULY" day="28" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.ASCHURA"/>
+    <Fixed month="JULY" day="29" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.ASCHURA"/>
+    <Fixed month="SEPTEMBER" day="29" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+    <!-- 2024 -->
+    <Fixed month="APRIL" day="10" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+    <Fixed month="APRIL" day="11" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+    <Fixed month="APRIL" day="12" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+    <Fixed month="APRIL" day="13" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+    <Fixed month="JUNE" day="17" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
+    <Fixed month="JUNE" day="18" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
+    <Fixed month="JUNE" day="19" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
+    <Fixed month="JULY" day="16" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.ASCHURA"/>
+    <Fixed month="JULY" day="17" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.ASCHURA"/>
+    <Fixed month="SEPTEMBER" day="17" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+    <!-- 2025 -->
+    <Fixed month="MARCH" day="31" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+    <Fixed month="APRIL" day="1" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+    <Fixed month="APRIL" day="2" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+    <Fixed month="JUNE" day="6" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
+    <Fixed month="JUNE" day="7" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
+    <Fixed month="JUNE" day="8" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
+    <Fixed month="JUNE" day="9" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
+    <Fixed month="JULY" day="5" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.ASCHURA"/>
+    <Fixed month="JULY" day="6" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.ASCHURA"/>
+    <Fixed month="SEPTEMBER" day="6" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+    <!-- 2026 -->
+    <Fixed month="MARCH" day="20" validFrom="2026" validTo="2026" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+    <Fixed month="MARCH" day="21" validFrom="2026" validTo="2026" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+    <Fixed month="MAY" day="26" validFrom="2026" validTo="2026" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
+    <Fixed month="MAY" day="27" validFrom="2026" validTo="2026" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
+    <Fixed month="MAY" day="28" validFrom="2026" validTo="2026" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
+    <Fixed month="JUNE" day="25" validFrom="2026" validTo="2026" descriptionPropertiesKey="islamic.ASCHURA"/>
+    <Fixed month="JUNE" day="26" validFrom="2026" validTo="2026" descriptionPropertiesKey="islamic.ASCHURA"/>
+    <Fixed month="AUGUST" day="26" validFrom="2026" validTo="2026" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+
+    <IslamicHoliday type="TASUA" validTo="2022" descriptionPropertiesKey="islamic.ASCHURA"/>
+    <IslamicHoliday type="TASUA" validFrom="2027" descriptionPropertiesKey="islamic.ASCHURA"/>
+    <IslamicHoliday type="ASCHURA" validTo="2022"/>
+    <IslamicHoliday type="ASCHURA" validFrom="2027"/>
+    <IslamicHoliday type="MAWLID_AN_NABI" validTo="2022"/>
+    <IslamicHoliday type="MAWLID_AN_NABI" validFrom="2027"/>
+    <IslamicHoliday type="ID_AL_FITR" validTo="2022"/>
+    <IslamicHoliday type="ID_AL_FITR" validFrom="2027"/>
+    <IslamicHoliday type="ID_UL_ADHA" validTo="2022"/>
+    <IslamicHoliday type="ID_UL_ADHA" validFrom="2027"/>
   </Holidays>
 
   <Sources>
-    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Pakistan</Source>
+    <Source>https://cabinet.gov.pk/Detail/OTE2ODBiYmItZmI0MS00NDAwLWE5NGUtYmE1MGVjYzllMzAz</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:PK</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:PK</Source>
   </Sources>
