@@ -4,8 +4,15 @@
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
   <Holidays>
+    <!-- Public Holidays Act, s. 3(3), as inserted by Act No. 13 of 2026 (in force 13 August 2026): where a public holiday
+         falls on a Sunday, the following day is observed as public holiday. Modelled as a Sunday to Monday move on every
+         holiday from its first date on or after 13 August 2026. Not on 1 January and 1 November (All Saints): the
+         following day (2 January, 2 November) is a public holiday anyway. -->
     <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
-    <Fixed month="JANUARY" day="2" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="JANUARY" day="2" validTo="2026" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="JANUARY" day="2" validFrom="2027" descriptionPropertiesKey="NEW_YEAR">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
     <!-- https://pmo.govmu.org/Communique/35_Proclamation%20A5_2022.pdf -->
     <Fixed month="JANUARY" day="3" validFrom="2023" validTo="2023" descriptionPropertiesKey="PUBLIC_HOLIDAY"/>
 
@@ -24,6 +31,11 @@
     <Fixed month="FEBRUARY" day="1" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHINESE_SPRING_FESTIVAL"/>
     <Fixed month="JANUARY" day="22" validFrom="2023" validTo="2023" descriptionPropertiesKey="CHINESE_SPRING_FESTIVAL"/>
     <Fixed month="FEBRUARY" day="10" validFrom="2024" validTo="2024" descriptionPropertiesKey="CHINESE_SPRING_FESTIVAL"/>
+    <Fixed month="JANUARY" day="29" validFrom="2025" validTo="2025" descriptionPropertiesKey="CHINESE_SPRING_FESTIVAL"/>
+    <Fixed month="FEBRUARY" day="17" validFrom="2026" validTo="2026" descriptionPropertiesKey="CHINESE_SPRING_FESTIVAL"/>
+    <Fixed month="FEBRUARY" day="6" validFrom="2027" validTo="2027" descriptionPropertiesKey="CHINESE_SPRING_FESTIVAL">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
 
     <!-- according to Wikipedia: -->
     <!-- the full moon of the Tamil month of Thai (January/February), usually coinciding with Pushya star, known as Pusam in Tamil -->
@@ -39,8 +51,16 @@
     <Fixed month="JANUARY" day="18" validFrom="2022" validTo="2022" descriptionPropertiesKey="THAIPOOSAM_CAVEDEE"/>
     <Fixed month="FEBRUARY" day="4" validFrom="2023" validTo="2023" descriptionPropertiesKey="THAIPOOSAM_CAVEDEE"/>
     <Fixed month="JANUARY" day="25" validFrom="2024" validTo="2024" descriptionPropertiesKey="THAIPOOSAM_CAVEDEE"/>
+    <Fixed month="FEBRUARY" day="11" validFrom="2025" validTo="2025" descriptionPropertiesKey="THAIPOOSAM_CAVEDEE"/>
+    <Fixed month="FEBRUARY" day="1" validFrom="2026" validTo="2026" descriptionPropertiesKey="THAIPOOSAM_CAVEDEE"/>
+    <Fixed month="JANUARY" day="22" validFrom="2027" validTo="2027" descriptionPropertiesKey="THAIPOOSAM_CAVEDEE">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
 
-    <Fixed month="FEBRUARY" day="1" descriptionPropertiesKey="ABOLITION_OF_SLAVERY"/>
+    <Fixed month="FEBRUARY" day="1" validTo="2026" descriptionPropertiesKey="ABOLITION_OF_SLAVERY"/>
+    <Fixed month="FEBRUARY" day="1" validFrom="2027" descriptionPropertiesKey="ABOLITION_OF_SLAVERY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
 
     <!-- according to Wikipedia: -->
     <!-- the fourteenth day of the dark (waning) half of the lunar month of Phalguna or Magha -->
@@ -57,9 +77,17 @@
     <Fixed month="MARCH" day="1" validFrom="2022" validTo="2022" descriptionPropertiesKey="MAHA_SHIVRATREE"/>
     <Fixed month="FEBRUARY" day="18" validFrom="2023" validTo="2023" descriptionPropertiesKey="MAHA_SHIVRATREE"/>
     <Fixed month="MARCH" day="8" validFrom="2024" validTo="2024" descriptionPropertiesKey="MAHA_SHIVRATREE"/>
+    <Fixed month="FEBRUARY" day="26" validFrom="2025" validTo="2025" descriptionPropertiesKey="MAHA_SHIVRATREE"/>
+    <Fixed month="FEBRUARY" day="15" validFrom="2026" validTo="2026" descriptionPropertiesKey="MAHA_SHIVRATREE"/>
+    <Fixed month="MARCH" day="6" validFrom="2027" validTo="2027" descriptionPropertiesKey="MAHA_SHIVRATREE">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
 
     <Fixed month="MARCH" day="12" validTo="2016" descriptionPropertiesKey="NATIONAL_DAY"/>
-    <Fixed month="MARCH" day="12" validFrom="2017" descriptionPropertiesKey="INDEPENDENCE_AND_REPUBLIC_DAY"/>
+    <Fixed month="MARCH" day="12" validFrom="2017" validTo="2026" descriptionPropertiesKey="INDEPENDENCE_AND_REPUBLIC_DAY"/>
+    <Fixed month="MARCH" day="12" validFrom="2027" descriptionPropertiesKey="INDEPENDENCE_AND_REPUBLIC_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
 
     <!-- according to Wikipedia: -->
     <!-- the first day of the Hindu lunisolar calendar month of Chaitra -->
@@ -76,10 +104,21 @@
     <Fixed month="APRIL" day="2" validFrom="2022" validTo="2022" descriptionPropertiesKey="UGAADI"/>
     <Fixed month="MARCH" day="22" validFrom="2023" validTo="2023" descriptionPropertiesKey="UGAADI"/>
     <Fixed month="APRIL" day="9" validFrom="2024" validTo="2024" descriptionPropertiesKey="UGAADI"/>
+    <Fixed month="MARCH" day="30" validFrom="2025" validTo="2025" descriptionPropertiesKey="UGAADI"/>
+    <Fixed month="MARCH" day="19" validFrom="2026" validTo="2026" descriptionPropertiesKey="UGAADI"/>
+    <Fixed month="APRIL" day="7" validFrom="2027" validTo="2027" descriptionPropertiesKey="UGAADI">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
 
-    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="MAY" day="1" validTo="2026" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="MAY" day="1" validFrom="2027" descriptionPropertiesKey="LABOUR_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
 
-    <Fixed month="AUGUST" day="15" every="EVEN_YEARS" descriptionPropertiesKey="ASSUMPTION_BLESSED_VIRGIN_MARY"/>
+    <Fixed month="AUGUST" day="15" validTo="2025" every="EVEN_YEARS" descriptionPropertiesKey="ASSUMPTION_BLESSED_VIRGIN_MARY"/>
+    <Fixed month="AUGUST" day="15" validFrom="2026" every="EVEN_YEARS" descriptionPropertiesKey="ASSUMPTION_BLESSED_VIRGIN_MARY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
 
     <!-- the fourth day of the lunar month in August / September (?) -->
     <!-- or simply one day after the Restricted Holiday of Ganesh Chaturthi in India? -->
@@ -95,6 +134,13 @@
     <Fixed month="SEPTEMBER" day="1" validFrom="2022" validTo="2022" descriptionPropertiesKey="GANESH_CHATURTHI"/>
     <Fixed month="SEPTEMBER" day="20" validFrom="2023" validTo="2023" descriptionPropertiesKey="GANESH_CHATURTHI"/>
     <Fixed month="SEPTEMBER" day="8" validFrom="2024" validTo="2024" descriptionPropertiesKey="GANESH_CHATURTHI"/>
+    <Fixed month="AUGUST" day="28" validFrom="2025" validTo="2025" descriptionPropertiesKey="GANESH_CHATURTHI"/>
+    <Fixed month="SEPTEMBER" day="15" validFrom="2026" validTo="2026" descriptionPropertiesKey="GANESH_CHATURTHI">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="SEPTEMBER" day="5" validFrom="2027" validTo="2027" descriptionPropertiesKey="GANESH_CHATURTHI">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
 
     <!-- the day that according to Wikipedia is referred to in other regions as: -->
     <!-- Lakshmi Puja: the amavasya (new moon day) in the Vikram Samvat Hindu calendar month of Ashwayuja (according to the amanta tradition) or Kartika (according to the purnimanta tradition) -->
@@ -113,24 +159,51 @@
     <Fixed month="OCTOBER" day="24" validFrom="2022" validTo="2022" descriptionPropertiesKey="DIVALI"/>
     <Fixed month="NOVEMBER" day="12" validFrom="2023" validTo="2023" descriptionPropertiesKey="DIVALI"/>
     <Fixed month="OCTOBER" day="31" validFrom="2024" validTo="2024" descriptionPropertiesKey="DIVALI"/>
+    <Fixed month="OCTOBER" day="20" validFrom="2025" validTo="2025" descriptionPropertiesKey="DIVALI"/>
+    <Fixed month="NOVEMBER" day="8" validFrom="2026" validTo="2026" descriptionPropertiesKey="DIVALI">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="OCTOBER" day="29" validFrom="2027" validTo="2027" descriptionPropertiesKey="DIVALI">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
 
     <Fixed month="NOVEMBER" day="1" every="ODD_YEARS" descriptionPropertiesKey="ALL_SAINTS"/>
-    <Fixed month="NOVEMBER" day="2" descriptionPropertiesKey="ARRIVAL_OF_INDENTURED_LABORERS"/>
+    <Fixed month="NOVEMBER" day="2" validTo="2025" descriptionPropertiesKey="ARRIVAL_OF_INDENTURED_LABORERS"/>
+    <Fixed month="NOVEMBER" day="2" validFrom="2026" descriptionPropertiesKey="ARRIVAL_OF_INDENTURED_LABORERS">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
 
-    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+    <Fixed month="DECEMBER" day="25" validTo="2025" descriptionPropertiesKey="CHRISTMAS"/>
+    <Fixed month="DECEMBER" day="25" validFrom="2026" descriptionPropertiesKey="CHRISTMAS">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
 
     <!-- assume that it was also moved all not through 4 divisible years before 2013 too -->
     <IslamicHoliday type="ID_AL_FITR_2" validTo="2010" every="FOUR_YEARS" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
     <IslamicHoliday type="ID_AL_FITR" validTo="2012" every="FOUR_YEARS"/>
     <!-- at least since 2013 always one day later than in the United Arab Emirates and Saudi Arabia (so on the same day as in India)
     except in every through 4 divisible year (leap year), there it is on the same day as in the United Arab Emirates and Saudi Arabia (so one day earlier than in India) -->
-    <IslamicHoliday type="ID_AL_FITR_2" every="ODD_YEARS" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
-    <IslamicHoliday type="ID_AL_FITR_2" validFrom="2014" every="FOUR_YEARS" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
-    <IslamicHoliday type="ID_AL_FITR" validFrom="2016" every="FOUR_YEARS"/>
+    <IslamicHoliday type="ID_AL_FITR_2" validTo="2026" every="ODD_YEARS" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+    <IslamicHoliday type="ID_AL_FITR_2" validFrom="2014" validTo="2026" every="FOUR_YEARS" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+    <IslamicHoliday type="ID_AL_FITR" validFrom="2016" validTo="2024" every="FOUR_YEARS"/>
+    <!-- the same three entries from 2027 on, with the Sunday to Monday move of s. 3(3) -->
+    <IslamicHoliday type="ID_AL_FITR_2" validFrom="2027" every="ODD_YEARS" descriptionPropertiesKey="islamic.ID_AL_FITR">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </IslamicHoliday>
+    <IslamicHoliday type="ID_AL_FITR_2" validFrom="2030" every="FOUR_YEARS" descriptionPropertiesKey="islamic.ID_AL_FITR">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </IslamicHoliday>
+    <IslamicHoliday type="ID_AL_FITR" validFrom="2028" every="FOUR_YEARS">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </IslamicHoliday>
   </Holidays>
 
   <Sources>
-    <Source>https://attorneygeneral.govmu.org/Documents/Laws%20of%20Mauritius/A-Z%20Acts/P/Pu/PUBLIC%20HOLIDAYS%20ACT,%20No.%2022%20of%201968.pdf</Source>
+    <Source>https://lawsofmauritius.govmu.org/portal/viewlegislationdocument?filename=L2RiL3JlcG9zaXRvcnkvYWN0cy9ha24tbXUtYWN0LVB1YmxpY19Ib2xpZGF5c19BY3QtdjIucGRm&amp;docName=PUBLIC+HOLIDAYS+ACT&amp;cioDate=1+July+1968&amp;docNum=Act+22+of+1968</Source>
+    <Source>https://mauritiusassembly.govmu.org/mauritiusassembly/wp-content/uploads/2026/08/Act1326.pdf</Source>
+    <Source>https://pmo.govmu.org/Communique/Notice-Public_Holidays_2025.pdf</Source>
+    <Source>https://pmo.govmu.org/Communique/GN_No._611-Amendment_to_Public_Holidays_2026.pdf</Source>
+    <Source>https://pmo.govmu.org/CabinetDecision/2026/Highlights%20of%20Cabinet%20Meeting%20Friday%2028%20August%20%202026.pdf</Source>
     <Source>https://en.wikipedia.org/wiki/Culture_of_Mauritius#Public_holidays_and_festivals</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:MU</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:MU</Source>
