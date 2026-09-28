@@ -8,6 +8,19 @@
     <Fixed month="JANUARY" day="26" descriptionPropertiesKey="REPUBLIC_DAY"/>
     <Fixed month="AUGUST" day="15" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
     <Fixed month="OCTOBER" day="2" descriptionPropertiesKey="GHANDIS_BIRTHDAY"/>
+    <!-- Buddha Purnima is a compulsory holiday for all Central Government offices (DoPT). -->
+    <!-- It follows the Hindu lunisolar calendar, which is not supported yet (#278), so the -->
+    <!-- dates of the DoPT holiday lists are configured per year. -->
+    <!-- The subdivisions configure Muharram and Milad-un-Nabi per year from the same DoPT lists, -->
+    <!-- because they are observed one day after the calculated date (#1509). -->
+    <Fixed month="MAY" day="7" validFrom="2020" validTo="2020" descriptionPropertiesKey="BUDDHA_PURNIMA"/>
+    <Fixed month="MAY" day="26" validFrom="2021" validTo="2021" descriptionPropertiesKey="BUDDHA_PURNIMA"/>
+    <Fixed month="MAY" day="16" validFrom="2022" validTo="2022" descriptionPropertiesKey="BUDDHA_PURNIMA"/>
+    <Fixed month="MAY" day="5" validFrom="2023" validTo="2023" descriptionPropertiesKey="BUDDHA_PURNIMA"/>
+    <Fixed month="MAY" day="23" validFrom="2024" validTo="2024" descriptionPropertiesKey="BUDDHA_PURNIMA"/>
+    <Fixed month="MAY" day="12" validFrom="2025" validTo="2025" descriptionPropertiesKey="BUDDHA_PURNIMA"/>
+    <Fixed month="MAY" day="1" validFrom="2026" validTo="2026" descriptionPropertiesKey="BUDDHA_PURNIMA"/>
+    <Fixed month="MAY" day="20" validFrom="2027" validTo="2027" descriptionPropertiesKey="BUDDHA_PURNIMA"/>
     <IslamicHoliday type="ID_AL_FITR_2"/>
   </Holidays>
 
@@ -15,6 +28,14 @@
     <Source>https://www.india.gov.in/calendar</Source>
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_India</Source>
     <Source>https://www.staffnews.in/2025/07/list-of-holidays-2026-dopt-order-reg-closed-and-restricted-holidays.html</Source>
+    <Source>https://dopt.gov.in/sites/default/files/Holiday%20list%202020.pdf</Source>
+    <Source>https://documents.doptcirculars.nic.in/D2/D02est/HolidaylistKKLde.pdf</Source>
+    <Source>https://documents.doptcirculars.nic.in/D2/D02est/holiday%20list%2020220rsMX.pdf</Source>
+    <Source>https://documents.doptcirculars.nic.in/D2/D02est/Naresh_NIC_1_20220616164953373JH62n.pdf</Source>
+    <Source>https://dopt.gov.in/sites/default/files/Holiday%20to%20be%20observed%20in%20Central%20government%20offices%20during%20the%20year%202024.PDF</Source>
+    <Source>https://dopt.gov.in/sites/default/files/List%20of%20holidays%202025.pdf</Source>
+    <Source>https://documents.doptcirculars.nic.in/D2/D02est/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%2020265vgBs.pdf</Source>
+    <Source>https://dopt.gov.in/sites/default/files/Holiday%20list%202027.PDF</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:IN</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:IN</Source>
   </Sources>
@@ -22,9 +43,27 @@
   <SubConfigurations hierarchy="an" description="Andaman and Nicobar Islands">
     <Holidays>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="AUGUST" day="30" validFrom="2020" validTo="2020" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="AUGUST" day="19" validFrom="2021" validTo="2021" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="AUGUST" day="9" validFrom="2022" validTo="2022" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="29" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="17" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="6" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JUNE" day="26" validFrom="2026" validTo="2026" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JUNE" day="16" validFrom="2027" validTo="2027" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="OCTOBER" day="30" validFrom="2020" validTo="2020" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="OCTOBER" day="19" validFrom="2021" validTo="2021" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="OCTOBER" day="9" validFrom="2022" validTo="2022" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="28" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="16" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="5" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="AUGUST" day="26" validFrom="2026" validTo="2026" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="AUGUST" day="15" validFrom="2027" validTo="2027" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
       <ChristianHoliday type="GOOD_FRIDAY"/>
-      <IslamicHoliday type="ASCHURA"/>
-      <IslamicHoliday type="MAWLID_AN_NABI"/>
+      <IslamicHoliday type="ASCHURA" validTo="2019"/>
+      <IslamicHoliday type="ASCHURA" validFrom="2028"/>
+      <IslamicHoliday type="MAWLID_AN_NABI" validTo="2019"/>
+      <IslamicHoliday type="MAWLID_AN_NABI" validFrom="2028"/>
       <IslamicHoliday type="ID_UL_ADHA_2"/>
     </Holidays>
   </SubConfigurations>
@@ -33,9 +72,27 @@
     <Holidays>
       <Fixed month="APRIL" day="14" descriptionPropertiesKey="AMBEDKAR_JAYANTI"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="AUGUST" day="30" validFrom="2020" validTo="2020" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="AUGUST" day="19" validFrom="2021" validTo="2021" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="AUGUST" day="9" validFrom="2022" validTo="2022" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="29" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="17" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="6" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JUNE" day="26" validFrom="2026" validTo="2026" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JUNE" day="16" validFrom="2027" validTo="2027" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="OCTOBER" day="30" validFrom="2020" validTo="2020" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="OCTOBER" day="19" validFrom="2021" validTo="2021" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="OCTOBER" day="9" validFrom="2022" validTo="2022" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="28" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="16" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="5" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="AUGUST" day="26" validFrom="2026" validTo="2026" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="AUGUST" day="15" validFrom="2027" validTo="2027" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
       <ChristianHoliday type="GOOD_FRIDAY"/>
-      <IslamicHoliday type="ASCHURA"/>
-      <IslamicHoliday type="MAWLID_AN_NABI"/>
+      <IslamicHoliday type="ASCHURA" validTo="2019"/>
+      <IslamicHoliday type="ASCHURA" validFrom="2028"/>
+      <IslamicHoliday type="MAWLID_AN_NABI" validTo="2019"/>
+      <IslamicHoliday type="MAWLID_AN_NABI" validFrom="2028"/>
       <IslamicHoliday type="ID_UL_ADHA_2"/>
     </Holidays>
   </SubConfigurations>
@@ -63,8 +120,17 @@
       <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
       <Fixed month="APRIL" day="14" descriptionPropertiesKey="AMBEDKAR_JAYANTI"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="AUGUST" day="30" validFrom="2020" validTo="2020" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="AUGUST" day="19" validFrom="2021" validTo="2021" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="AUGUST" day="9" validFrom="2022" validTo="2022" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="29" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="17" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="6" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JUNE" day="26" validFrom="2026" validTo="2026" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JUNE" day="16" validFrom="2027" validTo="2027" descriptionPropertiesKey="islamic.ASCHURA"/>
       <ChristianHoliday type="GOOD_FRIDAY"/>
-      <IslamicHoliday type="ASCHURA"/>
+      <IslamicHoliday type="ASCHURA" validTo="2019"/>
+      <IslamicHoliday type="ASCHURA" validFrom="2028"/>
       <IslamicHoliday type="ID_UL_ADHA_2"/>
     </Holidays>
   </SubConfigurations>
@@ -73,8 +139,17 @@
     <Holidays>
       <Fixed month="APRIL" day="14" descriptionPropertiesKey="AMBEDKAR_JAYANTI"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="AUGUST" day="30" validFrom="2020" validTo="2020" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="AUGUST" day="19" validFrom="2021" validTo="2021" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="AUGUST" day="9" validFrom="2022" validTo="2022" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="29" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="17" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="6" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JUNE" day="26" validFrom="2026" validTo="2026" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JUNE" day="16" validFrom="2027" validTo="2027" descriptionPropertiesKey="islamic.ASCHURA"/>
       <ChristianHoliday type="GOOD_FRIDAY"/>
-      <IslamicHoliday type="ASCHURA"/>
+      <IslamicHoliday type="ASCHURA" validTo="2019"/>
+      <IslamicHoliday type="ASCHURA" validFrom="2028"/>
       <IslamicHoliday type="ID_UL_ADHA_2"/>
     </Holidays>
   </SubConfigurations>
@@ -83,9 +158,27 @@
     <Holidays>
       <Fixed month="APRIL" day="14" descriptionPropertiesKey="AMBEDKAR_JAYANTI"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="AUGUST" day="30" validFrom="2020" validTo="2020" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="AUGUST" day="19" validFrom="2021" validTo="2021" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="AUGUST" day="9" validFrom="2022" validTo="2022" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="29" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="17" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="6" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JUNE" day="26" validFrom="2026" validTo="2026" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JUNE" day="16" validFrom="2027" validTo="2027" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="OCTOBER" day="30" validFrom="2020" validTo="2020" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="OCTOBER" day="19" validFrom="2021" validTo="2021" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="OCTOBER" day="9" validFrom="2022" validTo="2022" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="28" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="16" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="5" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="AUGUST" day="26" validFrom="2026" validTo="2026" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="AUGUST" day="15" validFrom="2027" validTo="2027" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
       <ChristianHoliday type="GOOD_FRIDAY"/>
-      <IslamicHoliday type="ASCHURA"/>
-      <IslamicHoliday type="MAWLID_AN_NABI"/>
+      <IslamicHoliday type="ASCHURA" validTo="2019"/>
+      <IslamicHoliday type="ASCHURA" validFrom="2028"/>
+      <IslamicHoliday type="MAWLID_AN_NABI" validTo="2019"/>
+      <IslamicHoliday type="MAWLID_AN_NABI" validFrom="2028"/>
       <IslamicHoliday type="ID_UL_ADHA_2"/>
     </Holidays>
   </SubConfigurations>
@@ -94,9 +187,27 @@
     <Holidays>
       <Fixed month="APRIL" day="14" descriptionPropertiesKey="AMBEDKAR_JAYANTI"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="AUGUST" day="30" validFrom="2020" validTo="2020" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="AUGUST" day="19" validFrom="2021" validTo="2021" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="AUGUST" day="9" validFrom="2022" validTo="2022" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="29" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="17" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="6" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JUNE" day="26" validFrom="2026" validTo="2026" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JUNE" day="16" validFrom="2027" validTo="2027" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="OCTOBER" day="30" validFrom="2020" validTo="2020" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="OCTOBER" day="19" validFrom="2021" validTo="2021" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="OCTOBER" day="9" validFrom="2022" validTo="2022" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="28" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="16" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="5" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="AUGUST" day="26" validFrom="2026" validTo="2026" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="AUGUST" day="15" validFrom="2027" validTo="2027" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
       <ChristianHoliday type="GOOD_FRIDAY"/>
-      <IslamicHoliday type="ASCHURA"/>
-      <IslamicHoliday type="MAWLID_AN_NABI"/>
+      <IslamicHoliday type="ASCHURA" validTo="2019"/>
+      <IslamicHoliday type="ASCHURA" validFrom="2028"/>
+      <IslamicHoliday type="MAWLID_AN_NABI" validTo="2019"/>
+      <IslamicHoliday type="MAWLID_AN_NABI" validFrom="2028"/>
       <IslamicHoliday type="ID_UL_ADHA_2"/>
     </Holidays>
   </SubConfigurations>
@@ -104,8 +215,17 @@
   <SubConfigurations hierarchy="dh" description="Dādra and Nagar Haveli and Damān and Diu">
     <Holidays>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="OCTOBER" day="30" validFrom="2020" validTo="2020" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="OCTOBER" day="19" validFrom="2021" validTo="2021" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="OCTOBER" day="9" validFrom="2022" validTo="2022" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="28" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="16" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="5" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="AUGUST" day="26" validFrom="2026" validTo="2026" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="AUGUST" day="15" validFrom="2027" validTo="2027" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
       <ChristianHoliday type="GOOD_FRIDAY"/>
-      <IslamicHoliday type="MAWLID_AN_NABI"/>
+      <IslamicHoliday type="MAWLID_AN_NABI" validTo="2019"/>
+      <IslamicHoliday type="MAWLID_AN_NABI" validFrom="2028"/>
     </Holidays>
   </SubConfigurations>
 
@@ -123,6 +243,7 @@
     <Holidays>
       <Fixed month="APRIL" day="14" descriptionPropertiesKey="AMBEDKAR_JAYANTI"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
       <IslamicHoliday type="ID_UL_ADHA_2"/>
     </Holidays>
   </SubConfigurations>
@@ -138,8 +259,17 @@
     <Holidays>
       <Fixed month="APRIL" day="14" descriptionPropertiesKey="AMBEDKAR_JAYANTI"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="AUGUST" day="30" validFrom="2020" validTo="2020" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="AUGUST" day="19" validFrom="2021" validTo="2021" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="AUGUST" day="9" validFrom="2022" validTo="2022" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="29" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="17" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="6" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JUNE" day="26" validFrom="2026" validTo="2026" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JUNE" day="16" validFrom="2027" validTo="2027" descriptionPropertiesKey="islamic.ASCHURA"/>
       <ChristianHoliday type="GOOD_FRIDAY"/>
-      <IslamicHoliday type="ASCHURA"/>
+      <IslamicHoliday type="ASCHURA" validTo="2019"/>
+      <IslamicHoliday type="ASCHURA" validFrom="2028"/>
       <IslamicHoliday type="ID_UL_ADHA_2"/>
     </Holidays>
   </SubConfigurations>
@@ -148,8 +278,26 @@
     <Holidays>
       <Fixed month="APRIL" day="14" descriptionPropertiesKey="AMBEDKAR_JAYANTI"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <IslamicHoliday type="ASCHURA"/>
-      <IslamicHoliday type="MAWLID_AN_NABI"/>
+      <Fixed month="AUGUST" day="30" validFrom="2020" validTo="2020" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="AUGUST" day="19" validFrom="2021" validTo="2021" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="AUGUST" day="9" validFrom="2022" validTo="2022" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="29" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="17" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="6" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JUNE" day="26" validFrom="2026" validTo="2026" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JUNE" day="16" validFrom="2027" validTo="2027" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="OCTOBER" day="30" validFrom="2020" validTo="2020" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="OCTOBER" day="19" validFrom="2021" validTo="2021" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="OCTOBER" day="9" validFrom="2022" validTo="2022" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="28" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="16" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="5" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="AUGUST" day="26" validFrom="2026" validTo="2026" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="AUGUST" day="15" validFrom="2027" validTo="2027" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <IslamicHoliday type="ASCHURA" validTo="2019"/>
+      <IslamicHoliday type="ASCHURA" validFrom="2028"/>
+      <IslamicHoliday type="MAWLID_AN_NABI" validTo="2019"/>
+      <IslamicHoliday type="MAWLID_AN_NABI" validFrom="2028"/>
       <IslamicHoliday type="ID_UL_ADHA_2"/>
     </Holidays>
   </SubConfigurations>
@@ -158,8 +306,17 @@
     <Holidays>
       <Fixed month="APRIL" day="14" descriptionPropertiesKey="AMBEDKAR_JAYANTI"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="OCTOBER" day="30" validFrom="2020" validTo="2020" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="OCTOBER" day="19" validFrom="2021" validTo="2021" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="OCTOBER" day="9" validFrom="2022" validTo="2022" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="28" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="16" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="5" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="AUGUST" day="26" validFrom="2026" validTo="2026" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="AUGUST" day="15" validFrom="2027" validTo="2027" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
       <ChristianHoliday type="GOOD_FRIDAY"/>
-      <IslamicHoliday type="MAWLID_AN_NABI"/>
+      <IslamicHoliday type="MAWLID_AN_NABI" validTo="2019"/>
+      <IslamicHoliday type="MAWLID_AN_NABI" validFrom="2028"/>
       <IslamicHoliday type="ID_UL_ADHA_2"/>
     </Holidays>
   </SubConfigurations>
@@ -171,9 +328,27 @@
       <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="KARNATAKA_RAJYOTSAVA"/>
       <Fixed month="NOVEMBER" day="5"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="AUGUST" day="30" validFrom="2020" validTo="2020" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="AUGUST" day="19" validFrom="2021" validTo="2021" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="AUGUST" day="9" validFrom="2022" validTo="2022" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="29" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="17" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="6" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JUNE" day="26" validFrom="2026" validTo="2026" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JUNE" day="16" validFrom="2027" validTo="2027" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="OCTOBER" day="30" validFrom="2020" validTo="2020" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="OCTOBER" day="19" validFrom="2021" validTo="2021" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="OCTOBER" day="9" validFrom="2022" validTo="2022" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="28" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="16" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="5" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="AUGUST" day="26" validFrom="2026" validTo="2026" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="AUGUST" day="15" validFrom="2027" validTo="2027" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
       <ChristianHoliday type="GOOD_FRIDAY"/>
-      <IslamicHoliday type="ASCHURA"/>
-      <IslamicHoliday type="MAWLID_AN_NABI"/>
+      <IslamicHoliday type="ASCHURA" validTo="2019"/>
+      <IslamicHoliday type="ASCHURA" validFrom="2028"/>
+      <IslamicHoliday type="MAWLID_AN_NABI" validTo="2019"/>
+      <IslamicHoliday type="MAWLID_AN_NABI" validFrom="2028"/>
       <IslamicHoliday type="ID_UL_ADHA_2"/>
     </Holidays>
   </SubConfigurations>
@@ -183,9 +358,27 @@
       <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
       <Fixed month="APRIL" day="14" descriptionPropertiesKey="AMBEDKAR_JAYANTI"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="AUGUST" day="30" validFrom="2020" validTo="2020" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="AUGUST" day="19" validFrom="2021" validTo="2021" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="AUGUST" day="9" validFrom="2022" validTo="2022" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="29" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="17" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="6" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JUNE" day="26" validFrom="2026" validTo="2026" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JUNE" day="16" validFrom="2027" validTo="2027" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="OCTOBER" day="30" validFrom="2020" validTo="2020" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="OCTOBER" day="19" validFrom="2021" validTo="2021" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="OCTOBER" day="9" validFrom="2022" validTo="2022" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="28" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="16" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="5" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="AUGUST" day="26" validFrom="2026" validTo="2026" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="AUGUST" day="15" validFrom="2027" validTo="2027" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
       <ChristianHoliday type="GOOD_FRIDAY"/>
-      <IslamicHoliday type="ASCHURA"/>
-      <IslamicHoliday type="MAWLID_AN_NABI"/>
+      <IslamicHoliday type="ASCHURA" validTo="2019"/>
+      <IslamicHoliday type="ASCHURA" validFrom="2028"/>
+      <IslamicHoliday type="MAWLID_AN_NABI" validTo="2019"/>
+      <IslamicHoliday type="MAWLID_AN_NABI" validFrom="2028"/>
       <IslamicHoliday type="ID_UL_ADHA_2"/>
     </Holidays>
   </SubConfigurations>
@@ -197,8 +390,26 @@
   <SubConfigurations hierarchy="ld" description="Lakshadweep">
     <Holidays>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <IslamicHoliday type="ASCHURA"/>
-      <IslamicHoliday type="MAWLID_AN_NABI"/>
+      <Fixed month="AUGUST" day="30" validFrom="2020" validTo="2020" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="AUGUST" day="19" validFrom="2021" validTo="2021" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="AUGUST" day="9" validFrom="2022" validTo="2022" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="29" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="17" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="6" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JUNE" day="26" validFrom="2026" validTo="2026" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JUNE" day="16" validFrom="2027" validTo="2027" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="OCTOBER" day="30" validFrom="2020" validTo="2020" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="OCTOBER" day="19" validFrom="2021" validTo="2021" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="OCTOBER" day="9" validFrom="2022" validTo="2022" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="28" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="16" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="5" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="AUGUST" day="26" validFrom="2026" validTo="2026" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="AUGUST" day="15" validFrom="2027" validTo="2027" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <IslamicHoliday type="ASCHURA" validTo="2019"/>
+      <IslamicHoliday type="ASCHURA" validFrom="2028"/>
+      <IslamicHoliday type="MAWLID_AN_NABI" validTo="2019"/>
+      <IslamicHoliday type="MAWLID_AN_NABI" validFrom="2028"/>
       <IslamicHoliday type="ID_UL_ADHA_2"/>
     </Holidays>
   </SubConfigurations>
@@ -206,8 +417,26 @@
   <SubConfigurations hierarchy="mp" description="Madhya Pradesh">
     <Holidays>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <IslamicHoliday type="ASCHURA"/>
-      <IslamicHoliday type="MAWLID_AN_NABI"/>
+      <Fixed month="AUGUST" day="30" validFrom="2020" validTo="2020" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="AUGUST" day="19" validFrom="2021" validTo="2021" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="AUGUST" day="9" validFrom="2022" validTo="2022" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="29" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="17" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="6" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JUNE" day="26" validFrom="2026" validTo="2026" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JUNE" day="16" validFrom="2027" validTo="2027" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="OCTOBER" day="30" validFrom="2020" validTo="2020" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="OCTOBER" day="19" validFrom="2021" validTo="2021" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="OCTOBER" day="9" validFrom="2022" validTo="2022" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="28" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="16" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="5" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="AUGUST" day="26" validFrom="2026" validTo="2026" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="AUGUST" day="15" validFrom="2027" validTo="2027" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <IslamicHoliday type="ASCHURA" validTo="2019"/>
+      <IslamicHoliday type="ASCHURA" validFrom="2028"/>
+      <IslamicHoliday type="MAWLID_AN_NABI" validTo="2019"/>
+      <IslamicHoliday type="MAWLID_AN_NABI" validFrom="2028"/>
       <IslamicHoliday type="ID_UL_ADHA_2"/>
     </Holidays>
   </SubConfigurations>
@@ -218,8 +447,27 @@
       <Fixed month="APRIL" day="14" descriptionPropertiesKey="AMBEDKAR_JAYANTI"/>
       <Fixed month="FEBRUARY" day="19" descriptionPropertiesKey="SHIVAJI_JAYANTI"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-      <IslamicHoliday type="ASCHURA"/>
-      <IslamicHoliday type="MAWLID_AN_NABI"/>
+      <Fixed month="AUGUST" day="30" validFrom="2020" validTo="2020" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="AUGUST" day="19" validFrom="2021" validTo="2021" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="AUGUST" day="9" validFrom="2022" validTo="2022" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="29" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="17" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="6" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JUNE" day="26" validFrom="2026" validTo="2026" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JUNE" day="16" validFrom="2027" validTo="2027" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="OCTOBER" day="30" validFrom="2020" validTo="2020" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="OCTOBER" day="19" validFrom="2021" validTo="2021" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="OCTOBER" day="9" validFrom="2022" validTo="2022" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="28" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="16" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="5" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="AUGUST" day="26" validFrom="2026" validTo="2026" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="AUGUST" day="15" validFrom="2027" validTo="2027" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <ChristianHoliday type="GOOD_FRIDAY"/>
+      <IslamicHoliday type="ASCHURA" validTo="2019"/>
+      <IslamicHoliday type="ASCHURA" validFrom="2028"/>
+      <IslamicHoliday type="MAWLID_AN_NABI" validTo="2019"/>
+      <IslamicHoliday type="MAWLID_AN_NABI" validFrom="2028"/>
       <IslamicHoliday type="ID_UL_ADHA_2"/>
     </Holidays>
   </SubConfigurations>
@@ -229,8 +477,17 @@
       <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
       <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="OCTOBER" day="30" validFrom="2020" validTo="2020" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="OCTOBER" day="19" validFrom="2021" validTo="2021" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="OCTOBER" day="9" validFrom="2022" validTo="2022" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="28" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="16" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="5" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="AUGUST" day="26" validFrom="2026" validTo="2026" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="AUGUST" day="15" validFrom="2027" validTo="2027" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
       <ChristianHoliday type="GOOD_FRIDAY"/>
-      <IslamicHoliday type="MAWLID_AN_NABI"/>
+      <IslamicHoliday type="MAWLID_AN_NABI" validTo="2019"/>
+      <IslamicHoliday type="MAWLID_AN_NABI" validFrom="2028"/>
       <IslamicHoliday type="ID_UL_ADHA_2"/>
     </Holidays>
   </SubConfigurations>
@@ -249,9 +506,27 @@
       <Fixed month="FEBRUARY" day="20" descriptionPropertiesKey="STATEHOOD"/>
       <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="AUGUST" day="30" validFrom="2020" validTo="2020" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="AUGUST" day="19" validFrom="2021" validTo="2021" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="AUGUST" day="9" validFrom="2022" validTo="2022" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="29" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="17" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="6" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JUNE" day="26" validFrom="2026" validTo="2026" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JUNE" day="16" validFrom="2027" validTo="2027" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="OCTOBER" day="30" validFrom="2020" validTo="2020" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="OCTOBER" day="19" validFrom="2021" validTo="2021" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="OCTOBER" day="9" validFrom="2022" validTo="2022" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="28" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="16" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="5" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="AUGUST" day="26" validFrom="2026" validTo="2026" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="AUGUST" day="15" validFrom="2027" validTo="2027" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
       <ChristianHoliday type="GOOD_FRIDAY"/>
-      <IslamicHoliday type="ASCHURA"/>
-      <IslamicHoliday type="MAWLID_AN_NABI"/>
+      <IslamicHoliday type="ASCHURA" validTo="2019"/>
+      <IslamicHoliday type="ASCHURA" validFrom="2028"/>
+      <IslamicHoliday type="MAWLID_AN_NABI" validTo="2019"/>
+      <IslamicHoliday type="MAWLID_AN_NABI" validFrom="2028"/>
       <IslamicHoliday type="ID_UL_ADHA_2"/>
     </Holidays>
   </SubConfigurations>
@@ -260,8 +535,17 @@
     <Holidays>
       <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="OCTOBER" day="30" validFrom="2020" validTo="2020" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="OCTOBER" day="19" validFrom="2021" validTo="2021" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="OCTOBER" day="9" validFrom="2022" validTo="2022" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="28" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="16" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="5" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="AUGUST" day="26" validFrom="2026" validTo="2026" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="AUGUST" day="15" validFrom="2027" validTo="2027" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
       <ChristianHoliday type="GOOD_FRIDAY"/>
-      <IslamicHoliday type="MAWLID_AN_NABI"/>
+      <IslamicHoliday type="MAWLID_AN_NABI" validTo="2019"/>
+      <IslamicHoliday type="MAWLID_AN_NABI" validFrom="2028"/>
       <IslamicHoliday type="ID_UL_ADHA_2"/>
     </Holidays>
   </SubConfigurations>
@@ -270,9 +554,27 @@
     <Holidays>
       <Fixed month="APRIL" day="14" descriptionPropertiesKey="AMBEDKAR_JAYANTI"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="AUGUST" day="30" validFrom="2020" validTo="2020" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="AUGUST" day="19" validFrom="2021" validTo="2021" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="AUGUST" day="9" validFrom="2022" validTo="2022" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="29" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="17" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="6" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JUNE" day="26" validFrom="2026" validTo="2026" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JUNE" day="16" validFrom="2027" validTo="2027" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="OCTOBER" day="30" validFrom="2020" validTo="2020" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="OCTOBER" day="19" validFrom="2021" validTo="2021" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="OCTOBER" day="9" validFrom="2022" validTo="2022" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="28" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="16" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="5" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="AUGUST" day="26" validFrom="2026" validTo="2026" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="AUGUST" day="15" validFrom="2027" validTo="2027" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
       <ChristianHoliday type="GOOD_FRIDAY"/>
-      <IslamicHoliday type="ASCHURA"/>
-      <IslamicHoliday type="MAWLID_AN_NABI"/>
+      <IslamicHoliday type="ASCHURA" validTo="2019"/>
+      <IslamicHoliday type="ASCHURA" validFrom="2028"/>
+      <IslamicHoliday type="MAWLID_AN_NABI" validTo="2019"/>
+      <IslamicHoliday type="MAWLID_AN_NABI" validFrom="2028"/>
       <IslamicHoliday type="ID_UL_ADHA_2"/>
     </Holidays>
   </SubConfigurations>
@@ -283,8 +585,17 @@
       <Fixed month="APRIL" day="14" descriptionPropertiesKey="AMBEDKAR_JAYANTI"/>
       <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="OCTOBER" day="30" validFrom="2020" validTo="2020" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="OCTOBER" day="19" validFrom="2021" validTo="2021" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="OCTOBER" day="9" validFrom="2022" validTo="2022" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="28" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="16" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="5" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="AUGUST" day="26" validFrom="2026" validTo="2026" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="AUGUST" day="15" validFrom="2027" validTo="2027" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
       <ChristianHoliday type="GOOD_FRIDAY"/>
-      <IslamicHoliday type="MAWLID_AN_NABI"/>
+      <IslamicHoliday type="MAWLID_AN_NABI" validTo="2019"/>
+      <IslamicHoliday type="MAWLID_AN_NABI" validFrom="2028"/>
       <IslamicHoliday type="ID_UL_ADHA_2"/>
     </Holidays>
   </SubConfigurations>
@@ -302,9 +613,27 @@
     <Holidays>
       <Fixed month="APRIL" day="14" descriptionPropertiesKey="AMBEDKAR_JAYANTI"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="AUGUST" day="30" validFrom="2020" validTo="2020" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="AUGUST" day="19" validFrom="2021" validTo="2021" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="AUGUST" day="9" validFrom="2022" validTo="2022" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="29" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="17" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="6" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JUNE" day="26" validFrom="2026" validTo="2026" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JUNE" day="16" validFrom="2027" validTo="2027" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="OCTOBER" day="30" validFrom="2020" validTo="2020" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="OCTOBER" day="19" validFrom="2021" validTo="2021" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="OCTOBER" day="9" validFrom="2022" validTo="2022" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="28" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="16" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="5" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="AUGUST" day="26" validFrom="2026" validTo="2026" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="AUGUST" day="15" validFrom="2027" validTo="2027" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
       <ChristianHoliday type="GOOD_FRIDAY"/>
-      <IslamicHoliday type="ASCHURA"/>
-      <IslamicHoliday type="MAWLID_AN_NABI"/>
+      <IslamicHoliday type="ASCHURA" validTo="2019"/>
+      <IslamicHoliday type="ASCHURA" validFrom="2028"/>
+      <IslamicHoliday type="MAWLID_AN_NABI" validTo="2019"/>
+      <IslamicHoliday type="MAWLID_AN_NABI" validFrom="2028"/>
       <IslamicHoliday type="ID_UL_ADHA_2"/>
     </Holidays>
   </SubConfigurations>
@@ -324,9 +653,27 @@
       <Fixed month="APRIL" day="14" descriptionPropertiesKey="AMBEDKAR_JAYANTI"/>
       <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="AUGUST" day="30" validFrom="2020" validTo="2020" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="AUGUST" day="19" validFrom="2021" validTo="2021" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="AUGUST" day="9" validFrom="2022" validTo="2022" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="29" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="17" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="6" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JUNE" day="26" validFrom="2026" validTo="2026" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JUNE" day="16" validFrom="2027" validTo="2027" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="OCTOBER" day="30" validFrom="2020" validTo="2020" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="OCTOBER" day="19" validFrom="2021" validTo="2021" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="OCTOBER" day="9" validFrom="2022" validTo="2022" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="28" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="16" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="5" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="AUGUST" day="26" validFrom="2026" validTo="2026" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="AUGUST" day="15" validFrom="2027" validTo="2027" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
       <ChristianHoliday type="GOOD_FRIDAY"/>
-      <IslamicHoliday type="ASCHURA"/>
-      <IslamicHoliday type="MAWLID_AN_NABI"/>
+      <IslamicHoliday type="ASCHURA" validTo="2019"/>
+      <IslamicHoliday type="ASCHURA" validFrom="2028"/>
+      <IslamicHoliday type="MAWLID_AN_NABI" validTo="2019"/>
+      <IslamicHoliday type="MAWLID_AN_NABI" validFrom="2028"/>
       <IslamicHoliday type="ID_UL_ADHA_2"/>
     </Holidays>
   </SubConfigurations>
@@ -335,9 +682,27 @@
     <Holidays>
       <Fixed month="APRIL" day="14" descriptionPropertiesKey="AMBEDKAR_JAYANTI"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="AUGUST" day="30" validFrom="2020" validTo="2020" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="AUGUST" day="19" validFrom="2021" validTo="2021" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="AUGUST" day="9" validFrom="2022" validTo="2022" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="29" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="17" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="6" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JUNE" day="26" validFrom="2026" validTo="2026" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JUNE" day="16" validFrom="2027" validTo="2027" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="OCTOBER" day="30" validFrom="2020" validTo="2020" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="OCTOBER" day="19" validFrom="2021" validTo="2021" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="OCTOBER" day="9" validFrom="2022" validTo="2022" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="28" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="16" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="5" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="AUGUST" day="26" validFrom="2026" validTo="2026" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="AUGUST" day="15" validFrom="2027" validTo="2027" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
       <ChristianHoliday type="GOOD_FRIDAY"/>
-      <IslamicHoliday type="ASCHURA"/>
-      <IslamicHoliday type="MAWLID_AN_NABI"/>
+      <IslamicHoliday type="ASCHURA" validTo="2019"/>
+      <IslamicHoliday type="ASCHURA" validFrom="2028"/>
+      <IslamicHoliday type="MAWLID_AN_NABI" validTo="2019"/>
+      <IslamicHoliday type="MAWLID_AN_NABI" validFrom="2028"/>
       <IslamicHoliday type="ID_UL_ADHA_2"/>
     </Holidays>
   </SubConfigurations>
@@ -356,9 +721,27 @@
       <Fixed month="APRIL" day="14" descriptionPropertiesKey="AMBEDKAR_JAYANTI"/>
       <Fixed month="MARCH" day="15"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="AUGUST" day="30" validFrom="2020" validTo="2020" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="AUGUST" day="19" validFrom="2021" validTo="2021" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="AUGUST" day="9" validFrom="2022" validTo="2022" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="29" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="17" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="6" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JUNE" day="26" validFrom="2026" validTo="2026" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JUNE" day="16" validFrom="2027" validTo="2027" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="OCTOBER" day="30" validFrom="2020" validTo="2020" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="OCTOBER" day="19" validFrom="2021" validTo="2021" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="OCTOBER" day="9" validFrom="2022" validTo="2022" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="28" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="16" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="5" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="AUGUST" day="26" validFrom="2026" validTo="2026" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="AUGUST" day="15" validFrom="2027" validTo="2027" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
       <ChristianHoliday type="GOOD_FRIDAY"/>
-      <IslamicHoliday type="ASCHURA"/>
-      <IslamicHoliday type="MAWLID_AN_NABI"/>
+      <IslamicHoliday type="ASCHURA" validTo="2019"/>
+      <IslamicHoliday type="ASCHURA" validFrom="2028"/>
+      <IslamicHoliday type="MAWLID_AN_NABI" validTo="2019"/>
+      <IslamicHoliday type="MAWLID_AN_NABI" validFrom="2028"/>
       <IslamicHoliday type="ID_UL_ADHA_2"/>
     </Holidays>
   </SubConfigurations>
@@ -367,9 +750,27 @@
     <Holidays>
       <Fixed month="APRIL" day="14" descriptionPropertiesKey="AMBEDKAR_JAYANTI"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="AUGUST" day="30" validFrom="2020" validTo="2020" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="AUGUST" day="19" validFrom="2021" validTo="2021" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="AUGUST" day="9" validFrom="2022" validTo="2022" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="29" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="17" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="6" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JUNE" day="26" validFrom="2026" validTo="2026" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JUNE" day="16" validFrom="2027" validTo="2027" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="OCTOBER" day="30" validFrom="2020" validTo="2020" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="OCTOBER" day="19" validFrom="2021" validTo="2021" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="OCTOBER" day="9" validFrom="2022" validTo="2022" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="28" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="16" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="SEPTEMBER" day="5" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="AUGUST" day="26" validFrom="2026" validTo="2026" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
+      <Fixed month="AUGUST" day="15" validFrom="2027" validTo="2027" descriptionPropertiesKey="islamic.MAWLID_AN_NABI"/>
       <ChristianHoliday type="GOOD_FRIDAY"/>
-      <IslamicHoliday type="ASCHURA"/>
-      <IslamicHoliday type="MAWLID_AN_NABI"/>
+      <IslamicHoliday type="ASCHURA" validTo="2019"/>
+      <IslamicHoliday type="ASCHURA" validFrom="2028"/>
+      <IslamicHoliday type="MAWLID_AN_NABI" validTo="2019"/>
+      <IslamicHoliday type="MAWLID_AN_NABI" validFrom="2028"/>
       <IslamicHoliday type="ID_UL_ADHA_2"/>
     </Holidays>
   </SubConfigurations>
@@ -380,8 +781,17 @@
       <Fixed month="APRIL" day="14" descriptionPropertiesKey="AMBEDKAR_JAYANTI"/>
       <Fixed month="JANUARY" day="23" descriptionPropertiesKey="SUBHAS_CHANDRA_BOSE_JAYANTI"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+      <Fixed month="AUGUST" day="30" validFrom="2020" validTo="2020" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="AUGUST" day="19" validFrom="2021" validTo="2021" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="AUGUST" day="9" validFrom="2022" validTo="2022" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="29" validFrom="2023" validTo="2023" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="17" validFrom="2024" validTo="2024" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JULY" day="6" validFrom="2025" validTo="2025" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JUNE" day="26" validFrom="2026" validTo="2026" descriptionPropertiesKey="islamic.ASCHURA"/>
+      <Fixed month="JUNE" day="16" validFrom="2027" validTo="2027" descriptionPropertiesKey="islamic.ASCHURA"/>
       <ChristianHoliday type="GOOD_FRIDAY"/>
-      <IslamicHoliday type="ASCHURA"/>
+      <IslamicHoliday type="ASCHURA" validTo="2019"/>
+      <IslamicHoliday type="ASCHURA" validFrom="2028"/>
       <IslamicHoliday type="ID_UL_ADHA_2"/>
     </Holidays>
   </SubConfigurations>
