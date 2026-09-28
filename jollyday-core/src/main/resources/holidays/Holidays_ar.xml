@@ -10,8 +10,76 @@
     <Fixed month="APRIL" day="2" validFrom="2001" descriptionPropertiesKey="MALVINAS"/>
     <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
     <Fixed month="MAY" day="25" descriptionPropertiesKey="MAY_REVOLUTION"/>
+
+    <!--
+      17 June: Paso a la Inmortalidad del General Martín Miguel de Güemes, a feriado since Law 27.258 (June 2016).
+      2016: not movable under Decree 1584/2010. Since 2017 movable (Decree 52/2017, Law 27.399 art. 6):
+      Tuesday/Wednesday to the previous Monday, Thursday to the next Monday. A Friday would move onto
+      20 June, so it stays (Decree 789/2021; no Friday occurred in 2017-2021). Weekends stay.
+    -->
+    <Fixed month="JUNE" day="17" validFrom="2016" validTo="2016" descriptionPropertiesKey="GUEMES_DAY"/>
+    <Fixed month="JUNE" day="17" validFrom="2017" descriptionPropertiesKey="GUEMES_DAY">
+      <MovingCondition substitute="TUESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="WEDNESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="THURSDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!--
+      20 June: Paso a la Inmortalidad del General Manuel Belgrano (Flag Day). On its date under Law 21.329 and
+      as an exception of Law 23.555 until 1994, on the third Monday of June 1995-2010 (Law 24.445, see
+      FixedWeekday below), not movable since 2011 (Decree 1584/2010, Decree 80/2017, Law 27.399).
+    -->
+    <Fixed month="JUNE" day="20" validTo="1994" descriptionPropertiesKey="FLAG_DAY"/>
+    <Fixed month="JUNE" day="20" validFrom="2011" descriptionPropertiesKey="FLAG_DAY"/>
+
     <Fixed month="JULY" day="9" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
-    <Fixed month="OCTOBER" day="12" descriptionPropertiesKey="COLUMBUS_DAY">
+
+    <!--
+      17 August: Paso a la Inmortalidad del General José de San Martín. On its date until 1991 (exception of
+      Law 23.555), movable 1992-1994 (Law 24.023 removed the exception, Law 24.360 restored it after
+      17 August 1994), third Monday of August 1995-2016 (Law 24.445, Decree 1584/2010, see FixedWeekday below;
+      2011 moved to 22 August by Decree 521/2011), movable per Law 27.399 art. 6 since 2017. Weekends stay.
+    -->
+    <Fixed month="AUGUST" day="17" validTo="1991" descriptionPropertiesKey="MARTIN_DAY"/>
+    <Fixed month="AUGUST" day="17" validFrom="1992" validTo="1994" descriptionPropertiesKey="MARTIN_DAY">
+      <MovingCondition substitute="TUESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="WEDNESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="THURSDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="FRIDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="AUGUST" day="22" validFrom="2011" validTo="2011" descriptionPropertiesKey="MARTIN_DAY"/>
+    <Fixed month="AUGUST" day="17" validFrom="2017" descriptionPropertiesKey="MARTIN_DAY">
+      <MovingCondition substitute="TUESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="WEDNESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="THURSDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="FRIDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!--
+      12 October: Día del Respeto a la Diversidad Cultural. On its date until 1987. Movable per Law 23.555 from 1988
+      (Tuesday/Wednesday to the previous Monday, Thursday/Friday to the next Monday), except the one-off moves
+      of 2001 (Law 25.442), 2002 (Decree 1932/2002) and 2003 (Decree 810/2003). Saturday/Sunday also moved to the
+      next Monday 2008-2010 (Law 26.416). Second Monday of October 2011-2016 (Decree 1584/2010, see FixedWeekday
+      below). Movable per Law 27.399 art. 6 since 2017, weekends stay; 2025 moved to Friday 10 October by
+      Resolution JGM 139/2025 (Decree 614/2025).
+    -->
+    <Fixed month="OCTOBER" day="12" validTo="1987" descriptionPropertiesKey="COLUMBUS_DAY"/>
+    <Fixed month="OCTOBER" day="12" validFrom="1988" validTo="2000" descriptionPropertiesKey="COLUMBUS_DAY">
+      <MovingCondition substitute="TUESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="WEDNESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="THURSDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="FRIDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="OCTOBER" day="8" validFrom="2001" validTo="2001" descriptionPropertiesKey="COLUMBUS_DAY"/>
+    <Fixed month="OCTOBER" day="14" validFrom="2002" validTo="2002" descriptionPropertiesKey="COLUMBUS_DAY"/>
+    <Fixed month="OCTOBER" day="13" validFrom="2003" validTo="2003" descriptionPropertiesKey="COLUMBUS_DAY"/>
+    <Fixed month="OCTOBER" day="12" validFrom="2004" validTo="2007" descriptionPropertiesKey="COLUMBUS_DAY">
+      <MovingCondition substitute="TUESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="WEDNESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="THURSDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="FRIDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="OCTOBER" day="12" validFrom="2008" validTo="2010" descriptionPropertiesKey="COLUMBUS_DAY">
       <MovingCondition substitute="TUESDAY" with="PREVIOUS" weekday="MONDAY"/>
       <MovingCondition substitute="WEDNESDAY" with="PREVIOUS" weekday="MONDAY"/>
       <MovingCondition substitute="THURSDAY" with="NEXT" weekday="MONDAY"/>
@@ -19,23 +87,99 @@
       <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
+    <Fixed month="OCTOBER" day="12" validFrom="2017" validTo="2024" descriptionPropertiesKey="COLUMBUS_DAY">
+      <MovingCondition substitute="TUESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="WEDNESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="THURSDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="FRIDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="OCTOBER" day="10" validFrom="2025" validTo="2025" descriptionPropertiesKey="COLUMBUS_DAY"/>
+    <Fixed month="OCTOBER" day="12" validFrom="2026" descriptionPropertiesKey="COLUMBUS_DAY">
+      <MovingCondition substitute="TUESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="WEDNESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="THURSDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="FRIDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
     <Fixed month="OCTOBER" day="27" validFrom="2010" validTo="2010"
            descriptionPropertiesKey="NATIONAL_DAY_OF_MOURNING_KIRCHNER" localizedType="OBSERVANCE"/>
+
+    <!--
+      20 November: Día de la Soberanía Nacional, a feriado since Decree 1584/2010. Fourth Monday of November
+      2010-2016 (see FixedWeekday below; 2015 moved to 27 November by Decree 2226/2015), movable per
+      Law 27.399 art. 6 since 2017. Weekends stay.
+    -->
+    <Fixed month="NOVEMBER" day="27" validFrom="2015" validTo="2015" descriptionPropertiesKey="NATIONAL_SOVEREIGNTY_DAY"/>
+    <Fixed month="NOVEMBER" day="20" validFrom="2017" descriptionPropertiesKey="NATIONAL_SOVEREIGNTY_DAY">
+      <MovingCondition substitute="TUESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="WEDNESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="THURSDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="FRIDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
     <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
-    <Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CHRISTMAS_EVE"/>
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-    <Fixed month="DECEMBER" day="31" descriptionPropertiesKey="NEW_YEARS_EVE"/>
-    <FixedWeekday which="THIRD" weekday="MONDAY" month="JUNE" descriptionPropertiesKey="FLAG_DAY"/>
-    <FixedWeekday which="THIRD" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="MARTIN_DAY"/>
-    <ChristianHoliday type="EASTER"/>
+
+    <!-- Tourist days (Law 27.399 art. 7): días no laborables (OBSERVANCE) or feriados, as set by the decree of each year -->
+    <!-- 2018 and 2019: Decree 923/2017 (días no laborables) -->
+    <Fixed month="APRIL" day="30" validFrom="2018" validTo="2018" descriptionPropertiesKey="TOURIST_HOLIDAY" localizedType="OBSERVANCE"/>
+    <Fixed month="DECEMBER" day="24" validFrom="2018" validTo="2018" descriptionPropertiesKey="TOURIST_HOLIDAY" localizedType="OBSERVANCE"/>
+    <Fixed month="DECEMBER" day="31" validFrom="2018" validTo="2018" descriptionPropertiesKey="TOURIST_HOLIDAY" localizedType="OBSERVANCE"/>
+    <Fixed month="JULY" day="8" validFrom="2019" validTo="2019" descriptionPropertiesKey="TOURIST_HOLIDAY" localizedType="OBSERVANCE"/>
+    <Fixed month="AUGUST" day="19" validFrom="2019" validTo="2019" descriptionPropertiesKey="TOURIST_HOLIDAY" localizedType="OBSERVANCE"/>
+    <Fixed month="OCTOBER" day="14" validFrom="2019" validTo="2019" descriptionPropertiesKey="TOURIST_HOLIDAY" localizedType="OBSERVANCE"/>
+    <!-- 2020: Decree 717/2019 (feriados) -->
+    <Fixed month="MARCH" day="23" validFrom="2020" validTo="2020" descriptionPropertiesKey="TOURIST_HOLIDAY"/>
+    <Fixed month="JULY" day="10" validFrom="2020" validTo="2020" descriptionPropertiesKey="TOURIST_HOLIDAY"/>
+    <Fixed month="DECEMBER" day="7" validFrom="2020" validTo="2020" descriptionPropertiesKey="TOURIST_HOLIDAY"/>
+    <!-- 2021: Decree 947/2020 (feriados) -->
+    <Fixed month="MAY" day="24" validFrom="2021" validTo="2021" descriptionPropertiesKey="TOURIST_HOLIDAY"/>
+    <Fixed month="OCTOBER" day="8" validFrom="2021" validTo="2021" descriptionPropertiesKey="TOURIST_HOLIDAY"/>
+    <Fixed month="NOVEMBER" day="22" validFrom="2021" validTo="2021" descriptionPropertiesKey="TOURIST_HOLIDAY"/>
+    <!-- 2022: Decree 789/2021 (feriados) -->
+    <Fixed month="OCTOBER" day="7" validFrom="2022" validTo="2022" descriptionPropertiesKey="TOURIST_HOLIDAY"/>
+    <Fixed month="NOVEMBER" day="21" validFrom="2022" validTo="2022" descriptionPropertiesKey="TOURIST_HOLIDAY"/>
+    <Fixed month="DECEMBER" day="9" validFrom="2022" validTo="2022" descriptionPropertiesKey="TOURIST_HOLIDAY"/>
+    <!-- 2023: Decree 764/2022 (feriados) -->
+    <Fixed month="MAY" day="26" validFrom="2023" validTo="2023" descriptionPropertiesKey="TOURIST_HOLIDAY"/>
+    <Fixed month="JUNE" day="19" validFrom="2023" validTo="2023" descriptionPropertiesKey="TOURIST_HOLIDAY"/>
+    <Fixed month="OCTOBER" day="13" validFrom="2023" validTo="2023" descriptionPropertiesKey="TOURIST_HOLIDAY"/>
+    <!-- 2024: Decree 106/2023 (feriados) -->
+    <Fixed month="APRIL" day="1" validFrom="2024" validTo="2024" descriptionPropertiesKey="TOURIST_HOLIDAY"/>
+    <Fixed month="JUNE" day="21" validFrom="2024" validTo="2024" descriptionPropertiesKey="TOURIST_HOLIDAY"/>
+    <Fixed month="OCTOBER" day="11" validFrom="2024" validTo="2024" descriptionPropertiesKey="TOURIST_HOLIDAY"/>
+    <!-- 2025: Decree 1027/2024 (días no laborables) -->
+    <Fixed month="MAY" day="2" validFrom="2025" validTo="2025" descriptionPropertiesKey="TOURIST_HOLIDAY" localizedType="OBSERVANCE"/>
+    <Fixed month="AUGUST" day="15" validFrom="2025" validTo="2025" descriptionPropertiesKey="TOURIST_HOLIDAY" localizedType="OBSERVANCE"/>
+    <Fixed month="NOVEMBER" day="21" validFrom="2025" validTo="2025" descriptionPropertiesKey="TOURIST_HOLIDAY" localizedType="OBSERVANCE"/>
+    <!-- 2026: Resolution JGM 164/2025 (días no laborables) -->
+    <Fixed month="MARCH" day="23" validFrom="2026" validTo="2026" descriptionPropertiesKey="TOURIST_HOLIDAY" localizedType="OBSERVANCE"/>
+    <Fixed month="JULY" day="10" validFrom="2026" validTo="2026" descriptionPropertiesKey="TOURIST_HOLIDAY" localizedType="OBSERVANCE"/>
+    <Fixed month="DECEMBER" day="7" validFrom="2026" validTo="2026" descriptionPropertiesKey="TOURIST_HOLIDAY" localizedType="OBSERVANCE"/>
+
+    <!-- One-off feriados: national census (Decree 42/2022), World Cup victory (DNU 842/2022) -->
+    <Fixed month="MAY" day="18" validFrom="2022" validTo="2022" descriptionPropertiesKey="NATIONAL_CENSUS_DAY"/>
+    <Fixed month="DECEMBER" day="20" validFrom="2022" validTo="2022" descriptionPropertiesKey="WORLD_CUP_VICTORY_CELEBRATION"/>
+
+    <FixedWeekday which="THIRD" weekday="MONDAY" month="JUNE" validFrom="1995" validTo="2010" descriptionPropertiesKey="FLAG_DAY"/>
+    <FixedWeekday which="THIRD" weekday="MONDAY" month="AUGUST" validFrom="1995" validTo="2010" descriptionPropertiesKey="MARTIN_DAY"/>
+    <FixedWeekday which="THIRD" weekday="MONDAY" month="AUGUST" validFrom="2012" validTo="2016" descriptionPropertiesKey="MARTIN_DAY"/>
+    <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="2011" validTo="2016" descriptionPropertiesKey="COLUMBUS_DAY"/>
+    <FixedWeekday which="FOURTH" weekday="MONDAY" month="NOVEMBER" validFrom="2010" validTo="2014" descriptionPropertiesKey="NATIONAL_SOVEREIGNTY_DAY"/>
+    <FixedWeekday which="FOURTH" weekday="MONDAY" month="NOVEMBER" validFrom="2016" validTo="2016" descriptionPropertiesKey="NATIONAL_SOVEREIGNTY_DAY"/>
+
     <ChristianHoliday type="CLEAN_MONDAY"/>
     <ChristianHoliday type="CARNIVAL"/>
-    <ChristianHoliday type="MAUNDY_THURSDAY"/>
+    <!-- Jueves Santo is a día no laborable (Law 27.399 art. 1) -->
+    <ChristianHoliday type="MAUNDY_THURSDAY" localizedType="OBSERVANCE"/>
     <ChristianHoliday type="GOOD_FRIDAY"/>
   </Holidays>
 
   <Sources>
-    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Argentina</Source>
+    <Source>https://www.argentina.gob.ar/normativa/nacional/ley-27399-281835/texto</Source>
+    <Source>https://www.argentina.gob.ar/normativa/nacional/ley-27399-281835/normas-modifican</Source>
+    <Source>https://www.argentina.gob.ar/normativa/nacional/norma-174389/normas-modifican</Source>
+    <Source>https://www.argentina.gob.ar/normativa/nacional/ley-23555-20986/normas-modifican</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:AR</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:AR</Source>
   </Sources>
