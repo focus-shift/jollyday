@@ -7,20 +7,57 @@
   <Holidays>
     <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
     <Fixed month="APRIL" day="23" descriptionPropertiesKey="TURKEY_CHILDRENS_DAY"/>
-    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+    <!-- 1 May was "Bahar bayramı" under Law 2739 (in force 1 June 1935) until Law 2429
+         (19 March 1981) repealed it without this day. Law 5892 (in force 27 April 2009)
+         restored it as "Emek ve Dayanışma Günü". -->
+    <Fixed month="MAY" day="1" validFrom="1936" validTo="1980" descriptionPropertiesKey="SPRING_DAY"/>
+    <Fixed month="MAY" day="1" validFrom="2009" descriptionPropertiesKey="LABOUR_DAY"/>
     <Fixed month="MAY" day="19" descriptionPropertiesKey="TURKEY_COMMEMORATION_OF_ATATURK"/>
-    <Fixed month="JULY" day="15" descriptionPropertiesKey="TURKEY_DEMOCRATIC_UNITY_DAY"/>
+    <!-- Law 6752, in force since 29 October 2016 -->
+    <Fixed month="JULY" day="15" validFrom="2017" descriptionPropertiesKey="TURKEY_DEMOCRATIC_UNITY_DAY"/>
     <Fixed month="AUGUST" day="30" descriptionPropertiesKey="TURKEY_VICTORY_DAY"/>
     <Fixed month="OCTOBER" day="29" descriptionPropertiesKey="TURKEY_REPUBLIC_DAY"/>
-    <IslamicHoliday type="ID_AL_FITR"/> <!-- Ramazan / Şeker bayramı -->
-    <IslamicHoliday type="ID_UL_ADHA"/> <!-- Kurban bayramı -->
+    <!-- Third day of Kurban bayramı in the years where Diyanet is one day later than Umm al-Qura
+         (see the IslamicHoliday elements below) -->
+    <Fixed month="SEPTEMBER" day="26" validFrom="2015" validTo="2015" descriptionPropertiesKey="islamic.ID_UL_ADHA_3"/>
+    <Fixed month="SEPTEMBER" day="14" validFrom="2016" validTo="2016" descriptionPropertiesKey="islamic.ID_UL_ADHA_3"/>
+
+    <!-- Law 2429 Art. 2/B: Ramazan bayramı lasts 3.5 days and Kurban bayramı 4.5 days, both starting
+         on the arife (eve) at 13:00. The arife afternoons and the fourth day of Kurban bayramı are
+         not modelled yet. The dates follow the Umm al-Qura calendar. Diyanet (dini_gunler.php) publishes
+         different first days for Kurban bayramı 2015 (24 Sep), Ramazan bayramı 2016 (5 Jul) and
+         Kurban bayramı 2016 (12 Sep), so these years are shifted by one day. -->
+
+    <!-- Ramazan / Şeker bayramı -->
+    <IslamicHoliday type="ID_AL_FITR" validTo="2015"/>
+    <IslamicHoliday type="RAMADAN_END" validFrom="2016" validTo="2016" descriptionPropertiesKey="islamic.ID_AL_FITR"/>
+    <IslamicHoliday type="ID_AL_FITR" validFrom="2017"/>
+    <IslamicHoliday type="ID_AL_FITR_2" validTo="2015"/>
+    <IslamicHoliday type="ID_AL_FITR" validFrom="2016" validTo="2016" descriptionPropertiesKey="islamic.ID_AL_FITR_2"/>
+    <IslamicHoliday type="ID_AL_FITR_2" validFrom="2017"/>
+    <IslamicHoliday type="ID_AL_FITR_3" validTo="2015"/>
+    <IslamicHoliday type="ID_AL_FITR_2" validFrom="2016" validTo="2016" descriptionPropertiesKey="islamic.ID_AL_FITR_3"/>
+    <IslamicHoliday type="ID_AL_FITR_3" validFrom="2017"/>
+
+    <!-- Kurban bayramı -->
+    <IslamicHoliday type="ID_UL_ADHA" validTo="2014"/>
+    <IslamicHoliday type="ID_UL_ADHA_2" validFrom="2015" validTo="2016" descriptionPropertiesKey="islamic.ID_UL_ADHA"/>
+    <IslamicHoliday type="ID_UL_ADHA" validFrom="2017"/>
+    <IslamicHoliday type="ID_UL_ADHA_2" validTo="2014"/>
+    <IslamicHoliday type="ID_UL_ADHA_3" validFrom="2015" validTo="2016" descriptionPropertiesKey="islamic.ID_UL_ADHA_2"/>
+    <IslamicHoliday type="ID_UL_ADHA_2" validFrom="2017"/>
+    <IslamicHoliday type="ID_UL_ADHA_3" validTo="2014"/>
+    <IslamicHoliday type="ID_UL_ADHA_3" validFrom="2017"/>
   </Holidays>
 
   <Sources>
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Turkey</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:TR</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:TR</Source>
-    <Source of="Ulusal Bayram ve Genel Tatiller Hakkında Kanun No. 2429">https://www.lexpera.com.tr/mevzuat/kanunlar/ulusal-bayram-ve-genel-tatiller-hakkinda-kanun-2429</Source>
+    <Source of="Ulusal Bayram ve Genel Tatiller Hakkında Kanun No. 2429">https://www.mevzuat.gov.tr/mevzuatmetin/1.5.2429.pdf</Source>
+    <Source of="Ulusal Bayram ve Genel Tatiller Hakkında Kanun No. 2739 (1935)">https://www5.tbmm.gov.tr/tutanaklar/KANUNLAR_KARARLAR/kanuntbmmc015/kanuntbmmc015/kanuntbmmc01502739.pdf</Source>
+    <Source of="Diyanet İşleri Başkanlığı, Dini Günler">https://vakithesaplama.diyanet.gov.tr/dinigunler.php?yil=2026</Source>
+    <Source of="Diyanet İşleri Başkanlığı, 1900-2027 Dini Günler">https://vakithesaplama.diyanet.gov.tr/dini_gunler.php</Source>
   </Sources>
 
   <!-- Law 2429 is nationwide and delegates nothing to the provinces. The provincial
