@@ -86,6 +86,25 @@
     <Fixed month="FEBRUARY" day="11" validFrom="2024" validTo="2024" descriptionPropertiesKey="CHINESE_NEW_YEAR">
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
+    <!-- https://www.mom.gov.sg/employment-practices/public-holidays -->
+    <Fixed month="JANUARY" day="29" validFrom="2025" validTo="2025" descriptionPropertiesKey="CHINESE_NEW_YEAR">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+    <Fixed month="JANUARY" day="30" validFrom="2025" validTo="2025" descriptionPropertiesKey="CHINESE_NEW_YEAR">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="FEBRUARY" day="17" validFrom="2026" validTo="2026" descriptionPropertiesKey="CHINESE_NEW_YEAR">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+    <Fixed month="FEBRUARY" day="18" validFrom="2026" validTo="2026" descriptionPropertiesKey="CHINESE_NEW_YEAR">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="FEBRUARY" day="6" validFrom="2027" validTo="2027" descriptionPropertiesKey="CHINESE_NEW_YEAR">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+    <Fixed month="FEBRUARY" day="7" validFrom="2027" validTo="2027" descriptionPropertiesKey="CHINESE_NEW_YEAR">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
 
     <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY">
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
@@ -130,6 +149,16 @@
     <Fixed month="MAY" day="22" validFrom="2024" validTo="2024" descriptionPropertiesKey="VESAK_DAY">
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
+    <!-- https://www.mom.gov.sg/employment-practices/public-holidays -->
+    <Fixed month="MAY" day="12" validFrom="2025" validTo="2025" descriptionPropertiesKey="VESAK_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="MAY" day="31" validFrom="2026" validTo="2026" descriptionPropertiesKey="VESAK_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="MAY" day="20" validFrom="2027" validTo="2027" descriptionPropertiesKey="VESAK_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
 
     <!-- https://www.mom.gov.sg/newsroom/press-releases/2015/sg50-public-holiday-on-7-august-2015 -->
     <Fixed month="AUGUST" day="7" validFrom="2015" validTo="2015" descriptionPropertiesKey="SG50_PUBLIC_HOLIDAY"/>
@@ -144,6 +173,8 @@
     <Fixed month="JULY" day="10" validFrom="2020" validTo="2020" descriptionPropertiesKey="POLLING_DAY"/>
     <!-- https://www.mom.gov.sg/employment-practices/public-holidays -->
     <Fixed month="SEPTEMBER" day="1" validFrom="2023" validTo="2023" descriptionPropertiesKey="POLLING_DAY"/>
+    <!-- https://www.mom.gov.sg/employment-practices/public-holidays -->
+    <Fixed month="MAY" day="3" validFrom="2025" validTo="2025" descriptionPropertiesKey="POLLING_DAY"/>
 
     <!-- the day that according to Wikipedia is referred to in other regions as: -->
     <!-- Lakshmi Puja: the amavasya (new moon day) in the Vikram Samvat Hindu calendar month of Ashwayuja (according to the amanta tradition) or Kartika (according to the purnimanta tradition) -->
@@ -189,6 +220,16 @@
     <Fixed month="OCTOBER" day="31" validFrom="2024" validTo="2024" descriptionPropertiesKey="DEEPAVALI">
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
+    <!-- https://www.mom.gov.sg/employment-practices/public-holidays -->
+    <Fixed month="OCTOBER" day="20" validFrom="2025" validTo="2025" descriptionPropertiesKey="DEEPAVALI">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="NOVEMBER" day="8" validFrom="2026" validTo="2026" descriptionPropertiesKey="DEEPAVALI">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="OCTOBER" day="28" validFrom="2027" validTo="2027" descriptionPropertiesKey="DEEPAVALI">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
 
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS">
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
@@ -210,7 +251,11 @@
     <IslamicHoliday type="ID_AL_FITR_2" validFrom="2022" validTo="2023" descriptionPropertiesKey="HARI_RAYA_PUASA">
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </IslamicHoliday>
-    <IslamicHoliday type="ID_AL_FITR" validFrom="2024" descriptionPropertiesKey="HARI_RAYA_PUASA">
+    <IslamicHoliday type="ID_AL_FITR" validFrom="2024" validTo="2024" descriptionPropertiesKey="HARI_RAYA_PUASA">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </IslamicHoliday>
+    <!-- since 2025 it was moved one day later -->
+    <IslamicHoliday type="ID_AL_FITR_2" validFrom="2025" descriptionPropertiesKey="HARI_RAYA_PUASA">
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </IslamicHoliday>
 
@@ -235,7 +280,14 @@
     <IslamicHoliday type="ID_UL_ADHA" validFrom="2020" validTo="2021" descriptionPropertiesKey="HARI_RAYA_HAJI">
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </IslamicHoliday>
-    <IslamicHoliday type="ID_UL_ADHA_2" validFrom="2022" descriptionPropertiesKey="HARI_RAYA_HAJI">
+    <IslamicHoliday type="ID_UL_ADHA_2" validFrom="2022" validTo="2025" descriptionPropertiesKey="HARI_RAYA_HAJI">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </IslamicHoliday>
+    <!-- 2026 it was moved one day earlier -->
+    <IslamicHoliday type="ID_UL_ADHA" validFrom="2026" validTo="2026" descriptionPropertiesKey="HARI_RAYA_HAJI">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </IslamicHoliday>
+    <IslamicHoliday type="ID_UL_ADHA_2" validFrom="2027" descriptionPropertiesKey="HARI_RAYA_HAJI">
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </IslamicHoliday>
   </Holidays>

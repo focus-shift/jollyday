@@ -18,12 +18,14 @@ import static de.focus_shift.jollyday.tests.CalendarCheckerApi.assertFor;
 import static java.time.DayOfWeek.MONDAY;
 import static java.time.DayOfWeek.SUNDAY;
 import static java.time.DayOfWeek.TUESDAY;
+import static java.time.Month.APRIL;
 import static java.time.Month.AUGUST;
 import static java.time.Month.DECEMBER;
 import static java.time.Month.FEBRUARY;
 import static java.time.Month.JANUARY;
 import static java.time.Month.JULY;
 import static java.time.Month.JUNE;
+import static java.time.Month.MARCH;
 import static java.time.Month.MAY;
 import static java.time.Month.NOVEMBER;
 import static java.time.Month.OCTOBER;
@@ -51,6 +53,32 @@ class HolidaySGTest {
         assertThat(CalendarUtil.contains(holidays, d)).isTrue();
       }
     });
+  }
+
+  @Test
+  void ensuresMinistryOfManpowerHolidays2025To2027() {
+    final HolidayManager instance = HolidayManager.getInstance(ManagerParameters.create(HolidayCalendar.SINGAPORE));
+
+    // https://www.mom.gov.sg/employment-practices/public-holidays
+    assertThat(instance.getHolidays(Year.of(2025))).extracting(Holiday::getDate).containsExactlyInAnyOrder(
+      LocalDate.of(2025, JANUARY, 1), LocalDate.of(2025, JANUARY, 29), LocalDate.of(2025, JANUARY, 30),
+      LocalDate.of(2025, MARCH, 31), LocalDate.of(2025, APRIL, 18), LocalDate.of(2025, MAY, 1),
+      LocalDate.of(2025, MAY, 3), LocalDate.of(2025, MAY, 12), LocalDate.of(2025, JUNE, 7),
+      LocalDate.of(2025, AUGUST, 9), LocalDate.of(2025, OCTOBER, 20), LocalDate.of(2025, DECEMBER, 25));
+    assertThat(instance.getHolidays(Year.of(2025))).filteredOn(h -> h.getPropertiesKey().equals("HARI_RAYA_PUASA"))
+      .extracting(Holiday::getActualDate).containsExactly(LocalDate.of(2025, MARCH, 31));
+
+    assertThat(instance.getHolidays(Year.of(2026))).extracting(Holiday::getDate).containsExactlyInAnyOrder(
+      LocalDate.of(2026, JANUARY, 1), LocalDate.of(2026, FEBRUARY, 17), LocalDate.of(2026, FEBRUARY, 18),
+      LocalDate.of(2026, MARCH, 21), LocalDate.of(2026, APRIL, 3), LocalDate.of(2026, MAY, 1),
+      LocalDate.of(2026, MAY, 27), LocalDate.of(2026, JUNE, 1), LocalDate.of(2026, AUGUST, 10),
+      LocalDate.of(2026, NOVEMBER, 9), LocalDate.of(2026, DECEMBER, 25));
+
+    assertThat(instance.getHolidays(Year.of(2027))).extracting(Holiday::getDate).containsExactlyInAnyOrder(
+      LocalDate.of(2027, JANUARY, 1), LocalDate.of(2027, FEBRUARY, 6), LocalDate.of(2027, FEBRUARY, 8),
+      LocalDate.of(2027, MARCH, 10), LocalDate.of(2027, MARCH, 26), LocalDate.of(2027, MAY, 1),
+      LocalDate.of(2027, MAY, 17), LocalDate.of(2027, MAY, 20), LocalDate.of(2027, AUGUST, 9),
+      LocalDate.of(2027, OCTOBER, 28), LocalDate.of(2027, DECEMBER, 25));
   }
 
   @Test
@@ -87,6 +115,12 @@ class HolidaySGTest {
       .hasFixedHoliday("CHINESE_NEW_YEAR", JANUARY, 23).validBetween(Year.of(2023), Year.of(2023)).canBeMovedFrom(SUNDAY, MONDAY).and()
       .hasFixedHoliday("CHINESE_NEW_YEAR", FEBRUARY, 10).validBetween(Year.of(2024), Year.of(2024)).canBeMovedFrom(SUNDAY, TUESDAY).and()
       .hasFixedHoliday("CHINESE_NEW_YEAR", FEBRUARY, 11).validBetween(Year.of(2024), Year.of(2024)).canBeMovedFrom(SUNDAY, MONDAY).and()
+      .hasFixedHoliday("CHINESE_NEW_YEAR", JANUARY, 29).validBetween(Year.of(2025), Year.of(2025)).canBeMovedFrom(SUNDAY, TUESDAY).and()
+      .hasFixedHoliday("CHINESE_NEW_YEAR", JANUARY, 30).validBetween(Year.of(2025), Year.of(2025)).canBeMovedFrom(SUNDAY, MONDAY).and()
+      .hasFixedHoliday("CHINESE_NEW_YEAR", FEBRUARY, 17).validBetween(Year.of(2026), Year.of(2026)).canBeMovedFrom(SUNDAY, TUESDAY).and()
+      .hasFixedHoliday("CHINESE_NEW_YEAR", FEBRUARY, 18).validBetween(Year.of(2026), Year.of(2026)).canBeMovedFrom(SUNDAY, MONDAY).and()
+      .hasFixedHoliday("CHINESE_NEW_YEAR", FEBRUARY, 6).validBetween(Year.of(2027), Year.of(2027)).canBeMovedFrom(SUNDAY, TUESDAY).and()
+      .hasFixedHoliday("CHINESE_NEW_YEAR", FEBRUARY, 7).validBetween(Year.of(2027), Year.of(2027)).canBeMovedFrom(SUNDAY, MONDAY).and()
 
       .hasFixedHoliday("LABOUR_DAY", MAY, 1)
         .canBeMovedFrom(SUNDAY, MONDAY)
@@ -106,6 +140,9 @@ class HolidaySGTest {
       .hasFixedHoliday("VESAK_DAY", MAY, 15).validBetween(Year.of(2022), Year.of(2022)).canBeMovedFrom(SUNDAY, MONDAY).and()
       .hasFixedHoliday("VESAK_DAY", JUNE, 2).validBetween(Year.of(2023), Year.of(2023)).canBeMovedFrom(SUNDAY, MONDAY).and()
       .hasFixedHoliday("VESAK_DAY", MAY, 22).validBetween(Year.of(2024), Year.of(2024)).canBeMovedFrom(SUNDAY, MONDAY).and()
+      .hasFixedHoliday("VESAK_DAY", MAY, 12).validBetween(Year.of(2025), Year.of(2025)).canBeMovedFrom(SUNDAY, MONDAY).and()
+      .hasFixedHoliday("VESAK_DAY", MAY, 31).validBetween(Year.of(2026), Year.of(2026)).canBeMovedFrom(SUNDAY, MONDAY).and()
+      .hasFixedHoliday("VESAK_DAY", MAY, 20).validBetween(Year.of(2027), Year.of(2027)).canBeMovedFrom(SUNDAY, MONDAY).and()
 
       .hasFixedHoliday("SG50_PUBLIC_HOLIDAY", AUGUST, 7).validBetween(Year.of(2015), Year.of(2015)).and()
 
@@ -117,6 +154,7 @@ class HolidaySGTest {
       .hasFixedHoliday("POLLING_DAY", SEPTEMBER, 11).validBetween(Year.of(2015), Year.of(2015)).and()
       .hasFixedHoliday("POLLING_DAY", JULY, 10).validBetween(Year.of(2020), Year.of(2020)).and()
       .hasFixedHoliday("POLLING_DAY", SEPTEMBER, 1).validBetween(Year.of(2023), Year.of(2023)).and()
+      .hasFixedHoliday("POLLING_DAY", MAY, 3).validBetween(Year.of(2025), Year.of(2025)).and()
 
       // DEEPAVALI: new moon day in the Hindu calendar, hardcoded per year
       .hasFixedHoliday("DEEPAVALI", NOVEMBER, 2).validBetween(Year.of(2013), Year.of(2013)).canBeMovedFrom(SUNDAY, MONDAY).and()
@@ -131,6 +169,9 @@ class HolidaySGTest {
       .hasFixedHoliday("DEEPAVALI", OCTOBER, 24).validBetween(Year.of(2022), Year.of(2022)).canBeMovedFrom(SUNDAY, MONDAY).and()
       .hasFixedHoliday("DEEPAVALI", NOVEMBER, 12).validBetween(Year.of(2023), Year.of(2023)).canBeMovedFrom(SUNDAY, MONDAY).and()
       .hasFixedHoliday("DEEPAVALI", OCTOBER, 31).validBetween(Year.of(2024), Year.of(2024)).canBeMovedFrom(SUNDAY, MONDAY).and()
+      .hasFixedHoliday("DEEPAVALI", OCTOBER, 20).validBetween(Year.of(2025), Year.of(2025)).canBeMovedFrom(SUNDAY, MONDAY).and()
+      .hasFixedHoliday("DEEPAVALI", NOVEMBER, 8).validBetween(Year.of(2026), Year.of(2026)).canBeMovedFrom(SUNDAY, MONDAY).and()
+      .hasFixedHoliday("DEEPAVALI", OCTOBER, 28).validBetween(Year.of(2027), Year.of(2027)).canBeMovedFrom(SUNDAY, MONDAY).and()
 
       .hasFixedHoliday("CHRISTMAS", DECEMBER, 25)
         .canBeMovedFrom(SUNDAY, MONDAY)
