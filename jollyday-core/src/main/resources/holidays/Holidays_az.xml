@@ -15,12 +15,12 @@
     <!-- Women's Day -->
     <Fixed month="MARCH" day="8" descriptionPropertiesKey="INTERNATIONAL_WOMAN"/>
 
-    <!-- Nowruz (5 days) -->
+    <!-- Nowruz: two days until 2006, five days since law 194-IIIQD of 8 December 2006 -->
     <Fixed month="MARCH" day="20" descriptionPropertiesKey="NOWRUZ"/>
     <Fixed month="MARCH" day="21" descriptionPropertiesKey="NOWRUZ"/>
-    <Fixed month="MARCH" day="22" descriptionPropertiesKey="NOWRUZ"/>
-    <Fixed month="MARCH" day="23" descriptionPropertiesKey="NOWRUZ"/>
-    <Fixed month="MARCH" day="24" descriptionPropertiesKey="NOWRUZ"/>
+    <Fixed month="MARCH" day="22" validFrom="2007" descriptionPropertiesKey="NOWRUZ"/>
+    <Fixed month="MARCH" day="23" validFrom="2007" descriptionPropertiesKey="NOWRUZ"/>
+    <Fixed month="MARCH" day="24" validFrom="2007" descriptionPropertiesKey="NOWRUZ"/>
 
     <!-- Victory Day over Fascism -->
     <Fixed month="MAY" day="9" descriptionPropertiesKey="DAY_OF_VICTORY_OVER_FASCISM"/>
@@ -34,23 +34,107 @@
     <!-- Azerbaijan Armed Forces Day -->
     <Fixed month="JUNE" day="26" descriptionPropertiesKey="ARMED_FORCES_DAY"/>
 
-    <!-- Victory Day (2020 Nagorno-Karabakh war) -->
-    <Fixed month="NOVEMBER" day="8" descriptionPropertiesKey="VICTORY_DAY"/>
+    <!-- State Independence Day, Constitution Day and National Revival Day: non-working days under the
+         Labour Code of 1999 until law 194-IIIQD of 8 December 2006 removed them from the non-working list -->
+    <Fixed month="OCTOBER" day="18" validFrom="1999" validTo="2006" descriptionPropertiesKey="RESTORATION_OF_INDEPENDENCE"/>
+    <Fixed month="NOVEMBER" day="12" validFrom="1999" validTo="2006" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+    <Fixed month="NOVEMBER" day="17" validFrom="1999" validTo="2006" descriptionPropertiesKey="NATIONAL_REVIVAL_DAY"/>
 
-    <!-- State Flag Day -->
-    <Fixed month="NOVEMBER" day="9" descriptionPropertiesKey="STATE_FLAG_DAY"/>
+    <!-- Victory Day (2020 Nagorno-Karabakh war), law 217-VIQD of 18 December 2020 -->
+    <Fixed month="NOVEMBER" day="8" validFrom="2021" descriptionPropertiesKey="VICTORY_DAY"/>
+
+    <!-- State Flag Day, law 927-IIIQD of 4 December 2009 -->
+    <Fixed month="NOVEMBER" day="9" validFrom="2010" descriptionPropertiesKey="STATE_FLAG_DAY"/>
 
     <!-- International Solidarity Day of Azerbaijanis -->
     <Fixed month="DECEMBER" day="31" descriptionPropertiesKey="INTERNATIONAL_SOLIDARITY_DAY"/>
+
+    <!--
+      Rest days and voting days from the production calendars of the Ministry of Labour and Social
+      Protection and the Cabinet of Ministers decisions on moving work and rest days.
+      Rest days are substitutes for holidays on a weekend or on another holiday (Labour Code Art. 105.5
+      and 105.6) or working days swapped with a weekend day. The weekend days that became working days
+      in exchange can't be modelled.
+    -->
+    <!-- 2023 -->
+    <Fixed month="JANUARY" day="3" validFrom="2023" validTo="2023" descriptionPropertiesKey="REST_DAY"/>
+    <Fixed month="JANUARY" day="4" validFrom="2023" validTo="2023" descriptionPropertiesKey="REST_DAY"/>
+    <Fixed month="APRIL" day="24" validFrom="2023" validTo="2023" descriptionPropertiesKey="REST_DAY"/>
+    <Fixed month="MAY" day="29" validFrom="2023" validTo="2023" descriptionPropertiesKey="REST_DAY"/>
+    <!-- Cabinet of Ministers decision No. 164 of 25 May 2023 (swapped with 24 and 25 June) -->
+    <Fixed month="JUNE" day="27" validFrom="2023" validTo="2023" descriptionPropertiesKey="REST_DAY"/>
+    <Fixed month="JUNE" day="30" validFrom="2023" validTo="2023" descriptionPropertiesKey="REST_DAY"/>
+    <!-- Cabinet of Ministers decision No. 373 of 20 October 2023 (swapped with 4 November) -->
+    <Fixed month="NOVEMBER" day="10" validFrom="2023" validTo="2023" descriptionPropertiesKey="REST_DAY"/>
+
+    <!-- 2024 -->
+    <Fixed month="JANUARY" day="3" validFrom="2024" validTo="2024" descriptionPropertiesKey="REST_DAY"/>
+    <!-- Cabinet of Ministers decision No. 447 of 9 December 2023 (swapped with 30 December 2023 and 7 January 2024) -->
+    <Fixed month="JANUARY" day="4" validFrom="2024" validTo="2024" descriptionPropertiesKey="REST_DAY"/>
+    <Fixed month="JANUARY" day="5" validFrom="2024" validTo="2024" descriptionPropertiesKey="REST_DAY"/>
+    <!-- Snap presidential election, Labour Code Art. 105-1 -->
+    <Fixed month="FEBRUARY" day="7" validFrom="2024" validTo="2024" descriptionPropertiesKey="ELECTION_DAY"/>
+    <Fixed month="MARCH" day="25" validFrom="2024" validTo="2024" descriptionPropertiesKey="REST_DAY"/>
+    <Fixed month="MARCH" day="26" validFrom="2024" validTo="2024" descriptionPropertiesKey="REST_DAY"/>
+    <!-- Cabinet of Ministers decision No. 100 of 24 February 2024 (swapped with 6 April) -->
+    <Fixed month="APRIL" day="12" validFrom="2024" validTo="2024" descriptionPropertiesKey="REST_DAY"/>
+    <Fixed month="JUNE" day="18" validFrom="2024" validTo="2024" descriptionPropertiesKey="REST_DAY"/>
+    <Fixed month="JUNE" day="19" validFrom="2024" validTo="2024" descriptionPropertiesKey="REST_DAY"/>
+    <Fixed month="NOVEMBER" day="11" validFrom="2024" validTo="2024" descriptionPropertiesKey="REST_DAY"/>
+    <!-- Cabinet of Ministers decision No. 426 of 18 September 2024 (swapped with 16 and 23 November) -->
+    <Fixed month="NOVEMBER" day="12" validFrom="2024" validTo="2024" descriptionPropertiesKey="REST_DAY"/>
+    <Fixed month="NOVEMBER" day="13" validFrom="2024" validTo="2024" descriptionPropertiesKey="REST_DAY"/>
+    <!-- Cabinet of Ministers decision No. 499 of 28 November 2024 (swapped with 28 and 29 December 2024) -->
+    <Fixed month="DECEMBER" day="30" validFrom="2024" validTo="2024" descriptionPropertiesKey="REST_DAY"/>
+
+    <!-- 2025 -->
+    <Fixed month="JANUARY" day="3" validFrom="2025" validTo="2025" descriptionPropertiesKey="REST_DAY"/>
+    <!-- Municipal elections, Labour Code Art. 105-1 -->
+    <Fixed month="JANUARY" day="29" validFrom="2025" validTo="2025" descriptionPropertiesKey="ELECTION_DAY"/>
+    <Fixed month="MARCH" day="25" validFrom="2025" validTo="2025" descriptionPropertiesKey="REST_DAY"/>
+    <Fixed month="MARCH" day="26" validFrom="2025" validTo="2025" descriptionPropertiesKey="REST_DAY"/>
+    <!-- Cabinet of Ministers decision No. 23 of 15 February 2025 (swapped with the rest days 10 March and 1 April) -->
+    <Fixed month="MARCH" day="27" validFrom="2025" validTo="2025" descriptionPropertiesKey="REST_DAY"/>
+    <Fixed month="MARCH" day="28" validFrom="2025" validTo="2025" descriptionPropertiesKey="REST_DAY"/>
+    <Fixed month="JUNE" day="9" validFrom="2025" validTo="2025" descriptionPropertiesKey="REST_DAY"/>
+    <Fixed month="JUNE" day="16" validFrom="2025" validTo="2025" descriptionPropertiesKey="REST_DAY"/>
+    <!-- Cabinet of Ministers decision No. 174 of 4 June 2025 (swapped with 21 June) -->
+    <Fixed month="JUNE" day="27" validFrom="2025" validTo="2025" descriptionPropertiesKey="REST_DAY"/>
+    <Fixed month="NOVEMBER" day="10" validFrom="2025" validTo="2025" descriptionPropertiesKey="REST_DAY"/>
+    <Fixed month="NOVEMBER" day="11" validFrom="2025" validTo="2025" descriptionPropertiesKey="REST_DAY"/>
+
+    <!-- 2026 -->
+    <Fixed month="MARCH" day="9" validFrom="2026" validTo="2026" descriptionPropertiesKey="REST_DAY"/>
+    <Fixed month="MARCH" day="25" validFrom="2026" validTo="2026" descriptionPropertiesKey="REST_DAY"/>
+    <Fixed month="MARCH" day="26" validFrom="2026" validTo="2026" descriptionPropertiesKey="REST_DAY"/>
+    <Fixed month="MARCH" day="27" validFrom="2026" validTo="2026" descriptionPropertiesKey="REST_DAY"/>
+    <Fixed month="MARCH" day="30" validFrom="2026" validTo="2026" descriptionPropertiesKey="REST_DAY"/>
+    <Fixed month="MAY" day="11" validFrom="2026" validTo="2026" descriptionPropertiesKey="REST_DAY"/>
+    <Fixed month="MAY" day="29" validFrom="2026" validTo="2026" descriptionPropertiesKey="REST_DAY"/>
+    <Fixed month="NOVEMBER" day="10" validFrom="2026" validTo="2026" descriptionPropertiesKey="REST_DAY"/>
 
     <!-- Eid al-Fitr (2 days) -->
     <IslamicHoliday type="ID_AL_FITR"/>
     <IslamicHoliday type="ID_AL_FITR_2"/>
 
-    <!-- Eid al-Adha (2 days) -->
+    <!-- Eid al-Adha: one day until 2006, two days since law 194-IIIQD of 8 December 2006 -->
     <IslamicHoliday type="ID_UL_ADHA"/>
-    <IslamicHoliday type="ID_UL_ADHA_2"/>
+    <IslamicHoliday type="ID_UL_ADHA_2" validFrom="2007"/>
   </Holidays>
+
+  <Sources>
+    <Source of="Labour Code, Art. 105, 105-1 and 106">https://e-qanun.az/framework/46943</Source>
+    <Source of="Production calendars">https://sosial.gov.az/az/faydali/istehsalat-teqvimi</Source>
+    <Source of="Cabinet of Ministers decision No. 164 of 25 May 2023">https://nk.gov.az/az/senedler/qerarlar/is-ve-istirahet-gunlerinin-yerlerinin-deyisdirilme-7047</Source>
+    <Source of="Cabinet of Ministers decision No. 373 of 20 October 2023">https://nk.gov.az/az/senedler/qerarlar/is-ve-istirahet-gunlerinin-yerlerinin-deyisdirilme-7466</Source>
+    <Source of="Cabinet of Ministers decision No. 447 of 9 December 2023">https://nk.gov.az/az/senedler/qerarlar/is-ve-istirahet-gunlerinin-yerlerinin-deyisdirilme-7576</Source>
+    <Source of="Cabinet of Ministers decision No. 100 of 24 February 2024">https://nk.gov.az/az/senedler/qerarlar/is-ve-istirahet-gunlerinin-yerlerinin-deyisdirilme-7843</Source>
+    <Source of="Cabinet of Ministers decision No. 426 of 18 September 2024">https://nk.gov.az/az/senedler/qerarlar/is-ve-istirahet-gunlerinin-yerlerinin-deyisdirilme-8332</Source>
+    <Source of="Cabinet of Ministers decision No. 499 of 28 November 2024">https://nk.gov.az/az/senedler/qerarlar/is-ve-istirahet-gunlerinin-yerlerinin-deyisdirilme-8449</Source>
+    <Source of="Cabinet of Ministers decision No. 23 of 15 February 2025">https://nk.gov.az/az/senedler/qerarlar/is-ve-istirahet-gunlerinin-yerlerinin-deyisdirilme-8623</Source>
+    <Source of="Cabinet of Ministers decision No. 174 of 4 June 2025">https://nk.gov.az/az/senedler/qerarlar/is-ve-istirahet-gunlerinin-yerlerinin-deyisdirilme-8864</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:AZ</Source>
+  </Sources>
 
   <SubConfigurations hierarchy="abs" description="Absheron">
     <Holidays/>
