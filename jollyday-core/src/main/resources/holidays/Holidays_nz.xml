@@ -5,9 +5,10 @@
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
   <Holidays>
+    <!-- On a Sunday, New Year's Day moves to Tuesday, because Monday is already the Day after New Year's Day. -->
     <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
       <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
-      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
     </Fixed>
     <Fixed month="JANUARY" day="2" descriptionPropertiesKey="DAY_AFTER_NEW_YEAR">
       <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
@@ -25,9 +26,10 @@
     </Fixed>
     <Fixed month="SEPTEMBER" day="26" validFrom="2022" validTo="2022"
            descriptionPropertiesKey="QUEEN_ELIZABETH_II_MEMORIAL_DAY"/>
+    <!-- On a Sunday, Christmas Day moves to Tuesday, because Monday is already Boxing Day. -->
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS">
       <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
-      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
     </Fixed>
     <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY">
       <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
@@ -77,7 +79,8 @@
   </Holidays>
 
   <Sources>
-    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_New_Zealand</Source>
+    <Source>https://www.employment.govt.nz/leave-and-holidays/public-holidays/public-holidays-and-anniversary-dates/</Source>
+    <Source>https://www.employment.govt.nz/leave-and-holidays/public-holidays/previous-years-public-holidays-and-anniversary-dates</Source>
     <Source>https://www.mbie.govt.nz/assets/matariki-dates-2022-to-2052-matariki-advisory-group.pdf</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:NZ</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:NZ</Source>
@@ -103,6 +106,12 @@
     <Holidays>
       <!-- 16 December, but South Canterbury observes Dominion Day, the 4th Monday in September. -->
       <FixedWeekday which="FOURTH" weekday="MONDAY" month="SEPTEMBER" descriptionPropertiesKey="CANTERBURY_SOUTH_ANNIVERSARY"/>
+      <!-- 16 December, but observed on the second Friday after the first Tuesday in November (Show Day),
+           which is always the Friday between 11 and 17 November. -->
+      <FixedWeekdayBetweenFixed weekday="FRIDAY" descriptionPropertiesKey="CANTERBURY_ANNIVERSARY">
+        <from month="NOVEMBER" day="11"/>
+        <to month="NOVEMBER" day="17"/>
+      </FixedWeekdayBetweenFixed>
     </Holidays>
   </SubConfigurations>
 
@@ -183,7 +192,12 @@
   </SubConfigurations>
 
   <SubConfigurations hierarchy="tas" description="Tasman">
-    <Holidays/>
+    <Holidays>
+      <!-- Tasman is part of the former Nelson province and observes Nelson Anniversary Day. -->
+      <FixedWeekdayRelativeToFixed which="FIRST" weekday="MONDAY" when="CLOSEST" descriptionPropertiesKey="NELSON_ANNIVERSARY">
+        <day month="FEBRUARY" day="1"/>
+      </FixedWeekdayRelativeToFixed>
+    </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="tki" description="Taranaki">
