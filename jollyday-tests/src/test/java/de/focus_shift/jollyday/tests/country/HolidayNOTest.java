@@ -3,6 +3,7 @@ package de.focus_shift.jollyday.tests.country;
 import org.junit.jupiter.api.Test;
 
 import static de.focus_shift.jollyday.core.HolidayCalendar.NORWAY;
+import static de.focus_shift.jollyday.core.HolidayType.BANK_HOLIDAY;
 import static de.focus_shift.jollyday.tests.CalendarCheckerApi.assertFor;
 import static java.time.Month.JANUARY;
 import static java.time.Month.MAY;
@@ -16,6 +17,7 @@ class HolidayNOTest {
       .hasFixedHoliday("NEW_YEAR", JANUARY, 1).and()
       .hasFixedHoliday("LABOUR_DAY", MAY, 1).and()
       .hasFixedHoliday("CONSTITUTION_DAY", MAY, 17).and()
+      .hasFixedHoliday("CHRISTMAS_EVE", DECEMBER, 24, BANK_HOLIDAY).and()
       .hasFixedHoliday("CHRISTMAS", DECEMBER, 25).and()
       .hasFixedHoliday("STEPHENS", DECEMBER, 26).and()
       .hasChristianHoliday("EASTER").and()
