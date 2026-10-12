@@ -20,8 +20,14 @@
     <IslamicHoliday type="NEWYEAR"/>
   </Holidays>
 
+  <Weekend weekday="FRIDAY" validTo="2021"/>
+  <Weekend weekday="SATURDAY" validTo="2021"/>
+  <Weekend weekday="SATURDAY" validFrom="2022"/>
+  <Weekend weekday="SUNDAY" validFrom="2022"/>
+
   <Sources>
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_the_United_Arab_Emirates</Source>
+    <Source of="Weekend">https://uaelegislation.gov.ae/en/legislations/2595</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:AE</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:AE</Source>
   </Sources>

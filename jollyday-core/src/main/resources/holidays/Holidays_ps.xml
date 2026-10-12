@@ -28,9 +28,16 @@
     <IslamicHoliday type="ID_UL_ADHA_3"/>
   </Holidays>
 
+  <!-- Labour Law No. 7 of 2000, Article 73 sets only Friday as the statutory weekly rest
+       day; the second weekend day (Saturday) is near-universal government/civil-service
+       practice rather than a codified second rest day. -->
+  <Weekend weekday="FRIDAY"/>
+  <Weekend weekday="SATURDAY"/>
+
   <Sources>
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Palestine</Source>
     <Source of="Labour Law No. 7 of 2000">https://faolex.fao.org/docs/pdf/pal228232E.pdf</Source>
+    <Source of="Weekend">https://www.mondaq.com/trademark/3638/official-holidays-and-working-hours-in-palestinian-national-authority-west-bankramallah</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:PS</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:PS</Source>
   </Sources>

@@ -19,8 +19,11 @@
     <IslamicHoliday type="ID_UL_ADHA_2"/>
   </Holidays>
 
+  <Weekend weekday="FRIDAY"/>
+
   <Sources>
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Djibouti</Source>
+    <Source of="Weekend">https://rivermate.com/guides/djibouti/working-hours</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:DJ</Source>
   </Sources>
 
