@@ -46,4 +46,15 @@ public interface HolidayCalendarConfiguration {
    */
   @NonNull Stream<HolidayCalendarConfiguration> subConfigurations();
 
+  /**
+   * Contains the weekday(s) that are non-working/rest days (the "weekend") for this
+   * {@link de.focus_shift.jollyday.core.HolidayCalendar}, optionally limited to a range of years.
+   * <p>
+   * Empty if this configuration does not define its own weekend, in which case it is inherited
+   * from the parent configuration or, ultimately, defaults to Saturday and Sunday.
+   *
+   * @return all weekend configuration for this {@link de.focus_shift.jollyday.core.HolidayCalendar}
+   */
+  @NonNull Stream<WeekendConfiguration> weekends();
+
 }
