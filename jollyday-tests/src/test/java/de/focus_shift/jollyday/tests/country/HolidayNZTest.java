@@ -3,11 +3,14 @@ package de.focus_shift.jollyday.tests.country;
 import de.focus_shift.jollyday.core.Holiday;
 import de.focus_shift.jollyday.core.HolidayManager;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import java.time.LocalDate;
 import java.time.Month;
 import java.time.MonthDay;
 import java.time.Year;
+import java.util.List;
 import java.util.Set;
 
 import static de.focus_shift.jollyday.core.HolidayCalendar.NEW_ZEALAND;
@@ -47,7 +50,7 @@ class HolidayNZTest {
     assertFor(NEW_ZEALAND)
       .hasFixedHoliday("NEW_YEAR", JANUARY, 1)
         .canBeMovedFrom(SATURDAY, MONDAY)
-        .canBeMovedFrom(SUNDAY, MONDAY)
+        .canBeMovedFrom(SUNDAY, TUESDAY)
       .and()
       .hasFixedHoliday("DAY_AFTER_NEW_YEAR", JANUARY, 2)
         .canBeMovedFrom(SATURDAY, MONDAY)
@@ -76,7 +79,7 @@ class HolidayNZTest {
       .and()
       .hasFixedHoliday("CHRISTMAS", DECEMBER, 25)
         .canBeMovedFrom(SATURDAY, MONDAY)
-        .canBeMovedFrom(SUNDAY, MONDAY)
+        .canBeMovedFrom(SUNDAY, TUESDAY)
       .and()
       .hasFixedHoliday("BOXING_DAY", DECEMBER, 26)
         .canBeMovedFrom(SATURDAY, MONDAY)
@@ -133,6 +136,9 @@ class HolidayNZTest {
       .hasFixedWeekdayHoliday("CANTERBURY_SOUTH_ANNIVERSARY", FOURTH, MONDAY, SEPTEMBER)
         .inSubdivision("can")
       .and()
+      .hasFixedWeekdayBetweenFixedHoliday("CANTERBURY_ANNIVERSARY", FRIDAY, MonthDay.of(NOVEMBER, 11), MonthDay.of(NOVEMBER, 17))
+        .inSubdivision("can")
+      .and()
       .hasFixedWeekdayRelativeToFixedHoliday("CHATHAM_ISLANDS_ANNIVERSARY", FIRST, MONDAY, CLOSEST, MonthDay.of(NOVEMBER, 30))
         .inSubdivision("cit")
       .and()
@@ -144,6 +150,9 @@ class HolidayNZTest {
       .and()
       .hasFixedWeekdayRelativeToFixedHoliday("NELSON_ANNIVERSARY", FIRST, MONDAY, CLOSEST, MonthDay.of(FEBRUARY, 1))
         .inSubdivision("nsn")
+      .and()
+      .hasFixedWeekdayRelativeToFixedHoliday("NELSON_ANNIVERSARY", FIRST, MONDAY, CLOSEST, MonthDay.of(FEBRUARY, 1))
+        .inSubdivision("tas")
       .and()
       .hasFixedWeekdayRelativeToFixedHoliday("AUCKLAND_ANNIVERSARY", FIRST, MONDAY, CLOSEST, MonthDay.of(JANUARY, 29))
         .inSubdivision("ntl")
@@ -191,5 +200,127 @@ class HolidayNZTest {
     boolean found = holidays.stream()
       .anyMatch(holiday -> "SOUTHLAND_ANNIVERSARY".equals(holiday.getPropertiesKey()) && holiday.getDate().equals(expected));
     assertThat(found).isTrue();
+  }
+
+  /**
+   * Christmas Day on a Sunday moves to Tuesday 27 December, because Boxing Day is Monday 26 December.
+   * On a Saturday, Christmas Day moves to Monday 27 December and Boxing Day to Tuesday 28 December.
+   */
+  @ParameterizedTest
+  @CsvSource({
+    "2011, 27, 26",
+    "2016, 27, 26",
+    "2021, 27, 28",
+    "2022, 27, 26",
+    "2033, 27, 26",
+  })
+  void ensuresChristmasAndBoxingDayNeverFallOnTheSameDay(final int year, final int christmas, final int boxingDay) {
+    final Set<Holiday> holidays = HolidayManager.getInstance(create(NEW_ZEALAND)).getHolidays(Year.of(year));
+
+    assertThat(datesOf(holidays, "CHRISTMAS")).containsExactly(LocalDate.of(year, DECEMBER, christmas));
+    assertThat(datesOf(holidays, "BOXING_DAY")).containsExactly(LocalDate.of(year, DECEMBER, boxingDay));
+  }
+
+  /**
+   * New Year's Day on a Sunday moves to Tuesday 3 January, because the Day after New Year's Day is Monday 2 January.
+   * On a Saturday, New Year's Day moves to Monday 3 January and the Day after New Year's Day to Tuesday 4 January.
+   */
+  @ParameterizedTest
+  @CsvSource({
+    "2011, 3, 4",
+    "2012, 3, 2",
+    "2017, 3, 2",
+    "2022, 3, 4",
+    "2023, 3, 2",
+    "2034, 3, 2",
+  })
+  void ensuresNewYearAndDayAfterNewYearNeverFallOnTheSameDay(final int year, final int newYear, final int dayAfterNewYear) {
+    final Set<Holiday> holidays = HolidayManager.getInstance(create(NEW_ZEALAND)).getHolidays(Year.of(year));
+
+    assertThat(datesOf(holidays, "NEW_YEAR")).containsExactly(LocalDate.of(year, JANUARY, newYear));
+    assertThat(datesOf(holidays, "DAY_AFTER_NEW_YEAR")).containsExactly(LocalDate.of(year, JANUARY, dayAfterNewYear));
+  }
+
+  /**
+   * Official public holidays as published on employment.govt.nz.
+   */
+  @Test
+  void ensuresNationalHolidaysOf2022() {
+    final Set<Holiday> holidays = HolidayManager.getInstance(create(NEW_ZEALAND)).getHolidays(Year.of(2022));
+
+    assertThat(holidays).extracting(Holiday::getDate).containsExactlyInAnyOrder(
+      LocalDate.of(2022, JANUARY, 3),
+      LocalDate.of(2022, JANUARY, 4),
+      LocalDate.of(2022, FEBRUARY, 7),
+      LocalDate.of(2022, APRIL, 15),
+      LocalDate.of(2022, APRIL, 18),
+      LocalDate.of(2022, APRIL, 25),
+      LocalDate.of(2022, JUNE, 6),
+      LocalDate.of(2022, JUNE, 24),
+      LocalDate.of(2022, SEPTEMBER, 26),
+      LocalDate.of(2022, OCTOBER, 24),
+      LocalDate.of(2022, DECEMBER, 26),
+      LocalDate.of(2022, DECEMBER, 27)
+    );
+  }
+
+  /**
+   * Official public holidays as published on employment.govt.nz.
+   */
+  @Test
+  void ensuresNationalHolidaysOf2023() {
+    final Set<Holiday> holidays = HolidayManager.getInstance(create(NEW_ZEALAND)).getHolidays(Year.of(2023));
+
+    assertThat(holidays).extracting(Holiday::getDate).containsExactlyInAnyOrder(
+      LocalDate.of(2023, JANUARY, 2),
+      LocalDate.of(2023, JANUARY, 3),
+      LocalDate.of(2023, FEBRUARY, 6),
+      LocalDate.of(2023, APRIL, 7),
+      LocalDate.of(2023, APRIL, 10),
+      LocalDate.of(2023, APRIL, 25),
+      LocalDate.of(2023, JUNE, 5),
+      LocalDate.of(2023, JULY, 14),
+      LocalDate.of(2023, OCTOBER, 23),
+      LocalDate.of(2023, DECEMBER, 25),
+      LocalDate.of(2023, DECEMBER, 26)
+    );
+  }
+
+  /**
+   * Canterbury Anniversary Day (Show Day) as published on employment.govt.nz for 2010 to 2027.
+   */
+  @ParameterizedTest
+  @CsvSource({
+    "2010, 12", "2011, 11", "2012, 16", "2013, 15", "2014, 14", "2015, 13",
+    "2016, 11", "2017, 17", "2018, 16", "2019, 15", "2020, 13", "2021, 12",
+    "2022, 11", "2023, 17", "2024, 15", "2025, 14", "2026, 13", "2027, 12",
+  })
+  void ensuresCanterburyAnniversary(final int year, final int day) {
+    final Set<Holiday> holidays = HolidayManager.getInstance(create(NEW_ZEALAND)).getHolidays(Year.of(year), "can");
+
+    assertThat(datesOf(holidays, "CANTERBURY_ANNIVERSARY")).containsExactly(LocalDate.of(year, NOVEMBER, day));
+  }
+
+  /**
+   * Tasman observes Nelson Anniversary Day, as published on employment.govt.nz.
+   */
+  @ParameterizedTest
+  @CsvSource({
+    "2024, 1, 29",
+    "2025, 2, 3",
+    "2026, 2, 2",
+    "2027, 2, 1",
+  })
+  void ensuresNelsonAnniversaryInTasman(final int year, final int month, final int day) {
+    final Set<Holiday> holidays = HolidayManager.getInstance(create(NEW_ZEALAND)).getHolidays(Year.of(year), "tas");
+
+    assertThat(datesOf(holidays, "NELSON_ANNIVERSARY")).containsExactly(LocalDate.of(year, month, day));
+  }
+
+  private static List<LocalDate> datesOf(final Set<Holiday> holidays, final String propertyKey) {
+    return holidays.stream()
+      .filter(holiday -> holiday.getPropertiesKey().equals(propertyKey))
+      .map(Holiday::getDate)
+      .toList();
   }
 }
