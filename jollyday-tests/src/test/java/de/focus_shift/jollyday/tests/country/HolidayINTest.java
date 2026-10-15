@@ -1,10 +1,17 @@
 package de.focus_shift.jollyday.tests.country;
 
+import de.focus_shift.jollyday.core.Holiday;
+import de.focus_shift.jollyday.core.HolidayManager;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
+import java.time.LocalDate;
 import java.time.Year;
+import java.util.List;
 
 import static de.focus_shift.jollyday.core.HolidayCalendar.INDIA;
+import static de.focus_shift.jollyday.core.ManagerParameters.create;
 import static de.focus_shift.jollyday.tests.CalendarCheckerApi.assertFor;
 import static java.time.Month.APRIL;
 import static java.time.Month.AUGUST;
@@ -14,11 +21,19 @@ import static java.time.Month.JANUARY;
 import static java.time.Month.MAY;
 import static java.time.Month.NOVEMBER;
 import static java.time.Month.OCTOBER;
+import static org.assertj.core.api.Assertions.assertThat;
 
 class HolidayINTest {
 
   private static final Year YEAR_FROM = Year.of(1900);
   private static final Year YEAR_TO = Year.of(2173);
+
+  private static final List<String> MUHARRAM_SUBDIVISIONS = List.of(
+    "an", "ap", "br", "ch", "cg", "dl", "hp", "jk", "ka", "kl", "ld", "mp", "mh", "mz", "od", "rj", "tn", "ts", "up", "uk", "wb"
+  );
+  private static final List<String> MILAD_UN_NABI_SUBDIVISIONS = List.of(
+    "an", "ap", "cg", "dl", "dh", "jk", "jh", "ka", "kl", "ld", "mp", "mh", "mn", "mz", "nl", "od", "py", "rj", "tn", "ts", "up", "uk"
+  );
 
   @Test
   void ensuresHolidays() {
@@ -27,6 +42,14 @@ class HolidayINTest {
       .hasFixedHoliday("INDEPENDENCE_DAY", AUGUST, 15).validBetween(YEAR_FROM, YEAR_TO).and()
       .hasFixedHoliday("GHANDIS_BIRTHDAY", OCTOBER, 2).validBetween(YEAR_FROM, YEAR_TO).and()
       .hasIslamicHoliday("ID_AL_FITR_2").validBetween(YEAR_FROM, YEAR_TO).and()
+      .hasFixedHoliday("BUDDHA_PURNIMA", MAY, 7).validBetween(Year.of(2020), Year.of(2020)).and()
+      .hasFixedHoliday("BUDDHA_PURNIMA", MAY, 26).validBetween(Year.of(2021), Year.of(2021)).and()
+      .hasFixedHoliday("BUDDHA_PURNIMA", MAY, 16).validBetween(Year.of(2022), Year.of(2022)).and()
+      .hasFixedHoliday("BUDDHA_PURNIMA", MAY, 5).validBetween(Year.of(2023), Year.of(2023)).and()
+      .hasFixedHoliday("BUDDHA_PURNIMA", MAY, 23).validBetween(Year.of(2024), Year.of(2024)).and()
+      .hasFixedHoliday("BUDDHA_PURNIMA", MAY, 12).validBetween(Year.of(2025), Year.of(2025)).and()
+      .hasFixedHoliday("BUDDHA_PURNIMA", MAY, 1).validBetween(Year.of(2026), Year.of(2026)).and()
+      .hasFixedHoliday("BUDDHA_PURNIMA", MAY, 20).validBetween(Year.of(2027), Year.of(2027)).and()
 
       // Andaman and Nicobar Islands
       .hasFixedHoliday("CHRISTMAS", DECEMBER, 25).inSubdivision("an").validBetween(YEAR_FROM, YEAR_TO).and()
@@ -101,6 +124,7 @@ class HolidayINTest {
       // Gujarāt
       .hasFixedHoliday("AMBEDKAR_JAYANTI", APRIL, 14).inSubdivision("gj").validBetween(YEAR_FROM, YEAR_TO).and()
       .hasFixedHoliday("CHRISTMAS", DECEMBER, 25).inSubdivision("gj").validBetween(YEAR_FROM, YEAR_TO).and()
+      .hasChristianHoliday("GOOD_FRIDAY").inSubdivision("gj").validBetween(YEAR_FROM, YEAR_TO).and()
       .hasIslamicHoliday("ID_UL_ADHA_2").inSubdivision("gj").validBetween(YEAR_FROM, YEAR_TO).and()
 
       // Haryāna
@@ -164,6 +188,7 @@ class HolidayINTest {
       .hasFixedHoliday("AMBEDKAR_JAYANTI", APRIL, 14).inSubdivision("mh").validBetween(YEAR_FROM, YEAR_TO).and()
       .hasFixedHoliday("SHIVAJI_JAYANTI", FEBRUARY, 19).inSubdivision("mh").validBetween(YEAR_FROM, YEAR_TO).and()
       .hasFixedHoliday("CHRISTMAS", DECEMBER, 25).inSubdivision("mh").validBetween(YEAR_FROM, YEAR_TO).and()
+      .hasChristianHoliday("GOOD_FRIDAY").inSubdivision("mh").validBetween(YEAR_FROM, YEAR_TO).and()
       .hasIslamicHoliday("ASCHURA").inSubdivision("mh").validBetween(YEAR_FROM, YEAR_TO).and()
       .hasIslamicHoliday("MAWLID_AN_NABI").inSubdivision("mh").validBetween(YEAR_FROM, YEAR_TO).and()
       .hasIslamicHoliday("ID_UL_ADHA_2").inSubdivision("mh").validBetween(YEAR_FROM, YEAR_TO).and()
@@ -284,5 +309,68 @@ class HolidayINTest {
       .hasIslamicHoliday("ASCHURA").inSubdivision("wb").validBetween(YEAR_FROM, YEAR_TO).and()
       .hasIslamicHoliday("ID_UL_ADHA_2").inSubdivision("wb").validBetween(YEAR_FROM, YEAR_TO)
       .check();
+  }
+
+  @ParameterizedTest
+  @CsvSource({
+    "2020-08-30",
+    "2021-08-19",
+    "2022-08-09",
+    "2023-07-29",
+    "2024-07-17",
+    "2025-07-06",
+    "2026-06-26",
+    "2027-06-16"
+  })
+  void ensuresMuharramOnTheDateOfTheDoPTHolidayList(final LocalDate muharram) {
+    final HolidayManager holidayManager = HolidayManager.getInstance(create(INDIA));
+
+    for (final String subdivision : MUHARRAM_SUBDIVISIONS) {
+      assertThat(holidayManager.getHolidays(Year.of(muharram.getYear()), subdivision))
+        .filteredOn(holiday -> holiday.getPropertiesKey().equals("islamic.ASCHURA"))
+        .extracting(Holiday::getDate)
+        .as("Muharram in subdivision '%s'", subdivision)
+        .containsExactly(muharram);
+    }
+  }
+
+  @ParameterizedTest
+  @CsvSource({
+    "2020-10-30",
+    "2021-10-19",
+    "2022-10-09",
+    "2023-09-28",
+    "2024-09-16",
+    "2025-09-05",
+    "2026-08-26",
+    "2027-08-15"
+  })
+  void ensuresMiladUnNabiOnTheDateOfTheDoPTHolidayList(final LocalDate miladUnNabi) {
+    final HolidayManager holidayManager = HolidayManager.getInstance(create(INDIA));
+
+    for (final String subdivision : MILAD_UN_NABI_SUBDIVISIONS) {
+      assertThat(holidayManager.getHolidays(Year.of(miladUnNabi.getYear()), subdivision))
+        .filteredOn(holiday -> holiday.getPropertiesKey().equals("islamic.MAWLID_AN_NABI"))
+        .extracting(Holiday::getDate)
+        .as("Milad-un-Nabi in subdivision '%s'", subdivision)
+        .containsExactly(miladUnNabi);
+    }
+  }
+
+  @ParameterizedTest
+  @CsvSource({
+    "2025-04-18",
+    "2026-04-03"
+  })
+  void ensuresGoodFridayInGujaratAndMaharashtra(final LocalDate goodFriday) {
+    final HolidayManager holidayManager = HolidayManager.getInstance(create(INDIA));
+
+    for (final String subdivision : List.of("gj", "mh")) {
+      assertThat(holidayManager.getHolidays(Year.of(goodFriday.getYear()), subdivision))
+        .filteredOn(holiday -> holiday.getPropertiesKey().equals("christian.GOOD_FRIDAY"))
+        .extracting(Holiday::getDate)
+        .as("Good Friday in subdivision '%s'", subdivision)
+        .containsExactly(goodFriday);
+    }
   }
 }
