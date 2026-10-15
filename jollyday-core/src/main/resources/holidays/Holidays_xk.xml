@@ -5,32 +5,92 @@
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
   <Holidays>
-    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <!--
+      Official holidays (Law No. 03/L-064, Art. 2). If one falls on a Saturday or Sunday,
+      the next working day is a day off (Art. 4).
+    -->
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="JANUARY" day="2" descriptionPropertiesKey="NEW_YEAR">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+      <MovingCondition substitute="MONDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+    <Fixed month="JANUARY" day="7" descriptionPropertiesKey="ORTHODOX_CHRISTMAS">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
 
-    <Fixed month="FEBRUARY" day="15" descriptionPropertiesKey="DAY_OF_ASHKALI"/>
-    <Fixed month="FEBRUARY" day="17" descriptionPropertiesKey="DECLARATION_OF_INDEPENDENCE_DAY"/>
+    <Fixed month="FEBRUARY" day="17" descriptionPropertiesKey="DECLARATION_OF_INDEPENDENCE_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
 
-    <Fixed month="MARCH" day="6" descriptionPropertiesKey="VETERANS_DAY"/>
-    <Fixed month="MARCH" day="8" descriptionPropertiesKey="ROMA_DAY"/>
+    <!-- Law No. 03/L-064 entered into force on its publication in the Official Gazette on 15 June 2008 -->
+    <Fixed month="APRIL" day="9" validFrom="2009" validTo="2022" descriptionPropertiesKey="CONSTITUTION_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <!--
+      2023: Sunday 9 April was followed by Catholic Easter Monday, so the Ministry gave 10 and 11 April.
+      A substitute on the next day that is not a holiday is not supported yet, see #1511.
+    -->
+    <Fixed month="APRIL" day="9" validFrom="2023" validTo="2023" descriptionPropertiesKey="CONSTITUTION_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+    <Fixed month="APRIL" day="9" validFrom="2024" descriptionPropertiesKey="CONSTITUTION_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
 
-    <Fixed month="APRIL" day="23" descriptionPropertiesKey="DAY_OF_THE_TURKS"/>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="MAY" day="9" descriptionPropertiesKey="EUROPE_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
 
-    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
-    <Fixed month="MAY" day="6" descriptionPropertiesKey="DAY_OF_THE_GORANS"/>
-    <Fixed month="MAY" day="9" descriptionPropertiesKey="EUROPE_DAY"/>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
 
-    <Fixed month="JUNE" day="12" descriptionPropertiesKey="DAY_OF_PEACE"/>
-    <Fixed month="JUNE" day="15" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+    <!-- Memorial days (Law No. 03/L-064, Art. 5.5) are working days -->
+    <Fixed month="FEBRUARY" day="15" localizedType="OBSERVANCE" descriptionPropertiesKey="DAY_OF_ASHKALI"/>
+    <Fixed month="MARCH" day="6" localizedType="OBSERVANCE" descriptionPropertiesKey="VETERANS_DAY"/>
+    <Fixed month="APRIL" day="8" localizedType="OBSERVANCE" descriptionPropertiesKey="ROMA_DAY"/>
+    <Fixed month="APRIL" day="23" localizedType="OBSERVANCE" descriptionPropertiesKey="DAY_OF_THE_TURKS"/>
+    <Fixed month="MAY" day="6" localizedType="OBSERVANCE" descriptionPropertiesKey="DAY_OF_THE_GORANS"/>
+    <Fixed month="JUNE" day="12" localizedType="OBSERVANCE" descriptionPropertiesKey="DAY_OF_PEACE"/>
+    <Fixed month="SEPTEMBER" day="28" localizedType="OBSERVANCE" descriptionPropertiesKey="DAY_OF_BOSNIAKS"/>
+    <Fixed month="NOVEMBER" day="28" localizedType="OBSERVANCE" descriptionPropertiesKey="DAY_OF_ALBANIANS"/>
 
-    <Fixed month="SEPTEMBER" day="28" descriptionPropertiesKey="DAY_OF_BOSNIAKS"/>
+    <ChristianHoliday type="EASTER_MONDAY"/>
+    <ChristianHoliday type="EASTER_MONDAY" chronology="JULIAN" descriptionPropertiesKey="ORTHODOX_EASTER_MONDAY"/>
 
-    <Fixed month="NOVEMBER" day="28" descriptionPropertiesKey="DAY_OF_ALBANIANS"/>
-
-    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
+    <!-- Bajrami i Madh (Fitër Bajram), first day -->
+    <IslamicHoliday type="ID_AL_FITR">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </IslamicHoliday>
+    <!-- Bajrami i Vogël (Kurban Bajram), first day -->
+    <IslamicHoliday type="ID_UL_ADHA">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </IslamicHoliday>
   </Holidays>
 
   <Sources>
-    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Kosovo</Source>
+    <Source>https://gzk.rks-gov.net/ActDocumentDetail.aspx?ActID=2539</Source>
+    <Source>https://mpb.rks-gov.net/f/86/Kalendari-i-Festave-Zyrtare-</Source>
+    <Source>https://mpb.rks-gov.net/Uploads/EditorFiles/TextHtml/79/Kalendari%20festave%20zyrtare%20_%202023.pdf</Source>
+    <Source>https://mpb.rks-gov.net/Uploads/EditorFiles/TextHtml/79/Kalendari%20festave%20zyrtare%20_%202024.pdf</Source>
+    <Source>https://mpb.rks-gov.net/Uploads/EditorFiles/TextHtml/79/Kalendari%20i%20festave%202025.pdf</Source>
+    <Source>https://mpb.rks-gov.net/Uploads/EditorFiles/TextHtml/79/Festat%20zyrtare%202026.png</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:XK</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:XK</Source>
   </Sources>
