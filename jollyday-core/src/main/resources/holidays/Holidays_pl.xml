@@ -5,13 +5,24 @@
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
   <Holidays>
+    <!-- Ustawa z dnia 18 stycznia 1951 r. o dniach wolnych od pracy (Dz.U. 1951 nr 4 poz. 28) and its amendments -->
     <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
-    <Fixed month="JANUARY" day="6" descriptionPropertiesKey="EPIPHANY"/>
+    <!-- Removed by Dz.U. 1960 nr 51 poz. 297 (in force 24 Nov 1960), restored by Dz.U. 2010 nr 224 poz. 1459 (in force 1 Jan 2011) -->
+    <Fixed month="JANUARY" day="6" validTo="1960" descriptionPropertiesKey="EPIPHANY"/>
+    <Fixed month="JANUARY" day="6" validFrom="2011" descriptionPropertiesKey="EPIPHANY"/>
     <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
-    <Fixed month="MAY" day="3" descriptionPropertiesKey="CONSTITUTION_DAY"/>
-    <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
+    <!-- Restored by Dz.U. 1990 nr 28 poz. 160 (in force 28 Apr 1990) -->
+    <Fixed month="MAY" day="3" validFrom="1990" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+    <!-- Day off since the act of 22 July 1945 (Dz.U. 1945 nr 32 poz. 194, with effect from 22 Jul 1945),
+         abolished by Dz.U. 1990 nr 28 poz. 159 (in force 28 Apr 1990) -->
+    <Fixed month="JULY" day="22" validFrom="1945" validTo="1989" descriptionPropertiesKey="NATIONAL_DAY_OF_REBIRTH_OF_POLAND"/>
+    <!-- Removed by Dz.U. 1960 nr 51 poz. 297 (in force 24 Nov 1960), restored by Dz.U. 1989 nr 29 poz. 154 (in force 23 May 1989) -->
+    <Fixed month="AUGUST" day="15" validTo="1960" descriptionPropertiesKey="ASSUMPTION_DAY"/>
+    <Fixed month="AUGUST" day="15" validFrom="1989" descriptionPropertiesKey="ASSUMPTION_DAY"/>
     <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
-    <Fixed month="NOVEMBER" day="11" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <!-- Added by Dz.U. 1989 nr 29 poz. 154 (in force 23 May 1989) -->
+    <Fixed month="NOVEMBER" day="11" validFrom="1989" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <!-- Added by Dz.U. 2024 poz. 1965 (in force 1 Feb 2025) -->
     <Fixed month="DECEMBER" day="24" validFrom="2025" descriptionPropertiesKey="CHRISTMAS_EVE"/>
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
     <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS"/>
@@ -22,6 +33,7 @@
   </Holidays>
 
   <Sources>
+    <Source>https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19510040028</Source>
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Poland</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:PL</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:PL</Source>
