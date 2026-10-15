@@ -256,20 +256,20 @@ class ResourceUtilTest {
   @Test
   void ensureBaseDescriptionIsReturnedForLocaleWithoutDedicatedFileRegardlessOfDefaultLocale() {
     // The underlying JDK behavior isn't specific to Locale.ENGLISH: ANY locale without its own
-    // dedicated resource file (here: Italian, which jollyday never shipped a translation for)
+    // dedicated resource file (here: Japanese, which jollyday never shipped a translation for)
     // is affected the same way whenever the JVM default locale happens to be one that DOES have
     // a dedicated file (here: German).
     clearCaches();
     Locale.setDefault(Locale.GERMANY);
 
-    final String countryDescription = ResourceUtil.getCountryDescription(Locale.ITALIAN, "de");
+    final String countryDescription = ResourceUtil.getCountryDescription(Locale.JAPAN, "de");
     assertThat(countryDescription)
-      .as("Country description for 'de' with Locale.ITALIAN should fall back to the base (English) bundle, not German")
+      .as("Country description for 'de' with Locale.JAPAN should fall back to the base (English) bundle, not German")
       .isEqualTo("Germany");
 
-    final String holidayDescription = ResourceUtil.getHolidayDescription(Locale.ITALIAN, "NEW_YEAR");
+    final String holidayDescription = ResourceUtil.getHolidayDescription(Locale.JAPAN, "NEW_YEAR");
     assertThat(holidayDescription)
-      .as("Holiday description for 'NEW_YEAR' with Locale.ITALIAN should fall back to the base (English) bundle, not German")
+      .as("Holiday description for 'NEW_YEAR' with Locale.JAPAN should fall back to the base (English) bundle, not German")
       .isEqualTo("New Year's Day");
   }
 
