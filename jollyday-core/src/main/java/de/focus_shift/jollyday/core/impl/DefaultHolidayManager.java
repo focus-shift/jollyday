@@ -215,11 +215,12 @@ public class DefaultHolidayManager extends HolidayManager {
   private @NonNull Collection<HolidayParser> getParsers(@NonNull final HolidayConfigurations config) {
     final Collection<HolidayParser> parsers = new HashSet<>();
     try {
-      final Method[] declaredMethods = config.getClass().getDeclaredMethods();
-      for (Method declaredMethod : declaredMethods) {
-        if (declaredMethod.getGenericReturnType() instanceof ParameterizedType parameterizedType) {
+      // reflect on the exported SPI interface, not on the implementation, which might be located in a not exported package
+      final Method[] methods = HolidayConfigurations.class.getMethods();
+      for (Method method : methods) {
+        if (method.getGenericReturnType() instanceof ParameterizedType parameterizedType) {
           final Type actualTypeArgument = parameterizedType.getActualTypeArguments()[0];
-          final List<?> holidays = (List<?>) declaredMethod.invoke(config);
+          final List<?> holidays = (List<?>) method.invoke(config);
           if (!holidays.isEmpty()) {
             parsers.add(instantiateParser(actualTypeArgument.getTypeName()));
           }
