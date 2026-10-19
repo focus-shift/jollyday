@@ -9,6 +9,7 @@ import static de.focus_shift.jollyday.core.HolidayType.OBSERVANCE;
 import static de.focus_shift.jollyday.tests.CalendarCheckerApi.assertFor;
 import static java.time.DayOfWeek.MONDAY;
 import static java.time.DayOfWeek.SUNDAY;
+import static java.time.DayOfWeek.TUESDAY;
 import static java.time.Month.APRIL;
 import static java.time.Month.DECEMBER;
 import static java.time.Month.FEBRUARY;
@@ -42,7 +43,7 @@ class HolidayZWTest {
       .and()
       .hasFixedHoliday("FATHERS_DAY", JUNE, 21, OBSERVANCE).and()
       .hasFixedHoliday("MUNHUMUTAPA_DAY", SEPTEMBER, 15)
-        .validFrom(Year.of(2025))
+        .validFrom(Year.of(2026))
         .canBeMovedFrom(SUNDAY, MONDAY)
       .and()
       .hasFixedHoliday("NATIONAL_UNITY_DAY", DECEMBER, 22)
@@ -54,6 +55,7 @@ class HolidayZWTest {
       .and()
       .hasFixedHoliday("STEPHENS", DECEMBER, 26)
         .canBeMovedFrom(SUNDAY, MONDAY)
+        .canBeMovedFrom(MONDAY, TUESDAY)
       .and()
       .hasChristianHoliday("GOOD_FRIDAY").and()
       .hasChristianHoliday("EASTER_SATURDAY").and()

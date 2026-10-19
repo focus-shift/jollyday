@@ -22,7 +22,7 @@
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
     <Fixed month="JUNE" day="21" descriptionPropertiesKey="FATHERS_DAY" localizedType="OBSERVANCE"/>
-    <Fixed month="SEPTEMBER" day="15" validFrom="2025" descriptionPropertiesKey="MUNHUMUTAPA_DAY">
+    <Fixed month="SEPTEMBER" day="15" validFrom="2026" descriptionPropertiesKey="MUNHUMUTAPA_DAY">
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
     <Fixed month="DECEMBER" day="22" validFrom="1997" descriptionPropertiesKey="NATIONAL_UNITY_DAY">
@@ -33,6 +33,7 @@
     </Fixed>
     <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="STEPHENS">
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="MONDAY" with="NEXT" weekday="TUESDAY"/>
     </Fixed>
 
     <FixedWeekday which="SECOND" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="HEROES"/>
@@ -45,6 +46,7 @@
   </Holidays>
 
   <Sources>
+    <Source of="Public Holidays and Prohibition of Business Act [Chapter 10:21]">https://zimlii.org/akn/zw/act/1969/19/eng@2016-12-31</Source>
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Zimbabwe</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:ZW</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:ZW</Source>
