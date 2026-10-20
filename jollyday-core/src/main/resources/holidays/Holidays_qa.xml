@@ -29,8 +29,12 @@
     <IslamicHoliday type="ID_UL_ADHA_3"/>
   </Holidays>
 
+  <Weekend weekday="FRIDAY"/>
+  <Weekend weekday="SATURDAY"/>
+
   <Sources>
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Qatar</Source>
+    <Source of="Weekend">https://www.almeezan.qa/LawArticles.aspx?LawTreeSectionID=12648&amp;lawId=3961&amp;language=en</Source>
     <Source>https://en.wikipedia.org/wiki/Qatar_National_Day</Source>
     <Source of="National Day weekend-shift precedent (2020, Friday -> preceding Thursday)">https://thepeninsulaqatar.com/article/14/12/2020/Amiri-Diwan-announces-official-holiday-for-Qatar-National-Day-2020</Source>
     <Source of="National Day weekend-shift precedent (2021, Saturday -> following Sunday)">https://www.diwan.gov.qa/briefing-room/news/general/statements/2021/december/15/amiri-diwan-announces-qatar-national-day-holiday?sc_lang=en</Source>
