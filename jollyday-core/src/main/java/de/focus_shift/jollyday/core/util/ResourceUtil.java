@@ -157,7 +157,7 @@ public final class ResourceUtil {
       // further down the candidate chain would otherwise satisfy the request. In other words,
       // requesting e.g. Locale.ENGLISH or Locale.ITALIAN (neither has a dedicated properties file
       // here) on a JVM whose default locale happens to be one we DO ship a translation for
-      // (de, el, fr, nl, pt, sv) silently returns that translation instead of the base (English)
+      // (de, el, es, fr, nl, pt, sv) silently returns that translation instead of the base (English)
       // bundle. A resolved bundle whose locale doesn't match the requested locale's language - and
       // isn't the root locale itself - is exactly this misfire. Requesting Locale.ROOT directly is
       // never subject to this default-locale fallback, so re-querying with it recovers the

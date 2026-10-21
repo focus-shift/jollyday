@@ -279,7 +279,7 @@ Create XML holiday calendar configuration files for a new country or region. Cov
 
 Add holiday description properties for localization. Covers:
 - Base English descriptions in `holiday_descriptions.properties`
-- Localized descriptions (de, el, fr, nl, pt, sv)
+- Localized descriptions (de, el, es, fr, nl, pt, sv)
 - Key naming conventions for holiday keys
 - Common holiday keys reference
 
@@ -289,7 +289,7 @@ Add holiday description properties for localization. Covers:
 
 Add country description properties for localization. Covers:
 - Base English descriptions in `country_descriptions.properties`
-- Localized country descriptions (de, el, fr, nl, pt, sv)
+- Localized country descriptions (de, el, es, fr, nl, pt, sv)
 - ISO 3166-1 alpha-2 country code conventions
 - Multi-language localization examples
 
