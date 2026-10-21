@@ -161,6 +161,9 @@
     <Fixed month="MAY" day="18" validFrom="2022" validTo="2022" descriptionPropertiesKey="NATIONAL_CENSUS_DAY"/>
     <Fixed month="DECEMBER" day="20" validFrom="2022" validTo="2022" descriptionPropertiesKey="WORLD_CUP_VICTORY_CELEBRATION"/>
 
+    <!-- Visit of Pope Leo XIV (Decree 1103/2026): national feriado on 9 November, regional ones on 10 and 11 November -->
+    <Fixed month="NOVEMBER" day="9" validFrom="2026" validTo="2026" descriptionPropertiesKey="PAPAL_VISIT"/>
+
     <FixedWeekday which="THIRD" weekday="MONDAY" month="JUNE" validFrom="1995" validTo="2010" descriptionPropertiesKey="FLAG_DAY"/>
     <FixedWeekday which="THIRD" weekday="MONDAY" month="AUGUST" validFrom="1995" validTo="2010" descriptionPropertiesKey="MARTIN_DAY"/>
     <FixedWeekday which="THIRD" weekday="MONDAY" month="AUGUST" validFrom="2012" validTo="2016" descriptionPropertiesKey="MARTIN_DAY"/>
@@ -180,6 +183,7 @@
     <Source>https://www.argentina.gob.ar/normativa/nacional/ley-27399-281835/normas-modifican</Source>
     <Source>https://www.argentina.gob.ar/normativa/nacional/norma-174389/normas-modifican</Source>
     <Source>https://www.argentina.gob.ar/normativa/nacional/ley-23555-20986/normas-modifican</Source>
+    <Source>https://www.boletinoficial.gob.ar/detalleAviso/primera/348022/20260928</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:AR</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:AR</Source>
   </Sources>
@@ -188,10 +192,16 @@
     <Holidays/>
   </SubConfigurations>
   <SubConfigurations hierarchy="b" description="Buenos Aires">
-    <Holidays/>
+    <Holidays>
+      <!-- Visit of Pope Leo XIV (Decree 1103/2026) -->
+      <Fixed month="NOVEMBER" day="11" validFrom="2026" validTo="2026" descriptionPropertiesKey="PAPAL_VISIT"/>
+    </Holidays>
   </SubConfigurations>
   <SubConfigurations hierarchy="c" description="Ciudad Autónoma de Buenos Aires">
-    <Holidays/>
+    <Holidays>
+      <!-- Visit of Pope Leo XIV (Decree 1103/2026) -->
+      <Fixed month="NOVEMBER" day="10" validFrom="2026" validTo="2026" descriptionPropertiesKey="PAPAL_VISIT"/>
+    </Holidays>
   </SubConfigurations>
   <SubConfigurations hierarchy="d" description="San Luis">
     <Holidays/>
@@ -248,7 +258,10 @@
     <Holidays/>
   </SubConfigurations>
   <SubConfigurations hierarchy="x" description="Córdoba">
-    <Holidays/>
+    <Holidays>
+      <!-- Visit of Pope Leo XIV (Decree 1103/2026) -->
+      <Fixed month="NOVEMBER" day="10" validFrom="2026" validTo="2026" descriptionPropertiesKey="PAPAL_VISIT"/>
+    </Holidays>
   </SubConfigurations>
   <SubConfigurations hierarchy="y" description="Jujuy">
     <Holidays/>
