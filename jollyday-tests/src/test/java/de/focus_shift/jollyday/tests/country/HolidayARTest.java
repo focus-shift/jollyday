@@ -212,8 +212,34 @@ class HolidayARTest {
   void ensuresOneOffHolidays() {
     assertFor(ARGENTINA)
       .hasFixedHoliday("NATIONAL_CENSUS_DAY", MAY, 18).validBetween(Year.of(2022), Year.of(2022)).and()
-      .hasFixedHoliday("WORLD_CUP_VICTORY_CELEBRATION", DECEMBER, 20).validBetween(Year.of(2022), Year.of(2022))
+      .hasFixedHoliday("WORLD_CUP_VICTORY_CELEBRATION", DECEMBER, 20).validBetween(Year.of(2022), Year.of(2022)).and()
+      .hasFixedHoliday("PAPAL_VISIT", NOVEMBER, 9).validBetween(Year.of(2026), Year.of(2026))
       .check();
+  }
+
+  @Test
+  void ensuresRegionalPapalVisitHolidays() {
+    assertFor(ARGENTINA)
+      .hasFixedHoliday("PAPAL_VISIT", NOVEMBER, 10)
+        .inSubdivision("c")
+        .validBetween(Year.of(2026), Year.of(2026)).and()
+      .hasFixedHoliday("PAPAL_VISIT", NOVEMBER, 10)
+        .inSubdivision("x")
+        .validBetween(Year.of(2026), Year.of(2026)).and()
+      .hasFixedHoliday("PAPAL_VISIT", NOVEMBER, 11)
+        .inSubdivision("b")
+        .validBetween(Year.of(2026), Year.of(2026))
+      .check();
+  }
+
+  @Test
+  void ensuresRegionalPapalVisitHolidaysOnlyApplyInTheirSubdivisions() {
+    final HolidayManager holidayManager = HolidayManager.getInstance(create(ARGENTINA));
+    assertThat(holidayManager.isHoliday(LocalDate.of(2026, NOVEMBER, 10))).isFalse();
+    assertThat(holidayManager.isHoliday(LocalDate.of(2026, NOVEMBER, 10), "b")).isFalse();
+    assertThat(holidayManager.isHoliday(LocalDate.of(2026, NOVEMBER, 11))).isFalse();
+    assertThat(holidayManager.isHoliday(LocalDate.of(2026, NOVEMBER, 11), "c")).isFalse();
+    assertThat(holidayManager.isHoliday(LocalDate.of(2026, NOVEMBER, 11), "x")).isFalse();
   }
 
   @Test
@@ -341,6 +367,7 @@ class HolidayARTest {
       observance(2026, JULY, 10, "TOURIST_HOLIDAY"),
       publicHoliday(2026, AUGUST, 17, "MARTIN_DAY"),
       publicHoliday(2026, OCTOBER, 12, "COLUMBUS_DAY"),
+      publicHoliday(2026, NOVEMBER, 9, "PAPAL_VISIT"),
       publicHoliday(2026, NOVEMBER, 23, "NATIONAL_SOVEREIGNTY_DAY"),
       observance(2026, DECEMBER, 7, "TOURIST_HOLIDAY"),
       publicHoliday(2026, DECEMBER, 8, "IMMACULATE_CONCEPTION"),
