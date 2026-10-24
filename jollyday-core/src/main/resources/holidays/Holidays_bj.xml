@@ -5,17 +5,30 @@
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
   <Holidays>
+    <!-- Legal holidays (Law 90-019, art. 1) -->
     <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
-    <Fixed month="JANUARY" day="10" descriptionPropertiesKey="TRADITIONAL_DAY"/>
     <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
-    <Fixed month="AUGUST" day="1" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <Fixed month="AUGUST" day="1" descriptionPropertiesKey="NATIONAL_DAY"/>
     <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_DAY"/>
-    <Fixed month="OCTOBER" day="26" descriptionPropertiesKey="ARMED_FORCES_DAY"/>
     <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
-    <Fixed month="NOVEMBER" day="30" descriptionPropertiesKey="NATIONAL_DAY"/>
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY"/>
-    <ChristianHoliday type="EASTER"/>
+
+    <!-- National Days (Law 90-019, art. 3) are working days -->
+    <Fixed month="JANUARY" day="16" localizedType="OBSERVANCE" descriptionPropertiesKey="REMEMBRANCE"/>
+    <Fixed month="FEBRUARY" day="28" localizedType="OBSERVANCE" descriptionPropertiesKey="PEOPLES_SOVEREIGNTY_DAY"/>
+    <Fixed month="MARCH" day="8" localizedType="OBSERVANCE" descriptionPropertiesKey="WOMENS_DAY"/>
+
+    <!--
+      Vodoun Festival: 10 January from 1998 (Law 97-031), then the second Friday of January
+      and the Thursday before it from 2025 (Law 2024-32, art. 3).
+    -->
+    <Fixed month="JANUARY" day="10" validFrom="1998" validTo="2024" descriptionPropertiesKey="VODOUN_FESTIVAL"/>
+    <RelativeToWeekdayInMonth weekday="THURSDAY" when="BEFORE" validFrom="2025" descriptionPropertiesKey="VODOUN_FESTIVAL">
+      <FixedWeekday which="SECOND" weekday="FRIDAY" month="JANUARY"/>
+    </RelativeToWeekdayInMonth>
+    <FixedWeekday which="SECOND" weekday="FRIDAY" month="JANUARY" validFrom="2025" descriptionPropertiesKey="VODOUN_FESTIVAL"/>
+
+    <!-- Christian and Islamic legal holidays (Law 90-019, art. 1) -->
     <ChristianHoliday type="EASTER_MONDAY"/>
     <ChristianHoliday type="ASCENSION_DAY"/>
     <ChristianHoliday type="WHIT_MONDAY"/>
@@ -25,6 +38,11 @@
   </Holidays>
 
   <Sources>
+    <Source>https://sgg.gouv.bj/doc/loi-90-019/</Source>
+    <Source>https://sgg.gouv.bj/doc/loi-97-031/</Source>
+    <Source>https://sgg.gouv.bj/doc/loi-2024-32/</Source>
+    <Source>https://beninwebtv.bj/benin-les-journees-du-09-et-10-janvier-2025-declarees-feriees-chomees-et-payees/</Source>
+    <Source>https://beninwebtv.bj/benin-les-journees-du-8-et-9-janvier-2026-declarees-feriees/</Source>
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Benin</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:BJ</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:BJ</Source>
