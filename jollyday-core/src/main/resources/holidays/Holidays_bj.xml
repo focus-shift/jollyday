@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+s c<?xml version="1.0" encoding="UTF-8"?>
 
 <Configuration hierarchy="bj" description="Benin"
                xmlns="https://focus_shift.de/jollyday/schema/holiday"
@@ -14,9 +14,9 @@
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
 
     <!-- National Days (Law 90-019, art. 3) are working days -->
-    <Fixed month="JANUARY" day="16" localizedType="OBSERVANCE" descriptionPropertiesKey="REMEMBRANCE"/>
-    <Fixed month="FEBRUARY" day="28" localizedType="OBSERVANCE" descriptionPropertiesKey="PEOPLES_SOVEREIGNTY_DAY"/>
-    <Fixed month="MARCH" day="8" localizedType="OBSERVANCE" descriptionPropertiesKey="WOMENS_DAY"/>
+    <Fixed month="JANUARY" day="16" validFrom="1990" localizedType="OBSERVANCE" descriptionPropertiesKey="REMEMBRANCE"/>
+    <Fixed month="FEBRUARY" day="28" validFrom="1990" localizedType="OBSERVANCE" descriptionPropertiesKey="PEOPLES_SOVEREIGNTY_DAY"/>
+    <Fixed month="MARCH" day="8" validFrom="1990" localizedType="OBSERVANCE" descriptionPropertiesKey="WOMENS_DAY"/>
 
     <!--
       Vodoun Festival: 10 January from 1998 (Law 97-031), then the second Friday of January

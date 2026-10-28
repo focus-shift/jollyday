@@ -65,9 +65,15 @@ class HolidayBJTest {
         .notValidBetween(YEAR_FROM, Year.of(1997))
         .validBetween(Year.of(2025), YEAR_TO).and()
       // National Days (Law 90-019, art. 3) are working days
-      .hasFixedHoliday("REMEMBRANCE", JANUARY, 16, OBSERVANCE).validBetween(YEAR_FROM, YEAR_TO).and()
-      .hasFixedHoliday("PEOPLES_SOVEREIGNTY_DAY", FEBRUARY, 28, OBSERVANCE).validBetween(YEAR_FROM, YEAR_TO).and()
-      .hasFixedHoliday("WOMENS_DAY", MARCH, 8, OBSERVANCE).validBetween(YEAR_FROM, YEAR_TO)
+      .hasFixedHoliday("REMEMBRANCE", JANUARY, 16, OBSERVANCE)
+        .notValidBetween(YEAR_FROM, Year.of(1989))
+        .validBetween(Year.of(1990), YEAR_TO).and()
+      .hasFixedHoliday("PEOPLES_SOVEREIGNTY_DAY", FEBRUARY, 28, OBSERVANCE)
+        .notValidBetween(YEAR_FROM, Year.of(1989))
+        .validBetween(Year.of(1990), YEAR_TO).and()
+      .hasFixedHoliday("WOMENS_DAY", MARCH, 8, OBSERVANCE)
+        .notValidBetween(YEAR_FROM, Year.of(1989))
+        .validBetween(Year.of(1990), YEAR_TO)
       .check();
   }
 
