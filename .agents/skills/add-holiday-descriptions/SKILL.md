@@ -39,6 +39,7 @@ Add entries to locale-specific files:
 | `holiday_descriptions_el.properties` | Greek      |
 | `holiday_descriptions_es.properties` | Spanish    |
 | `holiday_descriptions_fr.properties` | French     |
+| `holiday_descriptions_it.properties` | Italian    |
 | `holiday_descriptions_nl.properties` | Dutch      |
 | `holiday_descriptions_pt.properties` | Portuguese |
 | `holiday_descriptions_sv.properties` | Swedish    |
