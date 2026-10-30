@@ -3,6 +3,7 @@ package de.focus_shift.jollyday.tests.country;
 import org.junit.jupiter.api.Test;
 
 import static de.focus_shift.jollyday.core.HolidayCalendar.SOUTH_AFRICA;
+import static de.focus_shift.jollyday.core.spi.Occurrence.SECOND;
 import static de.focus_shift.jollyday.tests.CalendarCheckerApi.assertFor;
 import static java.time.DayOfWeek.MONDAY;
 import static java.time.DayOfWeek.SUNDAY;
@@ -10,6 +11,7 @@ import static java.time.Month.APRIL;
 import static java.time.Month.AUGUST;
 import static java.time.Month.DECEMBER;
 import static java.time.Month.JANUARY;
+import static java.time.Month.JULY;
 import static java.time.Month.JUNE;
 import static java.time.Month.MARCH;
 import static java.time.Month.MAY;
@@ -76,6 +78,10 @@ class HolidayZATest {
       .hasFixedHoliday("HERITAGE", SEPTEMBER, 24)
         .canBeMovedFrom(SUNDAY, MONDAY)
       .and()
+      .hasFixedWeekdayHoliday("QUEENS_BIRTHDAY", SECOND, MONDAY, JULY)
+        .validBetween(of(1952), of(1960)).and()
+      .hasFixedWeekdayHoliday("FAMILY_DAY", SECOND, MONDAY, JULY)
+        .validBetween(of(1961), of(1972)).and()
       .hasFixedHoliday("KRUGER", OCTOBER, 10)
         .validBetween(of(1952), of(1993))
       .and()
