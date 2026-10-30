@@ -7,21 +7,45 @@
   <Holidays>
     <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
     <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
-    <Fixed month="MAY" day="4" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <Fixed month="MAY" day="4" validTo="2006" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <Fixed month="MAY" day="4" validFrom="2007" descriptionPropertiesKey="INDEPENDENCE_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="MAY" day="29" validFrom="2023" validTo="2023" descriptionPropertiesKey="ICE_HOCKEY_BRONZE_MEDAL"/>
     <Fixed month="JUNE" day="23" descriptionPropertiesKey="MIDSUMMER_EVE"/>
     <Fixed month="JUNE" day="24" descriptionPropertiesKey="MIDSUMMER"/>
-    <Fixed month="NOVEMBER" day="18" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <!-- Final day of the Nationwide Latvian Song and Dance Celebration, a holiday since 2014; the
+         date is set per celebration, so each one is listed once it is known (next one in 2028). -->
+    <Fixed month="JULY" day="8" validFrom="2018" validTo="2018" descriptionPropertiesKey="SONG_AND_DANCE_CELEBRATION">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="JULY" day="9" validFrom="2023" validTo="2023" descriptionPropertiesKey="SONG_AND_DANCE_CELEBRATION">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="SEPTEMBER" day="24" validFrom="2018" validTo="2018" descriptionPropertiesKey="PAPAL_VISIT"/>
+    <Fixed month="NOVEMBER" day="18" validTo="2006" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <Fixed month="NOVEMBER" day="18" validFrom="2007" descriptionPropertiesKey="INDEPENDENCE_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
     <Fixed month="DECEMBER" day="24" descriptionPropertiesKey="CHRISTMAS_EVE"/>
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
     <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY"/>
     <Fixed month="DECEMBER" day="31" descriptionPropertiesKey="NEW_YEARS_EVE"/>
+    <FixedWeekday which="SECOND" weekday="SUNDAY" month="MAY" descriptionPropertiesKey="MOTHERS_DAY"/>
     <ChristianHoliday type="EASTER"/>
     <ChristianHoliday type="EASTER_MONDAY"/>
     <ChristianHoliday type="GOOD_FRIDAY"/>
+    <ChristianHoliday type="PENTECOST"/>
   </Holidays>
 
   <Sources>
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Latvia</Source>
+    <Source of="Par svētku, atceres un atzīmējamām dienām (English, consolidated as of 18 March 2025)">https://www.vvc.gov.lv/lv/media/21476/download</Source>
+    <Source of="Grozījumi likumā Par svētku, atceres un atzīmējamām dienām, 24 May 2007 (weekend substitute)">https://www.vestnesis.lv/ta/id/158621</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:LV</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:LV</Source>
     <Source of="Par svētku, atceres un atzīmējamām dienām, 1. pants">https://likumi.lv/ta/id/72608-par-svetku-atceres-un-atzimejamam-dienam</Source>
