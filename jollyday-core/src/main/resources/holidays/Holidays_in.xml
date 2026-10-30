@@ -326,7 +326,6 @@
       <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
       <Fixed month="APRIL" day="14" descriptionPropertiesKey="AMBEDKAR_JAYANTI"/>
       <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="KARNATAKA_RAJYOTSAVA"/>
-      <Fixed month="NOVEMBER" day="5"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
       <Fixed month="AUGUST" day="30" validFrom="2020" validTo="2020" descriptionPropertiesKey="islamic.ASCHURA"/>
       <Fixed month="AUGUST" day="19" validFrom="2021" validTo="2021" descriptionPropertiesKey="islamic.ASCHURA"/>
@@ -719,7 +718,6 @@
   <SubConfigurations hierarchy="up" description="Uttar Pradesh">
     <Holidays>
       <Fixed month="APRIL" day="14" descriptionPropertiesKey="AMBEDKAR_JAYANTI"/>
-      <Fixed month="MARCH" day="15"/>
       <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
       <Fixed month="AUGUST" day="30" validFrom="2020" validTo="2020" descriptionPropertiesKey="islamic.ASCHURA"/>
       <Fixed month="AUGUST" day="19" validFrom="2021" validTo="2021" descriptionPropertiesKey="islamic.ASCHURA"/>
