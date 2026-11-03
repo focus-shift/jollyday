@@ -9,8 +9,7 @@
          Nederland's official holiday list): these ten days are observed territory-wide across
          all three public bodies (Bonaire, Sint Eustatius, Saba). Island-specific additions are
          designated per island in Regeling feestdagen ambtenaren BES, Art. 1-3, and modeled as
-         SubConfigurations below (Sint Eustatius, "se", and Saba, "sa"; Bonaire is not yet
-         modeled and is tracked by its own separate GitHub issue). -->
+         SubConfigurations below (Bonaire, "bo", Sint Eustatius, "se", and Saba, "sa"). -->
     <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
 
     <!-- Dutch royal tradition: if 27 April falls on a Sunday, King's Day moves backward to the
@@ -44,7 +43,17 @@
   </Sources>
 
   <SubConfigurations hierarchy="bo" description="Bonaire">
-    <Holidays/>
+    <Holidays>
+      <!-- Regeling feestdagen ambtenaren BES, Art. 1: "30 april als zijnde Dia di Rincon en
+           6 september als zijnde Dia di Himno y Bandera" (called "Dia di Boneiru" by Rijksdienst
+           Caribisch Nederland). The Regeling is in force since 2020; no weekend substitute. -->
+      <Fixed month="APRIL" day="30" validFrom="2020" descriptionPropertiesKey="RINCON_DAY"/>
+      <Fixed month="SEPTEMBER" day="6" descriptionPropertiesKey="BONAIRE_DAY"/>
+    </Holidays>
+
+    <Sources>
+      <Source of="Regeling feestdagen ambtenaren BES, Art. 1">https://wetten.overheid.nl/BWBR0042980</Source>
+    </Sources>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="se" description="Sint Eustatius">
@@ -70,10 +79,15 @@
   <SubConfigurations hierarchy="sa" description="Saba">
     <Holidays>
       <!-- Regeling feestdagen ambtenaren BES, Art. 3: "de dag, vallende na de op Saba gehouden
-           carnavalsoptocht" (the day following Saba's Carnival parade); empirically consistently
-           the last Monday of July (confirmed 2022, 2023, 2025, 2026 via sabagov.nl and
-           officeholidays.com). -->
-      <FixedWeekday which="LAST" weekday="MONDAY" month="JULY" descriptionPropertiesKey="CARNIVAL_MONDAY"/>
+           carnavalsoptocht" (the day following Saba's Carnival parade). The parade date is set
+           every year, so no weekday rule fits: 2024 the 4th Monday of July, 2025 and 2026 the
+           1st Monday of August (sabagov.nl). Add each new year once Saba publishes it. Up to
+           2023 the earlier last-Monday-of-July rule is kept, as no official date was found. -->
+      <Fixed month="JULY" day="22" validFrom="2024" validTo="2024" descriptionPropertiesKey="CARNIVAL_MONDAY"/>
+      <Fixed month="AUGUST" day="4" validFrom="2025" validTo="2025" descriptionPropertiesKey="CARNIVAL_MONDAY"/>
+      <Fixed month="AUGUST" day="3" validFrom="2026" validTo="2026" descriptionPropertiesKey="CARNIVAL_MONDAY"/>
+
+      <FixedWeekday which="LAST" weekday="MONDAY" month="JULY" validTo="2023" descriptionPropertiesKey="CARNIVAL_MONDAY"/>
 
       <!-- Regeling feestdagen ambtenaren BES, Art. 3: "de eerste vrijdag van december als zijnde
            Saba Day" (first Friday of December) - commemorates the adoption of the Saba flag in
@@ -88,6 +102,8 @@
       <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Saba</Source>
       <Source of="Regeling feestdagen ambtenaren BES, Art. 3">https://wetten.overheid.nl/BWBR0042980</Source>
       <Source of="Public Entity Saba">https://www.sabagov.nl/residents-visitors/public-holidays</Source>
+      <Source of="Public Entity Saba, Official Public Holidays 2025 (Updated)">https://www.sabagov.nl/management-organization/office-of-communication-public-relations/public-notices/carnival-monday-august-4th</Source>
+      <Source of="Public Entity Saba, Carnival 2024 parades">https://www.sabagov.nl/news/parking-interruptions-during-carnival</Source>
     </Sources>
   </SubConfigurations>
 </Configuration>
