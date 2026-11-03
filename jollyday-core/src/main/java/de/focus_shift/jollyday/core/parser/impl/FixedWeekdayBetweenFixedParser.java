@@ -11,6 +11,7 @@ import org.jspecify.annotations.NonNull;
 
 import java.time.Year;
 import java.util.List;
+import java.util.stream.Stream;
 
 /**
  * Parses the configuration for fixed weekdays between two fixed dates.
@@ -21,12 +22,12 @@ public class FixedWeekdayBetweenFixedParser implements HolidayParser {
   public @NonNull List<Holiday> parse(@NonNull final Year year, @NonNull final HolidayConfigurations holidays) {
     return holidays.fixedWeekdayBetweenFixed().stream()
       .filter(new ValidLimitation(year))
-      .map(fwm -> new DescribedDateHolder(fwm,
+      .flatMap(fwm -> Stream.ofNullable(
           new FindWeekDayBetween(
             new FixedToLocalDate(year).apply(fwm.from()),
             new FixedToLocalDate(year).apply(fwm.to())
           ).apply(fwm)
-        )
+        ).map(date -> new DescribedDateHolder(fwm, date))
       )
       .map(holder -> new CreateHoliday(holder.getActualDate()).apply(holder.getDescribed()))
       .toList();
