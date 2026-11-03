@@ -35,6 +35,7 @@ Add entries to locale-specific files:
 | `country_descriptions_el.properties` | Greek      |
 | `country_descriptions_es.properties` | Spanish    |
 | `country_descriptions_fr.properties` | French     |
+| `country_descriptions_it.properties` | Italian    |
 | `country_descriptions_nl.properties` | Dutch      |
 | `country_descriptions_pt.properties` | Portuguese |
 | `country_descriptions_sv.properties` | Swedish    |

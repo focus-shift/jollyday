@@ -292,7 +292,7 @@ class ResourceUtilTest {
     Locale.setDefault(Locale.GERMANY);
 
     ResourceUtil.getCountryDescription(Locale.ENGLISH, "de");
-    ResourceUtil.getHolidayDescription(Locale.ITALIAN, "NEW_YEAR");
+    ResourceUtil.getHolidayDescription(Locale.JAPANESE, "NEW_YEAR");
 
     assertThat(Locale.getDefault())
       .as("Resolving descriptions must never change the JVM-wide default locale as a side effect")
