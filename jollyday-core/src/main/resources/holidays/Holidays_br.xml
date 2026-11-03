@@ -23,6 +23,8 @@
 
   <Sources>
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Brazil</Source>
+    <Source>https://pt.wikipedia.org/wiki/Feriados_no_Brasil</Source>
+    <Source>https://propessoas.ufg.br/n/197526-calendario-de-feriados-e-pontos-facultativos-de-2026</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:BR</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:BR</Source>
   </Sources>
@@ -116,64 +118,162 @@
 
   <SubConfigurations hierarchy="go" description="Goiás">
     <Holidays>
+      <!-- Lei Estadual (GO) 20.756/2020, art. 269, II: state holidays -->
+      <Fixed month="JULY" day="26" descriptionPropertiesKey="ST_ANNE"/>
       <Fixed month="OCTOBER" day="24" descriptionPropertiesKey="FOUNDATION"/>
+      <Fixed month="OCTOBER" day="28" descriptionPropertiesKey="PUBLIC_SERVANT_DAY"/>
     </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="pe" description="Pernambuco">
     <Holidays>
-      <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="LADY_CONCEICAO"/>
+      <!-- Lei Estadual (PE) 16.059/2017 and 16.241/2017: Pernambucan Revolution of 1817 (Data Magna) -->
+      <Fixed month="MARCH" day="6" validFrom="2018" descriptionPropertiesKey="PERNAMBUCAN_REVOLUTION"/>
     </Holidays>
+    <SubConfigurations hierarchy="rec" description="Recife">
+      <Holidays>
+        <!-- Lei Municipal (Recife) 9.777/1967 -->
+        <Fixed month="JUNE" day="24" descriptionPropertiesKey="ST_JOHN"/>
+        <Fixed month="JULY" day="16" descriptionPropertiesKey="LADY_CARMO"/>
+        <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="LADY_CONCEICAO"/>
+      </Holidays>
+    </SubConfigurations>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="pb" description="Paraíba">
     <Holidays>
-      <Fixed month="JULY" day="26" descriptionPropertiesKey="JOAO_PESSOA_DAY"/>
-      <Fixed month="AUGUST" day="5" descriptionPropertiesKey="FOUNDATION"/>
+      <!-- Lei Estadual (PB) 10.601/2015: Data Magna -->
+      <Fixed month="AUGUST" day="5" validFrom="2016" descriptionPropertiesKey="FOUNDATION"/>
     </Holidays>
 
     <SubConfigurations hierarchy="jpa" description="João Pessoa">
       <Holidays>
         <Fixed month="JUNE" day="24" descriptionPropertiesKey="ST_JOHN"/>
+        <!-- Lei Municipal (João Pessoa) 8.805/1999: city anniversary, a state holiday since 2016 -->
+        <Fixed month="AUGUST" day="5" validTo="2015" descriptionPropertiesKey="FOUNDATION"/>
         <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="LADY_CONCEICAO"/>
       </Holidays>
     </SubConfigurations>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="ac" description="Acre">
-    <Holidays/>
+    <Holidays>
+      <!-- Lei Estadual (AC) 2.126/2009: holidays falling on Tuesday-Thursday are observed on the following Friday, except June 15; an approximation, the yearly decree moves differently when two holidays share a week -->
+      <!-- Lei Estadual (AC) 3.137/2016 (Catholic Day, validFrom=2017) -->
+      <Fixed month="JANUARY" day="20" validFrom="2017" descriptionPropertiesKey="CATHOLIC_DAY">
+        <MovingCondition substitute="TUESDAY" with="NEXT" weekday="FRIDAY"/>
+        <MovingCondition substitute="WEDNESDAY" with="NEXT" weekday="FRIDAY"/>
+        <MovingCondition substitute="THURSDAY" with="NEXT" weekday="FRIDAY"/>
+      </Fixed>
+      <!-- Lei Estadual (AC) 1.538/2004 (Evangelical Day) -->
+      <Fixed month="JANUARY" day="23" descriptionPropertiesKey="EVANGELICAL_DAY">
+        <MovingCondition substitute="TUESDAY" with="NEXT" weekday="FRIDAY"/>
+        <MovingCondition substitute="WEDNESDAY" with="NEXT" weekday="FRIDAY"/>
+        <MovingCondition substitute="THURSDAY" with="NEXT" weekday="FRIDAY"/>
+      </Fixed>
+      <!-- Lei Estadual (AC) 1.411/2001 (International Women's Day) -->
+      <Fixed month="MARCH" day="8" descriptionPropertiesKey="INTERNATIONAL_WOMAN">
+        <MovingCondition substitute="TUESDAY" with="NEXT" weekday="FRIDAY"/>
+        <MovingCondition substitute="WEDNESDAY" with="NEXT" weekday="FRIDAY"/>
+        <MovingCondition substitute="THURSDAY" with="NEXT" weekday="FRIDAY"/>
+      </Fixed>
+      <!-- Lei Estadual (AC) 14/1964: state anniversary (Data Magna); explicitly exempt from the transfer rule -->
+      <Fixed month="JUNE" day="15" descriptionPropertiesKey="FOUNDATION"/>
+      <!-- Lei Estadual (AC) 243/1968 (Amazon Day) -->
+      <Fixed month="SEPTEMBER" day="5" descriptionPropertiesKey="AMAZON_DAY">
+        <MovingCondition substitute="TUESDAY" with="NEXT" weekday="FRIDAY"/>
+        <MovingCondition substitute="WEDNESDAY" with="NEXT" weekday="FRIDAY"/>
+        <MovingCondition substitute="THURSDAY" with="NEXT" weekday="FRIDAY"/>
+      </Fixed>
+      <!-- Lei Estadual (AC) 57/1965 (Signing of the Treaty of Petrópolis) -->
+      <Fixed month="NOVEMBER" day="17" descriptionPropertiesKey="TREATY_OF_PETROPOLIS">
+        <MovingCondition substitute="TUESDAY" with="NEXT" weekday="FRIDAY"/>
+        <MovingCondition substitute="WEDNESDAY" with="NEXT" weekday="FRIDAY"/>
+        <MovingCondition substitute="THURSDAY" with="NEXT" weekday="FRIDAY"/>
+      </Fixed>
+    </Holidays>
+    <Sources>
+      <Source>https://www.tjac.jus.br/adm/calendarios/calendario-2026/</Source>
+    </Sources>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="al" description="Alagoas">
-    <Holidays/>
+    <Holidays>
+      <!-- Lei Estadual (AL) 5.508/1993 -->
+      <Fixed month="JUNE" day="24" descriptionPropertiesKey="ST_JOHN"/>
+      <!-- Lei Estadual (AL) 5.509/1993 -->
+      <Fixed month="JUNE" day="29" descriptionPropertiesKey="ST_PETER"/>
+      <!-- Lei Estadual (AL) 5.724/1995: Data Magna -->
+      <Fixed month="SEPTEMBER" day="16" descriptionPropertiesKey="POLITICAL_EMANCIPATION"/>
+      <!-- Lei Estadual (AL) 7.530/2013, first applied by decree in 2017 for 2018 -->
+      <Fixed month="NOVEMBER" day="30" validFrom="2018" descriptionPropertiesKey="EVANGELICAL_DAY"/>
+    </Holidays>
+    <Sources>
+      <Source>https://www.legisweb.com.br/legislacao/?id=488778</Source>
+    </Sources>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="am" description="Amazonas">
-    <Holidays/>
+    <Holidays>
+      <!-- Lei Promulgada (AM) 25/1977: elevation of Amazonas to the category of Province (Data Magna) -->
+      <Fixed month="SEPTEMBER" day="5" descriptionPropertiesKey="FOUNDATION"/>
+    </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="ap" description="Amapá">
-    <Holidays/>
+    <Holidays>
+      <!-- Lei Estadual (AP) 667/2002: St. Joseph, patron saint of Amapá -->
+      <Fixed month="MARCH" day="19" descriptionPropertiesKey="ST_JOSEPH"/>
+      <!-- Lei Estadual (AP) 2.213/2017 as cited by TRE-AP portarias: Cabralzinho Day -->
+      <Fixed month="MAY" day="15" validFrom="2017" descriptionPropertiesKey="CABRALZINHO_DAY"/>
+      <!-- Data Magna: creation of the Federal Territory of Amapá -->
+      <Fixed month="SEPTEMBER" day="13" descriptionPropertiesKey="FOUNDATION"/>
+    </Holidays>
+    <Sources>
+      <Source>https://www.trf1.jus.br/sjap/institucional/expediente-forense</Source>
+      <Source>https://portal.mpap.mp.br/calendario/</Source>
+    </Sources>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="ba" description="Bahia">
-    <Holidays/>
+    <Holidays>
+      <!-- Art. 6º §3º of the state constitution: Independence of Bahia (Data Magna) -->
+      <Fixed month="JULY" day="2" descriptionPropertiesKey="BAHIA_INDEPENDENCE"/>
+    </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="ce" description="Ceará">
-    <Holidays/>
+    <Holidays>
+      <!-- Art. 18 of the state constitution (EC 73/2011): abolition of slavery in Ceará in 1884 (Data Magna) -->
+      <Fixed month="MARCH" day="25" validFrom="2012" descriptionPropertiesKey="ABOLITION_OF_SLAVERY"/>
+    </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="df" description="Distrito Federal">
-    <Holidays/>
+    <Holidays>
+      <!-- Lei Distrital (DF) 963/1995 -->
+      <Fixed month="NOVEMBER" day="30" descriptionPropertiesKey="EVANGELICAL_DAY"/>
+    </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="es" description="Espírito Santo">
-    <Holidays/>
+    <Holidays>
+      <!-- Lei Estadual (ES) 11.010/2019: Our Lady of Penha (Data Magna), the Monday eight days after Easter -->
+      <RelativeToEasterSunday descriptionPropertiesKey="LADY_PENHA">
+        <chronology>GREGORIAN</chronology>
+        <days>8</days>
+      </RelativeToEasterSunday>
+    </Holidays>
+    <Sources>
+      <Source>https://der.es.gov.br/feriados-e-pontos-facultativos-2026</Source>
+    </Sources>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="ma" description="Maranhão">
-    <Holidays/>
+    <Holidays>
+      <!-- Lei Estadual (MA) 2.457/1964: adhesion of Maranhão to the independence of Brazil (Data Magna) -->
+      <Fixed month="JULY" day="28" descriptionPropertiesKey="ADHESION_TO_INDEPENDENCE"/>
+    </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="mt" description="Mato Grosso">
@@ -181,30 +281,68 @@
   </SubConfigurations>
 
   <SubConfigurations hierarchy="pa" description="Pará">
-    <Holidays/>
+    <Holidays>
+      <!-- Lei Estadual (PA) 5.999/1996: adhesion of Pará to the independence of Brazil (Data Magna) -->
+      <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ADHESION_TO_INDEPENDENCE"/>
+    </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="pi" description="Piauí">
-    <Holidays/>
+    <Holidays>
+      <!-- Lei Estadual (PI) 176/1937: Piauí Day (Data Magna) -->
+      <Fixed month="OCTOBER" day="19" descriptionPropertiesKey="PIAUI_DAY"/>
+    </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="ro" description="Rondônia">
-    <Holidays/>
+    <Holidays>
+      <!-- Lei Estadual (RO) 2.291/2010: creation of the state (Data Magna) -->
+      <Fixed month="JANUARY" day="4" descriptionPropertiesKey="FOUNDATION"/>
+    </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="rr" description="Roraima">
-    <Holidays/>
+    <Holidays>
+      <!-- Art. 9 of the state constitution: creation of the state (Data Magna) -->
+      <Fixed month="OCTOBER" day="5" descriptionPropertiesKey="FOUNDATION"/>
+    </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="sc" description="Santa Catarina">
-    <Holidays/>
+    <Holidays>
+      <!-- Lei Estadual (SC) 10.306/1996 as amended by Lei 18.531/2022: observed on the following Sunday unless it falls on a Sunday -->
+      <Fixed month="AUGUST" day="11" descriptionPropertiesKey="SANTA_CATARINA_DAY">
+        <MovingCondition substitute="MONDAY" with="NEXT" weekday="SUNDAY"/>
+        <MovingCondition substitute="TUESDAY" with="NEXT" weekday="SUNDAY"/>
+        <MovingCondition substitute="WEDNESDAY" with="NEXT" weekday="SUNDAY"/>
+        <MovingCondition substitute="THURSDAY" with="NEXT" weekday="SUNDAY"/>
+        <MovingCondition substitute="FRIDAY" with="NEXT" weekday="SUNDAY"/>
+        <MovingCondition substitute="SATURDAY" with="NEXT" weekday="SUNDAY"/>
+      </Fixed>
+    </Holidays>
+    <Sources>
+      <Source>https://leis.alesc.sc.gov.br/ato-normativo/53811</Source>
+    </Sources>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="se" description="Sergipe">
-    <Holidays/>
+    <Holidays>
+      <!-- Art. 269 of the state constitution: political emancipation of Sergipe (Data Magna) -->
+      <Fixed month="JULY" day="8" descriptionPropertiesKey="POLITICAL_EMANCIPATION"/>
+    </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="to" description="Tocantins">
-    <Holidays/>
+    <Holidays>
+      <!-- Lei Estadual (TO) 4.509/2024: Our Lord of Bonfim (validFrom=2025) -->
+      <Fixed month="AUGUST" day="15" validFrom="2025" descriptionPropertiesKey="LORD_OF_BONFIM"/>
+      <!-- Lei Estadual (TO) 627/1993: Our Lady of Natividade, patroness of the state -->
+      <Fixed month="SEPTEMBER" day="8" descriptionPropertiesKey="LADY_NATIVIDADE"/>
+      <!-- Lei Estadual (TO) 98/1989: creation of the state (Data Magna) -->
+      <Fixed month="OCTOBER" day="5" descriptionPropertiesKey="FOUNDATION"/>
+    </Holidays>
+    <Sources>
+      <Source>https://wwa.tjto.jus.br/diario/pesquisa/materia/904337</Source>
+    </Sources>
   </SubConfigurations>
 </Configuration>
