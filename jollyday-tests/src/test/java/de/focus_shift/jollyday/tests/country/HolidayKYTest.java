@@ -1,11 +1,16 @@
 package de.focus_shift.jollyday.tests.country;
 
+import de.focus_shift.jollyday.core.HolidayManager;
 import org.junit.jupiter.api.Test;
 
+import java.time.LocalDate;
 import java.time.MonthDay;
 import java.time.Year;
 
 import static de.focus_shift.jollyday.core.HolidayCalendar.CAYMAN_ISLANDS;
+import static de.focus_shift.jollyday.core.HolidayType.OBSERVANCE;
+import static de.focus_shift.jollyday.core.HolidayType.PUBLIC_HOLIDAY;
+import static de.focus_shift.jollyday.core.ManagerParameters.create;
 import static de.focus_shift.jollyday.core.spi.Limited.YearCycle.FOUR_YEARS;
 import static de.focus_shift.jollyday.core.spi.Occurrence.FIRST;
 import static de.focus_shift.jollyday.core.spi.Occurrence.FOURTH;
@@ -24,6 +29,8 @@ import static java.time.Month.JULY;
 import static java.time.Month.JUNE;
 import static java.time.Month.MAY;
 import static java.time.Month.NOVEMBER;
+import static java.time.Month.SEPTEMBER;
+import static org.assertj.core.api.Assertions.assertThat;
 
 class HolidayKYTest {
 
@@ -66,9 +73,7 @@ class HolidayKYTest {
         // Monday 23 Jan 2023 is the fourth Monday in January
         .validBetween(Year.of(2023), Year.of(2023))
       .and()
-      .hasFixedWeekdayHoliday("DISCOVERY_DAY", THIRD, MONDAY, MAY)
-        .validTo(Year.of(2023))
-      .and()
+      .hasFixedWeekdayHoliday("DISCOVERY_DAY", THIRD, MONDAY, MAY).and()
       .hasFixedWeekdayHoliday("EMANCIPATION_DAY", FIRST, MONDAY, MAY)
         .validFrom(Year.of(2024))
       .and()
@@ -103,10 +108,19 @@ class HolidayKYTest {
         .validBetween(Year.of(2022), Year.of(2022))
       .and()
       .hasFixedWeekdayHoliday("KINGS_DAY", THIRD, MONDAY, JUNE)
-        .validFrom(Year.of(2023))
+        .validBetween(Year.of(2023), Year.of(2024))
+      .and()
+      .hasFixedHoliday("KINGS_DAY", JUNE, 23)
+        .validBetween(Year.of(2025), Year.of(2025))
+      .and()
+      .hasFixedWeekdayHoliday("KINGS_DAY", THIRD, MONDAY, JUNE)
+        .validFrom(Year.of(2026))
+      .and()
+      .hasFixedHoliday("STATE_FUNERAL_QUEEN_ELIZABETH_II", SEPTEMBER, 19)
+        .validBetween(Year.of(2022), Year.of(2022))
       .and()
       .hasFixedWeekdayHoliday("CONSTITUTION_DAY", FIRST, MONDAY, JULY).and()
-      .hasFixedWeekdayHoliday("CAYMAN_THANKSGIVING", FIRST, SUNDAY, DECEMBER)
+      .hasFixedWeekdayHoliday("CAYMAN_THANKSGIVING", FIRST, SUNDAY, DECEMBER, OBSERVANCE)
         .validFrom(Year.of(2023))
       .and()
       .hasChristianHoliday("ASH_WEDNESDAY").and()
@@ -117,13 +131,42 @@ class HolidayKYTest {
         // Monday 14 Nov 2022 falls in the 9-15 Nov window
         .validBetween(Year.of(2022), Year.of(2022))
       .and()
-      .hasFixedWeekdayHoliday("ELECTION_DAY", SECOND, WEDNESDAY, APRIL)
-        .validFrom(Year.of(2021))
-        .every(FOUR_YEARS, Year.of(2021))
+      .hasFixedHoliday("ELECTION_DAY", APRIL, 14)
+        .validBetween(Year.of(2021), Year.of(2021))
+      .and()
+      .hasFixedHoliday("ELECTION_DAY", APRIL, 30)
+        .validBetween(Year.of(2025), Year.of(2025))
       .and()
       .hasFixedWeekdayHoliday("ELECTION_DAY", FOURTH, WEDNESDAY, MAY)
         .validBetween(Year.of(2013), Year.of(2017))
         .every(FOUR_YEARS, Year.of(2013))
       .check();
+  }
+
+  @Test
+  void ensuresDiscoveryDayContinuesAfter2023() {
+    final HolidayManager holidayManager = HolidayManager.getInstance(create(CAYMAN_ISLANDS));
+    assertThat(holidayManager.isHoliday(LocalDate.of(2024, MAY, 20))).isTrue();
+    assertThat(holidayManager.isHoliday(LocalDate.of(2025, MAY, 19))).isTrue();
+    assertThat(holidayManager.isHoliday(LocalDate.of(2026, MAY, 18))).isTrue();
+    assertThat(holidayManager.isHoliday(LocalDate.of(2027, MAY, 17))).isTrue();
+  }
+
+  @Test
+  void ensuresGazettedOneOffDates2025() {
+    final HolidayManager holidayManager = HolidayManager.getInstance(create(CAYMAN_ISLANDS));
+    assertThat(holidayManager.isHoliday(LocalDate.of(2025, APRIL, 30))).isTrue();
+    assertThat(holidayManager.isHoliday(LocalDate.of(2025, APRIL, 9))).isFalse();
+    assertThat(holidayManager.isHoliday(LocalDate.of(2029, APRIL, 11))).isFalse();
+    assertThat(holidayManager.isHoliday(LocalDate.of(2025, JUNE, 23))).isTrue();
+    assertThat(holidayManager.isHoliday(LocalDate.of(2025, JUNE, 16))).isFalse();
+    assertThat(holidayManager.isHoliday(LocalDate.of(2026, JUNE, 15))).isTrue();
+  }
+
+  @Test
+  void ensuresCaymanThanksgivingIsNotAPublicHoliday() {
+    final HolidayManager holidayManager = HolidayManager.getInstance(create(CAYMAN_ISLANDS));
+    // first Sunday in December 2026
+    assertThat(holidayManager.isHoliday(LocalDate.of(2026, DECEMBER, 6), PUBLIC_HOLIDAY)).isFalse();
   }
 }
