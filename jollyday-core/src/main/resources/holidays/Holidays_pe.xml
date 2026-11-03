@@ -7,20 +7,32 @@
   <Holidays>
     <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
     <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
+    <!-- Ley 31788, published 2023-06-15 after that year's 7 June -->
+    <Fixed month="JUNE" day="7" validFrom="2024" descriptionPropertiesKey="ARICA"/>
     <Fixed month="JUNE" day="29" descriptionPropertiesKey="ST_PETER_PAUL"/>
+    <!-- Ley 31822, published 2023-07-08 -->
+    <Fixed month="JULY" day="23" validFrom="2023" descriptionPropertiesKey="AIR_FORCE_DAY"/>
     <Fixed month="JULY" day="28" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
     <Fixed month="JULY" day="29" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
+    <!-- Ley 31530, published 2022-07-26 -->
+    <Fixed month="AUGUST" day="6" validFrom="2022" descriptionPropertiesKey="JUNIN"/>
     <Fixed month="AUGUST" day="30" descriptionPropertiesKey="SANTA_ROSA"/>
     <Fixed month="OCTOBER" day="8" descriptionPropertiesKey="ANGAMOS"/>
     <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
     <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
+    <!-- Ley 31381, signed 2021-12-30 -->
+    <Fixed month="DECEMBER" day="9" validFrom="2022" descriptionPropertiesKey="AYACUCHO"/>
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-    <ChristianHoliday type="EASTER"/>
     <ChristianHoliday type="MAUNDY_THURSDAY"/>
     <ChristianHoliday type="GOOD_FRIDAY"/>
   </Holidays>
 
   <Sources>
+    <Source of="Ley N.° 31381">https://busquedas.elperuano.pe/dispositivo/NL/2026913-1</Source>
+    <Source of="Ley N.° 31530">https://busquedas.elperuano.pe/dispositivo/NL/2089960-2</Source>
+    <Source of="Ley N.° 31788">https://leyes.congreso.gob.pe/Documentos/2021_2026/ADLP/Texto_Consolidado/31788-TXM.pdf</Source>
+    <Source of="Ley N.° 31822">https://leyes.congreso.gob.pe/Documentos/2021_2026/ADLP/Texto_Consolidado/31822-TXM.pdf</Source>
+    <Source of="gob.pe feriados">https://www.gob.pe/feriados</Source>
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Peru</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:PE</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:PE</Source>
