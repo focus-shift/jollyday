@@ -5,68 +5,42 @@
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
   <Holidays>
+    <!-- Código de Trabajo, Art. 190. No substitute day when a holiday falls on the weekly rest day (Art. 194). -->
+
     <!-- New Year's Day -->
     <Fixed day="1" month="JANUARY" descriptionPropertiesKey="NEW_YEAR"/>
 
     <!-- Labour Day -->
     <Fixed day="1" month="MAY" descriptionPropertiesKey="LABOUR_DAY"/>
 
-    <!-- The Day of the Cross -->
-    <Fixed day="3" month="MAY" descriptionPropertiesKey="DAY_OF_THE_CROSS"/>
-
-    <!-- Soldiers' Day -->
-    <Fixed day="7" month="MAY" descriptionPropertiesKey="SOLDIERS_DAY"/>
-
-    <!-- Mother's Day / Father's Day (same date) -->
+    <!-- Mother's Day -->
     <Fixed day="10" month="MAY" descriptionPropertiesKey="MOTHERS_DAY"/>
 
-    <!-- August Festivals (Fiestas de agosto) - August 1-7 -->
-    <Fixed day="1" month="AUGUST" descriptionPropertiesKey="AUGUST_FESTIVALS"/>
-    <Fixed day="2" month="AUGUST" descriptionPropertiesKey="AUGUST_FESTIVALS"/>
-    <Fixed day="3" month="AUGUST" descriptionPropertiesKey="AUGUST_FESTIVALS"/>
-    <Fixed day="4" month="AUGUST" descriptionPropertiesKey="AUGUST_FESTIVALS"/>
-    <Fixed day="5" month="AUGUST" descriptionPropertiesKey="AUGUST_FESTIVALS"/>
-    <Fixed day="6" month="AUGUST" descriptionPropertiesKey="AUGUST_FESTIVALS"/>
-    <Fixed day="7" month="AUGUST" descriptionPropertiesKey="AUGUST_FESTIVALS"/>
+    <!-- Father's Day (Decreto Legislativo N° 208 of 2012) -->
+    <Fixed day="17" month="JUNE" validFrom="2013" descriptionPropertiesKey="FATHERS_DAY"/>
+
+    <!-- Feast of the Divine Saviour of the World (Fiesta del Divino Salvador del Mundo) -->
+    <Fixed day="6" month="AUGUST" descriptionPropertiesKey="DIVINE_SAVIOUR_OF_THE_WORLD"/>
 
     <!-- Independence Day -->
     <Fixed day="15" month="SEPTEMBER" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
 
-    <!-- Children's Day -->
-    <Fixed day="1" month="OCTOBER" descriptionPropertiesKey="CHILDRENS_DAY"/>
-
-    <!-- Ethnic Pride Day -->
-    <Fixed day="12" month="OCTOBER" descriptionPropertiesKey="ETHNIC_PRIDE_DAY"/>
-
     <!-- Day of the Dead -->
     <Fixed day="2" month="NOVEMBER" descriptionPropertiesKey="DAY_OF_THE_DEAD"/>
 
-    <!-- National Pupusa Festival - November 7-13 -->
-    <Fixed day="7" month="NOVEMBER" descriptionPropertiesKey="NATIONAL_PUPUSA_FESTIVAL"/>
-    <Fixed day="8" month="NOVEMBER" descriptionPropertiesKey="NATIONAL_PUPUSA_FESTIVAL"/>
-    <Fixed day="9" month="NOVEMBER" descriptionPropertiesKey="NATIONAL_PUPUSA_FESTIVAL"/>
-    <Fixed day="10" month="NOVEMBER" descriptionPropertiesKey="NATIONAL_PUPUSA_FESTIVAL"/>
-    <Fixed day="11" month="NOVEMBER" descriptionPropertiesKey="NATIONAL_PUPUSA_FESTIVAL"/>
-    <Fixed day="12" month="NOVEMBER" descriptionPropertiesKey="NATIONAL_PUPUSA_FESTIVAL"/>
-    <Fixed day="13" month="NOVEMBER" descriptionPropertiesKey="NATIONAL_PUPUSA_FESTIVAL"/>
-
-    <!-- Day of the Queen of Peace -->
-    <Fixed day="21" month="NOVEMBER" descriptionPropertiesKey="DAY_OF_THE_QUEEN_OF_PEACE"/>
-
-    <!-- Christmas Day (Noche Buena) -->
+    <!-- Christmas Day -->
     <Fixed day="25" month="DECEMBER" descriptionPropertiesKey="CHRISTMAS"/>
 
-    <!-- New Year's Eve (Fin de año) -->
-    <Fixed day="31" month="DECEMBER" descriptionPropertiesKey="NEW_YEARS_EVE"/>
-
-    <!-- Christian holidays (Catholic) -->
+    <!-- Thursday, Friday and Saturday of Holy Week -->
     <ChristianHoliday type="MAUNDY_THURSDAY"/>
     <ChristianHoliday type="GOOD_FRIDAY"/>
     <ChristianHoliday type="EASTER_SATURDAY"/>
-    <ChristianHoliday type="EASTER"/>
   </Holidays>
 
   <Sources>
+    <Source>https://www.jurisprudencia.ues.edu.sv/oajc/leyes/LegislacionLaboral/codigo%20de%20trabajo.pdf</Source>
+    <Source>https://www.mtps.gob.sv/2019/06/14/mtps-17-de-junio-asueto-remunerado-para-las-personas-trabajadoras/</Source>
+    <Source>https://www.transparenciafiscal.gob.sv/downloads/pdf/DC5091_9_Ley_de_Asuetos_Vacaciones_y_Licencias_de_los_Empleados_Publicos.pdf</Source>
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_El_Salvador</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:SV</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:SV</Source>
@@ -113,7 +87,11 @@
   </SubConfigurations>
 
   <SubConfigurations hierarchy="ss" description="San Salvador">
-    <Holidays/>
+    <Holidays>
+      <!-- Art. 190 grants 3 and 5 August in the city of San Salvador only -->
+      <Fixed day="3" month="AUGUST" descriptionPropertiesKey="AUGUST_FESTIVALS"/>
+      <Fixed day="5" month="AUGUST" descriptionPropertiesKey="AUGUST_FESTIVALS"/>
+    </Holidays>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="sv" description="San Vicente">
