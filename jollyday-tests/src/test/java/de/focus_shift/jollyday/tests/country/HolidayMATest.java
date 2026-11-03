@@ -11,6 +11,7 @@ import static java.time.Month.JANUARY;
 import static java.time.Month.JULY;
 import static java.time.Month.MAY;
 import static java.time.Month.NOVEMBER;
+import static java.time.Month.OCTOBER;
 
 class HolidayMATest {
 
@@ -32,6 +33,10 @@ class HolidayMATest {
       .hasFixedHoliday("ZIKRA_OUED_ED_DAHAB", AUGUST, 14).validBetween(YEAR_FROM, YEAR_TO).and()
       .hasFixedHoliday("REVOLUTION_OF_THE_KING_AND_THE_PEOPLE", AUGUST, 20).validBetween(YEAR_FROM, YEAR_TO).and()
       .hasFixedHoliday("YOUTH", AUGUST, 21).validBetween(YEAR_FROM, YEAR_TO).and()
+      .hasFixedHoliday("UNITY", OCTOBER, 31)
+        .notValidBetween(YEAR_FROM, Year.of(2025))
+        .validBetween(Year.of(2026), YEAR_TO)
+      .and()
       .hasFixedHoliday("GREEN_MARCH", NOVEMBER, 6).validBetween(YEAR_FROM, YEAR_TO).and()
       .hasFixedHoliday("INDEPENDENCE_DAY", NOVEMBER, 18).validBetween(YEAR_FROM, YEAR_TO).and()
       .hasIslamicHoliday("NEWYEAR").validBetween(YEAR_FROM, YEAR_TO).and()
