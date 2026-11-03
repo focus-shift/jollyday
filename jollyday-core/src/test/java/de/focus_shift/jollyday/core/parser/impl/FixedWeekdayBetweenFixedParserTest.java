@@ -61,6 +61,20 @@ class FixedWeekdayBetweenFixedParserTest {
     }
   }
 
+  @Test
+  void ensureThatNoHolidayIsCreatedIfWeekdayIsNotBetweenFixed() {
+
+    final Year year = Year.of(2025);
+    // 6 January 2025 is a Monday, so there is no Wednesday in the range
+    final FixedWeekdayBetweenFixedHolidayConfiguration fixedWeekdayBetweenFixed = getFixedWeekdayBetweenFixed(MonthDay.of(JANUARY, 6), MonthDay.of(JANUARY, 6), WEDNESDAY, year, year);
+
+    final FixedWeekdayBetweenFixedParser sut = new FixedWeekdayBetweenFixedParser();
+    when(holidays.fixedWeekdayBetweenFixed()).thenReturn(List.of(fixedWeekdayBetweenFixed));
+
+    final List<Holiday> calculatedHoliday = sut.parse(year, holidays);
+    assertThat(calculatedHoliday).isEmpty();
+  }
+
   private static FixedWeekdayBetweenFixedHolidayConfiguration getFixedWeekdayBetweenFixed(
     final MonthDay from,
     final MonthDay to,

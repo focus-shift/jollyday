@@ -9,25 +9,106 @@
     <Fixed month="JANUARY" day="17" validFrom="2010" validTo="2010" descriptionPropertiesKey="ELECTION_DAY"/>
     <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
     <Fixed month="MAY" day="21" descriptionPropertiesKey="NAVY_DAY"/>
-    <Fixed month="JUNE" day="28" descriptionPropertiesKey="ST_PETER_PAUL"/>
+    <Fixed month="JUNE" day="29" validTo="1999" descriptionPropertiesKey="ST_PETER_PAUL"/>
+    <!-- Ley 19.668: Tuesday to Thursday moves to the Monday of the same week, Friday to the following Monday -->
+    <Fixed month="JUNE" day="29" validFrom="2000" descriptionPropertiesKey="ST_PETER_PAUL">
+      <MovingCondition substitute="TUESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="WEDNESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="THURSDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="FRIDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
     <Fixed month="JULY" day="16" validFrom="2007" descriptionPropertiesKey="VIRGIN_CARMEN"/>
     <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_MARY"/>
     <Fixed month="SEPTEMBER" day="18" descriptionPropertiesKey="NATIONAL_DAY"/>
     <Fixed month="SEPTEMBER" day="19" descriptionPropertiesKey="ARMY_DAY"/>
-    <Fixed month="OCTOBER" day="11" descriptionPropertiesKey="COLUMBUS_DAY"/>
-    <Fixed month="OCTOBER" day="31" validFrom="2008" descriptionPropertiesKey="REFORMATION_DAY"/>
+    <Fixed month="OCTOBER" day="12" validTo="1999" descriptionPropertiesKey="COLUMBUS_DAY"/>
+    <!-- Ley 19.668: Tuesday to Thursday moves to the Monday of the same week, Friday to the following Monday -->
+    <Fixed month="OCTOBER" day="12" validFrom="2000" descriptionPropertiesKey="COLUMBUS_DAY">
+      <MovingCondition substitute="TUESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="WEDNESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="THURSDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="FRIDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <!-- Ley 20.299: Tuesday moves to the Friday before, Wednesday to the Friday of the same week -->
+    <Fixed month="OCTOBER" day="31" validFrom="2008" descriptionPropertiesKey="REFORMATION_DAY">
+      <MovingCondition substitute="TUESDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <MovingCondition substitute="WEDNESDAY" with="NEXT" weekday="FRIDAY"/>
+    </Fixed>
     <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
     <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="IMMACULATE_CONCEPTION"/>
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-    <Fixed month="DECEMBER" day="31" descriptionPropertiesKey="NEW_YEARS_EVE"/>
+    <!-- Ley General de Bancos art. 38: banks are closed, but it is not a public holiday -->
+    <Fixed month="DECEMBER" day="31" descriptionPropertiesKey="NEW_YEARS_EVE" localizedType="BANK_HOLIDAY"/>
+
+    <!-- One-off holidays -->
+    <!-- Ley 20.450: bicentennial -->
+    <Fixed month="SEPTEMBER" day="17" validFrom="2010" validTo="2010" descriptionPropertiesKey="FIESTAS_PATRIAS"/>
+    <Fixed month="SEPTEMBER" day="20" validFrom="2010" validTo="2010" descriptionPropertiesKey="FIESTAS_PATRIAS"/>
+    <!-- Ley 17.374 art. 43: national census -->
+    <Fixed month="APRIL" day="19" validFrom="2017" validTo="2017" descriptionPropertiesKey="NATIONAL_CENSUS_DAY"/>
+    <!-- Ley 21.482 -->
+    <Fixed month="SEPTEMBER" day="16" validFrom="2022" validTo="2022" descriptionPropertiesKey="FIESTAS_PATRIAS"/>
+
+    <!-- Ley 21.357: day of the southern winter solstice, no calculation in the engine yet, so one entry per year -->
+    <Fixed month="JUNE" day="21" validFrom="2021" validTo="2021" descriptionPropertiesKey="INDIGENOUS_PEOPLES_DAY"/>
+    <Fixed month="JUNE" day="21" validFrom="2022" validTo="2022" descriptionPropertiesKey="INDIGENOUS_PEOPLES_DAY"/>
+    <Fixed month="JUNE" day="21" validFrom="2023" validTo="2023" descriptionPropertiesKey="INDIGENOUS_PEOPLES_DAY"/>
+    <Fixed month="JUNE" day="20" validFrom="2024" validTo="2024" descriptionPropertiesKey="INDIGENOUS_PEOPLES_DAY"/>
+    <Fixed month="JUNE" day="20" validFrom="2025" validTo="2025" descriptionPropertiesKey="INDIGENOUS_PEOPLES_DAY"/>
+    <Fixed month="JUNE" day="21" validFrom="2026" validTo="2026" descriptionPropertiesKey="INDIGENOUS_PEOPLES_DAY"/>
+
     <ChristianHoliday type="EASTER"/>
     <ChristianHoliday type="GOOD_FRIDAY"/>
     <ChristianHoliday type="EASTER_SATURDAY"/>
-    <ChristianHoliday type="CORPUS_CHRISTI" validTo="2006"/>
+    <ChristianHoliday type="CORPUS_CHRISTI" validTo="1999"/>
+    <!-- Ley 19.668: moved to the Monday of the same week until Ley 20.148 replaced it with 16 July -->
+    <ChristianHoliday type="CORPUS_CHRISTI" validFrom="2000" validTo="2006">
+      <MovingCondition substitute="THURSDAY" with="PREVIOUS" weekday="MONDAY"/>
+    </ChristianHoliday>
+
+    <!-- Ley 20.983: 2 January if 1 January is a Sunday -->
+    <FixedWeekdayBetweenFixed weekday="MONDAY" validFrom="2017" descriptionPropertiesKey="NEW_YEAR">
+      <from month="JANUARY" day="2"/>
+      <to month="JANUARY" day="2"/>
+    </FixedWeekdayBetweenFixed>
+    <!-- Código del Trabajo art. 35 ter (Ley 20.215): Monday 17 September if 18/19 September are Tuesday/Wednesday -->
+    <FixedWeekdayBetweenFixed weekday="MONDAY" validFrom="2007" descriptionPropertiesKey="FIESTAS_PATRIAS">
+      <from month="SEPTEMBER" day="17"/>
+      <to month="SEPTEMBER" day="17"/>
+    </FixedWeekdayBetweenFixed>
+    <!-- Código del Trabajo art. 35 ter (Ley 20.215): Friday 20 September if 18/19 September are Wednesday/Thursday -->
+    <FixedWeekdayBetweenFixed weekday="FRIDAY" validFrom="2007" descriptionPropertiesKey="FIESTAS_PATRIAS">
+      <from month="SEPTEMBER" day="20"/>
+      <to month="SEPTEMBER" day="20"/>
+    </FixedWeekdayBetweenFixed>
+    <!-- Ley 20.983: Friday 17 September if 18/19 September are Saturday/Sunday -->
+    <FixedWeekdayBetweenFixed weekday="FRIDAY" validFrom="2017" descriptionPropertiesKey="FIESTAS_PATRIAS">
+      <from month="SEPTEMBER" day="17"/>
+      <to month="SEPTEMBER" day="17"/>
+    </FixedWeekdayBetweenFixed>
   </Holidays>
 
   <Sources>
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Chile</Source>
+    <Source>https://www.bcn.cl/leychile/navegar?idLey=17374</Source>
+    <Source>https://www.bcn.cl/leychile/navegar?idLey=19668</Source>
+    <Source>https://www.bcn.cl/leychile/navegar?idLey=20148</Source>
+    <Source>https://www.bcn.cl/leychile/navegar?idLey=20215</Source>
+    <Source>https://www.bcn.cl/leychile/navegar?idLey=20299</Source>
+    <Source>https://www.bcn.cl/leychile/navegar?idLey=20450</Source>
+    <Source>https://www.bcn.cl/leychile/navegar?idLey=20663</Source>
+    <Source>https://www.bcn.cl/leychile/navegar?idLey=20768</Source>
+    <Source>https://www.bcn.cl/leychile/navegar?idLey=20983</Source>
+    <Source>https://www.bcn.cl/leychile/navegar?idLey=21051</Source>
+    <Source>https://www.bcn.cl/leychile/navegar?idLey=21065</Source>
+    <Source>https://www.bcn.cl/leychile/navegar?idLey=21357</Source>
+    <Source>https://www.bcn.cl/leychile/navegar?idLey=21482</Source>
+    <Source>https://www.bcn.cl/leychile/navegar?idLey=21791</Source>
+    <Source>https://www.dt.gob.cl/portal/1628/w3-article-60252.html</Source>
+    <Source>https://www.gob.cl/noticias/21-de-junio-hoy-se-conmemora-el-dia-nacional-de-los-pueblos-indigenas/</Source>
+    <Source>https://www.gob.cl/noticias/feriado-2024-chile-dias-festivos-irrenunciables/</Source>
+    <Source>https://www.gob.cl/noticias/calendario-feriados-2025-festivos-irrenunciables-legales/</Source>
+    <Source>https://www.gob.cl/noticias/feriados-2026-revisa-cuantos-habra-y-cuales-son-irrenunciables/</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:CL</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:CL</Source>
   </Sources>
@@ -39,10 +120,16 @@
     <Holidays/>
   </SubConfigurations>
   <SubConfigurations hierarchy="ap" description="Arica y Parinacota">
-    <Holidays/>
+    <Holidays>
+      <!-- Ley 20.663 -->
+      <Fixed month="JUNE" day="7" validFrom="2013" descriptionPropertiesKey="ASSAULT_AND_CAPTURE_OF_MORRO_DE_ARICA"/>
+    </Holidays>
   </SubConfigurations>
   <SubConfigurations hierarchy="ar" description="La Araucanía">
-    <Holidays/>
+    <Holidays>
+      <!-- Ley 21.051 -->
+      <Fixed month="JANUARY" day="17" validFrom="2018" validTo="2018" descriptionPropertiesKey="PAPAL_VISIT"/>
+    </Holidays>
   </SubConfigurations>
   <SubConfigurations hierarchy="at" description="Atacama">
     <Holidays/>
@@ -70,12 +157,30 @@
   </SubConfigurations>
   <SubConfigurations hierarchy="nb" description="Ñuble">
     <Holidays/>
+
+    <!-- Ley 20.768: communes of Chillán and Chillán Viejo only (part of Biobío until Ñuble was created in 2018) -->
+    <SubConfigurations hierarchy="ch" description="Chillán">
+      <Holidays>
+        <Fixed month="AUGUST" day="20" validFrom="2014" descriptionPropertiesKey="BIRTH_OF_BERNARDO_OHIGGINS"/>
+      </Holidays>
+    </SubConfigurations>
+    <SubConfigurations hierarchy="cv" description="Chillán Viejo">
+      <Holidays>
+        <Fixed month="AUGUST" day="20" validFrom="2014" descriptionPropertiesKey="BIRTH_OF_BERNARDO_OHIGGINS"/>
+      </Holidays>
+    </SubConfigurations>
   </SubConfigurations>
   <SubConfigurations hierarchy="rm" description="Región Metropolitana de Santiago">
-    <Holidays/>
+    <Holidays>
+      <!-- Ley 21.065 -->
+      <Fixed month="JANUARY" day="16" validFrom="2018" validTo="2018" descriptionPropertiesKey="PAPAL_VISIT"/>
+    </Holidays>
   </SubConfigurations>
   <SubConfigurations hierarchy="ta" description="Tarapacá">
-    <Holidays/>
+    <Holidays>
+      <!-- Ley 21.051 -->
+      <Fixed month="JANUARY" day="18" validFrom="2018" validTo="2018" descriptionPropertiesKey="PAPAL_VISIT"/>
+    </Holidays>
   </SubConfigurations>
   <SubConfigurations hierarchy="vs" description="Valparaíso">
     <Holidays/>
