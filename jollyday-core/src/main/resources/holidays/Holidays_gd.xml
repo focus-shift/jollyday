@@ -36,22 +36,33 @@
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
 
+    <!-- Christmas on a Sunday: the Monday is already Boxing Day, so Tuesday 27 December has been
+         proclaimed a Bank Holiday each time (S.R.O. 35/2011, 61/2016, 43/2022). -->
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS">
-      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
     </Fixed>
 
     <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY">
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
 
-    <!-- Superseded by the fixed 1 August date from 2025 onward (see Fixed above). -->
-    <FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST" validTo="2024" descriptionPropertiesKey="EMANCIPATION_DAY"/>
+    <!-- One-off Bank Holidays proclaimed under section 7 of the Bank Holidays Act -->
+    <Fixed month="JUNE" day="24" validFrom="2022" validTo="2022" descriptionPropertiesKey="BANK_HOLIDAY"/>
+    <!-- 50th anniversary of CARICOM (S.R.O. 22/2023) -->
+    <Fixed month="JULY" day="4" validFrom="2023" validTo="2023" descriptionPropertiesKey="CARICOM_DAY"/>
 
     <!-- Spicemas: "The second Monday in August and from noon the day following which shall be
          known and referred to as the Carnival August Celebrations." Modeled as two full-day
-         holidays, matching how the public holiday is actually observed in practice. -->
+         holidays, matching how the public holiday is actually observed in practice.
+         Carnival Tuesday is the day after Carnival Monday, not the second Tuesday in August. -->
+    <RelativeToWeekdayInMonth weekday="TUESDAY" when="AFTER" descriptionPropertiesKey="CARNIVAL_TUESDAY">
+      <FixedWeekday which="SECOND" weekday="MONDAY" month="AUGUST"/>
+    </RelativeToWeekdayInMonth>
+
+    <!-- Superseded by the fixed 1 August date from 2025 onward (see Fixed above). -->
+    <FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST" validTo="2024" descriptionPropertiesKey="EMANCIPATION_DAY"/>
+
     <FixedWeekday which="SECOND" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="CARNIVAL_MONDAY"/>
-    <FixedWeekday which="SECOND" weekday="TUESDAY" month="AUGUST" descriptionPropertiesKey="CARNIVAL_TUESDAY"/>
 
     <ChristianHoliday type="GOOD_FRIDAY"/>
     <ChristianHoliday type="EASTER_MONDAY"/>
@@ -62,6 +73,12 @@
   <Sources>
     <Source of="Bank Holidays Act, Chapter 25">https://www.laws.gov.gd/index.php/chapters/b-23-39/54-chapter-25-bank-holidays-act</Source>
     <Source of="Government of Grenada - Public Holidays 2025">https://www.gov.gd/component/edocman/grenadas-public-holidays-2025/viewdocument/1386</Source>
+    <Source of="Government of Grenada - Public Holidays 2023">https://web.archive.org/web/20231209233625/https://www.gov.gd/pdf/Public%20Holidays%202023.pdf</Source>
+    <Source of="S.R.O. 35 of 2011 - Bank Holiday 27 December 2011">https://web.archive.org/web/20250504100149/https://laws.gov.gd/index.php/s-r-o/37-sr-o-35-of-2011-bank-holiday/viewdocument/37</Source>
+    <Source of="S.R.O. 61 of 2016 - Bank Holiday 27 December 2016">https://web.archive.org/web/20250504100408/https://laws.gov.gd/index.php/s-r-o/289-sr-o-61-of-2016-bank-holiday/viewdocument/289</Source>
+    <Source of="S.R.O. 33 of 2022 - Bank Holiday 24 June 2022">https://web.archive.org/web/20250504100516/https://laws.gov.gd/index.php/s-r-o/576-sr-o-33-of-2022-bank-holiday-proclamation-2022/viewdocument/576</Source>
+    <Source of="S.R.O. 43 of 2022 - Bank Holiday 27 December 2022">https://web.archive.org/web/20250504100538/https://laws.gov.gd/index.php/s-r-o/586-sr-o-43-of-2022-bank-holiday-proclamation-2022/viewdocument/586</Source>
+    <Source of="S.R.O. 22 of 2023 - Bank Holiday 4 July 2023">https://web.archive.org/web/20250504100603/https://laws.gov.gd/index.php/s-r-o/612-sr-o-22-of-2023-bank-holiday-proclamation-2023/viewdocument/612</Source>
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Grenada</Source>
     <Source of="Emancipation Day fixed to 1 August from 2025">https://wikigrenada.com/wiki/Grenada_Public_Holidays_2025</Source>
     <Source of="National Heroes Day introduced 2023">https://nowgrenada.com/2023/10/proclamation-published-to-mark-inaugural-national-heroes-day/</Source>
