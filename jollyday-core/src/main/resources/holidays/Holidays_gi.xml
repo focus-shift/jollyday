@@ -14,9 +14,19 @@
     <Fixed month="FEBRUARY" day="15" validFrom="2021" validTo="2021" descriptionPropertiesKey="COMMONWEALTH_DAY"/>
     <Fixed month="MAY" day="24" validFrom="1958" validTo="1976" descriptionPropertiesKey="COMMONWEALTH_DAY"/>
 
-    <Fixed month="APRIL" day="28" validFrom="2021" descriptionPropertiesKey="MEMORIAL_DAY"/>
-    <Fixed month="MAY" day="1" descriptionPropertiesKey="MAY_DAY"/>
+    <Fixed month="APRIL" day="28" validFrom="2018" descriptionPropertiesKey="MEMORIAL_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="MAY_DAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
     <Fixed month="MAY" day="8" validFrom="2020" validTo="2020" descriptionPropertiesKey="VICTORY_DAY"/>
+    <Fixed month="MAY" day="8" validFrom="2023" validTo="2023" descriptionPropertiesKey="KINGS_CORONATION"/>
+
+    <Fixed month="JUNE" day="2" validFrom="2022" validTo="2022" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
+    <Fixed month="JUNE" day="3" validFrom="2022" validTo="2022" descriptionPropertiesKey="QUEENS_PLATINUM_JUBILEE"/>
 
     <Fixed month="SEPTEMBER" day="10" validFrom="1967" descriptionPropertiesKey="NATIONAL_DAY_OF_GIBRALTAR">
       <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
@@ -33,12 +43,20 @@
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
     </Fixed>
 
-    <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="2022" descriptionPropertiesKey="WINTER_MIDTERM_BANK_HOLIDAY"/>
-    <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" validFrom="1971" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
+    <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="2022" validTo="2023" descriptionPropertiesKey="WINTER_MIDTERM_BANK_HOLIDAY"/>
+    <FixedWeekday which="SECOND" weekday="MONDAY" month="FEBRUARY" validFrom="2024" validTo="2024" descriptionPropertiesKey="WINTER_MIDTERM_BANK_HOLIDAY"/>
+    <FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="2025" descriptionPropertiesKey="WINTER_MIDTERM_BANK_HOLIDAY"/>
+    <!-- 2022 the Spring Bank Holiday was moved to 2 June for the Platinum Jubilee -->
+    <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" validFrom="1971" validTo="2021" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
+    <FixedWeekday which="LAST" weekday="MONDAY" month="MAY" validFrom="2023" descriptionPropertiesKey="SPRING_BANK_HOLIDAY"/>
     <FixedWeekday which="LAST" weekday="MONDAY" month="AUGUST" validFrom="1971" descriptionPropertiesKey="SUMMER_BANK_HOLIDAY"/>
 
     <FixedWeekday which="SECOND" weekday="MONDAY" month="MARCH" validFrom="1977" validTo="2020" descriptionPropertiesKey="COMMONWEALTH_DAY"/>
-    <FixedWeekday which="THIRD" weekday="MONDAY" month="JUNE" validFrom="2022" descriptionPropertiesKey="KINGS_BIRTHDAY"/>
+    <!-- the Monday of the Queen's/King's Birthday is set every year; years before 2018 are not checked yet -->
+    <FixedWeekday which="SECOND" weekday="MONDAY" month="JUNE" validFrom="2018" validTo="2018" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
+    <FixedWeekday which="THIRD" weekday="MONDAY" month="JUNE" validFrom="2019" validTo="2020" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
+    <FixedWeekday which="SECOND" weekday="MONDAY" month="JUNE" validFrom="2021" validTo="2022" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
+    <FixedWeekday which="THIRD" weekday="MONDAY" month="JUNE" validFrom="2023" descriptionPropertiesKey="KINGS_BIRTHDAY"/>
 
     <ChristianHoliday type="GOOD_FRIDAY"/>
     <ChristianHoliday type="EASTER_MONDAY"/>
@@ -47,7 +65,16 @@
   <Sources>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:GI</Source>
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Gibraltar</Source>
+    <Source>https://www.gibraltar.gov.gi/new/sites/default/files/press/2017/Official%20Notices/BANK%20HOLIDAYS%202018.pdf</Source>
+    <Source>https://www.gibraltar.gov.gi/new/sites/default/files/press/2018/Press%20Releases/BANK%20HOLIDAYS%202019.pdf</Source>
+    <Source>https://www.gibraltar.gov.gi/press-releases/bank-and-public-holidays-2020-5363</Source>
+    <Source>https://www.gibraltar.gov.gi/press-releases/bank-and-public-holidays-2021-6658</Source>
+    <Source>https://www.gibraltar.gov.gi/press-releases/bank-and-public-holidays-2022-7603</Source>
+    <Source>https://www.gibraltar.gov.gi/press-releases/bank-and-public-holidays-2023-8362</Source>
+    <Source>https://www.gibraltar.gov.gi/press-releases/change-of-bank-holiday-date-kings-birthday-bank-holiday-confirmed-9362022-8537</Source>
     <Source>https://www.gibraltar.gov.gi/press-releases/bank-and-public-holidays-2024-9356</Source>
+    <Source>https://www.gibraltar.gov.gi/press-releases/bank-and-public-holidays-2025-10243</Source>
+    <Source>https://www.gibraltar.gov.gi/press-releases/bank-holidays-2026-11299</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:GI</Source>
   </Sources>
 </Configuration>
