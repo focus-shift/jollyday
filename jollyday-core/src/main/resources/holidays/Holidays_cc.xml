@@ -12,12 +12,11 @@
          Boxing Day Sat -> next Monday, Sun-or-Mon -> next Tuesday). All other holidays below (Act of
          Self Determination Day, King's/Queen's Birthday, the three Hari Raya/Maulaud Islamic
          holidays) are instead individually gazetted every year as "special public holidays" by the
-         Administrator under s.8A - confirmed from five consecutive years of primary-source
-         Administrator community bulletins/proclamations (2022-2026, see Sources) which show no
+         Administrator under s.8A - confirmed from seven consecutive years of primary-source
+         Administrator community bulletins/proclamations (2021-2027, see Sources) which show no
          single stable date formula for any of them (one-off ceremonial date changes, an Easter
-         Monday collision, and a mid-series change from a fixed date to a "second Monday" rule are
-         all directly documented below). Wikipedia's "Islamic New Year" entry for CKI is NOT included
-         here - it does not appear in any of the five years of official gazettes checked. -->
+         Monday collision and a Hari Raya Haji collision are all directly documented below).
+         Wikipedia's "Islamic New Year" entry for CKI is NOT included here - it does not appear in any of the seven years of official gazettes checked. -->
 
     <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
       <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
@@ -56,30 +55,36 @@
 
     <!-- Hari Raya Puasa (Eid al-Fitr): individually gazetted every year based on the Public Service's
          own moon-sighting confirmation (the bulletins explicitly warn the date "may vary by one or
-         two days"); no lunar-calendar engine is used, so only the five directly-confirmed years are
+         two days"); no lunar-calendar engine is used, so only the directly-confirmed years are
          modeled (same idiom as Chinese New Year in Holidays_sg.xml/Holidays_bn.xml). -->
+    <Fixed month="MAY" day="13" validFrom="2021" validTo="2021" descriptionPropertiesKey="HARI_RAYA_PUASA"/>
     <Fixed month="MAY" day="2" validFrom="2022" validTo="2022" descriptionPropertiesKey="HARI_RAYA_PUASA"/>
     <Fixed month="APRIL" day="24" validFrom="2023" validTo="2023" descriptionPropertiesKey="HARI_RAYA_PUASA"/>
     <Fixed month="APRIL" day="10" validFrom="2024" validTo="2024" descriptionPropertiesKey="HARI_RAYA_PUASA"/>
     <Fixed month="MARCH" day="31" validFrom="2025" validTo="2025" descriptionPropertiesKey="HARI_RAYA_PUASA"/>
     <Fixed month="MARCH" day="20" validFrom="2026" validTo="2026" descriptionPropertiesKey="HARI_RAYA_PUASA"/>
+    <Fixed month="MARCH" day="9" validFrom="2027" validTo="2027" descriptionPropertiesKey="HARI_RAYA_PUASA"/>
 
     <!-- Hari Raya Haji (Eid al-Adha): same yearly-gazetted, moon-sighting-dependent basis as Hari Raya
-         Puasa above; only the five directly-confirmed years are modeled. -->
+         Puasa above; only the directly-confirmed years are modeled. -->
+    <Fixed month="JULY" day="20" validFrom="2021" validTo="2021" descriptionPropertiesKey="HARI_RAYA_HAJI"/>
     <Fixed month="JULY" day="11" validFrom="2022" validTo="2022" descriptionPropertiesKey="HARI_RAYA_HAJI"/>
     <Fixed month="JUNE" day="29" validFrom="2023" validTo="2023" descriptionPropertiesKey="HARI_RAYA_HAJI"/>
     <Fixed month="JUNE" day="17" validFrom="2024" validTo="2024" descriptionPropertiesKey="HARI_RAYA_HAJI"/>
     <Fixed month="JUNE" day="6" validFrom="2025" validTo="2025" descriptionPropertiesKey="HARI_RAYA_HAJI"/>
     <Fixed month="MAY" day="27" validFrom="2026" validTo="2026" descriptionPropertiesKey="HARI_RAYA_HAJI"/>
+    <Fixed month="MAY" day="17" validFrom="2027" validTo="2027" descriptionPropertiesKey="HARI_RAYA_HAJI"/>
 
     <!-- Hari Maulaud Nabi (Mawlid an-Nabi, the Prophet's birthday): same yearly-gazetted,
-         moon-sighting-dependent basis as the two Hari Raya holidays above; only the five
-         directly-confirmed years are modeled. -->
+         moon-sighting-dependent basis as the two Hari Raya holidays above; only the
+         directly-confirmed years are modeled. 2027: Monday 16 August (in lieu of Sunday 15 August). -->
+    <Fixed month="OCTOBER" day="19" validFrom="2021" validTo="2021" descriptionPropertiesKey="HARI_MAULAUD_NABI"/>
     <Fixed month="OCTOBER" day="10" validFrom="2022" validTo="2022" descriptionPropertiesKey="HARI_MAULAUD_NABI"/>
     <Fixed month="SEPTEMBER" day="27" validFrom="2023" validTo="2023" descriptionPropertiesKey="HARI_MAULAUD_NABI"/>
     <Fixed month="SEPTEMBER" day="16" validFrom="2024" validTo="2024" descriptionPropertiesKey="HARI_MAULAUD_NABI"/>
     <Fixed month="SEPTEMBER" day="5" validFrom="2025" validTo="2025" descriptionPropertiesKey="HARI_MAULAUD_NABI"/>
     <Fixed month="AUGUST" day="26" validFrom="2026" validTo="2026" descriptionPropertiesKey="HARI_MAULAUD_NABI"/>
+    <Fixed month="AUGUST" day="16" validFrom="2027" validTo="2027" descriptionPropertiesKey="HARI_MAULAUD_NABI"/>
 
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS">
       <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
@@ -96,14 +101,25 @@
       <MovingCondition substitute="MONDAY" with="NEXT" weekday="TUESDAY"/>
     </Fixed>
 
-    <!-- King's/Queen's Birthday: fixed on 6 June regardless of weekday up to and including 2024
-         (confirmed 2022 Mon, 2023 Tue, 2024 Thu - genuinely no mondayisation during this period), then
-         changed to the second Monday of June from 2025 (confirmed 2025: Mon 9 June; 2026: Mon 8 June).
-         The 2022/2023 bulletins style it "Birthday of Reigning Sovereign"/"Queen's Birthday"; renamed
+    <!-- King's/Queen's Birthday: 6 June, moved to the next Monday when it falls on a weekend
+         (confirmed 2021: Mon 7 June in lieu of Sun 6 June; 2022 Mon, 2023 Tue, 2024 Thu unshifted;
+         2026: Mon 8 June in lieu of Sat 6 June; 2027: Mon 7 June in lieu of Sun 6 June).
+         2025 is a one-off: Fri 6 June 2025 was already Hari Raya Haji, so the birthday was gazetted
+         for Monday 9 June 2025. The 2021-2023 proclamations style it "Queen's Birthday"; renamed
          "King's Birthday" from the 2024 bulletin onward. -->
-    <Fixed month="JUNE" day="6" validTo="2023" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
-    <Fixed month="JUNE" day="6" validFrom="2024" validTo="2024" descriptionPropertiesKey="KINGS_BIRTHDAY"/>
-    <FixedWeekday which="SECOND" weekday="MONDAY" month="JUNE" validFrom="2025" descriptionPropertiesKey="KINGS_BIRTHDAY"/>
+    <Fixed month="JUNE" day="6" validTo="2023" descriptionPropertiesKey="QUEENS_BIRTHDAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="JUNE" day="6" validFrom="2024" validTo="2024" descriptionPropertiesKey="KINGS_BIRTHDAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="JUNE" day="9" validFrom="2025" validTo="2025" descriptionPropertiesKey="KINGS_BIRTHDAY"/>
+    <Fixed month="JUNE" day="6" validFrom="2026" descriptionPropertiesKey="KINGS_BIRTHDAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
 
     <ChristianHoliday type="GOOD_FRIDAY"/>
     <ChristianHoliday type="EASTER_MONDAY"/>
@@ -113,12 +129,14 @@
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_the_Cocos_(Keeling)_Islands</Source>
     <Source of="Public and Bank Holidays Act 1972 (WA)">https://www.legislation.wa.gov.au/legislation/statutes.nsf/RedirectURL?OpenAgent=&amp;query=mrdoc_44571.pdf</Source>
     <Source of="Cocos (Keeling) Islands Act 1955, s.8A">https://www.legislation.gov.au/Details/C2016C00764</Source>
+    <Source of="2021 Special Public &amp; Bank Holidays proclamation (No 02/2020)">https://www.legislation.gov.au/F2020N00104/asmade/2020-09-21/text/original/epub/OEBPS/document_1/document_1.html</Source>
     <Source of="2022 Public Holidays, Cocos (Keeling) Islands (No A33/2021)">https://www.infrastructure.gov.au/sites/default/files/documents/a33-2021-2022-public-holidays-cocos-keeling-islands.pdf</Source>
     <Source of="2023 Special Public &amp; Bank Holidays proclamation (No 03/2022)">https://www.infrastructure.gov.au/sites/default/files/documents/A07-2022-notice-proclamation-special-public-bank-holidays-2023-cki.pdf</Source>
     <Source of="2024 Public Holidays, Cocos (Keeling) Islands (No A12/2023)">https://www.infrastructure.gov.au/sites/default/files/documents/a12-2023-2024-public-holidays-cocos-k-islands.pdf</Source>
     <Source of="2024 Act of Self Determination Day date change (No A01/2024)">https://www.infrastructure.gov.au/sites/default/files/documents/a01-of-2024-community-bulletin-cki-public-holiday-2024-change-and-proclamation.pdf</Source>
     <Source of="2025 Public Holidays, Cocos (Keeling) Islands (No A21/2024)">https://www.infrastructure.gov.au/sites/default/files/documents/a21-2024-administrator-community-bulletin-cki-public-holidays-2025.pdf</Source>
     <Source of="2026 Public Holidays, Cocos (Keeling) Islands (No A21/2025)">https://www.infrastructure.gov.au/sites/default/files/documents/community-bulletin-cki-public-holidays-2026.pdf</Source>
+    <Source of="2027 Special Public &amp; Bank Holidays proclamation (No 02/2026)">https://www.legislation.gov.au/F2026N00561/asmade/2026-08-04/text/original/epub/OEBPS/document_1/document_1.html</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:CC</Source>
   </Sources>
 </Configuration>
