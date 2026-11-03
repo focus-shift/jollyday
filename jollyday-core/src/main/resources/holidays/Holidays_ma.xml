@@ -13,6 +13,7 @@
     <Fixed month="AUGUST" day="14" descriptionPropertiesKey="ZIKRA_OUED_ED_DAHAB"/>
     <Fixed month="AUGUST" day="20" descriptionPropertiesKey="REVOLUTION_OF_THE_KING_AND_THE_PEOPLE"/>
     <Fixed month="AUGUST" day="21" descriptionPropertiesKey="YOUTH"/>
+    <Fixed month="OCTOBER" day="31" validFrom="2026" descriptionPropertiesKey="UNITY"/>
     <Fixed month="NOVEMBER" day="6" descriptionPropertiesKey="GREEN_MARCH"/>
     <Fixed month="NOVEMBER" day="18" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
     <IslamicHoliday type="NEWYEAR"/>
@@ -23,6 +24,7 @@
 
   <Sources>
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Morocco</Source>
+    <Source of="Unity Day">https://www.mre.gov.ma/en/media-room/news/his-majesty-king-proclaims-october-31-unity-day-statement-royal-office</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:MA</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:MA</Source>
   </Sources>
