@@ -5,15 +5,15 @@
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
   <Holidays>
-    <!-- "Note 1" holidays (Holidays Act, Chapter 289): if the holiday falls on a Sunday,
-         the following Monday is observed. Otherwise the statutory date is kept. -->
+    <!-- Moving rules as applied in the yearly "Public and Bank Holidays" notices issued under
+         section 3 of the Holidays Act, Chapter 289. -->
+
+    <!-- If the holiday falls on a Sunday, the following Monday is observed. Otherwise the
+         statutory date is kept. -->
     <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
-    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY">
-      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-    </Fixed>
-    <Fixed month="AUGUST" day="1" validFrom="2021" descriptionPropertiesKey="EMANCIPATION_DAY">
+    <Fixed month="JANUARY" day="15" validFrom="2021" descriptionPropertiesKey="GEORGE_PRICE_DAY">
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
     <Fixed month="SEPTEMBER" day="10" descriptionPropertiesKey="SAINT_GEORGES_CAYE_DAY">
@@ -25,35 +25,48 @@
     <Fixed month="NOVEMBER" day="19" descriptionPropertiesKey="GARIFUNA_SETTLEMENT_DAY">
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
-
-    <!-- "Note 2" holidays: if the holiday falls on Tuesday, Wednesday or Thursday it is
-         observed on the preceding Monday; if it falls on Friday or Sunday it is observed
-         on the following Monday. Saturday and Monday are kept. -->
-    <Fixed month="JANUARY" day="15" validFrom="2021" descriptionPropertiesKey="GEORGE_PRICE_DAY">
-      <MovingCondition substitute="TUESDAY" with="PREVIOUS" weekday="MONDAY"/>
-      <MovingCondition substitute="WEDNESDAY" with="PREVIOUS" weekday="MONDAY"/>
-      <MovingCondition substitute="THURSDAY" with="PREVIOUS" weekday="MONDAY"/>
-      <MovingCondition substitute="FRIDAY" with="NEXT" weekday="MONDAY"/>
+    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY">
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
+
+    <!-- If the holiday falls on Tuesday or Wednesday it is observed on the preceding Monday;
+         if it falls on a Sunday it is observed on the following Monday. Thursday, Friday and
+         Saturday are kept. -->
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY">
+      <MovingCondition substitute="TUESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="WEDNESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="AUGUST" day="1" validFrom="2021" descriptionPropertiesKey="EMANCIPATION_DAY">
+      <MovingCondition substitute="TUESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="WEDNESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- Always observed on a Monday: Tuesday, Wednesday or Thursday move to the preceding
+         Monday; Friday, Saturday or Sunday move to the following Monday. -->
     <Fixed month="MARCH" day="9" descriptionPropertiesKey="NATIONAL_HEROES_AND_BENEFACTORS_DAY">
       <MovingCondition substitute="TUESDAY" with="PREVIOUS" weekday="MONDAY"/>
       <MovingCondition substitute="WEDNESDAY" with="PREVIOUS" weekday="MONDAY"/>
       <MovingCondition substitute="THURSDAY" with="PREVIOUS" weekday="MONDAY"/>
       <MovingCondition substitute="FRIDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
-    <Fixed month="OCTOBER" day="12" descriptionPropertiesKey="INDIGENOUS_PEOPLES_RESISTANCE_DAY">
+    <Fixed month="OCTOBER" day="12" validFrom="2022" descriptionPropertiesKey="INDIGENOUS_PEOPLES_RESISTANCE_DAY">
       <MovingCondition substitute="TUESDAY" with="PREVIOUS" weekday="MONDAY"/>
       <MovingCondition substitute="WEDNESDAY" with="PREVIOUS" weekday="MONDAY"/>
       <MovingCondition substitute="THURSDAY" with="PREVIOUS" weekday="MONDAY"/>
       <MovingCondition substitute="FRIDAY" with="NEXT" weekday="MONDAY"/>
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
 
-    <!-- Christmas and Boxing Day are kept on their statutory dates (not moved). -->
+    <!-- Christmas is kept on its statutory date (Sun 25 Dec 2022 was not moved). -->
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-    <Fixed month="DECEMBER" day="26" descriptionPropertiesKey="BOXING_DAY"/>
+
+    <!-- Sovereign's Day/Commonwealth Day, listed in the 2021 notice only. -->
+    <Fixed month="MAY" day="24" validFrom="2021" validTo="2021" descriptionPropertiesKey="COMMONWEALTH_DAY"/>
 
     <ChristianHoliday type="GOOD_FRIDAY"/>
     <ChristianHoliday type="EASTER_SATURDAY"/>
@@ -62,7 +75,12 @@
 
   <Sources>
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Belize</Source>
+    <Source>https://www.pressoffice.gov.bz/public-and-bank-holidays-2021-3/</Source>
+    <Source>https://www.pressoffice.gov.bz/public-and-bank-holidays-2022-updated/</Source>
+    <Source>https://www.pressoffice.gov.bz/public-and-bank-holidays-2023/</Source>
+    <Source>https://www.pressoffice.gov.bz/public-and-bank-holidays-2024/</Source>
     <Source>https://www.pressoffice.gov.bz/public-and-bank-holidays-2025/</Source>
+    <Source>https://www.pressoffice.gov.bz/public-and-bank-holidays-2026/</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:BZ</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:BZ</Source>
   </Sources>
