@@ -5,14 +5,20 @@
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
   <Holidays>
-    <!-- Public Holidays Act 1953 (Cap. 321): when a public holiday (other than the
-         King's Birthday and Christmas Day) falls on a Sunday, the following Monday is
-         observed. When Christmas Day falls on a Sunday, the following Tuesday is also
-         observed. There is no substitution for holidays that fall on a Saturday. -->
+    <!-- Public Holidays Act 1953 (Cap. 321), s. 1(2): when a public holiday (other than the
+         Independence day(s) appointed under s. 2 and Christmas Day) falls on a Sunday, the
+         following Monday is observed. s. 1(3): when Christmas Day falls on a Sunday, the
+         following Tuesday is also observed. There is no substitution for holidays that fall
+         on a Saturday. -->
     <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
-    <Fixed month="FEBRUARY" day="26" validFrom="2022" descriptionPropertiesKey="SOMARE_REMEMBRANCE_DAY">
+    <!-- Gazetted under s. 5, not in s. 1(1), so the s. 1(2) Sunday rule does not apply.
+         A day off for a weekend date is appointed each time (Fri 24 Feb 2023 for Sun 26 Feb 2023). -->
+    <Fixed month="FEBRUARY" day="24" validFrom="2023" validTo="2023" descriptionPropertiesKey="SOMARE_REMEMBRANCE_DAY"/>
+    <Fixed month="FEBRUARY" day="26" validFrom="2022" descriptionPropertiesKey="SOMARE_REMEMBRANCE_DAY"/>
+    <!-- Sovereign's birthday (s. 3): 17 June, the King's actual birthday, from 2026. -->
+    <Fixed month="JUNE" day="17" validFrom="2026" descriptionPropertiesKey="KINGS_BIRTHDAY">
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
     <Fixed month="JULY" day="23" descriptionPropertiesKey="REMEMBRANCE">
@@ -31,10 +37,10 @@
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
 
-    <!-- Sovereign's birthday, observed on the second Monday of June.
+    <!-- Sovereign's birthday, observed on the second Monday of June until 2025.
          Queen's Birthday until the death of Elizabeth II in 2022, King's Birthday thereafter. -->
     <FixedWeekday which="SECOND" weekday="MONDAY" month="JUNE" validTo="2022" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
-    <FixedWeekday which="SECOND" weekday="MONDAY" month="JUNE" validFrom="2023" descriptionPropertiesKey="KINGS_BIRTHDAY"/>
+    <FixedWeekday which="SECOND" weekday="MONDAY" month="JUNE" validFrom="2023" validTo="2025" descriptionPropertiesKey="KINGS_BIRTHDAY"/>
 
     <ChristianHoliday type="GOOD_FRIDAY"/>
     <ChristianHoliday type="EASTER_SATURDAY"/>
@@ -45,6 +51,8 @@
   <Sources>
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Papua_New_Guinea</Source>
     <Source of="Public Holidays Act 1953">https://www.paclii.org/pg/legis/consol_act/pha1953163/</Source>
+    <Source of="Investment Promotion Authority, public holidays">https://www.ipa.gov.pg/public/Holidays.aspx</Source>
+    <Source of="Investment Promotion Authority, public holidays 2023 (archived)">https://web.archive.org/web/20230727144540/https://www.ipa.gov.pg/public/Holidays.aspx</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:PG</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:PG</Source>
   </Sources>

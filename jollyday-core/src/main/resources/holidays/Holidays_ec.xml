@@ -6,22 +6,65 @@
                xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
   <Holidays>
     <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
-    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
-    <Fixed month="MAY" day="24" descriptionPropertiesKey="PICHINCHA"/>
-    <Fixed month="JULY" day="24" descriptionPropertiesKey="BOLIVAR"/>
-    <Fixed month="AUGUST" day="10" descriptionPropertiesKey="INDEP_QUITO"/>
-    <Fixed month="OCTOBER" day="9" descriptionPropertiesKey="INDEP_GUYAQUIL"/>
-    <Fixed month="NOVEMBER" day="2" descriptionPropertiesKey="ALL_SOULS"/>
-    <Fixed month="NOVEMBER" day="3" descriptionPropertiesKey="INDEP_CUENCA"/>
-    <Fixed month="DECEMBER" day="6" descriptionPropertiesKey="FOUND_QUITO"/>
+    <!-- Since 2017 (Código del Trabajo art. 65, RO Supl. 906 of 2016-12-20): Tuesday to the Monday before,
+         Wednesday and Thursday to the Friday after, Saturday to the Friday before, Sunday to the Monday after -->
+    <Fixed month="MAY" day="1" validTo="2016" descriptionPropertiesKey="LABOUR_DAY"/>
+    <Fixed month="MAY" day="1" validFrom="2017" descriptionPropertiesKey="LABOUR_DAY">
+      <MovingCondition substitute="TUESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="WEDNESDAY" with="NEXT" weekday="FRIDAY"/>
+      <MovingCondition substitute="THURSDAY" with="NEXT" weekday="FRIDAY"/>
+      <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="MAY" day="24" validTo="2016" descriptionPropertiesKey="PICHINCHA"/>
+    <Fixed month="MAY" day="24" validFrom="2017" descriptionPropertiesKey="PICHINCHA">
+      <MovingCondition substitute="TUESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="WEDNESDAY" with="NEXT" weekday="FRIDAY"/>
+      <MovingCondition substitute="THURSDAY" with="NEXT" weekday="FRIDAY"/>
+      <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="AUGUST" day="10" validTo="2016" descriptionPropertiesKey="INDEP_QUITO"/>
+    <Fixed month="AUGUST" day="10" validFrom="2017" descriptionPropertiesKey="INDEP_QUITO">
+      <MovingCondition substitute="TUESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="WEDNESDAY" with="NEXT" weekday="FRIDAY"/>
+      <MovingCondition substitute="THURSDAY" with="NEXT" weekday="FRIDAY"/>
+      <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="OCTOBER" day="9" validTo="2016" descriptionPropertiesKey="INDEP_GUYAQUIL"/>
+    <Fixed month="OCTOBER" day="9" validFrom="2017" descriptionPropertiesKey="INDEP_GUYAQUIL">
+      <MovingCondition substitute="TUESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="WEDNESDAY" with="NEXT" weekday="FRIDAY"/>
+      <MovingCondition substitute="THURSDAY" with="NEXT" weekday="FRIDAY"/>
+      <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="NOVEMBER" day="2" validTo="2016" descriptionPropertiesKey="ALL_SOULS"/>
+    <Fixed month="NOVEMBER" day="3" validTo="2016" descriptionPropertiesKey="INDEP_CUENCA"/>
+    <!-- Since 2017 the consecutive 2 and 3 November follow Disposición General Primera of RO Supl. 906:
+         Mon/Tue and Thu/Fri stay, Tue/Wed: Wednesday to Monday, Wed/Thu: Wednesday to Friday,
+         Fri/Sat: Saturday to Thursday, Sat/Sun: Saturday to Friday and Sunday to Monday, Sun/Mon: Sunday to Tuesday -->
+    <Fixed month="NOVEMBER" day="2" validFrom="2017" descriptionPropertiesKey="ALL_SOULS">
+      <MovingCondition substitute="WEDNESDAY" with="NEXT" weekday="FRIDAY"/>
+      <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="FRIDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
+    </Fixed>
+    <Fixed month="NOVEMBER" day="3" validFrom="2017" descriptionPropertiesKey="INDEP_CUENCA">
+      <MovingCondition substitute="WEDNESDAY" with="PREVIOUS" weekday="MONDAY"/>
+      <MovingCondition substitute="SATURDAY" with="PREVIOUS" weekday="THURSDAY"/>
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-    <Fixed month="DECEMBER" day="31" descriptionPropertiesKey="NEW_YEARS_EVE"/>
+    <ChristianHoliday type="SHROVE_MONDAY"/>
+    <ChristianHoliday type="CARNIVAL"/>
     <ChristianHoliday type="EASTER"/>
-    <ChristianHoliday type="MAUNDY_THURSDAY"/>
     <ChristianHoliday type="GOOD_FRIDAY"/>
   </Holidays>
 
   <Sources>
+    <Source of="Ley Orgánica Reformatoria a la LOSEP y al Código del Trabajo, RO Supl. 906 (2016-12-20)">https://esacc.corteconstitucional.gob.ec/storage/api/v1/10_DWL_FL/eyJjYXJwZXRhIjoicm8iLCJ1dWlkIjoiNjY4NDI5OTEtNmU1Zi00NDNmLWE4OTgtYmU2MWVjNTUyZjRkLnBkZiJ9</Source>
+    <Source>https://www.asambleanacional.gob.ec/es/blogs/herman-moya/47579-ley-de-feriados</Source>
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Ecuador</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:EC</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:EC</Source>

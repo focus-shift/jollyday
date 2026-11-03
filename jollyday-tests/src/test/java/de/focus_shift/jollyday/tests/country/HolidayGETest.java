@@ -2,6 +2,8 @@ package de.focus_shift.jollyday.tests.country;
 
 import org.junit.jupiter.api.Test;
 
+import java.time.Year;
+
 import static de.focus_shift.jollyday.core.HolidayCalendar.GEORGIA;
 import static de.focus_shift.jollyday.tests.CalendarCheckerApi.assertFor;
 import static java.time.Month.APRIL;
@@ -26,6 +28,9 @@ class HolidayGETest {
       .hasFixedHoliday("NATIONAL_UNITY_DAY", APRIL, 9).and()
       .hasFixedHoliday("DAY_OF_VICTORY_OVER_FASCISM", MAY, 9).and()
       .hasFixedHoliday("ST_ANDREW_FIRST_CALLED_DAY", MAY, 12).and()
+      .hasFixedHoliday("FAMILY_SANCTITY_DAY", MAY, 17)
+        .notValidBetween(Year.of(1900), Year.of(2024))
+        .validFrom(Year.of(2025)).and()
       .hasFixedHoliday("INDEPENDENCE_DAY", MAY, 26).and()
       .hasFixedHoliday("ST_MARY", AUGUST, 28).and()
       .hasFixedHoliday("DAY_OF_SVETITSKHOVELI_CATHEDRA", OCTOBER, 14).and()

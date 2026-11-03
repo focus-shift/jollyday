@@ -11,7 +11,8 @@
     <Fixed month="AUGUST" day="15" descriptionPropertiesKey="ASSUMPTION_MARY"/>
     <Fixed month="AUGUST" day="16" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
     <Fixed month="AUGUST" day="17" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
-    <Fixed month="AUGUST" day="30" descriptionPropertiesKey="LIBERATION"/>
+    <!-- Journée nationale de la Libération, first celebrated 30 August 2024; Constitution of 19 December 2024, art. 2 -->
+    <Fixed month="AUGUST" day="30" validFrom="2024" descriptionPropertiesKey="LIBERATION"/>
     <Fixed month="NOVEMBER" day="1" descriptionPropertiesKey="ALL_SAINTS"/>
     <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
     <ChristianHoliday type="EASTER_MONDAY"/>
@@ -23,6 +24,8 @@
 
   <Sources>
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Gabon</Source>
+    <Source of="Constitution of 19 December 2024, art. 2 (Journal Officiel n°47 Bis)">https://gabonmediatime.com/wp-content/uploads/2024/12/Journal-Officiel_n%C2%B047-Bis-du-19-decembre-2024_Constitution.pdf</Source>
+    <Source of="Communiqué final du Conseil des Ministres du 31 août 2024">https://directinfosgabon.com/wp-content/uploads/2024/09/Communique-Final-du-Conseil-des-Ministres-du-31-ao_240901_003018.pdf</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:GA</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:GA</Source>
   </Sources>

@@ -5,22 +5,57 @@
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
   <Holidays>
-    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
-    <Fixed month="JANUARY" day="9" descriptionPropertiesKey="MARTYRS_DAY"/>
-    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY"/>
-    <Fixed month="NOVEMBER" day="3" descriptionPropertiesKey="SEPARATION"/>
+    <!-- Código de Trabajo, art. 47: a holiday or day of national mourning fixed by law that
+         falls on a Sunday is observed on the following Monday. -->
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="JANUARY" day="9" descriptionPropertiesKey="MARTYRS_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="MAY" day="1" descriptionPropertiesKey="LABOUR_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="NOVEMBER" day="3" descriptionPropertiesKey="SEPARATION">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
     <Fixed month="NOVEMBER" day="4" descriptionPropertiesKey="FLAG_DAY"/>
-    <Fixed month="NOVEMBER" day="28" descriptionPropertiesKey="INDEPENDENCE_DAY"/>
-    <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="MOTHERS_DAY"/>
-    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS"/>
-    <ChristianHoliday type="EASTER"/>
-    <ChristianHoliday type="CLEAN_MONDAY"/>
+    <!-- Added to art. 46 by Ley 55 de 7 de noviembre de 2001. -->
+    <Fixed month="NOVEMBER" day="5" validFrom="2002" descriptionPropertiesKey="CONSOLIDATION_OF_SEPARATION">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="NOVEMBER" day="10" descriptionPropertiesKey="FIRST_CRY_OF_INDEPENDENCE">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="NOVEMBER" day="28" descriptionPropertiesKey="INDEPENDENCE_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="DECEMBER" day="8" descriptionPropertiesKey="MOTHERS_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <!-- Ley 291 de 31 de marzo de 2022. -->
+    <Fixed month="DECEMBER" day="20" validFrom="2022" descriptionPropertiesKey="NATIONAL_DAY_OF_MOURNING">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="DECEMBER" day="25" descriptionPropertiesKey="CHRISTMAS">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <!-- Carnival Monday and Easter Sunday are not mandatory rest days under art. 46. -->
+    <ChristianHoliday type="EASTER" localizedType="OBSERVANCE"/>
+    <ChristianHoliday type="CLEAN_MONDAY" localizedType="OBSERVANCE"/>
     <ChristianHoliday type="CARNIVAL"/>
     <ChristianHoliday type="GOOD_FRIDAY"/>
   </Holidays>
 
   <Sources>
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Panama</Source>
+    <Source>https://panama.justia.com/federales/leyes/55-de-2001-nov-14-2001/gdoc</Source>
+    <Source>https://docs.panama.justia.com/federales/codigos/codigo-de-trabajo.pdf</Source>
+    <Source>https://www.superbancos.gob.pa/documentos/leyes_y_regulaciones/comunicados/2022/aviso11-2022.pdf</Source>
+    <Source>https://www.superbancos.gob.pa/documentos/leyes_y_regulaciones/comunicados/2023/aviso12-2023.pdf</Source>
+    <Source>https://www.superbancos.gob.pa/documentos/leyes_y_regulaciones/comunicados/2023/aviso30-2023.pdf</Source>
+    <Source>https://www.superbancos.gob.pa/documentos/leyes_y_regulaciones/comunicados/2024/aviso13-2024.pdf</Source>
+    <Source>https://www.superbancos.gob.pa/documentos/leyes_y_regulaciones/resolucion/2026/Resolucion_2026-00003.pdf</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:PA</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:PA</Source>
   </Sources>

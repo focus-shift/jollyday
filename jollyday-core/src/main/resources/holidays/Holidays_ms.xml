@@ -7,7 +7,7 @@
   <Holidays>
     <!-- If a public holiday falls on a Saturday or Sunday, the next following Monday is a public holiday.
          Where two consecutive holidays fall on a weekend, the following Monday and Tuesday are observed.
-         (Public Holidays (Amendment) Act, No. 3 of 2017, Schedule paragraphs 3-5) -->
+         (Public Holidays Act, Cap. 6.09 (Act 13 of 2024), Schedule paragraphs 2-5) -->
     <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR">
       <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="TUESDAY"/>
@@ -31,9 +31,23 @@
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
 
+    <!-- Sovereign's birthday: the Schedule has no date, the Governor appoints the day by proclamation
+         each year (s. 4). S.R.O. 18 of 2024, S.R.O. 3 of 2025, S.R.O. 22 of 2026. -->
+    <Fixed month="JUNE" day="17" validFrom="2024" validTo="2024" descriptionPropertiesKey="KINGS_BIRTHDAY"/>
+    <Fixed month="JUNE" day="16" validFrom="2025" validTo="2025" descriptionPropertiesKey="KINGS_BIRTHDAY"/>
+    <Fixed month="JUNE" day="13" validFrom="2026" validTo="2026" descriptionPropertiesKey="KINGS_BIRTHDAY">
+      <MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+
+    <!-- National Day of Prayer and Thanksgiving: declared each year until 2022,
+         second Wednesday in July since S.R.O. 15 of 2023. -->
+    <Fixed month="JULY" day="21" validFrom="2021" validTo="2021" descriptionPropertiesKey="NATIONAL_DAY_OF_PRAYER_AND_THANKSGIVING"/>
+    <Fixed month="JULY" day="20" validFrom="2022" validTo="2022" descriptionPropertiesKey="NATIONAL_DAY_OF_PRAYER_AND_THANKSGIVING"/>
+
     <FixedWeekday which="FIRST" weekday="MONDAY" month="MAY" descriptionPropertiesKey="LABOUR_DAY"/>
-    <FixedWeekday which="SECOND" weekday="MONDAY" month="JUNE" descriptionPropertiesKey="KINGS_BIRTHDAY"/>
-    <FixedWeekday which="SECOND" weekday="WEDNESDAY" month="JULY" descriptionPropertiesKey="NATIONAL_DAY_OF_PRAYER_AND_THANKSGIVING"/>
+    <FixedWeekday which="SECOND" weekday="MONDAY" month="JUNE" validTo="2022" descriptionPropertiesKey="QUEENS_BIRTHDAY"/>
+    <FixedWeekday which="SECOND" weekday="MONDAY" month="JUNE" validFrom="2023" validTo="2023" descriptionPropertiesKey="KINGS_BIRTHDAY"/>
+    <FixedWeekday which="SECOND" weekday="WEDNESDAY" month="JULY" validFrom="2023" descriptionPropertiesKey="NATIONAL_DAY_OF_PRAYER_AND_THANKSGIVING"/>
     <FixedWeekday which="FIRST" weekday="MONDAY" month="AUGUST" descriptionPropertiesKey="EMANCIPATION_DAY"/>
 
     <ChristianHoliday type="GOOD_FRIDAY"/>
@@ -45,6 +59,13 @@
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Montserrat</Source>
     <Source>https://www.gov.ms/tag/public-holidays/</Source>
     <Source of="Public Holidays (Amendment) Act, No. 3 of 2017">http://agc.gov.ms/wp-content/uploads/2011/10/Act-No.-3-of-2017-Public-Holidays-Amendment-Act-20171.pdf</Source>
+    <Source of="S.R.O. 15 of 2023, Public Holidays (Amendment of Schedule) Order 2023">https://parliament.ms/wp-content/uploads/2023/12/S.R.O-15-of-2023.pdf</Source>
+    <Source of="Public Holidays Act, Cap. 6.09 (Act 13 of 2024)">https://www.gov.ms/wp-content/uploads/2026/02/6.09-Public-Holidays-Act.pdf</Source>
+    <Source of="S.R.O. 18 of 2024, King's Birthday 2024">https://www.gov.ms/wp-content/uploads/2024/04/SRO-No.-18-of-2024-Proclamation-Appointing-Monday-17-June-2024-a-Public-Holiday.pdf</Source>
+    <Source of="S.R.O. 3 of 2025, King's Birthday 2025">https://www.gov.ms/wp-content/uploads/2025/02/SRo-No.-3-of-2025-Proclamation-Appointing-Monday-16-June-2025-a-Public-Holiday.pdf</Source>
+    <Source of="S.R.O. 22 of 2026, King's Birthday 2026">https://www.gov.ms/wp-content/uploads/2026/06/SRO-No.-22-of-2026-Proclamation-Appointing-Saturday-13-June-2026-a-Public-Holiday.pdf</Source>
+    <Source of="National Day of Prayer and Thanksgiving 2021">https://www.gov.ms/2021/07/16/wednesday-july-21-2021-public-holiday-national-day-of-prayer-thanksgiving/</Source>
+    <Source of="National Day of Prayer and Thanksgiving 2022">https://www.gov.ms/2022/07/19/public-holiday-for-national-day-of-prayer-and-thanksgiving-to-be-held-on-july-20-2022/</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:MS</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:MS</Source>
   </Sources>
