@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration hierarchy="mn" description="Mongolia"
+               xmlns="https://focus_shift.de/jollyday/schema/holiday"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <!-- Days off under Art. 4.1 of the Law on Public Holidays and Commemorative Days (2003).
+       Neither this law nor the Labour Law has a substitute-day rule for holidays falling on a
+       weekend; one-off government transfers of days off are not modelled. -->
+  <Holidays>
+    <Fixed month="JANUARY" day="1" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="MARCH" day="8" descriptionPropertiesKey="INTERNATIONAL_WOMAN"/>
+    <Fixed month="JUNE" day="1" descriptionPropertiesKey="CHILDRENS_DAY"/>
+
+    <!-- Naadam and People's Revolution Day: 11-15 July; 10 July added by the law of 28 June 2022 -->
+    <Fixed month="JULY" day="10" validFrom="2022" descriptionPropertiesKey="NAADAM"/>
+    <Fixed month="JULY" day="11" descriptionPropertiesKey="NAADAM"/>
+    <Fixed month="JULY" day="12" descriptionPropertiesKey="NAADAM"/>
+    <Fixed month="JULY" day="13" descriptionPropertiesKey="NAADAM"/>
+    <Fixed month="JULY" day="14" descriptionPropertiesKey="NAADAM"/>
+    <Fixed month="JULY" day="15" descriptionPropertiesKey="NAADAM"/>
+
+    <!-- Republic Day: made a commemorative day only by the law of 8 November 2012,
+         a day off again by the law of 18 November 2016 -->
+    <Fixed month="NOVEMBER" day="26" validTo="2011" descriptionPropertiesKey="REPUBLIC_DAY"/>
+    <Fixed month="NOVEMBER" day="26" validFrom="2016" descriptionPropertiesKey="REPUBLIC_DAY"/>
+
+    <!-- National Freedom and Independence Day: added by the law of 23 December 2011 -->
+    <Fixed month="DECEMBER" day="29" validFrom="2011" descriptionPropertiesKey="RESTORATION_OF_INDEPENDENCE"/>
+
+    <!-- ==================================================================================
+         Lunar-calendar holidays: Tsagaan Sar (three days), Buddha's Day (since 2020) and
+         Chinggis Khaan's Day (since 2012). The schema has no lunar-calendar type, so these
+         are defined per year with the Gregorian days off announced by MONTSAME (state news
+         agency). Covered: 2020-2025, plus Tsagaan Sar 2026. Not yet covered: Buddha's Day
+         and Chinggis Khaan's Day 2026, all years from 2027, and all years before 2020.
+         ================================================================================== -->
+
+    <!-- 2020 -->
+    <Fixed month="FEBRUARY" day="24" validFrom="2020" validTo="2020" descriptionPropertiesKey="LUNAR_NEW_YEARS_DAY"/>
+    <Fixed month="FEBRUARY" day="25" validFrom="2020" validTo="2020" descriptionPropertiesKey="SECOND_DAY_OF_LUNAR_NEW_YEAR"/>
+    <Fixed month="FEBRUARY" day="26" validFrom="2020" validTo="2020" descriptionPropertiesKey="THIRD_DAY_OF_LUNAR_NEW_YEAR"/>
+    <Fixed month="JUNE" day="5" validFrom="2020" validTo="2020" descriptionPropertiesKey="VESAK_DAY"/>
+    <Fixed month="NOVEMBER" day="16" validFrom="2020" validTo="2020" descriptionPropertiesKey="CHINGGIS_KHAAN_DAY"/>
+
+    <!-- 2021 -->
+    <Fixed month="FEBRUARY" day="12" validFrom="2021" validTo="2021" descriptionPropertiesKey="LUNAR_NEW_YEARS_DAY"/>
+    <Fixed month="FEBRUARY" day="13" validFrom="2021" validTo="2021" descriptionPropertiesKey="SECOND_DAY_OF_LUNAR_NEW_YEAR"/>
+    <Fixed month="FEBRUARY" day="14" validFrom="2021" validTo="2021" descriptionPropertiesKey="THIRD_DAY_OF_LUNAR_NEW_YEAR"/>
+    <Fixed month="MAY" day="26" validFrom="2021" validTo="2021" descriptionPropertiesKey="VESAK_DAY"/>
+    <Fixed month="NOVEMBER" day="5" validFrom="2021" validTo="2021" descriptionPropertiesKey="CHINGGIS_KHAAN_DAY"/>
+
+    <!-- 2022 -->
+    <Fixed month="FEBRUARY" day="2" validFrom="2022" validTo="2022" descriptionPropertiesKey="LUNAR_NEW_YEARS_DAY"/>
+    <Fixed month="FEBRUARY" day="3" validFrom="2022" validTo="2022" descriptionPropertiesKey="SECOND_DAY_OF_LUNAR_NEW_YEAR"/>
+    <Fixed month="FEBRUARY" day="4" validFrom="2022" validTo="2022" descriptionPropertiesKey="THIRD_DAY_OF_LUNAR_NEW_YEAR"/>
+    <Fixed month="JUNE" day="14" validFrom="2022" validTo="2022" descriptionPropertiesKey="VESAK_DAY"/>
+    <Fixed month="NOVEMBER" day="24" validFrom="2022" validTo="2022" descriptionPropertiesKey="CHINGGIS_KHAAN_DAY"/>
+
+    <!-- 2023 -->
+    <Fixed month="FEBRUARY" day="21" validFrom="2023" validTo="2023" descriptionPropertiesKey="LUNAR_NEW_YEARS_DAY"/>
+    <Fixed month="FEBRUARY" day="22" validFrom="2023" validTo="2023" descriptionPropertiesKey="SECOND_DAY_OF_LUNAR_NEW_YEAR"/>
+    <Fixed month="FEBRUARY" day="23" validFrom="2023" validTo="2023" descriptionPropertiesKey="THIRD_DAY_OF_LUNAR_NEW_YEAR"/>
+    <Fixed month="JUNE" day="4" validFrom="2023" validTo="2023" descriptionPropertiesKey="VESAK_DAY"/>
+    <Fixed month="NOVEMBER" day="14" validFrom="2023" validTo="2023" descriptionPropertiesKey="CHINGGIS_KHAAN_DAY"/>
+
+    <!-- 2024 -->
+    <Fixed month="FEBRUARY" day="10" validFrom="2024" validTo="2024" descriptionPropertiesKey="LUNAR_NEW_YEARS_DAY"/>
+    <Fixed month="FEBRUARY" day="11" validFrom="2024" validTo="2024" descriptionPropertiesKey="SECOND_DAY_OF_LUNAR_NEW_YEAR"/>
+    <Fixed month="FEBRUARY" day="12" validFrom="2024" validTo="2024" descriptionPropertiesKey="THIRD_DAY_OF_LUNAR_NEW_YEAR"/>
+    <Fixed month="MAY" day="23" validFrom="2024" validTo="2024" descriptionPropertiesKey="VESAK_DAY"/>
+    <Fixed month="NOVEMBER" day="2" validFrom="2024" validTo="2024" descriptionPropertiesKey="CHINGGIS_KHAAN_DAY"/>
+
+    <!-- 2025: the days off were 1-3 March (lunar day 2 fell on 1 March) -->
+    <Fixed month="MARCH" day="1" validFrom="2025" validTo="2025" descriptionPropertiesKey="LUNAR_NEW_YEARS_DAY"/>
+    <Fixed month="MARCH" day="2" validFrom="2025" validTo="2025" descriptionPropertiesKey="SECOND_DAY_OF_LUNAR_NEW_YEAR"/>
+    <Fixed month="MARCH" day="3" validFrom="2025" validTo="2025" descriptionPropertiesKey="THIRD_DAY_OF_LUNAR_NEW_YEAR"/>
+    <Fixed month="JUNE" day="11" validFrom="2025" validTo="2025" descriptionPropertiesKey="VESAK_DAY"/>
+    <Fixed month="NOVEMBER" day="21" validFrom="2025" validTo="2025" descriptionPropertiesKey="CHINGGIS_KHAAN_DAY"/>
+
+    <!-- 2026 -->
+    <Fixed month="FEBRUARY" day="18" validFrom="2026" validTo="2026" descriptionPropertiesKey="LUNAR_NEW_YEARS_DAY"/>
+    <Fixed month="FEBRUARY" day="19" validFrom="2026" validTo="2026" descriptionPropertiesKey="SECOND_DAY_OF_LUNAR_NEW_YEAR"/>
+    <Fixed month="FEBRUARY" day="20" validFrom="2026" validTo="2026" descriptionPropertiesKey="THIRD_DAY_OF_LUNAR_NEW_YEAR"/>
+  </Holidays>
+
+  <Sources>
+    <Source>https://www.parliament.mn/files/140b47c573b94de094e0336bf1435ac3/?d=1</Source>
+    <Source>https://www.parliament.mn/files/916bb6cf80c24e4d849ebf5071a9e21c/?d=1</Source>
+    <Source>https://montsame.mn/en/read/211767</Source>
+    <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:MN</Source>
+    <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:MN</Source>
+  </Sources>
+
+  <SubConfigurations hierarchy="073" description="Arhangay">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="069" description="Bayanhongor">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="071" description="Bayan-Ölgiy">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="067" description="Bulgan">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="037" description="Darhan uul">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="061" description="Dornod">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="063" description="Dornogovĭ">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="059" description="Dundgovĭ">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="057" description="Dzavhan">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="065" description="Govĭ-Altay">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="064" description="Govĭ-Sümber">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="039" description="Hentiy">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="043" description="Hovd">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="041" description="Hövsgöl">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="053" description="Ömnögovĭ">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="035" description="Orhon">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="055" description="Övörhangay">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="049" description="Selenge">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="051" description="Sühbaatar">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="047" description="Töv">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="1" description="Ulaanbaatar">
+    <Holidays/>
+  </SubConfigurations>
+  <SubConfigurations hierarchy="046" description="Uvs">
+    <Holidays/>
+  </SubConfigurations>
+</Configuration>
