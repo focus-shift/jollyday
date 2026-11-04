@@ -15,6 +15,7 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.EnumSource;
 import org.junit.jupiter.params.provider.MethodSource;
 
+import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.Month;
 import java.time.Year;
@@ -252,6 +253,40 @@ class DefaultHolidayManagerTest {
       final HolidayManager sut = HolidayManager.getInstance(create(calendar));
       assertThat(sut).isNotNull();
     }
+  }
+
+  @Test
+  void ensureToRetrieveWeekendDaysFromBaseLevelHierarchy() {
+    final HolidayManager sut = HolidayManager.getInstance(create("test"));
+    assertThat(sut.getWeekendDays(Year.of(2024))).containsExactlyInAnyOrder(DayOfWeek.FRIDAY, DayOfWeek.SATURDAY);
+  }
+
+  @Test
+  void ensureSubdivisionCanOverrideWeekendDays() {
+    final HolidayManager sut = HolidayManager.getInstance(create("test"));
+    assertThat(sut.getWeekendDays(Year.of(2024), "level1_1")).containsExactlyInAnyOrder(DayOfWeek.SUNDAY);
+  }
+
+  @Test
+  void ensureSubdivisionInheritsWeekendDaysWhenItDefinesNoneOfItsOwn() {
+    final HolidayManager sut = HolidayManager.getInstance(create("test"));
+    assertThat(sut.getWeekendDays(Year.of(2024), "level1_2")).containsExactlyInAnyOrder(DayOfWeek.FRIDAY, DayOfWeek.SATURDAY);
+    assertThat(sut.getWeekendDays(Year.of(2024), "level1_1", "level1_1_l2")).containsExactlyInAnyOrder(DayOfWeek.SUNDAY);
+  }
+
+  @Test
+  void ensureCalendarsWithoutOwnWeekendConfigurationDefaultToSaturdayAndSunday() {
+    final HolidayManager sut = HolidayManager.getInstance(create(GERMANY));
+    assertThat(sut.getWeekendDays(Year.of(2024))).containsExactlyInAnyOrder(DayOfWeek.SATURDAY, DayOfWeek.SUNDAY);
+  }
+
+  @Test
+  void ensureIsNonWorkingDayIsTrueOnWeekendDayAndOnHoliday() {
+    final HolidayManager sut = HolidayManager.getInstance(create("test"));
+
+    assertThat(sut.isNonWorkingDay(LocalDate.of(2024, Month.JANUARY, 5))).isTrue(); // a Friday, weekend day
+    assertThat(sut.isNonWorkingDay(LocalDate.of(2010, Month.FEBRUARY, 17))).isTrue(); // a holiday, not a weekend day
+    assertThat(sut.isNonWorkingDay(LocalDate.of(2024, Month.JANUARY, 9))).isFalse(); // a Tuesday, no holiday
   }
 
   private void assertDates(final Set<LocalDate> expectedHolidays, final Set<Holiday> holidays) {

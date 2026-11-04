@@ -4,6 +4,7 @@ import de.focus_shift.jollyday.core.ManagerParameter;
 import de.focus_shift.jollyday.core.spi.HolidayCalendarConfiguration;
 import de.focus_shift.jollyday.core.spi.HolidayCalendarConfigurationService;
 import de.focus_shift.jollyday.core.spi.HolidayConfigurations;
+import de.focus_shift.jollyday.core.spi.WeekendConfiguration;
 import de.focus_shift.jollyday.core.support.LazyServiceLoaderCache;
 import org.jspecify.annotations.NonNull;
 import org.junit.jupiter.api.BeforeEach;
@@ -84,6 +85,11 @@ class ConfigurationServiceManagerTest {
         }
 
         @Override
+        public @NonNull Stream<WeekendConfiguration> weekends() {
+          return Stream.empty();
+        }
+
+        @Override
         public @NonNull String hierarchy() {
           return null;
         }
@@ -109,6 +115,11 @@ class ConfigurationServiceManagerTest {
         @Override
         public @NonNull Stream<HolidayCalendarConfiguration> subConfigurations() {
           return null;
+        }
+
+        @Override
+        public @NonNull Stream<WeekendConfiguration> weekends() {
+          return Stream.empty();
         }
 
         @Override
