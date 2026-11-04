@@ -61,8 +61,11 @@
     <IslamicHoliday type="ID_AL_GHADIR"/>
   </Holidays>
 
+  <Weekend weekday="FRIDAY"/>
+
   <Sources>
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Iran</Source>
+    <Source of="Weekend">https://www.voanews.com/a/iran-lawmakers-back-switch-to-friday-saturday-weekend/7613803.html</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:IR</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:IR</Source>
   </Sources>

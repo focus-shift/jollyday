@@ -23,8 +23,14 @@
     <IslamicHoliday type="ID_UL_ADHA_3"/>
   </Holidays>
 
+  <Weekend weekday="THURSDAY" validTo="2005"/>
+  <Weekend weekday="FRIDAY" validTo="2005"/>
+  <Weekend weekday="FRIDAY" validFrom="2006"/>
+  <Weekend weekday="SATURDAY" validFrom="2006"/>
+
   <Sources>
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Bahrain</Source>
+    <Source of="Weekend">https://gulfnews.com/world/gulf/bahrain/bahrain-adopts-new-weekend-for-public-staff-1.253616</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:BH</Source>
   </Sources>
 
