@@ -3,6 +3,8 @@ package de.focus_shift.jollyday.tests;
 import de.focus_shift.jollyday.core.HolidayCalendar;
 import de.focus_shift.jollyday.core.HolidayManager;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.EnumSource;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -31,21 +33,14 @@ class HolidayFilesIntegrityTest {
       .isEmpty();
   }
 
-  @Test
-  void ensureHierarchyMatchesCalendarCode() {
-    final Set<String> mismatches = new HashSet<>();
+  @ParameterizedTest
+  @EnumSource(HolidayCalendar.class)
+  void ensureCalendarCanBeReloadedByItsHierarchyId(final HolidayCalendar calendar) {
+    final String hierarchyId = HolidayManager.getInstance(create(calendar)).getCalendarHierarchy().getId();
 
-    for (HolidayCalendar calendar : HolidayCalendar.values()) {
-      final String hierarchyId = HolidayManager.getInstance(create(calendar)).getCalendarHierarchy().getId();
+    // loading by the id the library reports must find the same calendar file again
+    final HolidayManager reloaded = HolidayManager.getInstance(create(hierarchyId));
 
-      // the hierarchy id must be usable as a calendar code to load the same calendar again
-      if (!hierarchyId.equalsIgnoreCase(calendar.getId())) {
-        mismatches.add(calendar + " -> " + hierarchyId);
-      }
-    }
-
-    assertThat(mismatches)
-      .withFailMessage("Hierarchy does not match calendar code: %s", mismatches)
-      .isEmpty();
+    assertThat(reloaded.getCalendarHierarchy().getId()).isEqualTo(hierarchyId);
   }
 }
