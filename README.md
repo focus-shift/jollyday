@@ -333,10 +333,10 @@ via the constants of `HolidayCalendar` (not via an ISO 3166 code) and can be use
 | Calendar                                                                             | `HolidayCalendar` constant | Hierarchy key        |
 |--------------------------------------------------------------------------------------|----------------------------|----------------------|
 | New York Stock Exchange (NYSE)                                                       | `NYSE`                     | `nyse`               |
-| New York Stock Exchange Euronext                                                     | `NYSE_EURONEXT`            | `nyse-euronext`      |
+| New York Stock Exchange Euronext                                                     | `NYSE_EURONEXT`            | `nyse_euronext`      |
 | London Metal Exchange (LME)                                                          | `LONDON_METAL_EXCHANGE`    | `lme`                |
 | TARGET (Trans-European Automated Real-time Gross settlement Express Transfer system) | `TARGET`                   | `target`             |
-| TARGET2-Securities (T2S)                                                             | `TARGET2_SECURITIES`       | `target2-securities` |
+| TARGET2-Securities (T2S)                                                             | `TARGET2_SECURITIES`       | `target2_securities` |
 
 ## Holiday types
 
