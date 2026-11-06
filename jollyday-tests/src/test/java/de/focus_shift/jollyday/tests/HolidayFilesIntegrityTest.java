@@ -30,4 +30,22 @@ class HolidayFilesIntegrityTest {
       .withFailMessage("Found duplicate hierarchy values: %s", duplicates)
       .isEmpty();
   }
+
+  @Test
+  void ensureHierarchyMatchesCalendarCode() {
+    final Set<String> mismatches = new HashSet<>();
+
+    for (HolidayCalendar calendar : HolidayCalendar.values()) {
+      final String hierarchyId = HolidayManager.getInstance(create(calendar)).getCalendarHierarchy().getId();
+
+      // the hierarchy id must be usable as a calendar code to load the same calendar again
+      if (!hierarchyId.equalsIgnoreCase(calendar.getId())) {
+        mismatches.add(calendar + " -> " + hierarchyId);
+      }
+    }
+
+    assertThat(mismatches)
+      .withFailMessage("Hierarchy does not match calendar code: %s", mismatches)
+      .isEmpty();
+  }
 }
