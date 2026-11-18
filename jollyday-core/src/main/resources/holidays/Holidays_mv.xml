@@ -77,8 +77,12 @@
     <IslamicHoliday type="ID_UL_ADHA_3"/>
   </Holidays>
 
+  <Weekend weekday="FRIDAY"/>
+  <Weekend weekday="SATURDAY"/>
+
   <Sources>
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_the_Maldives</Source>
+    <Source of="Weekend">https://www.maldivesincorp.com/maldives-working-hours.html</Source>
     <Source of="Employment Act (Law No. 2/2008), Section 97 - statutory public holiday list">https://lra.gov.mv/wp-content/uploads/2020/07/Employment-Act-Unofficial-English-Translation.pdf</Source>
     <Source of="National Day (Qaumee Dhuvas)">https://en.wikipedia.org/wiki/National_Day_(Maldives)</Source>
     <Source of="No codified weekend-substitution rule; ad hoc decrees only, e.g. Republic Day 2024">https://atolltimes.mv/post/news/10190</Source>
