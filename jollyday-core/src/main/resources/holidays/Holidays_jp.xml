@@ -4,38 +4,102 @@
                xmlns="https://focus_shift.de/jollyday/schema/holiday"
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                xsi:schemaLocation="https://focus_shift.de/jollyday/schema/holiday https://focus_shift.de/jollyday/schema/holiday/holiday.xsd">
+  <!--
+    Substitute holidays (Art. 3(2) of the Act on National Holidays):
+    From 12 April 1973 until 2006 a national holiday falling on a Sunday was followed by a holiday on the Monday.
+    This is modelled per holiday with a Sunday to Monday MovingCondition for 1973 (1974 for holidays before 12 April) to 2006.
+    Since 2007 the substitute is the next day that is not a national holiday; this is only modelled for Culture Day so far.
+    Citizens' holidays (Art. 3(3)) are calculated by the JapaneseBridgingHolidayManager.
+    Vernal and Autumnal Equinox Day are not modelled yet.
+  -->
   <Holidays>
-    <Fixed month="JANUARY" day="1" validFrom="1948" descriptionPropertiesKey="NEW_YEAR"/>
-    <Fixed month="JANUARY" day="15" validFrom="1948" validTo="1999" descriptionPropertiesKey="COMING_OF_AGE"/>
-    <Fixed month="FEBRUARY" day="11" validFrom="1967" descriptionPropertiesKey="FOUNDATION"/>
-    <Fixed month="APRIL" day="29" descriptionPropertiesKey="SHOWA_DAY"/>
-    <Fixed month="MAY" day="3" validFrom="1948" descriptionPropertiesKey="CONSTITUTION_DAY"/>
-    <Fixed month="MAY" day="4" validFrom="2007" descriptionPropertiesKey="GREENERY_DAY"/>
-    <Fixed month="MAY" day="5" validFrom="1948" descriptionPropertiesKey="CHILDRENS_DAY"/>
-    <Fixed month="JULY" day="20" validFrom="1996" validTo="2002" descriptionPropertiesKey="NAVY_DAY"/>
-    <Fixed month="SEPTEMBER" day="15" validFrom="1966" validTo="2002" descriptionPropertiesKey="RESPECT_AGED_DAY"/>
-    <Fixed month="OCTOBER" day="10" validFrom="1966" validTo="1999" descriptionPropertiesKey="HEALTH_SPORTS"/>
-    <Fixed month="NOVEMBER" day="3" validFrom="1948" descriptionPropertiesKey="CULTURE_DAY">
+    <Fixed month="JANUARY" day="1" validFrom="1948" validTo="1973" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="JANUARY" day="1" validFrom="1974" validTo="2006" descriptionPropertiesKey="NEW_YEAR">
       <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
     </Fixed>
-    <Fixed month="NOVEMBER" day="23" validFrom="1948" descriptionPropertiesKey="LABOUR_DAY"/>
-    <Fixed month="DECEMBER" day="23" validFrom="1990" descriptionPropertiesKey="EMPERORS_BIRTHDAY"/>
+    <Fixed month="JANUARY" day="1" validFrom="2007" descriptionPropertiesKey="NEW_YEAR"/>
+    <Fixed month="JANUARY" day="15" validFrom="1948" validTo="1973" descriptionPropertiesKey="COMING_OF_AGE"/>
+    <Fixed month="JANUARY" day="15" validFrom="1974" validTo="1999" descriptionPropertiesKey="COMING_OF_AGE">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="FEBRUARY" day="11" validFrom="1967" validTo="1973" descriptionPropertiesKey="FOUNDATION"/>
+    <Fixed month="FEBRUARY" day="11" validFrom="1974" validTo="2006" descriptionPropertiesKey="FOUNDATION">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="FEBRUARY" day="11" validFrom="2007" descriptionPropertiesKey="FOUNDATION"/>
+    <Fixed month="FEBRUARY" day="23" validFrom="2020" descriptionPropertiesKey="EMPERORS_BIRTHDAY"/>
+    <Fixed month="APRIL" day="29" validFrom="1948" validTo="1972" descriptionPropertiesKey="EMPERORS_BIRTHDAY"/>
+    <Fixed month="APRIL" day="29" validFrom="1973" validTo="1988" descriptionPropertiesKey="EMPERORS_BIRTHDAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="APRIL" day="29" validFrom="1989" validTo="2006" descriptionPropertiesKey="GREENERY_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="APRIL" day="29" validFrom="2007" descriptionPropertiesKey="SHOWA_DAY"/>
+    <Fixed month="MAY" day="3" validFrom="1948" validTo="1972" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+    <Fixed month="MAY" day="3" validFrom="1973" validTo="2006" descriptionPropertiesKey="CONSTITUTION_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="MAY" day="3" validFrom="2007" descriptionPropertiesKey="CONSTITUTION_DAY"/>
+    <Fixed month="MAY" day="4" validFrom="2007" descriptionPropertiesKey="GREENERY_DAY"/>
+    <Fixed month="MAY" day="5" validFrom="1948" validTo="1972" descriptionPropertiesKey="CHILDRENS_DAY"/>
+    <Fixed month="MAY" day="5" validFrom="1973" validTo="2006" descriptionPropertiesKey="CHILDRENS_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="MAY" day="5" validFrom="2007" descriptionPropertiesKey="CHILDRENS_DAY"/>
+    <Fixed month="JULY" day="20" validFrom="1996" validTo="2002" descriptionPropertiesKey="MARINE_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="JULY" day="23" validFrom="2020" validTo="2020" descriptionPropertiesKey="MARINE_DAY"/>
+    <Fixed month="JULY" day="24" validFrom="2020" validTo="2020" descriptionPropertiesKey="SPORTS_DAY"/>
+    <Fixed month="JULY" day="22" validFrom="2021" validTo="2021" descriptionPropertiesKey="MARINE_DAY"/>
+    <Fixed month="JULY" day="23" validFrom="2021" validTo="2021" descriptionPropertiesKey="SPORTS_DAY"/>
+    <Fixed month="AUGUST" day="11" validFrom="2016" validTo="2019" descriptionPropertiesKey="MOUNTAIN_DAY"/>
+    <Fixed month="AUGUST" day="10" validFrom="2020" validTo="2020" descriptionPropertiesKey="MOUNTAIN_DAY"/>
+    <Fixed month="AUGUST" day="8" validFrom="2021" validTo="2021" descriptionPropertiesKey="MOUNTAIN_DAY"/>
+    <Fixed month="AUGUST" day="11" validFrom="2022" descriptionPropertiesKey="MOUNTAIN_DAY"/>
+    <Fixed month="SEPTEMBER" day="15" validFrom="1966" validTo="1972" descriptionPropertiesKey="RESPECT_AGED_DAY"/>
+    <Fixed month="SEPTEMBER" day="15" validFrom="1973" validTo="2002" descriptionPropertiesKey="RESPECT_AGED_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="OCTOBER" day="10" validFrom="1966" validTo="1972" descriptionPropertiesKey="HEALTH_SPORTS"/>
+    <Fixed month="OCTOBER" day="10" validFrom="1973" validTo="1999" descriptionPropertiesKey="HEALTH_SPORTS">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="NOVEMBER" day="3" validFrom="1948" validTo="1972" descriptionPropertiesKey="CULTURE_DAY"/>
+    <Fixed month="NOVEMBER" day="3" validFrom="1973" descriptionPropertiesKey="CULTURE_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="NOVEMBER" day="23" validFrom="1948" validTo="1972" descriptionPropertiesKey="LABOUR_THANKSGIVING_DAY"/>
+    <Fixed month="NOVEMBER" day="23" validFrom="1973" validTo="2006" descriptionPropertiesKey="LABOUR_THANKSGIVING_DAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="NOVEMBER" day="23" validFrom="2007" descriptionPropertiesKey="LABOUR_THANKSGIVING_DAY"/>
+    <Fixed month="DECEMBER" day="23" validFrom="1989" validTo="2006" descriptionPropertiesKey="EMPERORS_BIRTHDAY">
+      <MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
+    </Fixed>
+    <Fixed month="DECEMBER" day="23" validFrom="2007" validTo="2018" descriptionPropertiesKey="EMPERORS_BIRTHDAY"/>
     <Fixed month="APRIL" day="10" validFrom="1959" validTo="1959" descriptionPropertiesKey="IMPERIAL_DAY"/>
     <Fixed month="FEBRUARY" day="24" validFrom="1989" validTo="1989" descriptionPropertiesKey="IMPERIAL_DAY"/>
     <Fixed month="NOVEMBER" day="12" validFrom="1990" validTo="1990" descriptionPropertiesKey="IMPERIAL_DAY"/>
     <Fixed month="JUNE" day="9" validFrom="1993" validTo="1993" descriptionPropertiesKey="IMPERIAL_DAY"/>
-    <Fixed month="AUGUST" day="11" validFrom="2016" descriptionPropertiesKey="MOUNTAIN_DAY"/>
+    <Fixed month="MAY" day="1" validFrom="2019" validTo="2019" descriptionPropertiesKey="IMPERIAL_DAY"/>
+    <Fixed month="OCTOBER" day="22" validFrom="2019" validTo="2019" descriptionPropertiesKey="IMPERIAL_DAY"/>
     <FixedWeekday which="SECOND" weekday="MONDAY" month="JANUARY" validFrom="2000"
-                      descriptionPropertiesKey="COMING_OF_AGE"/>
-    <FixedWeekday which="THIRD" weekday="MONDAY" month="JULY" validFrom="2003" descriptionPropertiesKey="NAVY_DAY"/>
+                  descriptionPropertiesKey="COMING_OF_AGE"/>
+    <FixedWeekday which="THIRD" weekday="MONDAY" month="JULY" validFrom="2003" validTo="2019"
+                  descriptionPropertiesKey="MARINE_DAY"/>
+    <FixedWeekday which="THIRD" weekday="MONDAY" month="JULY" validFrom="2022" descriptionPropertiesKey="MARINE_DAY"/>
     <FixedWeekday which="THIRD" weekday="MONDAY" month="SEPTEMBER" validFrom="2003"
-                      descriptionPropertiesKey="RESPECT_AGED_DAY"/>
-    <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="2000"
-                      descriptionPropertiesKey="HEALTH_SPORTS"/>
+                  descriptionPropertiesKey="RESPECT_AGED_DAY"/>
+    <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="2000" validTo="2019"
+                  descriptionPropertiesKey="HEALTH_SPORTS"/>
+    <FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="2022" descriptionPropertiesKey="SPORTS_DAY"/>
   </Holidays>
 
   <Sources>
-    <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Japan</Source>
+    <Source>https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html</Source>
+    <Source>https://www8.cao.go.jp/chosei/shukujitsu/syukujitsu.csv</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:JP</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:JP</Source>
   </Sources>
