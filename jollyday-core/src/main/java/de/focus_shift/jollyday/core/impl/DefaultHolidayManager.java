@@ -8,6 +8,7 @@ import de.focus_shift.jollyday.core.caching.Cache;
 import de.focus_shift.jollyday.core.parser.HolidayParser;
 import de.focus_shift.jollyday.core.spi.HolidayCalendarConfiguration;
 import de.focus_shift.jollyday.core.spi.HolidayConfigurations;
+import de.focus_shift.jollyday.core.spi.WeekendConfiguration;
 import org.jspecify.annotations.NonNull;
 import org.jspecify.annotations.Nullable;
 import org.slf4j.Logger;
@@ -16,6 +17,7 @@ import org.slf4j.LoggerFactory;
 import java.lang.reflect.Method;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
+import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.Year;
 import java.util.Collection;
@@ -25,6 +27,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.Set;
 
 import static de.focus_shift.jollyday.core.util.ClassLoadingUtil.loadClass;
@@ -41,6 +44,12 @@ import static java.util.stream.IntStream.rangeClosed;
 public class DefaultHolidayManager extends HolidayManager {
 
   private static final Logger LOG = LoggerFactory.getLogger(DefaultHolidayManager.class);
+
+  /**
+   * The weekend days used when neither the requested calendar nor any of its ancestors
+   * define their own weekend.
+   */
+  private static final Set<DayOfWeek> DEFAULT_WEEKEND_DAYS = Set.of(DayOfWeek.SATURDAY, DayOfWeek.SUNDAY);
 
   /**
    * Caches all {@link HolidayParser} instances actually used by the HolidayManager
@@ -163,6 +172,56 @@ public class DefaultHolidayManager extends HolidayManager {
   @Override
   public @NonNull CalendarHierarchy getCalendarHierarchy() {
     return createConfigurationHierarchy(holidayCalendarConfiguration, null);
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public @NonNull Set<DayOfWeek> getWeekendDays(@NonNull final Year year, @NonNull final String... args) {
+    return findWeekendDays(year, holidayCalendarConfiguration, args).orElse(DEFAULT_WEEKEND_DAYS);
+  }
+
+  /**
+   * Resolves the weekend days for the given configuration and hierarchy, descending into the
+   * matching sub configuration first. If neither the resolved sub configuration nor any of its
+   * ancestors define their own weekend, this configuration's own weekend is used as a fallback,
+   * allowing a subdivision to inherit its parent's weekend.
+   *
+   * @param year          the year to resolve the weekend for
+   * @param configuration the holiday configuration
+   * @param args          the arguments to descend down the configuration tree
+   * @return the resolved weekend days, empty if neither this configuration nor its descendants define one
+   */
+  private @NonNull Optional<Set<DayOfWeek>> findWeekendDays(@NonNull final Year year, @NonNull final HolidayCalendarConfiguration configuration, @NonNull final String... args) {
+    if (args.length > 0) {
+      final String hierarchy = args[0];
+
+      final Optional<Set<DayOfWeek>> subWeekendDays = configuration.subConfigurations()
+        .filter(sub -> hierarchy.equalsIgnoreCase(sub.hierarchy()))
+        .findFirst()
+        .flatMap(sub -> findWeekendDays(year, sub, copyOfRange(args, 1, args.length)));
+
+      if (subWeekendDays.isPresent()) {
+        return subWeekendDays;
+      }
+    }
+
+    return ownWeekendDays(configuration, year);
+  }
+
+  private @NonNull Optional<Set<DayOfWeek>> ownWeekendDays(@NonNull final HolidayCalendarConfiguration configuration, @NonNull final Year year) {
+    final Set<DayOfWeek> weekendDays = configuration.weekends()
+      .filter(weekend -> isValidForYear(weekend, year))
+      .map(WeekendConfiguration::weekday)
+      .collect(toUnmodifiableSet());
+
+    return weekendDays.isEmpty() ? Optional.empty() : Optional.of(weekendDays);
+  }
+
+  private boolean isValidForYear(@NonNull final WeekendConfiguration weekend, @NonNull final Year year) {
+    return weekend.validFrom().map(validFrom -> !year.isBefore(validFrom)).orElse(true)
+      && weekend.validTo().map(validTo -> !year.isAfter(validTo)).orElse(true);
   }
 
   /**
