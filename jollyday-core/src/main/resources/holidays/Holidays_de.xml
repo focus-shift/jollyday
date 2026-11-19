@@ -94,7 +94,7 @@
 
     <SubConfigurations hierarchy="ag" description="Augsburg">
       <Holidays>
-        <Fixed day="8" month="AUGUST" descriptionPropertiesKey="PEACE"/>
+        <Fixed day="8" validFrom="1950" month="AUGUST" descriptionPropertiesKey="PEACE"/>
         <Fixed day="15" month="AUGUST" descriptionPropertiesKey="ASSUMPTION_DAY"/>
       </Holidays>
     </SubConfigurations>
@@ -112,6 +112,12 @@
     </SubConfigurations>
 
     <SubConfigurations hierarchy="in" description="Ingolstadt">
+      <Holidays>
+        <Fixed day="15" month="AUGUST" descriptionPropertiesKey="ASSUMPTION_DAY"/>
+      </Holidays>
+    </SubConfigurations>
+
+    <SubConfigurations hierarchy="rk" description="römisch-katholisch">
       <Holidays>
         <Fixed day="15" month="AUGUST" descriptionPropertiesKey="ASSUMPTION_DAY"/>
       </Holidays>
@@ -186,6 +192,11 @@
         <Date month="NOVEMBER" day="23"/>
       </RelativeToFixed>
     </Holidays>
+    <SubConfigurations hierarchy="rk" description="Regions observing Corpus Christi">
+      <Holidays>
+        <ChristianHoliday type="CORPUS_CHRISTI"/>
+      </Holidays>
+    </SubConfigurations>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="st" description="Saxony-Anhalt">
@@ -200,6 +211,11 @@
       <Fixed month="SEPTEMBER" day="20" descriptionPropertiesKey="CHILDRENS_DAY" validFrom="2019"/>
       <Fixed month="OCTOBER" day="31" validFrom="1990" descriptionPropertiesKey="REFORMATION_DAY"/>
     </Holidays>
+    <SubConfigurations hierarchy="rk" description="Regions observing Corpus Christi">
+      <Holidays>
+        <ChristianHoliday type="CORPUS_CHRISTI"/>
+      </Holidays>
+    </SubConfigurations>
   </SubConfigurations>
 
   <SubConfigurations hierarchy="sh" description="Schleswig-Holstein">

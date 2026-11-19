@@ -1,7 +1,10 @@
 package de.focus_shift.jollyday.tests.country;
 
+import de.focus_shift.jollyday.core.HolidayManager;
+import de.focus_shift.jollyday.core.ManagerParameters;
 import org.junit.jupiter.api.Test;
 
+import java.time.LocalDate;
 import java.time.MonthDay;
 import java.time.Year;
 
@@ -18,8 +21,38 @@ import static java.time.Month.MAY;
 import static java.time.Month.NOVEMBER;
 import static java.time.Month.OCTOBER;
 import static java.time.Month.SEPTEMBER;
+import static org.assertj.core.api.Assertions.assertThat;
 
 class HolidayDETest {
+
+  @Test
+  void keepsRegionalHolidaysScopedToTheirSubdivisions() {
+    final HolidayManager holidayManager = HolidayManager.getInstance(ManagerParameters.create(GERMANY));
+    final LocalDate assumptionDay = LocalDate.of(2026, AUGUST, 15);
+    final LocalDate corpusChristi = LocalDate.of(2026, JUNE, 4);
+
+    assertThat(holidayManager.isHoliday(assumptionDay, "by")).isFalse();
+    assertThat(holidayManager.isHoliday(assumptionDay, "by", "rk")).isTrue();
+
+    for (final String subdivision : new String[] {"sn", "th"}) {
+      assertThat(holidayManager.isHoliday(corpusChristi, subdivision))
+        .as("Corpus Christi must remain regional in %s", subdivision)
+        .isFalse();
+      assertThat(holidayManager.isHoliday(corpusChristi, subdivision, "rk"))
+        .as("Corpus Christi must be present in %s/rk", subdivision)
+        .isTrue();
+    }
+
+    assertThat(holidayManager.isHoliday(LocalDate.of(2026, AUGUST, 8), "by", "rk"))
+      .as("The regional Bavaria profile must not inherit Augsburg's Peace Festival")
+      .isFalse();
+
+    for (final String subdivision : new String[] {"by", "sn", "th"}) {
+      assertThat(holidayManager.isHoliday(LocalDate.of(2026, JANUARY, 1), subdivision, "rk"))
+        .as("The regional profile %s/rk must inherit nationwide holidays", subdivision)
+        .isTrue();
+    }
+  }
 
   @Test
   void ensuresHolidays() {
@@ -68,11 +101,15 @@ class HolidayDETest {
       .hasFixedHoliday("ALL_SAINTS", NOVEMBER, 1).inSubdivision("by").and()
       .hasRelativeToFixedHoliday("REPENTANCE_PRAYER", WEDNESDAY, BEFORE, MonthDay.of(NOVEMBER, 23)).validBetween(Year.of(1981), Year.of(1989)).inSubdivision("by").and()
       .hasChristianHoliday("CORPUS_CHRISTI").inSubdivision("by").and()
+      .hasFixedHoliday("ASSUMPTION_DAY", AUGUST, 15).inSubdivision("by", "rk").and()
 
       /* Munich */
       .hasFixedHoliday("ASSUMPTION_DAY", AUGUST, 15).inSubdivision("by", "mu").and()
       /* Augsburg */
-      .hasFixedHoliday("PEACE", AUGUST, 8).inSubdivision("by", "ag").and()
+      .hasFixedHoliday("PEACE", AUGUST, 8)
+        .notValidBetween(Year.of(1900), Year.of(1949))
+        .validFrom(Year.of(1950))
+        .inSubdivision("by", "ag").and()
       .hasFixedHoliday("ASSUMPTION_DAY", AUGUST, 15).inSubdivision("by", "ag").and()
       /* Würzburg */
       .hasFixedHoliday("ASSUMPTION_DAY", AUGUST, 15).inSubdivision("by", "wu").and()
@@ -108,6 +145,7 @@ class HolidayDETest {
       /* Saxony */
       .hasFixedHoliday("REFORMATION_DAY", OCTOBER, 31).validFrom(Year.of(1990)).inSubdivision("sn").and()
       .hasRelativeToFixedHoliday("REPENTANCE_PRAYER", WEDNESDAY, BEFORE, MonthDay.of(NOVEMBER, 23)).validFrom(Year.of(1995)).inSubdivision("sn").and()
+      .hasChristianHoliday("CORPUS_CHRISTI").inSubdivision("sn", "rk").and()
 
       /* Saxony-Anhalt */
       .hasFixedHoliday("EPIPHANY", JANUARY, 6).validFrom(Year.of(1993)).inSubdivision("st").and()
@@ -116,6 +154,7 @@ class HolidayDETest {
       /* Thuringia */
       .hasFixedHoliday("REFORMATION_DAY", OCTOBER, 31).validFrom(Year.of(1990)).inSubdivision("th").and()
       .hasFixedHoliday("CHILDRENS_DAY", SEPTEMBER, 20).validFrom(Year.of(2019)).inSubdivision("th").and()
+      .hasChristianHoliday("CORPUS_CHRISTI").inSubdivision("th", "rk").and()
 
       /* Schleswig-Holstein */
       .hasFixedHoliday("REFORMATION_DAY", OCTOBER, 31).validFrom(Year.of(2018)).inSubdivision("sh").and()
