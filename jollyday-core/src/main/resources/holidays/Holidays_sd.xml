@@ -15,8 +15,12 @@
     <IslamicHoliday type="ID_UL_ADHA"/>
   </Holidays>
 
+  <Weekend weekday="FRIDAY"/>
+  <Weekend weekday="SATURDAY" validFrom="2008"/>
+
   <Sources>
     <Source>https://en.wikipedia.org/wiki/Public_holidays_in_Sudan</Source>
+    <Source of="Weekend">https://www.sudantribune.com/Sudan-adopts-two-day-week-end-as,25469</Source>
     <Source of="ISO 3166-2">https://en.wikipedia.org/wiki/ISO_3166-2:SD</Source>
     <Source of="ISO 3166">https://www.iso.org/obp/ui/#iso:code:3166:SD</Source>
   </Sources>
